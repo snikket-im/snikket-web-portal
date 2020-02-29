@@ -1,3 +1,12 @@
 # Snikket Web Portal
 
-Nothing to see here (yet!). Move along.
+## Start the dev server
+
+```console
+$ direnv allow
+$ mkdir .local
+$ cp web_config.example.py .local/web_config.py
+$ $EDITOR .local/web_config.py  # to adapt the configuration to your needs
+$ pip install -r requirements.txt
+$ quart run
+```
