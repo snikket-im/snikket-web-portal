@@ -1,3 +1,4 @@
 /.direnv
 /.local
 __pycache__
+/snikket_web/static/css/*.css

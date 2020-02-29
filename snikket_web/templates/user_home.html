@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Snikket Web Portal</title>
-	</head>
-	<body>
-		<h1>Welcome!</h1>
-		<p>Welcome home, {{ user_info.username }}.</p>
-		<ul>
-			<li><a href="{{ url_for('user.change_pw') }}">Change password</a></li>
-			<li><a href="{{ url_for('user.logout') }}">Log out</a></li>
-		</ul>
-	</body>
-</html>
+{% extends "app.html" %}
+{% block content %}
+<h1>Welcome!</h1>
+<p>Welcome home, {{ user_info.username }}.</p>
+<h2>Next?</h2>
+<p>What do you want to do today?</p>⎄
+<ul>
+	<li><a href="{{ url_for('user.change_pw') }}">Change password</a></li>
+	<li><a href="{{ url_for('user.logout') }}">Log out</a></li>
+</ul>
+{% endblock %}

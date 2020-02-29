@@ -1,13 +1,31 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Snikket Web Portal</title>
-	</head>
-	<body>
-		<form method="POST" action="{{ url_for('login') }}" name="login">
-			<input type="text" name="address">
-			<input type="password" name="password">
-			<input type="submit" value="Login">
-		</from>
-	</body>
-</html>
+{% extends "base.html" %}
+{% set body_id = "login" %}
+{% block head_lead %}
+<title>Snikket Web Portal</title>
+{% endblock %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/app.css') }}">
+{{ super() }}
+{% endblock %}
+{% block body %}
+<main><div class="form layout-expanded">
+	<h1 class="form-title">{{ config["SNIKKET_DOMAIN"] }}</h1>
+	<p class="form-desc">Enter your Snikket address and password to manage your account.</p>
+	<form method="POST" action="{{ url_for('login') }}" name="login">
+		<div class="f-ebox">
+			<label for="address" class="a11y-only">Address:</label>
+			<input type="text" name="address" id="address" required="required" placeholder="Address">
+		</div>
+		<div class="f-ebox">
+			<label for="password" class="a11y-only"`>Password:</label>
+			<input type="password" name="password" required="required" placeholder="Password">
+		</div>
+		<div class="f-bbox">
+			<button type="submit" class="primary">Login</button>
+		</div>
+	</from>
+</div></main>
+<footer>
+	<ul><li>A <a href="{{ url_for('about') }}">Snikket</a> server</li></ul>
+</footer>
+{% endblock %}

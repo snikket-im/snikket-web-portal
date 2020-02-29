@@ -10,18 +10,33 @@ from snikket_web.prosodyclient import client
 user_bp = Blueprint('user', __name__, url_prefix="/user")
 
 
+@user_bp.context_processor
+async def proc():
+    return {"user_info": await client.get_user_info()}
+
+
 class ChangePasswordForm(FlaskForm):
     current_password = wtforms.PasswordField(
+        # TODO(i18n)
+        "Current password",
         validators=[wtforms.validators.InputRequired()]
     )
 
     new_password = wtforms.PasswordField(
+        # TODO(i18n)
+        "New password",
         validators=[wtforms.validators.InputRequired()]
     )
 
     new_password_confirm = wtforms.PasswordField(
+        # TODO(i18n)
+        "Confirm new password",
         validators=[wtforms.validators.InputRequired(),
-                    wtforms.validators.EqualTo("new_password")]
+                    wtforms.validators.EqualTo(
+                        "new_password",
+                        # TODO(i18n)
+                        "The new passwords must match."
+                    )]
     )
 
 

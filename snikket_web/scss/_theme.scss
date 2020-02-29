@@ -1,0 +1,172 @@
+$colours: (
+  "gray": [
+    #1f1b17,
+    #3d3833,
+    #4e4a46,
+    #706965,
+    #8f8983,
+    #b1aca6,
+    #cac3bd,
+    #e3e1df,
+    #f6f5f4
+  ],
+  "primary": [
+    #062943,
+    #0f3d62,
+    #0e4c76,
+    #226494,
+    #418fc7,
+    #72b2e3,
+    #9dccf0,
+    #b5d8f3,
+    #e4f3fd
+  ],
+  "alert": [
+    #340e03,
+    #681f0b,
+    #883017,
+    #a33d21,
+    #c95e40,
+    #ed947c,
+    #f2ac99,
+    #fbc2b3,
+    #fef1ed
+  ],
+  "accent": [
+    #302100,
+    #563600,
+    #795b00,
+    #a07501,
+    #c79b0e,
+    #f4ce3f,
+    #feed93,
+    #fef6c1,
+    #fffbe8
+  ],
+  "success": [
+    #052f03,
+    #0c4608,
+    #197713,
+    #218a1b,
+    #55c644,
+    #81e06e,
+    #abed9c,
+    #cef6c5,
+    #ecfbe6
+  ]
+);
+
+$gray-100: nth(map-get($colours, "gray"), 1);
+$gray-200: nth(map-get($colours, "gray"), 2);
+$gray-300: nth(map-get($colours, "gray"), 3);
+$gray-400: nth(map-get($colours, "gray"), 4);
+$gray-500: nth(map-get($colours, "gray"), 5);
+$gray-600: nth(map-get($colours, "gray"), 6);
+$gray-700: nth(map-get($colours, "gray"), 7);
+$gray-800: nth(map-get($colours, "gray"), 8);
+$gray-900: nth(map-get($colours, "gray"), 9);
+
+$primary-100: nth(map-get($colours, "primary"), 1);
+$primary-200: nth(map-get($colours, "primary"), 2);
+$primary-300: nth(map-get($colours, "primary"), 3);
+$primary-400: nth(map-get($colours, "primary"), 4);
+$primary-500: nth(map-get($colours, "primary"), 5);
+$primary-600: nth(map-get($colours, "primary"), 6);
+$primary-700: nth(map-get($colours, "primary"), 7);
+$primary-800: nth(map-get($colours, "primary"), 8);
+$primary-900: nth(map-get($colours, "primary"), 9);
+
+$alert-100: nth(map-get($colours, "alert"), 1);
+$alert-200: nth(map-get($colours, "alert"), 2);
+$alert-300: nth(map-get($colours, "alert"), 3);
+$alert-400: nth(map-get($colours, "alert"), 4);
+$alert-500: nth(map-get($colours, "alert"), 5);
+$alert-600: nth(map-get($colours, "alert"), 6);
+$alert-700: nth(map-get($colours, "alert"), 7);
+$alert-800: nth(map-get($colours, "alert"), 8);
+$alert-900: nth(map-get($colours, "alert"), 9);
+
+$accent-100: nth(map-get($colours, "accent"), 1);
+$accent-200: nth(map-get($colours, "accent"), 2);
+$accent-300: nth(map-get($colours, "accent"), 3);
+$accent-400: nth(map-get($colours, "accent"), 4);
+$accent-500: nth(map-get($colours, "accent"), 5);
+$accent-600: nth(map-get($colours, "accent"), 6);
+$accent-700: nth(map-get($colours, "accent"), 7);
+$accent-800: nth(map-get($colours, "accent"), 8);
+$accent-900: nth(map-get($colours, "accent"), 9);
+
+$success-100: nth(map-get($colours, "success"), 1);
+$success-200: nth(map-get($colours, "success"), 2);
+$success-300: nth(map-get($colours, "success"), 3);
+$success-400: nth(map-get($colours, "success"), 4);
+$success-500: nth(map-get($colours, "success"), 5);
+$success-600: nth(map-get($colours, "success"), 6);
+$success-700: nth(map-get($colours, "success"), 7);
+$success-800: nth(map-get($colours, "success"), 8);
+$success-900: nth(map-get($colours, "success"), 9);
+
+/*
+$primary-100: $gray-100;
+$primary-200: $gray-200;
+$primary-300: $gray-300;
+$primary-400: $gray-400;
+$primary-500: $gray-500;
+$primary-600: $gray-600;
+$primary-700: $gray-700;
+$primary-800: $gray-800;
+$primary-900: $gray-900;
+
+$alert-100: $gray-100;
+$alert-200: $gray-200;
+$alert-300: $gray-300;
+$alert-400: $gray-400;
+$alert-500: $gray-500;
+$alert-600: $gray-600;
+$alert-700: $gray-700;
+$alert-800: $gray-800;
+$alert-900: $gray-900;
+
+$accent-100: $gray-100;
+$accent-200: $gray-200;
+$accent-300: $gray-300;
+$accent-400: $gray-400;
+$accent-500: $gray-500;
+$accent-600: $gray-600;
+$accent-700: $gray-700;
+$accent-800: $gray-800;
+$accent-900: $gray-900;
+
+$success-100: $gray-100;
+$success-200: $gray-200;
+$success-300: $gray-300;
+$success-400: $gray-400;
+$success-500: $gray-500;
+$success-600: $gray-600;
+$success-700: $gray-700;
+$success-800: $gray-800;
+$success-900: $gray-900;
+*/
+
+
+$w-s5: 0.0625rem;
+$w-s4: 0.125rem;
+$w-s3: 0.25rem;
+$w-s2: 0.5rem;
+$w-s1: 0.75rem;
+$w-0: 1rem;
+$w-l1: 1.5rem;
+$w-l2: 2rem;
+$w-l3: 3rem;
+$w-l4: 4rem;
+$w-l5: 6rem;
+$w-l6: 8rem;
+$w-l7: 12rem;
+
+$font-sans: "Noto Sans", sans-serif;
+$font-serif: serif;
+$font-monospace: monospace;
+
+$font-heading: $font-sans;
+$font-bulk: $font-sans;
+$font-code: $font-monospace;

@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{% from "library.j2" import box %}
+{% set body_id = "no-lines" %}
+{% block head_lead %}
+<title>Theme Demo – Snikket Web Portal</title>
+{% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/theme-demo.css') }}" type="text/css">
+{% endblock %}
+{% block body %}
+<h1 id="dummy">Theme Demo</h1>
+<p>This page is to demonstrate the Snikket Web Portal theme and allow development. You should not see this during normal use.</p>
+<p><a id="disable-lines" href="#no-lines" class="button secondary">Disable rhythm lines</a><a id="enable-lines" href="#dummy" class="button secondary">Enable rhythm lines</a></p>
+<h2>Headings</h2>
+<p>This subsection is responsible for demonstrating the heading sizes, with the relation between the different headings and also the relation between headings and text.</p>
+<div class="demo-columns"><div class="demo-column">
+	<h3>Sub-heading</h3>
+	<p>Repudiandae voluptatem ratione voluptatem facere. Rerum recusandae nemo commodi provident praesentium est dignissimos. Aut provident nisi omnis tempore veritatis voluptatem minus esse. Non nulla consequatur id est doloribus quos voluptates. Quae suscipit fugiat minima.</p>
+	<h4>Nested Sub—heading</h4>
+	<p>Omnis sit temporibus soluta et inventore. Doloribus velit unde placeat aut necessitatibus distinctio. Sapiente sunt corporis neque ducimus officiis qui. Maxime officia et architecto dolor quos autem expedita. Omnis architecto atque facilis iste dolorem voluptatem consectetur. Cupiditate et officiis accusantium inventore.</p>
+	<h5>Deeper Sub-heading</h5>
+	<p>Perferendis vitae doloribus praesentium natus non. Itaque hic numquam dolorum non vero et excepturi consequatur. Accusantium doloribus molestias impedit laudantium quis accusantium. Repellendus et assumenda voluptate aut ipsa quod. Dolores rerum accusantium cumque voluptatem rerum iure.</p>
+	<h6>Paragraph heading</h6>
+	<p>Suscipit quis tempora officiis voluptatem sint. Sed vel perferendis libero similique pariatur. Quo corporis perferendis omnis laboriosam nesciunt. Ut fuga quis deserunt maiores voluptas id fugiat odio. Omnis et facilis officia. Rerum quia quia exercitationem qui quibusdam quia et.</p>
+	<h4>Another nested Sub-heading</h4>
+	<p>Saepe distinctio illo et illum quia quo. Maxime eveniet voluptate non voluptatibus commodi et. Dicta consequuntur voluptatum sint ab voluptatem tenetur. Ad rem et eveniet ea animi voluptatum laborum.</p>
+</div><div class="demo-column">
+	<p>The other column of this demo demonstrates the headings right beneath each other.</p>
+	<h1>Main Title (h1)</h1>
+	<h2>Heading (h2)</h2>
+	<h3>Sub-Heading (h3)</h3>
+	<h4>Nested Sub-Heading (h4)</h4>
+	<h5>Deep Sub-Heading (h5)</h5>
+	<h6>Paragraph Heading (h6)</h6>
+</div></div>
+
+<h2>Palette</h2>
+<div class="samplerow"><div class="samplehead">gray</div><div class="samplebox gray-100"></div><div class="samplebox gray-200"></div><div class="samplebox gray-300"></div><div class="samplebox gray-400"></div><div class="samplebox gray-500"></div><div class="samplebox gray-600"></div><div class="samplebox gray-700"></div><div class="samplebox gray-800"></div><div class="samplebox gray-900"></div></div>
+<div class="samplerow"><div class="samplehead">success</div><div class="samplebox success-100"></div><div class="samplebox success-200"></div><div class="samplebox success-300"></div><div class="samplebox success-400"></div><div class="samplebox success-500"></div><div class="samplebox success-600"></div><div class="samplebox success-700"></div><div class="samplebox success-800"></div><div class="samplebox success-900"></div></div>
+<div class="samplerow"><div class="samplehead">alert</div><div class="samplebox alert-100"></div><div class="samplebox alert-200"></div><div class="samplebox alert-300"></div><div class="samplebox alert-400"></div><div class="samplebox alert-500"></div><div class="samplebox alert-600"></div><div class="samplebox alert-700"></div><div class="samplebox alert-800"></div><div class="samplebox alert-900"></div></div>
+<div class="samplerow"><div class="samplehead">accent</div><div class="samplebox accent-100"></div><div class="samplebox accent-200"></div><div class="samplebox accent-300"></div><div class="samplebox accent-400"></div><div class="samplebox accent-500"></div><div class="samplebox accent-600"></div><div class="samplebox accent-700"></div><div class="samplebox accent-800"></div><div class="samplebox accent-900"></div></div>
+<div class="samplerow"><div class="samplehead">primary</div><div class="samplebox primary-100"></div><div class="samplebox primary-200"></div><div class="samplebox primary-300"></div><div class="samplebox primary-400"></div><div class="samplebox primary-500"></div><div class="samplebox primary-600"></div><div class="samplebox primary-700"></div><div class="samplebox primary-800"></div><div class="samplebox primary-900"></div></div>
+
+<div class="samplerow dark"><div class="samplehead">gray</div><div class="samplebox gray-100"></div><div class="samplebox gray-200"></div><div class="samplebox gray-300"></div><div class="samplebox gray-400"></div><div class="samplebox gray-500"></div><div class="samplebox gray-600"></div><div class="samplebox gray-700"></div><div class="samplebox gray-800"></div><div class="samplebox gray-900"></div></div>
+<div class="samplerow dark"><div class="samplehead">success</div><div class="samplebox success-100"></div><div class="samplebox success-200"></div><div class="samplebox success-300"></div><div class="samplebox success-400"></div><div class="samplebox success-500"></div><div class="samplebox success-600"></div><div class="samplebox success-700"></div><div class="samplebox success-800"></div><div class="samplebox success-900"></div></div>
+<div class="samplerow dark"><div class="samplehead">alert</div><div class="samplebox alert-100"></div><div class="samplebox alert-200"></div><div class="samplebox alert-300"></div><div class="samplebox alert-400"></div><div class="samplebox alert-500"></div><div class="samplebox alert-600"></div><div class="samplebox alert-700"></div><div class="samplebox alert-800"></div><div class="samplebox alert-900"></div></div>
+<div class="samplerow dark"><div class="samplehead">accent</div><div class="samplebox accent-100"></div><div class="samplebox accent-200"></div><div class="samplebox accent-300"></div><div class="samplebox accent-400"></div><div class="samplebox accent-500"></div><div class="samplebox accent-600"></div><div class="samplebox accent-700"></div><div class="samplebox accent-800"></div><div class="samplebox accent-900"></div></div>
+<div class="samplerow dark"><div class="samplehead">primary</div><div class="samplebox primary-100"></div><div class="samplebox primary-200"></div><div class="samplebox primary-300"></div><div class="samplebox primary-400"></div><div class="samplebox primary-500"></div><div class="samplebox primary-600"></div><div class="samplebox primary-700"></div><div class="samplebox primary-800"></div><div class="samplebox primary-900"></div></div>
+
+<h2>Boxes</h2>
+<p>Boxes can be used to draw the attention to the user to a specific thing. In general, they will be used to inform the user about the result of an action or about an action item.</p>
+<div class="demo-columns"><div class="demo-column">
+	<h3>Full-size boxes</h3>
+	<p>Full-size boxes visually separate the header and the following content into separate lines. This allows the use of all and multiple block format elements inside full-size boxes.</p>
+	<p>The following box contains an error message:</p>
+	{% call box("alert", "Password change failed") %}
+	<p>You need to provide a new password.</p>
+	{% endcall %}
+	<p>The following box contains a success message:</p>
+	{% call box("success", "Bookmark created") %}
+	<p>The channel was added to your list.</p>
+	{% endcall %}
+	<p>The following box contains a notice:</p>
+	{% call box("accent", "Quota warning") %}
+	<p>You have nearly reached your HTTP upload storage quota.</p>
+	{% endcall %}
+	<p>The following box contains a hint:</p>
+	{% call box("primary", "Update available") %}
+	<p>There is a new version of the Snikket Server available.</p>
+	{% endcall %}
+	<p>Finally, the following box has unspecified content:</p>
+	{% call box("", "Something happened") %}
+	<p>But we don’t know if it’s good or bad or anything.</p>
+	{% endcall %}
+</div><div class="demo-column">
+	<h3>Slim boxes</h3>
+	<p>Slim boxes use inline elements only. They only support the <code>&lt;header/&gt;</code> and a single <code>&lt;p/&gt;</code>. Since, on the semantic level, the header and p are still separated, CSS is used to insert a colon for visual reading.</p>
+	<p>The following box contains an error message:</p>
+	{% call box("alert", "Password change failed", slim=True) %}
+	<p>You need to provide a new password.</p>
+	{% endcall %}
+	<p>The following box contains a success message:</p>
+	{% call box("success", "Bookmark created", slim=True) %}
+	<p>The channel was added to your list.</p>
+	{% endcall %}
+	<p>The following box contains a notice:</p>
+	{% call box("accent", "Quota warning", slim=True) %}
+	<p>You have nearly reached your HTTP upload storage quota.</p>
+	{% endcall %}
+	<p>The following box contains a hint:</p>
+	{% call box("primary", "Update available", slim=True) %}
+	<p>There is a new version of the Snikket Server available.</p>
+	{% endcall %}
+	<p>Finally, the following box has unspecified content:</p>
+	{% call box("", "Something happened", slim=True) %}
+	<p>But we don’t know if it’s good or bad or anything.</p>
+	{% endcall %}
+</div></div>
+
+<h2>Elevation levels</h2>
+<p>Demonstrated with boxes:</p>
+<aside class="box primary el-1">
+	<header>Elevation level 1</header>
+</aside>
+<aside class="box primary el-2">
+	<header>Elevation level 2</header>
+</aside>
+<aside class="box primary el-3">
+	<header>Elevation level 3</header>
+</aside>
+<aside class="box primary el-4">
+	<header>Elevation level 4</header>
+</aside>
+<aside class="box primary el-5">
+	<header>Elevation level 5</header>
+</aside>
+
+<h2>Forms</h2>
+<h3>Standard Forms (Expanded)</h3>
+<p>Forms support a single title (on any h-level to fit semantically), a  description text and fields. Fields and their labels are on separate lines by default.</p>
+<div class="form layout-expanded"><form>
+	<h4 class="form-title">Random Preferences</h4>
+	<p class="form-desc">This form illustrates the various controls supported by the theme, without being semantically useful.</p>
+	<div class="f-ebox">
+		<label for="fex-f1" class="required">Name</label>
+		<input type="text" id="fex-f1" name="fex-f1">
+	</div>
+	<div class="f-ebox">
+		<input type="checkbox" id="fex-f2" name="fex-f2"><label for="fex-f2">Enable fancy features</label>
+		<input type="checkbox" id="fex-f3" name="fex-f3"><label for="fex-f3">Enable more features</label>
+		<input type="checkbox" id="fex-f4" name="fex-f4"><label for="fex-f4">Also do that other thing</label>
+	</div>
+	<div class="f-ebox">
+		<input type="radio" id="fex-f5" name="fex-rg1"><label for="fex-f5">High difficulty</label>
+		<input type="radio" id="fex-f6" name="fex-rg1"><label for="fex-f6">Medium difficulty</label>
+		<input type="radio" id="fex-f7" name="fex-rg1"><label for="fex-f7">Low difficulty</label>
+	</div>
+	<div class="f-ebox">
+		<label for="fex-f8">Select dropdown:</label>
+		<div class="select-wrap"><select id="fex-f8" name="fex-f8">
+			<option>The good</option>
+			<option>The bad</option>
+			<option>The ugly</option>
+		</select></div>
+	</div>
+	<div class="f-ebox">
+		<label for="fex-f9">Text area</label>
+		<textarea rows="5"></textarea>
+	</div>
+	<p>The following demonstrate the different button styles. First normal buttons:</p>
+	<div class="f-bbox">
+		<button class="tertiary">Tertiary</button>
+		<button class="secondary">Secondary</button>
+		<button class="primary">Primary</button>
+	</div>
+	<p>Then the accentuated versions:</p>
+	<div class="f-bbox">
+		<button class="tertiary accent">Tertiary (Accent)</button>
+		<button class="secondary accent">Secondary (Accent)</button>
+		<button class="primary accent">Primary (Accent)</button>
+	</div>
+	<p>And finally, the Danger Zone:</p>
+	<div class="f-bbox">
+		<button class="tertiary danger">Tertiary (Danger)</button>
+		<button class="secondary danger">Secondary (Danger)</button>
+		<button class="primary danger">Primary (Danger)</button>
+	</div>
+{#
+{% for style in ["primary", "secondary", "tertiary"] %}
+	<p>The following demonstrate the <em>{{ style }}</em> button styles:</p>
+	<div class="f-bbox">
+		<button class="lv-{{ style }} c-gray">Unspecified</button><button class="lv-{{ style }} c-primary">Primary</button><button class="lv-{{ style }} c-alert">Alert</button><button class="lv-{{ style }} c-success">Success</button><button class="lv-{{ style }} c-accent">Accent</button>
+	</div>
+{% endfor %}
+#}
+</form></div>
+
+{% endblock %}

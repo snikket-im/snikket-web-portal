@@ -1,0 +1,3 @@
+{% macro box(type, title, slim=False, caller=None) %}
+<aside class="box{% if slim %} slim{% endif %} {{ type }}"><header>{{ title }}</header> {{ caller() }}</aside>
+{% endmacro %}

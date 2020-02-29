@@ -1,19 +1,39 @@
-<!DOCTYPE html>
-<html>
-	<body>
-		<form method="POST">
-			{{ form.csrf_token }}
-			{{ form.current_password }}
-			{{ form.new_password }}
-			{{ form.new_password_confirm }}
-			<ul>
-			{% for field, errors in form.errors.items() %}
-				{% for error in errors %}
-				<li>{{ field }}: {{ error }}</li>
-				{% endfor %}
-			{% endfor %}
-			</ul>
-			<input type="submit" value="Change password">
-		</form>
-	</body>
-</html>
+{% extends "app.html" %}
+{% block head_lead %}
+<title>Snikket Web Portal</title>
+{% endblock %}
+{% block content %}
+<div class="form layout-expanded"><form method="POST">
+	<h2 class="form-title">Change your password</h2>
+	<p class="form-desc weak">To change your password, you need to provide the current password as well as the new one. To reduce the chance of typos, we ask for your new password twice.</p>
+	{{ form.csrf_token }}
+	{% if form.errors %}
+	<div class="box alert">
+		<header>Password change failed</header>
+		<ul>
+		{% for field, errors in form.errors.items() %}
+		{% for error in errors %}
+		<li>{{ error }}</li>
+		{% endfor %}
+		{% endfor %}
+		</ul>
+	</div>
+	{% endif %}
+	<div class="f-ebox">
+		{{ form.current_password.label(class="required") }}
+		{{ form.current_password(class=("has-error" if form.current_password.name in form.errors else "")) }}
+	</div>
+	<div class="f-ebox">
+		{{ form.new_password.label(class="required") }}
+		{{ form.new_password }}
+	</div>
+	<div class="f-ebox">
+		{{ form.new_password_confirm.label(class="required") }}
+		{{ form.new_password_confirm(class=("has-error" if form.new_password_confirm.name in form.errors else "")) }}
+	</div>
+	<div class="f-bbox">
+		<a href="{{ url_for('user.index') }}" class="button secondary">Back</a>
+		<button type="submit" class="primary">Change password</button>
+	</div>
+</form></div>
+{% endblock %}

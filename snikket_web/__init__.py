@@ -34,5 +34,14 @@ async def home():
     return redirect(url_for('login'))
 
 
+@app.route("/meta/about.html")
+async def about():
+    return await render_template("about.html")
+
+
+@app.route("/meta/demo.html")
+async def demo():
+    return await render_template("demo.html")
+
 from .user import user_bp
 app.register_blueprint(user_bp)

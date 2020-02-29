@@ -1,0 +1,666 @@
+@import "_theme.scss";
+@import "_baseline.scss";
+
+/* coarse layout */
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: $gray-900;
+}
+
+body > main {
+	padding: $w-l1;
+}
+
+/* top bar */
+
+@mixin snikket-logo {
+	background-image: url('/static/img/snikket-logo.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: $w-s2 0em;
+	padding-left: 2em;
+}
+
+div#topbar {
+	background-color: white;
+	@extend .el-1;
+	color: $primary-200;
+	margin: 0;
+	padding: $w-s1;
+	display: flex;
+	align-items: center;
+
+	& > header {
+		flex: 0 1 auto;
+		color: black;
+		font-size: nth($h-sizes, 1);
+
+		@media screen and (max-width: $small-screen-threshold) {
+			font-size: nth($h-small-sizes, 1);
+		}
+
+		& > a {
+			color: inherit;
+			text-decoration: none;
+
+			span {
+				@include snikket-logo;
+			}
+		}
+
+		& > a:visited, & > a:hover, & > a:focus, & > a:active {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+
+	& > div.filler {
+		flex: 1 1 0px;
+	}
+
+	& > nav.usermenu {
+		flex: 0 1 auto;
+	}
+}
+
+/* main content */
+
+main {
+	max-width: 60rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* standard elevations */
+
+.el-1, .box.el-1, div.form.el-1 {
+	box-shadow:
+		0 1px 3px rgba(0, 0, 0, 0.12),
+		0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.el-2, .box.el-2, div.form.el-2 {
+	box-shadow:
+		0 3px 6px rgba(0, 0, 0, 0.15),
+		0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.el-3, .box.el-3, div.form.el-3 {
+	box-shadow:
+		0 10px 20px rgba(0, 0, 0, 0.15),
+		0 3px 6px rgba(0, 0, 0, 0.10);
+}
+
+.el-4, .box.el-4, div.form.el-4 {
+	box-shadow:
+		0 15px 25px rgba(0, 0, 0, 0.15),
+		0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.el-5, .box.el-5, div.form.el-5 {
+	box-shadow:
+		0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+
+/* footer */
+
+body > footer {
+	display: block;
+	background-color: $gray-100;
+	color: $gray-800;
+	padding: 0 $w-l1;
+
+	ul {
+		display: block;
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+
+	li {
+		display: inline-block;
+		margin: $w-l1 0;
+	}
+
+	li:before {
+		content: '•';
+		padding-right: $w-s2;
+	}
+
+	a, a:visited, a:hover, a:active, a:focus {
+		color: $gray-900;
+		font-weight: bold;
+		text-decoration-line: underline;
+		text-decoration-color: $gray-500;
+		text-decoration-width: $w-s4;
+		text-decoration-thickness: $w-s4;
+		text-underline-offset: 0;
+	}
+
+	a:hover {
+		text-decoration-color: $gray-700;
+	}
+}
+
+/* form support */
+
+@for $n from 1 through 6 {
+	div.form h#{$n}.form-title {
+		font-size: 100%;
+		font-weight: bold;
+		line-height: 1.5;
+		margin-bottom: 1.5em;
+	}
+}
+
+label.required:after {
+	content: '*';
+	color: $alert-400;
+	padding: $w-s4;
+}
+
+p.form-desc.weak {
+	color: $gray-300;
+}
+
+$text-entry-inputs: "text" "password";
+
+div.f-errbox {
+	background-color: $alert-800;
+	border: $w-s4 solid $alert-200;
+	color: $alert-100;
+	border-radius: $w-s4;
+	padding: 0 $w-0;
+	margin: 1em 0;
+
+	p {
+		line-height: 1;
+		margin: 1em 0;
+	}
+
+	ul {
+		margin: 1em 0;
+		padding: 0;
+		padding-left: $w-0;
+	}
+
+	li {
+	}
+}
+
+div.form {
+	@extend .el-2;
+
+	margin: $w-l1;
+	padding: $w-l1;
+	background-color: white;
+}
+
+div.form.layout-expanded {
+	label {
+		display: block;
+		color: $gray-200;
+	}
+
+	div.f-ebox {
+		margin-bottom: $w-l1;
+	}
+
+	div.f-bbox {
+		text-align: right;
+		padding: $w-s2 0;
+	}
+
+	@each $type in $text-entry-inputs {
+		input[type=$type] {
+			width: 100%;
+			border: none;
+			border-bottom: $w-s4 solid $primary-500;
+			margin-bottom: -$w-s4;
+			padding: 0 $w-s3;
+		}
+
+		input[type=$type].has-error {
+			border-right: $w-s4 solid $alert-500;
+		}
+
+		input[type=$type]:hover {
+			border-bottom-color: $primary-700;
+		}
+
+		input[type=$type]:focus {
+			border-bottom-color: $primary-800;
+		}
+	}
+
+	input[type="checkbox"], input[type="radio"] {
+		position: absolute;
+		z-index: -1;
+	}
+
+	input[type="checkbox"] + label:before {
+		background-color: transparent;
+		color: transparent;
+		content: "✔";
+		display: inline-block;
+		width: $w-0;
+		height: $w-0;
+		border-radius: $w-s4;
+		border: $w-s4 solid $primary-500;
+		text-align: center;
+		font-size: $w-0;
+		margin-right: $w-s2;
+		line-height: 1;
+	}
+
+	input[type="radio"] + label:before {
+		background-color: transparent;
+		color: transparent;
+		content: "✔";
+		display: inline-block;
+		width: $w-0;
+		height: $w-0;
+		border-radius: $w-s1;
+		border: $w-s4 solid $primary-500;
+		text-align: center;
+		font-size: $w-0;
+		margin-right: $w-s2;
+		line-height: 1;
+	}
+
+	input[type="checkbox"] + label:hover:before,
+	input[type="radio"] + label:hover:before {
+		border-color: $primary-700;
+	}
+
+	input[type="checkbox"]:focus + label:before,
+	input[type="radio"]:focus + label:before {
+		border-color: $primary-800;
+	}
+
+	input[type="checkbox"]:checked + label:before {
+		background-color: $primary-500;
+		color: white;
+	}
+
+	input[type="radio"]:checked + label:before {
+		background-color: $primary-500;
+		box-shadow: inset 0 0 0 $w-s3 white;
+	}
+
+	input[type="checkbox"] + label, input[type="radio"] + label {
+		display: block;
+	}
+
+	div.select-wrap {
+		display: block;
+		border-bottom: $w-s4 solid $primary-500;
+		margin-bottom: -$w-s4;
+		position: relative;
+
+		& > select {
+			width: 100%;
+			background-color: transparent;
+			border: none;
+			outline: none;
+			padding: 0 $w-s3;
+			appearance: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			padding-right: $w-l1 + $w-s3;
+			margin-top: -1px;
+			margin-bottom: -1px;
+		}
+
+		&:after {
+			content: "\25bc";
+			position: absolute;
+			right: 0;
+			width: $w-l1;
+			text-align: center;
+			top: 0;
+			bottom: 0;
+			pointer-events: none;
+			color: $primary-500;
+			font-size: 80%;
+			// now we can build a padding which eats the remaining 20%
+			// em is now 0.8 parent-em
+			// we want to eat 20% of 1 parent-em -> 0.2 parent-em
+			// 1 parent-em = 1.25 em
+			// 0.2 parent-em = 0.25 em
+			padding-top: 0.25em;
+			padding-bottom: 0.25em;
+		}
+
+		&:hover {
+			border-bottom-color: $primary-700;
+
+			&:after {
+				color: $primary-700;
+			}
+		}
+
+		&:focus-within {
+			border-bottom-color: $primary-800;
+
+			&:after {
+				color: $primary-800;
+			}
+		}
+	}
+
+	textarea {
+		width: 100%;
+		border: none;
+		border-bottom: $w-s4 solid $primary-500;
+	}
+
+	textarea:hover {
+		border-bottom-color: $primary-700;
+	}
+
+	textarea:focus {
+		border-bottom-color: $primary-800;
+	}
+}
+
+
+/* form buttons */
+
+button, .button {
+	margin: 0 $w-s2;
+	padding: $w-s3 $w-s1;
+}
+
+a.button {
+	text-decoration: none;
+	cursor: default;
+}
+
+button.primary, .button.primary {
+	background: linear-gradient(0deg, $primary-500, $primary-600);
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+	color: $primary-900;
+	border: none;
+	/* TODO: fix vertical rhyhtm ... */
+	border-radius: $w-s4;
+	// border: $w-s4 solid transparent;
+
+	&:hover, &:focus {
+		background: linear-gradient(0deg, $primary-600, $primary-700);
+		color: white;
+	}
+
+	&:active {
+		background: $primary-500;
+		box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+		color: white;
+	}
+
+	&.accent {
+		background: linear-gradient(0deg, $accent-500, $accent-600);
+		color: $accent-900;
+
+		&:hover, &:focus {
+			background: linear-gradient(0deg, $accent-600, $accent-700);
+		}
+
+		&:active {
+			background: $accent-500;
+		}
+	}
+
+	&.danger {
+		background: linear-gradient(0deg, $alert-500, $alert-600);
+		color: $alert-900;
+
+		&:hover, &:focus {
+			background: linear-gradient(0deg, $alert-600, $alert-700);
+		}
+
+		&:active {
+			background: $alert-500;
+		}
+	}
+}
+
+button.secondary, .button.secondary {
+	background: linear-gradient(0deg, $gray-600, $gray-700);
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+	color: $gray-200;
+	border: none;
+	/* TODO: fix vertical rhyhtm ... */
+	border-radius: $w-s4;
+	// border: $w-s4 solid transparent;
+
+	&:hover, &:focus {
+		background: linear-gradient(0deg, $gray-700, $gray-800);
+		color: black;
+	}
+
+	&:active {
+		background: $gray-600;
+		box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+		color: black;
+	}
+
+	&.accent {
+		background: linear-gradient(0deg, $accent-600, $accent-700);
+		color: $accent-200;
+
+		&:hover, &:focus {
+			background: linear-gradient(0deg, $accent-700, $accent-800);
+		}
+
+		&:active {
+			background: $accent-600;
+		}
+	}
+
+	&.danger {
+		background: linear-gradient(0deg, $alert-600, $alert-700);
+		color: $alert-200;
+
+		&:hover, &:focus {
+			background: linear-gradient(0deg, $alert-700, $alert-800);
+		}
+
+		&:active {
+			background: $alert-600;
+		}
+	}
+}
+
+button.tertiary, .button.tertiary {
+	background-color: transparent;
+	color: $gray-100;
+	border: none;
+	/* TODO: fix vertical rhyhtm ... */
+	border-radius: $w-s4;
+
+	&:hover {
+		background-color: $gray-900;
+		border-color: $gray-800;
+		color: black;
+	}
+
+	&.accent {
+		&:hover {
+			background-color: $accent-900;
+			border-color: $accent-800;
+			color: black;
+		}
+	}
+
+	&.danger {
+		&:hover {
+			background-color: $alert-900;
+			border-color: $alert-800;
+			color: black;
+		}
+	}
+}
+
+button.fullwidth, .button.fullwidth {
+	display: block;
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/* button, .button {
+	margin: 0 $w-s2;
+}
+
+button.lv-primary, .button.lv-primary {
+	background-color: $gray-500;
+	color: $gray-900;
+	border-radius: $w-s4;
+	border: $w-s4 solid $gray-400;
+
+	@each $type, $values in $colours {
+		&.c-#{$type} {
+			border-color: nth($values, 4);
+			background-color: nth($values, 5);
+			color: nth($values, 9);
+		}
+
+		&.c-#{$type}:hover {
+			background-color: nth($values, 4);
+		}
+	}
+}
+
+button.lv-secondary, .button.lv-secondary {
+	background-color: $gray-700;
+	color: $gray-100;
+	border-radius: $w-s4;
+
+	@each $type, $values in $colours {
+		&.c-#{$type} {
+			background-color: nth($values, 7);
+			color: nth($values, 1);
+		}
+	}
+}
+
+button.lv-tertiary, .button.lv-tertiary {
+	background-color: inherit;
+	color: $gray-300;
+	border-radius: $w-s4;
+	text-decoration: underline;
+
+	@each $type, $values in $colours {
+		&.c-#{$type} {
+			color: nth($values, 3);
+		}
+	}
+}
+*/
+
+/*
+	button.lv-secondary.c-#{$type}, .button.lv-secondary.c-#{$type} {
+		background-color: nth($values, 7);
+		color: nth($values, 1);
+	}
+
+	button.lv-tertiary.c-#{$type}, .button.lv-tertiary.c-#{$type} {
+		color: nth($values, 3);
+		text-decoration: underline;
+		background-color: transparent;
+	}
+}*/
+
+/* boxes */
+
+.box {
+	display: block;
+	/* border-width: $w-s4 / 2;
+	border-style: solid; */
+	padding: $w-l1 /* - $w-s4 / 2; */;
+	margin: $w-l1;
+	border-radius: $w-s4;
+
+	border-color: $gray-200;
+	background-color: white;
+	color: $gray-100;
+
+	@extend .el-1;
+
+	@each $type, $values in $colours {
+		&.#{$type} {
+			border-color: nth($values, 2);
+			background-color: nth($values, 9);
+			color: nth($values, 1);
+		}
+	}
+}
+
+.box > header {
+	font-weight: bold;
+	display: block;
+	margin-bottom: $w-l1;
+	line-height: 1.5;
+	color: black;
+}
+
+.box > p:last-child {
+	margin-bottom: 0;
+}
+
+.box.slim {
+	& > header {
+		display: inline;
+		margin: 0;
+	}
+
+	& > header:after {
+		content: ':';
+	}
+
+	& > p {
+		display: inline;
+		margin: 0;
+	}
+}
+
+/* login page specials */
+
+body#login {
+	.form {
+		font-size: nth($h-sizes, 4);
+	}
+
+	.form-title {
+		color: $primary-200;
+	}
+
+	h1 {
+		@include snikket-logo;
+		padding-left: 2em;
+		background-position: 0 0em;
+	}
+}
+
+/* linearisation / responsive stuff */
+
+@media screen and (max-width: $small-screen-threshold) {
+	main > .form.layout-expanded {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.form.layout-expanded .box {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.box > ul  {
+		padding-left: $w-0;
+	}
+
+
+}

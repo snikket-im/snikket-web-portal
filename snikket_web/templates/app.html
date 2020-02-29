@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block head_lead %}
+<title>Snikket Web Portal</title>
+{% endblock %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/app.css') }}">
+{{ super() }}
+{% endblock %}
+{% block body %}
+<div id="topbar">
+	<header><a href="{{ url_for('user.index') }}"><span>{{ config["SNIKKET_DOMAIN"] }}</span></a></header>
+	<div class="filler"></div>
+	<nav class="usermenu">{{ user_info.username }}</nav>
+</div>
+<main>{% block content %}{% endblock %}</main>
+<footer>
+	<ul><li>A <a href="{{ url_for('about') }}">Snikket</a> server</li></ul>
+</footer>
+{% endblock %}

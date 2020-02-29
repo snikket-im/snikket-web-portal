@@ -1,9 +1,15 @@
-<!DOCTYPE html>
-<html>
-	<body>
-		<form method="POST">
-			{{ form.csrf_token }}
-			<input type="submit" value="Logout">
-		</form>
-	</body>
-</html>
+{% extends "app.html" %}
+{% block head_lead %}
+<title>Snikket Web Portal</title>
+{% endblock %}
+{% block content %}
+<div class="form layout-expanded"><form method="POST">
+	<h2 class="form-title">Sign out of the Snikket Web Portal</h2>
+	<p class="form-desc">Click below to log yourself out of the web portal. This does not affect any other connected devices.</p>
+	{{ form.csrf_token }}
+	<div class="f-bbox">
+		<a href="{{ url_for('user.index') }}" class="button secondary">Back</a>
+		<button type="submit" class="primary">Sign out</button>
+	</div>
+</form></div>
+{% endblock %}
