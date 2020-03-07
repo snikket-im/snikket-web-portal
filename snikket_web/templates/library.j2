@@ -1,3 +1,10 @@
 {% macro box(type, title, slim=False, caller=None) %}
 <aside class="box{% if slim %} slim{% endif %} {{ type }}"><header>{{ title }}</header> {{ caller() }}</aside>
 {% endmacro %}
+
+{% macro avatar(from_, hash, caller=None) -%}
+{%- if hash -%}
+<div class="avatar" style="background-image: url('{{ url_for_avatar(from_, hash) }}');"></div>
+{%- else -%}
+{%- endif -%}
+{%- endmacro %}

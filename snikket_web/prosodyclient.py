@@ -1,5 +1,7 @@
+import binascii
 import contextlib
 import functools
+import hashlib
 
 import aiohttp
 
@@ -9,6 +11,7 @@ from quart import (
     current_app, _app_ctx_stack, session as http_session, abort, redirect,
     url_for,
 )
+import quart.exceptions
 
 from . import xmpputil
 from .xmpputil import split_jid
@@ -214,10 +217,22 @@ class ProsodyClient:
 
         async with self._auth_session as session:
             nickname = await self.get_user_nickname(session=session)
+            try:
+                avatar_info = await self.get_avatar(
+                    self.session_address,
+                    metadata_only=True,
+                    session=session,
+                )
+                avatar_hash = avatar_info["sha1"]
+            except quart.exceptions.BaseException:
+                avatar_hash = None
+
             return {
+                "address": self.session_address,
                 "username": localpart,
                 "nickname": nickname,
                 "display_name": nickname or localpart,
+                "avatar_hash": avatar_hash,
             }
 
     @autosession
@@ -237,6 +252,58 @@ class ProsodyClient:
         )
         # just to throw errors
         xmpputil.extract_iq_reply(iq_resp)
+
+    @autosession
+    async def get_avatar(self, from_, session,
+                         metadata_only=False):
+        metadata_resp = await self._xml_iq_call(
+            session,
+            xmpputil.make_avatar_metadata_request(from_)
+        )
+        info = xmpputil.extract_avatar_metadata_get_reply(metadata_resp)
+        if info is None:
+            raise abort(404, "entity has no avatar")
+
+        if not metadata_only:
+            info["data"] = await self.get_avatar_data(
+                from_, info["sha1"],
+                session=session,
+            )
+
+        return info
+
+    @autosession
+    async def get_avatar_data(self, from_, id_, session):
+        data_resp = await self._xml_iq_call(
+            session,
+            xmpputil.make_avatar_data_request(from_, id_)
+        )
+        return xmpputil.extract_avatar_data_get_reply(data_resp)
+
+    @autosession
+    async def set_user_avatar(self, data, mimetype, session):
+        id_ = hashlib.sha1(data).hexdigest()
+
+        data_resp = await self._xml_iq_call(
+            session,
+            xmpputil.make_avatar_data_set_request(self.session_address,
+                                                  data,
+                                                  id_)
+        )
+        xmpputil.extract_iq_reply(data_resp)
+
+        metadata_resp = await self._xml_iq_call(
+            session,
+            xmpputil.make_avatar_metadata_set_request(
+                self.session_address,
+                mimetype=mimetype,
+                id_=id_,
+                size=len(data),
+                width=None,
+                height=None,
+            )
+        )
+        xmpputil.extract_iq_reply(metadata_resp)
 
     async def change_password(self, current_password, new_password):
         # we play it safe here and do not use the existing auth session;

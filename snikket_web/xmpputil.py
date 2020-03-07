@@ -1,3 +1,5 @@
+import base64
+import binascii
 import typing
 
 import xml.etree.ElementTree as ET
@@ -10,7 +12,7 @@ TAG_XMPP_ERROR = "error"
 
 NS_XMPP_ERROR_CONDITION = "urn:ietf:params:xml:ns:xmpp-stanzas"
 TAG_XMPP_ERROR_ITEM_NOT_FOUND = "{{{}}}item-not-found".format(NS_XMPP_ERROR_CONDITION)
-TAG_XMPP_ERROR_TEXT =  "{{{}}}text".format(TAG_XMPP_ERROR_ITEM_NOT_FOUND)
+TAG_XMPP_ERROR_TEXT = "{{{}}}text".format(NS_XMPP_ERROR_CONDITION)
 
 ERROR_CODE_MAP = {
     TAG_XMPP_ERROR_ITEM_NOT_FOUND: 404,
@@ -22,7 +24,17 @@ TAG_PUBSUB_ITEM = "{{{}}}item".format(NS_PUBSUB)
 TAG_PUBSUB_ITEMS = "{{{}}}items".format(NS_PUBSUB)
 
 NS_USER_NICKNAME = "http://jabber.org/protocol/nick"
+NODE_USER_NICKNAME = NS_USER_NICKNAME
 TAG_USER_NICKNAME_NICK = "{{{}}}nick".format(NS_USER_NICKNAME)
+
+NODE_USER_AVATAR_METADATA = "urn:xmpp:avatar:metadata"
+NS_USER_AVATAR_METADATA = "urn:xmpp:avatar:metadata"
+TAG_USER_AVATAR_METADATA = "{{{}}}metadata".format(NS_USER_AVATAR_METADATA)
+TAG_USER_AVATAR_METADATA_INFO = "{{{}}}info".format(NS_USER_AVATAR_METADATA)
+
+NODE_USER_AVATAR_DATA = "urn:xmpp:avatar:data"
+NS_USER_AVATAR_DATA = "urn:xmpp:avatar:data"
+TAG_USER_AVATAR_DATA = "{{{}}}data".format(NS_USER_AVATAR_DATA)
 
 
 def split_jid(s):
@@ -48,6 +60,8 @@ def raise_iq_error(err: ET.Element):
             err_condition_el = el
         else:
             err_app_def_condition_el = el
+
+    print(err_text_el, err_condition_el, err_app_def_condition_el)
 
     abort(ERROR_CODE_MAP.get(err_condition_el.tag, 500),
           err_condition_el.tag)
@@ -86,25 +100,83 @@ def make_password_change_request(jid, password):
     return ET.tostring(req)
 
 
-def make_nickname_set_request(to, nickname):
+def make_pubsub_item_put_request(to, node, id_=None):
     req = ET.Element("iq", type="set", to=to)
-    q = ET.SubElement(req, "pubsub", xmlns="http://jabber.org/protocol/pubsub")
-    publish = ET.SubElement(q, "publish", node="http://jabber.org/protocol/nick")
+    q = ET.SubElement(req, "pubsub", xmlns=NS_PUBSUB)
+    publish = ET.SubElement(q, "publish", node=node)
     item = ET.SubElement(publish, "item")
-    ET.SubElement(
-        item,
-        "nick",
-        xmlns="http://jabber.org/protocol/nick"
-    ).text = nickname
+    if id_ is not None:
+        item.set("id", id_)
+    return req, item
+
+
+def make_nickname_set_request(to, nickname):
+    req, item = make_pubsub_item_put_request(
+        to,
+        NODE_USER_NICKNAME,
+    )
+    ET.SubElement(item, "nick", xmlns=NS_USER_NICKNAME).text = nickname
+    return ET.tostring(req)
+
+
+def make_pubsub_item_request(to, node, id_=None):
+    req = ET.Element("iq", type="get", to=to)
+    q = ET.SubElement(req, "pubsub", xmlns=NS_PUBSUB)
+    items = ET.SubElement(q, "items", node=node)
+    if id_ is not None:
+        ET.SubElement(items, "item", id=id_)
+    else:
+        items.set("max_items", "1")
 
     return ET.tostring(req)
 
 
 def make_nickname_get_request(to):
-    req = ET.Element("iq", type="get", to=to)
-    q = ET.SubElement(req, "pubsub", xmlns="http://jabber.org/protocol/pubsub")
-    items = ET.SubElement(q, "items", node="http://jabber.org/protocol/nick", max_items="1")
+    return make_pubsub_item_request(to, NODE_USER_NICKNAME)
 
+
+def make_avatar_metadata_request(to):
+    return make_pubsub_item_request(to, NODE_USER_AVATAR_METADATA)
+
+
+def make_avatar_data_request(to, sha1):
+    return make_pubsub_item_request(to, NODE_USER_AVATAR_DATA, id_=sha1)
+
+
+def make_avatar_data_set_request(to, data, id_):
+    req, item = make_pubsub_item_put_request(
+        to,
+        NODE_USER_AVATAR_DATA,
+        id_=id_,
+    )
+    ET.SubElement(item, "data", xmlns=NS_USER_AVATAR_DATA).text = \
+        base64.b64encode(data).decode("ascii")
+    return ET.tostring(req)
+
+
+def make_avatar_metadata_set_request(to, mimetype: str, id_: str, size: int,
+                                     width: int = None,
+                                     height: int = None):
+    req, item = make_pubsub_item_put_request(
+        to,
+        NODE_USER_AVATAR_METADATA,
+        id_=id_,
+    )
+    metadata_wrap = ET.SubElement(
+        item,
+        "metadata", xmlns=NS_USER_AVATAR_METADATA)
+
+    attr = {
+        "id": id_,
+        "bytes": str(size),
+        "type": mimetype,
+    }
+    if width is not None:
+        attr["width"] = str(width)
+    if height is not None:
+        attr["height"] = str(height)
+
+    ET.SubElement(metadata_wrap, "info", xmlns=NS_USER_AVATAR_METADATA, **attr)
     return ET.tostring(req)
 
 
@@ -115,7 +187,7 @@ def _require_child(t: ET.Element, tag: str) -> ET.Element:
     return el
 
 
-def extract_nickname_get_reply(iq_tree):
+def extract_pubsub_item_get_reply(iq_tree, payload_tag):
     try:
         pubsub = extract_iq_reply(iq_tree, TAG_PUBSUB)
     except quart.exceptions.NotFound:
@@ -125,6 +197,44 @@ def extract_nickname_get_reply(iq_tree):
     if len(items) == 0:
         return None
 
-    item = _require_child(items, TAG_PUBSUB_ITEM)
-    nick = _require_child(item, TAG_USER_NICKNAME_NICK)
-    return nick.text
+    return _require_child(_require_child(items, TAG_PUBSUB_ITEM), payload_tag)
+
+
+def extract_nickname_get_reply(iq_tree):
+    return extract_pubsub_item_get_reply(iq_tree, TAG_USER_NICKNAME_NICK).text
+
+
+def extract_avatar_metadata_get_reply(iq_tree):
+    metadata = extract_pubsub_item_get_reply(iq_tree, TAG_USER_AVATAR_METADATA)
+    if metadata is None:
+        return None
+
+    if len(metadata) != 1 or metadata[0].tag != TAG_USER_AVATAR_METADATA_INFO:
+        # raise an error instead?
+        return None
+
+    info = metadata[0]
+    attrs = info.attrib
+    result = {
+        "sha1": attrs["id"],
+        "type": attrs.get("type", "image/png"),
+    }
+
+    def extract_optional(key, type_=int):
+        try:
+            result[key] = type_(attrs[key])
+        except (KeyError, ValueError, TypeError):
+            pass
+
+    extract_optional("width")
+    extract_optional("height")
+    extract_optional("bytes")
+
+    return result
+
+
+def extract_avatar_data_get_reply(iq_tree):
+    data = extract_pubsub_item_get_reply(iq_tree, TAG_USER_AVATAR_DATA)
+    if data.text is None:
+        return None
+    return base64.b64decode(data.text)

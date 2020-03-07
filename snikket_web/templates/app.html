@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "library.j2" import avatar with context %}
 {% block head_lead %}
 <title>Snikket Web Portal</title>
 {% endblock %}
@@ -10,7 +11,7 @@
 <div id="topbar">
 	<header><a href="{{ url_for('user.index') }}"><span>{{ config["SNIKKET_DOMAIN"] }}</span></a></header>
 	<div class="filler"></div>
-	<nav class="usermenu">{{ user_info.display_name }}</nav>
+	<nav class="usermenu">{% call avatar(user_info.address, user_info.avatar_hash ) %}{% endcall %}{{ user_info.display_name }}</nav>
 </div>
 <main>{% block content %}{% endblock %}</main>
 <footer>

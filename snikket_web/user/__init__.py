@@ -49,6 +49,10 @@ class ProfileForm(FlaskForm):
         "Display name",
     )
 
+    avatar = wtforms.FileField(
+        "Avatar"
+    )
+
 
 @user_bp.route("/")
 async def index():
@@ -86,6 +90,14 @@ async def profile():
 
     if form.validate_on_submit():
         user_info = await client.get_user_info()
+
+        file_info = (await request.files).get(form.avatar.name)
+        if file_info is not None:
+            mimetype = file_info.mimetype
+            data = file_info.stream.read()
+            if len(data) > 0:
+                await client.set_user_avatar(data, mimetype)
+
         if user_info.get("nickname") != form.nickname.data:
             await client.set_user_nickname(form.nickname.data)
         return redirect(url_for(".profile"))
