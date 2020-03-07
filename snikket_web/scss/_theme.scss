@@ -170,3 +170,74 @@ $font-monospace: monospace;
 $font-heading: $font-sans;
 $font-bulk: $font-sans;
 $font-code: $font-monospace;
+
+/**
+ * On the scaling of the headers. I’m a nerd, so here we go.
+ *
+ * I tried to determine a good scale a priori. It was clear to me that the
+ * observed difference between a 48px and 64px font is much smaller than the
+ * perceived difference between a 8px and 16px font size.
+ *
+ * Thus, the perception is *not* linear in the font size.
+ *
+ * I set the edge points to 200% and 100% (the h6 would get a bold font face)
+ * to compensate.
+ *
+ * The first attempt to get a visually appealing header size scale was thus to
+ * generate a logarithmic scale:
+ *
+ *     numpy.logspace(np.log10(200), 2, 6, base=10)
+ *
+ * This leads to the following sizes:
+ *
+ *     $_h-sizes: [200%, 174.11011266%, 151.57165665%, 131.95079108%, 114.8698355%, 100%];
+ *
+ * This scale has too large differences between the larger font sizes, and too
+ * small differences between the smaller font sizes. Thus, I tried to invert
+ * this:
+ *
+ *     200 - numpy.logspace(2, np.log10(200), 6, base=10) + 100
+ *
+ * This leads to the following sizes:
+ *
+ *     $_h-sizes: [200.0%, 185.13016450029647%, 168.0492089227105%, 148.42834334896025%, 125.88988734077518%, 100%];
+ *
+ * While this was better, it still didn’t look quite right yet. The next
+ * attempt was to go about a square function instead of log. The idea behind
+ * this is that the font size is essentially one edge of a rectangle, where the
+ * second edge depends on the first. A square function should thus generate a
+ * nicely appealing sequence:
+ *
+ * Again, we want the large differences to be on the large scales, too:
+ *
+ *     xs = numpy.linspace(5, 0, 6); 4*xs*xs + 100
+ *
+ * This leads to the following sizes:
+ *
+ *     $_h-sizes: [200.0%, 164.0%, 136.0%, 116.0%, 104.0%, 100.0%];
+ *
+ * While the first three headings looked nice with that, the others did not.
+ * Further research has shown me that others use an exponential scale (instead
+ * of a log scale), but with a rather small base (<1.6).
+ *
+ * Instead of taking one of the well-known factors (like golden ratio or major
+ * second), I opted for choosing a factor which gives me a clean 200%-100%
+ * range:
+ *
+ *     numpy.power(math.pow(2, 1/5), numpy.linspace(5, 0, 6)) * 100
+ *
+ * The result (rounded to 8 digits) is:
+ *
+ *     $_h-sizes: [200.0%, 174.11011266%, 151.57165665%, 131.95079108%, 114.8698355%, 100.0%];
+ *
+ * And... This is the first logspace range. Derp. So why did I discard it in
+ * the first place? Now that I look at it, it looks amazing. Brains are weird.
+ */
+$h-sizes: [200.0%, 174.11011266%, 151.57165665%, 131.95079108%, 114.8698355%, 100.0%];
+
+/**
+ * And for mobile devices, we want an even less aggressive scale. Let’s try
+ * 150%-100%.
+ */
+$h-small-sizes: [150.0%, 138.31618672%, 127.54245006%, 117.60790225%, 108.44717712%, 100.0%];
+$small-screen-threshold: 40rem;
