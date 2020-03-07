@@ -55,12 +55,14 @@ class ProfileForm(FlaskForm):
 
 
 @user_bp.route("/")
+@client.require_session()
 async def index():
     user_info = await client.get_user_info()
     return await render_template("user_home.html", user_info=user_info)
 
 
 @user_bp.route('/passwd', methods=["GET", "POST"])
+@client.require_session()
 async def change_pw():
     form = ChangePasswordForm()
     if form.validate_on_submit():
@@ -82,6 +84,7 @@ async def change_pw():
 
 
 @user_bp.route("/profile", methods=["GET", "POST"])
+@client.require_session()
 async def profile():
     form = ProfileForm()
     if request.method != "POST":
@@ -106,6 +109,7 @@ async def profile():
 
 
 @user_bp.route("/logout", methods=["GET", "POST"])
+@client.require_session()
 async def logout():
     form = LogoutForm()
     if form.validate_on_submit():

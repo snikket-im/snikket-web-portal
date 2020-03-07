@@ -19,7 +19,7 @@ client.default_login_redirect = "login"
 
 @app.route("/login", methods=["GET", "POST"])
 async def login():
-    if client.has_session:
+    if client.has_session and (await client.test_session()):
         return redirect(url_for('user.index'))
 
     if request.method == "POST":

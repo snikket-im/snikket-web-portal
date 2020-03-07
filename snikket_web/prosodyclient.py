@@ -186,7 +186,7 @@ class ProsodyClient:
         def decorator(f):
             @functools.wraps(f)
             async def wrapped(*args, **kwargs):
-                if not self.has_session:
+                if not self.has_session or not (await self.test_session()):
                     nonlocal redirect_to
                     if redirect_to is not False:
                         redirect_to = \
@@ -204,10 +204,12 @@ class ProsodyClient:
         headers.update({
             "Content-Type": "application/xmpp+xml"
         })
+        print(payload)
         async with session.post(self._rest_endpoint,
                                 headers=headers,
                                 data=payload) as resp:
-            print(payload)
+            if resp.status != 200:
+                abort(resp.status)
             reply_payload = await resp.read()
             print(reply_payload)
             return ET.fromstring(reply_payload)
@@ -224,7 +226,7 @@ class ProsodyClient:
                     session=session,
                 )
                 avatar_hash = avatar_info["sha1"]
-            except quart.exceptions.BaseException:
+            except quart.exceptions.HTTPException:
                 avatar_hash = None
 
             return {
@@ -234,6 +236,18 @@ class ProsodyClient:
                 "display_name": nickname or localpart,
                 "avatar_hash": avatar_hash,
             }
+
+    @autosession
+    async def test_session(self, session):
+        req = {
+            "kind": "iq",
+            "type": "get",
+            "ping": True,
+            "to": self.session_address,
+        }
+
+        async with session.post(self._rest_endpoint, data=req) as resp:
+            return resp.status == 200
 
     @autosession
     async def get_user_nickname(self, session):
