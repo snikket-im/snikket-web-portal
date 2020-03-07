@@ -1,0 +1,138 @@
+# English translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-03-07 16:53+0100\n"
+"PO-Revision-Date: 2020-03-07 16:50+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: snikket_web/templates/app.html:18 snikket_web/templates/login.html:29
+#, python-format
+msgid "A <a href=\"%(about_url)s\">Snikket</a> server"
+msgstr "A <a href=\"%(about_url)s\">Snikket</a> server"
+
+#: snikket_web/templates/login.html:4
+msgid "Snikket Login"
+msgstr "Snikket Login"
+
+#: snikket_web/templates/login.html:13
+msgid "Enter your Snikket address and password to manage your account."
+msgstr "Enter your Snikket address and password to manage your account."
+
+#: snikket_web/templates/login.html:16 snikket_web/templates/login.html:17
+msgid "Address"
+msgstr "Address"
+
+#: snikket_web/templates/login.html:20 snikket_web/templates/login.html:21
+msgid "Password"
+msgstr "Password"
+
+#: snikket_web/templates/login.html:24
+msgid "Log in"
+msgstr "Log in"
+
+#: snikket_web/templates/user_home.html:3
+msgid "Welcome!"
+msgstr "Welcome!"
+
+#: snikket_web/templates/user_home.html:4
+#, python-format
+msgid "Welcome home, %(user_name)s."
+msgstr "Welcome home, %(user_name)s."
+
+#: snikket_web/templates/user_home.html:7
+msgid "Update profile"
+msgstr "Update profile"
+
+#: snikket_web/templates/user_home.html:8
+msgid ""
+"Change display name, set avatar and configure visibility of your personal"
+" data to others."
+msgstr ""
+"Change display name, set avatar and configure visibility of your personal"
+" data to others."
+
+#: snikket_web/templates/user_home.html:11
+#: snikket_web/templates/user_passwd.html:36
+msgid "Change password"
+msgstr "Change password"
+
+#: snikket_web/templates/user_home.html:14
+msgid "Log out"
+msgstr "Log out"
+
+#: snikket_web/templates/user_home.html:15
+msgid "Exit the Snikket Web Portal, without logging out your other devices."
+msgstr "Exit the Snikket Web Portal, without logging out your other devices."
+
+#: snikket_web/templates/user_passwd.html:7
+msgid "Change your password"
+msgstr "Change your password"
+
+#: snikket_web/templates/user_passwd.html:8
+msgid ""
+"To change your password, you need to provide the current password as well"
+" as the new one. To reduce the chance of typos, we ask for your new "
+"password twice."
+msgstr ""
+"To change your password, you need to provide the current password as well"
+" as the new one. To reduce the chance of typos, we ask for your new "
+"password twice."
+
+#: snikket_web/templates/user_passwd.html:12
+msgid "Password change failed"
+msgstr "Password change failed"
+
+#: snikket_web/templates/user_passwd.html:35
+#: snikket_web/templates/user_profile.html:18
+msgid "Back"
+msgstr "Back"
+
+#: snikket_web/templates/user_profile.html:7
+msgid "Profile"
+msgstr "Profile"
+
+#: snikket_web/templates/user_profile.html:18
+msgid "Apply"
+msgstr "Apply"
+
+#: snikket_web/user/__init__.py:21
+msgid "Current password"
+msgstr "Current password"
+
+#: snikket_web/user/__init__.py:26
+msgid "New password"
+msgstr "New password"
+
+#: snikket_web/user/__init__.py:31
+msgid "Confirm new password"
+msgstr "Confirm new password"
+
+#: snikket_web/user/__init__.py:35
+msgid "The new passwords must match."
+msgstr "The new passwords must match."
+
+#: snikket_web/user/__init__.py:46
+msgid "Display name"
+msgstr "Display name"
+
+#: snikket_web/user/__init__.py:50
+msgid "Avatar"
+msgstr "Avatar"
+
+#: snikket_web/user/__init__.py:74
+msgid "Incorrect password"
+msgstr "Incorrect password"
+

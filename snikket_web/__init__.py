@@ -10,16 +10,28 @@ from quart import (
     current_app,
 )
 
+from flask_babel import Babel
+
 from . import colour
 from .prosodyclient import client
 
 from ._version import version, version_info
 
 app = Quart(__name__)
+app.config.setdefault("LANGUAGES", ["de", "en"])
 app.config.from_envvar("SNIKKET_WEB_CONFIG")
 
 client.init_app(app)
 client.default_login_redirect = "login"
+
+babel = Babel(app)
+
+
+@babel.localeselector
+def select_locale():
+    return request.accept_languages.best_match(
+        current_app.config['LANGUAGES']
+    )
 
 
 @app.route("/login", methods=["GET", "POST"])

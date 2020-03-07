@@ -4,7 +4,7 @@
 {% endblock %}
 {% block content %}
 <div class="form layout-expanded"><form method="POST" enctype="multipart/form-data">
-	<h2 class="form-title">Profile</h2>
+	<h2 class="form-title">{% trans %}Profile{% endtrans %}</h2>
 	{{ form.csrf_token }}
 	<div class="f-ebox">
 		{{ form.nickname.label }}
@@ -15,7 +15,7 @@
 		{{ form.avatar }}
 	</div>
 	<div class="f-bbox">
-		<a href="{{ url_for('user.index') }}" class="button secondary">Back</a><button type="submit" class="primary">Update</button>
+		<a href="{{ url_for('user.index') }}" class="button secondary">{% trans %}Back{% endtrans %}</a><button type="submit" class="primary">{% trans %}Apply{% endtrans %}</button>
 	</div>
 </form></div>
 {% endblock %}

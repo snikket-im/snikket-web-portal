@@ -3,6 +3,7 @@ import quart.flask_patch
 from quart import Blueprint, render_template, request, redirect, url_for
 import quart.exceptions
 from flask_wtf import FlaskForm
+from flask_babel import lazy_gettext as _l, _
 import wtforms
 
 from snikket_web.prosodyclient import client
@@ -17,25 +18,21 @@ async def proc():
 
 class ChangePasswordForm(FlaskForm):
     current_password = wtforms.PasswordField(
-        # TODO(i18n)
-        "Current password",
+        _l("Current password"),
         validators=[wtforms.validators.InputRequired()]
     )
 
     new_password = wtforms.PasswordField(
-        # TODO(i18n)
-        "New password",
+        _l("New password"),
         validators=[wtforms.validators.InputRequired()]
     )
 
     new_password_confirm = wtforms.PasswordField(
-        # TODO(i18n)
-        "Confirm new password",
+        _l("Confirm new password"),
         validators=[wtforms.validators.InputRequired(),
                     wtforms.validators.EqualTo(
                         "new_password",
-                        # TODO(i18n)
-                        "The new passwords must match."
+                        _l("The new passwords must match.")
                     )]
     )
 
@@ -46,11 +43,11 @@ class LogoutForm(FlaskForm):
 
 class ProfileForm(FlaskForm):
     nickname = wtforms.TextField(
-        "Display name",
+        _l("Display name"),
     )
 
     avatar = wtforms.FileField(
-        "Avatar"
+        _l("Avatar")
     )
 
 
@@ -74,8 +71,7 @@ async def change_pw():
         except quart.exceptions.Unauthorized:
             # server refused current password, set an appropriate error
             form.errors.setdefault(form.current_password.name, []).append(
-                # TODO(i18n)
-                "Incorrect password",
+                _("Incorrect password"),
             )
         else:
             return redirect(url_for("user.change_pw"))

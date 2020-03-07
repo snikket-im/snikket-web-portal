@@ -4,12 +4,12 @@
 {% endblock %}
 {% block content %}
 <div class="form layout-expanded"><form method="POST">
-	<h2 class="form-title">Change your password</h2>
-	<p class="form-desc weak">To change your password, you need to provide the current password as well as the new one. To reduce the chance of typos, we ask for your new password twice.</p>
+	<h2 class="form-title">{% trans %}Change your password{% endtrans %}</h2>
+	<p class="form-desc weak">{% trans %}To change your password, you need to provide the current password as well as the new one. To reduce the chance of typos, we ask for your new password twice.{% endtrans %}</p>
 	{{ form.csrf_token }}
 	{% if form.errors %}
 	<div class="box alert">
-		<header>Password change failed</header>
+		<header>{% trans %}Password change failed{% endtrans %}</header>
 		<ul>
 		{% for field, errors in form.errors.items() %}
 		{% for error in errors %}
@@ -32,8 +32,8 @@
 		{{ form.new_password_confirm(class=("has-error" if form.new_password_confirm.name in form.errors else "")) }}
 	</div>
 	<div class="f-bbox">
-		<a href="{{ url_for('user.index') }}" class="button secondary">Back</a>
-		<button type="submit" class="primary">Change password</button>
+		<a href="{{ url_for('user.index') }}" class="button secondary">{% trans %}Back{% endtrans %}</a>
+		<button type="submit" class="primary">{% trans %}Change password{% endtrans %}</button>
 	</div>
 </form></div>
 {% endblock %}

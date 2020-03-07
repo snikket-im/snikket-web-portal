@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% set body_id = "login" %}
 {% block head_lead %}
-<title>Snikket Web Portal</title>
+<title>{{ _("Snikket Login") }}</title>
 {% endblock %}
 {% block style %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/app.css') }}">
@@ -10,22 +10,22 @@
 {% block body %}
 <main><div class="form layout-expanded">
 	<h1 class="form-title">{{ config["SNIKKET_DOMAIN"] }}</h1>
-	<p class="form-desc">Enter your Snikket address and password to manage your account.</p>
+	<p class="form-desc">{{ _("Enter your Snikket address and password to manage your account.") }}</p>
 	<form method="POST" action="{{ url_for('login') }}" name="login">
 		<div class="f-ebox">
-			<label for="address" class="a11y-only">Address:</label>
-			<input type="text" name="address" id="address" required="required" placeholder="Address">
+			<label for="address" class="a11y-only">{{ _("Address") }}:</label>
+			<input type="text" name="address" id="address" required="required" placeholder="{{ _("Address") }}">
 		</div>
 		<div class="f-ebox">
-			<label for="password" class="a11y-only"`>Password:</label>
-			<input type="password" name="password" required="required" placeholder="Password">
+			<label for="password" class="a11y-only">{{ _("Password") }}:</label>
+			<input type="password" name="password" id="password" required="required" placeholder="{{ _("Password") }}">
 		</div>
 		<div class="f-bbox">
-			<button type="submit" class="primary">Login</button>
+			<button type="submit" class="primary">{{ _("Log in") }}</button>
 		</div>
 	</from>
 </div></main>
 <footer>
-	<ul><li>A <a href="{{ url_for('about') }}">Snikket</a> server</li></ul>
+	<ul><li>{% trans about_url=url_for('about') %}A <a href="{{ about_url }}">Snikket</a> server{% endtrans %}</li></ul>
 </footer>
 {% endblock %}
