@@ -13,6 +13,8 @@ from quart import (
 from . import colour
 from .prosodyclient import client
 
+from ._version import version, version_info
+
 app = Quart(__name__)
 app.config.from_envvar("SNIKKET_WEB_CONFIG")
 
