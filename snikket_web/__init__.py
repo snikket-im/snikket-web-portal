@@ -1,10 +1,13 @@
 import base64
 import binascii
 
+from datetime import datetime, timedelta
+
 import quart.flask_patch
 
 from quart import (
-    Quart, session, request, render_template, redirect, url_for, Response
+    Quart, session, request, render_template, redirect, url_for, Response,
+    current_app,
 )
 
 from . import colour
@@ -66,20 +69,33 @@ async def avatar(from_, code):
     bin_hash = binascii.a2b_hex(info["sha1"])
     new_etag = base64.urlsafe_b64encode(bin_hash).decode("ascii").rstrip("=")
 
-    headers = {
-        "ETag": new_etag,
-    }
+    cache_ttl = timedelta(seconds=current_app.config.get(
+        "AVATAR_CACHE_TTL",
+        300,
+    ))
 
-    if etag is not None:
-        if new_etag == etag:
-            return Response(
-                [],
-                304,
-                content_type=info["type"], headers=headers
-            )
+    response = Response(None, mimetype=info["type"])
+    response.headers["etag"] = new_etag
+    # XXX: It seems to me that quart expects localtime(?!) in this field...
+    response.expires = datetime.now() + cache_ttl
+    response.headers["Content-Security-Policy"] = \
+        "frame-ancestors 'none'; default-src 'none'; style-src 'unsafe-inline'"
+
+    if etag is not None and new_etag == etag:
+        response.status_code = 304
+        response.set_data("")
+        return response
 
     data = await client.get_avatar_data(address, info["sha1"])
-    return Response(data, content_type=info["type"], headers=headers)
+    response.status_code = 200
+
+    if request.method == "HEAD":
+        response.content_length = len(data)
+        response.set_data("")
+        return response
+
+    response.set_data(data)
+    return response
 
 
 @app.context_processor
