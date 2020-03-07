@@ -5,18 +5,22 @@
 		<link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
 	</head>
 	<body>
-		<h1>About Snikket</h1>
-		<h2>What is Snikket?</h2>
-		<p>Snikket is an easy-to-use and easy-to-setup Instant Messaging platform for you and your friends and family.</p>
-		<h2>What is the Snikket Web Portal?</h2>
-		<h2>Behind the Scenes and Licenses</h2>
-		<h3>Quart Microframework</h3>
-		<hr>
-		<h1>h1</h1>
-		<h2>h2</h2>
-		<h3>h3</h3>
-		<h4>h4</h4>
-		<h5>h5</h5>
-		<h6>h6</h6>
+		<main>
+			<div class="box el-2">
+				<h1>About Snikket</h1>
+				<p>To learn more about Snikket, visit the <a href="https://snikket.org">Snikket website</a>.</p>
+				<h2>About this Server</h2>
+				<p>This is the Snikket server <em>{{ config["SNIKKET_DOMAIN"] }}</em>.</p>
+				<h3>Software Versions</h3>
+				<pre>Snikket Server (unknown)
+Snikket Web Portal ({{ version }})</pre>
+				{# <h3>Partial configuration</h3>
+				<pre>SNIKKET_DOMAIN = {{ config.get("SNIKKET_DOMAIN") | repr }}
+AVATAR_CACHE_TTL = {{ config.get("AVATAR_CACHE_TTL") | repr }}
+SECRET_KEY = &lt;hidden&gt;
+PROSODY_ENDPOINT = &lt;hidden&gt;</pre> #}
+				<p><a href="{{ url_for('home') }}" class="button primary">Back to main page</a></pa>
+			</div>
+		</main>
 	</body>
 </html>

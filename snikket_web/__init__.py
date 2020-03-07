@@ -47,7 +47,7 @@ async def home():
 
 @app.route("/meta/about.html")
 async def about():
-    return await render_template("about.html")
+    return await render_template("about.html", version=version)
 
 
 @app.route("/meta/demo.html")
@@ -114,6 +114,9 @@ def proc():
         "url_for_avatar": url_for_avatar,
         "text_to_css": colour.text_to_css,
     }
+
+
+app.template_filter("repr")(repr)
 
 
 from .user import user_bp  # NOQA
