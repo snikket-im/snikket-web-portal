@@ -7,6 +7,7 @@ from quart import (
     Quart, session, request, render_template, redirect, url_for, Response
 )
 
+from . import colour
 from .prosodyclient import client
 
 app = Quart(__name__)
@@ -92,7 +93,8 @@ def proc():
         )
 
     return {
-        "url_for_avatar": url_for_avatar
+        "url_for_avatar": url_for_avatar,
+        "text_to_css": colour.text_to_css,
     }
 
 

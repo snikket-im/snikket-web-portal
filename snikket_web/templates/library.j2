@@ -2,9 +2,10 @@
 <aside class="box{% if slim %} slim{% endif %} {{ type }}"><header>{{ title }}</header> {{ caller() }}</aside>
 {% endmacro %}
 
-{% macro avatar(from_, hash, caller=None) -%}
+{% macro avatar(from_, hash, char=None, caller=None) -%}
 {%- if hash -%}
 <div class="avatar" style="background-image: url('{{ url_for_avatar(from_, hash) }}');"></div>
 {%- else -%}
+<div class="avatar shim" style="background-color: {{ text_to_css(from_) }}"><span data-avatar-char="{{ char or from_[0] }}"></span></div>
 {%- endif -%}
 {%- endmacro %}

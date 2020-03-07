@@ -648,6 +648,13 @@ button.lv-tertiary, .button.lv-tertiary {
 	@media screen and (max-width: $small-screen-threshold) {
 		font-size: $_top-h-small-size;
 	}
+
+	text-align: center;
+
+	& > span:before {
+		color: $gray-900;
+		content: attr(data-avatar-char);
+	}
 }
 
 nav.usermenu > .avatar {
