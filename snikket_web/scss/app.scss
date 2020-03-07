@@ -645,6 +645,37 @@ body#login {
 	}
 }
 
+
+/* welcome screen specials */
+
+div.welcome-cards {
+	display: flex;
+	flex-wrap: wrap;
+
+	& > .card {
+		flex: 1 0 $w-l6;
+		margin: $w-s1;
+		@extend .el-2;
+		padding: $w-s1 $w-l1;
+		background: white;
+	}
+
+	& > a.card {
+		text-decoration: none;
+		color: inherit;
+
+		& > h2 {
+			color: $primary-200;
+			text-decoration: underline;
+		}
+	}
+
+	& > .card:hover, & > .card:active, & > .card:focus, & > .card:focus-within {
+		@extend .el-3;
+	}
+}
+
+
 /* linearisation / responsive stuff */
 
 @media screen and (max-width: $small-screen-threshold) {
