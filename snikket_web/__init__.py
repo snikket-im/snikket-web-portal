@@ -28,7 +28,7 @@ babel = Babel(app)
 
 
 @babel.localeselector
-def select_locale():
+def selected_locale():
     return request.accept_languages.best_match(
         current_app.config['LANGUAGES']
     )
@@ -125,6 +125,7 @@ def proc():
     return {
         "url_for_avatar": url_for_avatar,
         "text_to_css": colour.text_to_css,
+        "lang": selected_locale(),
     }
 
 
