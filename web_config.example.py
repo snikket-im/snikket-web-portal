@@ -42,3 +42,13 @@ SNIKKET_DOMAIN = "localhost"
 # not re-transferred.
 #
 # AVATAR_CACHE_TTL = 1800
+
+# Which languages to offer
+#
+# Generally, the web portal will offer all languages it has available. There
+# is little point in restricting this, unless if you’re in a situation where
+# the release you’re on has a terrible translation of a specific language
+# and not offering that language at all is better than having that terrible
+# translation.
+#
+# LANGUAGES = ["de", "en"]
