@@ -201,7 +201,10 @@ def extract_pubsub_item_get_reply(iq_tree, payload_tag):
 
 
 def extract_nickname_get_reply(iq_tree):
-    return extract_pubsub_item_get_reply(iq_tree, TAG_USER_NICKNAME_NICK).text
+    nick = extract_pubsub_item_get_reply(iq_tree, TAG_USER_NICKNAME_NICK)
+    if nick is None:
+        return None
+    return nick.text
 
 
 def extract_avatar_metadata_get_reply(iq_tree):
