@@ -1,0 +1,17 @@
+{% extends "app.html" %}
+{% block head_lead %}
+<title>Snikket Web Portal</title>
+{% endblock %}
+{% block content %}
+<div class="form layout-expanded"><form method="POST">
+	<h2 class="form-title">Profile</h2>
+	{{ form.csrf_token }}
+	<div class="f-ebox">
+		{{ form.nickname.label }}
+		{{ form.nickname(placeholder=user_info.username) }}
+	</div>
+	<div class="f-bbox">
+		<a href="{{ url_for('user.index') }}" class="button secondary">Back</a><button type="submit" class="primary">Update</button>
+	</div>
+</form></div>
+{% endblock %}

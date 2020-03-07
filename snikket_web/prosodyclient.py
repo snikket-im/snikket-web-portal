@@ -10,28 +10,8 @@ from quart import (
     url_for,
 )
 
-
-def split_jid(s):
-    bare, sep, resource = s.partition("/")
-    if not sep:
-        resource = None
-    localpart, sep, domain = bare.partition("@")
-    if not sep:
-        domain = localpart
-        localpart = None
-    return localpart, domain, resource
-
-
-def _mk_change_password_request(jid, password):
-    username, domain, _ = split_jid(jid)
-    # XXX: this is due to a problem with mod_rest / mod_register in prosody:
-    # it doesn’t recognize the password change stanza unless we send it to
-    # the account JID.
-    req = ET.Element("iq", to="{}@{}".format(username, domain), type="set")
-    q = ET.SubElement(req, "query", xmlns="jabber:iq:register")
-    ET.SubElement(q, "username").text = username
-    ET.SubElement(q, "password").text = password
-    return ET.tostring(req)
+from . import xmpputil
+from .xmpputil import split_jid
 
 
 class HTTPSessionManager:
@@ -50,7 +30,7 @@ class HTTPSessionManager:
 
         if exc is not None:
             exc_type = type(exc)
-            traceback = getattr(exc.__traceback__, None)
+            traceback = getattr(exc, "__traceback__", None)
         else:
             exc_type = None
             traceback = None
@@ -91,6 +71,19 @@ class HTTPAuthSessionManager(HTTPSessionManager):
                 "Authorization": "Bearer {}".format(token)
             }
         )
+
+
+def autosession(f):
+    @functools.wraps(f)
+    async def wrapper(self, *args, session=None, **kwargs):
+        print(f)
+        print(f.__code__.co_argcount, f.__code__.co_varnames)
+        print(args, kwargs)
+        if session is None:
+            async with self._auth_session as session:
+                return (await f(self, *args, session=session, **kwargs))
+        return (await f(self, *args, session=session, **kwargs))
+    return wrapper
 
 
 class ProsodyClient:
@@ -211,27 +204,39 @@ class ProsodyClient:
         async with session.post(self._rest_endpoint,
                                 headers=headers,
                                 data=payload) as resp:
+            print(payload)
             reply_payload = await resp.read()
+            print(reply_payload)
             return ET.fromstring(reply_payload)
 
     async def get_user_info(self):
         localpart, domain, _ = split_jid(self.session_address)
 
-        request = {
-            "kind": "iq",
-            "to": self.session_address,
-            "type": "get",
-            "ping": True
-        }
-
         async with self._auth_session as session:
-            async with session.post(self._rest_endpoint,
-                                    json=request) as resp:
-                if resp.status != 200:
-                    raise abort(resp.status)
-                return {
-                    "username": localpart,
-                }
+            nickname = await self.get_user_nickname(session=session)
+            return {
+                "username": localpart,
+                "nickname": nickname,
+                "display_name": nickname or localpart,
+            }
+
+    @autosession
+    async def get_user_nickname(self, session):
+        iq_resp = await self._xml_iq_call(
+            session,
+            xmpputil.make_nickname_get_request(self.session_address)
+        )
+        return xmpputil.extract_nickname_get_reply(iq_resp)
+
+    @autosession
+    async def set_user_nickname(self, new_nickname, session):
+        iq_resp = await self._xml_iq_call(
+            session,
+            xmpputil.make_nickname_set_request(self.session_address,
+                                               new_nickname)
+        )
+        # just to throw errors
+        xmpputil.extract_iq_reply(iq_resp)
 
     async def change_password(self, current_password, new_password):
         # we play it safe here and do not use the existing auth session;
@@ -246,7 +251,10 @@ class ProsodyClient:
             )
             reply = await self._xml_iq_call(
                 session,
-                _mk_change_password_request(self.session_address, new_password),
+                xmpputil.make_password_change_request(
+                    self.session_address,
+                    new_password
+                ),
                 headers={
                     "Authorization": "Bearer {}".format(token),
                 }

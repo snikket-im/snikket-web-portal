@@ -44,6 +44,12 @@ class LogoutForm(FlaskForm):
     pass
 
 
+class ProfileForm(FlaskForm):
+    nickname = wtforms.TextField(
+        "Display name",
+    )
+
+
 @user_bp.route("/")
 async def index():
     user_info = await client.get_user_info()
@@ -69,6 +75,22 @@ async def change_pw():
             return redirect(url_for("user.change_pw"))
 
     return await render_template("user_passwd.html", form=form)
+
+
+@user_bp.route("/profile", methods=["GET", "POST"])
+async def profile():
+    form = ProfileForm()
+    if request.method != "POST":
+        user_info = await client.get_user_info()
+        form.nickname.data = user_info.get("nickname", "")
+
+    if form.validate_on_submit():
+        user_info = await client.get_user_info()
+        if user_info.get("nickname") != form.nickname.data:
+            await client.set_user_nickname(form.nickname.data)
+        return redirect(url_for(".profile"))
+
+    return await render_template("user_profile.html", form=form)
 
 
 @user_bp.route("/logout", methods=["GET", "POST"])
