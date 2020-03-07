@@ -8,8 +8,7 @@
 	<p class="form-desc">Click below to log yourself out of the web portal. This does not affect any other connected devices.</p>
 	{{ form.csrf_token }}
 	<div class="f-bbox">
-		<a href="{{ url_for('user.index') }}" class="button secondary">Back</a>
-		<button type="submit" class="primary">Sign out</button>
+		<a href="{{ url_for('user.index') }}" class="button secondary">Back</a><button type="submit" class="primary">Sign out</button>
 	</div>
 </form></div>
 {% endblock %}
