@@ -1,5 +1,7 @@
 # Snikket Web Portal
 
+![Screenshot of the app](docs/readme-screenshot.png)
+
 ## Start the dev server
 
 ```console
