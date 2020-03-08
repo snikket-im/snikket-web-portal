@@ -1,6 +1,8 @@
 import base64
 import binascii
 import itertools
+import logging
+import pathlib
 
 from datetime import datetime, timedelta
 
@@ -167,3 +169,18 @@ def flatten(a, levels=1):
 
 from .user import user_bp  # NOQA
 app.register_blueprint(user_bp)
+
+logging_config = app.config.get("LOGGING_CONFIG")
+if logging_config is not None:
+    if isinstance(logging_config, dict):
+        logging.config.dictConfig(logging_config)
+    elif isinstance(logging_config, (bytes, str, pathlib.Path)):
+        import toml
+        with open(logging_config, "r") as f:
+            logging_config = toml.load(f)
+        logging.config.dictConfig(logging_config)
+
+else:
+    logging.basicConfig(level=logging.WARNING)
+    if app.debug:
+        logging.getLogger("snikket_web").setLevel(logging.DEBUG)
