@@ -2,6 +2,7 @@ import binascii
 import contextlib
 import functools
 import hashlib
+import json
 
 import aiohttp
 
@@ -22,7 +23,9 @@ class HTTPSessionManager:
         self._app_context_attribute = app_context_attribute
 
     async def _create(self) -> aiohttp.ClientSession:
-        return aiohttp.ClientSession()
+        return aiohttp.ClientSession(headers={
+            "Accept": "application/json",
+        })
 
     async def teardown(self, exc):
         app_ctx = _app_ctx_stack.top
@@ -71,7 +74,8 @@ class HTTPAuthSessionManager(HTTPSessionManager):
 
         return aiohttp.ClientSession(
             headers={
-                "Authorization": "Bearer {}".format(token)
+                "Authorization": "Bearer {}".format(token),
+                "Accept": "application/json",
             }
         )
 
@@ -141,10 +145,22 @@ class ProsodyClient:
 
         async with session.post(self._login_endpoint, data=request) as resp:
             auth_status = resp.status
-            auth_info = (await resp.json())
-            if auth_status == 401:
-                raise abort(401, "Invalid credentials")
-            elif auth_status == 200:
+            auth_data = (await resp.read())
+            # XXX: this is a hack to work around mod_http_oauth2 not always
+            # setting the correct Content-Type on the reply. #1500 / #1501
+            auth_info = json.loads(auth_data.decode("utf-8"))
+            if "error" in auth_info and "context" in auth_info["error"]:
+                auth_info = auth_info["error"]["context"]["oauth2_response"]
+
+            # XXX: prosody-modules#1502
+            if auth_status in [400, 401] or "error" in auth_info:
+                # OAuth2 spec says that’s what can happen when some stuff is
+                # wrong.
+                # we have to interpret the JSON further
+                if auth_info["error"] == "invalid_grant":
+                    raise abort(401)
+
+            if auth_status == 200:
                 token_type = auth_info["token_type"]
                 if token_type != "bearer":
                     raise NotImplementedError(
@@ -153,8 +169,12 @@ class ProsodyClient:
                         )
                     )
                 return auth_info["access_token"]
-            else:
-                raise abort(500, "Unexpected backend response status: {!r}".format(auth_status, auth_info))
+
+            raise RuntimeError(
+                "unexpected authentication reply: ({}) {!r}".format(
+                    auth_status, auth_info
+                )
+            )
 
     async def login(self, jid: str, password: str):
         async with self._plain_session as session:
@@ -202,7 +222,8 @@ class ProsodyClient:
     async def _xml_iq_call(self, session, payload, *, headers=None):
         headers = headers or {}
         headers.update({
-            "Content-Type": "application/xmpp+xml"
+            "Content-Type": "application/xmpp+xml",
+            "Accept": "application/xmpp+xml",
         })
         print(payload)
         async with session.post(self._rest_endpoint,
