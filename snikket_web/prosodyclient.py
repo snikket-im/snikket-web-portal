@@ -83,9 +83,6 @@ class HTTPAuthSessionManager(HTTPSessionManager):
 def autosession(f):
     @functools.wraps(f)
     async def wrapper(self, *args, session=None, **kwargs):
-        print(f)
-        print(f.__code__.co_argcount, f.__code__.co_varnames)
-        print(args, kwargs)
         if session is None:
             async with self._auth_session as session:
                 return (await f(self, *args, session=session, **kwargs))
@@ -225,14 +222,12 @@ class ProsodyClient:
             "Content-Type": "application/xmpp+xml",
             "Accept": "application/xmpp+xml",
         })
-        print(payload)
         async with session.post(self._rest_endpoint,
                                 headers=headers,
                                 data=payload) as resp:
             if resp.status != 200:
                 abort(resp.status)
             reply_payload = await resp.read()
-            print(reply_payload)
             return ET.fromstring(reply_payload)
 
     async def get_user_info(self):
