@@ -666,11 +666,12 @@ nav.usermenu > .avatar {
 
 body#login {
 	.form {
-		font-size: nth($h-sizes, 4);
+		font-size: nth($h-sizes, 5);
 	}
 
 	.form-title {
 		color: $primary-200;
+		font-size: nth($h-sizes, 5);
 	}
 
 	h1 {
