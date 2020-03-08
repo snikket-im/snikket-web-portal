@@ -1,5 +1,6 @@
 import base64
 import binascii
+import itertools
 
 from datetime import datetime, timedelta
 
@@ -9,10 +10,13 @@ from quart import (
     Quart, session, request, render_template, redirect, url_for, Response,
     current_app,
 )
+import quart.exceptions
 
-from flask_babel import Babel
+from flask_wtf import FlaskForm
+import wtforms
+from flask_babel import Babel, _, lazy_gettext as _l
 
-from . import colour
+from . import colour, xmpputil
 from .prosodyclient import client
 
 from ._version import version, version_info
@@ -27,6 +31,18 @@ client.default_login_redirect = "login"
 babel = Babel(app)
 
 
+class LoginForm(FlaskForm):
+    address = wtforms.TextField(
+        _l("Address"),
+        validators=[wtforms.validators.InputRequired()],
+    )
+
+    password = wtforms.PasswordField(
+        _l("Password"),
+        validators=[wtforms.validators.InputRequired()],
+    )
+
+
 @babel.localeselector
 def selected_locale():
     return request.accept_languages.best_match(
@@ -39,14 +55,24 @@ async def login():
     if client.has_session and (await client.test_session()):
         return redirect(url_for('user.index'))
 
-    if request.method == "POST":
-        form = await request.form
-        jid = form["address"]
-        password = form["password"]
-        await client.login(jid, password)
-        return redirect(url_for('user.index'))
+    form = LoginForm()
+    if form.validate_on_submit():
+        jid = form.address.data
+        localpart, domain, resource = xmpputil.split_jid(jid)
+        if not localpart:
+            localpart, domain = domain, current_app.config["SNIKKET_DOMAIN"]
+        jid = "{}@{}".format(localpart, domain)
+        password = form.password.data
+        try:
+            await client.login(jid, password)
+        except quart.exceptions.Unauthorized:
+            form.errors.setdefault("", []).append(
+                _("Invalid user name or password.")
+            )
+        else:
+            return redirect(url_for('user.index'))
 
-    return await render_template("login.html")
+    return await render_template("login.html", form=form)
 
 
 @app.route("/")
@@ -130,6 +156,13 @@ def proc():
 
 
 app.template_filter("repr")(repr)
+
+
+@app.template_filter("flatten")
+def flatten(a, levels=1):
+    for i in range(levels):
+        a = itertools.chain(*a)
+    return a
 
 
 from .user import user_bp  # NOQA

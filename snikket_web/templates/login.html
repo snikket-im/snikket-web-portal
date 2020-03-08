@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "library.j2" import box %}
 {% set body_id = "login" %}
 {% block head_lead %}
 <title>{{ _("Snikket Login") }}</title>
@@ -12,13 +13,19 @@
 	<h1 class="form-title">{{ config["SNIKKET_DOMAIN"] }}</h1>
 	<p class="form-desc">{{ _("Enter your Snikket address and password to manage your account.") }}</p>
 	<form method="POST" action="{{ url_for('login') }}" name="login">
+		{{ form.csrf_token }}
+		{% if form.errors %}
+		{% call box("alert", _("Login failed")) %}
+		<p>{{ form.errors.values() | flatten | join(", ")}}</p>
+		{% endcall %}
+		{% endif %}
 		<div class="f-ebox">
-			<label for="address" class="a11y-only">{{ _("Address") }}:</label>
-			<input type="text" name="address" id="address" required="required" placeholder="{{ _("Address") }}">
+			{{ form.address.label(class="a11y-only") }}
+			{{ form.address(placeholder=form.address.label.text) }}
 		</div>
 		<div class="f-ebox">
-			<label for="password" class="a11y-only">{{ _("Password") }}:</label>
-			<input type="password" name="password" id="password" required="required" placeholder="{{ _("Password") }}">
+			{{ form.password.label(class="a11y-only") }}
+			{{ form.password(placeholder=form.password.label.text) }}
 		</div>
 		<div class="f-bbox">
 			<button type="submit" class="primary">{{ _("Log in") }}</button>
