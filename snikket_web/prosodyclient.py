@@ -3,6 +3,8 @@ import contextlib
 import functools
 import hashlib
 import json
+import logging
+import secrets
 
 import aiohttp
 
@@ -102,6 +104,9 @@ class ProsodyClient:
         self._plain_session = HTTPSessionManager(self.CTX_PLAIN_SESSION)
         self._auth_session = HTTPAuthSessionManager(self.CTX_AUTH_SESSION,
                                                     self.SESSION_TOKEN)
+        self.logger = logging.getLogger(
+            ".".join([__name__, type(self).__qualname__])
+        )
         self.app = app
         if app is not None:
             self.init_app(app)
@@ -140,6 +145,7 @@ class ProsodyClient:
         request.add_field("username", jid)
         request.add_field("password", password)
 
+        self.logger.debug("sending OAuth2 request (payload omitted)")
         async with session.post(self._login_endpoint, data=request) as resp:
             auth_status = resp.status
             auth_data = (await resp.read())
@@ -151,6 +157,7 @@ class ProsodyClient:
 
             # XXX: prosody-modules#1502
             if auth_status in [400, 401] or "error" in auth_info:
+                self.logger.debug("oauth2 error: %r", auth_info)
                 # OAuth2 spec says that’s what can happen when some stuff is
                 # wrong.
                 # we have to interpret the JSON further
@@ -159,6 +166,7 @@ class ProsodyClient:
 
             if auth_status == 200:
                 token_type = auth_info["token_type"]
+                self.logger.debug("oauth2 success: token_type=%r", token_type)
                 if token_type != "bearer":
                     raise NotImplementedError(
                         "unsupported token type: {!r}".format(
@@ -216,18 +224,32 @@ class ProsodyClient:
             return wrapped
         return decorator
 
-    async def _xml_iq_call(self, session, payload, *, headers=None):
+    async def _xml_iq_call(self, session, payload, *, headers=None,
+                           sensitive=False):
         headers = headers or {}
         headers.update({
             "Content-Type": "application/xmpp+xml",
             "Accept": "application/xmpp+xml",
         })
+        if not payload.get("id"):
+            payload.set("id", secrets.token_hex(8))
+
+        serialised = ET.tostring(payload)
+        id_ = payload.get("id")
+        self.logger.debug(
+            "sending IQ (id=%s): %r",
+            id_, "(sensitive)" if sensitive else serialised,
+        )
         async with session.post(self._rest_endpoint,
                                 headers=headers,
-                                data=payload) as resp:
+                                data=serialised) as resp:
             if resp.status != 200:
                 abort(resp.status)
             reply_payload = await resp.read()
+            self.logger.debug(
+                "received IQ (in-reply-to id=%s): %r",
+                id_, "(sensitive)" if sensitive else reply_payload,
+            )
             return ET.fromstring(reply_payload)
 
     async def get_user_info(self):
@@ -354,7 +376,8 @@ class ProsodyClient:
                 ),
                 headers={
                     "Authorization": "Bearer {}".format(token),
-                }
+                },
+                sensitive=True,
             )
             # TODO: error handling
             # TODO: obtain a new token using the new password to allow the

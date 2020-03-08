@@ -97,7 +97,7 @@ def make_password_change_request(jid, password):
     q = ET.SubElement(req, "query", xmlns="jabber:iq:register")
     ET.SubElement(q, "username").text = username
     ET.SubElement(q, "password").text = password
-    return ET.tostring(req)
+    return req
 
 
 def make_pubsub_item_put_request(to, node, id_=None):
@@ -116,7 +116,7 @@ def make_nickname_set_request(to, nickname):
         NODE_USER_NICKNAME,
     )
     ET.SubElement(item, "nick", xmlns=NS_USER_NICKNAME).text = nickname
-    return ET.tostring(req)
+    return req
 
 
 def make_pubsub_item_request(to, node, id_=None):
@@ -128,7 +128,7 @@ def make_pubsub_item_request(to, node, id_=None):
     else:
         items.set("max_items", "1")
 
-    return ET.tostring(req)
+    return req
 
 
 def make_nickname_get_request(to):
@@ -151,7 +151,7 @@ def make_avatar_data_set_request(to, data, id_):
     )
     ET.SubElement(item, "data", xmlns=NS_USER_AVATAR_DATA).text = \
         base64.b64encode(data).decode("ascii")
-    return ET.tostring(req)
+    return req
 
 
 def make_avatar_metadata_set_request(to, mimetype: str, id_: str, size: int,
@@ -177,7 +177,7 @@ def make_avatar_metadata_set_request(to, mimetype: str, id_: str, size: int,
         attr["height"] = str(height)
 
     ET.SubElement(metadata_wrap, "info", xmlns=NS_USER_AVATAR_METADATA, **attr)
-    return ET.tostring(req)
+    return req
 
 
 def _require_child(t: ET.Element, tag: str) -> ET.Element:
