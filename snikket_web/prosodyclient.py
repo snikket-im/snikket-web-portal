@@ -380,7 +380,8 @@ class ProsodyClient:
 
     async def logout(self):
         # this currently only kills the cookie stuff, we may want to invalidate
-        # the token on th server side, toos
+        # the token on the server side, toos
+        # See-Also: https://issues.prosody.im/1503
         http_session.pop(self.SESSION_TOKEN, None)
         http_session.pop(self.SESSION_ADDRESS, None)
 
