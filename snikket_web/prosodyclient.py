@@ -148,15 +148,9 @@ class ProsodyClient:
         self.logger.debug("sending OAuth2 request (payload omitted)")
         async with session.post(self._login_endpoint, data=request) as resp:
             auth_status = resp.status
-            auth_data = (await resp.read())
-            # XXX: this is a hack to work around mod_http_oauth2 not always
-            # setting the correct Content-Type on the reply. #1500 / #1501
-            auth_info = json.loads(auth_data.decode("utf-8"))
-            if "error" in auth_info and "context" in auth_info["error"]:
-                auth_info = auth_info["error"]["context"]["oauth2_response"]
+            auth_info = (await resp.json())
 
-            # XXX: prosody-modules#1502
-            if auth_status in [400, 401] or "error" in auth_info:
+            if auth_status in [400, 401]:
                 self.logger.debug("oauth2 error: %r", auth_info)
                 # OAuth2 spec says that’s what can happen when some stuff is
                 # wrong.
