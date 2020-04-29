@@ -16,7 +16,18 @@
 #   behalf.
 # - other bad things.
 import os
-SECRET_KEY = os.environ['SECRET_KEY']
+import sys
+import secrets
+
+try:
+    SECRET_KEY = os.environ['SECRET_KEY']
+except KeyError:
+    print('SECRET_KEY was not provided. It will be automatically generated. '
+          'To avoid losing sessions on each server restart, please provide '
+          'a SECRET_KEY.',
+          file=sys.stderr)
+
+SECRET_KEY = os.environ.get('SECRET_KEY', secrets.token_urlsafe(nbytes=32))
 
 # URL (without trailing /) of the prosody HTTP server.
 #
@@ -24,12 +35,22 @@ SECRET_KEY = os.environ['SECRET_KEY']
 #
 # NOTE: If this does not point at localhost, it MUST use https. Otherwise,
 # passwords will be transmitted in plaintext through insecure channels.
-PROSODY_ENDPOINT = os.environ['PROSODY_ENDPOINT']
+try:
+    PROSODY_ENDPOINT = os.environ['PROSODY_ENDPOINT']
+except KeyError as e:
+    print(f'Environment variable {e} must be set for the web portal to work',
+          file=sys.stderr)
+    sys.exit(2)
 
 # The domain name of the Snikket server
 #
 # This must be set for login to work correctly.
-SNIKKET_DOMAIN = os.environ['SNIKKET_DOMAIN']
+try:
+    SNIKKET_DOMAIN = os.environ['SNIKKET_DOMAIN']
+except KeyError as e:
+    print(f'Environment variable {e} must be set for the web portal to work',
+          file=sys.stderr)
+    sys.exit(2)
 
 
 # OPTIONAL SETTINGS
