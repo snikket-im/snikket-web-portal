@@ -1,5 +1,8 @@
 FROM python:3.7-slim-buster
 
+ARG BUILD_SERIES=dev
+ARG BUILD_ID=0
+
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
