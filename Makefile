@@ -12,7 +12,7 @@ all: build_css compile_translations
 
 build_css: $(generated_css_files)
 
-$(generated_css_files): snikket_web/static/css/%.css: snikket_web/scss/%.scss $(scss_includes)
+$(generated_css_files): snikket_web/static/css/%.css: snikket_web/scss/%.scss $(scss_files) $(scss_includes)
 	mkdir -p snikket_web/static/css/
 	$(SCSSC) -o "$@" "$<"
 
