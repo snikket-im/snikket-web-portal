@@ -1,0 +1,19 @@
+{% extends "admin_app.html" %}
+{% block content %}
+<h1>{% trans %}Welcome to the administration dashboard!{% endtrans %}</h1>
+<p>{% trans user_name=user_info.display_name %}At your service, {{ user_name }}.{% endtrans %}</p>
+<div class="welcome-cards">
+	<a class="card" href="{{ url_for('.users') }}">
+		<h2>{% trans %}Manage users{% endtrans %}</h2>
+		<p>{% trans %}Modify administrative user information or delete users.{% endtrans %}</p>
+	</a>
+	<a class="card" href="{{ url_for('.invitations') }}">
+		<h2>{% trans %}Manage invitations{% endtrans %}</h2>
+		<p>{% trans %}Create, revoke or view invitations.{% endtrans %}</p>
+	</a>
+	<a class="card" href="{{ url_for('user.index') }}">
+		<h2>{% trans %}Back to the main view{% endtrans %}</h2>
+		<p>{% trans %}Go back to your user’s web portal page.{% endtrans %}</p>
+	</a>
+</div>
+{% endblock %}

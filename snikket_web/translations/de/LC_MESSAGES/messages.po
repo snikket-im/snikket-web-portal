@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: jonas@zombofant.net\n"
-"POT-Creation-Date: 2021-01-16 14:53+0100\n"
+"POT-Creation-Date: 2021-01-17 20:09+0100\n"
 "PO-Revision-Date: 2020-03-07 16:32+0100\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language: de\n"
@@ -18,20 +18,173 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: snikket_web/__init__.py:38
+#: snikket_web/__init__.py:40
 msgid "Address"
 msgstr "Adresse"
 
-#: snikket_web/__init__.py:43
+#: snikket_web/__init__.py:45
 msgid "Password"
 msgstr "Passwort"
 
-#: snikket_web/__init__.py:72
-#, fuzzy
+#: snikket_web/__init__.py:74
 msgid "Invalid user name or password."
-msgstr "Neues Passwort (Bestätigung)"
+msgstr "Benutzername oder Passwort falsch."
 
-#: snikket_web/templates/app.html:18 snikket_web/templates/login.html:36
+#: snikket_web/admin/__init__.py:44
+msgid "Delete user permanently"
+msgstr "Benutzer endgültig löschen"
+
+#: snikket_web/admin/__init__.py:71
+msgid "New invitation link"
+msgstr "Neuer Einladungslink"
+
+#: snikket_web/admin/__init__.py:104
+msgid "Revoke"
+msgstr "Löschen"
+
+#: snikket_web/templates/admin_delete_user.html:4
+#: snikket_web/templates/admin_users.html:29
+#, python-format
+msgid "Delete user %(user_name)s"
+msgstr "Benutzer %(user_name)s löschen"
+
+#: snikket_web/templates/admin_delete_user.html:6
+#: snikket_web/templates/admin_edit_user.html:28
+msgid "Delete user"
+msgstr "Benutzer löschen"
+
+#: snikket_web/templates/admin_delete_user.html:8
+msgid "Are you sure you want to delete the following user?"
+msgstr "Bist du sicher dass du den folgenden Benutzer löschen willst?"
+
+#: snikket_web/templates/admin_delete_user.html:10
+#: snikket_web/templates/admin_users.html:14
+msgid "Login name"
+msgstr "Anmeldename"
+
+#: snikket_web/templates/admin_delete_user.html:12
+#: snikket_web/templates/admin_delete_user.html:16
+#: snikket_web/templates/admin_users.html:15 snikket_web/user/__init__.py:48
+msgid "Display name"
+msgstr "Anzeigename"
+
+#: snikket_web/templates/admin_delete_user.html:14
+#: snikket_web/templates/admin_users.html:16
+msgid "Email address"
+msgstr "E-Mail-Adresse"
+
+#: snikket_web/templates/admin_delete_user.html:19
+msgid "Danger"
+msgstr "Gefahr"
+
+#: snikket_web/templates/admin_edit_invite.html:21
+msgid "View invitation"
+msgstr "Einladung anzeigen"
+
+#: snikket_web/templates/admin_edit_invite.html:39
+#: snikket_web/templates/user_passwd.html:39
+#: snikket_web/templates/user_profile.html:18
+msgid "Back"
+msgstr "Zurück"
+
+#: snikket_web/templates/admin_edit_user.html:3
+#, python-format
+msgid "Edit user %(user_name)s"
+msgstr "Benutzer %(user_name)s bearbeiten"
+
+#: snikket_web/templates/admin_edit_user.html:5
+msgid "User information"
+msgstr "Benutzerinformationen"
+
+#: snikket_web/templates/admin_edit_user.html:25
+msgid "Password reset"
+msgstr "Passwort zurücksetzen"
+
+#: snikket_web/templates/admin_edit_user.html:26
+msgid ""
+"If the user has forgotten their password, use the below button to create "
+"a password reset link. The password reset link can be used once to change"
+" the password of the account. Transmit the link to the user via a secure "
+"channel."
+msgstr ""
+"Wenn ein Benutzer das Passwort vergessen hat, kannst du den folgenden "
+"Button benutzen um einen Link zum Zurücksetzen des Passworts zu erzeugen."
+" Dieser Link kann dann ein einziges Mal verwendet werden um das Passwort "
+"des Kontos zu ändern. Lasse den Link dem Benutzer auf einem sicheren "
+"Übertragungsweg zukommen."
+
+#: snikket_web/templates/admin_home.html:3
+msgid "Welcome to the administration dashboard!"
+msgstr "Willkommen zum Verwaltungsdashboard!"
+
+#: snikket_web/templates/admin_home.html:4
+#, python-format
+msgid "At your service, %(user_name)s."
+msgstr "Zu deinen Diensten, %(user_name)s."
+
+#: snikket_web/templates/admin_home.html:7
+#: snikket_web/templates/admin_users.html:10
+msgid "Manage users"
+msgstr "Benutzer verwalten"
+
+#: snikket_web/templates/admin_home.html:8
+msgid "Modify administrative user information or delete users."
+msgstr "Benutzerinformationen verändern oder Benutzer löschen."
+
+#: snikket_web/templates/admin_home.html:11
+#: snikket_web/templates/admin_invites.html:3
+msgid "Manage invitations"
+msgstr "Einladungen verwalten"
+
+#: snikket_web/templates/admin_home.html:12
+msgid "Create, revoke or view invitations."
+msgstr "Einladungen erzeugen, löschen oder anzeigen."
+
+#: snikket_web/templates/admin_home.html:15
+msgid "Back to the main view"
+msgstr "Zurück zur Hauptseite"
+
+#: snikket_web/templates/admin_home.html:16
+msgid "Go back to your user’s web portal page."
+msgstr "Zurück zur Startseite deines Benutzers."
+
+#: snikket_web/templates/admin_invites.html:6
+msgid "Create new invitation"
+msgstr "Neue Einladung erzeugen"
+
+#: snikket_web/templates/admin_invites.html:7
+msgid ""
+"Create a new invitation link to invite more users to your Snikket "
+"instance by clicking the button below."
+msgstr ""
+"Erzeuge eine neue Einladung um mehr Benutzer auf deine Snikket-Instanz "
+"einzuladen indem du den folgenden Button klickst."
+
+#: snikket_web/templates/admin_invites.html:12
+msgid "Pending invitations"
+msgstr "Ausstehende Einladungen"
+
+#: snikket_web/templates/admin_invites.html:29
+msgid "Show invite details"
+msgstr "Einladungsdetails anzeigen"
+
+#: snikket_web/templates/admin_invites.html:31
+msgid "Delete invitation"
+msgstr "Einladung löschen"
+
+#: snikket_web/templates/admin_invites.html:39
+msgid "Currently, there are no pending invitations."
+msgstr "Derzeit gibt es keine ausstehenden Einladungen."
+
+#: snikket_web/templates/admin_users.html:17
+msgid "Phone number"
+msgstr "Telefonnummer"
+
+#: snikket_web/templates/admin_users.html:18
+msgid "Actions"
+msgstr "Aktionen"
+
+#: snikket_web/templates/app.html:20 snikket_web/templates/login.html:36
 #, python-format
 msgid "A <a href=\"%(about_url)s\">Snikket</a> server"
 msgstr "Ein <a href=\"%(about_url)s\">Snikket</a>-Server"
@@ -46,7 +199,7 @@ msgstr "Gib deine Snikket-Adresse und -Passwort ein um dein Konto zu verwalten."
 
 #: snikket_web/templates/login.html:18
 msgid "Login failed"
-msgstr ""
+msgstr "Anmeldung fehlgeschlagen"
 
 #: snikket_web/templates/login.html:31
 msgid "Log in"
@@ -78,11 +231,19 @@ msgstr ""
 msgid "Change password"
 msgstr "Passwort ändern"
 
-#: snikket_web/templates/user_home.html:14
+#: snikket_web/templates/user_home.html:15
+msgid "Admin dashboard"
+msgstr "Verwaltungsdashboard"
+
+#: snikket_web/templates/user_home.html:16
+msgid "Manage users and invitations of this Snikket instance."
+msgstr "Benutzer und Einladungen von dieser Snikket-Instanz verwalten."
+
+#: snikket_web/templates/user_home.html:20
 msgid "Log out"
 msgstr "Abmelden"
 
-#: snikket_web/templates/user_home.html:15
+#: snikket_web/templates/user_home.html:21
 msgid "Exit the Snikket Web Portal, without logging out your other devices."
 msgstr ""
 "Verlasse das Snikket Web-Portal, ohne dass deine anderen Geräte "
@@ -115,13 +276,8 @@ msgid ""
 "After changing your password, you will have to enter the new password on "
 "all of your devices."
 msgstr ""
-"Nachdem du das Passwort geändert hast, musst du das neue Passwort auf allen"
-"Geräten manuell eintragen."
-
-#: snikket_web/templates/user_passwd.html:39
-#: snikket_web/templates/user_profile.html:18
-msgid "Back"
-msgstr "Zurück"
+"Nachdem du das Passwort geändert hast, musst du das neue Passwort auf "
+"allenGeräten manuell eintragen."
 
 #: snikket_web/templates/user_profile.html:7
 msgid "Profile"
@@ -131,31 +287,30 @@ msgstr "Profil"
 msgid "Apply"
 msgstr "Übernehmen"
 
-#: snikket_web/user/__init__.py:21
+#: snikket_web/user/__init__.py:23
 msgid "Current password"
 msgstr "Aktuelles Passwort"
 
-#: snikket_web/user/__init__.py:26
+#: snikket_web/user/__init__.py:28
 msgid "New password"
 msgstr "Neues Passwort"
 
-#: snikket_web/user/__init__.py:31
+#: snikket_web/user/__init__.py:33
 msgid "Confirm new password"
 msgstr "Neues Passwort (Bestätigung)"
 
-#: snikket_web/user/__init__.py:35
+#: snikket_web/user/__init__.py:37
 msgid "The new passwords must match."
 msgstr "Die neuen Passwörter müssen übereinstimmen."
 
-#: snikket_web/user/__init__.py:46
-msgid "Display name"
-msgstr "Anzeigename"
-
-#: snikket_web/user/__init__.py:50
+#: snikket_web/user/__init__.py:52
 msgid "Avatar"
 msgstr "Bild"
 
-#: snikket_web/user/__init__.py:74
+#: snikket_web/user/__init__.py:76
 msgid "Incorrect password"
 msgstr "Ungültiges Passwort"
+
+#~ msgid "none"
+#~ msgstr "keiner"
 

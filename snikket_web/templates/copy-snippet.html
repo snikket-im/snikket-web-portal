@@ -1,0 +1,71 @@
+<script async type="text/javascript">
+/* https://stackoverflow.com/a/30810322/1248008 */
+
+function fallbackCopyTextToClipboard(text, context) {
+  var textArea = document.createElement("textarea");
+  textArea.value = text;
+  context.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+
+  var result = false;
+  try {
+	var successful = document.execCommand('copy');
+	var msg = successful ? 'successful' : 'unsuccessful';
+	console.log('Fallback: Copying text command was ' + msg);
+	result = true;
+  } catch (err) {
+	console.error('Fallback: Oops, unable to copy', err);
+  }
+
+  context.removeChild(textArea);
+  return result;
+}
+function copyTextToClipboard(text, context, callback) {
+  if (!navigator.clipboard) {
+	callback(fallbackCopyTextToClipboard(text, context));
+	return;
+  }
+  navigator.clipboard.writeText(text).then(function() {
+	console.log('Async: Copying to clipboard was successful!');
+	callback(true);
+  }, function(err) {
+	console.error('Async: Could not copy text: ', err);
+	callback(false);
+  });
+}
+/* end of https://stackoverflow.com/a/30810322/1248008 */
+
+var copy_to_clipboard = function(el) {
+  var text = el.dataset.cliptext;
+  if (!text) {
+	console.error('copy_to_clipboard used on element without text to copy');
+  }
+  copyTextToClipboard(text, el, function(success) {
+	var existing_result_el = document.getElementById("clipboard-result");
+	if (existing_result_el !== null) {
+	  existing_result_el.parentNode.removeChild(existing_result_el);
+	}
+
+	var result_el = document.createElement("span");
+	result_el.id = "clipboard-result";
+	if (success) {
+	  result_el.classList.add("success");
+	  result_el.innerText = "Copied!";
+	} else {
+	  result_el.classList.add("error");
+	  result_el.innerText = "Clipboard operation failed!";
+	}
+	el.appendChild(result_el);
+	setTimeout(function() {
+	  el.removeChild(result_el);
+	  el.blur();
+	}, 1500);
+  });
+};
+
+window.addEventListener('load', function() {
+	document.body.classList.remove("no-copy");
+});
+</script>
+

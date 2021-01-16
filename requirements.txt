@@ -3,3 +3,4 @@ quart~=0.11
 flask-wtf~=0.14
 hsluv~=0.0.2
 flask-babel~=1.0
+email-validator~=1.1

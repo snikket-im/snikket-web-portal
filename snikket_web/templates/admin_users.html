@@ -1,0 +1,36 @@
+{% extends "admin_app.html" %}
+{% macro value_or_hint(v, caller=None) %}
+{%- if v is not none -%}
+{{- v -}}
+{%- else -%}
+—
+{%- endif -%}
+{% endmacro %}
+{% block content %}
+<h1>{% trans %}Manage users{% endtrans %}</h1>
+<table>
+	<thead>
+		<tr>
+			<th>{% trans %}Login name{% endtrans %}</th>
+			<th>{% trans %}Display name{% endtrans %}</th>
+			<th class="collapsible">{% trans %}Email address{% endtrans %}</th>
+			<th class="collapsible">{% trans %}Phone number{% endtrans %}</th>
+			<th>{% trans %}Actions{% endtrans %}</th>
+		</tr>
+	</thead>
+	<tbody>
+{% for user in users %}
+		<tr>
+			<td>{{ user.localpart }}</td>
+			<td>{% call value_or_hint(user.display_name) %}{% endcall %}</td>
+			<td class="collapsible">{% call value_or_hint(user.email) %}{% endcall %}</td>
+			<td class="collapsible">{% call value_or_hint(user.phone) %}{% endcall %}</td>
+			<td>
+				{#- -#}<a class="button secondary btn-delete" href="{{ url_for(".delete_user", localpart=user.localpart) }}" title="{% trans user_name=user.localpart %}Delete user {{ user_name }}{% endtrans %}"><span class="a11y-only">{% trans user_name=user.localpart %}Delete user {{ user_name }}{% endtrans %}</span></a>
+				{#- -#}
+			</td>
+		</tr>
+{% endfor %}
+	</tbody>
+</table>
+{% endblock %}

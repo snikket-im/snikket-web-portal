@@ -1,0 +1,42 @@
+{% extends "admin_app.html" %}
+{% block content %}
+<h1>{% trans %}Manage invitations{% endtrans %}</h1>
+<form method="POST">{{ form.csrf_token }}
+<div class="form layout-expanded">
+	<h2 class="form-title">{% trans %}Create new invitation{% endtrans %}</h2>
+	<p class="form-descr weak">{% trans %}Create a new invitation link to invite more users to your Snikket instance by clicking the button below.{% endtrans %}</p>
+	<div class="f-bbox">
+		{{ form.action_create_invite(class="primary") }}
+	</div>
+</div>
+<h2>{% trans %}Pending invitations{% endtrans %}</h2>
+{% if invites %}
+<table>
+	<thead>
+		<tr>
+			<th>Created</th>
+			<th>Expires</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+{% for invite in invites %}
+		<tr>
+			<td>{{ invite.created_at | format_date }}</td>
+			<td>{{ (invite.expires - now) | format_timedelta(add_direction=True) }}</td>
+			<td>
+				{#- -#}
+				<a href="{{ url_for(".edit_invite", id_=invite.id_) }}" class="button primary btn-more" title="{% trans %}Show invite details{% endtrans %}"><span class="a11y-only">{% trans %}Show invite details{% endtrans %}</span></a>
+				{#- -#}
+				<button type="submit" class="secondary danger btn-delete" name="{{ form.action_revoke.name }}" value="{{ invite.id_ }}"><span class="a11y-only">{% trans %}Delete invitation{% endtrans %}</span></button>
+				{#- -#}
+			</td>
+		</tr>
+{% endfor %}
+	</tbody>
+</table>
+{% else %}
+	<p>{% trans %}Currently, there are no pending invitations.{% endtrans %}</p>
+{% endif %}
+</form>
+{% endblock %}

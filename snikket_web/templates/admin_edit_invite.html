@@ -1,0 +1,44 @@
+{% extends "admin_app.html" %}
+{% block head_lead %}
+{{ super() }}
+{% include "copy-snippet.html" %}
+{% endblock %}
+
+{% macro clipboard_button(caller=None) -%}
+{%- set text = caller() -%}
+<a title="Copy &quot;{{ text }}&quot; to clipboard" aria-label="Copy &quot;{{ text }}&quot; to clipboard" class="copy-to-clipboard" onclick="copy_to_clipboard(this); return false;" data-cliptext="{{ text }}" href="#">📋</a>
+{%- endmacro %}
+
+{% macro showuri(uri, caller=None) %}
+{%- if uri is none -%}
+<em>—</em>
+{%- else -%}
+<a href="{{ uri }}" target="_blank">{{ uri }}</a> {% call clipboard_button() %}{{ uri }}{% endcall %}
+{%- endif -%}
+{% endmacro %}
+
+{% block content %}
+<h1>{% trans %}View invitation{% endtrans %}</h1>
+<form method="POST">
+{{ form.csrf_token }}
+<div class="form layout-expanded">
+	<dl>
+		<dt>Created</dt>
+		<dd>{{ invite.created_at | format_date }}</dd>
+		<dt>Valid until</dt>
+		<dd>{{ invite.expires | format_date }}</dd>
+		<dt>Landing page</dt>
+		<dd>{% call showuri(invite.landing_page) %}{% endcall %}</dd>
+		<dt>XMPP URI</dt>
+		<dd>{% call showuri(invite.xmpp_uri) %}{% endcall %}</dd>
+	</dl>
+	<div class="f-bbox">
+		{#- -#}
+		{{ form.action_revoke(class="button secondary danger") }}
+		{#- -#}
+		<a href="{{ url_for(".invitations") }}" class="button primary">{% trans %}Back{% endtrans %}</a>
+		{#- -#}
+	</div>
+</div>
+</form>
+{% endblock %}

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-16 14:53+0100\n"
+"POT-Creation-Date: 2021-01-17 20:09+0100\n"
 "PO-Revision-Date: 2020-03-07 16:50+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,20 +18,169 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: snikket_web/__init__.py:38
+#: snikket_web/__init__.py:40
 msgid "Address"
 msgstr "Address"
 
-#: snikket_web/__init__.py:43
+#: snikket_web/__init__.py:45
 msgid "Password"
 msgstr "Password"
 
-#: snikket_web/__init__.py:72
+#: snikket_web/__init__.py:74
 #, fuzzy
 msgid "Invalid user name or password."
 msgstr "Confirm new password"
 
-#: snikket_web/templates/app.html:18 snikket_web/templates/login.html:36
+#: snikket_web/admin/__init__.py:44
+msgid "Delete user permanently"
+msgstr ""
+
+#: snikket_web/admin/__init__.py:71
+msgid "New invitation link"
+msgstr ""
+
+#: snikket_web/admin/__init__.py:104
+msgid "Revoke"
+msgstr ""
+
+#: snikket_web/templates/admin_delete_user.html:4
+#: snikket_web/templates/admin_users.html:29
+#, fuzzy, python-format
+msgid "Delete user %(user_name)s"
+msgstr "Welcome home, %(user_name)s."
+
+#: snikket_web/templates/admin_delete_user.html:6
+#: snikket_web/templates/admin_edit_user.html:28
+msgid "Delete user"
+msgstr ""
+
+#: snikket_web/templates/admin_delete_user.html:8
+msgid "Are you sure you want to delete the following user?"
+msgstr ""
+
+#: snikket_web/templates/admin_delete_user.html:10
+#: snikket_web/templates/admin_users.html:14
+msgid "Login name"
+msgstr ""
+
+#: snikket_web/templates/admin_delete_user.html:12
+#: snikket_web/templates/admin_delete_user.html:16
+#: snikket_web/templates/admin_users.html:15 snikket_web/user/__init__.py:48
+msgid "Display name"
+msgstr "Display name"
+
+#: snikket_web/templates/admin_delete_user.html:14
+#: snikket_web/templates/admin_users.html:16
+#, fuzzy
+msgid "Email address"
+msgstr "Address"
+
+#: snikket_web/templates/admin_delete_user.html:19
+msgid "Danger"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_invite.html:21
+msgid "View invitation"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_invite.html:39
+#: snikket_web/templates/user_passwd.html:39
+#: snikket_web/templates/user_profile.html:18
+msgid "Back"
+msgstr "Back"
+
+#: snikket_web/templates/admin_edit_user.html:3
+#, fuzzy, python-format
+msgid "Edit user %(user_name)s"
+msgstr "Welcome home, %(user_name)s."
+
+#: snikket_web/templates/admin_edit_user.html:5
+msgid "User information"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:25
+#, fuzzy
+msgid "Password reset"
+msgstr "Password"
+
+#: snikket_web/templates/admin_edit_user.html:26
+msgid ""
+"If the user has forgotten their password, use the below button to create "
+"a password reset link. The password reset link can be used once to change"
+" the password of the account. Transmit the link to the user via a secure "
+"channel."
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:3
+msgid "Welcome to the administration dashboard!"
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:4
+#, fuzzy, python-format
+msgid "At your service, %(user_name)s."
+msgstr "Welcome home, %(user_name)s."
+
+#: snikket_web/templates/admin_home.html:7
+#: snikket_web/templates/admin_users.html:10
+msgid "Manage users"
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:8
+msgid "Modify administrative user information or delete users."
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:11
+#: snikket_web/templates/admin_invites.html:3
+msgid "Manage invitations"
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:12
+msgid "Create, revoke or view invitations."
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:15
+msgid "Back to the main view"
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:16
+msgid "Go back to your user’s web portal page."
+msgstr ""
+
+#: snikket_web/templates/admin_invites.html:6
+msgid "Create new invitation"
+msgstr ""
+
+#: snikket_web/templates/admin_invites.html:7
+msgid ""
+"Create a new invitation link to invite more users to your Snikket "
+"instance by clicking the button below."
+msgstr ""
+
+#: snikket_web/templates/admin_invites.html:12
+msgid "Pending invitations"
+msgstr ""
+
+#: snikket_web/templates/admin_invites.html:29
+msgid "Show invite details"
+msgstr ""
+
+#: snikket_web/templates/admin_invites.html:31
+msgid "Delete invitation"
+msgstr ""
+
+#: snikket_web/templates/admin_invites.html:39
+msgid "Currently, there are no pending invitations."
+msgstr ""
+
+#: snikket_web/templates/admin_users.html:17
+msgid "Phone number"
+msgstr ""
+
+#: snikket_web/templates/admin_users.html:18
+msgid "Actions"
+msgstr ""
+
+#: snikket_web/templates/app.html:20 snikket_web/templates/login.html:36
 #, python-format
 msgid "A <a href=\"%(about_url)s\">Snikket</a> server"
 msgstr "A <a href=\"%(about_url)s\">Snikket</a> server"
@@ -78,11 +227,19 @@ msgstr ""
 msgid "Change password"
 msgstr "Change password"
 
-#: snikket_web/templates/user_home.html:14
+#: snikket_web/templates/user_home.html:15
+msgid "Admin dashboard"
+msgstr ""
+
+#: snikket_web/templates/user_home.html:16
+msgid "Manage users and invitations of this Snikket instance."
+msgstr ""
+
+#: snikket_web/templates/user_home.html:20
 msgid "Log out"
 msgstr "Log out"
 
-#: snikket_web/templates/user_home.html:15
+#: snikket_web/templates/user_home.html:21
 msgid "Exit the Snikket Web Portal, without logging out your other devices."
 msgstr "Exit the Snikket Web Portal, without logging out your other devices."
 
@@ -116,11 +273,6 @@ msgstr ""
 "After changing your password, you will have to enter the new password on "
 "all of your devices."
 
-#: snikket_web/templates/user_passwd.html:39
-#: snikket_web/templates/user_profile.html:18
-msgid "Back"
-msgstr "Back"
-
 #: snikket_web/templates/user_profile.html:7
 msgid "Profile"
 msgstr "Profile"
@@ -129,31 +281,30 @@ msgstr "Profile"
 msgid "Apply"
 msgstr "Apply"
 
-#: snikket_web/user/__init__.py:21
+#: snikket_web/user/__init__.py:23
 msgid "Current password"
 msgstr "Current password"
 
-#: snikket_web/user/__init__.py:26
+#: snikket_web/user/__init__.py:28
 msgid "New password"
 msgstr "New password"
 
-#: snikket_web/user/__init__.py:31
+#: snikket_web/user/__init__.py:33
 msgid "Confirm new password"
 msgstr "Confirm new password"
 
-#: snikket_web/user/__init__.py:35
+#: snikket_web/user/__init__.py:37
 msgid "The new passwords must match."
 msgstr "The new passwords must match."
 
-#: snikket_web/user/__init__.py:46
-msgid "Display name"
-msgstr "Display name"
-
-#: snikket_web/user/__init__.py:50
+#: snikket_web/user/__init__.py:52
 msgid "Avatar"
 msgstr "Avatar"
 
-#: snikket_web/user/__init__.py:74
+#: snikket_web/user/__init__.py:76
 msgid "Incorrect password"
 msgstr "Incorrect password"
+
+#~ msgid "none"
+#~ msgstr ""
 

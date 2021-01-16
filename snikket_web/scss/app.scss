@@ -186,7 +186,7 @@ p.form-desc.weak {
 	color: $gray-300;
 }
 
-$text-entry-inputs: "text" "password";
+$text-entry-inputs: "text" "password" "email" "tel";
 
 div.f-errbox {
 	background-color: $alert-800;
@@ -390,9 +390,30 @@ div.form.layout-expanded {
 
 /* form buttons */
 
-button, .button {
+.btn-edit:before {
+	content: '✎';
+}
+
+.btn-delete:before {
+	content: '🗑';
+}
+
+.btn-link:before {
+	content: '+';
+}
+
+.btn-more:before {
+	content: '…';
+}
+
+input[type="submit"], button, .button {
 	margin: 0 $w-s2;
 	padding: $w-s3 $w-s1;
+
+	td & {
+		margin: 0 $w-s4;
+		padding: $w-s4 $w-s2;
+	}
 }
 
 a.button {
@@ -400,141 +421,145 @@ a.button {
 	cursor: default;
 }
 
-button.primary, .button.primary {
-	background: linear-gradient(0deg, $primary-500, $primary-600);
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-	color: $primary-900;
-	border: none;
-	/* TODO: fix vertical rhyhtm ... */
-	border-radius: $w-s4;
-	// border: $w-s4 solid transparent;
-
-	&:hover, &:focus {
-		background: linear-gradient(0deg, $primary-600, $primary-700);
-		color: white;
-	}
-
-	&:active {
-		background: $primary-500;
-		box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
-		color: white;
-	}
-
-	&.accent {
-		background: linear-gradient(0deg, $accent-500, $accent-600);
-		color: $accent-900;
+input[type="submit"], button, .button {
+	&.primary {
+		background: linear-gradient(0deg, $primary-500, $primary-600);
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+		color: $primary-900;
+		border: none;
+		/* TODO: fix vertical rhyhtm ... */
+		border-radius: $w-s4;
+		// border: $w-s4 solid transparent;
 
 		&:hover, &:focus {
+			background: linear-gradient(0deg, $primary-600, $primary-700);
+			color: white;
+		}
+
+		&:active {
+			background: $primary-500;
+			box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+			color: white;
+		}
+
+		&.accent {
+			background: linear-gradient(0deg, $accent-500, $accent-600);
+			color: $accent-900;
+
+			&:hover, &:focus {
+				background: linear-gradient(0deg, $accent-600, $accent-700);
+			}
+
+			&:active {
+				background: $accent-500;
+			}
+		}
+
+		&.danger {
+			background: linear-gradient(0deg, $alert-500, $alert-600);
+			color: $alert-900;
+
+			&:hover, &:focus {
+				background: linear-gradient(0deg, $alert-600, $alert-700);
+			}
+
+			&:active {
+				background: $alert-500;
+			}
+		}
+	}
+
+	&.secondary {
+		background: linear-gradient(0deg, $gray-600, $gray-700);
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+		color: $gray-200;
+		border: none;
+		/* TODO: fix vertical rhyhtm ... */
+		border-radius: $w-s4;
+		// border: $w-s4 solid transparent;
+
+		&:hover, &:focus {
+			background: linear-gradient(0deg, $gray-700, $gray-800);
+			color: black;
+		}
+
+		&:active {
+			background: $gray-600;
+			box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+			color: black;
+		}
+
+		&.accent {
 			background: linear-gradient(0deg, $accent-600, $accent-700);
+			color: $accent-200;
+
+			&:hover, &:focus {
+				background: linear-gradient(0deg, $accent-700, $accent-800);
+			}
+
+			&:active {
+				background: $accent-600;
+			}
 		}
 
-		&:active {
-			background: $accent-500;
-		}
-	}
-
-	&.danger {
-		background: linear-gradient(0deg, $alert-500, $alert-600);
-		color: $alert-900;
-
-		&:hover, &:focus {
+		&.danger {
 			background: linear-gradient(0deg, $alert-600, $alert-700);
-		}
+			color: $alert-200;
 
-		&:active {
-			background: $alert-500;
-		}
-	}
-}
+			&:hover, &:focus {
+				background: linear-gradient(0deg, $alert-700, $alert-800);
+			}
 
-button.secondary, .button.secondary {
-	background: linear-gradient(0deg, $gray-600, $gray-700);
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-	color: $gray-200;
-	border: none;
-	/* TODO: fix vertical rhyhtm ... */
-	border-radius: $w-s4;
-	// border: $w-s4 solid transparent;
-
-	&:hover, &:focus {
-		background: linear-gradient(0deg, $gray-700, $gray-800);
-		color: black;
-	}
-
-	&:active {
-		background: $gray-600;
-		box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
-		color: black;
-	}
-
-	&.accent {
-		background: linear-gradient(0deg, $accent-600, $accent-700);
-		color: $accent-200;
-
-		&:hover, &:focus {
-			background: linear-gradient(0deg, $accent-700, $accent-800);
-		}
-
-		&:active {
-			background: $accent-600;
+			&:active {
+				background: $alert-600;
+			}
 		}
 	}
 
-	&.danger {
-		background: linear-gradient(0deg, $alert-600, $alert-700);
-		color: $alert-200;
-
-		&:hover, &:focus {
-			background: linear-gradient(0deg, $alert-700, $alert-800);
-		}
-
-		&:active {
-			background: $alert-600;
-		}
-	}
-}
-
-button.tertiary, .button.tertiary {
-	background-color: transparent;
-	color: $gray-100;
-	border: none;
-	text-decoration: underline;
-	/* TODO: fix vertical rhyhtm ... */
-	border-radius: $w-s4;
-
-	&:hover {
-		background-color: $gray-900;
-		border-color: $gray-800;
-		color: black;
-	}
-
-	&.accent {
-		text-decoration-color: $accent-500;
+	&.tertiary, .tertiary {
+		background-color: transparent;
+		color: $gray-100;
+		border: none;
+		text-decoration: underline;
+		/* TODO: fix vertical rhyhtm ... */
+		border-radius: $w-s4;
 
 		&:hover {
-			background-color: $accent-900;
-			border-color: $accent-800;
+			background-color: $gray-900;
+			border-color: $gray-800;
 			color: black;
+		}
+
+		&.accent {
+			text-decoration-color: $accent-500;
+
+			&:hover {
+				background-color: $accent-900;
+				border-color: $accent-800;
+				color: black;
+			}
+		}
+
+		&.danger {
+			text-decoration-color: $alert-500;
+
+			&:hover {
+				background-color: $alert-900;
+				border-color: $alert-800;
+				color: black;
+			}
 		}
 	}
 
-	&.danger {
-		text-decoration-color: $alert-500;
-
-		&:hover {
-			background-color: $alert-900;
-			border-color: $alert-800;
-			color: black;
-		}
+	&.fullwidth {
+		display: block;
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
 
-button.fullwidth, .button.fullwidth {
-	display: block;
-	width: 100%;
-	margin-left: 0;
-	margin-right: 0;
-}
+
 
 /* button, .button {
 	margin: 0 $w-s2;
@@ -710,7 +735,7 @@ div.welcome-cards {
 	flex-wrap: wrap;
 
 	& > .card {
-		flex: 1 0 $w-l6;
+		flex: 1 0 $w-l7;
 		margin: $w-s1;
 		@extend .el-2;
 		padding: $w-s1 $w-l1;
@@ -733,6 +758,24 @@ div.welcome-cards {
 }
 
 
+/* admin area specials */
+
+#topbar > div.admin-note {
+	color: $alert-500;
+	font-size: nth($h-sizes, 5);
+	margin-left: $w-l1;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+
+	td, th {
+		padding: $w-s1;
+	}
+}
+
+
 /* linearisation / responsive stuff */
 
 @media screen and (max-width: $small-screen-threshold) {
@@ -751,4 +794,31 @@ div.welcome-cards {
 	}
 
 
+	th.collapsible, td.collapsible {
+		display: none;
+	}
+
+	#topbar.admin {
+		> header {
+			text-decoration: underline;
+			text-decoration-color: $alert-500;
+		}
+
+		> div.admin-note {
+			display: none;
+		}
+	}
+}
+
+/* clipboard button */
+
+.copy-to-clipboard {
+	cursor: pointer;
+	margin-left: 0.5em;
+	font-style: normal;
+	text-decoration: none;
+}
+
+body.no-copy .copy-to-clipboard {
+	display: none !important;
 }

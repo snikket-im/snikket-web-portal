@@ -17,6 +17,7 @@ import quart.exceptions
 
 from flask_wtf import FlaskForm
 import wtforms
+import flask_babel
 from flask_babel import Babel, _, lazy_gettext as _l
 
 from . import colour, xmpputil
@@ -69,7 +70,7 @@ async def login() -> typing.Union[str, quart.Response]:
         try:
             await client.login(jid, password)
         except quart.exceptions.Unauthorized:
-            form.errors.setdefault("", []).append(
+            form.password.errors.append(
                 _("Invalid user name or password.")
             )
         else:
@@ -166,6 +167,10 @@ def proc() -> typing.Dict[str, typing.Any]:
 
 
 app.template_filter("repr")(repr)
+app.template_filter("format_datetime")(flask_babel.format_datetime)
+app.template_filter("format_date")(flask_babel.format_date)
+app.template_filter("format_time")(flask_babel.format_time)
+app.template_filter("format_timedelta")(flask_babel.format_timedelta)
 
 
 @app.template_filter("flatten")
@@ -175,8 +180,10 @@ def flatten(a: typing.Iterable, levels: int = 1) -> typing.Iterable:
     return a
 
 
-from .user import user_bp  # NOQA
+from .user import user_bp  # noqa:F401,E402
+from .admin import bp as admin_bp  # noqa:F401,E402
 app.register_blueprint(user_bp)
+app.register_blueprint(admin_bp)
 
 logging_config = app.config.get("LOGGING_CONFIG")
 if logging_config is not None:

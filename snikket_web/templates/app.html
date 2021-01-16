@@ -8,9 +8,11 @@
 {{ super() }}
 {% endblock %}
 {% block body %}
-<div id="topbar">
-	<header><a href="{{ url_for('user.index') }}"><span>{{ config["SNIKKET_DOMAIN"] }}</span></a></header>
+<div id="topbar" class="{% block topbar_classes %}{% endblock %}">
+	<header><a href="{{ url_for('.index') }}"><span>{{ config["SNIKKET_DOMAIN"] }}</span></a></header>
+	{% block topbar_left %}{% endblock %}
 	<div class="filler"></div>
+	{% block topbar_right %}{% endblock %}
 	<nav class="usermenu">{{ user_info.display_name }}{% call avatar(user_info.address, user_info.avatar_hash ) %}{% endcall %}</nav>
 </div>
 <main>{% block content %}{% endblock %}</main>

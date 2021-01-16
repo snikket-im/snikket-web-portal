@@ -1,0 +1,27 @@
+{% extends "admin_app.html" %}
+{% from "library.j2" import box %}
+{% block content %}
+<h1>{% trans user_name=target_user.localpart %}Delete user {{ user_name }}{% endtrans %}</h1>
+<div class="form layout-expanded"><form method="POST">
+	<h2 class="form-title">{% trans %}Delete user{% endtrans %}</h2>
+	{{ form.csrf_token }}
+	<p class="form-descr">{% trans %}Are you sure you want to delete the following user?{% endtrans %}</p>
+	<dl>
+		<dt>{% trans %}Login name{% endtrans %}</dt>
+		<dd>{{ target_user.localpart }}</dd>
+		<dt>{% trans %}Display name{% endtrans %}</dt>
+		<dd>{{ target_user.display_name }}</dd>
+		<dt>{% trans %}Email address{% endtrans %}</dt>
+		<dd>{{ target_user.email }}</dd>
+		<dt>{% trans %}Display name{% endtrans %}</dt>
+		<dd>{{ target_user.phone }}</dd>
+	</dl>
+	{% call box("alert", _("Danger")) %}
+	<p>The user and their data will be deleted irrevocably, permanently and immediately upon pushing thre below button. <strong>There is no way back!</strong></p>
+	{% endcall %}
+	<div class="f-bbox">
+		<a class="button secondary" href="{{ url_for('.users') }}">Back</a>
+		{{ form.action_delete(class="primary danger") }}
+	</div>
+</form></div>
+{% endblock %}
