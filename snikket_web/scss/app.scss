@@ -4,6 +4,22 @@
 $_top-h-size: nth($h-sizes, 1);
 $_top-h-small-size: nth($h-small-sizes, 1);
 
+/* headings */
+
+@for $n from 1 through 6 {
+	h#{$n} {
+		color: $primary-100;
+	}
+}
+
+/* block quotes */
+
+blockquote {
+	margin-left: $w-l2 / 2 - $w-s4 / 2;
+	padding-left: $w-l2 / 2 - $w-s4 / 2;
+	border-left: $w-s4 solid $primary-500;
+}
+
 /* coarse layout */
 
 body {
@@ -482,6 +498,7 @@ button.tertiary, .button.tertiary {
 	background-color: transparent;
 	color: $gray-100;
 	border: none;
+	text-decoration: underline;
 	/* TODO: fix vertical rhyhtm ... */
 	border-radius: $w-s4;
 
@@ -492,6 +509,8 @@ button.tertiary, .button.tertiary {
 	}
 
 	&.accent {
+		text-decoration-color: $accent-500;
+
 		&:hover {
 			background-color: $accent-900;
 			border-color: $accent-800;
@@ -500,6 +519,8 @@ button.tertiary, .button.tertiary {
 	}
 
 	&.danger {
+		text-decoration-color: $alert-500;
+
 		&:hover {
 			background-color: $alert-900;
 			border-color: $alert-800;

@@ -7,11 +7,16 @@ body {
 	color: $gray-100;
 }
 
-p {
+p, blockquote, ul, ol {
 	line-height: 1.5;
 	margin: 1.5em 0;
 	font-family: $font-bulk;
 	color: inherit;
+}
+
+blockquote {
+	margin-left: $w-l2;
+	margin-right: $w-l2;
 }
 
 h1, h2, h3, h4, h5, h6 {
