@@ -3,6 +3,7 @@ import binascii
 import itertools
 import logging
 import pathlib
+import typing
 
 from datetime import datetime, timedelta
 
@@ -46,14 +47,14 @@ class LoginForm(FlaskForm):
 
 
 @babel.localeselector
-def selected_locale():
+def selected_locale() -> str:
     return request.accept_languages.best_match(
         current_app.config['LANGUAGES']
     )
 
 
 @app.route("/login", methods=["GET", "POST"])
-async def login():
+async def login() -> typing.Union[str, quart.Response]:
     if client.has_session and (await client.test_session()):
         return redirect(url_for('user.index'))
 
@@ -78,7 +79,7 @@ async def login():
 
 
 @app.route("/")
-async def home():
+async def home() -> quart.Response:
     if client.has_session:
         return redirect(url_for('user.index'))
 
@@ -86,21 +87,21 @@ async def home():
 
 
 @app.route("/meta/about.html")
-async def about():
+async def about() -> str:
     return await render_template("about.html", version=version)
 
 
 @app.route("/meta/demo.html")
-async def demo():
+async def demo() -> str:
     return await render_template("demo.html")
 
 
-def repad(s):
+def repad(s: str) -> str:
     return s + "=" * (4 - len(s) % 4)
 
 
 @app.route("/avatar/<from_>/<code>")
-async def avatar(from_, code):
+async def avatar(from_: str, code: str) -> quart.Response:
     try:
         etag = request.headers["if-none-match"]
     except KeyError:
@@ -116,7 +117,7 @@ async def avatar(from_, code):
         300,
     ))
 
-    response = Response(None, mimetype=info["type"])
+    response = Response("", mimetype=info["type"])
     response.headers["etag"] = new_etag
     # XXX: It seems to me that quart expects localtime(?!) in this field...
     response.expires = datetime.now() + cache_ttl
@@ -125,15 +126,17 @@ async def avatar(from_, code):
 
     if etag is not None and new_etag == etag:
         response.status_code = 304
-        response.set_data("")
         return response
 
     data = await client.get_avatar_data(address, info["sha1"])
+    if data is None:
+        response.status_code = 404
+        return response
+
     response.status_code = 200
 
     if request.method == "HEAD":
         response.content_length = len(data)
-        response.set_data("")
         return response
 
     response.set_data(data)
@@ -141,8 +144,9 @@ async def avatar(from_, code):
 
 
 @app.context_processor
-def proc():
-    def url_for_avatar(entity, hash_, **kwargs):
+def proc() -> typing.Dict[str, typing.Any]:
+    def url_for_avatar(entity: str, hash_: str,
+                       **kwargs: typing.Any) -> str:
         return url_for(
             "avatar",
             from_=base64.urlsafe_b64encode(
@@ -165,7 +169,7 @@ app.template_filter("repr")(repr)
 
 
 @app.template_filter("flatten")
-def flatten(a, levels=1):
+def flatten(a: typing.Iterable, levels: int = 1) -> typing.Iterable:
     for i in range(levels):
         a = itertools.chain(*a)
     return a

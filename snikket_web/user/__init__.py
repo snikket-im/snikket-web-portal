@@ -1,3 +1,5 @@
+import typing
+
 import quart.flask_patch
 
 from quart import Blueprint, render_template, request, redirect, url_for
@@ -12,7 +14,7 @@ user_bp = Blueprint('user', __name__, url_prefix="/user")
 
 
 @user_bp.context_processor
-async def proc():
+async def proc() -> typing.Mapping[str, typing.Any]:
     return {"user_info": await client.get_user_info()}
 
 
@@ -53,14 +55,14 @@ class ProfileForm(FlaskForm):
 
 @user_bp.route("/")
 @client.require_session()
-async def index():
+async def index() -> str:
     user_info = await client.get_user_info()
     return await render_template("user_home.html", user_info=user_info)
 
 
 @user_bp.route('/passwd', methods=["GET", "POST"])
 @client.require_session()
-async def change_pw():
+async def change_pw() -> typing.Union[str, quart.Response]:
     form = ChangePasswordForm()
     if form.validate_on_submit():
         try:
@@ -81,7 +83,7 @@ async def change_pw():
 
 @user_bp.route("/profile", methods=["GET", "POST"])
 @client.require_session()
-async def profile():
+async def profile() -> typing.Union[str, quart.Response]:
     form = ProfileForm()
     if request.method != "POST":
         user_info = await client.get_user_info()
@@ -106,7 +108,7 @@ async def profile():
 
 @user_bp.route("/logout", methods=["GET", "POST"])
 @client.require_session()
-async def logout():
+async def logout() -> typing.Union[quart.Response, str]:
     form = LogoutForm()
     if form.validate_on_submit():
         await client.logout()

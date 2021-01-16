@@ -37,7 +37,13 @@ NS_USER_AVATAR_DATA = "urn:xmpp:avatar:data"
 TAG_USER_AVATAR_DATA = "{{{}}}data".format(NS_USER_AVATAR_DATA)
 
 
-def split_jid(s):
+SimpleJID = typing.Tuple[typing.Optional[str], str, typing.Optional[str]]
+T = typing.TypeVar("T")
+
+
+def split_jid(s: str) -> SimpleJID:
+    resource: typing.Optional[str]
+    localpart: typing.Optional[str]
     bare, sep, resource = s.partition("/")
     if not sep:
         resource = None
@@ -48,32 +54,38 @@ def split_jid(s):
     return localpart, domain, resource
 
 
-def raise_iq_error(err: ET.Element):
+def raise_iq_error(err: ET.Element) -> None:
     err_condition_el = None
-    err_text_el = None
-    err_app_def_condition_el = None
+    # err_text_el = None
+    # err_app_def_condition_el = None
 
     for el in err:
         if el.tag == TAG_XMPP_ERROR_TEXT:
-            err_text_el = el
+            # err_text_el = el
+            continue
         elif el.tag.startswith("{{{}}}".format(NS_XMPP_ERROR_CONDITION)):
             err_condition_el = el
-        else:
-            err_app_def_condition_el = el
+        # else:
+        #     err_app_def_condition_el = el
 
-    print(err_text_el, err_condition_el, err_app_def_condition_el)
+    if err_condition_el is None:
+        condition_tag = "undefined-condition"
+    else:
+        condition_tag = err_condition_el.tag
 
-    abort(ERROR_CODE_MAP.get(err_condition_el.tag, 500),
-          err_condition_el.tag)
+    # print(err_text_el, err_condition_el, err_app_def_condition_el)
+    abort(ERROR_CODE_MAP.get(condition_tag, 500), condition_tag)
 
 
-def extract_iq_reply(tree: ET.Element,
-                     require_tag: str = None) -> typing.Optional[ET.Element]:
+def extract_iq_reply(
+        tree: ET.Element,
+        require_tag: typing.Optional[str] = None,
+        ) -> typing.Optional[ET.Element]:
     iq_type = tree.get("type")
     if iq_type == "error":
         error = tree.find(TAG_XMPP_ERROR)
         if error is not None:
-            raise raise_iq_error(error)
+            raise_iq_error(error)
         raise abort(500, "malformed reply")
     elif iq_type == "result":
         if len(tree) > 0:
@@ -88,7 +100,7 @@ def extract_iq_reply(tree: ET.Element,
         raise abort(500, "unsupported reply")
 
 
-def make_password_change_request(jid, password):
+def make_password_change_request(jid: str, password: str) -> ET.Element:
     username, domain, _ = split_jid(jid)
     # XXX: this is due to a problem with mod_rest / mod_register in prosody:
     # it doesn’t recognize the password change stanza unless we send it to
@@ -100,7 +112,10 @@ def make_password_change_request(jid, password):
     return req
 
 
-def make_pubsub_item_put_request(to, node, id_=None):
+def make_pubsub_item_put_request(
+        to: str, node: str,
+        id_: typing.Optional[str] = None,
+        ) -> typing.Tuple[ET.Element, ET.Element]:
     req = ET.Element("iq", type="set", to=to)
     q = ET.SubElement(req, "pubsub", xmlns=NS_PUBSUB)
     publish = ET.SubElement(q, "publish", node=node)
@@ -110,7 +125,7 @@ def make_pubsub_item_put_request(to, node, id_=None):
     return req, item
 
 
-def make_nickname_set_request(to, nickname):
+def make_nickname_set_request(to: str, nickname: str) -> ET.Element:
     req, item = make_pubsub_item_put_request(
         to,
         NODE_USER_NICKNAME,
@@ -119,7 +134,11 @@ def make_nickname_set_request(to, nickname):
     return req
 
 
-def make_pubsub_item_request(to, node, id_=None):
+def make_pubsub_item_request(
+        to: str,
+        node: str,
+        id_: typing.Optional[str] = None,
+        ) -> ET.Element:
     req = ET.Element("iq", type="get", to=to)
     q = ET.SubElement(req, "pubsub", xmlns=NS_PUBSUB)
     items = ET.SubElement(q, "items", node=node)
@@ -131,19 +150,23 @@ def make_pubsub_item_request(to, node, id_=None):
     return req
 
 
-def make_nickname_get_request(to):
+def make_nickname_get_request(to: str) -> ET.Element:
     return make_pubsub_item_request(to, NODE_USER_NICKNAME)
 
 
-def make_avatar_metadata_request(to):
+def make_avatar_metadata_request(to: str) -> ET.Element:
     return make_pubsub_item_request(to, NODE_USER_AVATAR_METADATA)
 
 
-def make_avatar_data_request(to, sha1):
+def make_avatar_data_request(to: str, sha1: str) -> ET.Element:
     return make_pubsub_item_request(to, NODE_USER_AVATAR_DATA, id_=sha1)
 
 
-def make_avatar_data_set_request(to, data, id_):
+def make_avatar_data_set_request(
+        to: str,
+        data: bytes,
+        id_: str,
+        ) -> ET.Element:
     req, item = make_pubsub_item_put_request(
         to,
         NODE_USER_AVATAR_DATA,
@@ -154,9 +177,14 @@ def make_avatar_data_set_request(to, data, id_):
     return req
 
 
-def make_avatar_metadata_set_request(to, mimetype: str, id_: str, size: int,
-                                     width: int = None,
-                                     height: int = None):
+def make_avatar_metadata_set_request(
+        to: str,
+        mimetype: str,
+        id_: str,
+        size: int,
+        width: typing.Optional[int] = None,
+        height: typing.Optional[int] = None,
+        ) -> ET.Element:
     req, item = make_pubsub_item_put_request(
         to,
         NODE_USER_AVATAR_METADATA,
@@ -166,7 +194,7 @@ def make_avatar_metadata_set_request(to, mimetype: str, id_: str, size: int,
         item,
         "metadata", xmlns=NS_USER_AVATAR_METADATA)
 
-    attr = {
+    attr: typing.MutableMapping[str, str] = {
         "id": id_,
         "bytes": str(size),
         "type": mimetype,
@@ -187,11 +215,18 @@ def _require_child(t: ET.Element, tag: str) -> ET.Element:
     return el
 
 
-def extract_pubsub_item_get_reply(iq_tree, payload_tag):
+def extract_pubsub_item_get_reply(
+        iq_tree: ET.Element,
+        payload_tag: str,
+        ) -> typing.Optional[ET.Element]:
     try:
         pubsub = extract_iq_reply(iq_tree, TAG_PUBSUB)
     except quart.exceptions.NotFound:
         return None
+
+    if pubsub is None:
+        # no payload in IQ reply
+        raise abort(500, "malformed reply")
 
     items = _require_child(pubsub, TAG_PUBSUB_ITEMS)
     if len(items) == 0:
@@ -200,14 +235,16 @@ def extract_pubsub_item_get_reply(iq_tree, payload_tag):
     return _require_child(_require_child(items, TAG_PUBSUB_ITEM), payload_tag)
 
 
-def extract_nickname_get_reply(iq_tree):
+def extract_nickname_get_reply(iq_tree: ET.Element) -> typing.Optional[str]:
     nick = extract_pubsub_item_get_reply(iq_tree, TAG_USER_NICKNAME_NICK)
     if nick is None:
         return None
     return nick.text
 
 
-def extract_avatar_metadata_get_reply(iq_tree):
+def extract_avatar_metadata_get_reply(
+        iq_tree: ET.Element,
+        ) -> typing.Optional[typing.MutableMapping[str, typing.Any]]:
     metadata = extract_pubsub_item_get_reply(iq_tree, TAG_USER_AVATAR_METADATA)
     if metadata is None:
         return None
@@ -218,12 +255,15 @@ def extract_avatar_metadata_get_reply(iq_tree):
 
     info = metadata[0]
     attrs = info.attrib
-    result = {
+    result: typing.MutableMapping[str, typing.Optional[str]] = {
         "sha1": attrs["id"],
         "type": attrs.get("type", "image/png"),
     }
 
-    def extract_optional(key, type_=int):
+    def extract_optional(
+            key: str,
+            type_: typing.Callable[[str], typing.Any] = lambda x: int(x),
+            ) -> None:
         try:
             result[key] = type_(attrs[key])
         except (KeyError, ValueError, TypeError):
@@ -236,8 +276,10 @@ def extract_avatar_metadata_get_reply(iq_tree):
     return result
 
 
-def extract_avatar_data_get_reply(iq_tree):
+def extract_avatar_data_get_reply(
+        iq_tree: ET.Element,
+        ) -> typing.Optional[bytes]:
     data = extract_pubsub_item_get_reply(iq_tree, TAG_USER_AVATAR_DATA)
-    if data.text is None:
+    if data is None or data.text is None:
         return None
     return base64.b64decode(data.text)
