@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 import quart.flask_patch
 
 from quart import (
-    Quart, session, request, render_template, redirect, url_for, Response,
+    Quart, request, render_template, redirect, url_for, Response,
     current_app,
 )
 import quart.exceptions
@@ -21,7 +21,7 @@ from flask_babel import Babel, _, lazy_gettext as _l
 from . import colour, xmpputil
 from .prosodyclient import client
 
-from ._version import version, version_info
+from ._version import version, version_info  # noqa:F401
 
 app = Quart(__name__)
 app.config.setdefault("LANGUAGES", ["de", "en"])
@@ -145,8 +145,12 @@ def proc():
     def url_for_avatar(entity, hash_, **kwargs):
         return url_for(
             "avatar",
-            from_=base64.urlsafe_b64encode(entity.encode("utf-8")).decode("ascii").rstrip("="),
-            code=base64.urlsafe_b64encode(binascii.a2b_hex(hash_)[:8]).decode("ascii").rstrip("="),
+            from_=base64.urlsafe_b64encode(
+                entity.encode("utf-8"),
+            ).decode("ascii").rstrip("="),
+            code=base64.urlsafe_b64encode(
+                binascii.a2b_hex(hash_)[:8],
+            ).decode("ascii").rstrip("="),
             **kwargs
         )
 

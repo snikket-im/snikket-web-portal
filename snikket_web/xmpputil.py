@@ -1,5 +1,4 @@
 import base64
-import binascii
 import typing
 
 import xml.etree.ElementTree as ET
@@ -11,7 +10,8 @@ import quart.exceptions
 TAG_XMPP_ERROR = "error"
 
 NS_XMPP_ERROR_CONDITION = "urn:ietf:params:xml:ns:xmpp-stanzas"
-TAG_XMPP_ERROR_ITEM_NOT_FOUND = "{{{}}}item-not-found".format(NS_XMPP_ERROR_CONDITION)
+TAG_XMPP_ERROR_ITEM_NOT_FOUND = \
+    "{{{}}}item-not-found".format(NS_XMPP_ERROR_CONDITION)
 TAG_XMPP_ERROR_TEXT = "{{{}}}text".format(NS_XMPP_ERROR_CONDITION)
 
 ERROR_CODE_MAP = {

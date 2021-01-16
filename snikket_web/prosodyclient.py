@@ -1,8 +1,5 @@
-import binascii
-import contextlib
 import functools
 import hashlib
-import json
 import logging
 import secrets
 
@@ -362,7 +359,7 @@ class ProsodyClient:
                 self.session_address,
                 current_password,
             )
-            reply = await self._xml_iq_call(
+            await self._xml_iq_call(
                 session,
                 xmpputil.make_password_change_request(
                     self.session_address,
