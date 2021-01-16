@@ -31,6 +31,10 @@
 		{{ form.new_password_confirm.label(class="required") }}
 		{{ form.new_password_confirm(class=("has-error" if form.new_password_confirm.name in form.errors else "")) }}
 	</div>
+	<div class="box warning">
+		<header>{% trans %}Warning{% endtrans %}</header>
+		<p>{% trans %}After changing your password, you will have to enter the new password on all of your devices.{% endtrans %}</p>
+	</div>
 	<div class="f-bbox">
 		<a href="{{ url_for('user.index') }}" class="button secondary">{% trans %}Back{% endtrans %}</a>
 		<button type="submit" class="primary">{% trans %}Change password{% endtrans %}</button>
