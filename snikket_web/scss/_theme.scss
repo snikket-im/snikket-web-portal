@@ -56,6 +56,15 @@ $colours: (
   ]
 );
 
+$box-types: (
+	"primary": "blue",
+	"accent": "yellow",
+	"alert": "alert",
+	"warning": "yellow",
+	"success": "green",
+	"hint": "blue"
+);
+
 $gray-100: nth(map-get($colours, "gray"), 1);
 $gray-200: nth(map-get($colours, "gray"), 2);
 $gray-300: nth(map-get($colours, "gray"), 3);

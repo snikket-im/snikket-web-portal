@@ -594,11 +594,11 @@ button.lv-tertiary, .button.lv-tertiary {
 
 	@extend .el-1;
 
-	@each $type, $values in $colours {
+	@each $type, $colour in $box-types {
 		&.#{$type} {
-			border-color: nth($values, 2);
-			background-color: nth($values, 9);
-			color: nth($values, 1);
+			border-color: nth(map-get($colours, $colour), 2);
+			background-color: nth(map-get($colours, $colour), 9);
+			color: nth(map-get($colours, $colour), 1);
 		}
 	}
 }
