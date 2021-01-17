@@ -12,7 +12,7 @@ import flask_wtf
 
 from flask_babel import lazy_gettext as _l
 
-from snikket_web.prosodyclient import client
+from .infra import client
 
 bp = Blueprint("admin", __name__, url_prefix="/admin")
 
@@ -39,7 +39,7 @@ async def users() -> str:
     )
 
 
-class DeleteUserForm(flask_wtf.FlaskForm):
+class DeleteUserForm(flask_wtf.FlaskForm):  # type:ignore
     action_delete = wtforms.SubmitField(
         _l("Delete user permanently")
     )
@@ -64,7 +64,7 @@ async def delete_user(localpart: str) -> typing.Union[str, quart.Response]:
     )
 
 
-class InvitesListForm(flask_wtf.FlaskForm):
+class InvitesListForm(flask_wtf.FlaskForm):  # type:ignore
     action_revoke = wtforms.StringField()
 
     action_create_invite = wtforms.SubmitField(
@@ -99,7 +99,7 @@ async def invitations() -> typing.Union[str, quart.Response]:
     )
 
 
-class InviteForm(flask_wtf.FlaskForm):
+class InviteForm(flask_wtf.FlaskForm):  # type:ignore
     action_revoke = wtforms.SubmitField(
         _l("Revoke")
     )

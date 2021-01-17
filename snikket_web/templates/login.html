@@ -12,7 +12,7 @@
 <main><div class="form layout-expanded">
 	<h1 class="form-title">{{ config["SNIKKET_DOMAIN"] }}</h1>
 	<p class="form-desc">{{ _("Enter your Snikket address and password to manage your account.") }}</p>
-	<form method="POST" action="{{ url_for('login') }}" name="login">
+	<form method="POST" action="{{ url_for('.login') }}" name="login">
 		{{ form.csrf_token }}
 		{% if form.errors %}
 		{% call box("alert", _("Login failed")) %}
@@ -33,6 +33,6 @@
 	</from>
 </div></main>
 <footer>
-	<ul><li>{% trans about_url=url_for('about') %}A <a href="{{ about_url }}">Snikket</a> server{% endtrans %}</li></ul>
+	<ul><li>{% trans about_url=url_for('.about') %}A <a href="{{ about_url }}">Snikket</a> server{% endtrans %}</li></ul>
 </footer>
 {% endblock %}

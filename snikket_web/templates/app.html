@@ -17,6 +17,6 @@
 </div>
 <main>{% block content %}{% endblock %}</main>
 <footer>
-	<ul><li>{% trans about_url=url_for('about') %}A <a href="{{ about_url }}">Snikket</a> server{% endtrans %}</li></ul>
+	<ul><li>{% trans about_url=url_for('main.about') %}A <a href="{{ about_url }}">Snikket</a> server{% endtrans %}</li></ul>
 </footer>
 {% endblock %}

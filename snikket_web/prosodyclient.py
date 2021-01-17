@@ -320,13 +320,13 @@ class ProsodyClient:
                     **kwargs: typing.Any,
                     ) -> typing.Union[T, quart.Response]:
                 if not self.has_session or not (await self.test_session()):
-                    nonlocal redirect_to
-                    if redirect_to is not False:
-                        redirect_to = \
-                            redirect_to or self._default_login_redirect
-                    if not redirect_to:
+                    redirect_to_value = redirect_to
+                    if redirect_to_value is not False:
+                        redirect_to_value = \
+                            redirect_to_value or self._default_login_redirect
+                    if not redirect_to_value:
                         raise abort(401, "Not Authorized")
-                    return redirect(url_for(redirect_to))
+                    return redirect(url_for(redirect_to_value))
 
                 return await f(*args, **kwargs)
             return wrapped
@@ -664,6 +664,3 @@ class ProsodyClient:
             return False
         scopes = http_session[self.SESSION_CACHED_SCOPE].split()
         return SCOPE_ADMIN in scopes
-
-
-client = ProsodyClient()

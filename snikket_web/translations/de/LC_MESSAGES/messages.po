@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: jonas@zombofant.net\n"
-"POT-Creation-Date: 2021-01-17 20:09+0100\n"
+"POT-Creation-Date: 2021-01-17 20:11+0100\n"
 "PO-Revision-Date: 2020-03-07 16:32+0100\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language: de\n"
@@ -18,29 +18,59 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: snikket_web/__init__.py:40
-msgid "Address"
-msgstr "Adresse"
-
-#: snikket_web/__init__.py:45
-msgid "Password"
-msgstr "Passwort"
-
-#: snikket_web/__init__.py:74
-msgid "Invalid user name or password."
-msgstr "Benutzername oder Passwort falsch."
-
-#: snikket_web/admin/__init__.py:44
+#: snikket_web/admin.py:44
 msgid "Delete user permanently"
 msgstr "Benutzer endgültig löschen"
 
-#: snikket_web/admin/__init__.py:71
+#: snikket_web/admin.py:71
 msgid "New invitation link"
 msgstr "Neuer Einladungslink"
 
-#: snikket_web/admin/__init__.py:104
+#: snikket_web/admin.py:104
 msgid "Revoke"
 msgstr "Löschen"
+
+#: snikket_web/main.py:33
+msgid "Address"
+msgstr "Adresse"
+
+#: snikket_web/main.py:38
+msgid "Password"
+msgstr "Passwort"
+
+#: snikket_web/main.py:60
+msgid "Invalid user name or password."
+msgstr "Benutzername oder Passwort falsch."
+
+#: snikket_web/user.py:25
+msgid "Current password"
+msgstr "Aktuelles Passwort"
+
+#: snikket_web/user.py:30
+msgid "New password"
+msgstr "Neues Passwort"
+
+#: snikket_web/user.py:35
+msgid "Confirm new password"
+msgstr "Neues Passwort (Bestätigung)"
+
+#: snikket_web/user.py:39
+msgid "The new passwords must match."
+msgstr "Die neuen Passwörter müssen übereinstimmen."
+
+#: snikket_web/templates/admin_delete_user.html:12
+#: snikket_web/templates/admin_delete_user.html:16
+#: snikket_web/templates/admin_users.html:15 snikket_web/user.py:50
+msgid "Display name"
+msgstr "Anzeigename"
+
+#: snikket_web/user.py:54
+msgid "Avatar"
+msgstr "Bild"
+
+#: snikket_web/user.py:78
+msgid "Incorrect password"
+msgstr "Ungültiges Passwort"
 
 #: snikket_web/templates/admin_delete_user.html:4
 #: snikket_web/templates/admin_users.html:29
@@ -61,12 +91,6 @@ msgstr "Bist du sicher dass du den folgenden Benutzer löschen willst?"
 #: snikket_web/templates/admin_users.html:14
 msgid "Login name"
 msgstr "Anmeldename"
-
-#: snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/templates/admin_delete_user.html:16
-#: snikket_web/templates/admin_users.html:15 snikket_web/user/__init__.py:48
-msgid "Display name"
-msgstr "Anzeigename"
 
 #: snikket_web/templates/admin_delete_user.html:14
 #: snikket_web/templates/admin_users.html:16
@@ -286,30 +310,6 @@ msgstr "Profil"
 #: snikket_web/templates/user_profile.html:18
 msgid "Apply"
 msgstr "Übernehmen"
-
-#: snikket_web/user/__init__.py:23
-msgid "Current password"
-msgstr "Aktuelles Passwort"
-
-#: snikket_web/user/__init__.py:28
-msgid "New password"
-msgstr "Neues Passwort"
-
-#: snikket_web/user/__init__.py:33
-msgid "Confirm new password"
-msgstr "Neues Passwort (Bestätigung)"
-
-#: snikket_web/user/__init__.py:37
-msgid "The new passwords must match."
-msgstr "Die neuen Passwörter müssen übereinstimmen."
-
-#: snikket_web/user/__init__.py:52
-msgid "Avatar"
-msgstr "Bild"
-
-#: snikket_web/user/__init__.py:76
-msgid "Incorrect password"
-msgstr "Ungültiges Passwort"
 
 #~ msgid "none"
 #~ msgstr "keiner"

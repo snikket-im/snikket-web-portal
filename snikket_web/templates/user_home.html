@@ -3,11 +3,11 @@
 <h1>{% trans %}Welcome!{% endtrans %}</h1>
 <p>{% trans user_name=user_info.display_name %}Welcome home, {{ user_name }}.{% endtrans %}</p>
 <div class="welcome-cards">
-	<a class="card" href="{{ url_for('user.profile') }}">
+	<a class="card" href="{{ url_for('.profile') }}">
 		<h2>{% trans %}Update profile{% endtrans %}</h2>
 		<p>{% trans %}Change display name, set avatar and configure visibility of your personal data to others.{% endtrans %}</p>
 	</a>
-	<a class="card" href="{{ url_for('user.change_pw') }}">
+	<a class="card" href="{{ url_for('.change_pw') }}">
 		<h2>{% trans %}Change password{% endtrans %}</h2>
 	</a>
 	{% if user_info.is_admin %}
@@ -16,7 +16,7 @@
 		<p>{% trans %}Manage users and invitations of this Snikket instance.{% endtrans %}</p>
 	</a>
 	{% endif %}
-	<a class="card" href="{{ url_for('user.logout') }}">
+	<a class="card" href="{{ url_for('.logout') }}">
 		<h2>{% trans %}Log out{% endtrans %}</h2>
 		<p>{% trans %}Exit the Snikket Web Portal, without logging out your other devices.{% endtrans %}</p>
 	</a>

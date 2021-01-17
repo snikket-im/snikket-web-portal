@@ -1,3 +1,2 @@
 #!/bin/sh
-
-exec hypercorn -b "0.0.0.0:8000" snikket_web:app
+exec hypercorn -b "0.0.0.0:8000" 'snikket_web:create_app()'
