@@ -423,6 +423,8 @@ div.form.layout-expanded {
 input[type="submit"], button, .button {
 	margin: 0 $w-s2;
 	padding: $w-s3 $w-s1;
+	line-height: 1.5;
+	display: inline-block;
 
 	td & {
 		margin: 0 $w-s4;
