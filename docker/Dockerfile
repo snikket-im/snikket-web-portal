@@ -45,8 +45,8 @@ RUN set -eu; \
     rm -rf /root/.cache; \
     apt-get clean ; rm -rf /var/lib/apt/lists
 
-COPY web_config.production.py /opt/snikket-web-portal/.local/web_config.py
-ENV SNIKKET_WEB_CONFIG "/opt/snikket-web-portal/.local/web_config.py"
+COPY docker/env.py /etc/snikket-web-portal/env.py
+ENV SNIKKET_WEB_PYENV=/etc/snikket-web-portal/env.py
 
 ADD docker/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]

@@ -1,6 +1,7 @@
 import base64
 import binascii
 import logging
+import os
 import pathlib
 import typing
 
@@ -10,6 +11,8 @@ import quart
 from quart import (
     url_for,
 )
+
+import environ
 
 from . import colour, infra
 from ._version import version, version_info  # noqa:F401
@@ -36,10 +39,48 @@ def proc() -> typing.Dict[str, typing.Any]:
     }
 
 
+def autosplit(s: typing.Union[str, typing.List[str]]) -> typing.List[str]:
+    if isinstance(s, str):
+        return s.split()
+    return s
+
+
+@environ.config(prefix="SNIKKET_WEB")
+class AppConfig:
+    secret_key = environ.var()
+    prosody_endpoint = environ.var()
+    domain = environ.var()
+    avatar_cache_ttl = environ.var(1800, converter=int)
+    languages = environ.var(["de", "en"], converter=autosplit)
+
+
+_UPPER_CASE = "".join(map(chr, range(ord("A"), ord("Z")+1)))
+
+
 def create_app() -> quart.Quart:
+    try:
+        env_init = os.environ["SNIKKET_WEB_PYENV"]
+    except KeyError:
+        pass
+    else:
+        import runpy
+        init_vars = runpy.run_path(env_init)
+        for name, value in init_vars.items():
+            if not name:
+                continue
+            if name[0] not in _UPPER_CASE:
+                continue
+            os.environ[name] = value
+
+    config = environ.to_config(AppConfig)
+
     app = quart.Quart(__name__)
-    app.config.setdefault("LANGUAGES", ["de", "en"])
-    app.config.from_envvar("SNIKKET_WEB_CONFIG")
+    app.config["LANGUAGES"] = config.languages
+    app.config["SECRET_KEY"] = config.secret_key
+    app.config["PROSODY_ENDPOINT"] = config.prosody_endpoint
+    app.config["SNIKKET_DOMAIN"] = config.domain
+    app.config["AVATAR_CACHE_TTL"] = config.avatar_cache_ttl
+
     app.context_processor(proc)
 
     logging_config = app.config.get("LOGGING_CONFIG")

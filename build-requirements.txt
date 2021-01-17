@@ -1,2 +1,3 @@
 pyscss~=1.3
 mypy
+python-dotenv~=0.15
