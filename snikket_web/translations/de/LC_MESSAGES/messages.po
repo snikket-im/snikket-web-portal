@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: jonas@zombofant.net\n"
-"POT-Creation-Date: 2021-01-17 20:11+0100\n"
+"POT-Creation-Date: 2021-01-17 20:12+0100\n"
 "PO-Revision-Date: 2020-03-07 16:32+0100\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language: de\n"
@@ -117,11 +117,25 @@ msgstr "E-Mail-Adresse"
 msgid "Danger"
 msgstr "Gefahr"
 
-#: snikket_web/templates/admin_edit_invite.html:21
+#: snikket_web/templates/admin_edit_invite.html:8
 msgid "View invitation"
 msgstr "Einladung anzeigen"
 
-#: snikket_web/templates/admin_edit_invite.html:39
+#: snikket_web/templates/admin_edit_invite.html:13
+#: snikket_web/templates/admin_invites.html:24
+msgid "Created"
+msgstr "Erzeugt"
+
+#: snikket_web/templates/admin_edit_invite.html:15
+#: snikket_web/templates/admin_invites.html:25
+msgid "Valid until"
+msgstr "Gültig bis"
+
+#: snikket_web/templates/admin_edit_invite.html:17
+msgid "Link"
+msgstr "Link"
+
+#: snikket_web/templates/admin_edit_invite.html:24
 #: snikket_web/templates/user_passwd.html:39
 #: snikket_web/templates/user_profile.html:24
 msgid "Back"
@@ -172,7 +186,7 @@ msgid "Modify administrative user information or delete users."
 msgstr "Benutzerinformationen verändern oder Benutzer löschen."
 
 #: snikket_web/templates/admin_home.html:11
-#: snikket_web/templates/admin_invites.html:3
+#: snikket_web/templates/admin_invites.html:7
 msgid "Manage invitations"
 msgstr "Einladungen verwalten"
 
@@ -188,11 +202,11 @@ msgstr "Zurück zur Hauptseite"
 msgid "Go back to your user’s web portal page."
 msgstr "Zurück zur Startseite deines Benutzers."
 
-#: snikket_web/templates/admin_invites.html:6
+#: snikket_web/templates/admin_invites.html:10
 msgid "Create new invitation"
 msgstr "Neue Einladung erzeugen"
 
-#: snikket_web/templates/admin_invites.html:7
+#: snikket_web/templates/admin_invites.html:11
 msgid ""
 "Create a new invitation link to invite more users to your Snikket "
 "instance by clicking the button below."
@@ -200,19 +214,28 @@ msgstr ""
 "Erzeuge eine neue Einladung um mehr Benutzer auf deine Snikket-Instanz "
 "einzuladen indem du den folgenden Button klickst."
 
-#: snikket_web/templates/admin_invites.html:12
+#: snikket_web/templates/admin_invites.html:16
 msgid "Pending invitations"
 msgstr "Ausstehende Einladungen"
 
-#: snikket_web/templates/admin_invites.html:29
+#: snikket_web/templates/admin_invites.html:26
+#: snikket_web/templates/admin_users.html:18
+msgid "Actions"
+msgstr "Aktionen"
+
+#: snikket_web/templates/admin_invites.html:36
 msgid "Show invite details"
 msgstr "Einladungsdetails anzeigen"
 
-#: snikket_web/templates/admin_invites.html:31
+#: snikket_web/templates/admin_invites.html:38
+msgid "Copy invite link to clipboard"
+msgstr "Einladungslink kopieren"
+
+#: snikket_web/templates/admin_invites.html:40
 msgid "Delete invitation"
 msgstr "Einladung löschen"
 
-#: snikket_web/templates/admin_invites.html:39
+#: snikket_web/templates/admin_invites.html:48
 msgid "Currently, there are no pending invitations."
 msgstr "Derzeit gibt es keine ausstehenden Einladungen."
 
@@ -220,14 +243,19 @@ msgstr "Derzeit gibt es keine ausstehenden Einladungen."
 msgid "Phone number"
 msgstr "Telefonnummer"
 
-#: snikket_web/templates/admin_users.html:18
-msgid "Actions"
-msgstr "Aktionen"
-
 #: snikket_web/templates/app.html:20 snikket_web/templates/login.html:36
 #, python-format
 msgid "A <a href=\"%(about_url)s\">Snikket</a> server"
 msgstr "Ein <a href=\"%(about_url)s\">Snikket</a>-Server"
+
+#: snikket_web/templates/library.j2:13
+msgid "Copy link"
+msgstr "Link kopieren"
+
+#: snikket_web/templates/library.j2:15
+#, python-format
+msgid "Copy &quot;%(content)s&quot; to clipboard"
+msgstr "&quot;%(content)s&quot; kopieren"
 
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
@@ -338,7 +366,4 @@ msgstr ""
 #: snikket_web/templates/user_profile.html:24
 msgid "Apply"
 msgstr "Übernehmen"
-
-#~ msgid "none"
-#~ msgstr "keiner"
 

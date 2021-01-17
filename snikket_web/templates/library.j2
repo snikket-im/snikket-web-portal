@@ -9,3 +9,17 @@
 <div class="avatar shim" style="background-color: {{ text_to_css(from_) }}"><span data-avatar-char="{{ char or from_[0] }}"></span></div>
 {%- endif -%}
 {%- endmacro %}
+
+{% macro clipboard_button(label=_("Copy link"), caller=None) -%}
+{%- set text = caller() -%}
+<a title="{% trans content=text %}Copy &quot;{{ content }}&quot; to clipboard{% endtrans %}" aria-label="{% trans content=text %}Copy &quot;{{ content }}&quot; to clipboard{% endtrans %}" class="copy-to-clipboard" onclick="copy_to_clipboard(this); return false;" data-cliptext="{{ text }}" href="#">{{ label }}</a>
+{%- endmacro %}
+
+{% macro showuri(uri, caller=None) %}
+{%- if uri is none -%}
+<em>—</em>
+{%- else -%}
+<div><input type="text" readonly="readonly" value="{{ uri }}"></div>
+<div>{% call clipboard_button() %}{{ uri }}{% endcall %}</div>
+{%- endif -%}
+{% endmacro %}

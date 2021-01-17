@@ -789,6 +789,21 @@ table {
 	}
 }
 
+.long-url-link {
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.link-col {
+	width: $w-l6;
+}
+
+#clipboard-result + span {
+	display: none;
+}
+
 
 /* linearisation / responsive stuff */
 
@@ -828,7 +843,6 @@ table {
 
 .copy-to-clipboard {
 	cursor: pointer;
-	margin-left: 0.5em;
 	font-style: normal;
 	text-decoration: none;
 }

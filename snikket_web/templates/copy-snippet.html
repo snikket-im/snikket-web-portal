@@ -36,6 +36,15 @@ function copyTextToClipboard(text, context, callback) {
 }
 /* end of https://stackoverflow.com/a/30810322/1248008 */
 
+var insert_first = function(parent_el, new_el) {
+	var first = parent_el.firstChild;
+	if (!first) {
+		parent_el.appendChild(new_el);
+	} else {
+		parent_el.insertBefore(new_el, first);
+	}
+}
+
 var copy_to_clipboard = function(el) {
   var text = el.dataset.cliptext;
   if (!text) {
@@ -51,12 +60,12 @@ var copy_to_clipboard = function(el) {
 	result_el.id = "clipboard-result";
 	if (success) {
 	  result_el.classList.add("success");
-	  result_el.innerText = "Copied!";
+	  result_el.innerText = "✓";
 	} else {
 	  result_el.classList.add("error");
-	  result_el.innerText = "Clipboard operation failed!";
+	  result_el.innerText = "❌";
 	}
-	el.appendChild(result_el);
+	insert_first(el, result_el);
 	setTimeout(function() {
 	  el.removeChild(result_el);
 	  el.blur();

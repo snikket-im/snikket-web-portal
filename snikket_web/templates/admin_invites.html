@@ -1,4 +1,8 @@
 {% extends "admin_app.html" %}
+{% block head_lead %}
+{{ super() }}
+{% include "copy-snippet.html" %}
+{% endblock %}
 {% block content %}
 <h1>{% trans %}Manage invitations{% endtrans %}</h1>
 <form method="POST">{{ form.csrf_token }}
@@ -12,11 +16,14 @@
 <h2>{% trans %}Pending invitations{% endtrans %}</h2>
 {% if invites %}
 <table>
+	<col/>
+	<col/>
+	<col/>
 	<thead>
 		<tr>
-			<th>Created</th>
-			<th>Expires</th>
-			<th>Actions</th>
+			<th>{% trans %}Created{% endtrans %}</th>
+			<th>{% trans %}Valid until{% endtrans %}</th>
+			<th>{% trans %}Actions{% endtrans %}</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -24,9 +31,11 @@
 		<tr>
 			<td>{{ invite.created_at | format_date }}</td>
 			<td>{{ (invite.expires - now) | format_timedelta(add_direction=True) }}</td>
-			<td>
+			<td style="white-space: nowrap;">
 				{#- -#}
-				<a href="{{ url_for(".edit_invite", id_=invite.id_) }}" class="button primary btn-more" title="{% trans %}Show invite details{% endtrans %}"><span class="a11y-only">{% trans %}Show invite details{% endtrans %}</span></a>
+				<a href="{{ url_for(".edit_invite", id_=invite.id_) }}" class="button secondary btn-more" title="{% trans %}Show invite details{% endtrans %}"><span class="a11y-only">{% trans %}Show invite details{% endtrans %}</span></a>
+				{#- -#}
+				<a class="button primary" title="{% trans %}Copy invite link to clipboard{% endtrans %}" aria-label="{% trans %}Copy invite link to clipboard{% endtrans %}" data-cliptext="{{ invite.landing_page }}" onclick="copy_to_clipboard(this); return false;"><span>📋</span></a>
 				{#- -#}
 				<button type="submit" class="secondary danger btn-delete" name="{{ form.action_revoke.name }}" value="{{ invite.id_ }}"><span class="a11y-only">{% trans %}Delete invitation{% endtrans %}</span></button>
 				{#- -#}
