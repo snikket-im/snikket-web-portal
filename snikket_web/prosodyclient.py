@@ -6,6 +6,7 @@ import logging
 import secrets
 import types
 import typing
+import typing_extensions
 
 from datetime import datetime
 
@@ -159,7 +160,7 @@ class HTTPAuthSessionManager(HTTPSessionManager):
         )
 
 
-class AuthSessionProvider(typing.Protocol):
+class AuthSessionProvider(typing_extensions.Protocol):
     _auth_session: HTTPAuthSessionManager
 
 
