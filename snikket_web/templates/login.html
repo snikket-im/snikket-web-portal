@@ -9,7 +9,7 @@
 {{ super() }}
 {% endblock %}
 {% block body %}
-<main><div class="form layout-expanded">
+<div id="mwrap"><main><div class="form layout-expanded">
 	<h1 class="form-title">{{ config["SNIKKET_DOMAIN"] }}</h1>
 	<p class="form-desc">{{ _("Enter your Snikket address and password to manage your account.") }}</p>
 	<form method="POST" action="{{ url_for('.login') }}" name="login">
@@ -31,7 +31,7 @@
 			<button type="submit" class="primary">{{ _("Log in") }}</button>
 		</div>
 	</from>
-</div></main>
+</div></main></div>
 <footer>
 	<ul><li>{% trans about_url=url_for('.about') %}A <a href="{{ about_url }}">Snikket</a> server{% endtrans %}</li></ul>
 </footer>

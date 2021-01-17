@@ -26,10 +26,20 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: $gray-900;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
-body > main {
+main {
 	padding: $w-l1;
+	margin-left: auto;
+	max-width: 60rem;
+	margin-right: auto;
+}
+
+#mwrap {
+	flex: 1;
 }
 
 /* top bar */
@@ -83,14 +93,6 @@ div#topbar {
 	& > nav.usermenu {
 		flex: 0 1 auto;
 	}
-}
-
-/* main content */
-
-main {
-	max-width: 60rem;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 /* standard elevations */
