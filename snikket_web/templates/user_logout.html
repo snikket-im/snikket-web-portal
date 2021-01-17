@@ -4,11 +4,15 @@
 {% endblock %}
 {% block content %}
 <div class="form layout-expanded"><form method="POST">
-	<h2 class="form-title">Sign out of the Snikket Web Portal</h2>
-	<p class="form-desc">Click below to log yourself out of the web portal. This does not affect any other connected devices.</p>
+	<h2 class="form-title">{% trans %}Sign out of the Snikket Web Portal{% endtrans %}</h2>
+	<p class="form-desc">{% trans %}Click below to log yourself out of the web portal. This does not affect any other connected devices.{% endtrans %}</p>
 	{{ form.csrf_token }}
 	<div class="f-bbox">
-		<a href="{{ url_for('user.index') }}" class="button secondary">Back</a><button type="submit" class="primary">Sign out</button>
+		{#- -#}
+		<a href="{{ url_for('user.index') }}" class="button secondary">{% trans %}Back{% endtrans %}</a>
+		{#- -#}
+		<button type="submit" class="primary">{% trans %}Sign out{% endtrans %}</button>
+		{#- -#}
 	</div>
 </form></div>
 {% endblock %}

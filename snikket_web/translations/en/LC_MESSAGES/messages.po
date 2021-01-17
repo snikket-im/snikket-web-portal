@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-17 20:12+0100\n"
+"POT-Creation-Date: 2021-01-17 20:13+0100\n"
 "PO-Revision-Date: 2020-03-07 16:50+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -138,6 +138,7 @@ msgid "Link"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:24
+#: snikket_web/templates/user_logout.html:12
 #: snikket_web/templates/user_passwd.html:39
 #: snikket_web/templates/user_profile.html:24
 msgid "Back"
@@ -239,6 +240,10 @@ msgstr ""
 msgid "Phone number"
 msgstr ""
 
+#: snikket_web/templates/app.html:4
+msgid "Snikket Web Portal"
+msgstr ""
+
 #: snikket_web/templates/app.html:20 snikket_web/templates/login.html:36
 #, python-format
 msgid "A <a href=\"%(about_url)s\">Snikket</a> server"
@@ -310,6 +315,21 @@ msgstr "Log out"
 #: snikket_web/templates/user_home.html:21
 msgid "Exit the Snikket Web Portal, without logging out your other devices."
 msgstr "Exit the Snikket Web Portal, without logging out your other devices."
+
+#: snikket_web/templates/user_logout.html:7
+msgid "Sign out of the Snikket Web Portal"
+msgstr ""
+
+#: snikket_web/templates/user_logout.html:8
+msgid ""
+"Click below to log yourself out of the web portal. This does not affect "
+"any other connected devices."
+msgstr ""
+
+#: snikket_web/templates/user_logout.html:14
+#, fuzzy
+msgid "Sign out"
+msgstr "Log out"
 
 #: snikket_web/templates/user_passwd.html:7
 msgid "Change your password"
