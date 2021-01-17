@@ -166,24 +166,69 @@
 		<label for="fex-f9">Text area</label>
 		<textarea rows="5"></textarea>
 	</div>
-	<p>The following demonstrate the different button styles. First normal buttons:</p>
-	<div class="f-bbox">
-		<button class="tertiary">Tertiary</button>
-		<button class="secondary">Secondary</button>
-		<button class="primary">Primary</button>
-	</div>
-	<p>Then the accentuated versions:</p>
-	<div class="f-bbox">
-		<button class="tertiary accent">Tertiary (Accent)</button>
-		<button class="secondary accent">Secondary (Accent)</button>
-		<button class="primary accent">Primary (Accent)</button>
-	</div>
-	<p>And finally, the Danger Zone:</p>
-	<div class="f-bbox">
-		<button class="tertiary danger">Tertiary (Danger)</button>
-		<button class="secondary danger">Secondary (Danger)</button>
-		<button class="primary danger">Primary (Danger)</button>
-	</div>
+	<div class="demo-columns"><div class="demo-column">
+		<p>The following demonstrate the different button styles. First normal buttons:</p>
+		<div class="f-bbox">
+			{#- -#}
+			<button class="tertiary">Tertiary</button>
+			{#- -#}
+			<button class="secondary">Secondary</button>
+			{#- -#}
+			<button class="primary">Primary</button>
+			{#- -#}
+		</div>
+		<p>Then the accentuated versions:</p>
+		<div class="f-bbox">
+			{#- -#}
+			<button class="tertiary accent">Tertiary</button>
+			{#- -#}
+			<button class="secondary accent">Secondary</button>
+			{#- -#}
+			<button class="primary accent">Primary</button>
+			{#- -#}
+		</div>
+		<p>And finally, the Danger Zone:</p>
+		<div class="f-bbox">
+			{#- -#}
+			<button class="tertiary danger">Tertiary</button>
+			{#- -#}
+			<button class="secondary danger">Secondary</button>
+			{#- -#}
+			<button class="primary danger">Primary</button>
+			{#- -#}
+		</div>
+	</div><div class="demo-column">
+		<p>The following demonstrate the different button styles. First normal buttons:</p>
+		<div class="f-bbox">
+			{#- -#}
+			<a class="button tertiary">Tertiary</a>
+			{#- -#}
+			<a class="button secondary">Secondary</a>
+			{#- -#}
+			<a class="button primary">Primary</a>
+			{#- -#}
+		</div>
+		<p>Then the accentuated versions:</p>
+		<div class="f-bbox">
+			{#- -#}
+			<a class="button tertiary accent">Tertiary</a>
+			{#- -#}
+			<a class="button secondary accent">Secondary</a>
+			{#- -#}
+			<a class="button primary accent">Primary</a>
+			{#- -#}
+		</div>
+		<p>And finally, the Danger Zone:</p>
+		<div class="f-bbox">
+			{#- -#}
+			<a class="button tertiary danger">Tertiary</a>
+			{#- -#}
+			<a class="button secondary danger">Secondary</a>
+			{#- -#}
+			<a class="button primary danger">Primary</a>
+			{#- -#}
+		</div>
+	</div></div>
 {#
 {% for style in ["primary", "secondary", "tertiary"] %}
 	<p>The following demonstrate the <em>{{ style }}</em> button styles:</p>
