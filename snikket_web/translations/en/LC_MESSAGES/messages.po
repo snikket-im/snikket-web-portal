@@ -43,33 +43,49 @@ msgstr "Password"
 msgid "Invalid user name or password."
 msgstr "Confirm new password"
 
-#: snikket_web/user.py:25
+#: snikket_web/user.py:26
 msgid "Current password"
 msgstr "Current password"
 
-#: snikket_web/user.py:30
+#: snikket_web/user.py:31
 msgid "New password"
 msgstr "New password"
 
-#: snikket_web/user.py:35
+#: snikket_web/user.py:36
 msgid "Confirm new password"
 msgstr "Confirm new password"
 
-#: snikket_web/user.py:39
+#: snikket_web/user.py:40
 msgid "The new passwords must match."
 msgstr "The new passwords must match."
 
+#: snikket_web/user.py:50
+msgid "Nobody"
+msgstr ""
+
+#: snikket_web/user.py:51
+msgid "Friends only"
+msgstr ""
+
+#: snikket_web/user.py:52
+msgid "Everyone"
+msgstr ""
+
 #: snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/templates/admin_delete_user.html:16
-#: snikket_web/templates/admin_users.html:15 snikket_web/user.py:50
+#: snikket_web/templates/admin_users.html:15 snikket_web/user.py:58
 msgid "Display name"
 msgstr "Display name"
 
-#: snikket_web/user.py:54
+#: snikket_web/user.py:62
 msgid "Avatar"
 msgstr "Avatar"
 
-#: snikket_web/user.py:78
+#: snikket_web/user.py:66
+msgid "Profile visibility"
+msgstr ""
+
+#: snikket_web/user.py:91
 msgid "Incorrect password"
 msgstr "Incorrect password"
 
@@ -109,7 +125,7 @@ msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:39
 #: snikket_web/templates/user_passwd.html:39
-#: snikket_web/templates/user_profile.html:18
+#: snikket_web/templates/user_profile.html:24
 msgid "Back"
 msgstr "Back"
 
@@ -301,10 +317,23 @@ msgstr ""
 msgid "Profile"
 msgstr "Profile"
 
+#: snikket_web/templates/user_profile.html:17
+msgid "Visibility"
+msgstr ""
+
 #: snikket_web/templates/user_profile.html:18
+msgid ""
+"This section allows you to control who can see your profile information, "
+"like avatar and nickname."
+msgstr ""
+
+#: snikket_web/templates/user_profile.html:24
 msgid "Apply"
 msgstr "Apply"
 
 #~ msgid "none"
+#~ msgstr ""
+
+#~ msgid "Friends"
 #~ msgstr ""
 

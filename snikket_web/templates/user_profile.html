@@ -14,6 +14,12 @@
 		{{ form.avatar.label }}
 		{{ form.avatar }}
 	</div>
+	<h3 class="form-title">{% trans %}Visibility{% endtrans %}</h3>
+	<p class="form-descr weak">{% trans %}This section allows you to control who can see your profile information, like avatar and nickname.{% endtrans %}</p>
+	<div class="f-ebox">
+		{{ form.profile_access_model.label }}
+		{{ form.profile_access_model }}
+	</div>
 	<div class="f-bbox">
 		<a href="{{ url_for('user.index') }}" class="button secondary">{% trans %}Back{% endtrans %}</a><button type="submit" class="primary">{% trans %}Apply{% endtrans %}</button>
 	</div>

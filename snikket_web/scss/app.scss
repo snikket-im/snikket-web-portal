@@ -389,6 +389,18 @@ div.form.layout-expanded {
 	}
 }
 
+.f-ebox > ul {
+	/* radio group */
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	> li {
+		margin: 0;
+		padding: 0;
+	}
+}
+
 
 /* form buttons */
 

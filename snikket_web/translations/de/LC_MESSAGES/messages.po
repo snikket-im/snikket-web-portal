@@ -42,33 +42,49 @@ msgstr "Passwort"
 msgid "Invalid user name or password."
 msgstr "Benutzername oder Passwort falsch."
 
-#: snikket_web/user.py:25
+#: snikket_web/user.py:26
 msgid "Current password"
 msgstr "Aktuelles Passwort"
 
-#: snikket_web/user.py:30
+#: snikket_web/user.py:31
 msgid "New password"
 msgstr "Neues Passwort"
 
-#: snikket_web/user.py:35
+#: snikket_web/user.py:36
 msgid "Confirm new password"
 msgstr "Neues Passwort (Bestätigung)"
 
-#: snikket_web/user.py:39
+#: snikket_web/user.py:40
 msgid "The new passwords must match."
 msgstr "Die neuen Passwörter müssen übereinstimmen."
 
+#: snikket_web/user.py:50
+msgid "Nobody"
+msgstr "Niemand"
+
+#: snikket_web/user.py:51
+msgid "Friends only"
+msgstr "Nur Freunde"
+
+#: snikket_web/user.py:52
+msgid "Everyone"
+msgstr "Jeder"
+
 #: snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/templates/admin_delete_user.html:16
-#: snikket_web/templates/admin_users.html:15 snikket_web/user.py:50
+#: snikket_web/templates/admin_users.html:15 snikket_web/user.py:58
 msgid "Display name"
 msgstr "Anzeigename"
 
-#: snikket_web/user.py:54
+#: snikket_web/user.py:62
 msgid "Avatar"
 msgstr "Bild"
 
-#: snikket_web/user.py:78
+#: snikket_web/user.py:66
+msgid "Profile visibility"
+msgstr "Profilsichtbarkeit"
+
+#: snikket_web/user.py:91
 msgid "Incorrect password"
 msgstr "Ungültiges Passwort"
 
@@ -107,7 +123,7 @@ msgstr "Einladung anzeigen"
 
 #: snikket_web/templates/admin_edit_invite.html:39
 #: snikket_web/templates/user_passwd.html:39
-#: snikket_web/templates/user_profile.html:18
+#: snikket_web/templates/user_profile.html:24
 msgid "Back"
 msgstr "Zurück"
 
@@ -307,7 +323,19 @@ msgstr ""
 msgid "Profile"
 msgstr "Profil"
 
+#: snikket_web/templates/user_profile.html:17
+msgid "Visibility"
+msgstr "Sichtbarkeit"
+
 #: snikket_web/templates/user_profile.html:18
+msgid ""
+"This section allows you to control who can see your profile information, "
+"like avatar and nickname."
+msgstr ""
+"Hier kannst du einstellen, wer deine Profilinformationen, wie Bild oder "
+"Anzeigename einsehen kann."
+
+#: snikket_web/templates/user_profile.html:24
 msgid "Apply"
 msgstr "Übernehmen"
 

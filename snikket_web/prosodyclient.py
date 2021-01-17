@@ -1,3 +1,4 @@
+import asyncio
 import dataclasses
 import enum
 import functools
@@ -493,6 +494,138 @@ class ProsodyClient:
             xmpputil.make_avatar_data_request(from_, id_)
         )
         return xmpputil.extract_avatar_data_get_reply(data_resp)
+
+    @autosession
+    async def get_pubsub_node_access_model(
+            self,
+            to: str,
+            node: str,
+            default: str,
+            *,
+            session: aiohttp.ClientSession) -> str:
+        config = xmpputil.extract_pubsub_node_config_get_reply(
+            await self._xml_iq_call(
+                session,
+                xmpputil.make_pubsub_node_config_get_request(
+                    to,
+                    node,
+                ),
+            )
+        )
+        try:
+            return config[xmpputil.FORM_FIELD_PUBSUB_ACCESS_MODEL][0]
+        except (ValueError, KeyError):
+            return default
+
+    @autosession
+    async def set_pubsub_node_access_model(
+            self,
+            to: str,
+            node: str,
+            new_access_model: str,
+            *,
+            ignore_not_found: bool = False,
+            session: aiohttp.ClientSession) -> None:
+        try:
+            xmpputil.extract_iq_reply(await self._xml_iq_call(
+                session,
+                xmpputil.make_pubsub_access_model_put_request(
+                    to,
+                    node,
+                    new_access_model,
+                )
+            ))
+        except quart.exceptions.NotFound:
+            if ignore_not_found:
+                return
+            raise
+
+    @autosession
+    async def get_nickname_access_model(
+            self,
+            *,
+            session: aiohttp.ClientSession) -> str:
+        return await self.get_pubsub_node_access_model(
+            self.session_address,
+            xmpputil.NODE_USER_NICKNAME,
+            "open",
+            session=session,
+        )
+
+    @autosession
+    async def set_nickname_access_model(
+            self,
+            new_access_model: str,
+            *,
+            session: aiohttp.ClientSession) -> None:
+        await self.set_pubsub_node_access_model(
+            self.session_address,
+            xmpputil.NODE_USER_NICKNAME,
+            new_access_model,
+            session=session,
+            ignore_not_found=True,
+        )
+
+    @autosession
+    async def get_avatar_access_model(
+            self,
+            *,
+            session: aiohttp.ClientSession) -> str:
+        return await self.get_pubsub_node_access_model(
+            self.session_address,
+            xmpputil.NODE_USER_AVATAR_METADATA,
+            "open",
+            session=session,
+        )
+
+    @autosession
+    async def set_avatar_access_model(
+            self,
+            new_access_model: str,
+            *,
+            session: aiohttp.ClientSession) -> None:
+        await asyncio.gather(
+            self.set_pubsub_node_access_model(
+                self.session_address,
+                xmpputil.NODE_USER_AVATAR_DATA,
+                new_access_model,
+                ignore_not_found=True,
+                session=session,
+            ),
+            self.set_pubsub_node_access_model(
+                self.session_address,
+                xmpputil.NODE_USER_AVATAR_METADATA,
+                new_access_model,
+                ignore_not_found=True,
+                session=session,
+            )
+        )
+
+    @autosession
+    async def get_vcard_access_model(
+            self,
+            *,
+            session: aiohttp.ClientSession) -> str:
+        return await self.get_pubsub_node_access_model(
+            self.session_address,
+            xmpputil.NODE_VCARD,
+            "open",
+            session=session,
+        )
+
+    @autosession
+    async def set_vcard_access_model(
+            self,
+            new_access_model: str,
+            *,
+            session: aiohttp.ClientSession) -> None:
+        await self.set_pubsub_node_access_model(
+            self.session_address,
+            xmpputil.NODE_VCARD,
+            new_access_model,
+            session=session,
+            ignore_not_found=True,
+        )
 
     @autosession
     async def set_user_avatar(

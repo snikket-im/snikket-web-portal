@@ -1,3 +1,4 @@
+import asyncio
 import typing
 
 import quart.flask_patch
@@ -45,6 +46,13 @@ class LogoutForm(flask_wtf.FlaskForm):  # type:ignore
     pass
 
 
+_ACCESS_MODEL_CHOICES = [
+    ("whitelist", _l("Nobody")),
+    ("presence", _l("Friends only")),
+    ("open", _l("Everyone")),
+]
+
+
 class ProfileForm(flask_wtf.FlaskForm):  # type:ignore
     nickname = wtforms.TextField(
         _l("Display name"),
@@ -52,6 +60,11 @@ class ProfileForm(flask_wtf.FlaskForm):  # type:ignore
 
     avatar = wtforms.FileField(
         _l("Avatar")
+    )
+
+    profile_access_model = wtforms.RadioField(
+        _l("Profile visibility"),
+        choices=_ACCESS_MODEL_CHOICES,
     )
 
 
@@ -89,7 +102,15 @@ async def profile() -> typing.Union[str, quart.Response]:
     form = ProfileForm()
     if request.method != "POST":
         user_info = await client.get_user_info()
+        try:
+            profile_access_model = await client.get_nickname_access_model()
+        except quart.exceptions.NotFound:
+            # avatar node does not exist yet, default the access model to
+            # presence
+            # that is what will be set if the user now adds a new avatar.
+            profile_access_model = "presence"
         form.nickname.data = user_info.get("nickname", "")
+        form.profile_access_model.data = profile_access_model
 
     if form.validate_on_submit():
         user_info = await client.get_user_info()
@@ -103,6 +124,14 @@ async def profile() -> typing.Union[str, quart.Response]:
 
         if user_info.get("nickname") != form.nickname.data:
             await client.set_user_nickname(form.nickname.data)
+
+        access_model = form.profile_access_model.data
+        await asyncio.gather(
+            client.set_avatar_access_model(access_model),
+            client.set_vcard_access_model(access_model),
+            client.set_nickname_access_model(access_model),
+        )
+
         return redirect(url_for(".profile"))
 
     return await render_template("user_profile.html", form=form)
