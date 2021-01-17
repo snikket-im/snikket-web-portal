@@ -26,8 +26,7 @@ except KeyError:
           'To avoid losing sessions on each server restart, please provide '
           'a SECRET_KEY.',
           file=sys.stderr)
-
-SECRET_KEY = os.environ.get('SECRET_KEY', secrets.token_urlsafe(nbytes=32))
+    SECRET_KEY = secrets.token_urlsafe(nbytes=32)
 
 # URL (without trailing /) of the prosody HTTP server.
 #
