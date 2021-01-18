@@ -72,6 +72,8 @@ class AdminInviteInfo:
     landing_page: typing.Optional[str]
     created_at: datetime
     expires: datetime
+    reusable: bool
+    group_ids: typing.Collection[str]
 
     @classmethod
     def from_api_response(
@@ -87,6 +89,26 @@ class AdminInviteInfo:
             token=data["id"],
             xmpp_uri=data.get("xmpp_uri"),
             landing_page=data.get("landing_page"),
+            group_ids=data.get("groups", []),
+            reusable=data["reusable"],
+        )
+
+
+@dataclasses.dataclass(frozen=True)
+class AdminGroupInfo:
+    id_: str
+    name: str
+    members: typing.Collection[str]
+
+    @classmethod
+    def from_api_response(
+            cls,
+            data: typing.Mapping[str, typing.Any],
+            ) -> "AdminGroupInfo":
+        return cls(
+            id_=data["id"],
+            name=data["name"],
+            members=data["members"],
         )
 
 
@@ -305,6 +327,9 @@ class ProsodyClient:
     def has_session(self) -> bool:
         return self.SESSION_TOKEN in http_session
 
+    def authenticated_session(self) -> HTTPAuthSessionManager:
+        return self._auth_session
+
     def require_session(
             self,
             redirect_to: typing.Optional[str] = None,
@@ -394,29 +419,33 @@ class ProsodyClient:
             )
             return ET.fromstring(reply_payload)
 
-    async def get_user_info(self) -> typing.Mapping:
+    @autosession
+    async def get_user_info(
+            self,
+            *,
+            session: aiohttp.ClientSession,
+            ) -> typing.Mapping:
         localpart, domain, _ = split_jid(self.session_address)
 
-        async with self._auth_session as session:
-            nickname = await self.get_user_nickname(session=session)
-            try:
-                avatar_info = await self.get_avatar(
-                    self.session_address,
-                    metadata_only=True,
-                    session=session,
-                )
-                avatar_hash = avatar_info["sha1"]
-            except quart.exceptions.HTTPException:
-                avatar_hash = None
+        nickname = await self.get_user_nickname(session=session)
+        try:
+            avatar_info = await self.get_avatar(
+                self.session_address,
+                metadata_only=True,
+                session=session,
+            )
+            avatar_hash = avatar_info["sha1"]
+        except quart.exceptions.HTTPException:
+            avatar_hash = None
 
-            return {
-                "address": self.session_address,
-                "username": localpart,
-                "nickname": nickname,
-                "display_name": nickname or localpart,
-                "avatar_hash": avatar_hash,
-                "is_admin": self.is_admin_session,
-            }
+        return {
+            "address": self.session_address,
+            "username": localpart,
+            "nickname": nickname,
+            "display_name": nickname or localpart,
+            "avatar_hash": avatar_hash,
+            "is_admin": self.is_admin_session,
+        }
 
     @autosession
     async def test_session(self, session: aiohttp.ClientSession) -> bool:
@@ -698,7 +727,7 @@ class ProsodyClient:
         if resp.status == 400:
             abort(500, "request rejected by backend")
         if not 200 <= resp.status < 300:
-            abort(resp.status)
+            resp.raise_for_status()
 
     @autosession
     async def list_users(
@@ -777,12 +806,88 @@ class ProsodyClient:
     @autosession
     async def create_invite(
             self,
+            group_ids: typing.Collection[str],
+            reusable: bool,
+            ttl: int,
             *,
             session: aiohttp.ClientSession,
             ) -> AdminInviteInfo:
-        async with session.put(self._admin_v1_endpoint("/invites")) as resp:
+        payload = {
+            "reusable": reusable,
+            "groups": list(group_ids),
+            "ttl": ttl,
+        }
+
+        async with session.post(
+                self._admin_v1_endpoint("/invites"),
+                json=payload) as resp:
             self._raise_error_from_response(resp)
             return AdminInviteInfo.from_api_response(await resp.json())
+
+    @autosession
+    async def create_group(
+            self,
+            name: str,
+            *,
+            session: aiohttp.ClientSession,
+            ) -> AdminGroupInfo:
+        payload = {
+            "name": name,
+        }
+
+        async with session.post(
+                self._admin_v1_endpoint("/groups"),
+                json=payload) as resp:
+            self._raise_error_from_response(resp)
+            return AdminGroupInfo.from_api_response(await resp.json())
+
+    @autosession
+    async def list_groups(
+            self,
+            *,
+            session: aiohttp.ClientSession,
+            ) -> typing.Collection[AdminGroupInfo]:
+        async with session.get(self._admin_v1_endpoint("/groups")) as resp:
+            self._raise_error_from_response(resp)
+            return list(map(
+                AdminGroupInfo.from_api_response,
+                await resp.json(),
+            ))
+
+    @autosession
+    async def get_group_by_id(
+            self,
+            id_: str,
+            *,
+            session: aiohttp.ClientSession,
+            ) -> AdminGroupInfo:
+        async with session.get(
+                self._admin_v1_endpoint("/groups/{}".format(id_)),
+                ) as resp:
+            self._raise_error_from_response(resp)
+            return AdminGroupInfo.from_api_response(await resp.json())
+
+    @autosession
+    async def update_group(
+            self,
+            id_: str,
+            *,
+            new_name: typing.Optional[str] = None,
+            session: aiohttp.ClientSession,
+            ) -> AdminGroupInfo:
+        pass
+
+    @autosession
+    async def delete_group(
+            self,
+            id_: str,
+            *,
+            session: aiohttp.ClientSession,
+            ) -> None:
+        async with session.delete(
+                self._admin_v1_endpoint("/groups/{}".format(id_)),
+                ) as resp:
+            self._raise_error_from_response(resp)
 
     async def logout(self) -> None:
         # this currently only kills the cookie stuff, we may want to invalidate

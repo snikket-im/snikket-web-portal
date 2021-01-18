@@ -6,33 +6,40 @@
 {% endblock %}
 {% block content %}
 <h1>{% trans %}Manage invitations{% endtrans %}</h1>
-<form method="POST">{{ form.csrf_token }}
-<div class="form layout-expanded">
-	<h2 class="form-title">{% trans %}Create new invitation{% endtrans %}</h2>
-	<p class="form-descr weak">{% trans %}Create a new invitation link to invite more users to your Snikket instance by clicking the button below.{% endtrans %}</p>
-	<div class="f-bbox">
-		{%- call form_button("create_link", form.action_create_invite, class="primary") %}{% endcall -%}
-	</div>
-</div>
+{%- include "admin_create_invite_form.html" -%}
 <h2>{% trans %}Pending invitations{% endtrans %}</h2>
 {% if invites %}
-<table>
+<form method="POST">
+{{- form.csrf_token -}}
+<div class="elevated el-2"><table>
 	<col/>
-	<col/>
+	<col class="collapsible"/>
+	<col class="collapsible"/>
 	<col/>
 	<thead>
 		<tr>
-			<th>{% trans %}Created{% endtrans %}</th>
 			<th>{% trans %}Valid until{% endtrans %}</th>
+			<th class="collapsible">{% trans %}Reusable{% endtrans %}</th>
+			<th class="collapsible">{% trans %}Circle{% endtrans %}</th>
 			<th>{% trans %}Actions{% endtrans %}</th>
 		</tr>
 	</thead>
 	<tbody>
 {% for invite in invites %}
 		<tr>
-			<td>{{ invite.created_at | format_date }}</td>
 			<td>{{ (invite.expires - now) | format_timedelta(add_direction=True) }}</td>
-			<td style="white-space: nowrap;">
+			<td class="collapsible">{% if invite.reusable %}{% trans %}Yes{% endtrans %}{% else %}{% trans
+ %}No{% endtrans %}{% endif %}</td>
+			<td class="collapsible">
+				{#- -#}
+				<ul class="inline">
+				{%- for group_id in invite.group_ids -%}
+					<li>{{ circle_map[group_id] | circle_name }}</li>
+				{%- endfor -%}
+				</ul>
+				{#- -#}
+			</td>
+			<td class="nowrap">
 				{%- call action_button("more", url_for(".edit_invite", id_=invite.id_), class="secondary") -%}
 					{% trans %}Show invite details{% endtrans %}
 				{%- endcall -%}
@@ -46,9 +53,8 @@
 		</tr>
 {% endfor %}
 	</tbody>
-</table>
+</table></form></div>
 {% else %}
 	<p>{% trans %}Currently, there are no pending invitations.{% endtrans %}</p>
 {% endif %}
-</form>
 {% endblock %}

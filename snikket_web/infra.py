@@ -8,6 +8,7 @@ from quart import (
 )
 
 import flask_babel
+from flask_babel import _
 
 from . import prosodyclient
 
@@ -20,15 +21,23 @@ babel = flask_babel.Babel()
 
 @babel.localeselector  # type:ignore
 def selected_locale() -> str:
-    return request.accept_languages.best_match(
+    selected = request.accept_languages.best_match(
         current_app.config['LANGUAGES']
     )
+    print(request.accept_languages, current_app.config["LANGUAGES"], selected)
+    return selected
 
 
 def flatten(a: typing.Iterable, levels: int = 1) -> typing.Iterable:
     for i in range(levels):
         a = itertools.chain(*a)
     return a
+
+
+def circle_name(c: typing.Any) -> str:
+    if c.id_ == "default" and c.name == "default":
+        return _("Main")
+    return c.name
 
 
 def init_templating(app: quart.Quart) -> None:
@@ -38,3 +47,4 @@ def init_templating(app: quart.Quart) -> None:
     app.template_filter("format_time")(flask_babel.format_time)
     app.template_filter("format_timedelta")(flask_babel.format_timedelta)
     app.template_filter("flatten")(flatten)
+    app.template_filter("circle_name")(circle_name)

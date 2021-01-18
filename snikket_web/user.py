@@ -43,7 +43,9 @@ class ChangePasswordForm(flask_wtf.FlaskForm):  # type:ignore
 
 
 class LogoutForm(flask_wtf.FlaskForm):  # type:ignore
-    pass
+    action_signout = wtforms.SubmitField(
+        _l("Sign out"),
+    )
 
 
 _ACCESS_MODEL_CHOICES = [
@@ -106,6 +108,9 @@ async def profile() -> typing.Union[str, quart.Response]:
     form = ProfileForm()
     if request.method != "POST":
         user_info = await client.get_user_info()
+        # TODO: find a better way to determine the access model, e.g. by
+        # taking the first access model which is defined in [nickname, avatar,
+        # vcard] or by taking the most open one.-
         try:
             profile_access_model = await client.get_nickname_access_model()
         except quart.exceptions.NotFound:

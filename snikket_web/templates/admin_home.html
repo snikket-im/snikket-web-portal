@@ -7,6 +7,9 @@
 		<h2>{% trans %}Manage users{% endtrans %}</h2>
 		<p>{% trans %}Modify administrative user information or delete users.{% endtrans %}</p>
 	</a>
+	<a class="card" href="{{ url_for('.circles') }}">
+		<h2>{% trans %}Manage circles{% endtrans %}</h2>
+	</a>
 	<a class="card" href="{{ url_for('.invitations') }}">
 		<h2>{% trans %}Manage invitations{% endtrans %}</h2>
 		<p>{% trans %}Create, revoke or view invitations.{% endtrans %}</p>

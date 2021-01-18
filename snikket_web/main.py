@@ -39,6 +39,10 @@ class LoginForm(flask_wtf.FlaskForm):  # type:ignore
         validators=[wtforms.validators.InputRequired()],
     )
 
+    action_signin = wtforms.SubmitField(
+        _l("Sign in"),
+    )
+
 
 @bp.route("/login", methods=["GET", "POST"])
 async def login() -> typing.Union[str, quart.Response]:

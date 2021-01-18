@@ -1,5 +1,5 @@
 {% extends "app.html" %}
-{% from "library.j2" import icon %}
+{% from "library.j2" import standard_button, form_button %}
 {% block head_lead %}
 <title>Snikket Web Portal</title>
 {% endblock %}
@@ -9,11 +9,10 @@
 	<p class="form-desc">{% trans %}Click below to log yourself out of the web portal. This does not affect any other connected devices.{% endtrans %}</p>
 	{{ form.csrf_token }}
 	<div class="f-bbox">
-		{#- -#}
-		<a href="{{ url_for('user.index') }}" class="button secondary">{% call icon("back") %}{% endcall %}{% trans %}Back{% endtrans %}</a>
-		{#- -#}
-		<button type="submit" class="primary">{% call icon("logout") %}{% endcall %}{% trans %}Sign out{% endtrans %}</button>
-		{#- -#}
+		{%- call standard_button("back", url_for("user.index"), class="secondary") -%}
+			{% trans %}Back{% endtrans %}
+		{%- endcall -%}
+		{%- call form_button("logout", form.action_signout, class="primary") %}{% endcall -%}
 	</div>
 </form></div>
 {% endblock %}

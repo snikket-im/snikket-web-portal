@@ -1,0 +1,51 @@
+{% extends "admin_app.html" %}
+{% from "library.j2" import action_button, custom_form_button, form_button, circle_name %}
+{% block content %}
+<h1>{% trans %}Manage circles{% endtrans %}</h1>
+{%- if circles -%}
+<form method="POST" action="{{ url_for(".create_invite") }}">
+{{- invite_form.csrf_token -}}
+<div class="elevated el-2"><table>
+	<thead>
+		<tr>
+			<th>{% trans %}Circle name{% endtrans %}</th>
+			<th class="collapsible">{% trans %}Members{% endtrans %}</th>
+			<th>{% trans %}Actions{% endtrans %}</th>
+		</tr>
+	</thead>
+	<tbody>
+{% for circle in circles %}
+		<tr>
+			<td>{{ circle | circle_name }}</td>
+			<td class="collapsible">{{ circle.members | length }}</td>
+			<td class="nowrap">
+				{%- call custom_form_button("create_link", invite_form.circles.name, circle.id_, slim=True, class="secondary accent") -%}
+					{% trans circle_name=circle.name %}Create invitation to circle {{ circle_name }}{% endtrans %}
+				{%- endcall -%}
+				{%- call action_button("more", url_for(".edit_circle", id_=circle.id_), class="primary") -%}
+					{% trans circle_name=circle.name %}Show details of circle {{ circle_name }}{% endtrans %}
+				{%- endcall -%}
+			</td>
+		</tr>
+{% endfor %}
+	</tbody>
+</table></div></form>
+{%- else -%}
+<div class="box primary">
+	<header>{% trans %}No circles{% endtrans %}</header>
+	<p>{% trans %}Currently, there are no circles on this instance. Use the form below to create one.{% endtrans %}</p>
+</div>
+{%- endif -%}
+<h2>{% trans %}New circle{% endtrans %}</h2>
+<form method="POST" action="{{ url_for(".create_circle") }}"><div class="form layout-expanded">
+{{- create_form.csrf_token -}}
+	<h2 class="form-title">{% trans %}Create circle{% endtrans %}</h2>
+	<div class="f-ebox">
+		{{- create_form.name.label -}}
+		{{- create_form.name -}}
+	</div>
+	<div class="f-bbox">
+		{%- call form_button("create_group", create_form.action_create, class="primary") -%}{%- endcall -%}
+	</div>
+</div></form>
+{% endblock %}

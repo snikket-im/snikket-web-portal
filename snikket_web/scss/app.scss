@@ -805,6 +805,22 @@ table {
 	}
 }
 
+div.elevated {
+	margin: $w-l1;
+	padding: $w-l1;
+	background-color: white;
+}
+
+div.elevated > *:first-child {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+div.elevated > *:last-child {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 .long-url-link {
 	display: block;
 	overflow: hidden;
@@ -820,15 +836,47 @@ table {
 	display: none;
 }
 
+ul.inline {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	> li {
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+	}
+
+	> li:before {
+		content: ', ';
+	}
+
+	> li:first-child:before {
+		content: '';
+	}
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
 
 /* linearisation / responsive stuff */
 
-@media screen and (max-width: $small-screen-threshold) {
-	main > .form.layout-expanded {
+@media screen and (max-width: $medium-screen-threshold) {
+	.form.layout-expanded {
 		margin-left: 0;
 		margin-right: 0;
 	}
 
+	div.elevated {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: $small-screen-threshold) {
 	.form.layout-expanded .box {
 		margin-left: 0;
 		margin-right: 0;

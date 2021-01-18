@@ -1,0 +1,31 @@
+{% from "library.j2" import form_button, render_errors %}
+<form method="POST" action="{{ url_for(".create_invite") }}">
+{{- invite_form.csrf_token -}}
+<div class="form layout-expanded">
+	<h2 class="form-title">{% trans %}Create new invitation{% endtrans %}</h2>
+	<p class="form-descr weak">{% trans %}Create a new invitation link to invite more users to your Snikket instance by clicking the button below.{% endtrans %}</p>
+	<div class="f-ebox">
+		{{ invite_form.reusable }}
+		{{ invite_form.reusable.label }}
+	</div>
+	<div class="f-ebox">
+		{{ invite_form.lifetime.label }}
+		<div class="select-wrap">{{ invite_form.lifetime }}</div>
+	</div>
+	<div class="f-ebox">
+{#
+	NOTE: This is for when/if we ever support multi-group invites.
+	Also see the NOTE in admin.py
+		{{ invite_form.circles.label(class="required") }}
+		{%- for choice in invite_form.circles -%}
+		{{ choice }}{{ choice.label }}
+		{%- endfor -%}
+#}
+		{{- invite_form.circles.label -}}
+		<div class="select-wrap">{{ invite_form.circles }}</div>
+		{%- call render_errors(invite_form.circles) -%}{%- endcall -%}
+	</div>
+	<div class="f-bbox">
+		{%- call form_button("create_link", invite_form.action_create_invite, class="primary") %}{% endcall -%}
+	</div>
+</div></form>

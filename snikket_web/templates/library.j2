@@ -72,3 +72,28 @@
 {% endif -%}
 </a>
 {%- endmacro %}
+
+{% macro render_errors(field, caller=None) -%}
+{%- if field.errors -%}
+<div class="box warning">{#- -#}
+<header>{% trans %}Invalid input{% endtrans %}</header>
+{%- if field.errors | length == 1 -%}
+<p>{{ field.errors[0] }}.</p>
+{%- else -%}
+<ul>
+{%- for error in field.errors -%}
+	<li>{{ error }}</li>
+{%- endfor -%}
+</ul>
+{%- endif -%}
+</div>
+{%- endif -%}
+{%- endmacro %}
+
+{% macro value_or_hint(v, caller=None) %}
+{%- if v is not none -%}
+{{- v -}}
+{%- else -%}
+—
+{%- endif -%}
+{% endmacro %}

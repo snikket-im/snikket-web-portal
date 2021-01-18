@@ -1,0 +1,48 @@
+{% extends "admin_app.html" %}
+{% from "library.j2" import form_button, standard_button, value_or_hint, custom_form_button %}
+{% block content %}
+<h1>{% trans circle_name=(target_circle | circle_name) %}Edit circle {{ circle_name }}{% endtrans %}</h1>
+<div class="form layout-expanded"><form method="POST">
+	<h2 class="form-title">{% trans %}Circle information{% endtrans %}</h2>
+	{{ form.csrf_token }}
+	<div class="f-ebox">
+		{{ form.name.label }}
+		{{ form.name }}
+	</div>
+	<div class="f-bbox">
+		{%- call standard_button("back", url_for(".circles"), class="secondary") -%}
+			{% trans %}Back{% endtrans %}
+		{%- endcall -%}
+		{%- call form_button("done", form.action_save, class="primary") %}{% endcall -%}
+	</div>
+	<h3 class="form-title">{% trans %}Delete circle{% endtrans %}</h3>
+	<p class="form-desc">{% trans %}Deleting a circle does not delete any users in the circle.{% endtrans %}</p>
+	<div class="f-bbox">
+		{%- call form_button("done", form.action_delete, class="secondary danger") %}{% endcall -%}
+	</div>
+</div>
+<h2>{% trans %}Circle members{% endtrans %}</h2>
+<div class="el-2 elevated"><table>
+	<thead>
+		<th>Login name</th>
+		<th class="collapsible">Display name</th>
+		<th>Actions</th>
+	</thead>
+	<tbody>
+{%- for member in circle_members -%}
+		<tr>
+			<td>{{ member.localpart }}</td>
+			<td class="collapsible">{% call value_or_hint(member.display_name) %}{% endcall %}</td>
+			<td class="nowrap">
+				{%- call custom_form_button("remove", form.action_remove_user.name, member.localpart, class="primary danger", slim=True) -%}
+					{% trans username=member.localpart %}Remove user {{ username }} from circle{% endtrans %}
+				{%- endcall -%}
+			</td>
+		</tr>
+{%- endfor -%}
+	</tbody>
+</table></div>
+</form>
+<h3>{% trans %}Invite more members{% endtrans %}</h3>
+{%- include "admin_create_invite_form.html" -%}
+{% endblock %}

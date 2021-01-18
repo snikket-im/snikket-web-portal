@@ -10,12 +10,34 @@
 {{ form.csrf_token }}
 <div class="form layout-expanded">
 	<dl>
-		<dt>{% trans %}Created{% endtrans %}</dt>
-		<dd>{{ invite.created_at | format_date }}</dd>
 		<dt>{% trans %}Valid until{% endtrans %}</dt>
 		<dd>{{ invite.expires | format_date }}</dd>
 		<dt>{% trans %}Link{% endtrans %}</dt>
 		<dd>{% call showuri(invite.landing_page) %}{% endcall %}</dd>
+		<dt>{% trans %}Reusability{% endtrans %}</dt>
+		<dd>{% if invite.reusable %}{% trans %}This invitation link can be used arbitrarily often, until it expires, is revoked or a server-wide user limit is reached.{% endtrans %}{% else %}{% trans %}This invitation link can only be used once and is then depleted.{% endtrans %}{% endif %}</dd>
+		{%- set ngroups = invite.group_ids | length -%}
+		{%- if ngroups > 1 -%}
+		{#- not supported via the web UI, but we should still display it properly -#}
+		<dt>{% trans %}Circles{% endtrans %}</dt>
+		<dd><p>{% trans %}Users joining via this invitation will be added to the following circles:{% endtrans %}</p><ul>
+			{%- for group_id in invite.group_ids -%}
+				<li>{{ circle_map[group_id] | circle_name }}</li>
+			{%- endfor -%}
+		</ul></dd>
+		{%- else -%}
+		<dt>{% trans %}Circle{% endtrans %}</dt>
+		<dd>
+			{%- if ngroups == 1 -%}
+			{%- set group_id = invite.group_ids[0] -%}
+			<a href="{{ url_for(".edit_circle", id_=group_id) }}">{{ circle_map[invite.group_ids[0]] | circle_name }}</a>
+			{%- else -%}
+			<em>{% trans %}The user will not be added to any circle and will have no contacts.{% endtrans %}</em>
+			{%- endif -%}
+		</dd>
+		{%- endif -%}
+		<dt>{% trans %}Created{% endtrans %}</dt>
+		<dd>{{ invite.created_at | format_date }}</dd>
 	</dl>
 	<div class="f-bbox">
 		{%- call form_button("remove_link", form.action_revoke, class="secondary danger") %}{% endcall -%}
