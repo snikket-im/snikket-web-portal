@@ -1,4 +1,5 @@
 {% extends "admin_app.html" %}
+{% from "library.j2" import icon %}
 {% macro value_or_hint(v, caller=None) %}
 {%- if v is not none -%}
 {{- v -}}
@@ -26,7 +27,7 @@
 			<td class="collapsible">{% call value_or_hint(user.email) %}{% endcall %}</td>
 			<td class="collapsible">{% call value_or_hint(user.phone) %}{% endcall %}</td>
 			<td>
-				{#- -#}<a class="button secondary btn-delete" href="{{ url_for(".delete_user", localpart=user.localpart) }}" title="{% trans user_name=user.localpart %}Delete user {{ user_name }}{% endtrans %}"><span class="a11y-only">{% trans user_name=user.localpart %}Delete user {{ user_name }}{% endtrans %}</span></a>
+				{#- -#}<a class="button secondary btn-delete" href="{{ url_for(".delete_user", localpart=user.localpart) }}">{% call icon("remove") %}{% trans user_name=user.localpart %}Delete user {{ user_name }}{% endtrans %}{% endcall %}</a>
 				{#- -#}
 			</td>
 		</tr>

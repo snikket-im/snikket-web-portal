@@ -1,0 +1,17 @@
+action/account_circle:profile
+action/done:done
+action/logout:logout
+action/login:login
+communication/vpn_key:passwd
+content/add_circle_outline:add
+content/add_link:create_link
+content/create:edit
+content/remove_circle_outline:remove
+content/content_copy:copy
+content/link_off:remove_link
+navigation/arrow_back:back
+navigation/arrow_forward:forward
+navigation/cancel:cancel
+navigation/more_vert:more
+social/groups:groups
+social/group_add:create_group

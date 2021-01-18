@@ -1,5 +1,5 @@
 {% extends "admin_app.html" %}
-{% from "library.j2" import showuri %}
+{% from "library.j2" import showuri, form_button, standard_button %}
 {% block head_lead %}
 {{ super() }}
 {% include "copy-snippet.html" %}
@@ -18,11 +18,10 @@
 		<dd>{% call showuri(invite.landing_page) %}{% endcall %}</dd>
 	</dl>
 	<div class="f-bbox">
-		{#- -#}
-		{{ form.action_revoke(class="button secondary danger") }}
-		{#- -#}
-		<a href="{{ url_for(".invitations") }}" class="button primary">{% trans %}Back{% endtrans %}</a>
-		{#- -#}
+		{%- call form_button("remove_link", form.action_revoke, class="secondary danger") %}{% endcall -%}
+		{%- call standard_button("back", url_for(".invitations"), class="primary") %}
+			{% trans %}Back{% endtrans %}
+		{%- endcall %}
 	</div>
 </div>
 </form>

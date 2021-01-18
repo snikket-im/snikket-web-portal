@@ -73,6 +73,50 @@ var copy_to_clipboard = function(el) {
   });
 };
 
+var get_current_icon = function(svg_el) {
+	var use_el = svg_el.firstChild;
+	// don’t ask. I hate js.
+	var tmp = "" + use_el.getAttribute("xlink:href");
+	return tmp.split("#")[1].split("-")[1];
+}
+
+var change_icon = function(svg_el, new_icon) {
+	var use_el = svg_el.firstChild;
+	// don’t ask. I hate js.
+	var tmp = "" + use_el.getAttribute("xlink:href");
+	var base_url = tmp.split("#")[0];
+	use_el.setAttributeNS(
+		"http://www.w3.org/1999/xlink", "xlink:href",
+		base_url + "#icon-" + new_icon
+	);
+}
+
+var copy_to_clipboard_btn = function(el) {
+  var text = el.dataset.cliptext;
+  if (!text) {
+	console.error('copy_to_clipboard used on element without text to copy');
+  }
+  copyTextToClipboard(text, el, function(success) {
+	var existing_result_el = document.getElementById("clipboard-result");
+	if (existing_result_el !== null) {
+	  existing_result_el.parentNode.removeChild(existing_result_el);
+	}
+
+	var icon = "done";
+	var label = "{% trans %}Copied to clipboard{% endtrans %}";
+	if (!success) {
+		icon = "cancel";
+		label = "{% trans %}Copy operation failed{% endtrans %}";
+	}
+	var icon_bak = get_current_icon(el.firstChild);
+	change_icon(el.firstChild, icon);
+	setTimeout(function() {
+		change_icon(el.firstChild, icon_bak);
+	  el.blur();
+	}, 1500);
+  });
+};
+
 window.addEventListener('load', function() {
 	document.body.classList.remove("no-copy");
 });

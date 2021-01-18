@@ -10,16 +10,65 @@
 {%- endif -%}
 {%- endmacro %}
 
-{% macro clipboard_button(label=_("Copy link"), caller=None) -%}
-{%- set text = caller() -%}
-<a title="{% trans content=text %}Copy &quot;{{ content }}&quot; to clipboard{% endtrans %}" aria-label="{% trans content=text %}Copy &quot;{{ content }}&quot; to clipboard{% endtrans %}" class="copy-to-clipboard" onclick="copy_to_clipboard(this); return false;" data-cliptext="{{ text }}" href="#">{{ label }}</a>
-{%- endmacro %}
-
 {% macro showuri(uri, caller=None) %}
 {%- if uri is none -%}
 <em>—</em>
 {%- else -%}
 <div><input type="text" readonly="readonly" value="{{ uri }}"></div>
-<div>{% call clipboard_button() %}{{ uri }}{% endcall %}</div>
+<div>{% call clipboard_button(uri, show_label=True) %}{% trans %}Copy link{% endtrans %}{% endcall %}</div>
 {%- endif -%}
 {% endmacro %}
+
+{% macro icon(name, caller=None) -%}
+{%- set alt = "" if caller is none else caller() -%}
+{%- if alt %}<span class="a11y-only">{{ alt }}</span>{% endif %}<svg class="icon icon-{{ name }}" aria-hidden="true"><use xlink:href="{{ url_for('static', filename='img/icons.svg' )}}#icon-{{ name }}"></use></svg>
+{%- endmacro %}
+
+{% macro standard_button(icon_name, href, caller=None, class=None) -%}
+{%- set label = caller() -%}
+<a href="{{ href }}" class="button {% if class %}{{ class }}{% endif %}" aria-label="{{ a11y }}" title="{{ a11y }}">{% call icon(icon_name) %}{% endcall %}<span>{{ label }}</span></a>
+{%- endmacro %}
+
+{% macro form_button(icon_name, button_obj, caller=None, class=None) -%}
+<button {% if class %}class="{{ class }}"{% endif %} id="{{ button_obj.id }}" name="{{ button_obj.name }}" type="submit" value="{{ button_obj.data or 'true' }}">{% call icon(icon_name) %}{% endcall %}<span>{{ button_obj.label.text }}</span></button>
+{%- endmacro %}
+
+{% macro custom_form_button(icon_name, name, value, caller=None, slim=False, class=None) -%}
+{%- set text = caller() -%}
+<button
+	{% if class %}class="{{ class }}"{% endif %}
+	{% if name %}name="{{ name }}"{% endif %}
+	type="submit"
+	{% if value %} value="{{ value }}"{% endif %}
+{% if slim %}
+	aria-label="{{ text }}"
+	title="{{ text }}"
+{% endif %}
+>
+	{%- call icon(icon_name) %}{% endcall -%}
+	{%- if not slim -%}
+	<span>{{ text }}</span>
+	{%- endif -%}
+</button>
+{%- endmacro %}
+
+{% macro action_button(icon_name, href, caller=None, class=None) -%}
+{%- set a11y = caller() -%}
+<a href="{{ href }}" class="button {% if class %}{{ class }}{% endif %}" aria-label="{{ a11y }}" title="{{ a11y }}">{% call icon(icon_name) %}{% endcall %}</a>
+{%- endmacro %}
+
+{% macro clipboard_button(data, show_label=False, caller=None, class=None) -%}
+{%- set label = caller() -%}
+<a class="button{% if class %} {{ class }}{% endif %}"
+{% if not show_label %}
+	aria-label="{{ label }}"
+	title="{{ label }}"
+{% endif %}
+	data-cliptext="{{ data }}"
+	onclick="copy_to_clipboard_btn(this); return false;">
+	{%- call icon("copy") %}{% endcall -%}
+{%- if show_label %}
+	<span>{{ label }}</span>
+{% endif -%}
+</a>
+{%- endmacro %}

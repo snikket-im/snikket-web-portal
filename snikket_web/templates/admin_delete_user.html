@@ -1,5 +1,5 @@
 {% extends "admin_app.html" %}
-{% from "library.j2" import box %}
+{% from "library.j2" import box, form_button, standard_button %}
 {% block content %}
 <h1>{% trans user_name=target_user.localpart %}Delete user {{ user_name }}{% endtrans %}</h1>
 <div class="form layout-expanded"><form method="POST">
@@ -20,8 +20,8 @@
 	<p>The user and their data will be deleted irrevocably, permanently and immediately upon pushing thre below button. <strong>There is no way back!</strong></p>
 	{% endcall %}
 	<div class="f-bbox">
-		<a class="button secondary" href="{{ url_for('.users') }}">Back</a>
-		{{ form.action_delete(class="primary danger") }}
+		{%- call standard_button("back", url_for(".index"), class="secondary") %}{% trans %}Back{% endtrans %}{% endcall -%}
+		{%- call form_button("remove", form.action_delete, class="primary danger") %}{% endcall -%}
 	</div>
 </form></div>
 {% endblock %}

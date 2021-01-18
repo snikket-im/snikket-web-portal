@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "library.j2" import box %}
+{% from "library.j2" import box, icon %}
 {% set body_id = "login" %}
 {% block head_lead %}
 <title>{{ _("Snikket Login") }}</title>
@@ -28,7 +28,7 @@
 			{{ form.password(placeholder=form.password.label.text) }}
 		</div>
 		<div class="f-bbox">
-			<button type="submit" class="primary">{{ _("Log in") }}</button>
+			<button type="submit" class="primary">{% call icon("login") %}{% endcall %}{{ _("Log in") }}</button>
 		</div>
 	</from>
 </div></main></div>

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "library.j2" import box %}
+{% from "library.j2" import box, icon %}
 {% set body_id = "no-lines" %}
 {% block head_lead %}
 <title>Theme Demo – Snikket Web Portal</title>
@@ -238,5 +238,22 @@
 {% endfor %}
 #}
 </form></div>
+<h2>Icons</h2>
+<p>Icons can be used in a variety of ways. For example in an enumeration:</p>
+<ul>
+	<li>{% call icon("add") %}{% endcall %} Yaycon</li>
+	<li>{% call icon("remove") %}{% endcall %} Naycon</li>
+</ul>
+<p>Or, more importantly, on buttons:</p>
+<div class="form layout-expanded">
+	<h3 class="form-title">Do the thing?</h3>
+	<div class="f-bbox">
+		{#- -#}
+		<a class="button secondary">{% call icon("cancel") %}{% endcall %}No</a>
+		{#- -#}
+		<a class="button primary">{% call icon("done") %}{% endcall %}Yes</a>
+		{#- -#}
+	</div>
+</div>
 
 {% endblock %}

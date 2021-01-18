@@ -1,4 +1,5 @@
 {% extends "app.html" %}
+{% from "library.j2" import standard_button, form_button %}
 {% block head_lead %}
 <title>Snikket Web Portal</title>
 {% endblock %}
@@ -21,7 +22,8 @@
 		{{ form.profile_access_model }}
 	</div>
 	<div class="f-bbox">
-		<a href="{{ url_for('user.index') }}" class="button secondary">{% trans %}Back{% endtrans %}</a><button type="submit" class="primary">{% trans %}Apply{% endtrans %}</button>
+		{%- call standard_button("back", url_for('.index'), class="secondary") %}{% trans %}Back{% endtrans %}{% endcall -%}
+		{%- call form_button("done", form.action_save, class="primary") %}{% endcall -%}
 	</div>
 </form></div>
 {% endblock %}

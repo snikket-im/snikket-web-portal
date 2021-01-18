@@ -1,4 +1,5 @@
 {% extends "app.html" %}
+{% from "library.j2" import icon %}
 {% block head_lead %}
 <title>Snikket Web Portal</title>
 {% endblock %}
@@ -9,9 +10,9 @@
 	{{ form.csrf_token }}
 	<div class="f-bbox">
 		{#- -#}
-		<a href="{{ url_for('user.index') }}" class="button secondary">{% trans %}Back{% endtrans %}</a>
+		<a href="{{ url_for('user.index') }}" class="button secondary">{% call icon("back") %}{% endcall %}{% trans %}Back{% endtrans %}</a>
 		{#- -#}
-		<button type="submit" class="primary">{% trans %}Sign out{% endtrans %}</button>
+		<button type="submit" class="primary">{% call icon("logout") %}{% endcall %}{% trans %}Sign out{% endtrans %}</button>
 		{#- -#}
 	</div>
 </form></div>

@@ -67,6 +67,10 @@ class ProfileForm(flask_wtf.FlaskForm):  # type:ignore
         choices=_ACCESS_MODEL_CHOICES,
     )
 
+    action_save = wtforms.SubmitField(
+        _l("Apply"),
+    )
+
 
 @bp.route("/")
 @client.require_session()

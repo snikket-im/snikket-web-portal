@@ -402,23 +402,20 @@ div.form.layout-expanded {
 }
 
 
+/* icon support */
+
+svg.icon {
+	display: inline-block;
+	vertical-align: middle;
+	width: 1em;
+	height: 1em;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+}
+
+
 /* form buttons */
-
-.btn-edit:before {
-	content: '✎';
-}
-
-.btn-delete:before {
-	content: '🗑';
-}
-
-.btn-link:before {
-	content: '+';
-}
-
-.btn-more:before {
-	content: '…';
-}
 
 input[type="submit"], button, .button {
 	margin: 0 $w-s2;
@@ -429,6 +426,23 @@ input[type="submit"], button, .button {
 	td & {
 		margin: 0 $w-s4;
 		padding: $w-s4 $w-s2;
+	}
+
+	& > svg.icon:first-child {
+		margin-right: $w-s2;
+
+		td & {
+			margin-right: $w-s3;
+		}
+	}
+
+	& > svg.icon:last-child {
+		margin-right: 0;
+		margin-top: -$w-s4;
+
+		td & {
+			margin-right: 0;
+		}
 	}
 }
 
