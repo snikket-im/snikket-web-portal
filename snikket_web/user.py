@@ -111,13 +111,7 @@ async def profile() -> typing.Union[str, quart.Response]:
         # TODO: find a better way to determine the access model, e.g. by
         # taking the first access model which is defined in [nickname, avatar,
         # vcard] or by taking the most open one.-
-        try:
-            profile_access_model = await client.get_nickname_access_model()
-        except quart.exceptions.NotFound:
-            # avatar node does not exist yet, default the access model to
-            # presence
-            # that is what will be set if the user now adds a new avatar.
-            profile_access_model = "presence"
+        profile_access_model = await client.guess_profile_access_model()
         form.nickname.data = user_info.get("nickname", "")
         form.profile_access_model.data = profile_access_model
 

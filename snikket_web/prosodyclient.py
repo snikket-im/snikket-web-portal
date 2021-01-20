@@ -687,6 +687,42 @@ class ProsodyClient:
         )
         xmpputil.extract_iq_reply(metadata_resp)
 
+    @autosession
+    async def guess_profile_access_model(
+            self,
+            *,
+            session: aiohttp.ClientSession,
+            ) -> str:
+        access_models = filter(
+            lambda x: not isinstance(x, quart.exceptions.NotFound),
+            await asyncio.gather(
+                self.get_avatar_access_model(session=session),
+                self.get_nickname_access_model(session=session),
+                self.get_vcard_access_model(session=session),
+                return_exceptions=True,
+            )
+        )
+
+        order = [
+            "open",
+            "presence",
+            "whitelist",
+        ]
+
+        worst_index: typing.Optional[int] = None
+        for model in access_models:
+            if isinstance(model, BaseException):
+                raise model
+            try:
+                index = order.index(model)
+            except ValueError:
+                index = 0
+
+            if worst_index is None or index < worst_index:
+                worst_index = index
+
+        return order[worst_index or 0]
+
     async def change_password(
             self,
             current_password: str,
