@@ -22,7 +22,6 @@ import wtforms
 
 import flask_wtf
 
-import flask_babel
 from flask_babel import lazy_gettext as _l, _
 
 from . import xmpputil, _version
