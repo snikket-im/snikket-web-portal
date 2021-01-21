@@ -32,32 +32,32 @@ msgstr ""
 
 #: snikket_web/main.py:33
 msgid "Address"
-msgstr "Address"
+msgstr ""
 
 #: snikket_web/main.py:38
 msgid "Password"
-msgstr "Password"
+msgstr ""
 
 #: snikket_web/main.py:60
 #, fuzzy
 msgid "Invalid user name or password."
-msgstr "Confirm new password"
+msgstr ""
 
 #: snikket_web/user.py:26
 msgid "Current password"
-msgstr "Current password"
+msgstr ""
 
 #: snikket_web/user.py:31
 msgid "New password"
-msgstr "New password"
+msgstr ""
 
 #: snikket_web/user.py:36
 msgid "Confirm new password"
-msgstr "Confirm new password"
+msgstr ""
 
 #: snikket_web/user.py:40
 msgid "The new passwords must match."
-msgstr "The new passwords must match."
+msgstr ""
 
 #: snikket_web/user.py:50
 msgid "Nobody"
@@ -75,11 +75,11 @@ msgstr ""
 #: snikket_web/templates/admin_delete_user.html:16
 #: snikket_web/templates/admin_users.html:15 snikket_web/user.py:58
 msgid "Display name"
-msgstr "Display name"
+msgstr ""
 
 #: snikket_web/user.py:62
 msgid "Avatar"
-msgstr "Avatar"
+msgstr ""
 
 #: snikket_web/user.py:66
 msgid "Profile visibility"
@@ -87,13 +87,13 @@ msgstr ""
 
 #: snikket_web/user.py:91
 msgid "Incorrect password"
-msgstr "Incorrect password"
+msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:4
 #: snikket_web/templates/admin_users.html:29
-#, fuzzy, python-format
+#, python-format
 msgid "Delete user %(user_name)s"
-msgstr "Welcome home, %(user_name)s."
+msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:6
 #: snikket_web/templates/admin_edit_user.html:28
@@ -113,7 +113,7 @@ msgstr ""
 #: snikket_web/templates/admin_users.html:16
 #, fuzzy
 msgid "Email address"
-msgstr "Address"
+msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:19
 msgid "Danger"
@@ -142,12 +142,12 @@ msgstr ""
 #: snikket_web/templates/user_passwd.html:39
 #: snikket_web/templates/user_profile.html:24
 msgid "Back"
-msgstr "Back"
+msgstr ""
 
 #: snikket_web/templates/admin_edit_user.html:3
 #, fuzzy, python-format
 msgid "Edit user %(user_name)s"
-msgstr "Welcome home, %(user_name)s."
+msgstr ""
 
 #: snikket_web/templates/admin_edit_user.html:5
 msgid "User information"
@@ -156,7 +156,7 @@ msgstr ""
 #: snikket_web/templates/admin_edit_user.html:25
 #, fuzzy
 msgid "Password reset"
-msgstr "Password"
+msgstr ""
 
 #: snikket_web/templates/admin_edit_user.html:26
 msgid ""
@@ -173,7 +173,7 @@ msgstr ""
 #: snikket_web/templates/admin_home.html:4
 #, fuzzy, python-format
 msgid "At your service, %(user_name)s."
-msgstr "Welcome home, %(user_name)s."
+msgstr ""
 
 #: snikket_web/templates/admin_home.html:7
 #: snikket_web/templates/admin_users.html:10
@@ -247,7 +247,7 @@ msgstr ""
 #: snikket_web/templates/app.html:20 snikket_web/templates/login.html:36
 #, python-format
 msgid "A <a href=\"%(about_url)s\">Snikket</a> server"
-msgstr "A <a href=\"%(about_url)s\">Snikket</a> server"
+msgstr ""
 
 #: snikket_web/templates/library.j2:13
 msgid "Copy link"
@@ -260,11 +260,11 @@ msgstr ""
 
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
-msgstr "Snikket Login"
+msgstr ""
 
 #: snikket_web/templates/login.html:14
 msgid "Enter your Snikket address and password to manage your account."
-msgstr "Enter your Snikket address and password to manage your account."
+msgstr ""
 
 #: snikket_web/templates/login.html:18
 msgid "Login failed"
@@ -272,33 +272,31 @@ msgstr ""
 
 #: snikket_web/templates/login.html:31
 msgid "Log in"
-msgstr "Log in"
+msgstr ""
 
 #: snikket_web/templates/user_home.html:3
 msgid "Welcome!"
-msgstr "Welcome!"
+msgstr ""
 
 #: snikket_web/templates/user_home.html:4
 #, python-format
 msgid "Welcome home, %(user_name)s."
-msgstr "Welcome home, %(user_name)s."
+msgstr ""
 
 #: snikket_web/templates/user_home.html:7
 msgid "Update profile"
-msgstr "Update profile"
+msgstr ""
 
 #: snikket_web/templates/user_home.html:8
 msgid ""
 "Change display name, set avatar and configure visibility of your personal"
 " data to others."
 msgstr ""
-"Change display name, set avatar and configure visibility of your personal"
-" data to others."
 
 #: snikket_web/templates/user_home.html:11
 #: snikket_web/templates/user_passwd.html:40
 msgid "Change password"
-msgstr "Change password"
+msgstr ""
 
 #: snikket_web/templates/user_home.html:15
 msgid "Admin dashboard"
@@ -310,11 +308,11 @@ msgstr ""
 
 #: snikket_web/templates/user_home.html:20
 msgid "Log out"
-msgstr "Log out"
+msgstr ""
 
 #: snikket_web/templates/user_home.html:21
 msgid "Exit the Snikket Web Portal, without logging out your other devices."
-msgstr "Exit the Snikket Web Portal, without logging out your other devices."
+msgstr ""
 
 #: snikket_web/templates/user_logout.html:7
 msgid "Sign out of the Snikket Web Portal"
@@ -329,11 +327,11 @@ msgstr ""
 #: snikket_web/templates/user_logout.html:14
 #, fuzzy
 msgid "Sign out"
-msgstr "Log out"
+msgstr ""
 
 #: snikket_web/templates/user_passwd.html:7
 msgid "Change your password"
-msgstr "Change your password"
+msgstr ""
 
 #: snikket_web/templates/user_passwd.html:8
 msgid ""
@@ -341,29 +339,24 @@ msgid ""
 " as the new one. To reduce the chance of typos, we ask for your new "
 "password twice."
 msgstr ""
-"To change your password, you need to provide the current password as well"
-" as the new one. To reduce the chance of typos, we ask for your new "
-"password twice."
 
 #: snikket_web/templates/user_passwd.html:12
 msgid "Password change failed"
-msgstr "Password change failed"
+msgstr ""
 
 #: snikket_web/templates/user_passwd.html:35
 msgid "Warning"
-msgstr "Warning"
+msgstr ""
 
 #: snikket_web/templates/user_passwd.html:36
 msgid ""
 "After changing your password, you will have to enter the new password on "
 "all of your devices."
 msgstr ""
-"After changing your password, you will have to enter the new password on "
-"all of your devices."
 
 #: snikket_web/templates/user_profile.html:7
 msgid "Profile"
-msgstr "Profile"
+msgstr ""
 
 #: snikket_web/templates/user_profile.html:17
 msgid "Visibility"
@@ -377,11 +370,4 @@ msgstr ""
 
 #: snikket_web/templates/user_profile.html:24
 msgid "Apply"
-msgstr "Apply"
-
-#~ msgid "none"
-#~ msgstr ""
-
-#~ msgid "Friends"
-#~ msgstr ""
-
+msgstr ""
