@@ -1,0 +1,13 @@
+{% extends "unauth.html" %}
+{% from "library.j2" import standard_button %}
+{% block content -%}
+<div class="box alert el-3">
+	<header>{{ name }}</header>
+	<p>{{ description }}.</p>
+	<div class="f-bbox">
+		{%- call standard_button("back", url_for("index"), class="primary") -%}
+			{% trans %}Go back to the main page{% endtrans %}
+		{%- endcall -%}
+	</div>
+</div>
+{%- endblock %}

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: jonas@zombofant.net\n"
-"POT-Creation-Date: 2021-01-21 16:54+0100\n"
+"POT-Creation-Date: 2021-01-21 16:55+0100\n"
 "PO-Revision-Date: 2020-03-07 16:32+0100\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language: de\n"
@@ -18,71 +18,71 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: snikket_web/admin.py:54
+#: snikket_web/admin.py:51
 msgid "Delete user permanently"
 msgstr "Benutzer endgültig löschen"
 
-#: snikket_web/admin.py:83
+#: snikket_web/admin.py:78
 msgid "Invite to circle"
 msgstr "In Gemeinschaft einladen"
 
-#: snikket_web/admin.py:89
+#: snikket_web/admin.py:84
 msgid "At least one circle must be selected"
 msgstr "Mindestens eine Gemeinschaft muss ausgewählt sein"
 
-#: snikket_web/admin.py:94
+#: snikket_web/admin.py:89
 msgid "Valid for"
 msgstr "Gültig für"
 
-#: snikket_web/admin.py:96
+#: snikket_web/admin.py:91
 msgid "One hour"
 msgstr "Eine Stunde"
 
-#: snikket_web/admin.py:97
+#: snikket_web/admin.py:92
 msgid "Twelve hours"
 msgstr "Zwölf Stunden"
 
-#: snikket_web/admin.py:98
+#: snikket_web/admin.py:93
 msgid "One day"
 msgstr "Ein Tag"
 
-#: snikket_web/admin.py:99
+#: snikket_web/admin.py:94
 msgid "One week"
 msgstr "Eine Woche"
 
-#: snikket_web/admin.py:100
+#: snikket_web/admin.py:95
 msgid "Four weeks"
 msgstr "Vier Wochen"
 
-#: snikket_web/admin.py:106
+#: snikket_web/admin.py:101
 msgid "Allow multiple uses"
 msgstr "Mehrfach verwendbar"
 
-#: snikket_web/admin.py:110
+#: snikket_web/admin.py:105
 msgid "New invitation link"
 msgstr "Neuer Einladungslink"
 
-#: snikket_web/admin.py:170
+#: snikket_web/admin.py:163
 msgid "Revoke"
 msgstr "Löschen"
 
-#: snikket_web/admin.py:225 snikket_web/admin.py:272
+#: snikket_web/admin.py:214 snikket_web/admin.py:257
 msgid "Name"
 msgstr "Name"
 
-#: snikket_web/admin.py:229 snikket_web/templates/admin_circles.html:42
+#: snikket_web/admin.py:218 snikket_web/templates/admin_circles.html:42
 msgid "Create circle"
 msgstr "Gemeinschaft gründen"
 
-#: snikket_web/admin.py:276 snikket_web/user.py:73
+#: snikket_web/admin.py:261 snikket_web/user.py:68
 msgid "Apply"
 msgstr "Übernehmen"
 
-#: snikket_web/admin.py:280
+#: snikket_web/admin.py:265
 msgid "Delete circle permanently"
 msgstr "Gemeinschaft endgültig löschen"
 
-#: snikket_web/infra.py:39
+#: snikket_web/infra.py:41
 msgid "Main"
 msgstr "Kern"
 
@@ -102,53 +102,53 @@ msgstr "Anmelden"
 msgid "Invalid user name or password."
 msgstr "Benutzername oder Passwort falsch."
 
-#: snikket_web/user.py:26
+#: snikket_web/user.py:21
 msgid "Current password"
 msgstr "Aktuelles Passwort"
 
-#: snikket_web/user.py:31
+#: snikket_web/user.py:26
 msgid "New password"
 msgstr "Neues Passwort"
 
-#: snikket_web/user.py:36
+#: snikket_web/user.py:31
 msgid "Confirm new password"
 msgstr "Neues Passwort (Bestätigung)"
 
-#: snikket_web/user.py:40
+#: snikket_web/user.py:35
 msgid "The new passwords must match."
 msgstr "Die neuen Passwörter müssen übereinstimmen."
 
-#: snikket_web/user.py:47
+#: snikket_web/user.py:42
 msgid "Sign out"
 msgstr "Abmelden"
 
-#: snikket_web/user.py:52
+#: snikket_web/user.py:47
 msgid "Nobody"
 msgstr "Niemand"
 
-#: snikket_web/user.py:53
+#: snikket_web/user.py:48
 msgid "Friends only"
 msgstr "Nur Freunde"
 
-#: snikket_web/user.py:54
+#: snikket_web/user.py:49
 msgid "Everyone"
 msgstr "Jeder"
 
 #: snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/templates/admin_delete_user.html:16
-#: snikket_web/templates/admin_users.html:9 snikket_web/user.py:60
+#: snikket_web/templates/admin_users.html:9 snikket_web/user.py:55
 msgid "Display name"
 msgstr "Anzeigename"
 
-#: snikket_web/user.py:64
+#: snikket_web/user.py:59
 msgid "Avatar"
 msgstr "Bild"
 
-#: snikket_web/user.py:68
+#: snikket_web/user.py:63
 msgid "Profile visibility"
 msgstr "Profilsichtbarkeit"
 
-#: snikket_web/user.py:97
+#: snikket_web/user.py:92
 msgid "Incorrect password"
 msgstr "Ungültiges Passwort"
 
@@ -438,10 +438,22 @@ msgstr "Telefonnummer"
 msgid "Snikket Web Portal"
 msgstr "Snikket Webportal"
 
-#: snikket_web/templates/app.html:20 snikket_web/templates/login.html:36
-#, python-format
-msgid "A <a href=\"%(about_url)s\">Snikket</a> server"
-msgstr "Ein <a href=\"%(about_url)s\">Snikket</a>-Server"
+#: snikket_web/templates/backend_error.html:3
+#: snikket_web/templates/exception.html:3
+#: snikket_web/templates/internal_error.html:3
+msgid "Internal error"
+msgstr "Interner Fehler"
+
+#: snikket_web/templates/backend_error.html:4
+msgid "The web portal was not able to communicate with the backend."
+msgstr "Das Webportal konnte nicht mit dem Backend kommunizieren."
+
+#: snikket_web/templates/backend_error.html:5
+#: snikket_web/templates/internal_error.html:5
+msgid "Please try again later and/or inform your Snikket instance admin."
+msgstr ""
+"Versuche es später noch einmal und/oder informiere den Betreiber deiner "
+"Snikket-Instanz."
 
 #: snikket_web/templates/copy-snippet.html:106
 msgid "Copied to clipboard"
@@ -450,6 +462,14 @@ msgstr "Kopiert"
 #: snikket_web/templates/copy-snippet.html:109
 msgid "Copy operation failed"
 msgstr "Kopieren fehlgeschlagen"
+
+#: snikket_web/templates/generic_http_error.html:9
+msgid "Go back to the main page"
+msgstr "Zurück zur Hauptseite"
+
+#: snikket_web/templates/internal_error.html:4
+msgid "The web portal encountered an internal error."
+msgstr "Das Webportal hatte einen internen Fehler."
 
 #: snikket_web/templates/library.j2:18
 msgid "Copy link"
@@ -470,6 +490,11 @@ msgstr "Gib deine Snikket-Adresse und -Passwort ein um dein Konto zu verwalten."
 #: snikket_web/templates/login.html:18
 msgid "Login failed"
 msgstr "Anmeldung fehlgeschlagen"
+
+#: snikket_web/templates/login.html:36 snikket_web/templates/unauth.html:16
+#, python-format
+msgid "A <a href=\"%(about_url)s\">Snikket</a> server"
+msgstr "Ein <a href=\"%(about_url)s\">Snikket</a>-Server"
 
 #: snikket_web/templates/user_home.html:3
 msgid "Welcome!"

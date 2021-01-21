@@ -1,0 +1,17 @@
+{% extends "unauth.html" %}
+{% block head_lead -%}
+<title>{% trans %}Internal error{% endtrans %}</title>
+{%- endblock %}
+{% block content %}
+<div class="box alert el-3">
+	{%- block box %}{% endblock -%}
+	<pre class="guru-meditation">
+GURU MEDITATION
+{% if traceback %}
+{{- traceback -}}
+{% else %}
+{{- exception_short -}}
+{% endif %}
+error_id={{ error_id }}</pre>
+</div>
+{% endblock %}

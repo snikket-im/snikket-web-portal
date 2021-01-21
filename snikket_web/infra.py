@@ -1,4 +1,6 @@
+import base64
 import itertools
+import secrets
 import typing
 
 import quart.flask_patch  # noqa:F401
@@ -48,3 +50,9 @@ def init_templating(app: quart.Quart) -> None:
     app.template_filter("format_timedelta")(flask_babel.format_timedelta)
     app.template_filter("flatten")(flatten)
     app.template_filter("circle_name")(circle_name)
+
+
+def generate_error_id() -> str:
+    return base64.b32encode(secrets.token_bytes(8)).decode(
+        "ascii"
+    ).rstrip("=")

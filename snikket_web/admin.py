@@ -30,14 +30,12 @@ bp = Blueprint("admin", __name__, url_prefix="/admin")
 @bp.route("/")
 @client.require_admin_session()
 async def index() -> str:
-    user_info = await client.get_user_info()
-    return await render_template("admin_home.html", user_info=user_info)
+    return await render_template("admin_home.html")
 
 
 @bp.route("/users")
 @client.require_admin_session()
 async def users() -> str:
-    user_info = await client.get_user_info()
     users = sorted(
         await client.list_users(),
         key=lambda x: x.localpart
@@ -45,7 +43,6 @@ async def users() -> str:
     return await render_template(
         "admin_users.html",
         users=users,
-        user_info=user_info,
     )
 
 
@@ -58,7 +55,6 @@ class DeleteUserForm(flask_wtf.FlaskForm):  # type:ignore
 @bp.route("/user/<localpart>/delete", methods=["GET", "POST"])
 @client.require_admin_session()
 async def delete_user(localpart: str) -> typing.Union[str, quart.Response]:
-    user_info = await client.get_user_info()
     target_user_info = await client.get_user_by_localpart(localpart)
     form = DeleteUserForm()
     if form.validate_on_submit():
@@ -69,7 +65,6 @@ async def delete_user(localpart: str) -> typing.Union[str, quart.Response]:
     return await render_template(
         "admin_delete_user.html",
         target_user=target_user_info,
-        user_info=user_info,
         form=form,
     )
 
@@ -130,7 +125,6 @@ class InvitePost(flask_wtf.FlaskForm):  # type:ignore
 @bp.route("/invitations", methods=["GET", "POST"])
 @client.require_admin_session()
 async def invitations() -> typing.Union[str, quart.Response]:
-    user_info = await client.get_user_info()
     invites = sorted(
         await client.list_invites(),
         key=lambda x: x.created_at,
@@ -156,7 +150,6 @@ async def invitations() -> typing.Union[str, quart.Response]:
 
     return await render_template(
         "admin_invites.html",
-        user_info=user_info,
         invites=invites,
         invite_form=invite_form,
         now=datetime.utcnow(),
@@ -174,7 +167,6 @@ class InviteForm(flask_wtf.FlaskForm):  # type:ignore
 @bp.route("/invitation/-/new", methods=["POST"])
 @client.require_admin_session()
 async def create_invite() -> typing.Union[str, quart.Response]:
-    user_info = await client.get_user_info()
     form = InvitePost()
     circles = await client.list_groups()
     form.circles.choices = [
@@ -188,14 +180,12 @@ async def create_invite() -> typing.Union[str, quart.Response]:
         )
         return redirect(url_for(".edit_invite", id_=invite.id_))
     return await render_template("admin_create_invite.html",
-                                 user_info=user_info,
                                  invite_form=form)
 
 
 @bp.route("/invitation/<id_>", methods=["GET", "POST"])
 @client.require_admin_session()
 async def edit_invite(id_: str) -> typing.Union[str, quart.Response]:
-    user_info = await client.get_user_info()
     invite_info = await client.get_invite_by_id(id_)
     circles = await client.list_groups()
     circle_map = {
@@ -212,7 +202,6 @@ async def edit_invite(id_: str) -> typing.Union[str, quart.Response]:
 
     return await render_template(
         "admin_edit_invite.html",
-        user_info=user_info,
         invite=invite_info,
         now=datetime.utcnow(),
         form=form,
@@ -233,7 +222,6 @@ class CirclePost(flask_wtf.FlaskForm):  # type:ignore
 @bp.route("/circles")
 @client.require_admin_session()
 async def circles() -> str:
-    user_info = await client.get_user_info()
     circles = sorted(
         await client.list_groups(),
         key=lambda x: x.name
@@ -243,7 +231,6 @@ async def circles() -> str:
     return await render_template(
         "admin_circles.html",
         circles=circles,
-        user_info=user_info,
         invite_form=invite_form,
         create_form=create_form,
     )
@@ -252,7 +239,6 @@ async def circles() -> str:
 @bp.route("/circle/-/new", methods=["POST"])
 @client.require_admin_session()
 async def create_circle() -> typing.Union[str, quart.Response]:
-    user_info = await client.get_user_info()
     create_form = CirclePost()
     if create_form.validate_on_submit():
         circle = await client.create_group(
@@ -262,7 +248,6 @@ async def create_circle() -> typing.Union[str, quart.Response]:
 
     return await render_template(
         "admin_create_circle.html",
-        user_info=user_info,
         create_form=create_form,
     )
 
@@ -287,9 +272,6 @@ class EditCircleForm(flask_wtf.FlaskForm):  # type:ignore
 @client.require_admin_session()
 async def edit_circle(id_: str) -> typing.Union[str, quart.Response]:
     async with client.authenticated_session() as session:
-        user_info = await client.get_user_info(
-            session=session,
-        )
         try:
             circle = await client.get_group_by_id(
                 id_,
@@ -328,7 +310,6 @@ async def edit_circle(id_: str) -> typing.Union[str, quart.Response]:
     return await render_template(
         "admin_edit_circle.html",
         target_circle=circle,
-        user_info=user_info,
         form=form,
         circle_members=circle_members,
         invite_form=invite_form,

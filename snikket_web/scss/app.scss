@@ -914,3 +914,11 @@ ul.inline {
 body.no-copy .copy-to-clipboard {
 	display: none !important;
 }
+
+
+/* magic */
+
+pre.guru-meditation {
+	width: 100%;
+	overflow-x: scroll;
+}

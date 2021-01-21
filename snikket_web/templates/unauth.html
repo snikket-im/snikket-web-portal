@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% from "library.j2" import box, form_button %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/app.css') }}">
+{{ super() }}
+{% endblock %}
+{% block body %}
+<div id="topbar" class="{% block topbar_classes %}{% endblock %}">
+	<header><a href="{{ url_for('.index') }}"><span>{{ config["SNIKKET_DOMAIN"] }}</span></a></header>
+	{% block topbar_left %}{% endblock %}
+	<div class="filler"></div>
+	{% block topbar_right %}{% endblock %}
+</div>
+<div id="mwrap"><main>{% block content %}{% endblock %}</main></div>
+<footer>
+	<ul><li>{% trans about_url=url_for('main.about') %}A <a href="{{ about_url }}">Snikket</a> server{% endtrans %}</li></ul>
+</footer>
+{% endblock %}

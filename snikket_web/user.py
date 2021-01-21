@@ -16,11 +16,6 @@ from .infra import client
 bp = Blueprint('user', __name__)
 
 
-@bp.context_processor
-async def proc() -> typing.Mapping[str, typing.Any]:
-    return {"user_info": await client.get_user_info()}
-
-
 class ChangePasswordForm(flask_wtf.FlaskForm):  # type:ignore
     current_password = wtforms.PasswordField(
         _l("Current password"),
@@ -146,6 +141,6 @@ async def logout() -> typing.Union[quart.Response, str]:
     form = LogoutForm()
     if form.validate_on_submit():
         await client.logout()
-        return redirect(url_for("main.home"))
+        return redirect(url_for("main.index"))
 
     return await render_template("user_logout.html", form=form)
