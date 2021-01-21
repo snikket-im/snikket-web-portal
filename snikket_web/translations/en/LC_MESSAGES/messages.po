@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-21 16:56+0100\n"
+"POT-Creation-Date: 2021-01-21 17:00+0100\n"
 "PO-Revision-Date: 2020-03-07 16:50+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -86,19 +86,19 @@ msgstr ""
 msgid "Main"
 msgstr ""
 
-#: snikket_web/main.py:33
+#: snikket_web/main.py:37
 msgid "Address"
 msgstr ""
 
-#: snikket_web/main.py:38
+#: snikket_web/main.py:42
 msgid "Password"
 msgstr ""
 
-#: snikket_web/main.py:43
+#: snikket_web/main.py:47
 msgid "Sign in"
 msgstr ""
 
-#: snikket_web/main.py:64
+#: snikket_web/main.py:73
 #, fuzzy
 msgid "Invalid user name or password."
 msgstr ""
@@ -152,6 +152,62 @@ msgstr ""
 
 #: snikket_web/user.py:92
 msgid "Incorrect password"
+msgstr ""
+
+#: snikket_web/templates/about.html:9
+msgid "About Snikket"
+msgstr ""
+
+#: snikket_web/templates/about.html:10
+#, python-format
+msgid ""
+"To learn more about Snikket, visit the <a "
+"href=\"%(snikket_url)s\">Snikket website</a>."
+msgstr ""
+
+#: snikket_web/templates/about.html:11
+msgid "About this Server"
+msgstr ""
+
+#: snikket_web/templates/about.html:12
+#, python-format
+msgid "This is the Snikket server <em>%(domain)s</em>."
+msgstr ""
+
+#: snikket_web/templates/about.html:13
+msgid "Licenses"
+msgstr ""
+
+#: snikket_web/templates/about.html:14
+#, python-format
+msgid ""
+"The web portal software is licensed under the terms of the <a "
+"href=\"%(agpl_url)s\">Affero GNU General Public License, version 3.0 or "
+"later</a>. The full terms of the license can be reviewed using the "
+"aforementioned link."
+msgstr ""
+
+#: snikket_web/templates/about.html:15
+#, python-format
+msgid ""
+"The source code of the web portal can be downloaded and viewed in <a "
+"href=\"%(source_url)s\">its GitHub repository</a>."
+msgstr ""
+
+#: snikket_web/templates/about.html:16
+#, python-format
+msgid ""
+"The icons used in the web portal are <a href=\"%(source_url)s\">Google’s "
+"Material Icons</a>, made available by Google under the terms of the <a "
+"href=\"%(apache20_url)s\">Apache 2.0 License</a>."
+msgstr ""
+
+#: snikket_web/templates/about.html:17
+msgid "Software Versions"
+msgstr ""
+
+#: snikket_web/templates/about.html:26
+msgid "Back to the main page"
 msgstr ""
 
 #: snikket_web/templates/admin_circles.html:4
@@ -503,7 +559,7 @@ msgstr ""
 msgid "Login failed"
 msgstr ""
 
-#: snikket_web/templates/login.html:36 snikket_web/templates/unauth.html:16
+#: snikket_web/templates/login.html:36 snikket_web/templates/unauth.html:14
 #, python-format
 msgid "A <a href=\"%(about_url)s\">Snikket</a> server"
 msgstr ""
@@ -597,5 +653,15 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Log in"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This server software is licensed under"
+#~ " the terms of the <a "
+#~ "href=\"%(agpl_url)s\">Affero GNU General Public "
+#~ "License, version 3.0 or later</a>. The"
+#~ " full terms of the license can "
+#~ "be reviewed using the aforementioned "
+#~ "link."
 #~ msgstr ""
 

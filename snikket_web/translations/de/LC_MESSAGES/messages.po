@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: jonas@zombofant.net\n"
-"POT-Creation-Date: 2021-01-21 16:56+0100\n"
+"POT-Creation-Date: 2021-01-21 17:00+0100\n"
 "PO-Revision-Date: 2020-03-07 16:32+0100\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language: de\n"
@@ -86,19 +86,19 @@ msgstr "Gemeinschaft endgültig löschen"
 msgid "Main"
 msgstr "Kern"
 
-#: snikket_web/main.py:33
+#: snikket_web/main.py:37
 msgid "Address"
 msgstr "Adresse"
 
-#: snikket_web/main.py:38
+#: snikket_web/main.py:42
 msgid "Password"
 msgstr "Passwort"
 
-#: snikket_web/main.py:43
+#: snikket_web/main.py:47
 msgid "Sign in"
 msgstr "Anmelden"
 
-#: snikket_web/main.py:64
+#: snikket_web/main.py:73
 msgid "Invalid user name or password."
 msgstr "Benutzername oder Passwort falsch."
 
@@ -151,6 +151,75 @@ msgstr "Profilsichtbarkeit"
 #: snikket_web/user.py:92
 msgid "Incorrect password"
 msgstr "Ungültiges Passwort"
+
+#: snikket_web/templates/about.html:9
+msgid "About Snikket"
+msgstr "Über Snikket"
+
+#: snikket_web/templates/about.html:10
+#, python-format
+msgid ""
+"To learn more about Snikket, visit the <a "
+"href=\"%(snikket_url)s\">Snikket website</a>."
+msgstr ""
+"Um mehr über Snikket zu erfahren, kannst du die <a "
+"href=\"%(snikket_url)s\">Snikket website</a> besuchen"
+
+#: snikket_web/templates/about.html:11
+msgid "About this Server"
+msgstr "Über diesen Server"
+
+#: snikket_web/templates/about.html:12
+#, python-format
+msgid "This is the Snikket server <em>%(domain)s</em>."
+msgstr "Dies ist der Snikket-Server <em>%(domain)s</em>."
+
+#: snikket_web/templates/about.html:13
+msgid "Licenses"
+msgstr "Lizenzen"
+
+#: snikket_web/templates/about.html:14
+#, python-format
+msgid ""
+"The web portal software is licensed under the terms of the <a "
+"href=\"%(agpl_url)s\">Affero GNU General Public License, version 3.0 or "
+"later</a>. The full terms of the license can be reviewed using the "
+"aforementioned link."
+msgstr ""
+"Die Webportal-Software wird unter den Bedingungen der <a "
+"href=\"%(agpl_url)s\">Affero GNU General Public License, Version 3.0 oder"
+" neuer</a> zur Verfügung gestellt. Die gesamten Nutzungsbedingungen "
+"können unter dem vorherstehenden Link eingesehen werden."
+
+#: snikket_web/templates/about.html:15
+#, python-format
+msgid ""
+"The source code of the web portal can be downloaded and viewed in <a "
+"href=\"%(source_url)s\">its GitHub repository</a>."
+msgstr ""
+"Der Quelltext des Webportals kann aus dem <a href=\"%(source_url)s"
+"\">GitHub-Repository der Software</a> heruntergeladen und eingesehen "
+"werden."
+
+#: snikket_web/templates/about.html:16
+#, python-format
+msgid ""
+"The icons used in the web portal are <a href=\"%(source_url)s\">Google’s "
+"Material Icons</a>, made available by Google under the terms of the <a "
+"href=\"%(apache20_url)s\">Apache 2.0 License</a>."
+msgstr ""
+"Die im Webportal verwendeten Icons sind <a "
+"href=\"%(source_url)s\">Google’s Material Icons</a>, welche von Google "
+"unter den Bedingungen der <a href=\"%(apache20_url)s\">Apache 2.0 "
+"Lizenz</a> bereitgestellt werden."
+
+#: snikket_web/templates/about.html:17
+msgid "Software Versions"
+msgstr "Softwareversionen"
+
+#: snikket_web/templates/about.html:26
+msgid "Back to the main page"
+msgstr "Zurück zur Hauptseite"
 
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:11
@@ -518,7 +587,7 @@ msgstr "Gib deine Snikket-Adresse und -Passwort ein um dein Konto zu verwalten."
 msgid "Login failed"
 msgstr "Anmeldung fehlgeschlagen"
 
-#: snikket_web/templates/login.html:36 snikket_web/templates/unauth.html:16
+#: snikket_web/templates/login.html:36 snikket_web/templates/unauth.html:14
 #, python-format
 msgid "A <a href=\"%(about_url)s\">Snikket</a> server"
 msgstr "Ein <a href=\"%(about_url)s\">Snikket</a>-Server"

@@ -1,26 +1,31 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>About Snikket</title>
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
-	</head>
-	<body>
-		<main>
-			<div class="box el-2">
-				<h1>About Snikket</h1>
-				<p>To learn more about Snikket, visit the <a href="https://snikket.org">Snikket website</a>.</p>
-				<h2>About this Server</h2>
-				<p>This is the Snikket server <em>{{ config["SNIKKET_DOMAIN"] }}</em>.</p>
-				<h3>Software Versions</h3>
-				<pre>Snikket Server (unknown)
-Snikket Web Portal ({{ version }})</pre>
-				{# <h3>Partial configuration</h3>
-				<pre>SNIKKET_DOMAIN = {{ config.get("SNIKKET_DOMAIN") | repr }}
-AVATAR_CACHE_TTL = {{ config.get("AVATAR_CACHE_TTL") | repr }}
-SECRET_KEY = &lt;hidden&gt;
-PROSODY_ENDPOINT = &lt;hidden&gt;</pre> #}
-				<p><a href="{{ url_for('.home') }}" class="button primary">Back to main page</a></pa>
-			</div>
-		</main>
-	</body>
-</html>
+{% extends "base.html" %}
+{% from "library.j2" import standard_button %}
+{% block head_lead %}
+<title>About Snikket</title>
+{% endblock %}
+{% block body %}
+<main>
+	<div class="box el-2">
+		<h1>{% trans %}About Snikket{% endtrans %}</h1>
+		<p>{% trans snikket_url="https://snikket.org" %}To learn more about Snikket, visit the <a href="{{ snikket_url}}">Snikket website</a>.{% endtrans %}</p>
+		<h2>{% trans %}About this Server{% endtrans %}</h2>
+		<p>{% trans domain=config["SNIKKET_DOMAIN"] %}This is the Snikket server <em>{{ domain }}</em>.{% endtrans %}</p>
+		<h3>{% trans %}Licenses{% endtrans %}</h3>
+		<p>{% trans agpl_url="https://www.gnu.org/licenses/agpl.html" %}The web portal software is licensed under the terms of the <a href="{{ agpl_url }}">Affero GNU General Public License, version 3.0 or later</a>. The full terms of the license can be reviewed using the aforementioned link.{% endtrans %}</p>
+		<p>{% trans source_url="https://github.com/snikket-im/snikket-web-portal/" %}The source code of the web portal can be downloaded and viewed in <a href="{{ source_url }}">its GitHub repository</a>.{% endtrans %}</p>
+		<p>{% trans source_url="https://material.io/resources/icons/", apache20_url="https://www.apache.org/licenses/LICENSE-2.0.txt" %}The icons used in the web portal are <a href="{{ source_url }}">Google’s Material Icons</a>, made available by Google under the terms of the <a href="{{ apache20_url }}">Apache 2.0 License</a>.{% endtrans %}</p>
+		<h3>{% trans %}Software Versions{% endtrans %}</h3>
+		<pre>Snikket Server (unknown)
+Snikket Web Portal ({{ version }})
+{%- if extra_versions -%}
+{% for name, version in extra_versions.items() %}
+{{ name }} ({{ version }}){% endfor %}
+{%- endif -%}</pre>
+		<p>
+			{%- call standard_button("back", url_for("index"), class="primary") -%}
+				{% trans %}Back to the main page{% endtrans %}
+			{%- endcall -%}
+		</p>
+	</div>
+</main>
+{% endblock %}

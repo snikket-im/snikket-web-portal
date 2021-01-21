@@ -4,6 +4,8 @@ import typing
 
 from datetime import datetime, timedelta
 
+import aiohttp
+
 import quart
 import quart.flask_patch
 from quart import (
@@ -15,10 +17,12 @@ from quart import (
     Response,
 )
 
+import babel
 import wtforms
 
 import flask_wtf
 
+import flask_babel
 from flask_babel import lazy_gettext as _l, _
 
 from . import xmpputil, _version
@@ -42,6 +46,11 @@ class LoginForm(flask_wtf.FlaskForm):  # type:ignore
     action_signin = wtforms.SubmitField(
         _l("Sign in"),
     )
+
+
+@bp.route("/-")
+async def index() -> quart.Response:
+    return redirect(url_for("index"))
 
 
 @bp.route("/login", methods=["GET", "POST"])
@@ -69,17 +78,21 @@ async def login() -> typing.Union[str, quart.Response]:
     return await render_template("login.html", form=form)
 
 
-@bp.route("/")
-async def home() -> quart.Response:
-    if client.has_session:
-        return redirect(url_for('user.index'))
-
-    return redirect(url_for('.login'))
-
-
 @bp.route("/meta/about.html")
 async def about() -> str:
-    return await render_template("about.html", version=_version.version)
+    extra_versions = {}
+    if current_app.debug:
+        extra_versions["Quart"] = quart.__version__
+        extra_versions["aiohttp"] = aiohttp.__version__
+        extra_versions["babel"] = babel.__version__
+        extra_versions["wtforms"] = wtforms.__version__
+        extra_versions["flask-wtf"] = flask_wtf.__version__
+
+    return await render_template(
+        "about.html",
+        version=_version.version,
+        extra_versions=extra_versions,
+    )
 
 
 @bp.route("/meta/demo.html")
