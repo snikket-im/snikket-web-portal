@@ -34,7 +34,12 @@
 				{#- -#}
 				<ul class="inline">
 				{%- for group_id in invite.group_ids -%}
+					{%- set circle_info = circle_map[group_id] -%}
+					{%- if circle_info -%}
 					<li>{{ circle_map[group_id] | circle_name }}</li>
+					{%- else -%}
+					<li><em>{% trans %}deleted{% endtrans %}</em></li>
+					{%- endif -%}
 				{%- endfor -%}
 				</ul>
 				{#- -#}

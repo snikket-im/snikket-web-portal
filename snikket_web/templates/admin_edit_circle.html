@@ -2,9 +2,10 @@
 {% from "library.j2" import form_button, standard_button, value_or_hint, custom_form_button %}
 {% block content %}
 <h1>{% trans circle_name=(target_circle | circle_name) %}Edit circle {{ circle_name }}{% endtrans %}</h1>
-<div class="form layout-expanded"><form method="POST">
+<form method="POST">
+{{- form.csrf_token -}}
+<div class="form layout-expanded">
 	<h2 class="form-title">{% trans %}Circle information{% endtrans %}</h2>
-	{{ form.csrf_token }}
 	<div class="f-ebox">
 		{{ form.name.label }}
 		{{ form.name }}
@@ -22,6 +23,7 @@
 	</div>
 </div>
 <h2>{% trans %}Circle members{% endtrans %}</h2>
+{%- if circle_members -%}
 <div class="el-2 elevated"><table>
 	<thead>
 		<th>Login name</th>
@@ -42,7 +44,27 @@
 {%- endfor -%}
 	</tbody>
 </table></div>
-</form>
+{%- else -%}
+<p>{% trans %}This circle currently has no members.{% endtrans %}</p>
+{%- endif -%}
 <h3>{% trans %}Invite more members{% endtrans %}</h3>
+{%- if form.user_to_add.choices -%}
+<div class="form layout-expanded">
+	<h4 class="form-title">{% trans %}Add existing user{% endtrans %}</h4>
+	<div class="f-ebox">
+		{{- form.user_to_add.label -}}
+		<div class="select-wrap">{{ form.user_to_add }}</div>
+	</div>
+	<div class="f-bbox">
+		{%- call form_button("add", form.action_add_user, class="primary") %}{% endcall -%}
+	</div>
+</div>
+{%- else -%}
+<div class="box hint el-2">
+	<header>{% trans %}No users left{% endtrans %}</header>
+	<p>{% trans %}All users on this instance are already in this circle.{% endtrans %}</p>
+</div>
+{%- endif -%}
+</form>
 {%- include "admin_create_invite_form.html" -%}
 {% endblock %}

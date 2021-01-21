@@ -108,7 +108,7 @@ class AdminGroupInfo:
         return cls(
             id_=data["id"],
             name=data["name"],
-            members=data["members"],
+            members=data.get("members", []),
         )
 
 
@@ -924,7 +924,47 @@ class ProsodyClient:
             new_name: typing.Optional[str] = None,
             session: aiohttp.ClientSession,
             ) -> AdminGroupInfo:
-        pass
+        payload = {}
+        if new_name is not None:
+            payload["name"] = new_name
+
+        async with session.put(
+                self._admin_v1_endpoint(
+                    "/groups/{}".format(id_)
+                ),
+                json=payload,
+                ) as resp:
+            self._raise_error_from_response(resp)
+
+    @autosession
+    async def add_group_member(
+            self,
+            id_: str,
+            localpart: str,
+            *,
+            session: aiohttp.ClientSession,
+            ) -> None:
+        async with session.put(
+                self._admin_v1_endpoint(
+                    "/groups/{}/members/{}".format(id_, localpart)
+                ),
+                ) as resp:
+            self._raise_error_from_response(resp)
+
+    @autosession
+    async def remove_group_member(
+            self,
+            id_: str,
+            localpart: str,
+            *,
+            session: aiohttp.ClientSession,
+            ) -> None:
+        async with session.delete(
+                self._admin_v1_endpoint(
+                    "/groups/{}/members/{}".format(id_, localpart)
+                ),
+                ) as resp:
+            self._raise_error_from_response(resp)
 
     @autosession
     async def delete_group(

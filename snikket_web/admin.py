@@ -272,6 +272,12 @@ async def create_circle() -> typing.Union[str, quart.Response]:
 class EditCircleForm(flask_wtf.FlaskForm):  # type:ignore
     name = wtforms.StringField(
         _l("Name"),
+        validators=[wtforms.validators.InputRequired()],
+    )
+
+    user_to_add = wtforms.SelectField(
+        _l("Select user"),
+        validate_choice=False,
     )
 
     action_save = wtforms.SubmitField(
@@ -283,6 +289,10 @@ class EditCircleForm(flask_wtf.FlaskForm):  # type:ignore
     )
 
     action_remove_user = wtforms.StringField()
+
+    action_add_user = wtforms.SubmitField(
+        _l("Add user")
+    )
 
 
 @bp.route("/circle/<id_>", methods=["GET", "POST"])
@@ -307,22 +317,51 @@ async def edit_circle(id_: str) -> typing.Union[str, quart.Response]:
             for localpart in sorted(circle.members)
         ))
 
+        users = await client.list_users()
+
     form = EditCircleForm()
+    form.user_to_add.choices = sorted(
+        (
+            (u.localpart, u.localpart)
+            for u in users
+            if u.localpart not in circle.members
+        ),
+        key=lambda x: x[1]
+    )
+    valid_users = [x[0] for x in form.user_to_add.choices]
+
     invite_form = InvitePost()
     await invite_form.init_choices()
     invite_form.circles.data = [id_]
 
     if request.method != "POST":
         form.name.data = circle.name
+
     if form.validate_on_submit():
         if form.action_save.data:
-            # TODO: post update
-            pass
+            await client.update_group(
+                id_,
+                new_name=form.name.data,
+            )
         elif form.action_delete.data:
             await client.delete_group(id_)
             return redirect(url_for(".circles"))
+        elif form.action_add_user.data:
+            if form.user_to_add.data in valid_users:
+                print("is valid")
+                await client.add_group_member(
+                    id_,
+                    form.user_to_add.data,
+                )
+        elif form.action_remove_user.data:
+            await client.remove_group_member(
+                id_,
+                form.action_remove_user.data,
+            )
 
         return redirect(url_for(".edit_circle", id_=id_))
+    else:
+        print(form.errors)
 
     return await render_template(
         "admin_edit_circle.html",

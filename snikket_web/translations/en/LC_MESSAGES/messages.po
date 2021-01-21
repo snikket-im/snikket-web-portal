@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-21 17:00+0100\n"
+"POT-Creation-Date: 2021-01-21 17:39+0100\n"
 "PO-Revision-Date: 2020-03-07 16:50+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -74,12 +74,20 @@ msgstr ""
 msgid "Create circle"
 msgstr ""
 
-#: snikket_web/admin.py:278 snikket_web/user.py:68
+#: snikket_web/admin.py:279
+msgid "Select user"
+msgstr ""
+
+#: snikket_web/admin.py:284 snikket_web/user.py:68
 msgid "Apply"
 msgstr ""
 
-#: snikket_web/admin.py:282
+#: snikket_web/admin.py:288
 msgid "Delete circle permanently"
+msgstr ""
+
+#: snikket_web/admin.py:294
+msgid "Add user"
 msgstr ""
 
 #: snikket_web/infra.py:40
@@ -320,7 +328,7 @@ msgid "Danger"
 msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:23
-#: snikket_web/templates/admin_edit_circle.html:14
+#: snikket_web/templates/admin_edit_circle.html:15
 #: snikket_web/templates/admin_edit_invite.html:45
 #: snikket_web/templates/user_logout.html:13
 #: snikket_web/templates/user_passwd.html:40
@@ -333,29 +341,45 @@ msgstr ""
 msgid "Edit circle %(circle_name)s"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:6
+#: snikket_web/templates/admin_edit_circle.html:8
 msgid "Circle information"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:18
+#: snikket_web/templates/admin_edit_circle.html:19
 msgid "Delete circle"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:19
+#: snikket_web/templates/admin_edit_circle.html:20
 msgid "Deleting a circle does not delete any users in the circle."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:24
+#: snikket_web/templates/admin_edit_circle.html:25
 msgid "Circle members"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:38
+#: snikket_web/templates/admin_edit_circle.html:40
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:46
+#: snikket_web/templates/admin_edit_circle.html:48
+msgid "This circle currently has no members."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:50
 msgid "Invite more members"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:53
+msgid "Add existing user"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:64
+msgid "No users left"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:65
+msgid "All users on this instance are already in this circle."
 msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:8
@@ -479,19 +503,23 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: snikket_web/templates/admin_invites.html:44
+#: snikket_web/templates/admin_invites.html:41
+msgid "deleted"
+msgstr ""
+
+#: snikket_web/templates/admin_invites.html:49
 msgid "Show invite details"
 msgstr ""
 
-#: snikket_web/templates/admin_invites.html:47
+#: snikket_web/templates/admin_invites.html:52
 msgid "Copy invite link to clipboard"
 msgstr ""
 
-#: snikket_web/templates/admin_invites.html:50
+#: snikket_web/templates/admin_invites.html:55
 msgid "Delete invitation"
 msgstr ""
 
-#: snikket_web/templates/admin_invites.html:58
+#: snikket_web/templates/admin_invites.html:63
 msgid "Currently, there are no pending invitations."
 msgstr ""
 
@@ -663,5 +691,8 @@ msgstr ""
 #~ " full terms of the license can "
 #~ "be reviewed using the aforementioned "
 #~ "link."
+#~ msgstr ""
+
+#~ msgid "All users on this instance have already been added."
 #~ msgstr ""
 

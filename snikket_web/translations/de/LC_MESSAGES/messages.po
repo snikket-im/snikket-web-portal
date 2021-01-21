@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: jonas@zombofant.net\n"
-"POT-Creation-Date: 2021-01-21 17:00+0100\n"
+"POT-Creation-Date: 2021-01-21 17:39+0100\n"
 "PO-Revision-Date: 2020-03-07 16:32+0100\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language: de\n"
@@ -74,13 +74,21 @@ msgstr "Name"
 msgid "Create circle"
 msgstr "Gemeinschaft gründen"
 
-#: snikket_web/admin.py:278 snikket_web/user.py:68
+#: snikket_web/admin.py:279
+msgid "Select user"
+msgstr "Benutzer auswählen"
+
+#: snikket_web/admin.py:284 snikket_web/user.py:68
 msgid "Apply"
 msgstr "Übernehmen"
 
-#: snikket_web/admin.py:282
+#: snikket_web/admin.py:288
 msgid "Delete circle permanently"
 msgstr "Gemeinschaft endgültig löschen"
+
+#: snikket_web/admin.py:294
+msgid "Add user"
+msgstr "Benutzer hinzufügen"
 
 #: snikket_web/infra.py:40
 msgid "Main"
@@ -334,7 +342,7 @@ msgid "Danger"
 msgstr "Gefahr"
 
 #: snikket_web/templates/admin_delete_user.html:23
-#: snikket_web/templates/admin_edit_circle.html:14
+#: snikket_web/templates/admin_edit_circle.html:15
 #: snikket_web/templates/admin_edit_invite.html:45
 #: snikket_web/templates/user_logout.html:13
 #: snikket_web/templates/user_passwd.html:40
@@ -347,32 +355,48 @@ msgstr "Zurück"
 msgid "Edit circle %(circle_name)s"
 msgstr "Gemeinschaft %(circle_name)s bearbeiten"
 
-#: snikket_web/templates/admin_edit_circle.html:6
+#: snikket_web/templates/admin_edit_circle.html:8
 msgid "Circle information"
 msgstr "Gemeinschaftsinformationen"
 
-#: snikket_web/templates/admin_edit_circle.html:18
+#: snikket_web/templates/admin_edit_circle.html:19
 msgid "Delete circle"
 msgstr "Gemeinschaft löschen"
 
-#: snikket_web/templates/admin_edit_circle.html:19
+#: snikket_web/templates/admin_edit_circle.html:20
 msgid "Deleting a circle does not delete any users in the circle."
 msgstr ""
 "Wenn eine Gemeinschaft gelöscht wird, werden die Benutzer die zu dieser "
 "Gemeinschaft gehören nicht gelöscht."
 
-#: snikket_web/templates/admin_edit_circle.html:24
+#: snikket_web/templates/admin_edit_circle.html:25
 msgid "Circle members"
 msgstr "Mitglieder der Gemeinschaft"
 
-#: snikket_web/templates/admin_edit_circle.html:38
+#: snikket_web/templates/admin_edit_circle.html:40
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Benutzer %(username)s aus der Gemeinschaft entfernen"
 
-#: snikket_web/templates/admin_edit_circle.html:46
+#: snikket_web/templates/admin_edit_circle.html:48
+msgid "This circle currently has no members."
+msgstr "Diese Gemeinschaft hat derzeit keine Mitglieder."
+
+#: snikket_web/templates/admin_edit_circle.html:50
 msgid "Invite more members"
 msgstr "Mehr Mitglieder einladen"
+
+#: snikket_web/templates/admin_edit_circle.html:53
+msgid "Add existing user"
+msgstr "Bestehenden Benuzter hinzufügen"
+
+#: snikket_web/templates/admin_edit_circle.html:64
+msgid "No users left"
+msgstr "Keine Benutzer übrig"
+
+#: snikket_web/templates/admin_edit_circle.html:65
+msgid "All users on this instance are already in this circle."
+msgstr "Alle Benutzer dieser Instanz sind bereits in dieser Gemeinschaft."
 
 #: snikket_web/templates/admin_edit_invite.html:8
 msgid "View invitation"
@@ -505,19 +529,23 @@ msgstr "Ja"
 msgid "No"
 msgstr "Nein"
 
-#: snikket_web/templates/admin_invites.html:44
+#: snikket_web/templates/admin_invites.html:41
+msgid "deleted"
+msgstr "gelöscht"
+
+#: snikket_web/templates/admin_invites.html:49
 msgid "Show invite details"
 msgstr "Einladungsdetails anzeigen"
 
-#: snikket_web/templates/admin_invites.html:47
+#: snikket_web/templates/admin_invites.html:52
 msgid "Copy invite link to clipboard"
 msgstr "Einladungslink kopieren"
 
-#: snikket_web/templates/admin_invites.html:50
+#: snikket_web/templates/admin_invites.html:55
 msgid "Delete invitation"
 msgstr "Einladung löschen"
 
-#: snikket_web/templates/admin_invites.html:58
+#: snikket_web/templates/admin_invites.html:63
 msgid "Currently, there are no pending invitations."
 msgstr "Derzeit gibt es keine ausstehenden Einladungen."
 
