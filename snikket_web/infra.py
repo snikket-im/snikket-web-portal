@@ -26,7 +26,6 @@ def selected_locale() -> str:
     selected = request.accept_languages.best_match(
         current_app.config['LANGUAGES']
     )
-    print(request.accept_languages, current_app.config["LANGUAGES"], selected)
     return selected
 
 
