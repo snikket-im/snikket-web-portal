@@ -23,6 +23,9 @@
 				{%- call action_button("remove", url_for(".delete_user", localpart=user.localpart), class="secondary") -%}
 					{% trans user_name=user.localpart %}Delete user {{ user_name }}{% endtrans %}
 				{%- endcall -%}
+				{%- call action_button("bug_report", url_for(".debug_user", localpart=user.localpart), class="secondary") -%}
+					{% trans user_name=user.localpart %}Show debug information for {{ user_name }}{% endtrans %}
+				{%- endcall -%}
 			</td>
 		</tr>
 {% endfor %}

@@ -1,0 +1,23 @@
+{% extends "app.html" %}
+{% from "library.j2" import clipboard_button %}
+{% block head_lead %}
+{{ super() }}
+{% include "copy-snippet.html" %}
+{% endblock %}
+{% block content %}
+<h1>{% trans user_name=target_user.localpart %}Debug information for {{ user_name }}{% endtrans %}</h1>
+<h2></h2>
+<div class="box warning">
+	<header>{% trans %}Warning{% endtrans %}</header>
+	<p>{% trans %}The below dump may contain sensitive information.{% endtrans %}</p>
+</div>
+<div class="elevated box">
+	<header>{% trans %}Raw debug dump{% endtrans %}</header>
+	<p>{% call clipboard_button(debug_dump, show_label=True, class="primary") -%}
+		{% trans %}Copy complete output{% endtrans %}
+	{%- endcall %}</p>
+	<pre class="guru-meditation">
+{{ debug_dump }}
+</pre
+</div>
+{% endblock %}

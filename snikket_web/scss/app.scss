@@ -813,11 +813,9 @@ div.elevated {
 
 div.elevated > *:first-child {
 	margin-top: 0;
-	margin-bottom: 0;
 }
 
 div.elevated > *:last-child {
-	margin-top: 0;
 	margin-bottom: 0;
 }
 
@@ -870,7 +868,7 @@ ul.inline {
 		margin-right: 0;
 	}
 
-	div.elevated {
+	div.elevated, main > div.box {
 		margin-left: 0;
 		margin-right: 0;
 	}

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-21 16:55+0100\n"
+"POT-Creation-Date: 2021-01-21 16:56+0100\n"
 "PO-Revision-Date: 2020-03-07 16:50+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,71 +18,71 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: snikket_web/admin.py:51
+#: snikket_web/admin.py:52
 msgid "Delete user permanently"
 msgstr ""
 
-#: snikket_web/admin.py:78
+#: snikket_web/admin.py:95
 msgid "Invite to circle"
 msgstr ""
 
-#: snikket_web/admin.py:84
+#: snikket_web/admin.py:101
 msgid "At least one circle must be selected"
 msgstr ""
 
-#: snikket_web/admin.py:89
+#: snikket_web/admin.py:106
 msgid "Valid for"
 msgstr ""
 
-#: snikket_web/admin.py:91
+#: snikket_web/admin.py:108
 msgid "One hour"
 msgstr ""
 
-#: snikket_web/admin.py:92
+#: snikket_web/admin.py:109
 msgid "Twelve hours"
 msgstr ""
 
-#: snikket_web/admin.py:93
+#: snikket_web/admin.py:110
 msgid "One day"
 msgstr ""
 
-#: snikket_web/admin.py:94
+#: snikket_web/admin.py:111
 msgid "One week"
 msgstr ""
 
-#: snikket_web/admin.py:95
+#: snikket_web/admin.py:112
 msgid "Four weeks"
 msgstr ""
 
-#: snikket_web/admin.py:101
+#: snikket_web/admin.py:118
 msgid "Allow multiple uses"
 msgstr ""
 
-#: snikket_web/admin.py:105
+#: snikket_web/admin.py:122
 msgid "New invitation link"
 msgstr ""
 
-#: snikket_web/admin.py:163
+#: snikket_web/admin.py:180
 msgid "Revoke"
 msgstr ""
 
-#: snikket_web/admin.py:214 snikket_web/admin.py:257
+#: snikket_web/admin.py:231 snikket_web/admin.py:274
 msgid "Name"
 msgstr ""
 
-#: snikket_web/admin.py:218 snikket_web/templates/admin_circles.html:42
+#: snikket_web/admin.py:235 snikket_web/templates/admin_circles.html:42
 msgid "Create circle"
 msgstr ""
 
-#: snikket_web/admin.py:261 snikket_web/user.py:68
+#: snikket_web/admin.py:278 snikket_web/user.py:68
 msgid "Apply"
 msgstr ""
 
-#: snikket_web/admin.py:265
+#: snikket_web/admin.py:282
 msgid "Delete circle permanently"
 msgstr ""
 
-#: snikket_web/infra.py:41
+#: snikket_web/infra.py:40
 msgid "Main"
 msgstr ""
 
@@ -209,6 +209,28 @@ msgstr ""
 msgid ""
 "Create a new invitation link to invite more users to your Snikket "
 "instance by clicking the button below."
+msgstr ""
+
+#: snikket_web/templates/admin_debug_user.html:8
+#, fuzzy, python-format
+msgid "Debug information for %(user_name)s"
+msgstr "Welcome home, %(user_name)s."
+
+#: snikket_web/templates/admin_debug_user.html:11
+#: snikket_web/templates/user_passwd.html:36
+msgid "Warning"
+msgstr "Warning"
+
+#: snikket_web/templates/admin_debug_user.html:12
+msgid "The below dump may contain sensitive information."
+msgstr ""
+
+#: snikket_web/templates/admin_debug_user.html:15
+msgid "Raw debug dump"
+msgstr ""
+
+#: snikket_web/templates/admin_debug_user.html:17
+msgid "Copy complete output"
 msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:4
@@ -421,6 +443,11 @@ msgstr ""
 msgid "Phone number"
 msgstr ""
 
+#: snikket_web/templates/admin_users.html:27
+#, fuzzy, python-format
+msgid "Show debug information for %(user_name)s"
+msgstr "Welcome home, %(user_name)s."
+
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
 msgstr ""
@@ -544,10 +571,6 @@ msgstr ""
 
 #: snikket_web/templates/user_passwd.html:13
 msgid "Password change failed"
-msgstr ""
-
-#: snikket_web/templates/user_passwd.html:36
-msgid "Warning"
 msgstr ""
 
 #: snikket_web/templates/user_passwd.html:37

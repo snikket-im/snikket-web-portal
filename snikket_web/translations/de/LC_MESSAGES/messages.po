@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: jonas@zombofant.net\n"
-"POT-Creation-Date: 2021-01-21 16:55+0100\n"
+"POT-Creation-Date: 2021-01-21 16:56+0100\n"
 "PO-Revision-Date: 2020-03-07 16:32+0100\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language: de\n"
@@ -18,71 +18,71 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: snikket_web/admin.py:51
+#: snikket_web/admin.py:52
 msgid "Delete user permanently"
 msgstr "Benutzer endgültig löschen"
 
-#: snikket_web/admin.py:78
+#: snikket_web/admin.py:95
 msgid "Invite to circle"
 msgstr "In Gemeinschaft einladen"
 
-#: snikket_web/admin.py:84
+#: snikket_web/admin.py:101
 msgid "At least one circle must be selected"
 msgstr "Mindestens eine Gemeinschaft muss ausgewählt sein"
 
-#: snikket_web/admin.py:89
+#: snikket_web/admin.py:106
 msgid "Valid for"
 msgstr "Gültig für"
 
-#: snikket_web/admin.py:91
+#: snikket_web/admin.py:108
 msgid "One hour"
 msgstr "Eine Stunde"
 
-#: snikket_web/admin.py:92
+#: snikket_web/admin.py:109
 msgid "Twelve hours"
 msgstr "Zwölf Stunden"
 
-#: snikket_web/admin.py:93
+#: snikket_web/admin.py:110
 msgid "One day"
 msgstr "Ein Tag"
 
-#: snikket_web/admin.py:94
+#: snikket_web/admin.py:111
 msgid "One week"
 msgstr "Eine Woche"
 
-#: snikket_web/admin.py:95
+#: snikket_web/admin.py:112
 msgid "Four weeks"
 msgstr "Vier Wochen"
 
-#: snikket_web/admin.py:101
+#: snikket_web/admin.py:118
 msgid "Allow multiple uses"
 msgstr "Mehrfach verwendbar"
 
-#: snikket_web/admin.py:105
+#: snikket_web/admin.py:122
 msgid "New invitation link"
 msgstr "Neuer Einladungslink"
 
-#: snikket_web/admin.py:163
+#: snikket_web/admin.py:180
 msgid "Revoke"
 msgstr "Löschen"
 
-#: snikket_web/admin.py:214 snikket_web/admin.py:257
+#: snikket_web/admin.py:231 snikket_web/admin.py:274
 msgid "Name"
 msgstr "Name"
 
-#: snikket_web/admin.py:218 snikket_web/templates/admin_circles.html:42
+#: snikket_web/admin.py:235 snikket_web/templates/admin_circles.html:42
 msgid "Create circle"
 msgstr "Gemeinschaft gründen"
 
-#: snikket_web/admin.py:261 snikket_web/user.py:68
+#: snikket_web/admin.py:278 snikket_web/user.py:68
 msgid "Apply"
 msgstr "Übernehmen"
 
-#: snikket_web/admin.py:265
+#: snikket_web/admin.py:282
 msgid "Delete circle permanently"
 msgstr "Gemeinschaft endgültig löschen"
 
-#: snikket_web/infra.py:41
+#: snikket_web/infra.py:40
 msgid "Main"
 msgstr "Kern"
 
@@ -212,6 +212,28 @@ msgid ""
 msgstr ""
 "Erzeuge eine neue Einladung um mehr Benutzer auf deine Snikket-Instanz "
 "einzuladen indem du den folgenden Button klickst."
+
+#: snikket_web/templates/admin_debug_user.html:8
+#, python-format
+msgid "Debug information for %(user_name)s"
+msgstr "Debugging-Informationen für %(user_name)s"
+
+#: snikket_web/templates/admin_debug_user.html:11
+#: snikket_web/templates/user_passwd.html:36
+msgid "Warning"
+msgstr "Warnung"
+
+#: snikket_web/templates/admin_debug_user.html:12
+msgid "The below dump may contain sensitive information."
+msgstr "Die untenstehende Ausgabe könnte persönliche Informationen enthalten."
+
+#: snikket_web/templates/admin_debug_user.html:15
+msgid "Raw debug dump"
+msgstr "Rohe Debug-Ausgabe"
+
+#: snikket_web/templates/admin_debug_user.html:17
+msgid "Copy complete output"
+msgstr "Komplette Ausgabe kopieren"
 
 #: snikket_web/templates/admin_delete_user.html:4
 #: snikket_web/templates/admin_users.html:24
@@ -434,6 +456,11 @@ msgstr "Derzeit gibt es keine ausstehenden Einladungen."
 msgid "Phone number"
 msgstr "Telefonnummer"
 
+#: snikket_web/templates/admin_users.html:27
+#, python-format
+msgid "Show debug information for %(user_name)s"
+msgstr "Debugging-Informationen für %(user_name)s anzeigen"
+
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
 msgstr "Snikket Webportal"
@@ -569,10 +596,6 @@ msgstr ""
 #: snikket_web/templates/user_passwd.html:13
 msgid "Password change failed"
 msgstr "Passwortänderung fehlgeschlagen"
-
-#: snikket_web/templates/user_passwd.html:36
-msgid "Warning"
-msgstr "Warnung"
 
 #: snikket_web/templates/user_passwd.html:37
 msgid ""

@@ -1,4 +1,5 @@
 import asyncio
+import json
 import typing
 
 from datetime import datetime
@@ -66,6 +67,22 @@ async def delete_user(localpart: str) -> typing.Union[str, quart.Response]:
         "admin_delete_user.html",
         target_user=target_user_info,
         form=form,
+    )
+
+
+@bp.route("/user/<localpart>/debug")
+@client.require_admin_session()
+async def debug_user(localpart: str) -> typing.Union[str, quart.Response]:
+    target_user_info = await client.get_user_by_localpart(localpart)
+    debug_info = json.dumps(
+        await client.get_user_debug_info(localpart),
+        indent=2,
+        sort_keys=True,
+    )
+    return await render_template(
+        "admin_debug_user.html",
+        target_user=target_user_info,
+        debug_dump=debug_info,
     )
 
 

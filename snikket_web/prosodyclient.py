@@ -792,6 +792,19 @@ class ProsodyClient:
             return AdminUserInfo.from_api_response(await resp.json())
 
     @autosession
+    async def get_user_debug_info(
+            self,
+            localpart: str,
+            *,
+            session: aiohttp.ClientSession,
+            ) -> AdminUserInfo:
+        async with session.get(
+                self._admin_v1_endpoint("/users/{}/debug".format(localpart)),
+                ) as resp:
+            self._raise_error_from_response(resp)
+            return await resp.json()
+
+    @autosession
     async def delete_user_by_localpart(
             self,
             localpart: str,

@@ -1,4 +1,5 @@
 action/account_circle:profile
+action/bug_report:bug_report
 action/done:done
 action/logout:logout
 action/login:login
