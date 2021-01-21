@@ -923,7 +923,7 @@ class ProsodyClient:
             *,
             new_name: typing.Optional[str] = None,
             session: aiohttp.ClientSession,
-            ) -> AdminGroupInfo:
+            ) -> None:
         payload = {}
         if new_name is not None:
             payload["name"] = new_name
