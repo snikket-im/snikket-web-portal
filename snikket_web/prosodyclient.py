@@ -246,6 +246,10 @@ class ProsodyClient:
         return "{}/oauth2/token".format(self._endpoint_base)
 
     @property
+    def _revoke_endpoint(self) -> str:
+        return "{}/oauth2/revoke".format(self._endpoint_base)
+
+    @property
     def _rest_endpoint(self) -> str:
         return "{}/rest".format(self._endpoint_base)
 
@@ -978,10 +982,24 @@ class ProsodyClient:
                 ) as resp:
             self._raise_error_from_response(resp)
 
+    @autosession
+    async def revoke_token(
+            self,
+            *,
+            session: aiohttp.ClientSession) -> None:
+        request = aiohttp.FormData()
+        request.add_field("token", self.session_token)
+        request.add_field("token_type_hint", "access_token")
+
+        async with session.post(self._revoke_endpoint, data=request) as resp:
+            resp.raise_for_status()
+
     async def logout(self) -> None:
-        # this currently only kills the cookie stuff, we may want to invalidate
-        # the token on the server side, toos
-        # See-Also: https://issues.prosody.im/1503
+        try:
+            await self.revoke_token()
+        except aiohttp.ClientError:
+            self.logger.warn("failed to revoke token!",
+                             exc_info=True)
         http_session.pop(self.SESSION_TOKEN, None)
         http_session.pop(self.SESSION_ADDRESS, None)
         http_session.pop(self.SESSION_CACHED_SCOPE, None)
