@@ -920,3 +920,203 @@ pre.guru-meditation {
 	width: 100%;
 	overflow-x: scroll;
 }
+
+
+/* dark mode */
+
+@media (prefers-color-scheme: dark) {
+	a {
+		color: $primary-600;
+	}
+	a:visited {
+		color: $primary-800;
+	}
+
+	body {
+		color: $gray-900;
+		background-color: $gray-100;
+	}
+
+	@for $n from 1 through 6 {
+		h#{$n} {
+			color: $primary-900;
+		}
+	}
+
+	div#topbar {
+		background-color: black;
+		color: $primary-900;
+
+		> header {
+			color: white;
+		}
+	}
+
+	body > footer {
+		background-color: $gray-200;
+		color: $gray-800;
+	}
+
+	div.form {
+		background-color: black;
+	}
+
+	div.form.layout-expanded {
+		label {
+			color: $gray-900;
+		}
+
+		textarea {
+			background-color: black;
+		}
+
+		@each $type in $text-entry-inputs {
+			input[type=$type] {
+				background-color: black;
+			}
+
+			input[type="radio"]:checked + label:before {
+				box-shadow: inset 0 0 0 $w-s3 black;
+			}
+		}
+	}
+
+	.box {
+		background-color: black;
+		border-color: $gray-800;
+		color: $gray-900;
+
+		@each $type, $colour in $box-types {
+			&.#{$type} {
+				border-color: nth(map-get($colours, $colour), 9);
+				background-color: nth(map-get($colours, $colour), 2);
+				color: nth(map-get($colours, $colour), 9);
+			}
+		}
+
+		> header {
+			color: white;
+		}
+	}
+
+	div.welcome-cards {
+		& > .card {
+			background: black;
+		}
+
+		& > a.card {
+			& > h2 {
+				color: $primary-800;
+			}
+		}
+	}
+
+	div.elevated {
+		background-color: black;
+	}
+
+	input[type="submit"], button, .button {
+		&.primary {
+			background: linear-gradient(0deg, $primary-300, $primary-400);
+
+			&:hover, &:focus {
+				background: linear-gradient(0deg, $primary-400, $primary-500);
+			}
+
+			&:active {
+				background: $primary-300;
+			}
+
+			&.accent {
+				background: linear-gradient(0deg, $accent-300, $accent-400);
+
+				&:hover, &:focus {
+					background: linear-gradient(0deg, $accent-400, $accent-500);
+				}
+
+				&:active {
+					background: $accent-300;
+				}
+			}
+
+			&.danger {
+				background: linear-gradient(0deg, $alert-300, $alert-400);
+
+				&:hover, &:focus {
+					background: linear-gradient(0deg, $alert-400, $alert-500);
+				}
+
+				&:active {
+					background: $alert-300;
+				}
+			}
+		}
+
+		&.secondary {
+			background: linear-gradient(0deg, $gray-400, $gray-500);
+			color: $gray-900;
+
+			&:hover, &:focus {
+				background: linear-gradient(0deg, $gray-500, $gray-600);
+				color: white;
+			}
+
+			&:active {
+				background: $gray-400;
+				color: $gray-900;
+			}
+
+			&.accent {
+				background: linear-gradient(0deg, $accent-200, $accent-300);
+				color: $accent-800;
+
+				&:hover, &:focus {
+					background: linear-gradient(0deg, $accent-300, $accent-400);
+				}
+
+				&:active {
+					background: $accent-200;
+				}
+			}
+
+			&.danger {
+				background: linear-gradient(0deg, $alert-200, $alert-300);
+				color: $alert-800;
+
+				&:hover, &:focus {
+					background: linear-gradient(0deg, $alert-300, $alert-400);
+				}
+
+				&:active {
+					background: $alert-200;
+				}
+			}
+		}
+
+		&.tertiary, .tertiary {
+			color: $gray-800;
+
+			&:hover {
+				background-color: $gray-200;
+				border-color: $gray-100;
+				color: white;
+			}
+
+			&.accent:hover {
+				background-color: $accent-200;
+				border-color: $accent-100;
+				color: white;
+			}
+
+			&.danger:hover {
+				background-color: $alert-200;
+				border-color: $alert-100;
+				color: white;
+			}
+		}
+	}
+
+	p.form-desc.weak {
+		color: $gray-700;
+	}
+}

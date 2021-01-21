@@ -130,3 +130,18 @@ body:target #enable-lines {
 		margin: 0;
 	}
 }
+
+
+/* dark mode */
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background:
+			url('../img/line.png'),
+			$gray-100;
+	}
+
+	body:target {
+		background: $gray-100;
+	}
+}
