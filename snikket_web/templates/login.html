@@ -10,7 +10,7 @@
 {% endblock %}
 {% block body %}
 <div id="mwrap"><main><div class="form layout-expanded">
-	<h1 class="form-title">{{ config["SNIKKET_DOMAIN"] }}</h1>
+	<h1 class="form-title">{{ config["SITE_NAME"] }}</h1>
 	<p class="form-desc">{{ _("Enter your Snikket address and password to manage your account.") }}</p>
 	<form method="POST" action="{{ url_for('.login') }}" name="login">
 		{{ form.csrf_token }}

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: jonas@zombofant.net\n"
-"POT-Creation-Date: 2021-01-21 17:39+0100\n"
+"POT-Creation-Date: 2021-01-22 15:27+0100\n"
 "PO-Revision-Date: 2020-03-07 16:32+0100\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language: de\n"
@@ -94,19 +94,19 @@ msgstr "Benutzer hinzufügen"
 msgid "Main"
 msgstr "Kern"
 
-#: snikket_web/main.py:37
+#: snikket_web/main.py:36
 msgid "Address"
 msgstr "Adresse"
 
-#: snikket_web/main.py:42
+#: snikket_web/main.py:41
 msgid "Password"
 msgstr "Passwort"
 
-#: snikket_web/main.py:47
+#: snikket_web/main.py:46
 msgid "Sign in"
 msgstr "Anmelden"
 
-#: snikket_web/main.py:73
+#: snikket_web/main.py:72
 msgid "Invalid user name or password."
 msgstr "Benutzername oder Passwort falsch."
 
@@ -178,9 +178,9 @@ msgid "About this Server"
 msgstr "Über diesen Server"
 
 #: snikket_web/templates/about.html:12
-#, python-format
-msgid "This is the Snikket server <em>%(domain)s</em>."
-msgstr "Dies ist der Snikket-Server <em>%(domain)s</em>."
+#, fuzzy, python-format
+msgid "This is the Snikket server <em>%(site_name)s</em>."
+msgstr "Dies ist der Snikket-Server <em>%(site_name)s</em>."
 
 #: snikket_web/templates/about.html:13
 msgid "Licenses"
