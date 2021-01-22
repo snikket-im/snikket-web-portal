@@ -178,7 +178,7 @@ msgid "About this Server"
 msgstr "Über diesen Server"
 
 #: snikket_web/templates/about.html:12
-#, fuzzy, python-format
+#,  python-format
 msgid "This is the Snikket server <em>%(site_name)s</em>."
 msgstr "Dies ist der Snikket-Server <em>%(site_name)s</em>."
 
