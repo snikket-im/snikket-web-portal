@@ -18,75 +18,75 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: snikket_web/admin.py:52
+#: snikket_web/admin.py:60
 msgid "Delete user permanently"
 msgstr "Benutzer endgültig löschen"
 
-#: snikket_web/admin.py:95
+#: snikket_web/admin.py:129
 msgid "Invite to circle"
 msgstr "In Gemeinschaft einladen"
 
-#: snikket_web/admin.py:101
+#: snikket_web/admin.py:135
 msgid "At least one circle must be selected"
 msgstr "Mindestens eine Gemeinschaft muss ausgewählt sein"
 
-#: snikket_web/admin.py:106
+#: snikket_web/admin.py:140
 msgid "Valid for"
 msgstr "Gültig für"
 
-#: snikket_web/admin.py:108
+#: snikket_web/admin.py:142
 msgid "One hour"
 msgstr "Eine Stunde"
 
-#: snikket_web/admin.py:109
+#: snikket_web/admin.py:143
 msgid "Twelve hours"
 msgstr "Zwölf Stunden"
 
-#: snikket_web/admin.py:110
+#: snikket_web/admin.py:144
 msgid "One day"
 msgstr "Ein Tag"
 
-#: snikket_web/admin.py:111
+#: snikket_web/admin.py:145
 msgid "One week"
 msgstr "Eine Woche"
 
-#: snikket_web/admin.py:112
+#: snikket_web/admin.py:146
 msgid "Four weeks"
 msgstr "Vier Wochen"
 
-#: snikket_web/admin.py:118
+#: snikket_web/admin.py:152
 msgid "Allow multiple uses"
 msgstr "Mehrfach verwendbar"
 
-#: snikket_web/admin.py:122
+#: snikket_web/admin.py:156
 msgid "New invitation link"
 msgstr "Neuer Einladungslink"
 
-#: snikket_web/admin.py:180
+#: snikket_web/admin.py:214
 msgid "Revoke"
 msgstr "Löschen"
 
-#: snikket_web/admin.py:231 snikket_web/admin.py:274
+#: snikket_web/admin.py:265 snikket_web/admin.py:308
 msgid "Name"
 msgstr "Name"
 
-#: snikket_web/admin.py:235 snikket_web/templates/admin_circles.html:42
+#: snikket_web/admin.py:269 snikket_web/templates/admin_circles.html:42
 msgid "Create circle"
 msgstr "Gemeinschaft gründen"
 
-#: snikket_web/admin.py:279
+#: snikket_web/admin.py:313
 msgid "Select user"
 msgstr "Benutzer auswählen"
 
-#: snikket_web/admin.py:284 snikket_web/user.py:68
+#: snikket_web/admin.py:318 snikket_web/user.py:68
 msgid "Apply"
 msgstr "Übernehmen"
 
-#: snikket_web/admin.py:288
+#: snikket_web/admin.py:322
 msgid "Delete circle permanently"
 msgstr "Gemeinschaft endgültig löschen"
 
-#: snikket_web/admin.py:294
+#: snikket_web/admin.py:328
 msgid "Add user"
 msgstr "Benutzer hinzufügen"
 
@@ -144,7 +144,7 @@ msgstr "Jeder"
 
 #: snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/templates/admin_delete_user.html:16
-#: snikket_web/templates/admin_users.html:9 snikket_web/user.py:55
+#: snikket_web/templates/admin_users.html:11 snikket_web/user.py:55
 msgid "Display name"
 msgstr "Anzeigename"
 
@@ -244,7 +244,7 @@ msgstr "Mitglieder"
 
 #: snikket_web/templates/admin_circles.html:13
 #: snikket_web/templates/admin_invites.html:24
-#: snikket_web/templates/admin_users.html:12
+#: snikket_web/templates/admin_users.html:14
 msgid "Actions"
 msgstr "Aktionen"
 
@@ -313,7 +313,7 @@ msgid "Copy complete output"
 msgstr "Komplette Ausgabe kopieren"
 
 #: snikket_web/templates/admin_delete_user.html:4
-#: snikket_web/templates/admin_users.html:24
+#: snikket_web/templates/admin_users.html:26
 #, python-format
 msgid "Delete user %(user_name)s"
 msgstr "Benutzer %(user_name)s löschen"
@@ -328,12 +328,12 @@ msgid "Are you sure you want to delete the following user?"
 msgstr "Bist du sicher dass du den folgenden Benutzer löschen willst?"
 
 #: snikket_web/templates/admin_delete_user.html:10
-#: snikket_web/templates/admin_users.html:8
+#: snikket_web/templates/admin_users.html:10
 msgid "Login name"
 msgstr "Anmeldename"
 
 #: snikket_web/templates/admin_delete_user.html:14
-#: snikket_web/templates/admin_users.html:10
+#: snikket_web/templates/admin_users.html:12
 msgid "Email address"
 msgstr "E-Mail-Adresse"
 
@@ -344,6 +344,7 @@ msgstr "Gefahr"
 #: snikket_web/templates/admin_delete_user.html:23
 #: snikket_web/templates/admin_edit_circle.html:15
 #: snikket_web/templates/admin_edit_invite.html:45
+#: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
 #: snikket_web/templates/user_passwd.html:40
 #: snikket_web/templates/user_profile.html:25
@@ -404,10 +405,12 @@ msgstr "Einladung anzeigen"
 
 #: snikket_web/templates/admin_edit_invite.html:13
 #: snikket_web/templates/admin_invites.html:21
+#: snikket_web/templates/admin_reset_user_password.html:15
 msgid "Valid until"
 msgstr "Gültig bis"
 
 #: snikket_web/templates/admin_edit_invite.html:15
+#: snikket_web/templates/admin_reset_user_password.html:17
 msgid "Link"
 msgstr "Link"
 
@@ -462,6 +465,7 @@ msgid "User information"
 msgstr "Benutzerinformationen"
 
 #: snikket_web/templates/admin_edit_user.html:25
+#: snikket_web/templates/admin_reset_user_password.html:8
 msgid "Password reset"
 msgstr "Passwort zurücksetzen"
 
@@ -549,14 +553,36 @@ msgstr "Einladung löschen"
 msgid "Currently, there are no pending invitations."
 msgstr "Derzeit gibt es keine ausstehenden Einladungen."
 
-#: snikket_web/templates/admin_users.html:11
+#: snikket_web/templates/admin_reset_user_password.html:12
+#, python-format
+msgid "Password reset link for %(user_name)s"
+msgstr "Link zum Zurücksetzen des Passwortes für %(user_name)s"
+
+#: snikket_web/templates/admin_reset_user_password.html:13
+msgid ""
+"The following link will allow the user to reset their password on their "
+"device, once."
+msgstr ""
+"Der folgende Link erlaubt es, das Passwort für das Nutzerkonto einmalig "
+"zurückzusetzen."
+
+#: snikket_web/templates/admin_reset_user_password.html:22
+msgid "Destroy link"
+msgstr "Link zerstören"
+
+#: snikket_web/templates/admin_users.html:13
 msgid "Phone number"
 msgstr "Telefonnummer"
 
-#: snikket_web/templates/admin_users.html:27
+#: snikket_web/templates/admin_users.html:29
 #, python-format
 msgid "Show debug information for %(user_name)s"
 msgstr "Debugging-Informationen für %(user_name)s anzeigen"
+
+#: snikket_web/templates/admin_users.html:32
+#, python-format
+msgid "Create password reset link for %(user_name)s"
+msgstr "Benutzer %(user_name)s löschen"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"

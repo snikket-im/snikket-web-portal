@@ -17,6 +17,7 @@ from quart import (
     redirect,
     url_for,
     request,
+    abort,
 )
 import flask_wtf
 
@@ -34,6 +35,11 @@ async def index() -> str:
     return await render_template("admin_home.html")
 
 
+class PasswordResetLinkPost(flask_wtf.FlaskForm):  # type: ignore
+    action_create = wtforms.StringField()
+    action_revoke = wtforms.StringField()
+
+
 @bp.route("/users")
 @client.require_admin_session()
 async def users() -> str:
@@ -41,9 +47,11 @@ async def users() -> str:
         await client.list_users(),
         key=lambda x: x.localpart
     )
+    reset_form = PasswordResetLinkPost()
     return await render_template(
         "admin_users.html",
         users=users,
+        reset_form=reset_form,
     )
 
 
@@ -86,6 +94,32 @@ async def debug_user(localpart: str) -> typing.Union[str, quart.Response]:
     )
 
 
+@bp.route("/users/password-reset/-", methods=["POST"])
+@client.require_admin_session()
+async def create_password_reset_link() -> typing.Union[str, quart.Response]:
+    form = PasswordResetLinkPost()
+    if not form.validate_on_submit():
+        abort(400)
+
+    if form.action_create.data:
+        localpart = form.action_create.data
+        target_user_info = await client.get_user_by_localpart(localpart)
+        reset_link = await client.create_password_reset_invite(
+            localpart=localpart,
+            ttl=86400,
+        )
+    elif form.action_revoke.data:
+        await client.delete_invite(form.action_revoke.data)
+        return redirect(url_for(".users"))
+
+    return await render_template(
+        "admin_reset_user_password.html",
+        target_user=target_user_info,
+        reset_link=reset_link,
+        form=form,
+    )
+
+
 class InvitesListForm(flask_wtf.FlaskForm):  # type:ignore
     action_revoke = wtforms.StringField()
 
@@ -115,7 +149,7 @@ class InvitePost(flask_wtf.FlaskForm):  # type:ignore
     )
 
     reusable = wtforms.BooleanField(
-        _l("Allow multiple uses"),
+        _l("Invite a group of people"),
     )
 
     action_create_invite = wtforms.SubmitField(
@@ -143,7 +177,11 @@ class InvitePost(flask_wtf.FlaskForm):  # type:ignore
 @client.require_admin_session()
 async def invitations() -> typing.Union[str, quart.Response]:
     invites = sorted(
-        await client.list_invites(),
+        (
+            invite
+            for invite in await client.list_invites()
+            if not invite.is_reset
+        ),
         key=lambda x: x.created_at,
         reverse=True,
     )
@@ -190,11 +228,16 @@ async def create_invite() -> typing.Union[str, quart.Response]:
         (c.id_, c.name) for c in circles
     ]
     if form.validate_on_submit():
-        invite = await client.create_invite(
-            group_ids=form.circles.data,
-            reusable=form.reusable.data,
-            ttl=form.lifetime.data,
-        )
+        if form.reusable.data:
+            invite = await client.create_group_invite(
+                group_ids=form.circles.data,
+                ttl=form.lifetime.data,
+            )
+        else:
+            invite = await client.create_account_invite(
+                group_ids=form.circles.data,
+                ttl=form.lifetime.data,
+            )
         return redirect(url_for(".edit_invite", id_=invite.id_))
     return await render_template("admin_create_invite.html",
                                  invite_form=form)

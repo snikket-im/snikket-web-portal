@@ -74,6 +74,7 @@ class AdminInviteInfo:
     expires: datetime
     reusable: bool
     group_ids: typing.Collection[str]
+    is_reset: bool
 
     @classmethod
     def from_api_response(
@@ -91,6 +92,7 @@ class AdminInviteInfo:
             landing_page=data.get("landing_page"),
             group_ids=data.get("groups", []),
             reusable=data["reusable"],
+            is_reset=data.get("reset", False),
         )
 
 
@@ -857,22 +859,63 @@ class ProsodyClient:
             self._raise_error_from_response(resp)
 
     @autosession
-    async def create_invite(
+    async def create_account_invite(
             self,
-            group_ids: typing.Collection[str],
-            reusable: bool,
-            ttl: int,
             *,
+            group_ids: typing.Collection[str] = [],
+            restrict_username: typing.Optional[str] = None,
+            ttl: typing.Optional[int] = None,
             session: aiohttp.ClientSession,
             ) -> AdminInviteInfo:
-        payload = {
-            "reusable": reusable,
-            "groups": list(group_ids),
-            "ttl": ttl,
-        }
+        payload: typing.Dict[str, typing.Any] = {}
+        payload["groups"] = list(group_ids)
+        if restrict_username is not None:
+            payload["username"] = restrict_username
+        if ttl is not None:
+            payload["ttl"] = ttl
 
         async with session.post(
-                self._admin_v1_endpoint("/invites"),
+                self._admin_v1_endpoint("/invites/account"),
+                json=payload) as resp:
+            self._raise_error_from_response(resp)
+            return AdminInviteInfo.from_api_response(await resp.json())
+
+    @autosession
+    async def create_group_invite(
+            self,
+            *,
+            group_ids: typing.Collection[str] = [],
+            ttl: typing.Optional[int] = None,
+            session: aiohttp.ClientSession,
+            ) -> AdminInviteInfo:
+        payload: typing.Dict[str, typing.Any] = {
+            "groups": list(group_ids),
+        }
+        if ttl is not None:
+            payload["ttl"] = ttl
+
+        async with session.post(
+                self._admin_v1_endpoint("/invites/group"),
+                json=payload) as resp:
+            self._raise_error_from_response(resp)
+            return AdminInviteInfo.from_api_response(await resp.json())
+
+    @autosession
+    async def create_password_reset_invite(
+            self,
+            *,
+            localpart: str,
+            ttl: typing.Optional[int] = None,
+            session: aiohttp.ClientSession,
+            ) -> AdminInviteInfo:
+        payload: typing.Dict[str, typing.Any] = {
+            "username": localpart,
+        }
+        if ttl is not None:
+            payload["ttl"] = ttl
+
+        async with session.post(
+                self._admin_v1_endpoint("/invites/reset"),
                 json=payload) as resp:
             self._raise_error_from_response(resp)
             return AdminInviteInfo.from_api_response(await resp.json())
