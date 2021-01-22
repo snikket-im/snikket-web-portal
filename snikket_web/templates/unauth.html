@@ -2,7 +2,7 @@
 {% from "library.j2" import box, form_button %}
 {% block body %}
 <div id="topbar" class="{% block topbar_classes %}{% endblock %}">
-	<header><a href="{{ url_for('.index') }}"><span>{{ config["SNIKKET_DOMAIN"] }}</span></a></header>
+	<header><a href="{{ url_for('.index') }}"><span>{{ config["SITE_NAME"] }}</span></a></header>
 	{% block topbar_left %}{% endblock %}
 	<div class="filler"></div>
 	{% block topbar_right %}{% endblock %}
