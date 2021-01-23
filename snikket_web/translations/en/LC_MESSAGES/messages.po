@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-23 12:52+0100\n"
+"POT-Creation-Date: 2021-01-23 14:17+0100\n"
 "PO-Revision-Date: 2020-03-07 16:50+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -55,38 +55,38 @@ msgid "Four weeks"
 msgstr ""
 
 #: snikket_web/admin.py:152
-msgid "Allow multiple uses"
+msgid "Invite a group of people"
 msgstr ""
 
 #: snikket_web/admin.py:156
 msgid "New invitation link"
 msgstr ""
 
-#: snikket_web/admin.py:214
+#: snikket_web/admin.py:218
 msgid "Revoke"
 msgstr ""
 
-#: snikket_web/admin.py:265 snikket_web/admin.py:308
+#: snikket_web/admin.py:274 snikket_web/admin.py:317
 msgid "Name"
 msgstr ""
 
-#: snikket_web/admin.py:269 snikket_web/templates/admin_circles.html:42
+#: snikket_web/admin.py:278 snikket_web/templates/admin_circles.html:42
 msgid "Create circle"
 msgstr ""
 
-#: snikket_web/admin.py:313
+#: snikket_web/admin.py:322
 msgid "Select user"
 msgstr ""
 
-#: snikket_web/admin.py:318 snikket_web/user.py:68
+#: snikket_web/admin.py:327 snikket_web/user.py:68
 msgid "Apply"
 msgstr ""
 
-#: snikket_web/admin.py:322
+#: snikket_web/admin.py:331
 msgid "Delete circle permanently"
 msgstr ""
 
-#: snikket_web/admin.py:328
+#: snikket_web/admin.py:337
 msgid "Add user"
 msgstr ""
 
@@ -721,5 +721,8 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "This is the Snikket server <em>%(domain)s</em>."
+#~ msgstr ""
+
+#~ msgid "Allow multiple uses"
 #~ msgstr ""
 

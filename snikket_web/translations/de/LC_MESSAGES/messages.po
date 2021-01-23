@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: jonas@zombofant.net\n"
-"POT-Creation-Date: 2021-01-23 12:52+0100\n"
+"POT-Creation-Date: 2021-01-23 14:17+0100\n"
 "PO-Revision-Date: 2020-03-07 16:32+0100\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language: de\n"
@@ -55,38 +55,38 @@ msgid "Four weeks"
 msgstr "Vier Wochen"
 
 #: snikket_web/admin.py:152
-msgid "Allow multiple uses"
-msgstr "Mehrfach verwendbar"
+msgid "Invite a group of people"
+msgstr ""
 
 #: snikket_web/admin.py:156
 msgid "New invitation link"
 msgstr "Neuer Einladungslink"
 
-#: snikket_web/admin.py:214
+#: snikket_web/admin.py:218
 msgid "Revoke"
 msgstr "Löschen"
 
-#: snikket_web/admin.py:265 snikket_web/admin.py:308
+#: snikket_web/admin.py:274 snikket_web/admin.py:317
 msgid "Name"
 msgstr "Name"
 
-#: snikket_web/admin.py:269 snikket_web/templates/admin_circles.html:42
+#: snikket_web/admin.py:278 snikket_web/templates/admin_circles.html:42
 msgid "Create circle"
 msgstr "Gemeinschaft gründen"
 
-#: snikket_web/admin.py:313
+#: snikket_web/admin.py:322
 msgid "Select user"
 msgstr "Benutzer auswählen"
 
-#: snikket_web/admin.py:318 snikket_web/user.py:68
+#: snikket_web/admin.py:327 snikket_web/user.py:68
 msgid "Apply"
 msgstr "Übernehmen"
 
-#: snikket_web/admin.py:322
+#: snikket_web/admin.py:331
 msgid "Delete circle permanently"
 msgstr "Gemeinschaft endgültig löschen"
 
-#: snikket_web/admin.py:328
+#: snikket_web/admin.py:337
 msgid "Add user"
 msgstr "Benutzer hinzufügen"
 
@@ -178,7 +178,7 @@ msgid "About this Server"
 msgstr "Über diesen Server"
 
 #: snikket_web/templates/about.html:12
-#,  python-format
+#, python-format
 msgid "This is the Snikket server <em>%(site_name)s</em>."
 msgstr "Dies ist der Snikket-Server <em>%(site_name)s</em>."
 
@@ -743,4 +743,7 @@ msgid ""
 msgstr ""
 "Hier kannst du einstellen, wer deine Profilinformationen, wie Bild oder "
 "Anzeigename einsehen kann."
+
+#~ msgid "Allow multiple uses"
+#~ msgstr "Mehrfach verwendbar"
 
