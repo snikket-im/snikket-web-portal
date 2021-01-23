@@ -272,6 +272,7 @@ async def edit_invite(id_: str) -> typing.Union[str, quart.Response]:
 class CirclePost(flask_wtf.FlaskForm):  # type:ignore
     name = wtforms.StringField(
         _l("Name"),
+        validators=[wtforms.validators.InputRequired()],
     )
 
     action_create = wtforms.SubmitField(

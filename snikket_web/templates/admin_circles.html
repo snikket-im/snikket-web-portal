@@ -41,7 +41,7 @@
 {{- create_form.csrf_token -}}
 	<h2 class="form-title">{% trans %}Create circle{% endtrans %}</h2>
 	<div class="f-ebox">
-		{{- create_form.name.label -}}
+		{{- create_form.name.label(class="required") -}}
 		{{- create_form.name -}}
 	</div>
 	<div class="f-bbox">
