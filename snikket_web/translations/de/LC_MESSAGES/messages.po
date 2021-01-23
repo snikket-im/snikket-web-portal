@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: jonas@zombofant.net\n"
-"POT-Creation-Date: 2021-01-22 15:27+0100\n"
+"POT-Creation-Date: 2021-01-23 12:52+0100\n"
 "PO-Revision-Date: 2020-03-07 16:32+0100\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language: de\n"
@@ -225,7 +225,7 @@ msgstr ""
 msgid "Software Versions"
 msgstr "Softwareversionen"
 
-#: snikket_web/templates/about.html:26
+#: snikket_web/templates/about.html:27
 msgid "Back to the main page"
 msgstr "Zurück zur Hauptseite"
 

@@ -1,18 +1,17 @@
-# English translations for PROJECT.
-# Copyright (C) 2020 ORGANIZATION
+# Translations template for PROJECT.
+# Copyright (C) 2021 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-23 12:52+0100\n"
-"PO-Revision-Date: 2020-03-07 16:50+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -107,7 +106,6 @@ msgid "Sign in"
 msgstr ""
 
 #: snikket_web/main.py:72
-#, fuzzy
 msgid "Invalid user name or password."
 msgstr ""
 
@@ -128,7 +126,6 @@ msgid "The new passwords must match."
 msgstr ""
 
 #: snikket_web/user.py:42
-#, fuzzy
 msgid "Sign out"
 msgstr ""
 
@@ -276,14 +273,14 @@ msgid ""
 msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:8
-#, fuzzy, python-format
+#, python-format
 msgid "Debug information for %(user_name)s"
-msgstr "Welcome home, %(user_name)s."
+msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:11
 #: snikket_web/templates/user_passwd.html:36
 msgid "Warning"
-msgstr "Warning"
+msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:12
 msgid "The below dump may contain sensitive information."
@@ -319,7 +316,6 @@ msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:14
 #: snikket_web/templates/admin_users.html:10
-#, fuzzy
 msgid "Email address"
 msgstr ""
 
@@ -431,7 +427,7 @@ msgid "Created"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_user.html:3
-#, fuzzy, python-format
+#, python-format
 msgid "Edit user %(user_name)s"
 msgstr ""
 
@@ -440,7 +436,6 @@ msgid "User information"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_user.html:25
-#, fuzzy
 msgid "Password reset"
 msgstr ""
 
@@ -457,7 +452,7 @@ msgid "Welcome to the administration dashboard!"
 msgstr ""
 
 #: snikket_web/templates/admin_home.html:4
-#, fuzzy, python-format
+#, python-format
 msgid "At your service, %(user_name)s."
 msgstr ""
 
@@ -528,9 +523,9 @@ msgid "Phone number"
 msgstr ""
 
 #: snikket_web/templates/admin_users.html:27
-#, fuzzy, python-format
+#, python-format
 msgid "Show debug information for %(user_name)s"
-msgstr "Welcome home, %(user_name)s."
+msgstr ""
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
@@ -676,26 +671,4 @@ msgid ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
 msgstr ""
-
-#~ msgid "Copy &quot;%(content)s&quot; to clipboard"
-#~ msgstr ""
-
-#~ msgid "Log in"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "This server software is licensed under"
-#~ " the terms of the <a "
-#~ "href=\"%(agpl_url)s\">Affero GNU General Public "
-#~ "License, version 3.0 or later</a>. The"
-#~ " full terms of the license can "
-#~ "be reviewed using the aforementioned "
-#~ "link."
-#~ msgstr ""
-
-#~ msgid "All users on this instance have already been added."
-#~ msgstr ""
-
-#~ msgid "This is the Snikket server <em>%(domain)s</em>."
-#~ msgstr ""
 
