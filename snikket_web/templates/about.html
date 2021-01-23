@@ -8,8 +8,8 @@
 	<div class="box el-2">
 		<h1>{% trans %}About Snikket{% endtrans %}</h1>
 		<p>{% trans snikket_url="https://snikket.org" %}To learn more about Snikket, visit the <a href="{{ snikket_url}}">Snikket website</a>.{% endtrans %}</p>
-		<h2>{% trans %}About this Server{% endtrans %}</h2>
-		<p>{% trans site_name=config["SITE_NAME"] %}This is the Snikket server <em>{{ site_name }}</em>.{% endtrans %}</p>
+		<h2>{% trans %}About this Service{% endtrans %}</h2>
+		<p>{% trans site_name=config["SITE_NAME"] %}This is the Snikket service <em>{{ site_name }}</em>.{% endtrans %}</p>
 		<h3>{% trans %}Licenses{% endtrans %}</h3>
 		<p>{% trans agpl_url="https://www.gnu.org/licenses/agpl.html" %}The web portal software is licensed under the terms of the <a href="{{ agpl_url }}">Affero GNU General Public License, version 3.0 or later</a>. The full terms of the license can be reviewed using the aforementioned link.{% endtrans %}</p>
 		<p>{% trans source_url="https://github.com/snikket-im/snikket-web-portal/" %}The source code of the web portal can be downloaded and viewed in <a href="{{ source_url }}">its GitHub repository</a>.{% endtrans %}</p>

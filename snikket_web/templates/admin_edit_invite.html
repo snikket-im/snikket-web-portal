@@ -15,7 +15,7 @@
 		<dt>{% trans %}Link{% endtrans %}</dt>
 		<dd>{% call showuri(invite.landing_page) %}{% endcall %}</dd>
 		<dt>{% trans %}Reusability{% endtrans %}</dt>
-		<dd>{% if invite.reusable %}{% trans %}This invitation link can be used arbitrarily often, until it expires, is revoked or a server-wide user limit is reached.{% endtrans %}{% else %}{% trans %}This invitation link can only be used once and is then depleted.{% endtrans %}{% endif %}</dd>
+		<dd>{% if invite.reusable %}{% trans %}This invitation link can be used arbitrarily often, until it expires, is revoked or a service-wide user limit is reached.{% endtrans %}{% else %}{% trans %}This invitation link can only be used once and is then depleted.{% endtrans %}{% endif %}</dd>
 		{%- set ngroups = invite.group_ids | length -%}
 		{%- if ngroups > 1 -%}
 		{#- not supported via the web UI, but we should still display it properly -#}

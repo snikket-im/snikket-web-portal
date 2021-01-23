@@ -13,7 +13,7 @@
 	{% if user_info.is_admin %}
 	<a class="card" href="{{ url_for('admin.index') }}">
 		<h2>{% trans %}Admin dashboard{% endtrans %}</h2>
-		<p>{% trans %}Manage users and invitations of this Snikket instance.{% endtrans %}</p>
+		<p>{% trans %}Manage users and invitations of this Snikket service.{% endtrans %}</p>
 	</a>
 	{% endif %}
 	<a class="card" href="{{ url_for('.logout') }}">

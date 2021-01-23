@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-23 14:17+0100\n"
+"POT-Creation-Date: 2021-01-23 14:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -171,12 +171,12 @@ msgid ""
 msgstr ""
 
 #: snikket_web/templates/about.html:11
-msgid "About this Server"
+msgid "About this Service"
 msgstr ""
 
 #: snikket_web/templates/about.html:12
 #, python-format
-msgid "This is the Snikket server <em>%(site_name)s</em>."
+msgid "This is the Snikket service <em>%(site_name)s</em>."
 msgstr ""
 
 #: snikket_web/templates/about.html:13
@@ -250,7 +250,7 @@ msgstr ""
 
 #: snikket_web/templates/admin_circles.html:36
 msgid ""
-"Currently, there are no circles on this instance. Use the form below to "
+"Currently, there are no circles on this service. Use the form below to "
 "create one."
 msgstr ""
 
@@ -268,8 +268,8 @@ msgstr ""
 
 #: snikket_web/templates/admin_create_invite_form.html:6
 msgid ""
-"Create a new invitation link to invite more users to your Snikket "
-"instance by clicking the button below."
+"Create a new invitation link to invite more users to your Snikket service"
+" by clicking the button below."
 msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:8
@@ -376,7 +376,7 @@ msgid "No users left"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:65
-msgid "All users on this instance are already in this circle."
+msgid "All users on this service are already in this circle."
 msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:8
@@ -401,7 +401,7 @@ msgstr ""
 #: snikket_web/templates/admin_edit_invite.html:18
 msgid ""
 "This invitation link can be used arbitrarily often, until it expires, is "
-"revoked or a server-wide user limit is reached."
+"revoked or a service-wide user limit is reached."
 msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:18
@@ -567,7 +567,7 @@ msgstr ""
 
 #: snikket_web/templates/backend_error.html:5
 #: snikket_web/templates/internal_error.html:5
-msgid "Please try again later and/or inform your Snikket instance admin."
+msgid "Please try again later and/or inform your Snikket service admin."
 msgstr ""
 
 #: snikket_web/templates/copy-snippet.html:106
@@ -608,7 +608,7 @@ msgstr ""
 
 #: snikket_web/templates/login.html:36 snikket_web/templates/unauth.html:14
 #, python-format
-msgid "A <a href=\"%(about_url)s\">Snikket</a> server"
+msgid "A <a href=\"%(about_url)s\">Snikket</a> service"
 msgstr ""
 
 #: snikket_web/templates/user_home.html:3
@@ -640,7 +640,7 @@ msgid "Admin dashboard"
 msgstr ""
 
 #: snikket_web/templates/user_home.html:16
-msgid "Manage users and invitations of this Snikket instance."
+msgid "Manage users and invitations of this Snikket service."
 msgstr ""
 
 #: snikket_web/templates/user_home.html:20
