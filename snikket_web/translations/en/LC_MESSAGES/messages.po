@@ -8,127 +8,133 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-23 14:51+0100\n"
-"PO-Revision-Date: 2020-03-07 16:50+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: en <LL@li.org>\n"
+"PO-Revision-Date: 2021-01-23 15:28+0000\n"
+"Last-Translator: Matthew Wild <matthew@snikket.org>\n"
+"Language-Team: English <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/en/>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.4.2\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:60
 msgid "Delete user permanently"
-msgstr ""
+msgstr "Delete user permanently"
 
 #: snikket_web/admin.py:129
 msgid "Invite to circle"
-msgstr ""
+msgstr "Invite to circle"
 
 #: snikket_web/admin.py:135
 msgid "At least one circle must be selected"
-msgstr ""
+msgstr "At least one circle must be selected"
 
 #: snikket_web/admin.py:140
 msgid "Valid for"
-msgstr ""
+msgstr "Valid for"
 
 #: snikket_web/admin.py:142
 msgid "One hour"
-msgstr ""
+msgstr "One hour"
 
 #: snikket_web/admin.py:143
 msgid "Twelve hours"
-msgstr ""
+msgstr "Twelve hours"
 
 #: snikket_web/admin.py:144
 msgid "One day"
-msgstr ""
+msgstr "One day"
 
 #: snikket_web/admin.py:145
 msgid "One week"
-msgstr ""
+msgstr "One week"
 
 #: snikket_web/admin.py:146
 msgid "Four weeks"
-msgstr ""
+msgstr "Four weeks"
 
 #: snikket_web/admin.py:152
 msgid "Invite a group of people"
-msgstr ""
+msgstr "Invite a group of people"
 
 #: snikket_web/admin.py:156
 msgid "New invitation link"
-msgstr ""
+msgstr "New invitation link"
 
 #: snikket_web/admin.py:218
 msgid "Revoke"
-msgstr ""
+msgstr "Revoke"
 
 #: snikket_web/admin.py:274 snikket_web/admin.py:317
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #: snikket_web/admin.py:278 snikket_web/templates/admin_circles.html:42
 msgid "Create circle"
-msgstr ""
+msgstr "Create circle"
 
 #: snikket_web/admin.py:322
 msgid "Select user"
-msgstr ""
+msgstr "Select user"
 
 #: snikket_web/admin.py:327 snikket_web/user.py:68
 msgid "Apply"
-msgstr ""
+msgstr "Apply"
 
 #: snikket_web/admin.py:331
 msgid "Delete circle permanently"
-msgstr ""
+msgstr "Delete circle permanently"
 
 #: snikket_web/admin.py:337
 msgid "Add user"
-msgstr ""
+msgstr "Add user"
 
 #: snikket_web/infra.py:40
 msgid "Main"
-msgstr ""
+msgstr "Main"
 
 #: snikket_web/main.py:36
+#, fuzzy
 msgid "Address"
-msgstr ""
+msgstr "Address"
 
 #: snikket_web/main.py:41
+#, fuzzy
 msgid "Password"
-msgstr ""
+msgstr "Password"
 
 #: snikket_web/main.py:46
+#, fuzzy
 msgid "Sign in"
-msgstr ""
+msgstr "Sign in"
 
 #: snikket_web/main.py:72
+#, fuzzy
 msgid "Invalid user name or password."
-msgstr ""
+msgstr "Invalid user name or password."
 
 #: snikket_web/user.py:21
 msgid "Current password"
-msgstr ""
+msgstr "Current password"
 
 #: snikket_web/user.py:26
 msgid "New password"
-msgstr ""
+msgstr "New password"
 
 #: snikket_web/user.py:31
 msgid "Confirm new password"
-msgstr ""
+msgstr "Confirm new password"
 
 #: snikket_web/user.py:35
 msgid "The new passwords must match."
-msgstr ""
+msgstr "The new passwords must match."
 
 #: snikket_web/user.py:42
 msgid "Sign out"
-msgstr ""
+msgstr "Sign out"
 
 #: snikket_web/user.py:47
 msgid "Nobody"
@@ -274,9 +280,9 @@ msgid ""
 msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:8
-#, fuzzy, python-format
+#, python-format
 msgid "Debug information for %(user_name)s"
-msgstr "Welcome home, %(user_name)s."
+msgstr "Debug information for %(user_name)s"
 
 #: snikket_web/templates/admin_debug_user.html:11
 #: snikket_web/templates/user_passwd.html:36
@@ -524,9 +530,9 @@ msgid "Currently, there are no pending invitations."
 msgstr ""
 
 #: snikket_web/templates/admin_reset_user_password.html:12
-#, fuzzy, python-format
+#, python-format
 msgid "Password reset link for %(user_name)s"
-msgstr "Welcome home, %(user_name)s."
+msgstr "Password reset link for %(user_name)s"
 
 #: snikket_web/templates/admin_reset_user_password.html:13
 msgid ""
@@ -543,9 +549,9 @@ msgid "Phone number"
 msgstr ""
 
 #: snikket_web/templates/admin_users.html:29
-#, fuzzy, python-format
+#, python-format
 msgid "Show debug information for %(user_name)s"
-msgstr "Welcome home, %(user_name)s."
+msgstr "Show debug information for %(user_name)s"
 
 #: snikket_web/templates/admin_users.html:32
 #, python-format
