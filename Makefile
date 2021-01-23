@@ -19,12 +19,19 @@ $(generated_css_files): snikket_web/static/css/%.css: snikket_web/scss/%.scss $(
 clean:
 	rm -f $(generated_css_files)
 
-update_translations:
+extract_translations:
 	pybabel extract -F babel.cfg -k _l -o $(pot_file) .
+
+update_translations: extract_translations
+	@echo "This has been deprecated as translations are now managed by weblate."
+	@echo "Use extract_translations only."
+	@false
+
+force_update_translations: extract_translations
 	pybabel update -i $(pot_file) -d $(translation_basepath)
 
 compile_translations:
 	pybabel compile -d $(translation_basepath)
 
 
-.PHONY: build_css clean update_translations compile_translations
+.PHONY: build_css clean update_translations compile_translations extract_translations force_update_translations
