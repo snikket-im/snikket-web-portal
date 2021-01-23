@@ -19,7 +19,6 @@ jobs:
           RELEASE_SERIES="${RELEASE_TAG%.*}";
           RELEASE_VER="${RELEASE_TAG#$RELEASE_SERIES.}";
           docker build . \
-            --file docker/Dockerfile \
             --build-arg=BUILD_SERIES="$RELEASE_SERIES" \
             --build-arg=BUILD_ID="$RELEASE_VER" \
             --tag snikket/snikket-web-portal:"$RELEASE_SERIES"

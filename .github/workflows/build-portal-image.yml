@@ -14,7 +14,6 @@ jobs:
     - name: Build the Docker image
       run: >-
         docker build . \
-          --file docker/Dockerfile \
           --build-arg=BUILD_SERIES=dev \
           --build-arg=BUILD_ID="$(echo "$GITHUB_SHA" | head -c 12)" \
           --tag snikket/snikket-web-portal:dev
