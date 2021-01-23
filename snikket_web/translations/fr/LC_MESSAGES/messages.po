@@ -8,54 +8,57 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-23 14:51+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-01-24 09:55+0000\n"
+"Last-Translator: pep <pep@bouah.net>\n"
+"Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.4.2\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:60
 msgid "Delete user permanently"
-msgstr ""
+msgstr "Supprimer l'utilisateur définitivement"
 
 #: snikket_web/admin.py:129
 msgid "Invite to circle"
-msgstr ""
+msgstr "Inviter dans le cercle"
 
 #: snikket_web/admin.py:135
 msgid "At least one circle must be selected"
-msgstr ""
+msgstr "Au moins un cercle doit être sélectionné"
 
 #: snikket_web/admin.py:140
 msgid "Valid for"
-msgstr ""
+msgstr "Valide pour"
 
 #: snikket_web/admin.py:142
 msgid "One hour"
-msgstr ""
+msgstr "Une heure"
 
 #: snikket_web/admin.py:143
 msgid "Twelve hours"
-msgstr ""
+msgstr "Douze heures"
 
 #: snikket_web/admin.py:144
 msgid "One day"
-msgstr ""
+msgstr "Un jour"
 
 #: snikket_web/admin.py:145
 msgid "One week"
-msgstr ""
+msgstr "Une semaine"
 
 #: snikket_web/admin.py:146
 msgid "Four weeks"
-msgstr ""
+msgstr "Quatre semaines"
 
 #: snikket_web/admin.py:152
 msgid "Invite a group of people"
-msgstr ""
+msgstr "Inviter plusieurs personnes"
 
 #: snikket_web/admin.py:156
 msgid "New invitation link"
@@ -63,31 +66,31 @@ msgstr ""
 
 #: snikket_web/admin.py:218
 msgid "Revoke"
-msgstr ""
+msgstr "Révoquer"
 
 #: snikket_web/admin.py:274 snikket_web/admin.py:317
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #: snikket_web/admin.py:278 snikket_web/templates/admin_circles.html:42
 msgid "Create circle"
-msgstr ""
+msgstr "Créer un cercle"
 
 #: snikket_web/admin.py:322
 msgid "Select user"
-msgstr ""
+msgstr "Sélectionner un utilisateur"
 
 #: snikket_web/admin.py:327 snikket_web/user.py:68
 msgid "Apply"
-msgstr ""
+msgstr "Appliquer"
 
 #: snikket_web/admin.py:331
 msgid "Delete circle permanently"
-msgstr ""
+msgstr "Supprimer le cercle définitivement"
 
 #: snikket_web/admin.py:337
 msgid "Add user"
-msgstr ""
+msgstr "Ajouter un utilisateur"
 
 #: snikket_web/infra.py:40
 msgid "Main"
@@ -95,31 +98,31 @@ msgstr ""
 
 #: snikket_web/main.py:36
 msgid "Address"
-msgstr ""
+msgstr "Adresse"
 
 #: snikket_web/main.py:41
 msgid "Password"
-msgstr ""
+msgstr "Mot de passe"
 
 #: snikket_web/main.py:46
 msgid "Sign in"
-msgstr ""
+msgstr "Se logger"
 
 #: snikket_web/main.py:72
 msgid "Invalid user name or password."
-msgstr ""
+msgstr "Nom d'utilisateur ou mot de passe incorrect."
 
 #: snikket_web/user.py:21
 msgid "Current password"
-msgstr ""
+msgstr "Mot de passe actuel"
 
 #: snikket_web/user.py:26
 msgid "New password"
-msgstr ""
+msgstr "Nouveau mot de passe"
 
 #: snikket_web/user.py:31
 msgid "Confirm new password"
-msgstr ""
+msgstr "Confirmation du nouveau mot de passe"
 
 #: snikket_web/user.py:35
 msgid "The new passwords must match."
