@@ -155,7 +155,7 @@ def create_app() -> quart.Quart:
         pass
     else:
         import runpy
-        init_vars = runpy.run_path(env_init)
+        init_vars = runpy.run_path(env_init)  # type:ignore
         for name, value in init_vars.items():
             if not name:
                 continue
