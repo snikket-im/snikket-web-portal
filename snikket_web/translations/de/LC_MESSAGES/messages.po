@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-23 14:51+0100\n"
-"PO-Revision-Date: 2021-01-23 13:18+0000\n"
+"PO-Revision-Date: 2021-01-23 14:01+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
-"Language-Team: German <http://i18n.sotecware.net/projects/snikket/web-portal/"
-"de/>\n"
+"Language-Team: German <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -176,16 +176,13 @@ msgstr ""
 "\">Snikket website</a> besuchen."
 
 #: snikket_web/templates/about.html:11
-#, fuzzy
-#| msgid "About this Server"
 msgid "About this Service"
-msgstr "Über diesen Server"
+msgstr "Über diesen Dienst"
 
 #: snikket_web/templates/about.html:12
-#, fuzzy, python-format
-#| msgid "This is the Snikket server <em>%(site_name)s</em>."
+#, python-format
 msgid "This is the Snikket service <em>%(site_name)s</em>."
-msgstr "Dies ist der Snikket-Server <em>%(site_name)s</em>."
+msgstr "Dies ist der Snikket-Dienst <em>%(site_name)s</em>."
 
 #: snikket_web/templates/about.html:13
 msgid "Licenses"
@@ -266,16 +263,12 @@ msgid "No circles"
 msgstr "Keine Gemeinschaften"
 
 #: snikket_web/templates/admin_circles.html:36
-#, fuzzy
-#| msgid ""
-#| "Currently, there are no circles on this instance. Use the form below to "
-#| "create one."
 msgid ""
 "Currently, there are no circles on this service. Use the form below to "
 "create one."
 msgstr ""
-"Es gibt derzeit keine Gemeinschaften auf dieser Instanz. Unten kannst du "
-"eine anlegen."
+"Es gibt derzeit keine Gemeinschaften auf diesem Dienst. Unten kannst du eine "
+"anlegen."
 
 #: snikket_web/templates/admin_circles.html:39
 msgid "New circle"
@@ -290,15 +283,11 @@ msgid "Create new invitation"
 msgstr "Neue Einladung erzeugen"
 
 #: snikket_web/templates/admin_create_invite_form.html:6
-#, fuzzy
-#| msgid ""
-#| "Create a new invitation link to invite more users to your Snikket "
-#| "instance by clicking the button below."
 msgid ""
 "Create a new invitation link to invite more users to your Snikket service by "
 "clicking the button below."
 msgstr ""
-"Erzeuge eine neue Einladung um mehr Benutzer auf deine Snikket-Instanz "
+"Erzeuge eine neue Einladung um mehr Benutzer auf deinen Snikket-Dienst "
 "einzuladen indem du den folgenden Button klickst."
 
 #: snikket_web/templates/admin_debug_user.html:8
@@ -407,10 +396,8 @@ msgid "No users left"
 msgstr "Keine Benutzer übrig"
 
 #: snikket_web/templates/admin_edit_circle.html:65
-#, fuzzy
-#| msgid "All users on this instance are already in this circle."
 msgid "All users on this service are already in this circle."
-msgstr "Alle Benutzer dieser Instanz sind bereits in dieser Gemeinschaft."
+msgstr "Alle Benutzer dieses Dienstes sind bereits in dieser Gemeinschaft."
 
 #: snikket_web/templates/admin_edit_invite.html:8
 msgid "View invitation"
@@ -432,16 +419,12 @@ msgid "Reusability"
 msgstr "Wiederverwendbarkeit"
 
 #: snikket_web/templates/admin_edit_invite.html:18
-#, fuzzy
-#| msgid ""
-#| "This invitation link can be used arbitrarily often, until it expires, is "
-#| "revoked or a server-wide user limit is reached."
 msgid ""
 "This invitation link can be used arbitrarily often, until it expires, is "
 "revoked or a service-wide user limit is reached."
 msgstr ""
 "Diese Einladung kann beliebig oft verwendet werden, bis sie abläuft, "
-"gelöscht wird oder ein instanzweites Limit erreicht ist."
+"gelöscht wird oder ein dienstweites Limit erreicht ist."
 
 #: snikket_web/templates/admin_edit_invite.html:18
 msgid "This invitation link can only be used once and is then depleted."
@@ -618,12 +601,10 @@ msgstr "Das Webportal konnte nicht mit dem Backend kommunizieren."
 
 #: snikket_web/templates/backend_error.html:5
 #: snikket_web/templates/internal_error.html:5
-#, fuzzy
-#| msgid "Please try again later and/or inform your Snikket instance admin."
 msgid "Please try again later and/or inform your Snikket service admin."
 msgstr ""
-"Versuche es später noch einmal und/oder informiere den Betreiber deiner "
-"Snikket-Instanz."
+"Versuche es später noch einmal und/oder informiere den Betreiber deines "
+"Snikket-Dienstes."
 
 #: snikket_web/templates/copy-snippet.html:106
 msgid "Copied to clipboard"
@@ -663,10 +644,9 @@ msgid "Login failed"
 msgstr "Anmeldung fehlgeschlagen"
 
 #: snikket_web/templates/login.html:36 snikket_web/templates/unauth.html:14
-#, fuzzy, python-format
-#| msgid "A <a href=\"%(about_url)s\">Snikket</a> server"
+#, python-format
 msgid "A <a href=\"%(about_url)s\">Snikket</a> service"
-msgstr "Ein <a href=\"%(about_url)s\">Snikket</a>-Server"
+msgstr "Ein <a href=\"%(about_url)s\">Snikket</a>-Dienst"
 
 #: snikket_web/templates/user_home.html:3
 msgid "Welcome!"
@@ -699,10 +679,8 @@ msgid "Admin dashboard"
 msgstr "Verwaltungsdashboard"
 
 #: snikket_web/templates/user_home.html:16
-#, fuzzy
-#| msgid "Manage users and invitations of this Snikket instance."
 msgid "Manage users and invitations of this Snikket service."
-msgstr "Benutzer und Einladungen von dieser Snikket-Instanz verwalten."
+msgstr "Benutzer und Einladungen dieses Snikket-Dienstes verwalten."
 
 #: snikket_web/templates/user_home.html:20
 msgid "Log out"
