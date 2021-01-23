@@ -8,18 +8,21 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-23 14:51+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-01-24 09:55+0000\n"
+"Last-Translator: uira <inboxriau@andriana.id>\n"
+"Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.4.2\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:60
 msgid "Delete user permanently"
-msgstr ""
+msgstr "Hapus permanen pengguna"
 
 #: snikket_web/admin.py:129
 msgid "Invite to circle"
@@ -31,43 +34,43 @@ msgstr ""
 
 #: snikket_web/admin.py:140
 msgid "Valid for"
-msgstr ""
+msgstr "Valid selama"
 
 #: snikket_web/admin.py:142
 msgid "One hour"
-msgstr ""
+msgstr "Satu jam"
 
 #: snikket_web/admin.py:143
 msgid "Twelve hours"
-msgstr ""
+msgstr "Dua belas jam"
 
 #: snikket_web/admin.py:144
 msgid "One day"
-msgstr ""
+msgstr "Satu hari"
 
 #: snikket_web/admin.py:145
 msgid "One week"
-msgstr ""
+msgstr "Satu minggu"
 
 #: snikket_web/admin.py:146
 msgid "Four weeks"
-msgstr ""
+msgstr "Empat minggu"
 
 #: snikket_web/admin.py:152
 msgid "Invite a group of people"
-msgstr ""
+msgstr "Mengundang sekelompok orang"
 
 #: snikket_web/admin.py:156
 msgid "New invitation link"
-msgstr ""
+msgstr "Tautan undangan terbaru"
 
 #: snikket_web/admin.py:218
 msgid "Revoke"
-msgstr ""
+msgstr "Batalkan"
 
 #: snikket_web/admin.py:274 snikket_web/admin.py:317
 msgid "Name"
-msgstr ""
+msgstr "Nama"
 
 #: snikket_web/admin.py:278 snikket_web/templates/admin_circles.html:42
 msgid "Create circle"
@@ -75,11 +78,11 @@ msgstr ""
 
 #: snikket_web/admin.py:322
 msgid "Select user"
-msgstr ""
+msgstr "Pilih pengguna"
 
 #: snikket_web/admin.py:327 snikket_web/user.py:68
 msgid "Apply"
-msgstr ""
+msgstr "Terapkan"
 
 #: snikket_web/admin.py:331
 msgid "Delete circle permanently"
@@ -87,81 +90,81 @@ msgstr ""
 
 #: snikket_web/admin.py:337
 msgid "Add user"
-msgstr ""
+msgstr "Tambah pengguna"
 
 #: snikket_web/infra.py:40
 msgid "Main"
-msgstr ""
+msgstr "Utama"
 
 #: snikket_web/main.py:36
 msgid "Address"
-msgstr ""
+msgstr "Alamat"
 
 #: snikket_web/main.py:41
 msgid "Password"
-msgstr ""
+msgstr "Kata kunci"
 
 #: snikket_web/main.py:46
 msgid "Sign in"
-msgstr ""
+msgstr "Masuk"
 
 #: snikket_web/main.py:72
 msgid "Invalid user name or password."
-msgstr ""
+msgstr "Nama pengguna atau kata kunci salah."
 
 #: snikket_web/user.py:21
 msgid "Current password"
-msgstr ""
+msgstr "Kata kunci sekarang"
 
 #: snikket_web/user.py:26
 msgid "New password"
-msgstr ""
+msgstr "Kata kunci baru"
 
 #: snikket_web/user.py:31
 msgid "Confirm new password"
-msgstr ""
+msgstr "Konfirmasi kata kunci"
 
 #: snikket_web/user.py:35
 msgid "The new passwords must match."
-msgstr ""
+msgstr "Kata kunci baru harus cocok."
 
 #: snikket_web/user.py:42
 msgid "Sign out"
-msgstr ""
+msgstr "Keluar"
 
 #: snikket_web/user.py:47
 msgid "Nobody"
-msgstr ""
+msgstr "Tak seorangpun"
 
 #: snikket_web/user.py:48
 msgid "Friends only"
-msgstr ""
+msgstr "Hanya teman"
 
 #: snikket_web/user.py:49
 msgid "Everyone"
-msgstr ""
+msgstr "Semua orang"
 
 #: snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/templates/admin_delete_user.html:16
 #: snikket_web/templates/admin_users.html:11 snikket_web/user.py:55
 msgid "Display name"
-msgstr ""
+msgstr "Nama tampilan"
 
 #: snikket_web/user.py:59
 msgid "Avatar"
-msgstr ""
+msgstr "Gambar profil"
 
 #: snikket_web/user.py:63
 msgid "Profile visibility"
-msgstr ""
+msgstr "Visibilitas profil"
 
 #: snikket_web/user.py:92
 msgid "Incorrect password"
-msgstr ""
+msgstr "Kata kunci salah"
 
 #: snikket_web/templates/about.html:9
 msgid "About Snikket"
-msgstr ""
+msgstr "Tentang Snikket"
 
 #: snikket_web/templates/about.html:10
 #, python-format
@@ -169,19 +172,21 @@ msgid ""
 "To learn more about Snikket, visit the <a "
 "href=\"%(snikket_url)s\">Snikket website</a>."
 msgstr ""
+"Untuk mempelajari tentang Snikket, kunjungi <a href=\"%(snikket_url)s\""
+">website Snikket</a>."
 
 #: snikket_web/templates/about.html:11
 msgid "About this Service"
-msgstr ""
+msgstr "Tentang layanan ini"
 
 #: snikket_web/templates/about.html:12
 #, python-format
 msgid "This is the Snikket service <em>%(site_name)s</em>."
-msgstr ""
+msgstr "Ini adalah layanan Snikket <em>%(site_name)s</em>."
 
 #: snikket_web/templates/about.html:13
 msgid "Licenses"
-msgstr ""
+msgstr "Lisensi"
 
 #: snikket_web/templates/about.html:14
 #, python-format
@@ -191,6 +196,10 @@ msgid ""
 "later</a>. The full terms of the license can be reviewed using the "
 "aforementioned link."
 msgstr ""
+"Perangkat lunak portal web dilisensikan di bawah persyaratan <a href=\""
+"%(agpl_url)s\">Affero GNU General Public License, versi 3.0 atau yang lebih "
+"baru </a>. Persyaratan lengkap lisensi dapat ditinjau menggunakan tautan "
+"yang disebutkan di atas."
 
 #: snikket_web/templates/about.html:15
 #, python-format
@@ -198,6 +207,8 @@ msgid ""
 "The source code of the web portal can be downloaded and viewed in <a "
 "href=\"%(source_url)s\">its GitHub repository</a>."
 msgstr ""
+"Kode sumber portal web dapat diunduh dan dilihat di <a href=\"%(source_url)"
+"s\">GitHub repositori</a>."
 
 #: snikket_web/templates/about.html:16
 #, python-format
@@ -206,14 +217,17 @@ msgid ""
 "Material Icons</a>, made available by Google under the terms of the <a "
 "href=\"%(apache20_url)s\">Apache 2.0 License</a>."
 msgstr ""
+"Ikon yang digunakan di portal web adalah <a href=\"%(source_url)s\">Ikon "
+"Material Google</a>, yang disediakan oleh Google di bawah persyaratan <a "
+"href=\"%(apache20_url)s\">Lisensi Apache 2.0</a>."
 
 #: snikket_web/templates/about.html:17
 msgid "Software Versions"
-msgstr ""
+msgstr "Versi perangkat lunak"
 
 #: snikket_web/templates/about.html:27
 msgid "Back to the main page"
-msgstr ""
+msgstr "Kembali ke halaman depan"
 
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:11
@@ -226,13 +240,13 @@ msgstr ""
 
 #: snikket_web/templates/admin_circles.html:12
 msgid "Members"
-msgstr ""
+msgstr "Anggota"
 
 #: snikket_web/templates/admin_circles.html:13
 #: snikket_web/templates/admin_invites.html:24
 #: snikket_web/templates/admin_users.html:14
 msgid "Actions"
-msgstr ""
+msgstr "Tindakan"
 
 #: snikket_web/templates/admin_circles.html:23
 #, python-format
@@ -260,68 +274,70 @@ msgstr ""
 
 #: snikket_web/templates/admin_create_invite.html:3
 msgid "Create invitation"
-msgstr ""
+msgstr "Buat undangan"
 
 #: snikket_web/templates/admin_create_invite_form.html:5
 msgid "Create new invitation"
-msgstr ""
+msgstr "Buat undangan baru"
 
 #: snikket_web/templates/admin_create_invite_form.html:6
 msgid ""
 "Create a new invitation link to invite more users to your Snikket service"
 " by clicking the button below."
 msgstr ""
+"Buat tautan undangan baru untuk mengundang lebih banyak pengguna ke layanan "
+"Snikket dengan klik tombol di bawah."
 
 #: snikket_web/templates/admin_debug_user.html:8
 #, python-format
 msgid "Debug information for %(user_name)s"
-msgstr ""
+msgstr "Informasi debug untuk %(user_name)s"
 
 #: snikket_web/templates/admin_debug_user.html:11
 #: snikket_web/templates/user_passwd.html:36
 msgid "Warning"
-msgstr ""
+msgstr "Peringatan"
 
 #: snikket_web/templates/admin_debug_user.html:12
 msgid "The below dump may contain sensitive information."
-msgstr ""
+msgstr "Kumpulan data di bawah ini mungkin berisi informasi sensitif."
 
 #: snikket_web/templates/admin_debug_user.html:15
 msgid "Raw debug dump"
-msgstr ""
+msgstr "Kumpulan data debug mentah"
 
 #: snikket_web/templates/admin_debug_user.html:17
 msgid "Copy complete output"
-msgstr ""
+msgstr "Salin keluaran lengkap"
 
 #: snikket_web/templates/admin_delete_user.html:4
 #: snikket_web/templates/admin_users.html:26
 #, python-format
 msgid "Delete user %(user_name)s"
-msgstr ""
+msgstr "Hapus pengguna %(user_name)s"
 
 #: snikket_web/templates/admin_delete_user.html:6
 #: snikket_web/templates/admin_edit_user.html:28
 msgid "Delete user"
-msgstr ""
+msgstr "Hapus pengguna"
 
 #: snikket_web/templates/admin_delete_user.html:8
 msgid "Are you sure you want to delete the following user?"
-msgstr ""
+msgstr "Apakah anda yakin mau menghapus pengguna tersebut?"
 
 #: snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_users.html:10
 msgid "Login name"
-msgstr ""
+msgstr "Nama login"
 
 #: snikket_web/templates/admin_delete_user.html:14
 #: snikket_web/templates/admin_users.html:12
 msgid "Email address"
-msgstr ""
+msgstr "Alamat email"
 
 #: snikket_web/templates/admin_delete_user.html:19
 msgid "Danger"
-msgstr ""
+msgstr "Berbahaya"
 
 #: snikket_web/templates/admin_delete_user.html:23
 #: snikket_web/templates/admin_edit_circle.html:15
@@ -331,7 +347,7 @@ msgstr ""
 #: snikket_web/templates/user_passwd.html:40
 #: snikket_web/templates/user_profile.html:25
 msgid "Back"
-msgstr ""
+msgstr "Kembali"
 
 #: snikket_web/templates/admin_edit_circle.html:4
 #, python-format
@@ -365,15 +381,15 @@ msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:50
 msgid "Invite more members"
-msgstr ""
+msgstr "Ajak lebih banyak anggota"
 
 #: snikket_web/templates/admin_edit_circle.html:53
 msgid "Add existing user"
-msgstr ""
+msgstr "Tambahkan pengguna yang ada"
 
 #: snikket_web/templates/admin_edit_circle.html:64
 msgid "No users left"
-msgstr ""
+msgstr "Tidak ada pengguna tersisa"
 
 #: snikket_web/templates/admin_edit_circle.html:65
 msgid "All users on this service are already in this circle."
@@ -381,32 +397,34 @@ msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:8
 msgid "View invitation"
-msgstr ""
+msgstr "Lihat undangan"
 
 #: snikket_web/templates/admin_edit_invite.html:13
 #: snikket_web/templates/admin_invites.html:21
 #: snikket_web/templates/admin_reset_user_password.html:15
 msgid "Valid until"
-msgstr ""
+msgstr "Valid hingga"
 
 #: snikket_web/templates/admin_edit_invite.html:15
 #: snikket_web/templates/admin_reset_user_password.html:17
 msgid "Link"
-msgstr ""
+msgstr "Tautan"
 
 #: snikket_web/templates/admin_edit_invite.html:17
 msgid "Reusability"
-msgstr ""
+msgstr "Dapat digunakan kembali"
 
 #: snikket_web/templates/admin_edit_invite.html:18
 msgid ""
 "This invitation link can be used arbitrarily often, until it expires, is "
 "revoked or a service-wide user limit is reached."
 msgstr ""
+"Tautan undangan ini dapat terus digunakan, hingga habis masa berlakunya, "
+"dicabut atau batas pengguna seluruh layanan tercapai."
 
 #: snikket_web/templates/admin_edit_invite.html:18
 msgid "This invitation link can only be used once and is then depleted."
-msgstr ""
+msgstr "Tautan undangan ini hanya dapat digunakan satu kali."
 
 #: snikket_web/templates/admin_edit_invite.html:22
 msgid "Circles"
@@ -427,21 +445,21 @@ msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:39
 msgid "Created"
-msgstr ""
+msgstr "Dibuat"
 
 #: snikket_web/templates/admin_edit_user.html:3
 #, python-format
 msgid "Edit user %(user_name)s"
-msgstr ""
+msgstr "Edit pengguna %(user_name)s"
 
 #: snikket_web/templates/admin_edit_user.html:5
 msgid "User information"
-msgstr ""
+msgstr "Informasi pengguna"
 
 #: snikket_web/templates/admin_edit_user.html:25
 #: snikket_web/templates/admin_reset_user_password.html:8
 msgid "Password reset"
-msgstr ""
+msgstr "Reset kata kunci"
 
 #: snikket_web/templates/admin_edit_user.html:26
 msgid ""
@@ -450,220 +468,231 @@ msgid ""
 " the password of the account. Transmit the link to the user via a secure "
 "channel."
 msgstr ""
+"Jika pengguna lupa kata sandi, gunakan tombol di bawah untuk membuat tautan "
+"setel ulang kata sandi. Tautan pengaturan ulang kata sandi dapat digunakan "
+"satu kali untuk mengubah kata sandi akun. Kirimkan link ke pengguna melalui "
+"saluran aman."
 
 #: snikket_web/templates/admin_home.html:3
 msgid "Welcome to the administration dashboard!"
-msgstr ""
+msgstr "Selamat datang di dasbor administrasi!"
 
 #: snikket_web/templates/admin_home.html:4
 #, python-format
 msgid "At your service, %(user_name)s."
-msgstr ""
+msgstr "Siap melayani Anda, %(user_name)s."
 
 #: snikket_web/templates/admin_home.html:7
 #: snikket_web/templates/admin_users.html:4
 msgid "Manage users"
-msgstr ""
+msgstr "Atur pengguna"
 
 #: snikket_web/templates/admin_home.html:8
 msgid "Modify administrative user information or delete users."
-msgstr ""
+msgstr "Ubah informasi pengguna atau hapus pengguna."
 
 #: snikket_web/templates/admin_home.html:14
 #: snikket_web/templates/admin_invites.html:8
 msgid "Manage invitations"
-msgstr ""
+msgstr "Kelola undangan"
 
 #: snikket_web/templates/admin_home.html:15
 msgid "Create, revoke or view invitations."
-msgstr ""
+msgstr "Buat, batalkan, atau lihat undangan."
 
 #: snikket_web/templates/admin_home.html:18
 msgid "Back to the main view"
-msgstr ""
+msgstr "Kembali ke halaman utama"
 
 #: snikket_web/templates/admin_home.html:19
 msgid "Go back to your user’s web portal page."
-msgstr ""
+msgstr "Kembali ke halaman portal web pengguna Anda."
 
 #: snikket_web/templates/admin_invites.html:10
 msgid "Pending invitations"
-msgstr ""
+msgstr "Undangan menunggu jawaban"
 
 #: snikket_web/templates/admin_invites.html:22
 msgid "Reusable"
-msgstr ""
+msgstr "Digunakan kembali"
 
 #: snikket_web/templates/admin_invites.html:31
 msgid "Yes"
-msgstr ""
+msgstr "Ya"
 
 #: snikket_web/templates/admin_invites.html:31
 msgid "No"
-msgstr ""
+msgstr "Tidak"
 
 #: snikket_web/templates/admin_invites.html:41
 msgid "deleted"
-msgstr ""
+msgstr "Dihapus"
 
 #: snikket_web/templates/admin_invites.html:49
 msgid "Show invite details"
-msgstr ""
+msgstr "Lihat detil undangan"
 
 #: snikket_web/templates/admin_invites.html:52
 msgid "Copy invite link to clipboard"
-msgstr ""
+msgstr "Kopi tautan undangan ke papan klip"
 
 #: snikket_web/templates/admin_invites.html:55
 msgid "Delete invitation"
-msgstr ""
+msgstr "Hapus undangan"
 
 #: snikket_web/templates/admin_invites.html:63
 msgid "Currently, there are no pending invitations."
-msgstr ""
+msgstr "Saat ini, tidak ada undangan yang menunggu jawaban."
 
 #: snikket_web/templates/admin_reset_user_password.html:12
 #, python-format
 msgid "Password reset link for %(user_name)s"
-msgstr ""
+msgstr "Tautan setel ulang kata sandi %(user_name)s"
 
 #: snikket_web/templates/admin_reset_user_password.html:13
 msgid ""
 "The following link will allow the user to reset their password on their "
 "device, once."
 msgstr ""
+"Tautan ini memungkinkan pengguna menyetel ulang sandi di perangkat mereka, "
+"sekali."
 
 #: snikket_web/templates/admin_reset_user_password.html:22
 msgid "Destroy link"
-msgstr ""
+msgstr "Hancurkan tautan"
 
 #: snikket_web/templates/admin_users.html:13
 msgid "Phone number"
-msgstr ""
+msgstr "Nomor telepon"
 
 #: snikket_web/templates/admin_users.html:29
 #, python-format
 msgid "Show debug information for %(user_name)s"
-msgstr ""
+msgstr "Lihat informasi debug untuk %(user_name)s"
 
 #: snikket_web/templates/admin_users.html:32
 #, python-format
 msgid "Create password reset link for %(user_name)s"
-msgstr ""
+msgstr "Buat tautan setel ulang kata kunci untuk %(user_name)s"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
-msgstr ""
+msgstr "Portal Web Snikket"
 
 #: snikket_web/templates/backend_error.html:3
 #: snikket_web/templates/exception.html:3
 #: snikket_web/templates/internal_error.html:3
 msgid "Internal error"
-msgstr ""
+msgstr "Kesalahan internal"
 
 #: snikket_web/templates/backend_error.html:4
 msgid "The web portal was not able to communicate with the backend."
-msgstr ""
+msgstr "Portal web tidak dapat berkomunikasi dengan backend."
 
 #: snikket_web/templates/backend_error.html:5
 #: snikket_web/templates/internal_error.html:5
 msgid "Please try again later and/or inform your Snikket service admin."
-msgstr ""
+msgstr "Silahkan coba kembali dan/atau hubungi Administrator layanan Snikket."
 
 #: snikket_web/templates/copy-snippet.html:106
 msgid "Copied to clipboard"
-msgstr ""
+msgstr "Kopi ke papan klip"
 
 #: snikket_web/templates/copy-snippet.html:109
 msgid "Copy operation failed"
-msgstr ""
+msgstr "Proses penyalinan gagal"
 
 #: snikket_web/templates/generic_http_error.html:9
 msgid "Go back to the main page"
-msgstr ""
+msgstr "Kembali ke halaman utama"
 
 #: snikket_web/templates/internal_error.html:4
 msgid "The web portal encountered an internal error."
-msgstr ""
+msgstr "Portal web mengalami kesalahan internal."
 
 #: snikket_web/templates/library.j2:18
 msgid "Copy link"
-msgstr ""
+msgstr "Kopi tautan"
 
 #: snikket_web/templates/library.j2:79
 msgid "Invalid input"
-msgstr ""
+msgstr "Input tidak valid"
 
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
-msgstr ""
+msgstr "Login Snikket"
 
 #: snikket_web/templates/login.html:14
 msgid "Enter your Snikket address and password to manage your account."
-msgstr ""
+msgstr "Ketik alamat Snikket dan kata kuncinya untuk mengatur akun anda."
 
 #: snikket_web/templates/login.html:18
 msgid "Login failed"
-msgstr ""
+msgstr "Percobaan masuk gagal"
 
 #: snikket_web/templates/login.html:36 snikket_web/templates/unauth.html:14
 #, python-format
 msgid "A <a href=\"%(about_url)s\">Snikket</a> service"
-msgstr ""
+msgstr "<a href=\"%(about_url)s\">Layanan</a> Snikket"
 
 #: snikket_web/templates/user_home.html:3
 msgid "Welcome!"
-msgstr ""
+msgstr "Selamat datang!"
 
 #: snikket_web/templates/user_home.html:4
 #, python-format
 msgid "Welcome home, %(user_name)s."
-msgstr ""
+msgstr "Selamat kembali ke rumah, %(user_name)s."
 
 #: snikket_web/templates/user_home.html:7
 msgid "Update profile"
-msgstr ""
+msgstr "Perbaharui profil"
 
 #: snikket_web/templates/user_home.html:8
 msgid ""
 "Change display name, set avatar and configure visibility of your personal"
 " data to others."
 msgstr ""
+"Ubah nama tampilan, atur avatar, dan konfigurasikan visibilitas data pribadi "
+"Anda untuk orang lain."
 
 #: snikket_web/templates/user_home.html:11
 #: snikket_web/templates/user_passwd.html:42
 msgid "Change password"
-msgstr ""
+msgstr "Ganti kata kunci"
 
 #: snikket_web/templates/user_home.html:15
 msgid "Admin dashboard"
-msgstr ""
+msgstr "Dasbor Administrator"
 
 #: snikket_web/templates/user_home.html:16
 msgid "Manage users and invitations of this Snikket service."
-msgstr ""
+msgstr "Kelola pengguna dan undangan layanan Snikket."
 
 #: snikket_web/templates/user_home.html:20
 msgid "Log out"
-msgstr ""
+msgstr "Keluar"
 
 #: snikket_web/templates/user_home.html:21
 msgid "Exit the Snikket Web Portal, without logging out your other devices."
 msgstr ""
+"Keluar dari Portal Web Snikket, tanpa mengeluarkan perangkat Anda yang lain."
 
 #: snikket_web/templates/user_logout.html:8
 msgid "Sign out of the Snikket Web Portal"
-msgstr ""
+msgstr "Keluar dari Portal Web Snikket"
 
 #: snikket_web/templates/user_logout.html:9
 msgid ""
 "Click below to log yourself out of the web portal. This does not affect "
 "any other connected devices."
 msgstr ""
+"Klik tombol untuk keluar dari portal web. Ini tidak mempengaruhi perangkat "
+"lain yang terhubung."
 
 #: snikket_web/templates/user_passwd.html:8
 msgid "Change your password"
-msgstr ""
+msgstr "Ganti kata kunci anda"
 
 #: snikket_web/templates/user_passwd.html:9
 msgid ""
@@ -671,27 +700,34 @@ msgid ""
 " as the new one. To reduce the chance of typos, we ask for your new "
 "password twice."
 msgstr ""
+"Untuk mengubah kata sandi, Anda harus mengetik kata sandi saat dan juga yang "
+"baru. Untuk mengurangi kemungkinan salah ketik, kami meminta anda mengetik "
+"sandi baru dua kali."
 
 #: snikket_web/templates/user_passwd.html:13
 msgid "Password change failed"
-msgstr ""
+msgstr "Gagal mengganti kata kunci"
 
 #: snikket_web/templates/user_passwd.html:37
 msgid ""
 "After changing your password, you will have to enter the new password on "
 "all of your devices."
 msgstr ""
+"Sesudah penggantian kata sandi, anda perlu memasukkan kata sandi baru ke "
+"semua perangkat anda."
 
 #: snikket_web/templates/user_profile.html:8
 msgid "Profile"
-msgstr ""
+msgstr "Profil"
 
 #: snikket_web/templates/user_profile.html:18
 msgid "Visibility"
-msgstr ""
+msgstr "Visibilitas"
 
 #: snikket_web/templates/user_profile.html:19
 msgid ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
 msgstr ""
+"Bagian ini memungkinkan Anda untuk mengontrol siapa yang bisa melihat profil "
+"Anda, seperti avatar dan nama panggilan."
