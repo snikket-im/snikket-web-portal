@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-23 14:51+0100\n"
+"POT-Creation-Date: 2021-01-24 10:54+0100\n"
 "PO-Revision-Date: 2021-01-24 09:55+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
-"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/"
-"web-portal/pl/>\n"
+"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/web-"
+"portal/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
@@ -69,27 +69,27 @@ msgstr "Nowy link z zaproszeniem"
 msgid "Revoke"
 msgstr "Unieważnij"
 
-#: snikket_web/admin.py:274 snikket_web/admin.py:317
+#: snikket_web/admin.py:274 snikket_web/admin.py:318
 msgid "Name"
 msgstr "Nazwa"
 
-#: snikket_web/admin.py:278 snikket_web/templates/admin_circles.html:42
+#: snikket_web/admin.py:279 snikket_web/templates/admin_circles.html:42
 msgid "Create circle"
 msgstr "Utwórz krąg"
 
-#: snikket_web/admin.py:322
+#: snikket_web/admin.py:323
 msgid "Select user"
 msgstr "Wybierz użytkownika"
 
-#: snikket_web/admin.py:327 snikket_web/user.py:68
+#: snikket_web/admin.py:328 snikket_web/user.py:68
 msgid "Apply"
 msgstr "Zastosuj"
 
-#: snikket_web/admin.py:331
+#: snikket_web/admin.py:332
 msgid "Delete circle permanently"
 msgstr "Usuń krąg bezpowrotnie"
 
-#: snikket_web/admin.py:337
+#: snikket_web/admin.py:338
 msgid "Add user"
 msgstr "Dodaj użytkownika"
 
@@ -126,7 +126,9 @@ msgid "Confirm new password"
 msgstr "Potwierdź nowe hasło"
 
 #: snikket_web/user.py:35
-msgid "The new passwords must match."
+#, fuzzy
+#| msgid "The new passwords must match."
+msgid "The new passwords must match"
 msgstr "Nowe hasła muszą się zgadzać."
 
 #: snikket_web/user.py:42
@@ -159,7 +161,7 @@ msgstr "Awatar"
 msgid "Profile visibility"
 msgstr "Widoczność profilu"
 
-#: snikket_web/user.py:92
+#: snikket_web/user.py:93
 msgid "Incorrect password"
 msgstr "Nieprawidłowe hasło"
 
@@ -170,11 +172,11 @@ msgstr "O Snikket"
 #: snikket_web/templates/about.html:10
 #, python-format
 msgid ""
-"To learn more about Snikket, visit the <a "
-"href=\"%(snikket_url)s\">Snikket website</a>."
+"To learn more about Snikket, visit the <a href=\"%(snikket_url)s\">Snikket "
+"website</a>."
 msgstr ""
-"By dowiedzieć się więcej o Snikket, odwiedź <a href=\"%(snikket_url)s\""
-">stronę projektu</a>."
+"By dowiedzieć się więcej o Snikket, odwiedź <a href=\"%(snikket_url)s"
+"\">stronę projektu</a>."
 
 #: snikket_web/templates/about.html:11
 msgid "About this Service"
@@ -192,35 +194,35 @@ msgstr "Licencje"
 #: snikket_web/templates/about.html:14
 #, python-format
 msgid ""
-"The web portal software is licensed under the terms of the <a "
-"href=\"%(agpl_url)s\">Affero GNU General Public License, version 3.0 or "
-"later</a>. The full terms of the license can be reviewed using the "
-"aforementioned link."
+"The web portal software is licensed under the terms of the <a href="
+"\"%(agpl_url)s\">Affero GNU General Public License, version 3.0 or later</"
+"a>. The full terms of the license can be reviewed using the aforementioned "
+"link."
 msgstr ""
-"Oprogramowanie tego serwisu jest objęte licencją na warunkach <a href=\""
-"%(agpl_url)s\">Affero GNU General Public License, w wersji 3.0 lub "
+"Oprogramowanie tego serwisu jest objęte licencją na warunkach <a href="
+"\"%(agpl_url)s\">Affero GNU General Public License, w wersji 3.0 lub "
 "późniejszej</a>. Pełne warunki licencji można sprawdzić korzystając z "
 "wcześniej podanego odnośnika."
 
 #: snikket_web/templates/about.html:15
 #, python-format
 msgid ""
-"The source code of the web portal can be downloaded and viewed in <a "
-"href=\"%(source_url)s\">its GitHub repository</a>."
+"The source code of the web portal can be downloaded and viewed in <a href="
+"\"%(source_url)s\">its GitHub repository</a>."
 msgstr ""
-"Kod źródłowy portalu może zostać pobrany lub przejrzany w <a href=\""
-"%(source_url)s\">jego repozytorium na GitHub</a>."
+"Kod źródłowy portalu może zostać pobrany lub przejrzany w <a href="
+"\"%(source_url)s\">jego repozytorium na GitHub</a>."
 
 #: snikket_web/templates/about.html:16
 #, python-format
 msgid ""
 "The icons used in the web portal are <a href=\"%(source_url)s\">Google’s "
-"Material Icons</a>, made available by Google under the terms of the <a "
-"href=\"%(apache20_url)s\">Apache 2.0 License</a>."
+"Material Icons</a>, made available by Google under the terms of the <a href="
+"\"%(apache20_url)s\">Apache 2.0 License</a>."
 msgstr ""
 "Ikony wykorzystane w portalu to <a href=\"%(source_url)s\">Google’s Material "
-"Icons</a>, udostępnione przez Google na warunkach licencji<a href=\""
-"%(apache20_url)s\">Apache 2.0</a>."
+"Icons</a>, udostępnione przez Google na warunkach licencji<a href="
+"\"%(apache20_url)s\">Apache 2.0</a>."
 
 #: snikket_web/templates/about.html:17
 msgid "Software Versions"
@@ -229,6 +231,12 @@ msgstr "Wersje oprogramowania"
 #: snikket_web/templates/about.html:27
 msgid "Back to the main page"
 msgstr "Wróć do strony głównej"
+
+#: snikket_web/templates/admin_app.html:5
+#, fuzzy
+#| msgid "Admin dashboard"
+msgid "Admin area"
+msgstr "Panel administracyjny"
 
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:11
@@ -285,8 +293,8 @@ msgstr "Utwórz nowe zaproszenie"
 
 #: snikket_web/templates/admin_create_invite_form.html:6
 msgid ""
-"Create a new invitation link to invite more users to your Snikket service"
-" by clicking the button below."
+"Create a new invitation link to invite more users to your Snikket service by "
+"clicking the button below."
 msgstr ""
 "Aby zaprosić nowych użytkowników na twój serwer Snikket, utwórz nowy link "
 "zaproszenia, korzystając z poniższego przycisku."
@@ -297,7 +305,7 @@ msgid "Debug information for %(user_name)s"
 msgstr "Informacje debugowania dla %(user_name)s"
 
 #: snikket_web/templates/admin_debug_user.html:11
-#: snikket_web/templates/user_passwd.html:36
+#: snikket_web/templates/user_passwd.html:26
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
@@ -342,12 +350,19 @@ msgstr "Adres e-mail"
 msgid "Danger"
 msgstr "Niebezpieczne"
 
+#: snikket_web/templates/admin_delete_user.html:20
+msgid ""
+"The user and their data will be deleted irrevocably, permanently and "
+"immediately upon pushing thre below button. <strong>There is no way back!</"
+"strong>"
+msgstr ""
+
 #: snikket_web/templates/admin_delete_user.html:23
 #: snikket_web/templates/admin_edit_circle.html:15
 #: snikket_web/templates/admin_edit_invite.html:45
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
-#: snikket_web/templates/user_passwd.html:40
+#: snikket_web/templates/user_passwd.html:30
 #: snikket_web/templates/user_profile.html:25
 msgid "Back"
 msgstr "Wstecz"
@@ -434,7 +449,8 @@ msgid "Circles"
 msgstr "Kręgi"
 
 #: snikket_web/templates/admin_edit_invite.html:23
-msgid "Users joining via this invitation will be added to the following circles:"
+msgid ""
+"Users joining via this invitation will be added to the following circles:"
 msgstr ""
 "Użytkownik dołączający za pomocą tego zaproszenia zostanie dodany do "
 "poniższego kręgu:"
@@ -470,10 +486,9 @@ msgstr "Resetowanie hasła"
 
 #: snikket_web/templates/admin_edit_user.html:26
 msgid ""
-"If the user has forgotten their password, use the below button to create "
-"a password reset link. The password reset link can be used once to change"
-" the password of the account. Transmit the link to the user via a secure "
-"channel."
+"If the user has forgotten their password, use the below button to create a "
+"password reset link. The password reset link can be used once to change the "
+"password of the account. Transmit the link to the user via a secure channel."
 msgstr ""
 "Jeśli użytkownik zapomni swojego hasła, za pomocą poniższego przycisku "
 "wygenerujesz dla niego link do zresetowania hasła. Link może być "
@@ -603,14 +618,6 @@ msgstr ""
 "Spróbuj ponownie później i/lub poinformuj administratora twojego serwera "
 "Snikket."
 
-#: snikket_web/templates/copy-snippet.html:106
-msgid "Copied to clipboard"
-msgstr "Skopiowano do schowka"
-
-#: snikket_web/templates/copy-snippet.html:109
-msgid "Copy operation failed"
-msgstr "Kopiowanie nie powiodło się"
-
 #: snikket_web/templates/generic_http_error.html:9
 msgid "Go back to the main page"
 msgstr "Wróć do strony głównej"
@@ -623,7 +630,7 @@ msgstr "Portal internetowy napotkał błąd wewnętrzny."
 msgid "Copy link"
 msgstr "Skopiuj link"
 
-#: snikket_web/templates/library.j2:79
+#: snikket_web/templates/library.j2:80
 msgid "Invalid input"
 msgstr "Wprowadzone dane nieprawidłowe"
 
@@ -661,14 +668,14 @@ msgstr "Zaktualizuj profil"
 
 #: snikket_web/templates/user_home.html:8
 msgid ""
-"Change display name, set avatar and configure visibility of your personal"
-" data to others."
+"Change display name, set avatar and configure visibility of your personal "
+"data to others."
 msgstr ""
 "Zmień wyświetlaną nazwę, ustaw awatar oraz skonfiguruj widoczność swoich "
 "informacji dla innych."
 
 #: snikket_web/templates/user_home.html:11
-#: snikket_web/templates/user_passwd.html:42
+#: snikket_web/templates/user_passwd.html:32
 msgid "Change password"
 msgstr "Zmień hasło"
 
@@ -695,8 +702,8 @@ msgstr "Wyloguj się z Portalu Użytkownika Snikket"
 
 #: snikket_web/templates/user_logout.html:9
 msgid ""
-"Click below to log yourself out of the web portal. This does not affect "
-"any other connected devices."
+"Click below to log yourself out of the web portal. This does not affect any "
+"other connected devices."
 msgstr ""
 "Kliknij poniżej, aby wylogować się z portalu. Nie wpłynie to na pozostałe "
 "podłączone urządzenia."
@@ -707,21 +714,17 @@ msgstr "Zmień swoje hasło"
 
 #: snikket_web/templates/user_passwd.html:9
 msgid ""
-"To change your password, you need to provide the current password as well"
-" as the new one. To reduce the chance of typos, we ask for your new "
-"password twice."
+"To change your password, you need to provide the current password as well as "
+"the new one. To reduce the chance of typos, we ask for your new password "
+"twice."
 msgstr ""
 "Aby zmienić swoje hasło musisz podać również swoje obecne hasło. O podanie "
 "nowego hasła prosimy podwójnie, by zminimalizować możliwość pomyłki."
 
-#: snikket_web/templates/user_passwd.html:13
-msgid "Password change failed"
-msgstr "Zmiana hasła zakończona niepowodzeniem"
-
-#: snikket_web/templates/user_passwd.html:37
+#: snikket_web/templates/user_passwd.html:27
 msgid ""
-"After changing your password, you will have to enter the new password on "
-"all of your devices."
+"After changing your password, you will have to enter the new password on all "
+"of your devices."
 msgstr ""
 "Po zmianie hasła na nowe, musisz je wprowadzić na każdym swoim urządzeniu."
 
@@ -740,3 +743,12 @@ msgid ""
 msgstr ""
 "Ta sekcja pozwoli ci na zarządzenie widocznością informacji o twoim profilu "
 "przez innych, jak awatar lub pseudonim."
+
+#~ msgid "Copied to clipboard"
+#~ msgstr "Skopiowano do schowka"
+
+#~ msgid "Copy operation failed"
+#~ msgstr "Kopiowanie nie powiodło się"
+
+#~ msgid "Password change failed"
+#~ msgstr "Zmiana hasła zakończona niepowodzeniem"

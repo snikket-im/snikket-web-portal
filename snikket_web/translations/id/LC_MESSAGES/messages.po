@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-23 14:51+0100\n"
+"POT-Creation-Date: 2021-01-24 10:54+0100\n"
 "PO-Revision-Date: 2021-01-24 09:55+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
-"Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/"
-"web-portal/id/>\n"
+"Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/web-"
+"portal/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.4.2\n"
@@ -68,27 +68,27 @@ msgstr "Tautan undangan terbaru"
 msgid "Revoke"
 msgstr "Batalkan"
 
-#: snikket_web/admin.py:274 snikket_web/admin.py:317
+#: snikket_web/admin.py:274 snikket_web/admin.py:318
 msgid "Name"
 msgstr "Nama"
 
-#: snikket_web/admin.py:278 snikket_web/templates/admin_circles.html:42
+#: snikket_web/admin.py:279 snikket_web/templates/admin_circles.html:42
 msgid "Create circle"
 msgstr ""
 
-#: snikket_web/admin.py:322
+#: snikket_web/admin.py:323
 msgid "Select user"
 msgstr "Pilih pengguna"
 
-#: snikket_web/admin.py:327 snikket_web/user.py:68
+#: snikket_web/admin.py:328 snikket_web/user.py:68
 msgid "Apply"
 msgstr "Terapkan"
 
-#: snikket_web/admin.py:331
+#: snikket_web/admin.py:332
 msgid "Delete circle permanently"
 msgstr ""
 
-#: snikket_web/admin.py:337
+#: snikket_web/admin.py:338
 msgid "Add user"
 msgstr "Tambah pengguna"
 
@@ -125,7 +125,9 @@ msgid "Confirm new password"
 msgstr "Konfirmasi kata kunci"
 
 #: snikket_web/user.py:35
-msgid "The new passwords must match."
+#, fuzzy
+#| msgid "The new passwords must match."
+msgid "The new passwords must match"
 msgstr "Kata kunci baru harus cocok."
 
 #: snikket_web/user.py:42
@@ -158,7 +160,7 @@ msgstr "Gambar profil"
 msgid "Profile visibility"
 msgstr "Visibilitas profil"
 
-#: snikket_web/user.py:92
+#: snikket_web/user.py:93
 msgid "Incorrect password"
 msgstr "Kata kunci salah"
 
@@ -169,11 +171,11 @@ msgstr "Tentang Snikket"
 #: snikket_web/templates/about.html:10
 #, python-format
 msgid ""
-"To learn more about Snikket, visit the <a "
-"href=\"%(snikket_url)s\">Snikket website</a>."
+"To learn more about Snikket, visit the <a href=\"%(snikket_url)s\">Snikket "
+"website</a>."
 msgstr ""
-"Untuk mempelajari tentang Snikket, kunjungi <a href=\"%(snikket_url)s\""
-">website Snikket</a>."
+"Untuk mempelajari tentang Snikket, kunjungi <a href=\"%(snikket_url)s"
+"\">website Snikket</a>."
 
 #: snikket_web/templates/about.html:11
 msgid "About this Service"
@@ -191,31 +193,31 @@ msgstr "Lisensi"
 #: snikket_web/templates/about.html:14
 #, python-format
 msgid ""
-"The web portal software is licensed under the terms of the <a "
-"href=\"%(agpl_url)s\">Affero GNU General Public License, version 3.0 or "
-"later</a>. The full terms of the license can be reviewed using the "
-"aforementioned link."
+"The web portal software is licensed under the terms of the <a href="
+"\"%(agpl_url)s\">Affero GNU General Public License, version 3.0 or later</"
+"a>. The full terms of the license can be reviewed using the aforementioned "
+"link."
 msgstr ""
-"Perangkat lunak portal web dilisensikan di bawah persyaratan <a href=\""
-"%(agpl_url)s\">Affero GNU General Public License, versi 3.0 atau yang lebih "
-"baru </a>. Persyaratan lengkap lisensi dapat ditinjau menggunakan tautan "
-"yang disebutkan di atas."
+"Perangkat lunak portal web dilisensikan di bawah persyaratan <a href="
+"\"%(agpl_url)s\">Affero GNU General Public License, versi 3.0 atau yang "
+"lebih baru </a>. Persyaratan lengkap lisensi dapat ditinjau menggunakan "
+"tautan yang disebutkan di atas."
 
 #: snikket_web/templates/about.html:15
 #, python-format
 msgid ""
-"The source code of the web portal can be downloaded and viewed in <a "
-"href=\"%(source_url)s\">its GitHub repository</a>."
+"The source code of the web portal can be downloaded and viewed in <a href="
+"\"%(source_url)s\">its GitHub repository</a>."
 msgstr ""
-"Kode sumber portal web dapat diunduh dan dilihat di <a href=\"%(source_url)"
-"s\">GitHub repositori</a>."
+"Kode sumber portal web dapat diunduh dan dilihat di <a href=\"%(source_url)s"
+"\">GitHub repositori</a>."
 
 #: snikket_web/templates/about.html:16
 #, python-format
 msgid ""
 "The icons used in the web portal are <a href=\"%(source_url)s\">Google’s "
-"Material Icons</a>, made available by Google under the terms of the <a "
-"href=\"%(apache20_url)s\">Apache 2.0 License</a>."
+"Material Icons</a>, made available by Google under the terms of the <a href="
+"\"%(apache20_url)s\">Apache 2.0 License</a>."
 msgstr ""
 "Ikon yang digunakan di portal web adalah <a href=\"%(source_url)s\">Ikon "
 "Material Google</a>, yang disediakan oleh Google di bawah persyaratan <a "
@@ -228,6 +230,12 @@ msgstr "Versi perangkat lunak"
 #: snikket_web/templates/about.html:27
 msgid "Back to the main page"
 msgstr "Kembali ke halaman depan"
+
+#: snikket_web/templates/admin_app.html:5
+#, fuzzy
+#| msgid "Admin dashboard"
+msgid "Admin area"
+msgstr "Dasbor Administrator"
 
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:11
@@ -282,8 +290,8 @@ msgstr "Buat undangan baru"
 
 #: snikket_web/templates/admin_create_invite_form.html:6
 msgid ""
-"Create a new invitation link to invite more users to your Snikket service"
-" by clicking the button below."
+"Create a new invitation link to invite more users to your Snikket service by "
+"clicking the button below."
 msgstr ""
 "Buat tautan undangan baru untuk mengundang lebih banyak pengguna ke layanan "
 "Snikket dengan klik tombol di bawah."
@@ -294,7 +302,7 @@ msgid "Debug information for %(user_name)s"
 msgstr "Informasi debug untuk %(user_name)s"
 
 #: snikket_web/templates/admin_debug_user.html:11
-#: snikket_web/templates/user_passwd.html:36
+#: snikket_web/templates/user_passwd.html:26
 msgid "Warning"
 msgstr "Peringatan"
 
@@ -339,12 +347,19 @@ msgstr "Alamat email"
 msgid "Danger"
 msgstr "Berbahaya"
 
+#: snikket_web/templates/admin_delete_user.html:20
+msgid ""
+"The user and their data will be deleted irrevocably, permanently and "
+"immediately upon pushing thre below button. <strong>There is no way back!</"
+"strong>"
+msgstr ""
+
 #: snikket_web/templates/admin_delete_user.html:23
 #: snikket_web/templates/admin_edit_circle.html:15
 #: snikket_web/templates/admin_edit_invite.html:45
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
-#: snikket_web/templates/user_passwd.html:40
+#: snikket_web/templates/user_passwd.html:30
 #: snikket_web/templates/user_profile.html:25
 msgid "Back"
 msgstr "Kembali"
@@ -431,7 +446,8 @@ msgid "Circles"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:23
-msgid "Users joining via this invitation will be added to the following circles:"
+msgid ""
+"Users joining via this invitation will be added to the following circles:"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:29
@@ -463,10 +479,9 @@ msgstr "Reset kata kunci"
 
 #: snikket_web/templates/admin_edit_user.html:26
 msgid ""
-"If the user has forgotten their password, use the below button to create "
-"a password reset link. The password reset link can be used once to change"
-" the password of the account. Transmit the link to the user via a secure "
-"channel."
+"If the user has forgotten their password, use the below button to create a "
+"password reset link. The password reset link can be used once to change the "
+"password of the account. Transmit the link to the user via a secure channel."
 msgstr ""
 "Jika pengguna lupa kata sandi, gunakan tombol di bawah untuk membuat tautan "
 "setel ulang kata sandi. Tautan pengaturan ulang kata sandi dapat digunakan "
@@ -594,14 +609,6 @@ msgstr "Portal web tidak dapat berkomunikasi dengan backend."
 msgid "Please try again later and/or inform your Snikket service admin."
 msgstr "Silahkan coba kembali dan/atau hubungi Administrator layanan Snikket."
 
-#: snikket_web/templates/copy-snippet.html:106
-msgid "Copied to clipboard"
-msgstr "Kopi ke papan klip"
-
-#: snikket_web/templates/copy-snippet.html:109
-msgid "Copy operation failed"
-msgstr "Proses penyalinan gagal"
-
 #: snikket_web/templates/generic_http_error.html:9
 msgid "Go back to the main page"
 msgstr "Kembali ke halaman utama"
@@ -614,7 +621,7 @@ msgstr "Portal web mengalami kesalahan internal."
 msgid "Copy link"
 msgstr "Kopi tautan"
 
-#: snikket_web/templates/library.j2:79
+#: snikket_web/templates/library.j2:80
 msgid "Invalid input"
 msgstr "Input tidak valid"
 
@@ -650,14 +657,14 @@ msgstr "Perbaharui profil"
 
 #: snikket_web/templates/user_home.html:8
 msgid ""
-"Change display name, set avatar and configure visibility of your personal"
-" data to others."
+"Change display name, set avatar and configure visibility of your personal "
+"data to others."
 msgstr ""
 "Ubah nama tampilan, atur avatar, dan konfigurasikan visibilitas data pribadi "
 "Anda untuk orang lain."
 
 #: snikket_web/templates/user_home.html:11
-#: snikket_web/templates/user_passwd.html:42
+#: snikket_web/templates/user_passwd.html:32
 msgid "Change password"
 msgstr "Ganti kata kunci"
 
@@ -684,8 +691,8 @@ msgstr "Keluar dari Portal Web Snikket"
 
 #: snikket_web/templates/user_logout.html:9
 msgid ""
-"Click below to log yourself out of the web portal. This does not affect "
-"any other connected devices."
+"Click below to log yourself out of the web portal. This does not affect any "
+"other connected devices."
 msgstr ""
 "Klik tombol untuk keluar dari portal web. Ini tidak mempengaruhi perangkat "
 "lain yang terhubung."
@@ -696,22 +703,18 @@ msgstr "Ganti kata kunci anda"
 
 #: snikket_web/templates/user_passwd.html:9
 msgid ""
-"To change your password, you need to provide the current password as well"
-" as the new one. To reduce the chance of typos, we ask for your new "
-"password twice."
+"To change your password, you need to provide the current password as well as "
+"the new one. To reduce the chance of typos, we ask for your new password "
+"twice."
 msgstr ""
 "Untuk mengubah kata sandi, Anda harus mengetik kata sandi saat dan juga yang "
 "baru. Untuk mengurangi kemungkinan salah ketik, kami meminta anda mengetik "
 "sandi baru dua kali."
 
-#: snikket_web/templates/user_passwd.html:13
-msgid "Password change failed"
-msgstr "Gagal mengganti kata kunci"
-
-#: snikket_web/templates/user_passwd.html:37
+#: snikket_web/templates/user_passwd.html:27
 msgid ""
-"After changing your password, you will have to enter the new password on "
-"all of your devices."
+"After changing your password, you will have to enter the new password on all "
+"of your devices."
 msgstr ""
 "Sesudah penggantian kata sandi, anda perlu memasukkan kata sandi baru ke "
 "semua perangkat anda."
@@ -731,3 +734,12 @@ msgid ""
 msgstr ""
 "Bagian ini memungkinkan Anda untuk mengontrol siapa yang bisa melihat profil "
 "Anda, seperti avatar dan nama panggilan."
+
+#~ msgid "Copied to clipboard"
+#~ msgstr "Kopi ke papan klip"
+
+#~ msgid "Copy operation failed"
+#~ msgstr "Proses penyalinan gagal"
+
+#~ msgid "Password change failed"
+#~ msgstr "Gagal mengganti kata kunci"

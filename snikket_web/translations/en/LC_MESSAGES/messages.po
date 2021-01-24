@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-23 14:51+0100\n"
+"POT-Creation-Date: 2021-01-24 10:54+0100\n"
 "PO-Revision-Date: 2021-01-23 17:06+0000\n"
 "Last-Translator: Matthew Wild <matthew@snikket.org>\n"
-"Language-Team: English <https://i18n.sotecware.net/projects/snikket/"
-"web-portal/en/>\n"
+"Language-Team: English <https://i18n.sotecware.net/projects/snikket/web-"
+"portal/en/>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -68,27 +68,27 @@ msgstr "New invitation link"
 msgid "Revoke"
 msgstr "Revoke"
 
-#: snikket_web/admin.py:274 snikket_web/admin.py:317
+#: snikket_web/admin.py:274 snikket_web/admin.py:318
 msgid "Name"
 msgstr "Name"
 
-#: snikket_web/admin.py:278 snikket_web/templates/admin_circles.html:42
+#: snikket_web/admin.py:279 snikket_web/templates/admin_circles.html:42
 msgid "Create circle"
 msgstr "Create circle"
 
-#: snikket_web/admin.py:322
+#: snikket_web/admin.py:323
 msgid "Select user"
 msgstr "Select user"
 
-#: snikket_web/admin.py:327 snikket_web/user.py:68
+#: snikket_web/admin.py:328 snikket_web/user.py:68
 msgid "Apply"
 msgstr "Apply"
 
-#: snikket_web/admin.py:331
+#: snikket_web/admin.py:332
 msgid "Delete circle permanently"
 msgstr "Delete circle permanently"
 
-#: snikket_web/admin.py:337
+#: snikket_web/admin.py:338
 msgid "Add user"
 msgstr "Add user"
 
@@ -125,7 +125,9 @@ msgid "Confirm new password"
 msgstr "Confirm new password"
 
 #: snikket_web/user.py:35
-msgid "The new passwords must match."
+#, fuzzy
+#| msgid "The new passwords must match."
+msgid "The new passwords must match"
 msgstr "The new passwords must match."
 
 #: snikket_web/user.py:42
@@ -158,7 +160,7 @@ msgstr "Avatar"
 msgid "Profile visibility"
 msgstr "Profile visibility"
 
-#: snikket_web/user.py:92
+#: snikket_web/user.py:93
 msgid "Incorrect password"
 msgstr "Incorrect password"
 
@@ -196,9 +198,10 @@ msgid ""
 "a>. The full terms of the license can be reviewed using the aforementioned "
 "link."
 msgstr ""
-"The web portal software is licensed under the terms of the <a href=\""
-"%(agpl_url)s\">Affero GNU General Public License, version 3.0 or later</a>. "
-"The full terms of the license can be reviewed using the aforementioned link."
+"The web portal software is licensed under the terms of the <a href="
+"\"%(agpl_url)s\">Affero GNU General Public License, version 3.0 or later</"
+"a>. The full terms of the license can be reviewed using the aforementioned "
+"link."
 
 #: snikket_web/templates/about.html:15
 #, python-format
@@ -206,8 +209,8 @@ msgid ""
 "The source code of the web portal can be downloaded and viewed in <a href="
 "\"%(source_url)s\">its GitHub repository</a>."
 msgstr ""
-"The source code of the web portal can be downloaded and viewed in <a href=\""
-"%(source_url)s\">its GitHub repository</a>."
+"The source code of the web portal can be downloaded and viewed in <a href="
+"\"%(source_url)s\">its GitHub repository</a>."
 
 #: snikket_web/templates/about.html:16
 #, python-format
@@ -227,6 +230,12 @@ msgstr "Software Versions"
 #: snikket_web/templates/about.html:27
 msgid "Back to the main page"
 msgstr "Back to the main page"
+
+#: snikket_web/templates/admin_app.html:5
+#, fuzzy
+#| msgid "Admin dashboard"
+msgid "Admin area"
+msgstr "Admin dashboard"
 
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:11
@@ -295,7 +304,7 @@ msgid "Debug information for %(user_name)s"
 msgstr "Debug information for %(user_name)s"
 
 #: snikket_web/templates/admin_debug_user.html:11
-#: snikket_web/templates/user_passwd.html:36
+#: snikket_web/templates/user_passwd.html:26
 msgid "Warning"
 msgstr "Warning"
 
@@ -340,12 +349,19 @@ msgstr "Email address"
 msgid "Danger"
 msgstr "Danger"
 
+#: snikket_web/templates/admin_delete_user.html:20
+msgid ""
+"The user and their data will be deleted irrevocably, permanently and "
+"immediately upon pushing thre below button. <strong>There is no way back!</"
+"strong>"
+msgstr ""
+
 #: snikket_web/templates/admin_delete_user.html:23
 #: snikket_web/templates/admin_edit_circle.html:15
 #: snikket_web/templates/admin_edit_invite.html:45
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
-#: snikket_web/templates/user_passwd.html:40
+#: snikket_web/templates/user_passwd.html:30
 #: snikket_web/templates/user_profile.html:25
 msgid "Back"
 msgstr "Back"
@@ -596,14 +612,6 @@ msgstr ""
 msgid "Please try again later and/or inform your Snikket service admin."
 msgstr "Please try again later and/or inform your Snikket service admin."
 
-#: snikket_web/templates/copy-snippet.html:106
-msgid "Copied to clipboard"
-msgstr "Copied to clipboard"
-
-#: snikket_web/templates/copy-snippet.html:109
-msgid "Copy operation failed"
-msgstr "Copy operation failed"
-
 #: snikket_web/templates/generic_http_error.html:9
 msgid "Go back to the main page"
 msgstr "Go back to the main page"
@@ -617,7 +625,7 @@ msgstr "The web portal encountered an internal error."
 msgid "Copy link"
 msgstr "Copy link"
 
-#: snikket_web/templates/library.j2:79
+#: snikket_web/templates/library.j2:80
 msgid "Invalid input"
 msgstr "Invalid input"
 
@@ -660,7 +668,7 @@ msgstr ""
 "data to others."
 
 #: snikket_web/templates/user_home.html:11
-#: snikket_web/templates/user_passwd.html:42
+#: snikket_web/templates/user_passwd.html:32
 msgid "Change password"
 msgstr "Change password"
 
@@ -706,11 +714,7 @@ msgstr ""
 "the new one. To reduce the chance of typos, we ask for your new password "
 "twice."
 
-#: snikket_web/templates/user_passwd.html:13
-msgid "Password change failed"
-msgstr "Password change failed"
-
-#: snikket_web/templates/user_passwd.html:37
+#: snikket_web/templates/user_passwd.html:27
 msgid ""
 "After changing your password, you will have to enter the new password on all "
 "of your devices."
@@ -733,3 +737,12 @@ msgid ""
 msgstr ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
+
+#~ msgid "Copied to clipboard"
+#~ msgstr "Copied to clipboard"
+
+#~ msgid "Copy operation failed"
+#~ msgstr "Copy operation failed"
+
+#~ msgid "Password change failed"
+#~ msgstr "Password change failed"
