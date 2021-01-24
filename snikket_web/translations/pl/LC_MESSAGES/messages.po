@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-24 11:05+0100\n"
-"PO-Revision-Date: 2021-01-24 10:05+0000\n"
+"PO-Revision-Date: 2021-01-26 14:06+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
-"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/pl/>\n"
+"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -83,7 +83,7 @@ msgstr "Wybierz użytkownika"
 
 #: snikket_web/admin.py:328 snikket_web/user.py:68
 msgid "Apply"
-msgstr "Zastosuj"
+msgstr "Zapisz"
 
 #: snikket_web/admin.py:332
 msgid "Delete circle permanently"
@@ -183,7 +183,7 @@ msgstr "O tej usłudze"
 #: snikket_web/templates/about.html:12
 #, python-format
 msgid "This is the Snikket service <em>%(site_name)s</em>."
-msgstr "To serwer Snikket na <em>%(site_name)s</em>."
+msgstr "To serwer Snikket: <em>%(site_name)s</em>."
 
 #: snikket_web/templates/about.html:13
 msgid "Licenses"
@@ -292,8 +292,8 @@ msgid ""
 "Create a new invitation link to invite more users to your Snikket service by "
 "clicking the button below."
 msgstr ""
-"Aby zaprosić nowych użytkowników na twój serwer Snikket, utwórz nowy link "
-"zaproszenia, korzystając z poniższego przycisku."
+"Utwórz nowy link zaproszenia korzystając z poniższego przycisku. Pozwoli on "
+"zaprosić nowych użytkowników na twój serwer Snikket."
 
 #: snikket_web/templates/admin_debug_user.html:8
 #, python-format
@@ -344,7 +344,7 @@ msgstr "Adres e-mail"
 
 #: snikket_web/templates/admin_delete_user.html:19
 msgid "Danger"
-msgstr "Niebezpieczne"
+msgstr "Uwaga"
 
 #: snikket_web/templates/admin_delete_user.html:20
 msgid ""
@@ -352,6 +352,9 @@ msgid ""
 "immediately upon pushing the below button. <strong>There is no way back!</"
 "strong>"
 msgstr ""
+"Użytkownik oraz jego dane zostaną nieodwracalnie, trwale i natychmiastowo "
+"usunięte po naciśnięciu poniższego przycisku. <strong>Nie będzie można tego "
+"cofnąć!</strong>"
 
 #: snikket_web/templates/admin_delete_user.html:23
 #: snikket_web/templates/admin_edit_circle.html:15
@@ -411,7 +414,7 @@ msgstr "Wszyscy użytkownicy tego serwera są obecnie w tym kręgu."
 
 #: snikket_web/templates/admin_edit_invite.html:8
 msgid "View invitation"
-msgstr "Zobacz zaproszenie"
+msgstr "Szczegóły zaproszenia"
 
 #: snikket_web/templates/admin_edit_invite.html:13
 #: snikket_web/templates/admin_invites.html:21
@@ -426,7 +429,7 @@ msgstr "Link"
 
 #: snikket_web/templates/admin_edit_invite.html:17
 msgid "Reusability"
-msgstr "Możliwość ponownego wykorzystania"
+msgstr "Możliwość wielokrotnego użycia"
 
 #: snikket_web/templates/admin_edit_invite.html:18
 msgid ""
@@ -434,7 +437,7 @@ msgid ""
 "revoked or a service-wide user limit is reached."
 msgstr ""
 "Ten link z zaproszeniem może być wykorzystywany do momentu wygaśnięcia, "
-"unieważnienia lub osiągnięcia limitu użytkowników."
+"unieważnienia lub osiągnięcia limitu użytkowników serwera."
 
 #: snikket_web/templates/admin_edit_invite.html:18
 msgid "This invitation link can only be used once and is then depleted."
@@ -448,8 +451,8 @@ msgstr "Kręgi"
 msgid ""
 "Users joining via this invitation will be added to the following circles:"
 msgstr ""
-"Użytkownik dołączający za pomocą tego zaproszenia zostanie dodany do "
-"poniższego kręgu:"
+"Użytkownicy dołączający za pomocą tego zaproszenia zostaną dodani do "
+"poniższych kręgów:"
 
 #: snikket_web/templates/admin_edit_invite.html:29
 #: snikket_web/templates/admin_invites.html:23
@@ -464,7 +467,7 @@ msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:39
 msgid "Created"
-msgstr "Utworzony"
+msgstr "Utworzono"
 
 #: snikket_web/templates/admin_edit_user.html:3
 #, python-format
@@ -544,7 +547,7 @@ msgstr "Nie"
 
 #: snikket_web/templates/admin_invites.html:41
 msgid "deleted"
-msgstr "usunięte"
+msgstr "usunięty"
 
 #: snikket_web/templates/admin_invites.html:49
 msgid "Show invite details"
@@ -577,7 +580,7 @@ msgstr ""
 
 #: snikket_web/templates/admin_reset_user_password.html:22
 msgid "Destroy link"
-msgstr "Usuń link"
+msgstr "Zniszcz link"
 
 #: snikket_web/templates/admin_users.html:13
 msgid "Phone number"
@@ -628,7 +631,7 @@ msgstr "Skopiuj link"
 
 #: snikket_web/templates/library.j2:80
 msgid "Invalid input"
-msgstr "Wprowadzone dane nieprawidłowe"
+msgstr "Dane nieprawidłowe"
 
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
@@ -636,9 +639,7 @@ msgstr "Snikket - Logowanie"
 
 #: snikket_web/templates/login.html:14
 msgid "Enter your Snikket address and password to manage your account."
-msgstr ""
-"Wprowadź adres swojego serwera Snikket oraz hasło, aby zarządzać swoim "
-"kontem."
+msgstr "Wprowadź swój adres Snikket oraz hasło, aby zarządzać kontem."
 
 #: snikket_web/templates/login.html:18
 msgid "Login failed"
@@ -714,8 +715,8 @@ msgid ""
 "the new one. To reduce the chance of typos, we ask for your new password "
 "twice."
 msgstr ""
-"Aby zmienić swoje hasło musisz podać również swoje obecne hasło. O podanie "
-"nowego hasła prosimy podwójnie, by zminimalizować możliwość pomyłki."
+"Aby zmienić swoje hasło musisz podać również dotychczasowe. O podanie nowego "
+"hasła prosimy podwójnie, by zminimalizować możliwość pomyłki."
 
 #: snikket_web/templates/user_passwd.html:27
 msgid ""
