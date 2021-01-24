@@ -74,14 +74,15 @@
 {%- endmacro %}
 
 {% macro render_errors(field, caller=None) -%}
-{%- if field.errors -%}
+{%- set error_list = field.errors if field.errors is not mapping else (field.errors.values() | flatten | list) -%}
+{%- if error_list -%}
 <div class="box warning">{#- -#}
 <header>{% trans %}Invalid input{% endtrans %}</header>
-{%- if field.errors | length == 1 -%}
-<p>{{ field.errors[0] }}.</p>
+{%- if error_list | length == 1 -%}
+<p>{{ error_list[0] }}.</p>
 {%- else -%}
 <ul>
-{%- for error in field.errors -%}
+{%- for error in error_list -%}
 	<li>{{ error }}</li>
 {%- endfor -%}
 </ul>

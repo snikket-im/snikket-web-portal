@@ -32,7 +32,7 @@ class ChangePasswordForm(flask_wtf.FlaskForm):  # type:ignore
         validators=[wtforms.validators.InputRequired(),
                     wtforms.validators.EqualTo(
                         "new_password",
-                        _l("The new passwords must match.")
+                        _l("The new passwords must match")
                     )]
     )
 
@@ -86,9 +86,10 @@ async def change_pw() -> typing.Union[str, quart.Response]:
                 form.current_password.data,
                 form.new_password.data,
             )
-        except quart.exceptions.Unauthorized:
+        except (quart.exceptions.Unauthorized,
+                quart.exceptions.Forbidden):
             # server refused current password, set an appropriate error
-            form.errors.setdefault(form.current_password.name, []).append(
+            form.current_password.errors.append(
                 _("Incorrect password"),
             )
         else:

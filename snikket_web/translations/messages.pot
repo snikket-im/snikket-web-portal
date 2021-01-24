@@ -122,7 +122,7 @@ msgid "Confirm new password"
 msgstr ""
 
 #: snikket_web/user.py:35
-msgid "The new passwords must match."
+msgid "The new passwords must match"
 msgstr ""
 
 #: snikket_web/user.py:42
@@ -155,7 +155,7 @@ msgstr ""
 msgid "Profile visibility"
 msgstr ""
 
-#: snikket_web/user.py:92
+#: snikket_web/user.py:93
 msgid "Incorrect password"
 msgstr ""
 
@@ -282,7 +282,7 @@ msgid "Debug information for %(user_name)s"
 msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:11
-#: snikket_web/templates/user_passwd.html:36
+#: snikket_web/templates/user_passwd.html:26
 msgid "Warning"
 msgstr ""
 
@@ -339,7 +339,7 @@ msgstr ""
 #: snikket_web/templates/admin_edit_invite.html:45
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
-#: snikket_web/templates/user_passwd.html:40
+#: snikket_web/templates/user_passwd.html:30
 #: snikket_web/templates/user_profile.html:25
 msgid "Back"
 msgstr ""
@@ -593,7 +593,7 @@ msgstr ""
 msgid "Copy link"
 msgstr ""
 
-#: snikket_web/templates/library.j2:79
+#: snikket_web/templates/library.j2:80
 msgid "Invalid input"
 msgstr ""
 
@@ -634,7 +634,7 @@ msgid ""
 msgstr ""
 
 #: snikket_web/templates/user_home.html:11
-#: snikket_web/templates/user_passwd.html:42
+#: snikket_web/templates/user_passwd.html:32
 msgid "Change password"
 msgstr ""
 
@@ -675,11 +675,7 @@ msgid ""
 "password twice."
 msgstr ""
 
-#: snikket_web/templates/user_passwd.html:13
-msgid "Password change failed"
-msgstr ""
-
-#: snikket_web/templates/user_passwd.html:37
+#: snikket_web/templates/user_passwd.html:27
 msgid ""
 "After changing your password, you will have to enter the new password on "
 "all of your devices."

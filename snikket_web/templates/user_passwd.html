@@ -1,5 +1,5 @@
 {% extends "app.html" %}
-{% from "library.j2" import standard_button, custom_form_button %}
+{% from "library.j2" import standard_button, custom_form_button, render_errors %}
 {% block head_lead %}
 <title>Snikket Web Portal</title>
 {% endblock %}
@@ -8,18 +8,8 @@
 	<h2 class="form-title">{% trans %}Change your password{% endtrans %}</h2>
 	<p class="form-desc weak">{% trans %}To change your password, you need to provide the current password as well as the new one. To reduce the chance of typos, we ask for your new password twice.{% endtrans %}</p>
 	{{ form.csrf_token }}
-	{% if form.errors %}
-	<div class="box alert">
-		<header>{% trans %}Password change failed{% endtrans %}</header>
-		<ul>
-		{% for field, errors in form.errors.items() %}
-		{% for error in errors %}
-		<li>{{ error }}</li>
-		{% endfor %}
-		{% endfor %}
-		</ul>
-	</div>
-	{% endif %}
+	{%- call render_errors(form) -%}
+	{%- endcall -%}
 	<div class="f-ebox">
 		{{ form.current_password.label(class="required") }}
 		{{ form.current_password(class=("has-error" if form.current_password.name in form.errors else "")) }}
