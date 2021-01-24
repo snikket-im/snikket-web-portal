@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-24 11:05+0100\n"
-"PO-Revision-Date: 2021-01-24 19:18+0000\n"
-"Last-Translator: pep <pep@bouah.net>\n"
+"PO-Revision-Date: 2021-01-24 22:21+0000\n"
+"Last-Translator: franck <dev@monanderos.fr>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/fr/>\n"
 "Language: fr\n"
@@ -148,7 +148,7 @@ msgstr "Tout le monde"
 #: snikket_web/templates/admin_delete_user.html:16
 #: snikket_web/templates/admin_users.html:11 snikket_web/user.py:55
 msgid "Display name"
-msgstr ""
+msgstr "Nom à afficher"
 
 #: snikket_web/user.py:59
 msgid "Avatar"
@@ -210,12 +210,15 @@ msgstr ""
 "%(source_url)s\">son dépôt GitHub</a>."
 
 #: snikket_web/templates/about.html:16
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "The icons used in the web portal are <a href=\"%(source_url)s\">Google’s "
 "Material Icons</a>, made available by Google under the terms of the <a href="
 "\"%(apache20_url)s\">Apache 2.0 License</a>."
 msgstr ""
+"Les icones utilisées dans le portail web sont <a href=\"%(source_url)s\""
+">Google’s Material Icons</a>, mises à dispositions par Google aux termes de "
+"la <a href=\"%(apache20_url)s\">licence Apache 2.0 </a>."
 
 #: snikket_web/templates/about.html:17
 msgid "Software Versions"
@@ -289,9 +292,9 @@ msgid ""
 msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:8
-#, fuzzy, python-format
+#, python-format
 msgid "Debug information for %(user_name)s"
-msgstr "Informations de debug pour %(user_name)s"
+msgstr "Informations de débogage pour %(user_name)s"
 
 #: snikket_web/templates/admin_debug_user.html:11
 #: snikket_web/templates/user_passwd.html:26
@@ -304,7 +307,7 @@ msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:15
 msgid "Raw debug dump"
-msgstr ""
+msgstr "Journal de débogage brute"
 
 #: snikket_web/templates/admin_debug_user.html:17
 msgid "Copy complete output"
@@ -490,8 +493,10 @@ msgid "Manage users"
 msgstr "Gérer les utilisateurs"
 
 #: snikket_web/templates/admin_home.html:8
+#, fuzzy
 msgid "Modify administrative user information or delete users."
 msgstr ""
+"Modifier les informations des utilisateurs ou désinscrire des utilisateurs."
 
 #: snikket_web/templates/admin_home.html:14
 #: snikket_web/templates/admin_invites.html:8
@@ -632,9 +637,9 @@ msgid "Welcome!"
 msgstr "Bienvenue !"
 
 #: snikket_web/templates/user_home.html:4
-#, python-format
+#, fuzzy, python-format
 msgid "Welcome home, %(user_name)s."
-msgstr ""
+msgstr "Bienvenue à la maison, %(user_name)s."
 
 #: snikket_web/templates/user_home.html:7
 msgid "Update profile"
