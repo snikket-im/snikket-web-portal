@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-24 10:54+0100\n"
-"PO-Revision-Date: 2021-01-23 14:01+0000\n"
+"PO-Revision-Date: 2021-01-24 10:05+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
-"Language-Team: German <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/de/>\n"
+"Language-Team: German <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -125,10 +125,8 @@ msgid "Confirm new password"
 msgstr "Neues Passwort (Bestätigung)"
 
 #: snikket_web/user.py:35
-#, fuzzy
-#| msgid "The new passwords must match."
 msgid "The new passwords must match"
-msgstr "Die neuen Passwörter müssen übereinstimmen."
+msgstr "Die neuen Passwörter müssen übereinstimmen"
 
 #: snikket_web/user.py:42
 msgid "Sign out"
@@ -232,10 +230,8 @@ msgid "Back to the main page"
 msgstr "Zurück zur Hauptseite"
 
 #: snikket_web/templates/admin_app.html:5
-#, fuzzy
-#| msgid "Admin dashboard"
 msgid "Admin area"
-msgstr "Verwaltungsdashboard"
+msgstr "Administration"
 
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:11
@@ -355,6 +351,9 @@ msgid ""
 "immediately upon pushing thre below button. <strong>There is no way back!</"
 "strong>"
 msgstr ""
+"Das Benutzerkonto und die zugehörigen Daten werden beim Betätigen des "
+"Buttons unwiderruflich, permanent und sofortig gelöscht. <strong>Es gibt "
+"keinen Weg zurück!</strong>"
 
 #: snikket_web/templates/admin_delete_user.html:23
 #: snikket_web/templates/admin_edit_circle.html:15
