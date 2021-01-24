@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-24 11:05+0100\n"
-"PO-Revision-Date: 2021-01-24 09:55+0000\n"
+"PO-Revision-Date: 2021-01-26 14:06+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
-"Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/id/>\n"
+"Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,11 +26,11 @@ msgstr "Hapus permanen pengguna"
 
 #: snikket_web/admin.py:129
 msgid "Invite to circle"
-msgstr ""
+msgstr "Undang masuk kelompok"
 
 #: snikket_web/admin.py:135
 msgid "At least one circle must be selected"
-msgstr ""
+msgstr "Minimal satu kelompok harus dipilih"
 
 #: snikket_web/admin.py:140
 msgid "Valid for"
@@ -58,7 +58,7 @@ msgstr "Empat minggu"
 
 #: snikket_web/admin.py:152
 msgid "Invite a group of people"
-msgstr "Mengundang sekelompok orang"
+msgstr "Mengundang beberapa orang"
 
 #: snikket_web/admin.py:156
 msgid "New invitation link"
@@ -74,7 +74,7 @@ msgstr "Nama"
 
 #: snikket_web/admin.py:279 snikket_web/templates/admin_circles.html:42
 msgid "Create circle"
-msgstr ""
+msgstr "Buat kelompok"
 
 #: snikket_web/admin.py:323
 msgid "Select user"
@@ -86,7 +86,7 @@ msgstr "Terapkan"
 
 #: snikket_web/admin.py:332
 msgid "Delete circle permanently"
-msgstr ""
+msgstr "Hapus kelompok secara permanen"
 
 #: snikket_web/admin.py:338
 msgid "Add user"
@@ -125,10 +125,8 @@ msgid "Confirm new password"
 msgstr "Konfirmasi kata kunci"
 
 #: snikket_web/user.py:35
-#, fuzzy
-#| msgid "The new passwords must match."
 msgid "The new passwords must match"
-msgstr "Kata kunci baru harus cocok."
+msgstr "Kata kunci baru harus cocok"
 
 #: snikket_web/user.py:42
 msgid "Sign out"
@@ -232,19 +230,17 @@ msgid "Back to the main page"
 msgstr "Kembali ke halaman depan"
 
 #: snikket_web/templates/admin_app.html:5
-#, fuzzy
-#| msgid "Admin dashboard"
 msgid "Admin area"
-msgstr "Dasbor Administrator"
+msgstr "Wewenang Administrator"
 
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:11
 msgid "Manage circles"
-msgstr ""
+msgstr "Atur kelompok"
 
 #: snikket_web/templates/admin_circles.html:11
 msgid "Circle name"
-msgstr ""
+msgstr "Nama kelompok"
 
 #: snikket_web/templates/admin_circles.html:12
 msgid "Members"
@@ -259,26 +255,28 @@ msgstr "Tindakan"
 #: snikket_web/templates/admin_circles.html:23
 #, python-format
 msgid "Create invitation to circle %(circle_name)s"
-msgstr ""
+msgstr "Buat undangan untuk kelompok %(circle_name)s"
 
 #: snikket_web/templates/admin_circles.html:26
 #, python-format
 msgid "Show details of circle %(circle_name)s"
-msgstr ""
+msgstr "Tampilkan detil dari kelompok %(circle_name)s"
 
 #: snikket_web/templates/admin_circles.html:35
 msgid "No circles"
-msgstr ""
+msgstr "Tidak ada kelompok"
 
 #: snikket_web/templates/admin_circles.html:36
 msgid ""
 "Currently, there are no circles on this service. Use the form below to "
 "create one."
 msgstr ""
+"Saat ini tidak ada kelompok dalam layanan. Gunakan formulir dibawah untuk "
+"membuat."
 
 #: snikket_web/templates/admin_circles.html:39
 msgid "New circle"
-msgstr ""
+msgstr "Kelompok baru"
 
 #: snikket_web/templates/admin_create_invite.html:3
 msgid "Create invitation"
@@ -353,6 +351,9 @@ msgid ""
 "immediately upon pushing the below button. <strong>There is no way back!</"
 "strong>"
 msgstr ""
+"Pengguna dan datanya akan dihapus secara permanen, tidak bisa dibatalkan, "
+"segera setelah menekan tombol di bawah. <strong>Tidak ada jalan "
+"kembali!</strong>"
 
 #: snikket_web/templates/admin_delete_user.html:23
 #: snikket_web/templates/admin_edit_circle.html:15
@@ -367,32 +368,34 @@ msgstr "Kembali"
 #: snikket_web/templates/admin_edit_circle.html:4
 #, python-format
 msgid "Edit circle %(circle_name)s"
-msgstr ""
+msgstr "Edit kelompok %(circle_name)s"
 
 #: snikket_web/templates/admin_edit_circle.html:8
 msgid "Circle information"
-msgstr ""
+msgstr "Informasi kelompok"
 
 #: snikket_web/templates/admin_edit_circle.html:19
 msgid "Delete circle"
-msgstr ""
+msgstr "Hapus kelompok"
 
 #: snikket_web/templates/admin_edit_circle.html:20
 msgid "Deleting a circle does not delete any users in the circle."
 msgstr ""
+"Menghapus kelompok tidak menghapus satu pun pengguna di dalam kelompok "
+"tersebut."
 
 #: snikket_web/templates/admin_edit_circle.html:25
 msgid "Circle members"
-msgstr ""
+msgstr "Anggota kelompok"
 
 #: snikket_web/templates/admin_edit_circle.html:40
 #, python-format
 msgid "Remove user %(username)s from circle"
-msgstr ""
+msgstr "Hapus pengguna %(username)s dari kelompok"
 
 #: snikket_web/templates/admin_edit_circle.html:48
 msgid "This circle currently has no members."
-msgstr ""
+msgstr "Kelompok ini sedang tidak memiliki anggota."
 
 #: snikket_web/templates/admin_edit_circle.html:50
 msgid "Invite more members"
@@ -408,7 +411,7 @@ msgstr "Tidak ada pengguna tersisa"
 
 #: snikket_web/templates/admin_edit_circle.html:65
 msgid "All users on this service are already in this circle."
-msgstr ""
+msgstr "Semua pengguna layanan ini sudah ada di kelompok ini."
 
 #: snikket_web/templates/admin_edit_invite.html:8
 msgid "View invitation"
@@ -443,21 +446,25 @@ msgstr "Tautan undangan ini hanya dapat digunakan satu kali."
 
 #: snikket_web/templates/admin_edit_invite.html:22
 msgid "Circles"
-msgstr ""
+msgstr "Kelompok"
 
 #: snikket_web/templates/admin_edit_invite.html:23
 msgid ""
 "Users joining via this invitation will be added to the following circles:"
 msgstr ""
+"Pengguna yang bergabung melalui undangan ini akan ditambahkan ke kelompok "
+"berikut:"
 
 #: snikket_web/templates/admin_edit_invite.html:29
 #: snikket_web/templates/admin_invites.html:23
 msgid "Circle"
-msgstr ""
+msgstr "Kelompok"
 
 #: snikket_web/templates/admin_edit_invite.html:35
 msgid "The user will not be added to any circle and will have no contacts."
 msgstr ""
+"Pengguna tidak akan ditambahkan ke kelompok mana pun dan tidak akan memiliki "
+"kontak."
 
 #: snikket_web/templates/admin_edit_invite.html:39
 msgid "Created"
