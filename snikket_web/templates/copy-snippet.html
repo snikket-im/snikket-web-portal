@@ -103,10 +103,8 @@ var copy_to_clipboard_btn = function(el) {
 	}
 
 	var icon = "done";
-	var label = "{% trans %}Copied to clipboard{% endtrans %}";
 	if (!success) {
 		icon = "cancel";
-		label = "{% trans %}Copy operation failed{% endtrans %}";
 	}
 	var icon_bak = get_current_icon(el.firstChild);
 	change_icon(el.firstChild, icon);

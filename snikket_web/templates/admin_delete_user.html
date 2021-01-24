@@ -17,7 +17,7 @@
 		<dd>{{ target_user.phone }}</dd>
 	</dl>
 	{% call box("alert", _("Danger")) %}
-	<p>The user and their data will be deleted irrevocably, permanently and immediately upon pushing thre below button. <strong>There is no way back!</strong></p>
+	<p>{% trans %}The user and their data will be deleted irrevocably, permanently and immediately upon pushing thre below button. <strong>There is no way back!</strong>{% endtrans %}</p>
 	{% endcall %}
 	<div class="f-bbox">
 		{%- call standard_button("back", url_for(".index"), class="secondary") %}{% trans %}Back{% endtrans %}{% endcall -%}

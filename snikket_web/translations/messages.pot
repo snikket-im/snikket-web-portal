@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-23 14:51+0100\n"
+"POT-Creation-Date: 2021-01-24 10:54+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,27 +65,27 @@ msgstr ""
 msgid "Revoke"
 msgstr ""
 
-#: snikket_web/admin.py:274 snikket_web/admin.py:317
+#: snikket_web/admin.py:274 snikket_web/admin.py:318
 msgid "Name"
 msgstr ""
 
-#: snikket_web/admin.py:278 snikket_web/templates/admin_circles.html:42
+#: snikket_web/admin.py:279 snikket_web/templates/admin_circles.html:42
 msgid "Create circle"
 msgstr ""
 
-#: snikket_web/admin.py:322
+#: snikket_web/admin.py:323
 msgid "Select user"
 msgstr ""
 
-#: snikket_web/admin.py:327 snikket_web/user.py:68
+#: snikket_web/admin.py:328 snikket_web/user.py:68
 msgid "Apply"
 msgstr ""
 
-#: snikket_web/admin.py:331
+#: snikket_web/admin.py:332
 msgid "Delete circle permanently"
 msgstr ""
 
-#: snikket_web/admin.py:337
+#: snikket_web/admin.py:338
 msgid "Add user"
 msgstr ""
 
@@ -215,6 +215,10 @@ msgstr ""
 msgid "Back to the main page"
 msgstr ""
 
+#: snikket_web/templates/admin_app.html:5
+msgid "Admin area"
+msgstr ""
+
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:11
 msgid "Manage circles"
@@ -321,6 +325,13 @@ msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:19
 msgid "Danger"
+msgstr ""
+
+#: snikket_web/templates/admin_delete_user.html:20
+msgid ""
+"The user and their data will be deleted irrevocably, permanently and "
+"immediately upon pushing thre below button. <strong>There is no way "
+"back!</strong>"
 msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:23
@@ -568,14 +579,6 @@ msgstr ""
 #: snikket_web/templates/backend_error.html:5
 #: snikket_web/templates/internal_error.html:5
 msgid "Please try again later and/or inform your Snikket service admin."
-msgstr ""
-
-#: snikket_web/templates/copy-snippet.html:106
-msgid "Copied to clipboard"
-msgstr ""
-
-#: snikket_web/templates/copy-snippet.html:109
-msgid "Copy operation failed"
 msgstr ""
 
 #: snikket_web/templates/generic_http_error.html:9
