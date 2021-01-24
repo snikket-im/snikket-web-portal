@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-24 11:05+0100\n"
 "PO-Revision-Date: 2021-01-24 19:18+0000\n"
-"Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
+"Last-Translator: pep <pep@bouah.net>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/fr/>\n"
 "Language: fr\n"
@@ -94,7 +94,7 @@ msgstr "Ajouter un utilisateur"
 
 #: snikket_web/infra.py:40
 msgid "Main"
-msgstr ""
+msgstr "Principal"
 
 #: snikket_web/main.py:36
 msgid "Address"
@@ -126,7 +126,7 @@ msgstr "Confirmation du nouveau mot de passe"
 
 #: snikket_web/user.py:35
 msgid "The new passwords must match"
-msgstr ""
+msgstr "Les nouveaux mots de passe doivent être similaires"
 
 #: snikket_web/user.py:42
 msgid "Sign out"
@@ -196,6 +196,9 @@ msgid ""
 "a>. The full terms of the license can be reviewed using the aforementioned "
 "link."
 msgstr ""
+"Ce portail web est fourni sous licence <a href=\"%(agpl_url)s\">Affero GNU "
+"General Public License, version 3.0 or plus</a>. Les conditions complètes de "
+"cette licence peuvent être visionnées via le lien précédent."
 
 #: snikket_web/templates/about.html:15
 #, python-format
@@ -264,6 +267,8 @@ msgid ""
 "Currently, there are no circles on this service. Use the form below to "
 "create one."
 msgstr ""
+"Il n'y a actuellement pas de cercle sur ce service. Utilisez le formulaire "
+"ci-dessous pour en créer un."
 
 #: snikket_web/templates/admin_circles.html:39
 msgid "New circle"
