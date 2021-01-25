@@ -1,0 +1,86 @@
+{% extends "invite.html" %}
+{% set onload = "onload();" %}
+{% set body_id = "invite" %}
+{% from "library.j2" import action_button %}
+{% block head_lead %}
+<title>{% trans site_name=config["SITE_NAME"] %}Invite to {{ site_name }} | Snikket{% endtrans %}</title>
+<script async type="text/javascript" src="{{ url_for("static", filename="js/invite-magic.js") }}"></script>
+<script async type="text/javascript" src="{{ url_for("static", filename="js/qrcode.min.js") }}"></script>
+{% endblock %}
+{% block content %}
+<div class="elevated box el-3">
+	<h1>{% trans site_name=config["SITE_NAME"] %}Invite to {{ site_name }}{% endtrans %}</h1>
+	<div class="powered-by">{% trans logo_url=url_for("static", filename="img/snikket-logo.svg") %}Powered by <img src="{{ logo_url }}" alt="Snikket">{% endtrans %}</div>
+	{%- if invite.inviter -%}
+	<p>{% trans site_name=config["SITE_NAME"], inviter_name=invite.inviter %}You have been invited to chat with {{ inviter_name }} using Snikket, a secure, privacy-friendly chat app on {{ site_name }}.{% endtrans %}</p>
+	{%- else -%}
+	<p>{% trans site_name=config["SITE_NAME"] %}You have been invited to chat on {{ site_name }} using Snikket, a secure, privacy-friendly chat app.{% endtrans %}</p>
+	{%- endif -%}
+	<h2>{% trans %}Get started{% endtrans %}</h2>
+	<p>{% trans %}Install the Snikket App on your Android or iOS device.{% endtrans %}</p>
+	<div class="install-buttons">
+		<ul>
+			<li><a href="{{ play_store_url }}"><img alt='{% trans %}Get it on Google Play{% endtrans %}' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' class="play"/></a></li>
+			<li><a href="{{ apple_store_url }}"><img alt='{% trans %}Download on the App Store{% endtrans %}' src="{{ apple_store_badge() }}" class="apple"></a></li>
+		</ul>
+		{%- call standard_button("qrcode", "#qr-modal", class="primary", onclick="open_modal(this); return false;") -%}
+			{% trans %}Not on mobile?{% endtrans %}
+		{%- endcall -%}
+	</div>
+	<p>{% trans %}After installation the app should automatically open and prompt you to create an account. If not, simply click the button below.{% endtrans %}</p>
+	<h3>{% trans %}App already installed?{% endtrans %}</h3>
+	{%- call standard_button("exit_to_app", invite.xmpp_uri, class="secondary") -%}
+		{% trans %}Open the app{% endtrans %}
+	{%- endcall -%}
+	<p class="weak">{% trans %}This button works only if you have the app installed already!{% endtrans %}</p>
+
+	<h2>{% trans %}Alternatives{% endtrans %}</h2>
+	<p>{% trans register_url=url_for(".register", id_=invite_id) %}You can connect to Snikket using any XMPP-compatible software. If the button above does not work with your app, you may need to <a href="{{ register_url }}">register an account manually</a>.{% endtrans %}</p>
+</div>
+<div id="qr-modal" class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;" onclick="close_modal(this); return false;">
+	<div role="document" class="elevated box el-2" onclick="event.stopPropagation();">
+		<header class="modal-title">
+			{#- -#}
+			<span>{% trans %}Scan invite code{% endtrans %}</span>
+			{#- -#}
+			{%- call action_button("close", "#", onclick="close_modal(this.parentNode.parentNode.parentNode); return false;", class="tertiary") -%}
+				{% trans %}Close{% endtrans %}
+			{%- endcall -%}
+		</header>
+		<p>{% trans %}You can transfer this invite to your mobile device by scanning a code with your camera. You can use either a QR scanner app or the Snikket app itself.{% endtrans %}</p>
+		<div class="tabbox">
+			{#- -#}
+			<nav class="tabs" role="tablist">
+				{#- -#}
+				<a href="#qr-info-url" class="active" role="tab" aria-controls="qr-info-url" aria-selected="true" onclick="select_tab(this); return false;">{% trans %}Using a QR code scanner{% endtrans %}</a>
+				{#- -#}
+				<a href="#qr-info-uri" role="tab" aria-controls="qr-info-uri" aria-selected="false" onclick="select_tab(this); return false;">{% trans %}Using the Snikket app{% endtrans %}</a>
+				{#- -#}
+			</nav>
+			{#- -#}
+			<div id="qr-info-url" class="tab-pane active">
+				<p>{% trans %}Use a <em>QR code</em> scanner on your mobile device to scan the code below:{% endtrans %}</p>
+				<div id="qr-invite-page" data-qrdata="{{ url_for(".view", id_=invite_id, _external=True) }}" class="qr"></div>
+			</div>
+			{#- -#}
+			<div id="qr-info-uri" class="tab-pane">
+				<img class="float-right" id="tutorial-scan" aria-hidden="true" alt="" src="{{ url_for("static", filename="img/tutorial-scan.png") }}">
+				<p>{% trans %}Install the Snikket app on your mobile device, open it, and tap the 'Scan' button at the top.{% endtrans %}</p>
+				<p>{% trans %}Your camera will turn on. Point it at the square code below until it is within the highlighted square on your screen, and wait until the app recognises it.{% endtrans %}</p>
+				<div id="qr-uri" data-qrdata="{{ invite.xmpp_uri }}" class="qr"></div>
+			</div>
+			{#- -#}
+		</div>
+		{#- -#}
+		{%- call standard_button("close", "#", onclick="close_modal(this.parentNode.parentNode); return false;", class="primary") -%}
+			{% trans %}Close{% endtrans %}
+		{%- endcall -%}
+	</div>
+</div>
+<script type="text/javascript">
+	var onload = function() {
+		apply_qr_code(document.getElementById("qr-invite-page"));
+		apply_qr_code(document.getElementById("qr-uri"));
+	};
+</script>
+{% endblock %}

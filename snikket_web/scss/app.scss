@@ -184,7 +184,7 @@ label.required:after {
 	padding: $w-s4;
 }
 
-p.form-desc.weak {
+p.form-desc.weak, p.field-desc.weak {
 	color: $gray-300;
 }
 
@@ -1116,7 +1116,7 @@ pre.guru-meditation {
 		}
 	}
 
-	p.form-desc.weak {
+	p.form-desc.weak, p.field-desc.weak {
 		color: $gray-700;
 	}
 }

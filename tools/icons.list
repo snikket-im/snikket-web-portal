@@ -3,6 +3,8 @@ action/bug_report:bug_report
 action/done:done
 action/logout:logout
 action/login:login
+action/exit_to_app:exit_to_app
+communication/qr_code:qrcode
 communication/vpn_key:passwd
 content/add_circle_outline:add
 content/add_link:create_link
@@ -16,3 +18,4 @@ navigation/cancel:cancel
 navigation/more_vert:more
 social/groups:groups
 social/group_add:create_group
+navigation/close:close

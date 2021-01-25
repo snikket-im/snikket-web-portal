@@ -8,11 +8,5 @@
 	{% block topbar_right %}{% endblock %}
 </div>
 <div id="mwrap"><main>{% block content %}{% endblock %}</main></div>
-<footer>
-	<ul>
-		{#- -#}
-		<li>{% trans about_url=url_for('main.about') %}A <a href="{{ about_url }}">Snikket</a> service{% endtrans %}</li>
-		{#- -#}
-	</ul>
-</footer>
+{%- include "_footer.html" -%}
 {% endblock %}

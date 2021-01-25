@@ -16,5 +16,5 @@
 		<meta name="msapplication-TileColor" content="#fbd308">
 		<meta name="theme-color" content="#fbd308">
 	</head>
-	<body{% if body_id | default(False) %} id="{{ body_id }}"{% endif %}{% if body_class | default(False) %} class="{{ body_class }}"{% endif %}>{% block body %}{% endblock %}</body>
+	<body{% if body_id | default(False) %} id="{{ body_id }}"{% endif %}{% if body_class | default(False) %} class="{{ body_class }}"{% endif %}{% if onload | default(False) %} onload="{{ onload }}"{% endif %}>{% block body %}{% endblock %}</body>
 </html>

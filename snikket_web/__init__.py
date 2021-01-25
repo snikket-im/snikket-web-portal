@@ -216,9 +216,11 @@ def create_app() -> quart.Quart:
     from .main import bp as main_bp
     from .user import bp as user_bp
     from .admin import bp as admin_bp
+    from .invite import bp as invite_bp
 
     app.register_blueprint(main_bp)
     app.register_blueprint(user_bp, url_prefix="/user")
     app.register_blueprint(admin_bp, url_prefix="/admin")
+    app.register_blueprint(invite_bp, url_prefix="/invite")
 
     return app

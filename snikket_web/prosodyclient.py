@@ -114,6 +114,22 @@ class AdminGroupInfo:
         )
 
 
+@dataclasses.dataclass(frozen=True)
+class PublicInviteInfo:
+    inviter: typing.Optional[str]
+    xmpp_uri: str
+
+    @classmethod
+    def from_api_response(
+            cls,
+            data: typing.Mapping[str, typing.Any],
+            ) -> "PublicInviteInfo":
+        return cls(
+            inviter=data.get("inviter") or None,
+            xmpp_uri=data["uri"],
+        )
+
+
 class HTTPSessionManager:
     def __init__(self, app_context_attribute: str):
         self._app_context_attribute = app_context_attribute
@@ -257,6 +273,9 @@ class ProsodyClient:
 
     def _admin_v1_endpoint(self, subpath: str) -> str:
         return "{}/admin_api{}".format(self._endpoint_base, subpath)
+
+    def _public_v1_endpoint(self, subpath: str) -> str:
+        return "{}/register_api{}".format(self._endpoint_base, subpath)
 
     async def _oauth2_bearer_token(self,
                                    session: aiohttp.ClientSession,
@@ -1053,3 +1072,29 @@ class ProsodyClient:
             return False
         scopes = http_session[self.SESSION_CACHED_SCOPE].split()
         return SCOPE_ADMIN in scopes
+
+    async def get_public_invite_by_id(self, id_: str) -> PublicInviteInfo:
+        async with self._plain_session as session:
+            async with session.get(self._public_v1_endpoint(
+                        "/invite/{}".format(id_)
+                    )) as resp:
+                resp.raise_for_status()
+                return PublicInviteInfo.from_api_response(await resp.json())
+
+    async def register_with_token(
+            self,
+            token: str,
+            username: str,
+            password: str,
+            ) -> str:
+        payload = {
+            "username": username,
+            "password": password,
+            "token": token,
+        }
+        async with self._plain_session as session:
+            async with session.post(
+                    self._public_v1_endpoint("/register"),
+                    json=payload) as resp:
+                resp.raise_for_status()
+                return (await resp.json())["jid"]
