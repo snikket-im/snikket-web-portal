@@ -8,126 +8,129 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-24 11:05+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-01-26 14:06+0000\n"
+"Last-Translator: pep <pep@bouah.net>\n"
+"Language-Team: Japanese <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.4.2\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:60
 msgid "Delete user permanently"
-msgstr ""
+msgstr "ユーザーを削除する"
 
 #: snikket_web/admin.py:129
 msgid "Invite to circle"
-msgstr ""
+msgstr "サークルに紹介する"
 
 #: snikket_web/admin.py:135
 msgid "At least one circle must be selected"
-msgstr ""
+msgstr "サークルを選択してください"
 
 #: snikket_web/admin.py:140
 msgid "Valid for"
-msgstr ""
+msgstr "制限"
 
 #: snikket_web/admin.py:142
 msgid "One hour"
-msgstr ""
+msgstr "一時間"
 
 #: snikket_web/admin.py:143
 msgid "Twelve hours"
-msgstr ""
+msgstr "１２時間"
 
 #: snikket_web/admin.py:144
 msgid "One day"
-msgstr ""
+msgstr "一日"
 
 #: snikket_web/admin.py:145
 msgid "One week"
-msgstr ""
+msgstr "一週間"
 
 #: snikket_web/admin.py:146
 msgid "Four weeks"
-msgstr ""
+msgstr "４週間"
 
 #: snikket_web/admin.py:152
 msgid "Invite a group of people"
-msgstr ""
+msgstr "数人に紹介"
 
 #: snikket_web/admin.py:156
 msgid "New invitation link"
-msgstr ""
+msgstr "新しい紹介状"
 
 #: snikket_web/admin.py:218
 msgid "Revoke"
-msgstr ""
+msgstr "取り消す"
 
 #: snikket_web/admin.py:274 snikket_web/admin.py:318
 msgid "Name"
-msgstr ""
+msgstr "名"
 
 #: snikket_web/admin.py:279 snikket_web/templates/admin_circles.html:42
 msgid "Create circle"
-msgstr ""
+msgstr "サークルを作成"
 
 #: snikket_web/admin.py:323
 msgid "Select user"
-msgstr ""
+msgstr "ユーザー選択"
 
 #: snikket_web/admin.py:328 snikket_web/user.py:68
 msgid "Apply"
-msgstr ""
+msgstr "決定"
 
 #: snikket_web/admin.py:332
 msgid "Delete circle permanently"
-msgstr ""
+msgstr "サークルを削除"
 
 #: snikket_web/admin.py:338
 msgid "Add user"
-msgstr ""
+msgstr "ユーザーを追加する"
 
 #: snikket_web/infra.py:40
 msgid "Main"
-msgstr ""
+msgstr "第一サークル"
 
 #: snikket_web/main.py:36
 msgid "Address"
-msgstr ""
+msgstr "アドレス"
 
 #: snikket_web/main.py:41
 msgid "Password"
-msgstr ""
+msgstr "パスワード"
 
 #: snikket_web/main.py:46
 msgid "Sign in"
-msgstr ""
+msgstr "サインイン"
 
 #: snikket_web/main.py:72
 msgid "Invalid user name or password."
-msgstr ""
+msgstr "ユーザー名またはパスワードが不正。"
 
 #: snikket_web/user.py:21
 msgid "Current password"
-msgstr ""
+msgstr "現在のパスワード"
 
 #: snikket_web/user.py:26
 msgid "New password"
-msgstr ""
+msgstr "新しいパスワード"
 
 #: snikket_web/user.py:31
 msgid "Confirm new password"
-msgstr ""
+msgstr "新しいパスワードの確認"
 
 #: snikket_web/user.py:35
 msgid "The new passwords must match"
-msgstr ""
+msgstr "新しいパスワードが不一致"
 
 #: snikket_web/user.py:42
 msgid "Sign out"
-msgstr ""
+msgstr "サインアウト"
 
 #: snikket_web/user.py:47
 msgid "Nobody"
@@ -135,21 +138,21 @@ msgstr ""
 
 #: snikket_web/user.py:48
 msgid "Friends only"
-msgstr ""
+msgstr "コンタクト限定"
 
 #: snikket_web/user.py:49
 msgid "Everyone"
-msgstr ""
+msgstr "全員"
 
 #: snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/templates/admin_delete_user.html:16
 #: snikket_web/templates/admin_users.html:11 snikket_web/user.py:55
 msgid "Display name"
-msgstr ""
+msgstr "表示名"
 
 #: snikket_web/user.py:59
 msgid "Avatar"
-msgstr ""
+msgstr "アバター"
 
 #: snikket_web/user.py:63
 msgid "Profile visibility"
@@ -157,22 +160,22 @@ msgstr ""
 
 #: snikket_web/user.py:93
 msgid "Incorrect password"
-msgstr ""
+msgstr "パスワード不正"
 
 #: snikket_web/templates/about.html:9
 msgid "About Snikket"
-msgstr ""
+msgstr "Snikketについて"
 
 #: snikket_web/templates/about.html:10
 #, python-format
 msgid ""
 "To learn more about Snikket, visit the <a href=\"%(snikket_url)s\">Snikket "
 "website</a>."
-msgstr ""
+msgstr "Snikket についてについて知りたい方は <a href=\"%(snikket_url)s\">ホームページ</a> をご覧ください。"
 
 #: snikket_web/templates/about.html:11
 msgid "About this Service"
-msgstr ""
+msgstr "このサービスについて"
 
 #: snikket_web/templates/about.html:12
 #, python-format
@@ -209,48 +212,48 @@ msgstr ""
 
 #: snikket_web/templates/about.html:17
 msgid "Software Versions"
-msgstr ""
+msgstr "ソフトウェアバーション"
 
 #: snikket_web/templates/about.html:27
 msgid "Back to the main page"
-msgstr ""
+msgstr "戻る"
 
 #: snikket_web/templates/admin_app.html:5
 msgid "Admin area"
-msgstr ""
+msgstr "管理"
 
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:11
 msgid "Manage circles"
-msgstr ""
+msgstr "サークル管理"
 
 #: snikket_web/templates/admin_circles.html:11
 msgid "Circle name"
-msgstr ""
+msgstr "サークル名"
 
 #: snikket_web/templates/admin_circles.html:12
 msgid "Members"
-msgstr ""
+msgstr "サークル員"
 
 #: snikket_web/templates/admin_circles.html:13
 #: snikket_web/templates/admin_invites.html:24
 #: snikket_web/templates/admin_users.html:14
 msgid "Actions"
-msgstr ""
+msgstr "操作"
 
 #: snikket_web/templates/admin_circles.html:23
-#, python-format
+#, fuzzy, python-format
 msgid "Create invitation to circle %(circle_name)s"
-msgstr ""
+msgstr "紹介"
 
 #: snikket_web/templates/admin_circles.html:26
-#, python-format
+#, fuzzy, python-format
 msgid "Show details of circle %(circle_name)s"
-msgstr ""
+msgstr "詳細"
 
 #: snikket_web/templates/admin_circles.html:35
 msgid "No circles"
-msgstr ""
+msgstr "なし"
 
 #: snikket_web/templates/admin_circles.html:36
 msgid ""
@@ -260,15 +263,15 @@ msgstr ""
 
 #: snikket_web/templates/admin_circles.html:39
 msgid "New circle"
-msgstr ""
+msgstr "新しいサークル"
 
 #: snikket_web/templates/admin_create_invite.html:3
 msgid "Create invitation"
-msgstr ""
+msgstr "紹介状作成"
 
 #: snikket_web/templates/admin_create_invite_form.html:5
 msgid "Create new invitation"
-msgstr ""
+msgstr "新しい紹介状を作成"
 
 #: snikket_web/templates/admin_create_invite_form.html:6
 msgid ""
