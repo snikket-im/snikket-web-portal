@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-24 11:05+0100\n"
 "PO-Revision-Date: 2021-01-26 14:06+0000\n"
-"Last-Translator: franck <dev@monanderos.fr>\n"
+"Last-Translator: pep <pep@bouah.net>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/fr/>\n"
 "Language: fr\n"
@@ -210,13 +210,13 @@ msgstr ""
 "%(source_url)s\">son dépôt GitHub</a>."
 
 #: snikket_web/templates/about.html:16
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "The icons used in the web portal are <a href=\"%(source_url)s\">Google’s "
 "Material Icons</a>, made available by Google under the terms of the <a href="
 "\"%(apache20_url)s\">Apache 2.0 License</a>."
 msgstr ""
-"Les icones utilisées dans le portail web sont <a href=\"%(source_url)s\""
+"Les icônes utilisées dans le portail web sont <a href=\"%(source_url)s\""
 ">Google’s Material Icons</a>, mises à dispositions par Google aux termes de "
 "la <a href=\"%(apache20_url)s\">licence Apache 2.0 </a>."
 
@@ -304,7 +304,6 @@ msgid "Warning"
 msgstr "Avertissement"
 
 #: snikket_web/templates/admin_debug_user.html:12
-#, fuzzy
 msgid "The below dump may contain sensitive information."
 msgstr "Le contenu ci-dessous peut contenir des informations sensibles."
 
@@ -333,7 +332,6 @@ msgstr "Êtes-vous certain(e) de vouloir désinscrire l’utilisateur suivant 
 
 #: snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_users.html:10
-#, fuzzy
 msgid "Login name"
 msgstr "Identifiant"
 
@@ -508,7 +506,6 @@ msgid "Manage users"
 msgstr "Gérer les utilisateurs"
 
 #: snikket_web/templates/admin_home.html:8
-#, fuzzy
 msgid "Modify administrative user information or delete users."
 msgstr ""
 "Modifier les informations des utilisateurs ou désinscrire des utilisateurs."
