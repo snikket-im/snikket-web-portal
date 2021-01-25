@@ -98,3 +98,12 @@
 —
 {%- endif -%}
 {% endmacro %}
+
+{% macro extract_circle_name(circle_map, id, caller=None) %}
+{%- set circle_info = circle_map[id] -%}
+{%- if circle_info -%}
+<a href="{{ url_for('.edit_circle', id_=id) }}">{{ circle_info | circle_name }}</a>
+{%- else -%}
+<em>{% trans %}deleted{% endtrans %}</em>
+{%- endif -%}
+{% endmacro %}

@@ -1,5 +1,5 @@
 {% extends "admin_app.html" %}
-{% from "library.j2" import action_button, icon, clipboard_button, form_button, custom_form_button %}
+{% from "library.j2" import action_button, icon, clipboard_button, form_button, custom_form_button, extract_circle_name %}
 {% block head_lead %}
 {{ super() }}
 {% include "copy-snippet.html" %}
@@ -34,12 +34,7 @@
 				{#- -#}
 				<ul class="inline">
 				{%- for group_id in invite.group_ids -%}
-					{%- set circle_info = circle_map[group_id] -%}
-					{%- if circle_info -%}
-					<li>{{ circle_map[group_id] | circle_name }}</li>
-					{%- else -%}
-					<li><em>{% trans %}deleted{% endtrans %}</em></li>
-					{%- endif -%}
+					<li>{%- call extract_circle_name(circle_map, group_id) -%}{%- endcall -%}</li>
 				{%- endfor -%}
 				</ul>
 				{#- -#}
