@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-26 15:06+0100\n"
+"POT-Creation-Date: 2021-01-26 16:12+0100\n"
 "PO-Revision-Date: 2021-01-26 14:06+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language-Team: German <https://i18n.sotecware.net/projects/snikket/web-"
@@ -72,7 +72,7 @@ msgstr "Löschen"
 msgid "Name"
 msgstr "Name"
 
-#: snikket_web/admin.py:279 snikket_web/templates/admin_circles.html:42
+#: snikket_web/admin.py:279 snikket_web/templates/admin_circles.html:44
 msgid "Create circle"
 msgstr "Gemeinschaft gründen"
 
@@ -80,9 +80,11 @@ msgstr "Gemeinschaft gründen"
 msgid "Select user"
 msgstr "Benutzer auswählen"
 
-#: snikket_web/admin.py:328 snikket_web/user.py:68
-msgid "Apply"
-msgstr "Übernehmen"
+#: snikket_web/admin.py:328
+#, fuzzy
+#| msgid "Create circle"
+msgid "Update circle"
+msgstr "Gemeinschaft gründen"
 
 #: snikket_web/admin.py:332
 msgid "Delete circle permanently"
@@ -192,6 +194,10 @@ msgstr "Bild"
 msgid "Profile visibility"
 msgstr "Profilsichtbarkeit"
 
+#: snikket_web/templates/user_home.html:7 snikket_web/user.py:68
+msgid "Update profile"
+msgstr "Profil bearbeiten"
+
 #: snikket_web/user.py:93
 msgid "Incorrect password"
 msgstr "Ungültiges Passwort"
@@ -277,35 +283,48 @@ msgstr "Administration"
 msgid "Manage circles"
 msgstr "Gemeinschaften verwalten"
 
-#: snikket_web/templates/admin_circles.html:11
+#: snikket_web/templates/admin_circles.html:5
+msgid ""
+"<em>Circles</em> aim to help people who are in the same social circle find "
+"each other on your service."
+msgstr ""
+
+#: snikket_web/templates/admin_circles.html:6
+msgid ""
+"Users who are in the same circle will see each other in their contact list. "
+"In addition, each circle has a group chat where the circle members are "
+"included."
+msgstr ""
+
+#: snikket_web/templates/admin_circles.html:13
 msgid "Circle name"
 msgstr "Name"
 
-#: snikket_web/templates/admin_circles.html:12
+#: snikket_web/templates/admin_circles.html:14
 msgid "Members"
 msgstr "Mitglieder"
 
-#: snikket_web/templates/admin_circles.html:13
+#: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_invites.html:24
 #: snikket_web/templates/admin_users.html:14
 msgid "Actions"
 msgstr "Aktionen"
 
-#: snikket_web/templates/admin_circles.html:23
+#: snikket_web/templates/admin_circles.html:25
 #, python-format
 msgid "Create invitation to circle %(circle_name)s"
 msgstr "Einladung in die %(circle_name)s Gemeinschaft erzeugen"
 
-#: snikket_web/templates/admin_circles.html:26
+#: snikket_web/templates/admin_circles.html:28
 #, python-format
 msgid "Show details of circle %(circle_name)s"
 msgstr "Details der %(circle_name)s Gemeinschaft anzeigen"
 
-#: snikket_web/templates/admin_circles.html:35
+#: snikket_web/templates/admin_circles.html:37
 msgid "No circles"
 msgstr "Keine Gemeinschaften"
 
-#: snikket_web/templates/admin_circles.html:36
+#: snikket_web/templates/admin_circles.html:38
 msgid ""
 "Currently, there are no circles on this service. Use the form below to "
 "create one."
@@ -313,7 +332,7 @@ msgstr ""
 "Es gibt derzeit keine Gemeinschaften auf diesem Dienst. Unten kannst du eine "
 "anlegen."
 
-#: snikket_web/templates/admin_circles.html:39
+#: snikket_web/templates/admin_circles.html:41
 msgid "New circle"
 msgstr "Neue Gemeinschaft"
 
@@ -395,7 +414,7 @@ msgstr ""
 "keinen Weg zurück!</strong>"
 
 #: snikket_web/templates/admin_delete_user.html:23
-#: snikket_web/templates/admin_edit_circle.html:15
+#: snikket_web/templates/admin_edit_circle.html:30
 #: snikket_web/templates/admin_edit_invite.html:45
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
@@ -404,51 +423,68 @@ msgstr ""
 msgid "Back"
 msgstr "Zurück"
 
-#: snikket_web/templates/admin_edit_circle.html:4
+#: snikket_web/templates/admin_edit_circle.html:8
 #, python-format
 msgid "Edit circle %(circle_name)s"
 msgstr "Gemeinschaft %(circle_name)s bearbeiten"
 
-#: snikket_web/templates/admin_edit_circle.html:8
+#: snikket_web/templates/admin_edit_circle.html:12
 msgid "Circle information"
 msgstr "Gemeinschaftsinformationen"
 
 #: snikket_web/templates/admin_edit_circle.html:19
+#, fuzzy
+#| msgid "Email address"
+msgid "Group chat address"
+msgstr "E-Mail-Adresse"
+
+#: snikket_web/templates/admin_edit_circle.html:22
+#: snikket_web/templates/invite_success.html:15
+#, fuzzy
+#| msgid "Email address"
+msgid "Copy address"
+msgstr "E-Mail-Adresse"
+
+#: snikket_web/templates/admin_edit_circle.html:25
+msgid "This circle has no group chat associated."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:34
 msgid "Delete circle"
 msgstr "Gemeinschaft löschen"
 
-#: snikket_web/templates/admin_edit_circle.html:20
+#: snikket_web/templates/admin_edit_circle.html:35
 msgid "Deleting a circle does not delete any users in the circle."
 msgstr ""
 "Wenn eine Gemeinschaft gelöscht wird, werden die Benutzer die zu dieser "
 "Gemeinschaft gehören nicht gelöscht."
 
-#: snikket_web/templates/admin_edit_circle.html:25
+#: snikket_web/templates/admin_edit_circle.html:40
 msgid "Circle members"
 msgstr "Mitglieder der Gemeinschaft"
 
-#: snikket_web/templates/admin_edit_circle.html:40
+#: snikket_web/templates/admin_edit_circle.html:55
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Benutzer %(username)s aus der Gemeinschaft entfernen"
 
-#: snikket_web/templates/admin_edit_circle.html:48
+#: snikket_web/templates/admin_edit_circle.html:63
 msgid "This circle currently has no members."
 msgstr "Diese Gemeinschaft hat derzeit keine Mitglieder."
 
-#: snikket_web/templates/admin_edit_circle.html:50
+#: snikket_web/templates/admin_edit_circle.html:65
 msgid "Invite more members"
 msgstr "Mehr Mitglieder einladen"
 
-#: snikket_web/templates/admin_edit_circle.html:53
+#: snikket_web/templates/admin_edit_circle.html:68
 msgid "Add existing user"
 msgstr "Bestehenden Benuzter hinzufügen"
 
-#: snikket_web/templates/admin_edit_circle.html:64
+#: snikket_web/templates/admin_edit_circle.html:79
 msgid "No users left"
 msgstr "Keine Benutzer übrig"
 
-#: snikket_web/templates/admin_edit_circle.html:65
+#: snikket_web/templates/admin_edit_circle.html:80
 msgid "All users on this service are already in this circle."
 msgstr "Alle Benutzer dieses Dienstes sind bereits in dieser Gemeinschaft."
 
@@ -554,20 +590,24 @@ msgstr "Benutzer verwalten"
 msgid "Modify administrative user information or delete users."
 msgstr "Benutzerinformationen verändern oder Benutzer löschen."
 
-#: snikket_web/templates/admin_home.html:14
+#: snikket_web/templates/admin_home.html:12
+msgid "Create and manage social circles represented on your service."
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_invites.html:8
 msgid "Manage invitations"
 msgstr "Einladungen verwalten"
 
-#: snikket_web/templates/admin_home.html:15
+#: snikket_web/templates/admin_home.html:16
 msgid "Create, revoke or view invitations."
 msgstr "Einladungen erzeugen, löschen oder anzeigen."
 
-#: snikket_web/templates/admin_home.html:18
+#: snikket_web/templates/admin_home.html:19
 msgid "Back to the main view"
 msgstr "Zurück zur Hauptseite"
 
-#: snikket_web/templates/admin_home.html:19
+#: snikket_web/templates/admin_home.html:20
 msgid "Go back to your user’s web portal page."
 msgstr "Zurück zur Startseite deines Benutzers."
 
@@ -768,12 +808,6 @@ msgid ""
 "Congratulations! You successfully registered on %(site_name)s as %(jid)s."
 msgstr ""
 
-#: snikket_web/templates/invite_success.html:15
-#, fuzzy
-#| msgid "Email address"
-msgid "Copy address"
-msgstr "E-Mail-Adresse"
-
 #: snikket_web/templates/invite_success.html:17
 msgid ""
 "You can not set up your legacy XMPP client with the above address and the "
@@ -918,10 +952,6 @@ msgstr "Willkommen!"
 msgid "Welcome home, %(user_name)s."
 msgstr "Willkommen zu Hause, %(user_name)s."
 
-#: snikket_web/templates/user_home.html:7
-msgid "Update profile"
-msgstr "Profil bearbeiten"
-
 #: snikket_web/templates/user_home.html:8
 msgid ""
 "Change display name, set avatar and configure visibility of your personal "
@@ -1002,6 +1032,9 @@ msgid ""
 msgstr ""
 "Hier kannst du einstellen, wer deine Profilinformationen, wie Bild oder "
 "Anzeigename einsehen kann."
+
+#~ msgid "Apply"
+#~ msgstr "Übernehmen"
 
 #~ msgid "Copied to clipboard"
 #~ msgstr "Kopiert"

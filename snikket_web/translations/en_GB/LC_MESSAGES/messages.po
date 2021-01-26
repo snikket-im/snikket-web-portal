@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-26 15:06+0100\n"
+"POT-Creation-Date: 2021-01-26 16:12+0100\n"
 "PO-Revision-Date: 2021-01-23 17:06+0000\n"
 "Last-Translator: Matthew Wild <matthew@snikket.org>\n"
 "Language-Team: English (United Kingdom) <https://i18n.sotecware.net/projects/"
@@ -72,7 +72,7 @@ msgstr "Revoke"
 msgid "Name"
 msgstr "Name"
 
-#: snikket_web/admin.py:279 snikket_web/templates/admin_circles.html:42
+#: snikket_web/admin.py:279 snikket_web/templates/admin_circles.html:44
 msgid "Create circle"
 msgstr "Create circle"
 
@@ -80,9 +80,11 @@ msgstr "Create circle"
 msgid "Select user"
 msgstr "Select user"
 
-#: snikket_web/admin.py:328 snikket_web/user.py:68
-msgid "Apply"
-msgstr "Apply"
+#: snikket_web/admin.py:328
+#, fuzzy
+#| msgid "Create circle"
+msgid "Update circle"
+msgstr "Create circle"
 
 #: snikket_web/admin.py:332
 msgid "Delete circle permanently"
@@ -194,6 +196,10 @@ msgstr "Avatar"
 msgid "Profile visibility"
 msgstr "Profile visibility"
 
+#: snikket_web/templates/user_home.html:7 snikket_web/user.py:68
+msgid "Update profile"
+msgstr "Update profile"
+
 #: snikket_web/user.py:93
 msgid "Incorrect password"
 msgstr "Incorrect password"
@@ -281,35 +287,48 @@ msgstr "Admin dashboard"
 msgid "Manage circles"
 msgstr "Manage circles"
 
-#: snikket_web/templates/admin_circles.html:11
+#: snikket_web/templates/admin_circles.html:5
+msgid ""
+"<em>Circles</em> aim to help people who are in the same social circle find "
+"each other on your service."
+msgstr ""
+
+#: snikket_web/templates/admin_circles.html:6
+msgid ""
+"Users who are in the same circle will see each other in their contact list. "
+"In addition, each circle has a group chat where the circle members are "
+"included."
+msgstr ""
+
+#: snikket_web/templates/admin_circles.html:13
 msgid "Circle name"
 msgstr "Circle name"
 
-#: snikket_web/templates/admin_circles.html:12
+#: snikket_web/templates/admin_circles.html:14
 msgid "Members"
 msgstr "Members"
 
-#: snikket_web/templates/admin_circles.html:13
+#: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_invites.html:24
 #: snikket_web/templates/admin_users.html:14
 msgid "Actions"
 msgstr "Actions"
 
-#: snikket_web/templates/admin_circles.html:23
+#: snikket_web/templates/admin_circles.html:25
 #, python-format
 msgid "Create invitation to circle %(circle_name)s"
 msgstr "Create invitation to circle %(circle_name)s"
 
-#: snikket_web/templates/admin_circles.html:26
+#: snikket_web/templates/admin_circles.html:28
 #, python-format
 msgid "Show details of circle %(circle_name)s"
 msgstr "Show details of circle %(circle_name)s"
 
-#: snikket_web/templates/admin_circles.html:35
+#: snikket_web/templates/admin_circles.html:37
 msgid "No circles"
 msgstr "No circles"
 
-#: snikket_web/templates/admin_circles.html:36
+#: snikket_web/templates/admin_circles.html:38
 msgid ""
 "Currently, there are no circles on this service. Use the form below to "
 "create one."
@@ -317,7 +336,7 @@ msgstr ""
 "Currently, there are no circles on this service. Use the form below to "
 "create one."
 
-#: snikket_web/templates/admin_circles.html:39
+#: snikket_web/templates/admin_circles.html:41
 msgid "New circle"
 msgstr "New circle"
 
@@ -396,7 +415,7 @@ msgid ""
 msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:23
-#: snikket_web/templates/admin_edit_circle.html:15
+#: snikket_web/templates/admin_edit_circle.html:30
 #: snikket_web/templates/admin_edit_invite.html:45
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
@@ -405,49 +424,66 @@ msgstr ""
 msgid "Back"
 msgstr "Back"
 
-#: snikket_web/templates/admin_edit_circle.html:4
+#: snikket_web/templates/admin_edit_circle.html:8
 #, python-format
 msgid "Edit circle %(circle_name)s"
 msgstr "Edit circle %(circle_name)s"
 
-#: snikket_web/templates/admin_edit_circle.html:8
+#: snikket_web/templates/admin_edit_circle.html:12
 msgid "Circle information"
 msgstr "Circle information"
 
 #: snikket_web/templates/admin_edit_circle.html:19
+#, fuzzy
+#| msgid "Email address"
+msgid "Group chat address"
+msgstr "Email address"
+
+#: snikket_web/templates/admin_edit_circle.html:22
+#: snikket_web/templates/invite_success.html:15
+#, fuzzy
+#| msgid "Email address"
+msgid "Copy address"
+msgstr "Email address"
+
+#: snikket_web/templates/admin_edit_circle.html:25
+msgid "This circle has no group chat associated."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:34
 msgid "Delete circle"
 msgstr "Delete circle"
 
-#: snikket_web/templates/admin_edit_circle.html:20
+#: snikket_web/templates/admin_edit_circle.html:35
 msgid "Deleting a circle does not delete any users in the circle."
 msgstr "Deleting a circle does not delete any users in the circle."
 
-#: snikket_web/templates/admin_edit_circle.html:25
+#: snikket_web/templates/admin_edit_circle.html:40
 msgid "Circle members"
 msgstr "Circle members"
 
-#: snikket_web/templates/admin_edit_circle.html:40
+#: snikket_web/templates/admin_edit_circle.html:55
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Remove user %(username)s from circle"
 
-#: snikket_web/templates/admin_edit_circle.html:48
+#: snikket_web/templates/admin_edit_circle.html:63
 msgid "This circle currently has no members."
 msgstr "This circle currently has no members."
 
-#: snikket_web/templates/admin_edit_circle.html:50
+#: snikket_web/templates/admin_edit_circle.html:65
 msgid "Invite more members"
 msgstr "Invite more members"
 
-#: snikket_web/templates/admin_edit_circle.html:53
+#: snikket_web/templates/admin_edit_circle.html:68
 msgid "Add existing user"
 msgstr "Add existing user"
 
-#: snikket_web/templates/admin_edit_circle.html:64
+#: snikket_web/templates/admin_edit_circle.html:79
 msgid "No users left"
 msgstr "No users left"
 
-#: snikket_web/templates/admin_edit_circle.html:65
+#: snikket_web/templates/admin_edit_circle.html:80
 msgid "All users on this service are already in this circle."
 msgstr "All users on this service are already in this circle."
 
@@ -547,20 +583,24 @@ msgstr "Manage users"
 msgid "Modify administrative user information or delete users."
 msgstr "Modify administrative user information or delete users."
 
-#: snikket_web/templates/admin_home.html:14
+#: snikket_web/templates/admin_home.html:12
+msgid "Create and manage social circles represented on your service."
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_invites.html:8
 msgid "Manage invitations"
 msgstr "Manage invitations"
 
-#: snikket_web/templates/admin_home.html:15
+#: snikket_web/templates/admin_home.html:16
 msgid "Create, revoke or view invitations."
 msgstr "Create, revoke or view invitations."
 
-#: snikket_web/templates/admin_home.html:18
+#: snikket_web/templates/admin_home.html:19
 msgid "Back to the main view"
 msgstr "Back to the main view"
 
-#: snikket_web/templates/admin_home.html:19
+#: snikket_web/templates/admin_home.html:20
 msgid "Go back to your user’s web portal page."
 msgstr "Go back to your user’s web portal page."
 
@@ -759,12 +799,6 @@ msgid ""
 "Congratulations! You successfully registered on %(site_name)s as %(jid)s."
 msgstr ""
 
-#: snikket_web/templates/invite_success.html:15
-#, fuzzy
-#| msgid "Email address"
-msgid "Copy address"
-msgstr "Email address"
-
 #: snikket_web/templates/invite_success.html:17
 msgid ""
 "You can not set up your legacy XMPP client with the above address and the "
@@ -908,10 +942,6 @@ msgstr "Welcome!"
 msgid "Welcome home, %(user_name)s."
 msgstr "Welcome home, %(user_name)s."
 
-#: snikket_web/templates/user_home.html:7
-msgid "Update profile"
-msgstr "Update profile"
-
 #: snikket_web/templates/user_home.html:8
 msgid ""
 "Change display name, set avatar and configure visibility of your personal "
@@ -990,6 +1020,9 @@ msgid ""
 msgstr ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
+
+#~ msgid "Apply"
+#~ msgstr "Apply"
 
 #~ msgid "Copied to clipboard"
 #~ msgstr "Copied to clipboard"

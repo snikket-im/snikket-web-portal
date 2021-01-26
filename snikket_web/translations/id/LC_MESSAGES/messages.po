@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-26 15:06+0100\n"
+"POT-Creation-Date: 2021-01-26 16:12+0100\n"
 "PO-Revision-Date: 2021-01-26 14:06+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
 "Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/web-"
@@ -72,7 +72,7 @@ msgstr "Batalkan"
 msgid "Name"
 msgstr "Nama"
 
-#: snikket_web/admin.py:279 snikket_web/templates/admin_circles.html:42
+#: snikket_web/admin.py:279 snikket_web/templates/admin_circles.html:44
 msgid "Create circle"
 msgstr "Buat kelompok"
 
@@ -80,9 +80,11 @@ msgstr "Buat kelompok"
 msgid "Select user"
 msgstr "Pilih pengguna"
 
-#: snikket_web/admin.py:328 snikket_web/user.py:68
-msgid "Apply"
-msgstr "Terapkan"
+#: snikket_web/admin.py:328
+#, fuzzy
+#| msgid "Create circle"
+msgid "Update circle"
+msgstr "Buat kelompok"
 
 #: snikket_web/admin.py:332
 msgid "Delete circle permanently"
@@ -192,6 +194,10 @@ msgstr "Gambar profil"
 msgid "Profile visibility"
 msgstr "Visibilitas profil"
 
+#: snikket_web/templates/user_home.html:7 snikket_web/user.py:68
+msgid "Update profile"
+msgstr "Perbaharui profil"
+
 #: snikket_web/user.py:93
 msgid "Incorrect password"
 msgstr "Kata kunci salah"
@@ -277,35 +283,48 @@ msgstr "Wewenang Administrator"
 msgid "Manage circles"
 msgstr "Atur kelompok"
 
-#: snikket_web/templates/admin_circles.html:11
+#: snikket_web/templates/admin_circles.html:5
+msgid ""
+"<em>Circles</em> aim to help people who are in the same social circle find "
+"each other on your service."
+msgstr ""
+
+#: snikket_web/templates/admin_circles.html:6
+msgid ""
+"Users who are in the same circle will see each other in their contact list. "
+"In addition, each circle has a group chat where the circle members are "
+"included."
+msgstr ""
+
+#: snikket_web/templates/admin_circles.html:13
 msgid "Circle name"
 msgstr "Nama kelompok"
 
-#: snikket_web/templates/admin_circles.html:12
+#: snikket_web/templates/admin_circles.html:14
 msgid "Members"
 msgstr "Anggota"
 
-#: snikket_web/templates/admin_circles.html:13
+#: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_invites.html:24
 #: snikket_web/templates/admin_users.html:14
 msgid "Actions"
 msgstr "Tindakan"
 
-#: snikket_web/templates/admin_circles.html:23
+#: snikket_web/templates/admin_circles.html:25
 #, python-format
 msgid "Create invitation to circle %(circle_name)s"
 msgstr "Buat undangan untuk kelompok %(circle_name)s"
 
-#: snikket_web/templates/admin_circles.html:26
+#: snikket_web/templates/admin_circles.html:28
 #, python-format
 msgid "Show details of circle %(circle_name)s"
 msgstr "Tampilkan detil dari kelompok %(circle_name)s"
 
-#: snikket_web/templates/admin_circles.html:35
+#: snikket_web/templates/admin_circles.html:37
 msgid "No circles"
 msgstr "Tidak ada kelompok"
 
-#: snikket_web/templates/admin_circles.html:36
+#: snikket_web/templates/admin_circles.html:38
 msgid ""
 "Currently, there are no circles on this service. Use the form below to "
 "create one."
@@ -313,7 +332,7 @@ msgstr ""
 "Saat ini tidak ada kelompok dalam layanan. Gunakan formulir dibawah untuk "
 "membuat."
 
-#: snikket_web/templates/admin_circles.html:39
+#: snikket_web/templates/admin_circles.html:41
 msgid "New circle"
 msgstr "Kelompok baru"
 
@@ -395,7 +414,7 @@ msgstr ""
 "strong>"
 
 #: snikket_web/templates/admin_delete_user.html:23
-#: snikket_web/templates/admin_edit_circle.html:15
+#: snikket_web/templates/admin_edit_circle.html:30
 #: snikket_web/templates/admin_edit_invite.html:45
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
@@ -404,51 +423,68 @@ msgstr ""
 msgid "Back"
 msgstr "Kembali"
 
-#: snikket_web/templates/admin_edit_circle.html:4
+#: snikket_web/templates/admin_edit_circle.html:8
 #, python-format
 msgid "Edit circle %(circle_name)s"
 msgstr "Edit kelompok %(circle_name)s"
 
-#: snikket_web/templates/admin_edit_circle.html:8
+#: snikket_web/templates/admin_edit_circle.html:12
 msgid "Circle information"
 msgstr "Informasi kelompok"
 
 #: snikket_web/templates/admin_edit_circle.html:19
+#, fuzzy
+#| msgid "Email address"
+msgid "Group chat address"
+msgstr "Alamat email"
+
+#: snikket_web/templates/admin_edit_circle.html:22
+#: snikket_web/templates/invite_success.html:15
+#, fuzzy
+#| msgid "Email address"
+msgid "Copy address"
+msgstr "Alamat email"
+
+#: snikket_web/templates/admin_edit_circle.html:25
+msgid "This circle has no group chat associated."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:34
 msgid "Delete circle"
 msgstr "Hapus kelompok"
 
-#: snikket_web/templates/admin_edit_circle.html:20
+#: snikket_web/templates/admin_edit_circle.html:35
 msgid "Deleting a circle does not delete any users in the circle."
 msgstr ""
 "Menghapus kelompok tidak menghapus satu pun pengguna di dalam kelompok "
 "tersebut."
 
-#: snikket_web/templates/admin_edit_circle.html:25
+#: snikket_web/templates/admin_edit_circle.html:40
 msgid "Circle members"
 msgstr "Anggota kelompok"
 
-#: snikket_web/templates/admin_edit_circle.html:40
+#: snikket_web/templates/admin_edit_circle.html:55
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Hapus pengguna %(username)s dari kelompok"
 
-#: snikket_web/templates/admin_edit_circle.html:48
+#: snikket_web/templates/admin_edit_circle.html:63
 msgid "This circle currently has no members."
 msgstr "Kelompok ini sedang tidak memiliki anggota."
 
-#: snikket_web/templates/admin_edit_circle.html:50
+#: snikket_web/templates/admin_edit_circle.html:65
 msgid "Invite more members"
 msgstr "Ajak lebih banyak anggota"
 
-#: snikket_web/templates/admin_edit_circle.html:53
+#: snikket_web/templates/admin_edit_circle.html:68
 msgid "Add existing user"
 msgstr "Tambahkan pengguna yang ada"
 
-#: snikket_web/templates/admin_edit_circle.html:64
+#: snikket_web/templates/admin_edit_circle.html:79
 msgid "No users left"
 msgstr "Tidak ada pengguna tersisa"
 
-#: snikket_web/templates/admin_edit_circle.html:65
+#: snikket_web/templates/admin_edit_circle.html:80
 msgid "All users on this service are already in this circle."
 msgstr "Semua pengguna layanan ini sudah ada di kelompok ini."
 
@@ -552,20 +588,24 @@ msgstr "Atur pengguna"
 msgid "Modify administrative user information or delete users."
 msgstr "Ubah informasi pengguna atau hapus pengguna."
 
-#: snikket_web/templates/admin_home.html:14
+#: snikket_web/templates/admin_home.html:12
+msgid "Create and manage social circles represented on your service."
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_invites.html:8
 msgid "Manage invitations"
 msgstr "Kelola undangan"
 
-#: snikket_web/templates/admin_home.html:15
+#: snikket_web/templates/admin_home.html:16
 msgid "Create, revoke or view invitations."
 msgstr "Buat, batalkan, atau lihat undangan."
 
-#: snikket_web/templates/admin_home.html:18
+#: snikket_web/templates/admin_home.html:19
 msgid "Back to the main view"
 msgstr "Kembali ke halaman utama"
 
-#: snikket_web/templates/admin_home.html:19
+#: snikket_web/templates/admin_home.html:20
 msgid "Go back to your user’s web portal page."
 msgstr "Kembali ke halaman portal web pengguna Anda."
 
@@ -764,12 +804,6 @@ msgid ""
 "Congratulations! You successfully registered on %(site_name)s as %(jid)s."
 msgstr ""
 
-#: snikket_web/templates/invite_success.html:15
-#, fuzzy
-#| msgid "Email address"
-msgid "Copy address"
-msgstr "Alamat email"
-
 #: snikket_web/templates/invite_success.html:17
 msgid ""
 "You can not set up your legacy XMPP client with the above address and the "
@@ -913,10 +947,6 @@ msgstr "Selamat datang!"
 msgid "Welcome home, %(user_name)s."
 msgstr "Selamat kembali ke rumah, %(user_name)s."
 
-#: snikket_web/templates/user_home.html:7
-msgid "Update profile"
-msgstr "Perbaharui profil"
-
 #: snikket_web/templates/user_home.html:8
 msgid ""
 "Change display name, set avatar and configure visibility of your personal "
@@ -996,6 +1026,9 @@ msgid ""
 msgstr ""
 "Bagian ini memungkinkan Anda untuk mengontrol siapa yang bisa melihat profil "
 "Anda, seperti avatar dan nama panggilan."
+
+#~ msgid "Apply"
+#~ msgstr "Terapkan"
 
 #~ msgid "Copied to clipboard"
 #~ msgstr "Kopi ke papan klip"
