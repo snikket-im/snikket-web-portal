@@ -69,7 +69,7 @@ async def login() -> typing.Union[str, quart.Response]:
             await client.login(jid, password)
         except quart.exceptions.Unauthorized:
             form.password.errors.append(
-                _("Invalid user name or password.")
+                _("Invalid username or password.")
             )
         else:
             return redirect(url_for('user.index'))

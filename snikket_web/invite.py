@@ -120,7 +120,7 @@ async def register(id_: str) -> typing.Union[str, quart.Response]:
         except aiohttp.ClientResponseError as exc:
             if exc.status == 409:
                 form.localpart.errors.append(
-                    _l("That user name is already taken")
+                    _l("That username is already taken")
                 )
             elif exc.status == 403:
                 form.localpart.errors.append(
@@ -128,7 +128,7 @@ async def register(id_: str) -> typing.Union[str, quart.Response]:
                 )
             elif exc.status == 400:
                 form.localpart.errors.append(
-                    _l("The user name was not valid")
+                    _l("The username is not valid")
                 )
             elif exc.status == 404:
                 return redirect(url_for(".view", id_=id_))
