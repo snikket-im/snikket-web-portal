@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-26 16:11+0100\n"
+"POT-Creation-Date: 2021-01-26 16:12+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -381,7 +381,7 @@ msgid ""
 msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:23
-#: snikket_web/templates/admin_edit_circle.html:15
+#: snikket_web/templates/admin_edit_circle.html:30
 #: snikket_web/templates/admin_edit_invite.html:45
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
@@ -390,49 +390,62 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:4
+#: snikket_web/templates/admin_edit_circle.html:8
 #, python-format
 msgid "Edit circle %(circle_name)s"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:8
+#: snikket_web/templates/admin_edit_circle.html:12
 msgid "Circle information"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:19
-msgid "Delete circle"
+msgid "Group chat address"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:20
-msgid "Deleting a circle does not delete any users in the circle."
+#: snikket_web/templates/admin_edit_circle.html:22
+#: snikket_web/templates/invite_success.html:15
+msgid "Copy address"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:25
-msgid "Circle members"
+msgid "This circle has no group chat associated."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:34
+msgid "Delete circle"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:35
+msgid "Deleting a circle does not delete any users in the circle."
 msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:40
+msgid "Circle members"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:55
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:48
+#: snikket_web/templates/admin_edit_circle.html:63
 msgid "This circle currently has no members."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:50
+#: snikket_web/templates/admin_edit_circle.html:65
 msgid "Invite more members"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:53
+#: snikket_web/templates/admin_edit_circle.html:68
 msgid "Add existing user"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:64
+#: snikket_web/templates/admin_edit_circle.html:79
 msgid "No users left"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:65
+#: snikket_web/templates/admin_edit_circle.html:80
 msgid "All users on this service are already in this circle."
 msgstr ""
 
@@ -732,10 +745,6 @@ msgstr ""
 #: snikket_web/templates/invite_success.html:12
 #, python-format
 msgid "Congratulations! You successfully registered on %(site_name)s as %(jid)s."
-msgstr ""
-
-#: snikket_web/templates/invite_success.html:15
-msgid "Copy address"
 msgstr ""
 
 #: snikket_web/templates/invite_success.html:17

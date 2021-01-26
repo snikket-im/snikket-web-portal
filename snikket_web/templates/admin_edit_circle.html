@@ -1,5 +1,9 @@
 {% extends "admin_app.html" %}
-{% from "library.j2" import form_button, standard_button, value_or_hint, custom_form_button %}
+{% from "library.j2" import form_button, standard_button, value_or_hint, custom_form_button, clipboard_button %}
+{% block head_lead %}
+{{ super() }}
+{% include "copy-snippet.html" %}
+{% endblock %}
 {% block content %}
 <h1>{% trans circle_name=(target_circle | circle_name) %}Edit circle {{ circle_name }}{% endtrans %}</h1>
 <form method="POST">
@@ -9,6 +13,17 @@
 	<div class="f-ebox">
 		{{ form.name.label }}
 		{{ form.name }}
+	</div>
+	<div class="f-ebox">
+		{%- if target_circle.muc_jid -%}
+		<label for="circle-muc-jid">{% trans %}Group chat address{% endtrans %}</label>
+		<input type="text" readonly="readonly" id="circle-muc-jid" value="{{ target_circle.muc_jid }}">
+		{%- call clipboard_button(target_circle.muc_jid, show_label=True) -%}
+			{%- trans -%}Copy address{%- endtrans -%}
+		{%- endcall -%}
+		{%- else -%}
+		<p>{% trans %}This circle has no group chat associated.{% endtrans %}<p>
+		{%- endif -%}
 	</div>
 	<div class="f-bbox">
 		{%- call standard_button("back", url_for(".circles"), class="secondary") -%}

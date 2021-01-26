@@ -100,6 +100,7 @@ class AdminInviteInfo:
 class AdminGroupInfo:
     id_: str
     name: str
+    muc_jid: typing.Optional[str]
     members: typing.Collection[str]
 
     @classmethod
@@ -110,6 +111,7 @@ class AdminGroupInfo:
         return cls(
             id_=data["id"],
             name=data["name"],
+            muc_jid=data.get("muc_jid") or None,
             members=data.get("members", []),
         )
 
@@ -944,10 +946,12 @@ class ProsodyClient:
             self,
             name: str,
             *,
+            create_muc: bool = True,
             session: aiohttp.ClientSession,
             ) -> AdminGroupInfo:
         payload = {
             "name": name,
+            "create_muc": create_muc,
         }
 
         async with session.post(
