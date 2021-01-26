@@ -1,0 +1,20 @@
+{% extends "invite.html" %}
+{% set body_id = "invite" %}
+{% from "library.j2" import form_button, clipboard_button %}
+{% block head_lead %}
+<title>{% trans site_name=config["SITE_NAME"] %}Successfully registered on {{ site_name }} | Snikket{% endtrans %}</title>
+{%- include "copy-snippet.html" -%}
+{% endblock %}
+{% block content %}
+<div class="elevated box el-3 form layout-expanded">
+	<h1>{% trans site_name=config["SITE_NAME"] %}Successfully registered on {{ site_name }}{% endtrans %}</h1>
+	<div class="powered-by">{% trans logo_url=url_for("static", filename="img/snikket-logo.svg") %}Powered by <img src="{{ logo_url }}" alt="Snikket">{% endtrans %}</div>
+	<p>{% trans site_name=config["SITE_NAME"], jid=jid %}Congratulations! You successfully registered on {{ site_name }} as {{ jid }}.{% endtrans %}</p>
+	<input type="text" readonly="readonly" value="{{ jid }}">
+	{%- call clipboard_button(jid, show_label=True) -%}
+		{% trans %}Copy address{% endtrans %}
+	{%- endcall -%}
+	<p>{% trans %}You can not set up your legacy XMPP client with the above address and the password you chose during registration.{% endtrans %}</p>
+	<p>{% trans %}You can now safely close this page.{% endtrans %}</p>
+</div>
+{% endblock %}

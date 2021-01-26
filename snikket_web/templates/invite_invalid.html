@@ -1,0 +1,12 @@
+{% extends "invite.html" %}
+{% block content %}
+<div class="elevated box el-3">
+	<h1>{% trans site_name=config["SITE_NAME"] %}Invite to {{ site_name }}{% endtrans %}</h1>
+	<div class="powered-by">{% trans logo_url=url_for("static", filename="img/snikket-logo.svg") %}Powered by <img src="{{ logo_url }}" alt="Snikket">{% endtrans %}</div>
+	<div class="box alert">
+		<header>{% trans %}Invite expired{% endtrans %}</header>
+		<p>{% trans %}Sorry, it looks like this invite code has expired!{% endtrans %}</p>
+	</div>
+	<img alt="Sad person holding empty box" src="{{ url_for("static", filename="img/illus-empty.svg") }}" class="fullwidth">
+</div>
+{% endblock %}

@@ -1,0 +1,185 @@
+@import "_theme.scss";
+
+div.powered-by {
+	text-align: right;
+	line-height: 1.5;
+
+	> img {
+		height: 1.5em;
+		vertical-align: -0.2em;
+		margin-left: 0.2em;
+	}
+}
+
+div.modal {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 1024;
+	width: 100%;
+	height: 100%;
+
+	> div {
+		padding: $w-l1;
+		margin-left: auto;
+		max-width: 40rem;
+		margin-right: auto;
+
+		> header {
+			display: flex;
+			flex-direction: row;
+
+			> span {
+				display: inline-block;
+				flex: 1 1 auto;
+			}
+
+			> a.button {
+				flex: 0 0 auto;
+			}
+		}
+	}
+}
+
+div.install-buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	ul {
+		display: flex;
+		flex-direction: row;
+		list-style-type: none;
+		margin: $w-l1 0;
+		padding: 0;
+	}
+
+	li {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+img.apple {
+	height: $w-l2;
+	margin: $w-s2;
+}
+
+img.play {
+	height: $w-l3;
+}
+
+.tabbox {
+	display: flex;
+	flex-direction: column;
+	margin: $w-l1 0;
+
+	> nav.tabs {
+		display: flex;
+		flex-direction: row;
+
+		> a {
+			display: inline-block;
+			padding: $w-s2;
+			border-top-left-radius: $w-s4;
+			border-top-right-radius: $w-s4;
+
+			&, &:visited {
+				color: inherit;
+				text-decoration: underline;
+				text-decoration-color: $accent-500;
+			}
+
+			&:hover {
+				background: $accent-900;
+				border-color: $accent-800;
+				color: black;
+			}
+
+			&.active {
+				text-decoration: none;
+				background: linear-gradient(0deg, $accent-600, $accent-700);
+				color: $accent-200;
+
+				&:hover, &:focus {
+					background: linear-gradient(0deg, $accent-700, $accent-800);
+				}
+
+				&:active {
+					background: $accent-600;
+				}
+			}
+		}
+	}
+
+	> .tab-pane {
+		display: none;
+		padding: 0 $w-0;
+		background: $accent-900;
+
+		&.active {
+			display: block;
+		}
+	}
+}
+
+.qr {
+	margin: $w-l1 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	> img {
+		padding: $w-0;
+		background: white;
+	}
+}
+
+.float-right {
+	float: right;
+}
+
+#tutorial-scan {
+	width: $w-l5;
+	margin: $w-l1;
+
+	box-shadow:
+		0 1px 3px rgba(0, 0, 0, 0.12),
+		0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+div.form.layout-expanded .lwrap {
+	display: flex;
+	flex-direction: row;
+
+	input.localpart-magic {
+		display: inline-block;
+		width: auto;
+		flex: 1 0 auto;
+	}
+
+	span {
+		display: inline-block;
+		flex: 0 0 auto;
+		background: $gray-900;
+		border: none;
+		border-bottom: $w-s4 solid $primary-500;
+		margin-bottom: -$w-s4;
+		padding: 0 $w-s3;
+	}
+}
+
+.fullwidth {
+	width: 100%;
+}
+
+#invite {
+	background: url('../img/invite-bg.jpg');
+	background-attachment: fixed;
+	background-size: cover;
+}

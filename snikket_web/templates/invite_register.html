@@ -1,0 +1,43 @@
+{% extends "invite.html" %}
+{% set body_id = "invite" %}
+{% from "library.j2" import form_button, render_errors %}
+{% block head_lead %}
+<title>{% trans site_name=config["SITE_NAME"] %}Register on {{ site_name }} | Snikket{% endtrans %}</title>
+{% endblock %}
+{% block content %}
+<div class="elevated box el-3">
+	<h1>{% trans site_name=config["SITE_NAME"] %}Register on {{ site_name }}{% endtrans %}</h1>
+	<div class="powered-by">{% trans logo_url=url_for("static", filename="img/snikket-logo.svg") %}Powered by <img src="{{ logo_url }}" alt="Snikket">{% endtrans %}</div>
+	<p>{% trans site_name=config["SITE_NAME"] %}{{ site_name }} is using Snikket - a secure, privacy-friendly chat app.{% endtrans %}</p>
+	<h2>{% trans %}Create an account{% endtrans %}</h2>
+	<p>{% trans %}Creating an account will allow to communicate with other people using the Snikket app or compatible software. If you already have the app installed, we recommend that you continue the account creation process inside the app by clicking on the button below:{% endtrans %}</p>
+	<h3>{% trans %}App already installed?{% endtrans %}</h3>
+	{%- call standard_button("exit_to_app", invite.xmpp_uri, class="secondary") -%}
+		{% trans %}Open the app{% endtrans %}
+	{%- endcall -%}
+	<p class="weak">{% trans %}This button works only if you have the app installed already!{% endtrans %}</p>
+	<h3>{% trans %}Create an account online{% endtrans %}</h3>
+	<p>{% trans %}If you plan to use a legacy XMPP client, you can register an account online and enter your credentials into any XMPP-compatible software.{% endtrans %}</p>
+	<form method="POST"><div class="form layout-expanded">
+		{{- form.csrf_token -}}
+		{%- call render_errors(form) %}{% endcall -%}
+		<div class="f-ebox">
+			{{ form.localpart.label }}
+			<div class="lwrap">{{ form.localpart(class="localpart-magic") }}<span class="localpart-fixed">@{{ config["SNIKKET_DOMAIN"] }}</div>
+			<p class="field-desc weak">{% trans %}Choose a username, this will become the first part of your new chat address.{% endtrans %}</p>
+		</div>
+		<div class="f-ebox">
+			{{ form.password.label }}
+			{{ form.password }}
+			<p class="field-desc weak">{% trans %}Enter a secure password that you do not use anywhere else.{% endtrans %}</p>
+		</div>
+		<div class="f-ebox">
+			{{ form.password_confirm.label }}
+			{{ form.password_confirm }}
+		</div>
+		<div class="f-bbox">
+			{%- call form_button("done", form.action_register, class="primary") -%}{%- endcall -%}
+		</div>
+	</div></form>
+</div>
+{% endblock %}

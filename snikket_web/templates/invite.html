@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% from "library.j2" import standard_button %}
+{% block style %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/invite.css") }}">
+{% endblock %}
+{% block body %}
+<div id="mwrap"><main>{% block content %}{% endblock %}</main></div>
+{%- include "_footer.html" -%}
+{% endblock %}

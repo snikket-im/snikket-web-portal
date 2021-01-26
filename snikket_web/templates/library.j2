@@ -24,9 +24,9 @@
 {%- if alt %}<span class="a11y-only">{{ alt }}</span>{% endif %}<svg class="icon icon-{{ name }}" aria-hidden="true"><use xlink:href="{{ url_for('static', filename='img/icons.svg' )}}#icon-{{ name }}"></use></svg>
 {%- endmacro %}
 
-{% macro standard_button(icon_name, href, caller=None, class=None) -%}
+{% macro standard_button(icon_name, href, caller=None, class=None, onclick=None) -%}
 {%- set label = caller() -%}
-<a href="{{ href }}" class="button {% if class %}{{ class }}{% endif %}" aria-label="{{ a11y }}" title="{{ a11y }}">{% call icon(icon_name) %}{% endcall %}<span>{{ label }}</span></a>
+<a href="{{ href }}" class="button {% if class %}{{ class }}{% endif %}" aria-label="{{ a11y }}" title="{{ a11y }}"{% if onclick %} onclick="{{ onclick }}"{% endif %}>{% call icon(icon_name) %}{% endcall %}<span>{{ label }}</span></a>
 {%- endmacro %}
 
 {% macro form_button(icon_name, button_obj, caller=None, class=None) -%}
@@ -52,9 +52,9 @@
 </button>
 {%- endmacro %}
 
-{% macro action_button(icon_name, href, caller=None, class=None) -%}
+{% macro action_button(icon_name, href, caller=None, class=None, onclick=None) -%}
 {%- set a11y = caller() -%}
-<a href="{{ href }}" class="button {% if class %}{{ class }}{% endif %}" aria-label="{{ a11y }}" title="{{ a11y }}">{% call icon(icon_name) %}{% endcall %}</a>
+<a href="{{ href }}" class="button {% if class %}{{ class }}{% endif %}" aria-label="{{ a11y }}" title="{{ a11y }}"{% if onclick %} onclick="{{ onclick }}"{% endif %}>{% call icon(icon_name) %}{% endcall %}</a>
 {%- endmacro %}
 
 {% macro clipboard_button(data, show_label=False, caller=None, class=None) -%}
@@ -96,5 +96,14 @@
 {{- v -}}
 {%- else -%}
 —
+{%- endif -%}
+{% endmacro %}
+
+{% macro extract_circle_name(circle_map, id, caller=None) %}
+{%- set circle_info = circle_map[id] -%}
+{%- if circle_info -%}
+<a href="{{ url_for('.edit_circle', id_=id) }}">{{ circle_info | circle_name }}</a>
+{%- else -%}
+<em>{% trans %}deleted{% endtrans %}</em>
 {%- endif -%}
 {% endmacro %}

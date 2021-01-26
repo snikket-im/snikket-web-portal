@@ -1,5 +1,5 @@
 {% extends "admin_app.html" %}
-{% from "library.j2" import showuri, form_button, standard_button %}
+{% from "library.j2" import showuri, form_button, standard_button, extract_circle_name %}
 {% block head_lead %}
 {{ super() }}
 {% include "copy-snippet.html" %}
@@ -22,7 +22,7 @@
 		<dt>{% trans %}Circles{% endtrans %}</dt>
 		<dd><p>{% trans %}Users joining via this invitation will be added to the following circles:{% endtrans %}</p><ul>
 			{%- for group_id in invite.group_ids -%}
-				<li>{{ circle_map[group_id] | circle_name }}</li>
+				<li>{%- call extract_circle_name(circle_map, group_id) -%}{%- endcall -%}</li>
 			{%- endfor -%}
 		</ul></dd>
 		{%- else -%}
@@ -30,7 +30,7 @@
 		<dd>
 			{%- if ngroups == 1 -%}
 			{%- set group_id = invite.group_ids[0] -%}
-			<a href="{{ url_for(".edit_circle", id_=group_id) }}">{{ circle_map[invite.group_ids[0]] | circle_name }}</a>
+			{%- call extract_circle_name(circle_map, group_id) -%}{%- endcall -%}
 			{%- else -%}
 			<em>{% trans %}The user will not be added to any circle and will have no contacts.{% endtrans %}</em>
 			{%- endif -%}
