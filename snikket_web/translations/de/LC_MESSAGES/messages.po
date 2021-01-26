@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-26 16:12+0100\n"
+"POT-Creation-Date: 2021-01-26 16:27+0100\n"
 "PO-Revision-Date: 2021-01-26 14:06+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language-Team: German <https://i18n.sotecware.net/projects/snikket/web-"
@@ -810,7 +810,7 @@ msgstr ""
 
 #: snikket_web/templates/invite_success.html:17
 msgid ""
-"You can not set up your legacy XMPP client with the above address and the "
+"You can now set up your legacy XMPP client with the above address and the "
 "password you chose during registration."
 msgstr ""
 
