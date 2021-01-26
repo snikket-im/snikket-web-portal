@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-26 16:27+0100\n"
 "PO-Revision-Date: 2021-01-26 19:51+0000\n"
-"Last-Translator: arco <marsupilami450@gmail.com>\n"
+"Last-Translator: pep <pep@bouah.net>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/fr/>\n"
 "Language: fr\n"
@@ -81,10 +81,8 @@ msgid "Select user"
 msgstr "Sélectionner un utilisateur"
 
 #: snikket_web/admin.py:328
-#, fuzzy
-#| msgid "Create circle"
 msgid "Update circle"
-msgstr "Créer un cercle"
+msgstr "Mettre à jour le cercle"
 
 #: snikket_web/admin.py:332
 msgid "Delete circle permanently"
@@ -100,33 +98,27 @@ msgstr "Principal"
 
 #: snikket_web/invite.py:86
 msgid "Username"
-msgstr ""
+msgstr "Nom d’utilisateur"
 
 #: snikket_web/invite.py:90 snikket_web/main.py:41
 msgid "Password"
 msgstr "Mot de passe"
 
 #: snikket_web/invite.py:94
-#, fuzzy
-#| msgid "Confirm new password"
 msgid "Confirm password"
-msgstr "Confirmer le nouveau mot de passe"
+msgstr "Confirmer le mot de passe"
 
 #: snikket_web/invite.py:98
-#, fuzzy
-#| msgid "The new passwords must match"
 msgid "The passwords must match"
-msgstr "Les nouveaux mots de passe doivent être identiques"
+msgstr "Les mots de passe doivent être identiques"
 
 #: snikket_web/invite.py:103
-#, fuzzy
-#| msgid "Create circle"
 msgid "Create account"
-msgstr "Créer un cercle"
+msgstr "Créer un compte"
 
 #: snikket_web/invite.py:123
 msgid "That user name is already taken"
-msgstr ""
+msgstr "Ce nom d’utilisateur est déjà utilisé"
 
 #: snikket_web/invite.py:127
 msgid "Registration was declined for unknown reasons"
