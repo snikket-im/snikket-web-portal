@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-26 20:50+0100\n"
 "PO-Revision-Date: 2021-01-26 21:55+0000\n"
-"Last-Translator: arco <marsupilami450@gmail.com>\n"
+"Last-Translator: franck <dev@monanderos.fr>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/fr/>\n"
 "Language: fr\n"
@@ -138,7 +138,6 @@ msgid "Address"
 msgstr "Adresse"
 
 #: snikket_web/main.py:46
-#, fuzzy
 msgid "Sign in"
 msgstr "Se connecter"
 
@@ -554,11 +553,11 @@ msgstr "Créé le"
 #: snikket_web/templates/admin_edit_user.html:3
 #, python-format
 msgid "Edit user %(user_name)s"
-msgstr "Éditer l’utilisateur %(user_name)s"
+msgstr "Modifier l’utilisateur %(user_name)s"
 
 #: snikket_web/templates/admin_edit_user.html:5
 msgid "User information"
-msgstr "Information sur l’utilisateur"
+msgstr "Informations de l’utilisateur"
 
 #: snikket_web/templates/admin_edit_user.html:25
 #: snikket_web/templates/admin_reset_user_password.html:8
@@ -673,7 +672,7 @@ msgstr "Numéro de téléphone"
 #: snikket_web/templates/admin_users.html:29
 #, python-format
 msgid "Show debug information for %(user_name)s"
-msgstr "Affiche les informations de debug pour %(user_name)s"
+msgstr "Affiche les informations de débogage pour %(user_name)s"
 
 #: snikket_web/templates/admin_users.html:32
 #, python-format
