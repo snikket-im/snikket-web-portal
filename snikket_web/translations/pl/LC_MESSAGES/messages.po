@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-26 16:27+0100\n"
-"PO-Revision-Date: 2021-01-26 14:06+0000\n"
+"PO-Revision-Date: 2021-01-26 19:51+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
-"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/pl/>\n"
+"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -82,10 +82,8 @@ msgid "Select user"
 msgstr "Wybierz użytkownika"
 
 #: snikket_web/admin.py:328
-#, fuzzy
-#| msgid "Create circle"
 msgid "Update circle"
-msgstr "Utwórz krąg"
+msgstr "Zaktualizuj ustawienia kręgu"
 
 #: snikket_web/admin.py:332
 msgid "Delete circle permanently"
@@ -101,41 +99,35 @@ msgstr "Główny"
 
 #: snikket_web/invite.py:86
 msgid "Username"
-msgstr ""
+msgstr "Nazwa użytkownika"
 
 #: snikket_web/invite.py:90 snikket_web/main.py:41
 msgid "Password"
 msgstr "Hasło"
 
 #: snikket_web/invite.py:94
-#, fuzzy
-#| msgid "Confirm new password"
 msgid "Confirm password"
-msgstr "Potwierdź nowe hasło"
+msgstr "Potwierdź hasło"
 
 #: snikket_web/invite.py:98
-#, fuzzy
-#| msgid "The new passwords must match"
 msgid "The passwords must match"
-msgstr "Nowe hasła muszą się zgadzać"
+msgstr "Hasła muszą się zgadzać"
 
 #: snikket_web/invite.py:103
-#, fuzzy
-#| msgid "Create circle"
 msgid "Create account"
-msgstr "Utwórz krąg"
+msgstr "Utwórz konto"
 
 #: snikket_web/invite.py:123
 msgid "That user name is already taken"
-msgstr ""
+msgstr "Ta nazwa użytkownika jest już zajęta"
 
 #: snikket_web/invite.py:127
 msgid "Registration was declined for unknown reasons"
-msgstr ""
+msgstr "Z nieznanych przyczyn rejestracja została odrzucona"
 
 #: snikket_web/invite.py:131
 msgid "The user name was not valid"
-msgstr ""
+msgstr "Ta nazwa użytkownika jest nieprawidłowa"
 
 #: snikket_web/main.py:36
 msgid "Address"
@@ -289,6 +281,8 @@ msgid ""
 "<em>Circles</em> aim to help people who are in the same social circle find "
 "each other on your service."
 msgstr ""
+"Celem <em> Kręgów </em> jest pomoc osobom z tego samego kręgu znajomych w "
+"odnalezieniu się na twoim serwerze."
 
 #: snikket_web/templates/admin_circles.html:6
 msgid ""
@@ -296,6 +290,9 @@ msgid ""
 "In addition, each circle has a group chat where the circle members are "
 "included."
 msgstr ""
+"Użytkownicy, którzy są w tym samym kręgu, będą widzieli się wzajemnie na "
+"swoich listach kontaktów. Każdy krąg posiada również czat grupowy dla "
+"członków danego kręgu."
 
 #: snikket_web/templates/admin_circles.html:13
 msgid "Circle name"
@@ -434,21 +431,17 @@ msgid "Circle information"
 msgstr "Informacje o kręgu"
 
 #: snikket_web/templates/admin_edit_circle.html:19
-#, fuzzy
-#| msgid "Email address"
 msgid "Group chat address"
-msgstr "Adres e-mail"
+msgstr "Adres czatu grupowego"
 
 #: snikket_web/templates/admin_edit_circle.html:22
 #: snikket_web/templates/invite_success.html:15
-#, fuzzy
-#| msgid "Email address"
 msgid "Copy address"
-msgstr "Adres e-mail"
+msgstr "Skopiuj adres"
 
 #: snikket_web/templates/admin_edit_circle.html:25
 msgid "This circle has no group chat associated."
-msgstr ""
+msgstr "Ten krąg nie jest powiązany z żadnym czatem grupowym."
 
 #: snikket_web/templates/admin_edit_circle.html:34
 msgid "Delete circle"
@@ -589,7 +582,7 @@ msgstr "Zmień informacje o użytkowniku lub usuń użytkowników."
 
 #: snikket_web/templates/admin_home.html:12
 msgid "Create and manage social circles represented on your service."
-msgstr ""
+msgstr "Twórz i zarządzaj kręgami społecznościowymi na twoim serwerze."
 
 #: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_invites.html:8
@@ -702,10 +695,9 @@ msgstr "Portal internetowy napotkał błąd wewnętrzny."
 
 #: snikket_web/templates/invite_invalid.html:4
 #: snikket_web/templates/invite_view.html:12
-#, fuzzy, python-format
-#| msgid "Edit user %(user_name)s"
+#, python-format
 msgid "Invite to %(site_name)s"
-msgstr "Edytuj użytkownika %(user_name)s"
+msgstr "Zaproś na %(site_name)s"
 
 #: snikket_web/templates/invite_invalid.html:5
 #: snikket_web/templates/invite_register.html:10
@@ -713,13 +705,11 @@ msgstr "Edytuj użytkownika %(user_name)s"
 #: snikket_web/templates/invite_view.html:13
 #, python-format
 msgid "Powered by <img src=\"%(logo_url)s\" alt=\"Snikket\">"
-msgstr ""
+msgstr "W oparciu o <img alt=\"Snikket\" src=\"%(logo_url)s\">"
 
 #: snikket_web/templates/invite_invalid.html:7
-#, fuzzy
-#| msgid "Invite to circle"
 msgid "Invite expired"
-msgstr "Zaproś do kręgu"
+msgstr "Zaproszenie wygasło"
 
 #: snikket_web/templates/invite_invalid.html:8
 msgid "Sorry, it looks like this invite code has expired!"
@@ -728,13 +718,12 @@ msgstr ""
 #: snikket_web/templates/invite_register.html:5
 #, python-format
 msgid "Register on %(site_name)s | Snikket"
-msgstr ""
+msgstr "Zarejestruj się na %(site_name)s | Snikket"
 
 #: snikket_web/templates/invite_register.html:9
-#, fuzzy, python-format
-#| msgid "Edit user %(user_name)s"
+#, python-format
 msgid "Register on %(site_name)s"
-msgstr "Edytuj użytkownika %(user_name)s"
+msgstr "Zarejestruj się na %(site_name)s"
 
 #: snikket_web/templates/invite_register.html:11
 #, python-format
@@ -742,10 +731,8 @@ msgid "%(site_name)s is using Snikket - a secure, privacy-friendly chat app."
 msgstr ""
 
 #: snikket_web/templates/invite_register.html:12
-#, fuzzy
-#| msgid "Create invitation"
 msgid "Create an account"
-msgstr "Utwórz zaproszenie"
+msgstr "Utwórz konto"
 
 #: snikket_web/templates/invite_register.html:13
 msgid ""
@@ -758,21 +745,22 @@ msgstr ""
 #: snikket_web/templates/invite_register.html:14
 #: snikket_web/templates/invite_view.html:31
 msgid "App already installed?"
-msgstr ""
+msgstr "Aplikacja jest już zainstalowana?"
 
 #: snikket_web/templates/invite_register.html:16
 #: snikket_web/templates/invite_view.html:33
 msgid "Open the app"
-msgstr ""
+msgstr "Otwórz aplikację"
 
 #: snikket_web/templates/invite_register.html:18
 #: snikket_web/templates/invite_view.html:35
 msgid "This button works only if you have the app installed already!"
 msgstr ""
+"Ten przycisk zadziała wyłącznie, jeśli masz już zainstalowaną aplikację!"
 
 #: snikket_web/templates/invite_register.html:19
 msgid "Create an account online"
-msgstr ""
+msgstr "Utwórz konto online"
 
 #: snikket_web/templates/invite_register.html:20
 msgid ""
@@ -873,15 +861,13 @@ msgid ""
 msgstr ""
 
 #: snikket_web/templates/invite_view.html:44
-#, fuzzy
-#| msgid "Show invite details"
 msgid "Scan invite code"
-msgstr "Pokaż szczegóły zaproszenia"
+msgstr "Zeskanuj kod zaproszenia"
 
 #: snikket_web/templates/invite_view.html:47
 #: snikket_web/templates/invite_view.html:76
 msgid "Close"
-msgstr ""
+msgstr "Zamknij"
 
 #: snikket_web/templates/invite_view.html:50
 msgid ""
