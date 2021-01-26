@@ -325,7 +325,7 @@ class EditCircleForm(flask_wtf.FlaskForm):  # type:ignore
     )
 
     action_save = wtforms.SubmitField(
-        _l("Apply")
+        _l("Update circle")
     )
 
     action_delete = wtforms.SubmitField(

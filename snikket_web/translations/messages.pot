@@ -77,8 +77,8 @@ msgstr ""
 msgid "Select user"
 msgstr ""
 
-#: snikket_web/admin.py:328 snikket_web/user.py:68
-msgid "Apply"
+#: snikket_web/admin.py:328
+msgid "Update circle"
 msgstr ""
 
 #: snikket_web/admin.py:332
@@ -181,6 +181,10 @@ msgstr ""
 
 #: snikket_web/user.py:63
 msgid "Profile visibility"
+msgstr ""
+
+#: snikket_web/templates/user_home.html:7 snikket_web/user.py:68
+msgid "Update profile"
 msgstr ""
 
 #: snikket_web/user.py:93
@@ -888,10 +892,6 @@ msgstr ""
 #: snikket_web/templates/user_home.html:4
 #, python-format
 msgid "Welcome home, %(user_name)s."
-msgstr ""
-
-#: snikket_web/templates/user_home.html:7
-msgid "Update profile"
 msgstr ""
 
 #: snikket_web/templates/user_home.html:8

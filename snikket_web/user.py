@@ -65,7 +65,7 @@ class ProfileForm(flask_wtf.FlaskForm):  # type:ignore
     )
 
     action_save = wtforms.SubmitField(
-        _l("Apply"),
+        _l("Update profile"),
     )
 
 
