@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-26 16:12+0100\n"
+"POT-Creation-Date: 2021-01-26 16:27+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -753,7 +753,7 @@ msgstr ""
 
 #: snikket_web/templates/invite_success.html:17
 msgid ""
-"You can not set up your legacy XMPP client with the above address and the"
+"You can now set up your legacy XMPP client with the above address and the"
 " password you chose during registration."
 msgstr ""
 
