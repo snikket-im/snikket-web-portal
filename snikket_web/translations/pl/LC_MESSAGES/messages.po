@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-26 20:50+0100\n"
-"PO-Revision-Date: 2021-01-26 19:51+0000\n"
+"PO-Revision-Date: 2021-01-27 14:35+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
-"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/pl/>\n"
+"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -118,8 +118,6 @@ msgid "Create account"
 msgstr "Utwórz konto"
 
 #: snikket_web/invite.py:123
-#, fuzzy
-#| msgid "That user name is already taken"
 msgid "That username is already taken"
 msgstr "Ta nazwa użytkownika jest już zajęta"
 
@@ -128,8 +126,6 @@ msgid "Registration was declined for unknown reasons"
 msgstr "Z nieznanych przyczyn rejestracja została odrzucona"
 
 #: snikket_web/invite.py:131
-#, fuzzy
-#| msgid "The user name was not valid"
 msgid "The username is not valid"
 msgstr "Ta nazwa użytkownika jest nieprawidłowa"
 
@@ -142,8 +138,6 @@ msgid "Sign in"
 msgstr "Zaloguj się"
 
 #: snikket_web/main.py:72
-#, fuzzy
-#| msgid "Invalid user name or password."
 msgid "Invalid username or password."
 msgstr "Nieprawidłowa nazwa użytkownika lub hasło."
 
