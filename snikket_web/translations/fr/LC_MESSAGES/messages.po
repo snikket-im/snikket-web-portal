@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-26 16:27+0100\n"
 "PO-Revision-Date: 2021-01-26 19:51+0000\n"
-"Last-Translator: franck <dev@monanderos.fr>\n"
+"Last-Translator: arco <marsupilami450@gmail.com>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/fr/>\n"
 "Language: fr\n"
@@ -141,8 +141,9 @@ msgid "Address"
 msgstr "Adresse"
 
 #: snikket_web/main.py:46
+#, fuzzy
 msgid "Sign in"
-msgstr "Se logger"
+msgstr "Se connecter"
 
 #: snikket_web/main.py:72
 msgid "Invalid user name or password."
@@ -375,12 +376,13 @@ msgstr "Copier le journal complet"
 
 #: snikket_web/templates/admin_delete_user.html:4
 #: snikket_web/templates/admin_users.html:26
-#, python-format
+#, fuzzy, python-format
 msgid "Delete user %(user_name)s"
-msgstr "Supprime l’utilisateur %(user_name)s"
+msgstr "Supprimer l’utilisateur %(user_name)s"
 
 #: snikket_web/templates/admin_delete_user.html:6
 #: snikket_web/templates/admin_edit_user.html:28
+#, fuzzy
 msgid "Delete user"
 msgstr "Supprimer un utilisateur"
 
@@ -395,8 +397,9 @@ msgstr "Identifiant"
 
 #: snikket_web/templates/admin_delete_user.html:14
 #: snikket_web/templates/admin_users.html:12
+#, fuzzy
 msgid "Email address"
-msgstr "Adresse email"
+msgstr "Adresse e-mail"
 
 #: snikket_web/templates/admin_delete_user.html:19
 msgid "Danger"
@@ -435,14 +438,14 @@ msgstr "Information sur le cercle"
 #, fuzzy
 #| msgid "Email address"
 msgid "Group chat address"
-msgstr "Adresse email"
+msgstr "Adresse de la conversation de groupe"
 
 #: snikket_web/templates/admin_edit_circle.html:22
 #: snikket_web/templates/invite_success.html:15
 #, fuzzy
 #| msgid "Email address"
 msgid "Copy address"
-msgstr "Adresse email"
+msgstr "Copier l'adresse"
 
 #: snikket_web/templates/admin_edit_circle.html:25
 msgid "This circle has no group chat associated."
@@ -703,7 +706,7 @@ msgstr "Le portail web a rencontré une erreur interne."
 #, fuzzy, python-format
 #| msgid "Edit user %(user_name)s"
 msgid "Invite to %(site_name)s"
-msgstr "Éditer l’utilisateur %(user_name)s"
+msgstr "Inviter à %(site_name)s"
 
 #: snikket_web/templates/invite_invalid.html:5
 #: snikket_web/templates/invite_register.html:10
@@ -717,7 +720,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Invite to circle"
 msgid "Invite expired"
-msgstr "Inviter dans le cercle"
+msgstr "Invitation expirée"
 
 #: snikket_web/templates/invite_invalid.html:8
 msgid "Sorry, it looks like this invite code has expired!"
@@ -732,7 +735,7 @@ msgstr ""
 #, fuzzy, python-format
 #| msgid "Edit user %(user_name)s"
 msgid "Register on %(site_name)s"
-msgstr "Éditer l’utilisateur %(user_name)s"
+msgstr "S'inscrire sur %(site_name)s"
 
 #: snikket_web/templates/invite_register.html:11
 #, python-format
@@ -743,7 +746,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Create invitation"
 msgid "Create an account"
-msgstr "Créer une invitation"
+msgstr "Créer un compte"
 
 #: snikket_web/templates/invite_register.html:13
 msgid ""
@@ -874,7 +877,7 @@ msgstr ""
 #, fuzzy
 #| msgid "Show invite details"
 msgid "Scan invite code"
-msgstr "Affiche les détails de l’invitation"
+msgstr "Scanner le code d'invitation"
 
 #: snikket_web/templates/invite_view.html:47
 #: snikket_web/templates/invite_view.html:76
