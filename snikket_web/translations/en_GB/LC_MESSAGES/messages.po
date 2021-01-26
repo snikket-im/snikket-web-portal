@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-26 16:27+0100\n"
+"POT-Creation-Date: 2021-01-26 20:50+0100\n"
 "PO-Revision-Date: 2021-01-23 17:06+0000\n"
 "Last-Translator: Matthew Wild <matthew@snikket.org>\n"
 "Language-Team: English (United Kingdom) <https://i18n.sotecware.net/projects/"
@@ -125,7 +125,7 @@ msgid "Create account"
 msgstr "Create circle"
 
 #: snikket_web/invite.py:123
-msgid "That user name is already taken"
+msgid "That username is already taken"
 msgstr ""
 
 #: snikket_web/invite.py:127
@@ -133,7 +133,7 @@ msgid "Registration was declined for unknown reasons"
 msgstr ""
 
 #: snikket_web/invite.py:131
-msgid "The user name was not valid"
+msgid "The username is not valid"
 msgstr ""
 
 #: snikket_web/main.py:36
@@ -145,7 +145,9 @@ msgid "Sign in"
 msgstr "Sign in"
 
 #: snikket_web/main.py:72
-msgid "Invalid user name or password."
+#, fuzzy
+#| msgid "Invalid user name or password."
+msgid "Invalid username or password."
 msgstr "Invalid user name or password."
 
 #: snikket_web/user.py:21
@@ -716,7 +718,7 @@ msgid "Invite expired"
 msgstr "Invite to circle"
 
 #: snikket_web/templates/invite_invalid.html:8
-msgid "Sorry, it looks like this invite code has expired!"
+msgid "Sorry, it looks like this invitation link has expired!"
 msgstr ""
 
 #: snikket_web/templates/invite_register.html:5
