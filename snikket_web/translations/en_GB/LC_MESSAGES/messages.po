@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-24 11:05+0100\n"
+"POT-Creation-Date: 2021-01-26 15:06+0100\n"
 "PO-Revision-Date: 2021-01-23 17:06+0000\n"
 "Last-Translator: Matthew Wild <matthew@snikket.org>\n"
 "Language-Team: English (United Kingdom) <https://i18n.sotecware.net/projects/"
@@ -96,13 +96,47 @@ msgstr "Add user"
 msgid "Main"
 msgstr "Main"
 
+#: snikket_web/invite.py:86
+msgid "Username"
+msgstr ""
+
+#: snikket_web/invite.py:90 snikket_web/main.py:41
+msgid "Password"
+msgstr "Password"
+
+#: snikket_web/invite.py:94
+#, fuzzy
+#| msgid "Confirm new password"
+msgid "Confirm password"
+msgstr "Confirm new password"
+
+#: snikket_web/invite.py:98
+#, fuzzy
+#| msgid "The new passwords must match."
+msgid "The passwords must match"
+msgstr "The new passwords must match."
+
+#: snikket_web/invite.py:103
+#, fuzzy
+#| msgid "Create circle"
+msgid "Create account"
+msgstr "Create circle"
+
+#: snikket_web/invite.py:123
+msgid "That user name is already taken"
+msgstr ""
+
+#: snikket_web/invite.py:127
+msgid "Registration was declined for unknown reasons"
+msgstr ""
+
+#: snikket_web/invite.py:131
+msgid "The user name was not valid"
+msgstr ""
+
 #: snikket_web/main.py:36
 msgid "Address"
 msgstr "Address"
-
-#: snikket_web/main.py:41
-msgid "Password"
-msgstr "Password"
 
 #: snikket_web/main.py:46
 msgid "Sign in"
@@ -163,6 +197,11 @@ msgstr "Profile visibility"
 #: snikket_web/user.py:93
 msgid "Incorrect password"
 msgstr "Incorrect password"
+
+#: snikket_web/templates/_footer.html:4 snikket_web/templates/login.html:36
+#, python-format
+msgid "A <a href=\"%(about_url)s\">Snikket</a> service"
+msgstr "A <a href=\"%(about_url)s\">Snikket</a> service"
 
 #: snikket_web/templates/about.html:9
 msgid "About Snikket"
@@ -541,23 +580,19 @@ msgstr "Yes"
 msgid "No"
 msgstr "No"
 
-#: snikket_web/templates/admin_invites.html:41
-msgid "deleted"
-msgstr "deleted"
-
-#: snikket_web/templates/admin_invites.html:49
+#: snikket_web/templates/admin_invites.html:44
 msgid "Show invite details"
 msgstr "Show invite details"
 
-#: snikket_web/templates/admin_invites.html:52
+#: snikket_web/templates/admin_invites.html:47
 msgid "Copy invite link to clipboard"
 msgstr "Copy invite link to clipboard"
 
-#: snikket_web/templates/admin_invites.html:55
+#: snikket_web/templates/admin_invites.html:50
 msgid "Delete invitation"
 msgstr "Delete invitation"
 
-#: snikket_web/templates/admin_invites.html:63
+#: snikket_web/templates/admin_invites.html:58
 msgid "Currently, there are no pending invitations."
 msgstr "Currently, there are no pending invitations."
 
@@ -619,6 +654,227 @@ msgstr "Go back to the main page"
 msgid "The web portal encountered an internal error."
 msgstr "The web portal encountered an internal error."
 
+#: snikket_web/templates/invite_invalid.html:4
+#: snikket_web/templates/invite_view.html:12
+#, fuzzy, python-format
+#| msgid "Edit user %(user_name)s"
+msgid "Invite to %(site_name)s"
+msgstr "Edit user %(user_name)s"
+
+#: snikket_web/templates/invite_invalid.html:5
+#: snikket_web/templates/invite_register.html:10
+#: snikket_web/templates/invite_success.html:11
+#: snikket_web/templates/invite_view.html:13
+#, python-format
+msgid "Powered by <img src=\"%(logo_url)s\" alt=\"Snikket\">"
+msgstr ""
+
+#: snikket_web/templates/invite_invalid.html:7
+#, fuzzy
+#| msgid "Invite to circle"
+msgid "Invite expired"
+msgstr "Invite to circle"
+
+#: snikket_web/templates/invite_invalid.html:8
+msgid "Sorry, it looks like this invite code has expired!"
+msgstr ""
+
+#: snikket_web/templates/invite_register.html:5
+#, python-format
+msgid "Register on %(site_name)s | Snikket"
+msgstr ""
+
+#: snikket_web/templates/invite_register.html:9
+#, fuzzy, python-format
+#| msgid "Edit user %(user_name)s"
+msgid "Register on %(site_name)s"
+msgstr "Edit user %(user_name)s"
+
+#: snikket_web/templates/invite_register.html:11
+#, python-format
+msgid "%(site_name)s is using Snikket - a secure, privacy-friendly chat app."
+msgstr ""
+
+#: snikket_web/templates/invite_register.html:12
+#, fuzzy
+#| msgid "Create invitation"
+msgid "Create an account"
+msgstr "Create invitation"
+
+#: snikket_web/templates/invite_register.html:13
+msgid ""
+"Creating an account will allow to communicate with other people using the "
+"Snikket app or compatible software. If you already have the app installed, "
+"we recommend that you continue the account creation process inside the app "
+"by clicking on the button below:"
+msgstr ""
+
+#: snikket_web/templates/invite_register.html:14
+#: snikket_web/templates/invite_view.html:31
+msgid "App already installed?"
+msgstr ""
+
+#: snikket_web/templates/invite_register.html:16
+#: snikket_web/templates/invite_view.html:33
+msgid "Open the app"
+msgstr ""
+
+#: snikket_web/templates/invite_register.html:18
+#: snikket_web/templates/invite_view.html:35
+msgid "This button works only if you have the app installed already!"
+msgstr ""
+
+#: snikket_web/templates/invite_register.html:19
+msgid "Create an account online"
+msgstr ""
+
+#: snikket_web/templates/invite_register.html:20
+msgid ""
+"If you plan to use a legacy XMPP client, you can register an account online "
+"and enter your credentials into any XMPP-compatible software."
+msgstr ""
+
+#: snikket_web/templates/invite_register.html:27
+msgid ""
+"Choose a username, this will become the first part of your new chat address."
+msgstr ""
+
+#: snikket_web/templates/invite_register.html:32
+msgid "Enter a secure password that you do not use anywhere else."
+msgstr ""
+
+#: snikket_web/templates/invite_success.html:5
+#, python-format
+msgid "Successfully registered on %(site_name)s | Snikket"
+msgstr ""
+
+#: snikket_web/templates/invite_success.html:10
+#, python-format
+msgid "Successfully registered on %(site_name)s"
+msgstr ""
+
+#: snikket_web/templates/invite_success.html:12
+#, python-format
+msgid ""
+"Congratulations! You successfully registered on %(site_name)s as %(jid)s."
+msgstr ""
+
+#: snikket_web/templates/invite_success.html:15
+#, fuzzy
+#| msgid "Email address"
+msgid "Copy address"
+msgstr "Email address"
+
+#: snikket_web/templates/invite_success.html:17
+msgid ""
+"You can not set up your legacy XMPP client with the above address and the "
+"password you chose during registration."
+msgstr ""
+
+#: snikket_web/templates/invite_success.html:18
+msgid "You can now safely close this page."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:6
+#, python-format
+msgid "Invite to %(site_name)s | Snikket"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:15
+#, python-format
+msgid ""
+"You have been invited to chat with %(inviter_name)s using Snikket, a secure, "
+"privacy-friendly chat app on %(site_name)s."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:17
+#, python-format
+msgid ""
+"You have been invited to chat on %(site_name)s using Snikket, a secure, "
+"privacy-friendly chat app."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:19
+msgid "Get started"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:20
+msgid "Install the Snikket App on your Android or iOS device."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:23
+msgid "Get it on Google Play"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:24
+msgid "Download on the App Store"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:27
+msgid "Not on mobile?"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:30
+msgid ""
+"After installation the app should automatically open and prompt you to "
+"create an account. If not, simply click the button below."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:37
+msgid "Alternatives"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:38
+#, python-format
+msgid ""
+"You can connect to Snikket using any XMPP-compatible software. If the button "
+"above does not work with your app, you may need to <a href=\"%(register_url)s"
+"\">register an account manually</a>."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:44
+#, fuzzy
+#| msgid "Show invite details"
+msgid "Scan invite code"
+msgstr "Show invite details"
+
+#: snikket_web/templates/invite_view.html:47
+#: snikket_web/templates/invite_view.html:76
+msgid "Close"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:50
+msgid ""
+"You can transfer this invite to your mobile device by scanning a code with "
+"your camera. You can use either a QR scanner app or the Snikket app itself."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:55
+msgid "Using a QR code scanner"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:57
+msgid "Using the Snikket app"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:62
+msgid ""
+"Use a <em>QR code</em> scanner on your mobile device to scan the code below:"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:68
+msgid ""
+"Install the Snikket app on your mobile device, open it, and tap the 'Scan' "
+"button at the top."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:69
+msgid ""
+"Your camera will turn on. Point it at the square code below until it is "
+"within the highlighted square on your screen, and wait until the app "
+"recognises it."
+msgstr ""
+
 #: snikket_web/templates/library.j2:18
 msgid "Copy link"
 msgstr "Copy link"
@@ -626,6 +882,10 @@ msgstr "Copy link"
 #: snikket_web/templates/library.j2:80
 msgid "Invalid input"
 msgstr "Invalid input"
+
+#: snikket_web/templates/library.j2:107
+msgid "deleted"
+msgstr "deleted"
 
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
@@ -638,11 +898,6 @@ msgstr "Enter your Snikket address and password to manage your account."
 #: snikket_web/templates/login.html:18
 msgid "Login failed"
 msgstr "Login failed"
-
-#: snikket_web/templates/login.html:36 snikket_web/templates/unauth.html:14
-#, python-format
-msgid "A <a href=\"%(about_url)s\">Snikket</a> service"
-msgstr "A <a href=\"%(about_url)s\">Snikket</a> service"
 
 #: snikket_web/templates/user_home.html:3
 msgid "Welcome!"
