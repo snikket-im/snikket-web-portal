@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-27 15:34+0100\n"
+"POT-Creation-Date: 2021-01-27 17:16+0100\n"
 "PO-Revision-Date: 2021-01-27 16:17+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
-"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/"
-"web-portal/pl/>\n"
+"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/web-"
+"portal/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,39 +57,49 @@ msgstr "Jeden tydzień"
 msgid "Four weeks"
 msgstr "Cztery tygodnie"
 
-#: snikket_web/admin.py:152
-msgid "Invite a group of people"
-msgstr "Zaproś grupę osób"
+#: snikket_web/admin.py:152 snikket_web/templates/admin_edit_invite.html:17
+#, fuzzy
+#| msgid "View invitation"
+msgid "Invitation type"
+msgstr "Szczegóły zaproszenia"
 
-#: snikket_web/admin.py:156
+#: snikket_web/admin.py:154 snikket_web/templates/library.j2:115
+msgid "Individual"
+msgstr ""
+
+#: snikket_web/admin.py:155 snikket_web/templates/library.j2:113
+msgid "Group"
+msgstr ""
+
+#: snikket_web/admin.py:161
 msgid "New invitation link"
 msgstr "Nowy link z zaproszeniem"
 
-#: snikket_web/admin.py:218
+#: snikket_web/admin.py:223
 msgid "Revoke"
 msgstr "Unieważnij"
 
-#: snikket_web/admin.py:274 snikket_web/admin.py:318
+#: snikket_web/admin.py:279 snikket_web/admin.py:323
 msgid "Name"
 msgstr "Nazwa"
 
-#: snikket_web/admin.py:279 snikket_web/templates/admin_circles.html:44
+#: snikket_web/admin.py:284 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Utwórz krąg"
 
-#: snikket_web/admin.py:323
+#: snikket_web/admin.py:328
 msgid "Select user"
 msgstr "Wybierz użytkownika"
 
-#: snikket_web/admin.py:328
+#: snikket_web/admin.py:333
 msgid "Update circle"
 msgstr "Zaktualizuj ustawienia kręgu"
 
-#: snikket_web/admin.py:332
+#: snikket_web/admin.py:337
 msgid "Delete circle permanently"
 msgstr "Usuń krąg bezpowrotnie"
 
-#: snikket_web/admin.py:338
+#: snikket_web/admin.py:343
 msgid "Add user"
 msgstr "Dodaj użytkownika"
 
@@ -313,15 +323,22 @@ msgid "Create invitation to circle %(circle_name)s"
 msgstr "Utwórz zaproszenie do kręgu %(circle_name)s"
 
 #: snikket_web/templates/admin_circles.html:28
-#, python-format
-msgid "Show details of circle %(circle_name)s"
+#, fuzzy, python-format
+#| msgid "Show details of circle %(circle_name)s"
+msgid "Manage members of %(circle_name)s"
 msgstr "Pokaż szczegóły kręgu %(circle_name)s"
 
-#: snikket_web/templates/admin_circles.html:37
+#: snikket_web/templates/admin_circles.html:31
+#: snikket_web/templates/admin_edit_circle.html:8
+#, python-format
+msgid "Edit circle %(circle_name)s"
+msgstr "Edytuj krąg %(circle_name)s"
+
+#: snikket_web/templates/admin_circles.html:40
 msgid "No circles"
 msgstr "Brak kręgów"
 
-#: snikket_web/templates/admin_circles.html:38
+#: snikket_web/templates/admin_circles.html:41
 msgid ""
 "Currently, there are no circles on this service. Use the form below to "
 "create one."
@@ -329,7 +346,7 @@ msgstr ""
 "Obecnie nie ma kręgów na tym serwerze. Użyj poniższego formularza, by "
 "stworzyć nowy."
 
-#: snikket_web/templates/admin_circles.html:41
+#: snikket_web/templates/admin_circles.html:44
 msgid "New circle"
 msgstr "Nowy krąg"
 
@@ -415,11 +432,6 @@ msgstr ""
 msgid "Back"
 msgstr "Wstecz"
 
-#: snikket_web/templates/admin_edit_circle.html:8
-#, python-format
-msgid "Edit circle %(circle_name)s"
-msgstr "Edytuj krąg %(circle_name)s"
-
 #: snikket_web/templates/admin_edit_circle.html:13
 msgid "This circle cannot be modified"
 msgstr "Ten krąg nie może być modyfikowany"
@@ -500,10 +512,6 @@ msgstr "Ważne do"
 #: snikket_web/templates/admin_reset_user_password.html:17
 msgid "Link"
 msgstr "Link"
-
-#: snikket_web/templates/admin_edit_invite.html:17
-msgid "Reusability"
-msgstr "Możliwość wielokrotnego użycia"
 
 #: snikket_web/templates/admin_edit_invite.html:18
 msgid ""
@@ -612,30 +620,22 @@ msgid "Pending invitations"
 msgstr "Oczekujące zaproszenia"
 
 #: snikket_web/templates/admin_invites.html:22
-msgid "Reusable"
-msgstr "Wielokrotnego użytku"
+msgid "Type"
+msgstr ""
 
-#: snikket_web/templates/admin_invites.html:31
-msgid "Yes"
-msgstr "Tak"
-
-#: snikket_web/templates/admin_invites.html:31
-msgid "No"
-msgstr "Nie"
-
-#: snikket_web/templates/admin_invites.html:44
+#: snikket_web/templates/admin_invites.html:43
 msgid "Show invite details"
 msgstr "Pokaż szczegóły zaproszenia"
 
-#: snikket_web/templates/admin_invites.html:47
+#: snikket_web/templates/admin_invites.html:46
 msgid "Copy invite link to clipboard"
 msgstr "Skopiuj link zaproszenia do schowka"
 
-#: snikket_web/templates/admin_invites.html:50
+#: snikket_web/templates/admin_invites.html:49
 msgid "Delete invitation"
 msgstr "Usuń zaproszenie"
 
-#: snikket_web/templates/admin_invites.html:58
+#: snikket_web/templates/admin_invites.html:57
 msgid "Currently, there are no pending invitations."
 msgstr "Brak oczekujących zaproszeń."
 
@@ -1032,6 +1032,21 @@ msgid ""
 msgstr ""
 "Ta sekcja pozwoli ci na zarządzenie widocznością informacji o twoim profilu "
 "przez innych, jak awatar lub pseudonim."
+
+#~ msgid "Invite a group of people"
+#~ msgstr "Zaproś grupę osób"
+
+#~ msgid "Reusability"
+#~ msgstr "Możliwość wielokrotnego użycia"
+
+#~ msgid "Reusable"
+#~ msgstr "Wielokrotnego użytku"
+
+#~ msgid "Yes"
+#~ msgstr "Tak"
+
+#~ msgid "No"
+#~ msgstr "Nie"
 
 #~ msgid "Email address"
 #~ msgstr "Adres e-mail"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-27 15:34+0100\n"
+"POT-Creation-Date: 2021-01-27 17:16+0100\n"
 "PO-Revision-Date: 2021-01-27 14:35+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
 "Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/web-"
@@ -56,39 +56,49 @@ msgstr "Satu minggu"
 msgid "Four weeks"
 msgstr "Empat minggu"
 
-#: snikket_web/admin.py:152
-msgid "Invite a group of people"
-msgstr "Mengundang beberapa orang"
+#: snikket_web/admin.py:152 snikket_web/templates/admin_edit_invite.html:17
+#, fuzzy
+#| msgid "View invitation"
+msgid "Invitation type"
+msgstr "Lihat undangan"
 
-#: snikket_web/admin.py:156
+#: snikket_web/admin.py:154 snikket_web/templates/library.j2:115
+msgid "Individual"
+msgstr ""
+
+#: snikket_web/admin.py:155 snikket_web/templates/library.j2:113
+msgid "Group"
+msgstr ""
+
+#: snikket_web/admin.py:161
 msgid "New invitation link"
 msgstr "Tautan undangan terbaru"
 
-#: snikket_web/admin.py:218
+#: snikket_web/admin.py:223
 msgid "Revoke"
 msgstr "Batalkan"
 
-#: snikket_web/admin.py:274 snikket_web/admin.py:318
+#: snikket_web/admin.py:279 snikket_web/admin.py:323
 msgid "Name"
 msgstr "Nama"
 
-#: snikket_web/admin.py:279 snikket_web/templates/admin_circles.html:44
+#: snikket_web/admin.py:284 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Buat kelompok"
 
-#: snikket_web/admin.py:323
+#: snikket_web/admin.py:328
 msgid "Select user"
 msgstr "Pilih pengguna"
 
-#: snikket_web/admin.py:328
+#: snikket_web/admin.py:333
 msgid "Update circle"
 msgstr "Memperbarui kelompok"
 
-#: snikket_web/admin.py:332
+#: snikket_web/admin.py:337
 msgid "Delete circle permanently"
 msgstr "Hapus kelompok secara permanen"
 
-#: snikket_web/admin.py:338
+#: snikket_web/admin.py:343
 msgid "Add user"
 msgstr "Tambah pengguna"
 
@@ -312,15 +322,22 @@ msgid "Create invitation to circle %(circle_name)s"
 msgstr "Buat undangan untuk kelompok %(circle_name)s"
 
 #: snikket_web/templates/admin_circles.html:28
-#, python-format
-msgid "Show details of circle %(circle_name)s"
+#, fuzzy, python-format
+#| msgid "Show details of circle %(circle_name)s"
+msgid "Manage members of %(circle_name)s"
 msgstr "Tampilkan detil dari kelompok %(circle_name)s"
 
-#: snikket_web/templates/admin_circles.html:37
+#: snikket_web/templates/admin_circles.html:31
+#: snikket_web/templates/admin_edit_circle.html:8
+#, python-format
+msgid "Edit circle %(circle_name)s"
+msgstr "Edit kelompok %(circle_name)s"
+
+#: snikket_web/templates/admin_circles.html:40
 msgid "No circles"
 msgstr "Tidak ada kelompok"
 
-#: snikket_web/templates/admin_circles.html:38
+#: snikket_web/templates/admin_circles.html:41
 msgid ""
 "Currently, there are no circles on this service. Use the form below to "
 "create one."
@@ -328,7 +345,7 @@ msgstr ""
 "Saat ini tidak ada kelompok dalam layanan. Gunakan formulir dibawah untuk "
 "membuat."
 
-#: snikket_web/templates/admin_circles.html:41
+#: snikket_web/templates/admin_circles.html:44
 msgid "New circle"
 msgstr "Kelompok baru"
 
@@ -414,11 +431,6 @@ msgstr ""
 msgid "Back"
 msgstr "Kembali"
 
-#: snikket_web/templates/admin_edit_circle.html:8
-#, python-format
-msgid "Edit circle %(circle_name)s"
-msgstr "Edit kelompok %(circle_name)s"
-
 #: snikket_web/templates/admin_edit_circle.html:13
 msgid "This circle cannot be modified"
 msgstr ""
@@ -499,10 +511,6 @@ msgstr "Valid hingga"
 #: snikket_web/templates/admin_reset_user_password.html:17
 msgid "Link"
 msgstr "Tautan"
-
-#: snikket_web/templates/admin_edit_invite.html:17
-msgid "Reusability"
-msgstr "Dapat digunakan kembali"
 
 #: snikket_web/templates/admin_edit_invite.html:18
 msgid ""
@@ -611,30 +619,22 @@ msgid "Pending invitations"
 msgstr "Undangan menunggu jawaban"
 
 #: snikket_web/templates/admin_invites.html:22
-msgid "Reusable"
-msgstr "Digunakan kembali"
+msgid "Type"
+msgstr ""
 
-#: snikket_web/templates/admin_invites.html:31
-msgid "Yes"
-msgstr "Ya"
-
-#: snikket_web/templates/admin_invites.html:31
-msgid "No"
-msgstr "Tidak"
-
-#: snikket_web/templates/admin_invites.html:44
+#: snikket_web/templates/admin_invites.html:43
 msgid "Show invite details"
 msgstr "Lihat detil undangan"
 
-#: snikket_web/templates/admin_invites.html:47
+#: snikket_web/templates/admin_invites.html:46
 msgid "Copy invite link to clipboard"
 msgstr "Kopi tautan undangan ke papan klip"
 
-#: snikket_web/templates/admin_invites.html:50
+#: snikket_web/templates/admin_invites.html:49
 msgid "Delete invitation"
 msgstr "Hapus undangan"
 
-#: snikket_web/templates/admin_invites.html:58
+#: snikket_web/templates/admin_invites.html:57
 msgid "Currently, there are no pending invitations."
 msgstr "Saat ini, tidak ada undangan yang menunggu jawaban."
 
@@ -1043,6 +1043,21 @@ msgid ""
 msgstr ""
 "Bagian ini memungkinkan Anda untuk mengontrol siapa yang bisa melihat profil "
 "Anda, seperti avatar dan nama panggilan."
+
+#~ msgid "Invite a group of people"
+#~ msgstr "Mengundang beberapa orang"
+
+#~ msgid "Reusability"
+#~ msgstr "Dapat digunakan kembali"
+
+#~ msgid "Reusable"
+#~ msgstr "Digunakan kembali"
+
+#~ msgid "Yes"
+#~ msgstr "Ya"
+
+#~ msgid "No"
+#~ msgstr "Tidak"
 
 #~ msgid "Email address"
 #~ msgstr "Alamat email"
