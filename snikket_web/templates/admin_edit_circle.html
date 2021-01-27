@@ -8,6 +8,19 @@
 <h1>{% trans circle_name=(target_circle | circle_name) %}Edit circle {{ circle_name }}{% endtrans %}</h1>
 <form method="POST">
 {{- form.csrf_token -}}
+{%- if target_circle.id_ == "default" -%}
+<div class="box hint form layout-expanded">
+	<header>{% trans %}This circle cannot be modified{% endtrans %}</header>
+	<p>{% trans %}This circle is managed automatically and cannot be removed or renamed.{% endtrans %}</p>
+	{%- if target_circle.muc_jid -%}
+	<div><label for="circle-muc-jid">{% trans %}Group chat address{% endtrans %}</label></div>
+	<div><input type="text" readonly="readonly" id="circle-muc-jid" value="{{ target_circle.muc_jid }}"></div>
+	{%- call clipboard_button(target_circle.muc_jid, show_label=True) -%}
+		{%- trans -%}Copy address{%- endtrans -%}
+	{%- endcall -%}
+	{%- endif -%}
+</div>
+{%- else -%}
 <div class="form layout-expanded">
 	<h2 class="form-title">{% trans %}Circle information{% endtrans %}</h2>
 	<div class="f-ebox">
@@ -37,6 +50,7 @@
 		{%- call form_button("done", form.action_delete, class="secondary danger") %}{% endcall -%}
 	</div>
 </div>
+{%- endif -%}
 <h2>{% trans %}Circle members{% endtrans %}</h2>
 {%- if circle_members -%}
 <div class="el-2 elevated"><table>
