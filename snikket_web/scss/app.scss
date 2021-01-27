@@ -811,10 +811,14 @@ div.welcome-cards {
 table {
 	border-collapse: collapse;
 	width: 100%;
+}
 
-	td, th {
-		padding: $w-s1;
-	}
+td, th {
+	padding: $w-s1;
+}
+
+th {
+	text-align: left;
 }
 
 div.elevated {
