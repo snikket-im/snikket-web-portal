@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-27 15:55+0100\n"
+"POT-Creation-Date: 2021-01-27 17:16+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,7 +77,7 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: snikket_web/admin.py:284 snikket_web/templates/admin_circles.html:44
+#: snikket_web/admin.py:284 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr ""
 
@@ -302,20 +302,26 @@ msgstr ""
 
 #: snikket_web/templates/admin_circles.html:28
 #, python-format
-msgid "Show details of circle %(circle_name)s"
+msgid "Manage members of %(circle_name)s"
 msgstr ""
 
-#: snikket_web/templates/admin_circles.html:37
+#: snikket_web/templates/admin_circles.html:31
+#: snikket_web/templates/admin_edit_circle.html:8
+#, python-format
+msgid "Edit circle %(circle_name)s"
+msgstr ""
+
+#: snikket_web/templates/admin_circles.html:40
 msgid "No circles"
 msgstr ""
 
-#: snikket_web/templates/admin_circles.html:38
+#: snikket_web/templates/admin_circles.html:41
 msgid ""
 "Currently, there are no circles on this service. Use the form below to "
 "create one."
 msgstr ""
 
-#: snikket_web/templates/admin_circles.html:41
+#: snikket_web/templates/admin_circles.html:44
 msgid "New circle"
 msgstr ""
 
@@ -394,11 +400,6 @@ msgstr ""
 #: snikket_web/templates/user_passwd.html:30
 #: snikket_web/templates/user_profile.html:25
 msgid "Back"
-msgstr ""
-
-#: snikket_web/templates/admin_edit_circle.html:8
-#, python-format
-msgid "Edit circle %(circle_name)s"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:13

@@ -24,8 +24,11 @@
 				{%- call custom_form_button("create_link", invite_form.circles.name, circle.id_, slim=True, class="secondary accent") -%}
 					{% trans circle_name=circle.name %}Create invitation to circle {{ circle_name }}{% endtrans %}
 				{%- endcall -%}
-				{%- call action_button("more", url_for(".edit_circle", id_=circle.id_), class="primary") -%}
-					{% trans circle_name=circle.name %}Show details of circle {{ circle_name }}{% endtrans %}
+				{%- call action_button("people", url_for(".edit_circle", id_=circle.id_) + "#members", class="secondary") -%}
+					{% trans circle_name=circle.name %}Manage members of {{ circle_name }}{% endtrans %}
+				{%- endcall -%}
+				{%- call action_button("edit", url_for(".edit_circle", id_=circle.id_), class="primary") -%}
+					{% trans circle_name=circle.name %}Edit circle {{ circle_name }}{% endtrans %}
 				{%- endcall -%}
 			</td>
 		</tr>
