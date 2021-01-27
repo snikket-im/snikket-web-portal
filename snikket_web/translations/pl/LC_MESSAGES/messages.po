@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-27 15:34+0100\n"
-"PO-Revision-Date: 2021-01-27 14:35+0000\n"
+"PO-Revision-Date: 2021-01-27 16:17+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
-"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/pl/>\n"
+"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -422,11 +422,13 @@ msgstr "Edytuj krąg %(circle_name)s"
 
 #: snikket_web/templates/admin_edit_circle.html:13
 msgid "This circle cannot be modified"
-msgstr ""
+msgstr "Ten krąg nie może być modyfikowany"
 
 #: snikket_web/templates/admin_edit_circle.html:14
 msgid "This circle is managed automatically and cannot be removed or renamed."
 msgstr ""
+"Ten krąg jest zarządzany automatycznie, dlatego nie można go usunąć lub "
+"zmienić jego nazwy."
 
 #: snikket_web/templates/admin_edit_circle.html:16
 #: snikket_web/templates/admin_edit_circle.html:32
@@ -705,7 +707,7 @@ msgstr "Zaproś na %(site_name)s"
 #: snikket_web/templates/invite_view.html:13
 #, python-format
 msgid "Powered by <img src=\"%(logo_url)s\" alt=\"Snikket\">"
-msgstr "W oparciu o <img alt=\"Snikket\" src=\"%(logo_url)s\">"
+msgstr "Obsługiwane przez <img alt=\"Snikket\" src=\"%(logo_url)s\">"
 
 #: snikket_web/templates/invite_invalid.html:7
 msgid "Invite expired"
@@ -713,7 +715,7 @@ msgstr "Zaproszenie wygasło"
 
 #: snikket_web/templates/invite_invalid.html:8
 msgid "Sorry, it looks like this invitation link has expired!"
-msgstr ""
+msgstr "Przepraszamy, wygląda na to, że ten link z zaproszeniem wygasł!"
 
 #: snikket_web/templates/invite_register.html:5
 #, python-format
@@ -729,6 +731,8 @@ msgstr "Zarejestruj się na %(site_name)s"
 #, python-format
 msgid "%(site_name)s is using Snikket - a secure, privacy-friendly chat app."
 msgstr ""
+"%(site_name)s korzysta ze Snikket - bezpiecznej i przyjaznej dla prywatności "
+"aplikacji do rozmów."
 
 #: snikket_web/templates/invite_register.html:12
 msgid "Create an account"
@@ -741,6 +745,10 @@ msgid ""
 "we recommend that you continue the account creation process inside the app "
 "by clicking on the button below:"
 msgstr ""
+"Utworzenie konta pozwoli na komunikację z innymi osobami za pomocą aplikacji "
+"Snikket lub kompatybilnego oprogramowania. Jeśli zainstalowałeś już "
+"aplikację, zalecamy kontynuowanie procesu tworzenia konta wewnątrz niej, "
+"zaprowadzi cię tam poniższy przycisk:"
 
 #: snikket_web/templates/invite_register.html:14
 #: snikket_web/templates/invite_view.html:31
@@ -767,46 +775,53 @@ msgid ""
 "If you plan to use a legacy XMPP client, you can register an account online "
 "and enter your credentials into any XMPP-compatible software."
 msgstr ""
+"Jeśli planujesz używać starszego klienta XMPP, możesz zarejestrować konto "
+"online i wprowadzić dane logowania w dowolnym oprogramowaniu zgodnym z XMPP."
 
 #: snikket_web/templates/invite_register.html:27
 msgid ""
 "Choose a username, this will become the first part of your new chat address."
 msgstr ""
+"Wybierz nazwę użytkownika, będzie to pierwsza część twojego nowego adresu do "
+"czatowania."
 
 #: snikket_web/templates/invite_register.html:32
 msgid "Enter a secure password that you do not use anywhere else."
-msgstr ""
+msgstr "Wprowadź bezpieczne hasło, którego nie używasz w innym miejscu."
 
 #: snikket_web/templates/invite_success.html:5
 #, python-format
 msgid "Successfully registered on %(site_name)s | Snikket"
-msgstr ""
+msgstr "Pomyślnie zarejestrowano na %(site_name)s | Snikket"
 
 #: snikket_web/templates/invite_success.html:10
 #, python-format
 msgid "Successfully registered on %(site_name)s"
-msgstr ""
+msgstr "Pomyślnie zarejestrowano na %(site_name)s"
 
 #: snikket_web/templates/invite_success.html:12
 #, python-format
 msgid ""
 "Congratulations! You successfully registered on %(site_name)s as %(jid)s."
 msgstr ""
+"Gratulacje! Pomyślnie zarejestrowałeś się na %(site_name)s jako %(jid)s."
 
 #: snikket_web/templates/invite_success.html:17
 msgid ""
 "You can now set up your legacy XMPP client with the above address and the "
 "password you chose during registration."
 msgstr ""
+"Możesz teraz skonfigurować swojego starszego klienta XMPP za pomocą "
+"powyższego adresu i hasła, które podałeś podczas rejestracji."
 
 #: snikket_web/templates/invite_success.html:18
 msgid "You can now safely close this page."
-msgstr ""
+msgstr "Możesz teraz bezpiecznie zamknąć tę stronę."
 
 #: snikket_web/templates/invite_view.html:6
 #, python-format
 msgid "Invite to %(site_name)s | Snikket"
-msgstr ""
+msgstr "Zaproszenie na %(site_name)s | Snikket"
 
 #: snikket_web/templates/invite_view.html:15
 #, python-format
@@ -814,6 +829,9 @@ msgid ""
 "You have been invited to chat with %(inviter_name)s using Snikket, a secure, "
 "privacy-friendly chat app on %(site_name)s."
 msgstr ""
+"Zostałeś zaproszony do czatu z %(inviter_name)s za pomocą Snikket, "
+"bezpiecznej i przyjaznej dla prywatności aplikacji do rozmów na "
+"%(site_name)s."
 
 #: snikket_web/templates/invite_view.html:17
 #, python-format
@@ -821,26 +839,29 @@ msgid ""
 "You have been invited to chat on %(site_name)s using Snikket, a secure, "
 "privacy-friendly chat app."
 msgstr ""
+"Zostałeś zaproszony do czatu na %(site_name)s za pomocą Snikket, bezpiecznej "
+"i przyjaznej dla prywatności aplikacji do rozmów."
 
 #: snikket_web/templates/invite_view.html:19
 msgid "Get started"
-msgstr ""
+msgstr "Rozpocznij"
 
 #: snikket_web/templates/invite_view.html:20
 msgid "Install the Snikket App on your Android or iOS device."
 msgstr ""
+"Zainstaluj aplikację Snikket na swoim urządzeniu z systemem Android lub iOS."
 
 #: snikket_web/templates/invite_view.html:23
 msgid "Get it on Google Play"
-msgstr ""
+msgstr "Pobierz w Google Play"
 
 #: snikket_web/templates/invite_view.html:24
 msgid "Download on the App Store"
-msgstr ""
+msgstr "Pobierz w App Store"
 
 #: snikket_web/templates/invite_view.html:27
 msgid "Not on mobile?"
-msgstr ""
+msgstr "Nie korzystasz obecnie ze smartfona?"
 
 #: snikket_web/templates/invite_view.html:30
 msgid ""
