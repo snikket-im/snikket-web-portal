@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-27 17:16+0100\n"
-"PO-Revision-Date: 2021-01-27 16:17+0000\n"
+"PO-Revision-Date: 2021-01-28 17:55+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
-"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/pl/>\n"
+"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -58,18 +58,16 @@ msgid "Four weeks"
 msgstr "Cztery tygodnie"
 
 #: snikket_web/admin.py:152 snikket_web/templates/admin_edit_invite.html:17
-#, fuzzy
-#| msgid "View invitation"
 msgid "Invitation type"
-msgstr "Szczegóły zaproszenia"
+msgstr "Typ zaproszenia"
 
 #: snikket_web/admin.py:154 snikket_web/templates/library.j2:115
 msgid "Individual"
-msgstr ""
+msgstr "Indywidualne"
 
 #: snikket_web/admin.py:155 snikket_web/templates/library.j2:113
 msgid "Group"
-msgstr ""
+msgstr "Grupowe"
 
 #: snikket_web/admin.py:161
 msgid "New invitation link"
@@ -323,10 +321,9 @@ msgid "Create invitation to circle %(circle_name)s"
 msgstr "Utwórz zaproszenie do kręgu %(circle_name)s"
 
 #: snikket_web/templates/admin_circles.html:28
-#, fuzzy, python-format
-#| msgid "Show details of circle %(circle_name)s"
+#, python-format
 msgid "Manage members of %(circle_name)s"
-msgstr "Pokaż szczegóły kręgu %(circle_name)s"
+msgstr "Zarządzaj członkami %(circle_name)s"
 
 #: snikket_web/templates/admin_circles.html:31
 #: snikket_web/templates/admin_edit_circle.html:8
@@ -467,7 +464,7 @@ msgstr "Usuń krąg"
 
 #: snikket_web/templates/admin_edit_circle.html:48
 msgid "Deleting a circle does not delete any users in the circle."
-msgstr "Usunięcie kręgu nie usuwa z serwera jego użytkowników."
+msgstr "Usunięcie kręgu nie usunie z serwera jego użytkowników."
 
 #: snikket_web/templates/admin_edit_circle.html:54
 msgid "Circle members"
@@ -573,8 +570,8 @@ msgid ""
 msgstr ""
 "Jeśli użytkownik zapomni swojego hasła, za pomocą poniższego przycisku "
 "wygenerujesz dla niego link do zresetowania hasła. Link może być "
-"wykorzystany jeden raz do jego zmiany. Prześlij go do użytkownika za pomocą "
-"bezpiecznej formy kontaktu."
+"wykorzystany jednorazowo do jego zmiany. Prześlij go do użytkownika za "
+"pomocą bezpiecznej formy kontaktu."
 
 #: snikket_web/templates/admin_home.html:3
 msgid "Welcome to the administration dashboard!"
@@ -621,7 +618,7 @@ msgstr "Oczekujące zaproszenia"
 
 #: snikket_web/templates/admin_invites.html:22
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #: snikket_web/templates/admin_invites.html:43
 msgid "Show invite details"
@@ -829,7 +826,7 @@ msgid ""
 "You have been invited to chat with %(inviter_name)s using Snikket, a secure, "
 "privacy-friendly chat app on %(site_name)s."
 msgstr ""
-"Zostałeś zaproszony do czatu z %(inviter_name)s za pomocą Snikket, "
+"Zostałeś zaproszony do czatu z %(inviter_name)s za pomocą Snikket - "
 "bezpiecznej i przyjaznej dla prywatności aplikacji do rozmów na "
 "%(site_name)s."
 
@@ -839,8 +836,8 @@ msgid ""
 "You have been invited to chat on %(site_name)s using Snikket, a secure, "
 "privacy-friendly chat app."
 msgstr ""
-"Zostałeś zaproszony do czatu na %(site_name)s za pomocą Snikket, bezpiecznej "
-"i przyjaznej dla prywatności aplikacji do rozmów."
+"Zostałeś zaproszony do czatu na %(site_name)s za pomocą Snikket - "
+"bezpiecznej i przyjaznej dla prywatności aplikacji do rozmów."
 
 #: snikket_web/templates/invite_view.html:19
 msgid "Get started"
@@ -868,10 +865,12 @@ msgid ""
 "After installation the app should automatically open and prompt you to "
 "create an account. If not, simply click the button below."
 msgstr ""
+"Po instalacji aplikacja powinna uruchomić się automatycznie i poprosić o "
+"utworzenie konta. Jeśli nie, wciśnij poniższy przycisk."
 
 #: snikket_web/templates/invite_view.html:37
 msgid "Alternatives"
-msgstr ""
+msgstr "Inne możliwości"
 
 #: snikket_web/templates/invite_view.html:38
 #, python-format
@@ -880,6 +879,10 @@ msgid ""
 "above does not work with your app, you may need to <a href=\"%(register_url)s"
 "\">register an account manually</a>."
 msgstr ""
+"Możesz połączyć się z serwerem Snikket, korzystając z dowolnego "
+"oprogramowania kompatybilnego z XMPP. Jeśli powyższy przycisk nie działa z "
+"twoją aplikacją, konieczne może być <a href=\"%(register_url)s\">ręczne "
+"zarejestrowanie konta</a>."
 
 #: snikket_web/templates/invite_view.html:44
 msgid "Scan invite code"
@@ -895,25 +898,32 @@ msgid ""
 "You can transfer this invite to your mobile device by scanning a code with "
 "your camera. You can use either a QR scanner app or the Snikket app itself."
 msgstr ""
+"Możesz przesłać to zaproszenie na swoje urządzenie mobilne, skanując "
+"poniższy kod aparatem. Możesz również skorzystać ze skanera kodów QR lub "
+"samej aplikacji Snikket."
 
 #: snikket_web/templates/invite_view.html:55
 msgid "Using a QR code scanner"
-msgstr ""
+msgstr "Używając skanera kodów QR"
 
 #: snikket_web/templates/invite_view.html:57
 msgid "Using the Snikket app"
-msgstr ""
+msgstr "Używając aplikacji Snikket"
 
 #: snikket_web/templates/invite_view.html:62
 msgid ""
 "Use a <em>QR code</em> scanner on your mobile device to scan the code below:"
 msgstr ""
+"Użyj skanera <em>kodów QR</em> na swoim urządzeniu mobilnym, by zeskanować "
+"poniższy kod:"
 
 #: snikket_web/templates/invite_view.html:68
 msgid ""
 "Install the Snikket app on your mobile device, open it, and tap the 'Scan' "
 "button at the top."
 msgstr ""
+"Zainstaluj aplikację Snikket na swoim urządzeniu mobilnym, otwórz ją, "
+"następnie wciśnij przycisk \"Skanuj\" u góry."
 
 #: snikket_web/templates/invite_view.html:69
 msgid ""
@@ -921,6 +931,9 @@ msgid ""
 "within the highlighted square on your screen, and wait until the app "
 "recognises it."
 msgstr ""
+"Twój aparat włączy się. Skieruj go na kwadratowy kod poniżej, aż znajdzie "
+"się on w podświetlonym kwadracie na twoim ekranie. Poczekaj, aż aplikacja go "
+"odczyta."
 
 #: snikket_web/templates/library.j2:18
 msgid "Copy link"
@@ -961,7 +974,7 @@ msgid ""
 "data to others."
 msgstr ""
 "Zmień wyświetlaną nazwę, ustaw awatar oraz skonfiguruj widoczność swoich "
-"informacji dla innych."
+"danych dla innych."
 
 #: snikket_web/templates/user_home.html:11
 #: snikket_web/templates/user_passwd.html:32
@@ -1007,8 +1020,8 @@ msgid ""
 "the new one. To reduce the chance of typos, we ask for your new password "
 "twice."
 msgstr ""
-"Aby zmienić swoje hasło musisz podać również dotychczasowe. O podanie nowego "
-"hasła prosimy podwójnie, by zminimalizować możliwość pomyłki."
+"Aby zmienić swoje hasło, musisz podać również dotychczasowe. O podanie "
+"nowego hasła prosimy podwójnie, by zminimalizować możliwość pomyłki."
 
 #: snikket_web/templates/user_passwd.html:27
 msgid ""
