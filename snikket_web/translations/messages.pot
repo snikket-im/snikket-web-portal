@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-26 20:50+0100\n"
+"POT-Creation-Date: 2021-01-27 15:34+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -170,7 +170,6 @@ msgid "Everyone"
 msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/templates/admin_delete_user.html:16
 #: snikket_web/templates/admin_users.html:11 snikket_web/user.py:55
 msgid "Display name"
 msgstr ""
@@ -284,7 +283,7 @@ msgstr ""
 
 #: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_invites.html:24
-#: snikket_web/templates/admin_users.html:14
+#: snikket_web/templates/admin_users.html:12
 msgid "Actions"
 msgstr ""
 
@@ -349,7 +348,7 @@ msgid "Copy complete output"
 msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:4
-#: snikket_web/templates/admin_users.html:26
+#: snikket_web/templates/admin_users.html:22
 #, python-format
 msgid "Delete user %(user_name)s"
 msgstr ""
@@ -368,23 +367,18 @@ msgstr ""
 msgid "Login name"
 msgstr ""
 
-#: snikket_web/templates/admin_delete_user.html:14
-#: snikket_web/templates/admin_users.html:12
-msgid "Email address"
-msgstr ""
-
-#: snikket_web/templates/admin_delete_user.html:19
+#: snikket_web/templates/admin_delete_user.html:15
 msgid "Danger"
 msgstr ""
 
-#: snikket_web/templates/admin_delete_user.html:20
+#: snikket_web/templates/admin_delete_user.html:16
 msgid ""
 "The user and their data will be deleted irrevocably, permanently and "
 "immediately upon pushing the below button. <strong>There is no way "
 "back!</strong>"
 msgstr ""
 
-#: snikket_web/templates/admin_delete_user.html:23
+#: snikket_web/templates/admin_delete_user.html:19
 #: snikket_web/templates/admin_edit_circle.html:30
 #: snikket_web/templates/admin_edit_invite.html:45
 #: snikket_web/templates/admin_reset_user_password.html:25
@@ -611,16 +605,12 @@ msgstr ""
 msgid "Destroy link"
 msgstr ""
 
-#: snikket_web/templates/admin_users.html:13
-msgid "Phone number"
-msgstr ""
-
-#: snikket_web/templates/admin_users.html:29
+#: snikket_web/templates/admin_users.html:25
 #, python-format
 msgid "Show debug information for %(user_name)s"
 msgstr ""
 
-#: snikket_web/templates/admin_users.html:32
+#: snikket_web/templates/admin_users.html:28
 #, python-format
 msgid "Create password reset link for %(user_name)s"
 msgstr ""
