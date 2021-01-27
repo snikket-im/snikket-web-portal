@@ -31,7 +31,7 @@ force_update_translations: extract_translations
 	pybabel update -i $(pot_file) -d $(translation_basepath)
 
 compile_translations:
-	pybabel compile -d $(translation_basepath)
+	-pybabel compile -d $(translation_basepath)
 
 
 .PHONY: build_css clean update_translations compile_translations extract_translations force_update_translations
