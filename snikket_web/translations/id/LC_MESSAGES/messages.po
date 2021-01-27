@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-26 20:50+0100\n"
+"POT-Creation-Date: 2021-01-27 15:34+0100\n"
 "PO-Revision-Date: 2021-01-27 14:35+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
-"Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/"
-"web-portal/id/>\n"
+"Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/web-"
+"portal/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -173,7 +173,6 @@ msgid "Everyone"
 msgstr "Semua orang"
 
 #: snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/templates/admin_delete_user.html:16
 #: snikket_web/templates/admin_users.html:11 snikket_web/user.py:55
 msgid "Display name"
 msgstr "Nama tampilan"
@@ -303,7 +302,7 @@ msgstr "Anggota"
 
 #: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_invites.html:24
-#: snikket_web/templates/admin_users.html:14
+#: snikket_web/templates/admin_users.html:12
 msgid "Actions"
 msgstr "Tindakan"
 
@@ -372,7 +371,7 @@ msgid "Copy complete output"
 msgstr "Salin keluaran lengkap"
 
 #: snikket_web/templates/admin_delete_user.html:4
-#: snikket_web/templates/admin_users.html:26
+#: snikket_web/templates/admin_users.html:22
 #, python-format
 msgid "Delete user %(user_name)s"
 msgstr "Hapus pengguna %(user_name)s"
@@ -391,16 +390,11 @@ msgstr "Apakah anda yakin mau menghapus pengguna tersebut?"
 msgid "Login name"
 msgstr "Nama login"
 
-#: snikket_web/templates/admin_delete_user.html:14
-#: snikket_web/templates/admin_users.html:12
-msgid "Email address"
-msgstr "Alamat email"
-
-#: snikket_web/templates/admin_delete_user.html:19
+#: snikket_web/templates/admin_delete_user.html:15
 msgid "Danger"
 msgstr "Berbahaya"
 
-#: snikket_web/templates/admin_delete_user.html:20
+#: snikket_web/templates/admin_delete_user.html:16
 msgid ""
 "The user and their data will be deleted irrevocably, permanently and "
 "immediately upon pushing the below button. <strong>There is no way back!</"
@@ -410,8 +404,8 @@ msgstr ""
 "segera setelah menekan tombol di bawah. <strong>Tidak ada jalan kembali!</"
 "strong>"
 
-#: snikket_web/templates/admin_delete_user.html:23
-#: snikket_web/templates/admin_edit_circle.html:30
+#: snikket_web/templates/admin_delete_user.html:19
+#: snikket_web/templates/admin_edit_circle.html:43
 #: snikket_web/templates/admin_edit_invite.html:45
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
@@ -425,59 +419,69 @@ msgstr "Kembali"
 msgid "Edit circle %(circle_name)s"
 msgstr "Edit kelompok %(circle_name)s"
 
-#: snikket_web/templates/admin_edit_circle.html:12
-msgid "Circle information"
-msgstr "Informasi kelompok"
+#: snikket_web/templates/admin_edit_circle.html:13
+msgid "This circle cannot be modified"
+msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:19
+#: snikket_web/templates/admin_edit_circle.html:14
+msgid "This circle is managed automatically and cannot be removed or renamed."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:16
+#: snikket_web/templates/admin_edit_circle.html:32
 msgid "Group chat address"
 msgstr "Alamat percakapan grup"
 
-#: snikket_web/templates/admin_edit_circle.html:22
+#: snikket_web/templates/admin_edit_circle.html:19
+#: snikket_web/templates/admin_edit_circle.html:35
 #: snikket_web/templates/invite_success.html:15
 msgid "Copy address"
 msgstr "Salin alamat"
 
 #: snikket_web/templates/admin_edit_circle.html:25
+msgid "Circle information"
+msgstr "Informasi kelompok"
+
+#: snikket_web/templates/admin_edit_circle.html:38
 msgid "This circle has no group chat associated."
 msgstr "Kelompok ini tidak memiliki percakapan grup."
 
-#: snikket_web/templates/admin_edit_circle.html:34
+#: snikket_web/templates/admin_edit_circle.html:47
 msgid "Delete circle"
 msgstr "Hapus kelompok"
 
-#: snikket_web/templates/admin_edit_circle.html:35
+#: snikket_web/templates/admin_edit_circle.html:48
 msgid "Deleting a circle does not delete any users in the circle."
 msgstr ""
 "Menghapus kelompok tidak menghapus satu pun pengguna di dalam kelompok "
 "tersebut."
 
-#: snikket_web/templates/admin_edit_circle.html:40
+#: snikket_web/templates/admin_edit_circle.html:54
 msgid "Circle members"
 msgstr "Anggota kelompok"
 
-#: snikket_web/templates/admin_edit_circle.html:55
+#: snikket_web/templates/admin_edit_circle.html:69
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Hapus pengguna %(username)s dari kelompok"
 
-#: snikket_web/templates/admin_edit_circle.html:63
+#: snikket_web/templates/admin_edit_circle.html:77
 msgid "This circle currently has no members."
 msgstr "Kelompok ini sedang tidak memiliki anggota."
 
-#: snikket_web/templates/admin_edit_circle.html:65
+#: snikket_web/templates/admin_edit_circle.html:79
 msgid "Invite more members"
 msgstr "Ajak lebih banyak anggota"
 
-#: snikket_web/templates/admin_edit_circle.html:68
+#: snikket_web/templates/admin_edit_circle.html:82
 msgid "Add existing user"
 msgstr "Tambahkan pengguna yang ada"
 
-#: snikket_web/templates/admin_edit_circle.html:79
+#: snikket_web/templates/admin_edit_circle.html:93
 msgid "No users left"
 msgstr "Tidak ada pengguna tersisa"
 
-#: snikket_web/templates/admin_edit_circle.html:80
+#: snikket_web/templates/admin_edit_circle.html:94
 msgid "All users on this service are already in this circle."
 msgstr "Semua pengguna layanan ini sudah ada di kelompok ini."
 
@@ -651,16 +655,12 @@ msgstr ""
 msgid "Destroy link"
 msgstr "Hancurkan tautan"
 
-#: snikket_web/templates/admin_users.html:13
-msgid "Phone number"
-msgstr "Nomor telepon"
-
-#: snikket_web/templates/admin_users.html:29
+#: snikket_web/templates/admin_users.html:25
 #, python-format
 msgid "Show debug information for %(user_name)s"
 msgstr "Lihat informasi debug untuk %(user_name)s"
 
-#: snikket_web/templates/admin_users.html:32
+#: snikket_web/templates/admin_users.html:28
 #, python-format
 msgid "Create password reset link for %(user_name)s"
 msgstr "Buat tautan setel ulang kata sandi untuk %(user_name)s"
@@ -1043,6 +1043,12 @@ msgid ""
 msgstr ""
 "Bagian ini memungkinkan Anda untuk mengontrol siapa yang bisa melihat profil "
 "Anda, seperti avatar dan nama panggilan."
+
+#~ msgid "Email address"
+#~ msgstr "Alamat email"
+
+#~ msgid "Phone number"
+#~ msgstr "Nomor telepon"
 
 #~ msgid "Apply"
 #~ msgstr "Terapkan"

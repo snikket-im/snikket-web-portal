@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-26 20:50+0100\n"
+"POT-Creation-Date: 2021-01-27 15:34+0100\n"
 "PO-Revision-Date: 2021-01-23 17:06+0000\n"
 "Last-Translator: Matthew Wild <matthew@snikket.org>\n"
 "Language-Team: English (United Kingdom) <https://i18n.sotecware.net/projects/"
@@ -185,7 +185,6 @@ msgid "Everyone"
 msgstr "Everyone"
 
 #: snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/templates/admin_delete_user.html:16
 #: snikket_web/templates/admin_users.html:11 snikket_web/user.py:55
 msgid "Display name"
 msgstr "Display name"
@@ -312,7 +311,7 @@ msgstr "Members"
 
 #: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_invites.html:24
-#: snikket_web/templates/admin_users.html:14
+#: snikket_web/templates/admin_users.html:12
 msgid "Actions"
 msgstr "Actions"
 
@@ -381,7 +380,7 @@ msgid "Copy complete output"
 msgstr "Copy complete output"
 
 #: snikket_web/templates/admin_delete_user.html:4
-#: snikket_web/templates/admin_users.html:26
+#: snikket_web/templates/admin_users.html:22
 #, python-format
 msgid "Delete user %(user_name)s"
 msgstr "Delete user %(user_name)s"
@@ -400,24 +399,19 @@ msgstr "Are you sure you want to delete the following user?"
 msgid "Login name"
 msgstr "Login name"
 
-#: snikket_web/templates/admin_delete_user.html:14
-#: snikket_web/templates/admin_users.html:12
-msgid "Email address"
-msgstr "Email address"
-
-#: snikket_web/templates/admin_delete_user.html:19
+#: snikket_web/templates/admin_delete_user.html:15
 msgid "Danger"
 msgstr "Danger"
 
-#: snikket_web/templates/admin_delete_user.html:20
+#: snikket_web/templates/admin_delete_user.html:16
 msgid ""
 "The user and their data will be deleted irrevocably, permanently and "
 "immediately upon pushing the below button. <strong>There is no way back!</"
 "strong>"
 msgstr ""
 
-#: snikket_web/templates/admin_delete_user.html:23
-#: snikket_web/templates/admin_edit_circle.html:30
+#: snikket_web/templates/admin_delete_user.html:19
+#: snikket_web/templates/admin_edit_circle.html:43
 #: snikket_web/templates/admin_edit_invite.html:45
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
@@ -431,17 +425,23 @@ msgstr "Back"
 msgid "Edit circle %(circle_name)s"
 msgstr "Edit circle %(circle_name)s"
 
-#: snikket_web/templates/admin_edit_circle.html:12
-msgid "Circle information"
-msgstr "Circle information"
+#: snikket_web/templates/admin_edit_circle.html:13
+msgid "This circle cannot be modified"
+msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:19
+#: snikket_web/templates/admin_edit_circle.html:14
+msgid "This circle is managed automatically and cannot be removed or renamed."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:16
+#: snikket_web/templates/admin_edit_circle.html:32
 #, fuzzy
 #| msgid "Email address"
 msgid "Group chat address"
 msgstr "Email address"
 
-#: snikket_web/templates/admin_edit_circle.html:22
+#: snikket_web/templates/admin_edit_circle.html:19
+#: snikket_web/templates/admin_edit_circle.html:35
 #: snikket_web/templates/invite_success.html:15
 #, fuzzy
 #| msgid "Email address"
@@ -449,43 +449,47 @@ msgid "Copy address"
 msgstr "Email address"
 
 #: snikket_web/templates/admin_edit_circle.html:25
+msgid "Circle information"
+msgstr "Circle information"
+
+#: snikket_web/templates/admin_edit_circle.html:38
 msgid "This circle has no group chat associated."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:34
+#: snikket_web/templates/admin_edit_circle.html:47
 msgid "Delete circle"
 msgstr "Delete circle"
 
-#: snikket_web/templates/admin_edit_circle.html:35
+#: snikket_web/templates/admin_edit_circle.html:48
 msgid "Deleting a circle does not delete any users in the circle."
 msgstr "Deleting a circle does not delete any users in the circle."
 
-#: snikket_web/templates/admin_edit_circle.html:40
+#: snikket_web/templates/admin_edit_circle.html:54
 msgid "Circle members"
 msgstr "Circle members"
 
-#: snikket_web/templates/admin_edit_circle.html:55
+#: snikket_web/templates/admin_edit_circle.html:69
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Remove user %(username)s from circle"
 
-#: snikket_web/templates/admin_edit_circle.html:63
+#: snikket_web/templates/admin_edit_circle.html:77
 msgid "This circle currently has no members."
 msgstr "This circle currently has no members."
 
-#: snikket_web/templates/admin_edit_circle.html:65
+#: snikket_web/templates/admin_edit_circle.html:79
 msgid "Invite more members"
 msgstr "Invite more members"
 
-#: snikket_web/templates/admin_edit_circle.html:68
+#: snikket_web/templates/admin_edit_circle.html:82
 msgid "Add existing user"
 msgstr "Add existing user"
 
-#: snikket_web/templates/admin_edit_circle.html:79
+#: snikket_web/templates/admin_edit_circle.html:93
 msgid "No users left"
 msgstr "No users left"
 
-#: snikket_web/templates/admin_edit_circle.html:80
+#: snikket_web/templates/admin_edit_circle.html:94
 msgid "All users on this service are already in this circle."
 msgstr "All users on this service are already in this circle."
 
@@ -655,16 +659,12 @@ msgstr ""
 msgid "Destroy link"
 msgstr "Destroy link"
 
-#: snikket_web/templates/admin_users.html:13
-msgid "Phone number"
-msgstr "Phone number"
-
-#: snikket_web/templates/admin_users.html:29
+#: snikket_web/templates/admin_users.html:25
 #, python-format
 msgid "Show debug information for %(user_name)s"
 msgstr "Show debug information for %(user_name)s"
 
-#: snikket_web/templates/admin_users.html:32
+#: snikket_web/templates/admin_users.html:28
 #, python-format
 msgid "Create password reset link for %(user_name)s"
 msgstr "Create password reset link for %(user_name)s"
@@ -1022,6 +1022,12 @@ msgid ""
 msgstr ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
+
+#~ msgid "Email address"
+#~ msgstr "Email address"
+
+#~ msgid "Phone number"
+#~ msgstr "Phone number"
 
 #~ msgid "Apply"
 #~ msgstr "Apply"

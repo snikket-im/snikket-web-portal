@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-26 20:50+0100\n"
+"POT-Creation-Date: 2021-01-27 15:34+0100\n"
 "PO-Revision-Date: 2021-01-26 14:06+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language-Team: German <https://i18n.sotecware.net/projects/snikket/web-"
@@ -183,7 +183,6 @@ msgid "Everyone"
 msgstr "Jeder"
 
 #: snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/templates/admin_delete_user.html:16
 #: snikket_web/templates/admin_users.html:11 snikket_web/user.py:55
 msgid "Display name"
 msgstr "Anzeigename"
@@ -308,7 +307,7 @@ msgstr "Mitglieder"
 
 #: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_invites.html:24
-#: snikket_web/templates/admin_users.html:14
+#: snikket_web/templates/admin_users.html:12
 msgid "Actions"
 msgstr "Aktionen"
 
@@ -377,7 +376,7 @@ msgid "Copy complete output"
 msgstr "Komplette Ausgabe kopieren"
 
 #: snikket_web/templates/admin_delete_user.html:4
-#: snikket_web/templates/admin_users.html:26
+#: snikket_web/templates/admin_users.html:22
 #, python-format
 msgid "Delete user %(user_name)s"
 msgstr "Benutzer %(user_name)s löschen"
@@ -396,16 +395,11 @@ msgstr "Bist du sicher dass du den folgenden Benutzer löschen willst?"
 msgid "Login name"
 msgstr "Anmeldename"
 
-#: snikket_web/templates/admin_delete_user.html:14
-#: snikket_web/templates/admin_users.html:12
-msgid "Email address"
-msgstr "E-Mail-Adresse"
-
-#: snikket_web/templates/admin_delete_user.html:19
+#: snikket_web/templates/admin_delete_user.html:15
 msgid "Danger"
 msgstr "Gefahr"
 
-#: snikket_web/templates/admin_delete_user.html:20
+#: snikket_web/templates/admin_delete_user.html:16
 msgid ""
 "The user and their data will be deleted irrevocably, permanently and "
 "immediately upon pushing the below button. <strong>There is no way back!</"
@@ -415,8 +409,8 @@ msgstr ""
 "Buttons unwiderruflich, permanent und sofortig gelöscht. <strong>Es gibt "
 "keinen Weg zurück!</strong>"
 
-#: snikket_web/templates/admin_delete_user.html:23
-#: snikket_web/templates/admin_edit_circle.html:30
+#: snikket_web/templates/admin_delete_user.html:19
+#: snikket_web/templates/admin_edit_circle.html:43
 #: snikket_web/templates/admin_edit_invite.html:45
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
@@ -430,17 +424,23 @@ msgstr "Zurück"
 msgid "Edit circle %(circle_name)s"
 msgstr "Gemeinschaft %(circle_name)s bearbeiten"
 
-#: snikket_web/templates/admin_edit_circle.html:12
-msgid "Circle information"
-msgstr "Gemeinschaftsinformationen"
+#: snikket_web/templates/admin_edit_circle.html:13
+msgid "This circle cannot be modified"
+msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:19
+#: snikket_web/templates/admin_edit_circle.html:14
+msgid "This circle is managed automatically and cannot be removed or renamed."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:16
+#: snikket_web/templates/admin_edit_circle.html:32
 #, fuzzy
 #| msgid "Email address"
 msgid "Group chat address"
 msgstr "E-Mail-Adresse"
 
-#: snikket_web/templates/admin_edit_circle.html:22
+#: snikket_web/templates/admin_edit_circle.html:19
+#: snikket_web/templates/admin_edit_circle.html:35
 #: snikket_web/templates/invite_success.html:15
 #, fuzzy
 #| msgid "Email address"
@@ -448,45 +448,49 @@ msgid "Copy address"
 msgstr "E-Mail-Adresse"
 
 #: snikket_web/templates/admin_edit_circle.html:25
+msgid "Circle information"
+msgstr "Gemeinschaftsinformationen"
+
+#: snikket_web/templates/admin_edit_circle.html:38
 msgid "This circle has no group chat associated."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:34
+#: snikket_web/templates/admin_edit_circle.html:47
 msgid "Delete circle"
 msgstr "Gemeinschaft löschen"
 
-#: snikket_web/templates/admin_edit_circle.html:35
+#: snikket_web/templates/admin_edit_circle.html:48
 msgid "Deleting a circle does not delete any users in the circle."
 msgstr ""
 "Wenn eine Gemeinschaft gelöscht wird, werden die Benutzer die zu dieser "
 "Gemeinschaft gehören nicht gelöscht."
 
-#: snikket_web/templates/admin_edit_circle.html:40
+#: snikket_web/templates/admin_edit_circle.html:54
 msgid "Circle members"
 msgstr "Mitglieder der Gemeinschaft"
 
-#: snikket_web/templates/admin_edit_circle.html:55
+#: snikket_web/templates/admin_edit_circle.html:69
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Benutzer %(username)s aus der Gemeinschaft entfernen"
 
-#: snikket_web/templates/admin_edit_circle.html:63
+#: snikket_web/templates/admin_edit_circle.html:77
 msgid "This circle currently has no members."
 msgstr "Diese Gemeinschaft hat derzeit keine Mitglieder."
 
-#: snikket_web/templates/admin_edit_circle.html:65
+#: snikket_web/templates/admin_edit_circle.html:79
 msgid "Invite more members"
 msgstr "Mehr Mitglieder einladen"
 
-#: snikket_web/templates/admin_edit_circle.html:68
+#: snikket_web/templates/admin_edit_circle.html:82
 msgid "Add existing user"
 msgstr "Bestehenden Benuzter hinzufügen"
 
-#: snikket_web/templates/admin_edit_circle.html:79
+#: snikket_web/templates/admin_edit_circle.html:93
 msgid "No users left"
 msgstr "Keine Benutzer übrig"
 
-#: snikket_web/templates/admin_edit_circle.html:80
+#: snikket_web/templates/admin_edit_circle.html:94
 msgid "All users on this service are already in this circle."
 msgstr "Alle Benutzer dieses Dienstes sind bereits in dieser Gemeinschaft."
 
@@ -662,16 +666,12 @@ msgstr ""
 msgid "Destroy link"
 msgstr "Link zerstören"
 
-#: snikket_web/templates/admin_users.html:13
-msgid "Phone number"
-msgstr "Telefonnummer"
-
-#: snikket_web/templates/admin_users.html:29
+#: snikket_web/templates/admin_users.html:25
 #, python-format
 msgid "Show debug information for %(user_name)s"
 msgstr "Debugging-Informationen für %(user_name)s anzeigen"
 
-#: snikket_web/templates/admin_users.html:32
+#: snikket_web/templates/admin_users.html:28
 #, python-format
 msgid "Create password reset link for %(user_name)s"
 msgstr "Benutzer %(user_name)s löschen"
@@ -1034,6 +1034,12 @@ msgid ""
 msgstr ""
 "Hier kannst du einstellen, wer deine Profilinformationen, wie Bild oder "
 "Anzeigename einsehen kann."
+
+#~ msgid "Email address"
+#~ msgstr "E-Mail-Adresse"
+
+#~ msgid "Phone number"
+#~ msgstr "Telefonnummer"
 
 #~ msgid "Apply"
 #~ msgstr "Übernehmen"
