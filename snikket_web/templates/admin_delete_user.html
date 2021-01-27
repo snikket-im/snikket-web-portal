@@ -11,10 +11,6 @@
 		<dd>{{ target_user.localpart }}</dd>
 		<dt>{% trans %}Display name{% endtrans %}</dt>
 		<dd>{{ target_user.display_name }}</dd>
-		<dt>{% trans %}Email address{% endtrans %}</dt>
-		<dd>{{ target_user.email }}</dd>
-		<dt>{% trans %}Display name{% endtrans %}</dt>
-		<dd>{{ target_user.phone }}</dd>
 	</dl>
 	{% call box("alert", _("Danger")) %}
 	<p>{% trans %}The user and their data will be deleted irrevocably, permanently and immediately upon pushing the below button. <strong>There is no way back!</strong>{% endtrans %}</p>

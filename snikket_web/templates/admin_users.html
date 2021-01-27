@@ -9,8 +9,6 @@
 		<tr>
 			<th>{% trans %}Login name{% endtrans %}</th>
 			<th>{% trans %}Display name{% endtrans %}</th>
-			<th class="collapsible">{% trans %}Email address{% endtrans %}</th>
-			<th class="collapsible">{% trans %}Phone number{% endtrans %}</th>
 			<th>{% trans %}Actions{% endtrans %}</th>
 		</tr>
 	</thead>
@@ -19,8 +17,6 @@
 		<tr>
 			<td>{{ user.localpart }}</td>
 			<td>{% call value_or_hint(user.display_name) %}{% endcall %}</td>
-			<td class="collapsible">{% call value_or_hint(user.email) %}{% endcall %}</td>
-			<td class="collapsible">{% call value_or_hint(user.phone) %}{% endcall %}</td>
 			<td class="nowrap">
 				{%- call action_button("remove", url_for(".delete_user", localpart=user.localpart), class="secondary") -%}
 					{% trans user_name=user.localpart %}Delete user {{ user_name }}{% endtrans %}
