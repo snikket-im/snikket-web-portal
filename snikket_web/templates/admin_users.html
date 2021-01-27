@@ -18,13 +18,13 @@
 			<td>{{ user.localpart }}</td>
 			<td>{% call value_or_hint(user.display_name) %}{% endcall %}</td>
 			<td class="nowrap">
-				{%- call action_button("remove", url_for(".delete_user", localpart=user.localpart), class="secondary") -%}
+				{%- call action_button("delete", url_for(".delete_user", localpart=user.localpart), class="secondary") -%}
 					{% trans user_name=user.localpart %}Delete user {{ user_name }}{% endtrans %}
 				{%- endcall -%}
 				{%- call action_button("bug_report", url_for(".debug_user", localpart=user.localpart), class="secondary") -%}
 					{% trans user_name=user.localpart %}Show debug information for {{ user_name }}{% endtrans %}
 				{%- endcall -%}
-				{%- call custom_form_button("create_link", reset_form.action_create.name, user.localpart, class="secondary", slim=True) -%}
+				{%- call custom_form_button("passwd", reset_form.action_create.name, user.localpart, class="secondary", slim=True) -%}
 					{% trans user_name=user.localpart %}Create password reset link for {{ user_name }}{% endtrans %}
 				{%- endcall -%}
 				</form>

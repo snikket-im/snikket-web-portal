@@ -47,11 +47,11 @@
 	<h3 class="form-title">{% trans %}Delete circle{% endtrans %}</h3>
 	<p class="form-desc">{% trans %}Deleting a circle does not delete any users in the circle.{% endtrans %}</p>
 	<div class="f-bbox">
-		{%- call form_button("done", form.action_delete, class="secondary danger") %}{% endcall -%}
+		{%- call form_button("delete", form.action_delete, class="secondary danger") %}{% endcall -%}
 	</div>
 </div>
 {%- endif -%}
-<h2>{% trans %}Circle members{% endtrans %}</h2>
+<h2 id="members">{% trans %}Circle members{% endtrans %}</h2>
 {%- if circle_members -%}
 <div class="el-2 elevated"><table>
 	<thead>
@@ -65,7 +65,7 @@
 			<td>{{ member.localpart }}</td>
 			<td class="collapsible">{% call value_or_hint(member.display_name) %}{% endcall %}</td>
 			<td class="nowrap">
-				{%- call custom_form_button("remove", form.action_remove_user.name, member.localpart, class="primary danger", slim=True) -%}
+				{%- call custom_form_button("remove_user", form.action_remove_user.name, member.localpart, class="primary danger", slim=True) -%}
 					{% trans username=member.localpart %}Remove user {{ username }} from circle{% endtrans %}
 				{%- endcall -%}
 			</td>
@@ -85,7 +85,7 @@
 		<div class="select-wrap">{{ form.user_to_add }}</div>
 	</div>
 	<div class="f-bbox">
-		{%- call form_button("add", form.action_add_user, class="primary") %}{% endcall -%}
+		{%- call form_button("add_user", form.action_add_user, class="primary") %}{% endcall -%}
 	</div>
 </div>
 {%- else -%}

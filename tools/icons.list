@@ -1,6 +1,7 @@
 action/account_circle:profile
 action/bug_report:bug_report
 action/done:done
+action/delete:delete
 action/logout:logout
 action/login:login
 action/exit_to_app:exit_to_app
@@ -18,5 +19,7 @@ navigation/more_vert:more
 social/groups:groups
 social/people:people
 social/group_add:create_group
+social/person_add:add_user
+social/person_remove:remove_user
 navigation/close:close
 image/edit:edit

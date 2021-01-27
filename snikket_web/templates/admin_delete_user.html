@@ -17,7 +17,7 @@
 	{% endcall %}
 	<div class="f-bbox">
 		{%- call standard_button("back", url_for(".index"), class="secondary") %}{% trans %}Back{% endtrans %}{% endcall -%}
-		{%- call form_button("remove", form.action_delete, class="primary danger") %}{% endcall -%}
+		{%- call form_button("delete", form.action_delete, class="primary danger") %}{% endcall -%}
 	</div>
 </form></div>
 {% endblock %}
