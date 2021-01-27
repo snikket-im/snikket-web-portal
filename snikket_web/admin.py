@@ -148,8 +148,13 @@ class InvitePost(flask_wtf.FlaskForm):  # type:ignore
         default=7*86400,
     )
 
-    reusable = wtforms.BooleanField(
-        _l("Invite a group of people"),
+    type_ = wtforms.RadioField(
+        _l("Invitation type"),
+        choices=[
+            ("account", _l("Individual")),
+            ("group", _l("Group")),
+        ],
+        default="account",
     )
 
     action_create_invite = wtforms.SubmitField(
@@ -228,7 +233,7 @@ async def create_invite() -> typing.Union[str, quart.Response]:
         (c.id_, c.name) for c in circles
     ]
     if form.validate_on_submit():
-        if form.reusable.data:
+        if form.type_.data == "group":
             invite = await client.create_group_invite(
                 group_ids=form.circles.data,
                 ttl=form.lifetime.data,

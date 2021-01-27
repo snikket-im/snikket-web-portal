@@ -1,5 +1,5 @@
 {% extends "admin_app.html" %}
-{% from "library.j2" import action_button, icon, clipboard_button, form_button, custom_form_button, extract_circle_name %}
+{% from "library.j2" import action_button, icon, clipboard_button, form_button, custom_form_button, extract_circle_name, invite_type_name %}
 {% block head_lead %}
 {{ super() }}
 {% include "copy-snippet.html" %}
@@ -19,7 +19,7 @@
 	<thead>
 		<tr>
 			<th>{% trans %}Valid until{% endtrans %}</th>
-			<th class="collapsible">{% trans %}Reusable{% endtrans %}</th>
+			<th class="collapsible">{% trans %}Type{% endtrans %}</th>
 			<th class="collapsible">{% trans %}Circle{% endtrans %}</th>
 			<th>{% trans %}Actions{% endtrans %}</th>
 		</tr>
@@ -28,8 +28,7 @@
 {% for invite in invites %}
 		<tr>
 			<td>{{ (invite.expires - now) | format_timedelta(add_direction=True) }}</td>
-			<td class="collapsible">{% if invite.reusable %}{% trans %}Yes{% endtrans %}{% else %}{% trans
- %}No{% endtrans %}{% endif %}</td>
+			<td class="collapsible">{% call invite_type_name(invite) %}{% endcall %}</td>
 			<td class="collapsible">
 				{#- -#}
 				<ul class="inline">

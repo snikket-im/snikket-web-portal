@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-27 15:34+0100\n"
+"POT-Creation-Date: 2021-01-27 15:55+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,39 +53,47 @@ msgstr ""
 msgid "Four weeks"
 msgstr ""
 
-#: snikket_web/admin.py:152
-msgid "Invite a group of people"
+#: snikket_web/admin.py:152 snikket_web/templates/admin_edit_invite.html:17
+msgid "Invitation type"
 msgstr ""
 
-#: snikket_web/admin.py:156
+#: snikket_web/admin.py:154 snikket_web/templates/library.j2:115
+msgid "Individual"
+msgstr ""
+
+#: snikket_web/admin.py:155 snikket_web/templates/library.j2:113
+msgid "Group"
+msgstr ""
+
+#: snikket_web/admin.py:161
 msgid "New invitation link"
 msgstr ""
 
-#: snikket_web/admin.py:218
+#: snikket_web/admin.py:223
 msgid "Revoke"
 msgstr ""
 
-#: snikket_web/admin.py:274 snikket_web/admin.py:318
+#: snikket_web/admin.py:279 snikket_web/admin.py:323
 msgid "Name"
 msgstr ""
 
-#: snikket_web/admin.py:279 snikket_web/templates/admin_circles.html:44
+#: snikket_web/admin.py:284 snikket_web/templates/admin_circles.html:44
 msgid "Create circle"
 msgstr ""
 
-#: snikket_web/admin.py:323
+#: snikket_web/admin.py:328
 msgid "Select user"
 msgstr ""
 
-#: snikket_web/admin.py:328
+#: snikket_web/admin.py:333
 msgid "Update circle"
 msgstr ""
 
-#: snikket_web/admin.py:332
+#: snikket_web/admin.py:337
 msgid "Delete circle permanently"
 msgstr ""
 
-#: snikket_web/admin.py:338
+#: snikket_web/admin.py:343
 msgid "Add user"
 msgstr ""
 
@@ -472,10 +480,6 @@ msgstr ""
 msgid "Link"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_invite.html:17
-msgid "Reusability"
-msgstr ""
-
 #: snikket_web/templates/admin_edit_invite.html:18
 msgid ""
 "This invitation link can be used arbitrarily often, until it expires, is "
@@ -573,30 +577,22 @@ msgid "Pending invitations"
 msgstr ""
 
 #: snikket_web/templates/admin_invites.html:22
-msgid "Reusable"
+msgid "Type"
 msgstr ""
 
-#: snikket_web/templates/admin_invites.html:31
-msgid "Yes"
-msgstr ""
-
-#: snikket_web/templates/admin_invites.html:31
-msgid "No"
-msgstr ""
-
-#: snikket_web/templates/admin_invites.html:44
+#: snikket_web/templates/admin_invites.html:43
 msgid "Show invite details"
 msgstr ""
 
-#: snikket_web/templates/admin_invites.html:47
+#: snikket_web/templates/admin_invites.html:46
 msgid "Copy invite link to clipboard"
 msgstr ""
 
-#: snikket_web/templates/admin_invites.html:50
+#: snikket_web/templates/admin_invites.html:49
 msgid "Delete invitation"
 msgstr ""
 
-#: snikket_web/templates/admin_invites.html:58
+#: snikket_web/templates/admin_invites.html:57
 msgid "Currently, there are no pending invitations."
 msgstr ""
 
