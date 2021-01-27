@@ -171,10 +171,10 @@ body > footer {
 
 @for $n from 1 through 6 {
 	div.form h#{$n}.form-title {
-		font-size: 100%;
-		font-weight: bold;
-		line-height: 1.5;
-		margin-bottom: 1.5em;
+		font-size: nth($h-sizes, 4);
+		/* font-weight: bold; */
+		line-height: 1.5 / (nth($h-sizes, 4) / 100%);
+		margin: 1.5em / (nth($h-sizes, 4) / 100%) 0;
 	}
 }
 
@@ -224,11 +224,18 @@ div.form {
 div.form.layout-expanded {
 	label {
 		display: block;
+		font-weight: bold;
 		color: $gray-200;
 	}
 
+	input[type="radio"] + label, input[type="checkbox"] + label {
+		font-weight: inherit;
+		color: inherit;
+	}
+
 	div.f-ebox {
-		margin-bottom: $w-l1;
+		margin: 1.5em 0;
+		line-height: 1.5;
 	}
 
 	div.f-bbox {
@@ -242,7 +249,6 @@ div.form.layout-expanded {
 			border: none;
 			border-bottom: $w-s4 solid $primary-500;
 			margin-bottom: -$w-s4;
-			padding: 0 $w-s3;
 		}
 
 		input[type=$type].has-error {
@@ -256,6 +262,11 @@ div.form.layout-expanded {
 		input[type=$type]:focus {
 			border-bottom-color: $primary-800;
 		}
+	}
+
+	ul[id] {
+		padding: $w-s1 0;
+		padding-left: $w-l1;
 	}
 
 	input[type="checkbox"], input[type="radio"] {
@@ -378,6 +389,7 @@ div.form.layout-expanded {
 		width: 100%;
 		border: none;
 		border-bottom: $w-s4 solid $primary-500;
+		line-height: 1.5;
 	}
 
 	textarea:hover {
