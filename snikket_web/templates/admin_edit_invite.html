@@ -1,5 +1,5 @@
 {% extends "admin_app.html" %}
-{% from "library.j2" import showuri, form_button, standard_button, extract_circle_name %}
+{% from "library.j2" import showuri, form_button, standard_button, extract_circle_name, invite_type_description %}
 {% block head_lead %}
 {{ super() }}
 {% include "copy-snippet.html" %}
@@ -15,7 +15,7 @@
 		<dt>{% trans %}Link{% endtrans %}</dt>
 		<dd>{% call showuri(invite.landing_page) %}{% endcall %}</dd>
 		<dt>{% trans %}Invitation type{% endtrans %}</dt>
-		<dd>{% if invite.reusable %}{% trans %}This invitation link can be used arbitrarily often, until it expires, is revoked or a service-wide user limit is reached.{% endtrans %}{% else %}{% trans %}This invitation link can only be used once and is then depleted.{% endtrans %}{% endif %}</dd>
+		<dd>{% call invite_type_description(invite) %}{% endcall %}</dd>
 		{%- set ngroups = invite.group_ids | length -%}
 		{%- if ngroups > 1 -%}
 		{#- not supported via the web UI, but we should still display it properly -#}
@@ -35,6 +35,10 @@
 			<em>{% trans %}The user will not be added to any circle and will have no contacts.{% endtrans %}</em>
 			{%- endif -%}
 		</dd>
+		{%- endif -%}
+		{%- if invite.type_.value == "roster" -%}
+		<dt>{% trans %}Contact{% endtrans %}</dt>
+		<dd>{% trans peer_jid=invite.jid %}The user will get added as contact of {{ peer_jid }}.{% endtrans %}</dd>
 		{%- endif -%}
 		<dt>{% trans %}Created{% endtrans %}</dt>
 		<dd>{{ invite.created_at | format_date }}</dd>

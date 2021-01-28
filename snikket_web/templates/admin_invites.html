@@ -1,5 +1,5 @@
 {% extends "admin_app.html" %}
-{% from "library.j2" import action_button, icon, clipboard_button, form_button, custom_form_button, extract_circle_name, invite_type_name %}
+{% from "library.j2" import action_button, icon, clipboard_button, form_button, custom_form_button, extract_circle_name, invite_type_name, invite_type_description %}
 {% block head_lead %}
 {{ super() }}
 {% include "copy-snippet.html" %}
@@ -28,7 +28,7 @@
 {% for invite in invites %}
 		<tr>
 			<td>{{ (invite.expires - now) | format_timedelta(add_direction=True) }}</td>
-			<td class="collapsible">{% call invite_type_name(invite) %}{% endcall %}</td>
+			<td class="collapsible"><span class="with-tooltip above" data-tooltip="{% call invite_type_description(invite) %}{% endcall %}">{% call invite_type_name(invite) %}{% endcall %}</span></td>
 			<td class="collapsible">
 				{#- -#}
 				<ul class="inline">

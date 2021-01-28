@@ -109,11 +109,17 @@
 {% endmacro %}
 
 {%- macro invite_type_name(invite_info, caller=None) -%}
-{%- if invite_info.type_.value == "roster" %}
-{%- trans %}Contact{% endtrans %}
-{%- elif invite_info.reusable -%}
+{%- if invite_info.reusable -%}
 {% trans %}Group{% endtrans %}
 {%- else -%}
 {% trans %}Individual{% endtrans %}
+{%- endif -%}
+{%- endmacro -%}
+
+{%- macro invite_type_description(invite_info, caller=None) -%}
+{%- if invite_info.reusable -%}
+{% trans %}Can be used multiple times to create accounts on this Snikket service.{% endtrans %}
+{%- else -%}
+{% trans %}Can be used once to create an account on this Snikket service.{% endtrans %}
 {%- endif -%}
 {%- endmacro -%}
