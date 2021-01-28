@@ -1168,14 +1168,22 @@ nav.welcome {
 		padding: 0;
 
 		> li {
+			@extend .el-3;
+			background-color: white;
+
 			flex: 1 0 $w-l7;
 			margin: $w-s1;
 			padding: $w-s1 $w-l1;
 			text-align: center;
 			max-width: $w-l8;
 
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
 			.button {
 				display: block;
+				margin: $w-l1 0;
 			}
 
 			img {

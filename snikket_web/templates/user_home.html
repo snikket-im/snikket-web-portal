@@ -6,34 +6,34 @@
 	<ul>
 		<li>
 			{#- -#}
-			<div><a class="button primary" href="{{ url_for(".profile") }}">{% trans %}Settings{% endtrans %}</a></div>
+			<p>{% trans %}Change your display name, set a profile picture and control visibility of your personal data to others.{% endtrans %}</p>
 			{#- -#}
 			{# <img aria-hidden="true" src="{{ url_for("static", filename="img/illus-profile.svg") }}"> #}
 			{#- -#}
-			<p>{% trans %}Change your display name, set a profile picture and control visibility of your personal data to others.{% endtrans %}</p>
+			<div><a class="button primary" href="{{ url_for(".profile") }}">{% trans %}Settings{% endtrans %}</a></div>
 			{#- -#}
 		</li>
 		<li>
 			{#- -#}
-			<div><a class="button primary" href="{{ url_for(".profile") }}">{% trans %}Change password{% endtrans %}</a></div>
-			{#- -#}
 			<p>{% trans %}If need be, you can change your password here.{% endtrans %}</p>
+			{#- -#}
+			<div><a class="button primary" href="{{ url_for(".profile") }}">{% trans %}Change password{% endtrans %}</a></div>
 			{#- -#}
 		</li>
 {% if user_info.is_admin %}
 		<li>
 			{#- -#}
-			<div><a class="button primary" href="{{ url_for("admin.index") }}">{% trans %}Admin panel{% endtrans %}</a></div>
-			{#- -#}
 			<p>{% trans %}Manage users, invitations and circles of your Snikket service.{% endtrans %}</p>
+			{#- -#}
+			<div><a class="button primary" href="{{ url_for("admin.index") }}">{% trans %}Admin panel{% endtrans %}</a></div>
 			{#- -#}
 		</li>
 {% endif %}
 		<li>
 			{#- -#}
-			<div><a class="button secondary" href="{{ url_for(".logout") }}">{% trans %}Log out{% endtrans %}</a></div>
-			{#- -#}
 			<p>{% trans %}Exit the Snikket Web Portal, without logging out your other devices.{% endtrans %}</p>
+			{#- -#}
+			<div><a class="button secondary" href="{{ url_for(".logout") }}">{% trans %}Log out{% endtrans %}</a></div>
 			{#- -#}
 		</li>
 	</ul>
