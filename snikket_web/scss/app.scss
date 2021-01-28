@@ -1136,3 +1136,52 @@ pre.guru-meditation {
 		color: $gray-700;
 	}
 }
+
+/* tooltip magic */
+
+.with-tooltip {
+	position: relative;
+	text-decoration: underline;
+	text-decoration-style: dotted;
+}
+
+.with-tooltip:before {
+	content: attr(data-tooltip); /* here's the magic */
+	position: absolute;
+	font-size: 87.05505633%;
+
+	/* vertically center */
+	bottom: 100%;
+	transform: translateX(-50%);
+	left: 50%;
+	margin-bottom: $w-s2;
+
+	/* basic styles */
+	width:$w-l7;
+	padding: $w-s1;
+	background: black;
+	color: $gray-900;
+	text-align: center;
+
+	display: none;
+}
+
+.with-tooltip:after {
+	content: "";
+	position: absolute;
+
+	bottom: 100%;
+	transform: translateX(-50%);
+	left: 50%;
+	margin-bottom: -$w-s1;
+
+	/* the arrow */
+	border: 10px solid black;
+	border-color: black transparent transparent transparent;
+
+	display: none;
+}
+
+.with-tooltip:hover:before, .with-tooltip:hover:after {
+	display: block;
+}
