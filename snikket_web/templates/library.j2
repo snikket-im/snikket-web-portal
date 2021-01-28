@@ -109,7 +109,9 @@
 {% endmacro %}
 
 {%- macro invite_type_name(invite_info, caller=None) -%}
-{%- if invite_info.reusable -%}
+{%- if invite_info.type_.value == "roster" %}
+{%- trans %}Contact{% endtrans %}
+{%- elif invite_info.reusable -%}
 {% trans %}Group{% endtrans %}
 {%- else -%}
 {% trans %}Individual{% endtrans %}
