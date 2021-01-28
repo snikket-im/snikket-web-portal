@@ -60,6 +60,7 @@ class AdminUserInfo:
 
 class InviteType(enum.Enum):
     REGISTER = "register"
+    ROSTER = "roster"
 
 
 @dataclasses.dataclass(frozen=True)
