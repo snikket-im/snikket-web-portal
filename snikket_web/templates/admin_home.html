@@ -2,22 +2,38 @@
 {% block content %}
 <h1>{% trans %}Welcome to the administration dashboard!{% endtrans %}</h1>
 <p>{% trans user_name=user_info.display_name %}At your service, {{ user_name }}.{% endtrans %}</p>
-<div class="welcome-cards">
-	<a class="card" href="{{ url_for('.users') }}">
-		<h2>{% trans %}Manage users{% endtrans %}</h2>
-		<p>{% trans %}Modify administrative user information or delete users.{% endtrans %}</p>
-	</a>
-	<a class="card" href="{{ url_for('.circles') }}">
-		<h2>{% trans %}Manage circles{% endtrans %}</h2>
-		<p>{% trans %}Create and manage social circles represented on your service.{% endtrans %}</p>
-	</a>
-	<a class="card" href="{{ url_for('.invitations') }}">
-		<h2>{% trans %}Manage invitations{% endtrans %}</h2>
-		<p>{% trans %}Create, revoke or view invitations.{% endtrans %}</p>
-	</a>
-	<a class="card" href="{{ url_for('user.index') }}">
-		<h2>{% trans %}Back to the main view{% endtrans %}</h2>
-		<p>{% trans %}Go back to your user’s web portal page.{% endtrans %}</p>
-	</a>
-</div>
+<nav class="welcome">
+	<ul>
+		<li>
+			{#- -#}
+			<div><a class="button primary" href="{{ url_for(".users") }}">{% trans %}Users{% endtrans %}</a></div>
+			{#- -#}
+			{# <img aria-hidden="true" src="{{ url_for("static", filename="img/illus-profile.svg") }}"> #}
+			{#- -#}
+			<p>{% trans %}Create password reset links or delete users.{% endtrans %}</p>
+			{#- -#}
+		</li>
+		<li>
+			{#- -#}
+			<div><a class="button primary" href="{{ url_for(".circles") }}">{% trans %}Circles{% endtrans %}</a></div>
+			{#- -#}
+			<p>{% trans %}Create and manage social circles represented on your service.{% endtrans %}</p>
+			{#- -#}
+		</li>
+		<li>
+			{#- -#}
+			<div><a class="button primary" href="{{ url_for(".invitations") }}">{% trans %}Invitations{% endtrans %}</a></div>
+			{#- -#}
+			<p>{% trans %}Create, revoke or copy invitations.{% endtrans %}</p>
+			{#- -#}
+		</li>
+		<li>
+			{#- -#}
+			<div><a class="button secondary" href="{{ url_for("user.index") }}">{% trans %}Exit Admin Panel{% endtrans %}</a></div>
+			{#- -#}
+			<p>{% trans %}Go back to your user’s web portal page.{% endtrans %}</p>
+			{#- -#}
+		</li>
+	</ul>
+</nav>
 {% endblock %}

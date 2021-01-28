@@ -2,23 +2,40 @@
 {% block content %}
 <h1>{% trans %}Welcome!{% endtrans %}</h1>
 <p>{% trans user_name=user_info.display_name %}Welcome home, {{ user_name }}.{% endtrans %}</p>
-<div class="welcome-cards">
-	<a class="card" href="{{ url_for('.profile') }}">
-		<h2>{% trans %}Update profile{% endtrans %}</h2>
-		<p>{% trans %}Change display name, set avatar and configure visibility of your personal data to others.{% endtrans %}</p>
-	</a>
-	<a class="card" href="{{ url_for('.change_pw') }}">
-		<h2>{% trans %}Change password{% endtrans %}</h2>
-	</a>
-	{% if user_info.is_admin %}
-	<a class="card" href="{{ url_for('admin.index') }}">
-		<h2>{% trans %}Admin dashboard{% endtrans %}</h2>
-		<p>{% trans %}Manage users and invitations of this Snikket service.{% endtrans %}</p>
-	</a>
-	{% endif %}
-	<a class="card" href="{{ url_for('.logout') }}">
-		<h2>{% trans %}Log out{% endtrans %}</h2>
-		<p>{% trans %}Exit the Snikket Web Portal, without logging out your other devices.{% endtrans %}</p>
-	</a>
-</div>
+<nav class="welcome">
+	<ul>
+		<li>
+			{#- -#}
+			<div><a class="button primary" href="{{ url_for(".profile") }}">{% trans %}Settings{% endtrans %}</a></div>
+			{#- -#}
+			{# <img aria-hidden="true" src="{{ url_for("static", filename="img/illus-profile.svg") }}"> #}
+			{#- -#}
+			<p>{% trans %}Change your display name, set a profile picture and control visibility of your personal data to others.{% endtrans %}</p>
+			{#- -#}
+		</li>
+		<li>
+			{#- -#}
+			<div><a class="button primary" href="{{ url_for(".profile") }}">{% trans %}Change password{% endtrans %}</a></div>
+			{#- -#}
+			<p>{% trans %}If need be, you can change your password here.{% endtrans %}</p>
+			{#- -#}
+		</li>
+{% if user_info.is_admin %}
+		<li>
+			{#- -#}
+			<div><a class="button primary" href="{{ url_for("admin.index") }}">{% trans %}Admin panel{% endtrans %}</a></div>
+			{#- -#}
+			<p>{% trans %}Manage users, invitations and circles of your Snikket service.{% endtrans %}</p>
+			{#- -#}
+		</li>
+{% endif %}
+		<li>
+			{#- -#}
+			<div><a class="button secondary" href="{{ url_for(".logout") }}">{% trans %}Log out{% endtrans %}</a></div>
+			{#- -#}
+			<p>{% trans %}Exit the Snikket Web Portal, without logging out your other devices.{% endtrans %}</p>
+			{#- -#}
+		</li>
+	</ul>
+</nav>
 {% endblock %}
