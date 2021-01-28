@@ -846,6 +846,98 @@ ul.inline {
 }
 
 
+/* welcome screen specials */
+
+nav.welcome {
+	> ul {
+		display: flex;
+		flex-wrap: wrap;
+		list-style-type: none;
+		justify-content: center;
+		padding: 0;
+
+		> li {
+			@extend .el-3;
+			background-color: white;
+
+			flex: 1 0 $w-l7;
+			margin: $w-s1;
+			padding: $w-s1 $w-l1;
+			text-align: center;
+			max-width: $w-l8;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			&.wide {
+				flex: 1 0 auto;
+				text-align: left;
+				display: block;
+			}
+
+			.button {
+				display: block;
+				margin: $w-l1 0;
+			}
+
+			img {
+				display: block;
+				margin: $w-l1 $w-0;
+				--margin: $w-0 * 2;
+				width: calc(100% - var(--margin));
+			}
+
+			p {
+				margin-left: $w-0;
+				margin-right: $w-0;
+			}
+		}
+	}
+}
+
+div.profile-card {
+	display: flex;
+	flex-direction: row;
+	margin: $w-l1 0;
+
+	> div.picture {
+		flex: 0 0 auto;
+	}
+
+	> div.details {
+		flex: 1 0 auto;
+		display: flex;
+		flex-direction: column;
+
+		> .display-name {
+			font-size: nth($h-small-sizes, 5);
+			line-height: 1.5 / (nth($h-small-sizes, 5) / 100%);
+		}
+
+		> .address {
+			display: flex;
+			flex-direction: row;
+
+			> input {
+				flex: 1 1 auto;
+				background-color: transparent;
+				border: none;
+				padding: 0;
+				margin: 0;
+				min-width: 0;
+				width: 0;
+			}
+
+			> .button {
+				flex: 0 0 auto;
+				margin: 0;
+			}
+		}
+	}
+}
+
+
 /* linearisation / responsive stuff */
 
 @media screen and (max-width: $medium-screen-threshold) {
@@ -1154,49 +1246,4 @@ pre.guru-meditation {
 
 .with-tooltip:hover:before, .with-tooltip:hover:after {
 	display: block;
-}
-
-
-/* welcome screen specials */
-
-nav.welcome {
-	> ul {
-		display: flex;
-		flex-wrap: wrap;
-		list-style-type: none;
-		justify-content: center;
-		padding: 0;
-
-		> li {
-			@extend .el-3;
-			background-color: white;
-
-			flex: 1 0 $w-l7;
-			margin: $w-s1;
-			padding: $w-s1 $w-l1;
-			text-align: center;
-			max-width: $w-l8;
-
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-
-			.button {
-				display: block;
-				margin: $w-l1 0;
-			}
-
-			img {
-				display: block;
-				margin: $w-l1 $w-0;
-				--margin: $w-0 * 2;
-				width: calc(100% - var(--margin));
-			}
-
-			p {
-				margin-left: $w-0;
-				margin-right: $w-0;
-			}
-		}
-	}
 }
