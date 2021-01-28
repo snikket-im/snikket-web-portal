@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-27 17:16+0100\n"
+"POT-Creation-Date: 2021-01-28 18:53+0100\n"
 "PO-Revision-Date: 2021-01-28 17:55+0000\n"
 "Last-Translator: pep <pep@bouah.net>\n"
-"Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
-"web-portal/fr/>\n"
+"Language-Team: French <https://i18n.sotecware.net/projects/snikket/web-"
+"portal/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -193,7 +193,7 @@ msgstr "Avatar"
 msgid "Profile visibility"
 msgstr "Visibilité du profil"
 
-#: snikket_web/templates/user_home.html:7 snikket_web/user.py:68
+#: snikket_web/user.py:68
 msgid "Update profile"
 msgstr "Mettre à jour le profil"
 
@@ -277,7 +277,7 @@ msgid "Admin area"
 msgstr "Zone d’administration"
 
 #: snikket_web/templates/admin_circles.html:4
-#: snikket_web/templates/admin_home.html:11
+#: snikket_web/templates/admin_home.html:23
 msgid "Manage circles"
 msgstr "Gérer les cercles"
 
@@ -419,11 +419,11 @@ msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:19
 #: snikket_web/templates/admin_edit_circle.html:43
-#: snikket_web/templates/admin_edit_invite.html:45
+#: snikket_web/templates/admin_edit_invite.html:49
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
 #: snikket_web/templates/user_passwd.html:30
-#: snikket_web/templates/user_profile.html:25
+#: snikket_web/templates/user_profile.html:28
 msgid "Back"
 msgstr "Retour"
 
@@ -444,6 +444,7 @@ msgstr "Adresse de la conversation de groupe"
 #: snikket_web/templates/admin_edit_circle.html:19
 #: snikket_web/templates/admin_edit_circle.html:35
 #: snikket_web/templates/invite_success.html:15
+#: snikket_web/templates/user_home.html:21
 msgid "Copy address"
 msgstr "Copier l'adresse"
 
@@ -507,22 +508,8 @@ msgstr "Valide jusqu’au"
 msgid "Link"
 msgstr "Lien"
 
-#: snikket_web/templates/admin_edit_invite.html:18
-msgid ""
-"This invitation link can be used arbitrarily often, until it expires, is "
-"revoked or a service-wide user limit is reached."
-msgstr ""
-"Cette invitation peut être utilisée autant de fois que nécessaire, jusqu'à "
-"ce qu'elle expire, soit révoquée, ou une limite globale au service soit "
-"atteinte."
-
-#: snikket_web/templates/admin_edit_invite.html:18
-msgid "This invitation link can only be used once and is then depleted."
-msgstr ""
-"Ce lien d'invitation ne peut être utilisé qu'une seule fois et est ensuite "
-"expiré."
-
 #: snikket_web/templates/admin_edit_invite.html:22
+#: snikket_web/templates/admin_home.html:19
 msgid "Circles"
 msgstr "Cercles"
 
@@ -542,7 +529,16 @@ msgstr "Cercle"
 msgid "The user will not be added to any circle and will have no contacts."
 msgstr "L'utilisateur ne sera ajouté à aucun cercle et n  ’aura pas de contact."
 
-#: snikket_web/templates/admin_edit_invite.html:39
+#: snikket_web/templates/admin_edit_invite.html:40
+msgid "Contact"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_invite.html:41
+#, python-format
+msgid "The user will get added as contact of %(peer_jid)s."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_invite.html:43
 msgid "Created"
 msgstr "Créé le"
 
@@ -571,45 +567,62 @@ msgstr ""
 "utilisé une fois pour changer le mot de passe du compte. Assurez-vous de "
 "communiquer le lien de façon sécurisée."
 
-#: snikket_web/templates/admin_home.html:3
-msgid "Welcome to the administration dashboard!"
+#: snikket_web/templates/admin_home.html:4
+#, fuzzy
+#| msgid "Welcome to the administration dashboard!"
+msgid "Welcome to the admin panel!"
 msgstr "Bienvenue sur votre tableau de bord d’administration !"
 
-#: snikket_web/templates/admin_home.html:4
+#: snikket_web/templates/admin_home.html:5
 #, python-format
 msgid "At your service, %(user_name)s."
 msgstr "À votre service, %(user_name)s."
 
-#: snikket_web/templates/admin_home.html:7
+#: snikket_web/templates/admin_home.html:9
+#, fuzzy
+#| msgid "Username"
+msgid "Users"
+msgstr "Nom d’utilisateur"
+
+#: snikket_web/templates/admin_home.html:11
+#, fuzzy
+#| msgid "Create password reset link for %(user_name)s"
+msgid "Create password reset links or delete users."
+msgstr "Crée un lien de réinitialisation de mot de passe pour %(user_name)s"
+
+#: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_users.html:4
 msgid "Manage users"
 msgstr "Gérer les utilisateurs"
 
-#: snikket_web/templates/admin_home.html:8
-msgid "Modify administrative user information or delete users."
-msgstr ""
-"Modifier les informations des utilisateurs ou désinscrire des utilisateurs."
-
-#: snikket_web/templates/admin_home.html:12
+#: snikket_web/templates/admin_home.html:21
 msgid "Create and manage social circles represented on your service."
 msgstr "Créer et gérer les cercles sociaux présents dans votre service."
 
-#: snikket_web/templates/admin_home.html:15
+#: snikket_web/templates/admin_home.html:27
+#, fuzzy
+#| msgid "Invitation type"
+msgid "Invitations"
+msgstr "Type d’invitation"
+
+#: snikket_web/templates/admin_home.html:29
+#, fuzzy
+#| msgid "Create, revoke or view invitations."
+msgid "Create, revoke or copy invitations."
+msgstr "Créer, révoquer, ou voir les invitations."
+
+#: snikket_web/templates/admin_home.html:31
 #: snikket_web/templates/admin_invites.html:8
 msgid "Manage invitations"
 msgstr "Gérer les invitations"
 
-#: snikket_web/templates/admin_home.html:16
-msgid "Create, revoke or view invitations."
-msgstr "Créer, révoquer, ou voir les invitations."
-
-#: snikket_web/templates/admin_home.html:19
-msgid "Back to the main view"
-msgstr "Retour à la vue principale"
-
-#: snikket_web/templates/admin_home.html:20
+#: snikket_web/templates/admin_home.html:36
 msgid "Go back to your user’s web portal page."
 msgstr "Retourner à la page de l’utilisateur."
+
+#: snikket_web/templates/admin_home.html:38
+msgid "Exit admin panel"
+msgstr ""
 
 #: snikket_web/templates/admin_invites.html:10
 msgid "Pending invitations"
@@ -666,6 +679,10 @@ msgstr "Crée un lien de réinitialisation de mot de passe pour %(user_name)s"
 msgid "Snikket Web Portal"
 msgstr "Portail web de Snikket"
 
+#: snikket_web/templates/app.html:8
+msgid "Log out"
+msgstr "Se déconnecter"
+
 #: snikket_web/templates/backend_error.html:3
 #: snikket_web/templates/exception.html:3
 #: snikket_web/templates/internal_error.html:3
@@ -690,13 +707,13 @@ msgstr "Retourner à la page principale"
 msgid "The web portal encountered an internal error."
 msgstr "Le portail web a rencontré une erreur interne."
 
-#: snikket_web/templates/invite_invalid.html:4
+#: snikket_web/templates/invite_invalid.html:5
 #: snikket_web/templates/invite_view.html:12
 #, python-format
 msgid "Invite to %(site_name)s"
 msgstr "Inviter à %(site_name)s"
 
-#: snikket_web/templates/invite_invalid.html:5
+#: snikket_web/templates/invite_invalid.html:6
 #: snikket_web/templates/invite_register.html:10
 #: snikket_web/templates/invite_success.html:11
 #: snikket_web/templates/invite_view.html:13
@@ -704,11 +721,11 @@ msgstr "Inviter à %(site_name)s"
 msgid "Powered by <img src=\"%(logo_url)s\" alt=\"Snikket\">"
 msgstr "Propulsé par <img alt=\"Snikket\" src=\"%(logo_url)s\">"
 
-#: snikket_web/templates/invite_invalid.html:7
+#: snikket_web/templates/invite_invalid.html:8
 msgid "Invite expired"
 msgstr "Invitation expirée"
 
-#: snikket_web/templates/invite_invalid.html:8
+#: snikket_web/templates/invite_invalid.html:9
 msgid "Sorry, it looks like this invitation link has expired!"
 msgstr "Désolé, il semble que ce lien d'invitation ait expiré !"
 
@@ -947,6 +964,18 @@ msgstr "Saisie invalide"
 msgid "deleted"
 msgstr "supprimé"
 
+#: snikket_web/templates/library.j2:121
+#, fuzzy
+#| msgid "Manage users and invitations of this Snikket service."
+msgid "Can be used multiple times to create accounts on this Snikket service."
+msgstr "Gérer les utilisateurs et invitations de ce service Snikket."
+
+#: snikket_web/templates/library.j2:123
+#, fuzzy
+#| msgid "Manage users and invitations of this Snikket service."
+msgid "Can be used once to create an account on this Snikket service."
+msgstr "Gérer les utilisateurs et invitations de ce service Snikket."
+
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
 msgstr "Identifiant Snikket"
@@ -959,43 +988,49 @@ msgstr "Entrez votre adresse et mot de passe Snikket pour gérer votre compte."
 msgid "Login failed"
 msgstr "Échec de l'authentification"
 
-#: snikket_web/templates/user_home.html:3
+#: snikket_web/templates/user_home.html:9
 msgid "Welcome!"
 msgstr "Bienvenue !"
 
-#: snikket_web/templates/user_home.html:4
+#: snikket_web/templates/user_home.html:10
 #, python-format
 msgid "Welcome home, %(user_name)s."
 msgstr "Bienvenue à la maison, %(user_name)s."
 
-#: snikket_web/templates/user_home.html:8
-msgid ""
-"Change display name, set avatar and configure visibility of your personal "
-"data to others."
-msgstr ""
-"Changer le nom, configurer un avatar, et la visibilité de vos données "
-"personnelles."
+#: snikket_web/templates/user_home.html:14
+#, fuzzy
+#| msgid "Create account"
+msgid "Your account"
+msgstr "Créer un compte"
 
-#: snikket_web/templates/user_home.html:11
+#: snikket_web/templates/user_home.html:30
+#, fuzzy
+#| msgid "Update profile"
+msgid "Edit profile"
+msgstr "Mettre à jour le profil"
+
+#: snikket_web/templates/user_home.html:31
 #: snikket_web/templates/user_passwd.html:32
 msgid "Change password"
 msgstr "Changer de mot de passe"
 
-#: snikket_web/templates/user_home.html:15
-msgid "Admin dashboard"
-msgstr "Tableau de bord d’administration"
+#: snikket_web/templates/user_home.html:36
+#, fuzzy
+#| msgid "About Snikket"
+msgid "Your Snikket"
+msgstr "À propos de Snikket"
 
-#: snikket_web/templates/user_home.html:16
-msgid "Manage users and invitations of this Snikket service."
+#: snikket_web/templates/user_home.html:38
+#, fuzzy
+#| msgid "Manage users and invitations of this Snikket service."
+msgid "Manage users, invitations and circles of your Snikket service."
 msgstr "Gérer les utilisateurs et invitations de ce service Snikket."
 
-#: snikket_web/templates/user_home.html:20
-msgid "Log out"
-msgstr "Se déconnecter"
-
-#: snikket_web/templates/user_home.html:21
-msgid "Exit the Snikket Web Portal, without logging out your other devices."
-msgstr "Quitter le portail web Snikket, sans déconnecter vos autres appareils."
+#: snikket_web/templates/user_home.html:40
+#, fuzzy
+#| msgid "Admin area"
+msgid "Admin panel"
+msgstr "Zone d’administration"
 
 #: snikket_web/templates/user_logout.html:8
 msgid "Sign out of the Snikket Web Portal"
@@ -1035,17 +1070,52 @@ msgstr ""
 msgid "Profile"
 msgstr "Profil"
 
-#: snikket_web/templates/user_profile.html:18
+#: snikket_web/templates/user_profile.html:21
 msgid "Visibility"
 msgstr "Visibilité"
 
-#: snikket_web/templates/user_profile.html:19
+#: snikket_web/templates/user_profile.html:22
 msgid ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
 msgstr ""
 "Cette section permet de configurer qui peut voir votre profil, comme par "
 "exemple votre avatar et votre pseudonyme."
+
+#~ msgid ""
+#~ "This invitation link can be used arbitrarily often, until it expires, is "
+#~ "revoked or a service-wide user limit is reached."
+#~ msgstr ""
+#~ "Cette invitation peut être utilisée autant de fois que nécessaire, "
+#~ "jusqu'à ce qu'elle expire, soit révoquée, ou une limite globale au "
+#~ "service soit atteinte."
+
+#~ msgid "This invitation link can only be used once and is then depleted."
+#~ msgstr ""
+#~ "Ce lien d'invitation ne peut être utilisé qu'une seule fois et est "
+#~ "ensuite expiré."
+
+#~ msgid "Modify administrative user information or delete users."
+#~ msgstr ""
+#~ "Modifier les informations des utilisateurs ou désinscrire des "
+#~ "utilisateurs."
+
+#~ msgid "Back to the main view"
+#~ msgstr "Retour à la vue principale"
+
+#~ msgid ""
+#~ "Change display name, set avatar and configure visibility of your personal "
+#~ "data to others."
+#~ msgstr ""
+#~ "Changer le nom, configurer un avatar, et la visibilité de vos données "
+#~ "personnelles."
+
+#~ msgid "Admin dashboard"
+#~ msgstr "Tableau de bord d’administration"
+
+#~ msgid "Exit the Snikket Web Portal, without logging out your other devices."
+#~ msgstr ""
+#~ "Quitter le portail web Snikket, sans déconnecter vos autres appareils."
 
 #~ msgid "Invite a group of people"
 #~ msgstr "Inviter plusieurs personnes"

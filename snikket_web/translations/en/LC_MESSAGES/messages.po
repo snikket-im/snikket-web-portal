@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-27 17:16+0100\n"
+"POT-Creation-Date: 2021-01-28 18:53+0100\n"
 "PO-Revision-Date: 2021-01-23 17:06+0000\n"
 "Last-Translator: Matthew Wild <matthew@snikket.org>\n"
 "Language-Team: English <https://i18n.sotecware.net/projects/snikket/web-"
@@ -207,7 +207,7 @@ msgstr "Avatar"
 msgid "Profile visibility"
 msgstr "Profile visibility"
 
-#: snikket_web/templates/user_home.html:7 snikket_web/user.py:68
+#: snikket_web/user.py:68
 msgid "Update profile"
 msgstr "Update profile"
 
@@ -294,7 +294,7 @@ msgid "Admin area"
 msgstr "Admin dashboard"
 
 #: snikket_web/templates/admin_circles.html:4
-#: snikket_web/templates/admin_home.html:11
+#: snikket_web/templates/admin_home.html:23
 msgid "Manage circles"
 msgstr "Manage circles"
 
@@ -429,11 +429,11 @@ msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:19
 #: snikket_web/templates/admin_edit_circle.html:43
-#: snikket_web/templates/admin_edit_invite.html:45
+#: snikket_web/templates/admin_edit_invite.html:49
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
 #: snikket_web/templates/user_passwd.html:30
-#: snikket_web/templates/user_profile.html:25
+#: snikket_web/templates/user_profile.html:28
 msgid "Back"
 msgstr "Back"
 
@@ -455,6 +455,7 @@ msgstr "Email address"
 #: snikket_web/templates/admin_edit_circle.html:19
 #: snikket_web/templates/admin_edit_circle.html:35
 #: snikket_web/templates/invite_success.html:15
+#: snikket_web/templates/user_home.html:21
 #, fuzzy
 #| msgid "Email address"
 msgid "Copy address"
@@ -520,19 +521,8 @@ msgstr "Valid until"
 msgid "Link"
 msgstr "Link"
 
-#: snikket_web/templates/admin_edit_invite.html:18
-msgid ""
-"This invitation link can be used arbitrarily often, until it expires, is "
-"revoked or a service-wide user limit is reached."
-msgstr ""
-"This invitation link can be used arbitrarily often, until it expires, is "
-"revoked or a service-wide user limit is reached."
-
-#: snikket_web/templates/admin_edit_invite.html:18
-msgid "This invitation link can only be used once and is then depleted."
-msgstr "This invitation link can only be used once and is then depleted."
-
 #: snikket_web/templates/admin_edit_invite.html:22
+#: snikket_web/templates/admin_home.html:19
 msgid "Circles"
 msgstr "Circles"
 
@@ -551,7 +541,16 @@ msgstr "Circle"
 msgid "The user will not be added to any circle and will have no contacts."
 msgstr "The user will not be added to any circle and will have no contacts."
 
-#: snikket_web/templates/admin_edit_invite.html:39
+#: snikket_web/templates/admin_edit_invite.html:40
+msgid "Contact"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_invite.html:41
+#, python-format
+msgid "The user will get added as contact of %(peer_jid)s."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_invite.html:43
 msgid "Created"
 msgstr "Created"
 
@@ -579,44 +578,60 @@ msgstr ""
 "password reset link. The password reset link can be used once to change the "
 "password of the account. Transmit the link to the user via a secure channel."
 
-#: snikket_web/templates/admin_home.html:3
-msgid "Welcome to the administration dashboard!"
+#: snikket_web/templates/admin_home.html:4
+#, fuzzy
+#| msgid "Welcome to the administration dashboard!"
+msgid "Welcome to the admin panel!"
 msgstr "Welcome to the administration dashboard!"
 
-#: snikket_web/templates/admin_home.html:4
+#: snikket_web/templates/admin_home.html:5
 #, python-format
 msgid "At your service, %(user_name)s."
 msgstr "At your service, %(user_name)s."
 
-#: snikket_web/templates/admin_home.html:7
+#: snikket_web/templates/admin_home.html:9
+msgid "Users"
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:11
+#, fuzzy
+#| msgid "Create password reset link for %(user_name)s"
+msgid "Create password reset links or delete users."
+msgstr "Create password reset link for %(user_name)s"
+
+#: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_users.html:4
 msgid "Manage users"
 msgstr "Manage users"
 
-#: snikket_web/templates/admin_home.html:8
-msgid "Modify administrative user information or delete users."
-msgstr "Modify administrative user information or delete users."
-
-#: snikket_web/templates/admin_home.html:12
+#: snikket_web/templates/admin_home.html:21
 msgid "Create and manage social circles represented on your service."
 msgstr ""
 
-#: snikket_web/templates/admin_home.html:15
+#: snikket_web/templates/admin_home.html:27
+#, fuzzy
+#| msgid "View invitation"
+msgid "Invitations"
+msgstr "View invitation"
+
+#: snikket_web/templates/admin_home.html:29
+#, fuzzy
+#| msgid "Create, revoke or view invitations."
+msgid "Create, revoke or copy invitations."
+msgstr "Create, revoke or view invitations."
+
+#: snikket_web/templates/admin_home.html:31
 #: snikket_web/templates/admin_invites.html:8
 msgid "Manage invitations"
 msgstr "Manage invitations"
 
-#: snikket_web/templates/admin_home.html:16
-msgid "Create, revoke or view invitations."
-msgstr "Create, revoke or view invitations."
-
-#: snikket_web/templates/admin_home.html:19
-msgid "Back to the main view"
-msgstr "Back to the main view"
-
-#: snikket_web/templates/admin_home.html:20
+#: snikket_web/templates/admin_home.html:36
 msgid "Go back to your user’s web portal page."
 msgstr "Go back to your user’s web portal page."
+
+#: snikket_web/templates/admin_home.html:38
+msgid "Exit admin panel"
+msgstr ""
 
 #: snikket_web/templates/admin_invites.html:10
 msgid "Pending invitations"
@@ -674,6 +689,10 @@ msgstr "Create password reset link for %(user_name)s"
 msgid "Snikket Web Portal"
 msgstr ""
 
+#: snikket_web/templates/app.html:8
+msgid "Log out"
+msgstr "Log out"
+
 #: snikket_web/templates/backend_error.html:3
 #: snikket_web/templates/exception.html:3
 #: snikket_web/templates/internal_error.html:3
@@ -698,14 +717,14 @@ msgstr "Go back to the main page"
 msgid "The web portal encountered an internal error."
 msgstr "The web portal encountered an internal error."
 
-#: snikket_web/templates/invite_invalid.html:4
+#: snikket_web/templates/invite_invalid.html:5
 #: snikket_web/templates/invite_view.html:12
 #, fuzzy, python-format
 #| msgid "Edit user %(user_name)s"
 msgid "Invite to %(site_name)s"
 msgstr "Edit user %(user_name)s"
 
-#: snikket_web/templates/invite_invalid.html:5
+#: snikket_web/templates/invite_invalid.html:6
 #: snikket_web/templates/invite_register.html:10
 #: snikket_web/templates/invite_success.html:11
 #: snikket_web/templates/invite_view.html:13
@@ -713,13 +732,13 @@ msgstr "Edit user %(user_name)s"
 msgid "Powered by <img src=\"%(logo_url)s\" alt=\"Snikket\">"
 msgstr ""
 
-#: snikket_web/templates/invite_invalid.html:7
+#: snikket_web/templates/invite_invalid.html:8
 #, fuzzy
 #| msgid "Invite to circle"
 msgid "Invite expired"
 msgstr "Invite to circle"
 
-#: snikket_web/templates/invite_invalid.html:8
+#: snikket_web/templates/invite_invalid.html:9
 msgid "Sorry, it looks like this invitation link has expired!"
 msgstr ""
 
@@ -925,6 +944,18 @@ msgstr "Invalid input"
 msgid "deleted"
 msgstr "deleted"
 
+#: snikket_web/templates/library.j2:121
+#, fuzzy
+#| msgid "Manage users and invitations of this Snikket service."
+msgid "Can be used multiple times to create accounts on this Snikket service."
+msgstr "Manage users and invitations of this Snikket service."
+
+#: snikket_web/templates/library.j2:123
+#, fuzzy
+#| msgid "Manage users and invitations of this Snikket service."
+msgid "Can be used once to create an account on this Snikket service."
+msgstr "Manage users and invitations of this Snikket service."
+
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
 msgstr "Snikket Login"
@@ -937,43 +968,49 @@ msgstr "Enter your Snikket address and password to manage your account."
 msgid "Login failed"
 msgstr "Login failed"
 
-#: snikket_web/templates/user_home.html:3
+#: snikket_web/templates/user_home.html:9
 msgid "Welcome!"
 msgstr "Welcome!"
 
-#: snikket_web/templates/user_home.html:4
+#: snikket_web/templates/user_home.html:10
 #, python-format
 msgid "Welcome home, %(user_name)s."
 msgstr "Welcome home, %(user_name)s."
 
-#: snikket_web/templates/user_home.html:8
-msgid ""
-"Change display name, set avatar and configure visibility of your personal "
-"data to others."
-msgstr ""
-"Change display name, set avatar and configure visibility of your personal "
-"data to others."
+#: snikket_web/templates/user_home.html:14
+#, fuzzy
+#| msgid "Create circle"
+msgid "Your account"
+msgstr "Create circle"
 
-#: snikket_web/templates/user_home.html:11
+#: snikket_web/templates/user_home.html:30
+#, fuzzy
+#| msgid "Update profile"
+msgid "Edit profile"
+msgstr "Update profile"
+
+#: snikket_web/templates/user_home.html:31
 #: snikket_web/templates/user_passwd.html:32
 msgid "Change password"
 msgstr "Change password"
 
-#: snikket_web/templates/user_home.html:15
-msgid "Admin dashboard"
-msgstr "Admin dashboard"
+#: snikket_web/templates/user_home.html:36
+#, fuzzy
+#| msgid "About Snikket"
+msgid "Your Snikket"
+msgstr "About Snikket"
 
-#: snikket_web/templates/user_home.html:16
-msgid "Manage users and invitations of this Snikket service."
+#: snikket_web/templates/user_home.html:38
+#, fuzzy
+#| msgid "Manage users and invitations of this Snikket service."
+msgid "Manage users, invitations and circles of your Snikket service."
 msgstr "Manage users and invitations of this Snikket service."
 
-#: snikket_web/templates/user_home.html:20
-msgid "Log out"
-msgstr "Log out"
-
-#: snikket_web/templates/user_home.html:21
-msgid "Exit the Snikket Web Portal, without logging out your other devices."
-msgstr "Exit the Snikket Web Portal, without logging out your other devices."
+#: snikket_web/templates/user_home.html:40
+#, fuzzy
+#| msgid "Admin dashboard"
+msgid "Admin panel"
+msgstr "Admin dashboard"
 
 #: snikket_web/templates/user_logout.html:8
 msgid "Sign out of the Snikket Web Portal"
@@ -1013,17 +1050,47 @@ msgstr ""
 msgid "Profile"
 msgstr "Profile"
 
-#: snikket_web/templates/user_profile.html:18
+#: snikket_web/templates/user_profile.html:21
 msgid "Visibility"
 msgstr "Visibility"
 
-#: snikket_web/templates/user_profile.html:19
+#: snikket_web/templates/user_profile.html:22
 msgid ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
 msgstr ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
+
+#~ msgid ""
+#~ "This invitation link can be used arbitrarily often, until it expires, is "
+#~ "revoked or a service-wide user limit is reached."
+#~ msgstr ""
+#~ "This invitation link can be used arbitrarily often, until it expires, is "
+#~ "revoked or a service-wide user limit is reached."
+
+#~ msgid "This invitation link can only be used once and is then depleted."
+#~ msgstr "This invitation link can only be used once and is then depleted."
+
+#~ msgid "Modify administrative user information or delete users."
+#~ msgstr "Modify administrative user information or delete users."
+
+#~ msgid "Back to the main view"
+#~ msgstr "Back to the main view"
+
+#~ msgid ""
+#~ "Change display name, set avatar and configure visibility of your personal "
+#~ "data to others."
+#~ msgstr ""
+#~ "Change display name, set avatar and configure visibility of your personal "
+#~ "data to others."
+
+#~ msgid "Admin dashboard"
+#~ msgstr "Admin dashboard"
+
+#~ msgid "Exit the Snikket Web Portal, without logging out your other devices."
+#~ msgstr ""
+#~ "Exit the Snikket Web Portal, without logging out your other devices."
 
 #~ msgid "Invite a group of people"
 #~ msgstr "Invite a group of people"

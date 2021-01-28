@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-27 17:16+0100\n"
+"POT-Creation-Date: 2021-01-28 18:53+0100\n"
 "PO-Revision-Date: 2021-01-28 17:55+0000\n"
 "Last-Translator: pep <pep@bouah.net>\n"
-"Language-Team: Japanese <https://i18n.sotecware.net/projects/snikket/"
-"web-portal/ja/>\n"
+"Language-Team: Japanese <https://i18n.sotecware.net/projects/snikket/web-"
+"portal/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -193,7 +193,7 @@ msgstr "アバター"
 msgid "Profile visibility"
 msgstr ""
 
-#: snikket_web/templates/user_home.html:7 snikket_web/user.py:68
+#: snikket_web/user.py:68
 msgid "Update profile"
 msgstr "プロファイル管理"
 
@@ -269,7 +269,7 @@ msgid "Admin area"
 msgstr "管理"
 
 #: snikket_web/templates/admin_circles.html:4
-#: snikket_web/templates/admin_home.html:11
+#: snikket_web/templates/admin_home.html:23
 msgid "Manage circles"
 msgstr "サークル管理"
 
@@ -395,15 +395,17 @@ msgid ""
 "The user and their data will be deleted irrevocably, permanently and "
 "immediately upon pushing the below button. <strong>There is no way back!</"
 "strong>"
-msgstr "ユーザーとそのユーザーのデータが削除されます。<strong>戻ることができません</strong>"
+msgstr ""
+"ユーザーとそのユーザーのデータが削除されます。<strong>戻ることができません</"
+"strong>"
 
 #: snikket_web/templates/admin_delete_user.html:19
 #: snikket_web/templates/admin_edit_circle.html:43
-#: snikket_web/templates/admin_edit_invite.html:45
+#: snikket_web/templates/admin_edit_invite.html:49
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
 #: snikket_web/templates/user_passwd.html:30
-#: snikket_web/templates/user_profile.html:25
+#: snikket_web/templates/user_profile.html:28
 msgid "Back"
 msgstr "戻る"
 
@@ -423,6 +425,7 @@ msgstr "談話室アドレス"
 #: snikket_web/templates/admin_edit_circle.html:19
 #: snikket_web/templates/admin_edit_circle.html:35
 #: snikket_web/templates/invite_success.html:15
+#: snikket_web/templates/user_home.html:21
 msgid "Copy address"
 msgstr "アドレスをコピーする"
 
@@ -486,17 +489,8 @@ msgstr "有効期限"
 msgid "Link"
 msgstr "リンク"
 
-#: snikket_web/templates/admin_edit_invite.html:18
-msgid ""
-"This invitation link can be used arbitrarily often, until it expires, is "
-"revoked or a service-wide user limit is reached."
-msgstr ""
-
-#: snikket_web/templates/admin_edit_invite.html:18
-msgid "This invitation link can only be used once and is then depleted."
-msgstr "この紹介状は一回きり使用ができます。"
-
 #: snikket_web/templates/admin_edit_invite.html:22
+#: snikket_web/templates/admin_home.html:19
 msgid "Circles"
 msgstr "サークル"
 
@@ -514,7 +508,16 @@ msgstr "サークル"
 msgid "The user will not be added to any circle and will have no contacts."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_invite.html:39
+#: snikket_web/templates/admin_edit_invite.html:40
+msgid "Contact"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_invite.html:41
+#, python-format
+msgid "The user will get added as contact of %(peer_jid)s."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_invite.html:43
 msgid "Created"
 msgstr "作成時"
 
@@ -539,44 +542,62 @@ msgid ""
 "password of the account. Transmit the link to the user via a secure channel."
 msgstr ""
 
-#: snikket_web/templates/admin_home.html:3
-msgid "Welcome to the administration dashboard!"
-msgstr ""
-
 #: snikket_web/templates/admin_home.html:4
+#, fuzzy
+#| msgid "Back to the main page"
+msgid "Welcome to the admin panel!"
+msgstr "戻る"
+
+#: snikket_web/templates/admin_home.html:5
 #, python-format
 msgid "At your service, %(user_name)s."
 msgstr ""
 
-#: snikket_web/templates/admin_home.html:7
+#: snikket_web/templates/admin_home.html:9
+#, fuzzy
+#| msgid "Username"
+msgid "Users"
+msgstr "ユーザー名"
+
+#: snikket_web/templates/admin_home.html:11
+#, fuzzy
+#| msgid "Password reset link for %(user_name)s"
+msgid "Create password reset links or delete users."
+msgstr "%(user_name)s のパスワード再設定リンク"
+
+#: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_users.html:4
 msgid "Manage users"
 msgstr "ユーザー管理"
 
-#: snikket_web/templates/admin_home.html:8
-msgid "Modify administrative user information or delete users."
-msgstr "ユーザー詳細更新や削除。"
-
-#: snikket_web/templates/admin_home.html:12
+#: snikket_web/templates/admin_home.html:21
 msgid "Create and manage social circles represented on your service."
 msgstr ""
 
-#: snikket_web/templates/admin_home.html:15
+#: snikket_web/templates/admin_home.html:27
+#, fuzzy
+#| msgid "Invitation type"
+msgid "Invitations"
+msgstr "紹介の種類"
+
+#: snikket_web/templates/admin_home.html:29
+#, fuzzy
+#| msgid "Create, revoke or view invitations."
+msgid "Create, revoke or copy invitations."
+msgstr "紹介状を作成、削除、表示。"
+
+#: snikket_web/templates/admin_home.html:31
 #: snikket_web/templates/admin_invites.html:8
 msgid "Manage invitations"
 msgstr "紹介状管理"
 
-#: snikket_web/templates/admin_home.html:16
-msgid "Create, revoke or view invitations."
-msgstr "紹介状を作成、削除、表示。"
-
-#: snikket_web/templates/admin_home.html:19
-msgid "Back to the main view"
-msgstr "戻る"
-
-#: snikket_web/templates/admin_home.html:20
+#: snikket_web/templates/admin_home.html:36
 msgid "Go back to your user’s web portal page."
 msgstr "ホームページに戻る。"
+
+#: snikket_web/templates/admin_home.html:38
+msgid "Exit admin panel"
+msgstr ""
 
 #: snikket_web/templates/admin_invites.html:10
 msgid "Pending invitations"
@@ -631,6 +652,10 @@ msgstr ""
 msgid "Snikket Web Portal"
 msgstr "Snikket ホームページ"
 
+#: snikket_web/templates/app.html:8
+msgid "Log out"
+msgstr "ログアウト"
+
 #: snikket_web/templates/backend_error.html:3
 #: snikket_web/templates/exception.html:3
 #: snikket_web/templates/internal_error.html:3
@@ -654,13 +679,13 @@ msgstr "ホームページに戻る"
 msgid "The web portal encountered an internal error."
 msgstr ""
 
-#: snikket_web/templates/invite_invalid.html:4
+#: snikket_web/templates/invite_invalid.html:5
 #: snikket_web/templates/invite_view.html:12
 #, python-format
 msgid "Invite to %(site_name)s"
 msgstr "%(site_name)s に紹介する"
 
-#: snikket_web/templates/invite_invalid.html:5
+#: snikket_web/templates/invite_invalid.html:6
 #: snikket_web/templates/invite_register.html:10
 #: snikket_web/templates/invite_success.html:11
 #: snikket_web/templates/invite_view.html:13
@@ -668,13 +693,13 @@ msgstr "%(site_name)s に紹介する"
 msgid "Powered by <img src=\"%(logo_url)s\" alt=\"Snikket\">"
 msgstr "Powered by <img alt=\"Snikket\" src=\"%(logo_url)s\">"
 
-#: snikket_web/templates/invite_invalid.html:7
+#: snikket_web/templates/invite_invalid.html:8
 #, fuzzy
 #| msgid "Invite to circle"
 msgid "Invite expired"
 msgstr "サークルに紹介する"
 
-#: snikket_web/templates/invite_invalid.html:8
+#: snikket_web/templates/invite_invalid.html:9
 msgid "Sorry, it looks like this invitation link has expired!"
 msgstr "紹介状の有効期限が切れている可能性があります。"
 
@@ -753,7 +778,8 @@ msgstr "%(site_name)s に登録完了"
 #, python-format
 msgid ""
 "Congratulations! You successfully registered on %(site_name)s as %(jid)s."
-msgstr "おめでとう！%(site_name)s に登録が完了しました。あなたのアドレスは %(jid)s。"
+msgstr ""
+"おめでとう！%(site_name)s に登録が完了しました。あなたのアドレスは %(jid)s。"
 
 #: snikket_web/templates/invite_success.html:17
 msgid ""
@@ -875,6 +901,14 @@ msgstr "入力不正"
 msgid "deleted"
 msgstr ""
 
+#: snikket_web/templates/library.j2:121
+msgid "Can be used multiple times to create accounts on this Snikket service."
+msgstr ""
+
+#: snikket_web/templates/library.j2:123
+msgid "Can be used once to create an account on this Snikket service."
+msgstr ""
+
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
 msgstr "Snikket ログイン"
@@ -887,41 +921,47 @@ msgstr ""
 msgid "Login failed"
 msgstr ""
 
-#: snikket_web/templates/user_home.html:3
+#: snikket_web/templates/user_home.html:9
 msgid "Welcome!"
 msgstr "ようこそ！"
 
-#: snikket_web/templates/user_home.html:4
+#: snikket_web/templates/user_home.html:10
 #, python-format
 msgid "Welcome home, %(user_name)s."
 msgstr "ようこそ、 %(user_name)s。"
 
-#: snikket_web/templates/user_home.html:8
-msgid ""
-"Change display name, set avatar and configure visibility of your personal "
-"data to others."
-msgstr ""
+#: snikket_web/templates/user_home.html:14
+#, fuzzy
+#| msgid "Create account"
+msgid "Your account"
+msgstr "アカウント作成"
 
-#: snikket_web/templates/user_home.html:11
+#: snikket_web/templates/user_home.html:30
+#, fuzzy
+#| msgid "Update profile"
+msgid "Edit profile"
+msgstr "プロファイル管理"
+
+#: snikket_web/templates/user_home.html:31
 #: snikket_web/templates/user_passwd.html:32
 msgid "Change password"
 msgstr "パスワード変更"
 
-#: snikket_web/templates/user_home.html:15
-msgid "Admin dashboard"
+#: snikket_web/templates/user_home.html:36
+#, fuzzy
+#| msgid "About Snikket"
+msgid "Your Snikket"
+msgstr "Snikketについて"
+
+#: snikket_web/templates/user_home.html:38
+msgid "Manage users, invitations and circles of your Snikket service."
 msgstr ""
 
-#: snikket_web/templates/user_home.html:16
-msgid "Manage users and invitations of this Snikket service."
-msgstr ""
-
-#: snikket_web/templates/user_home.html:20
-msgid "Log out"
-msgstr "ログアウト"
-
-#: snikket_web/templates/user_home.html:21
-msgid "Exit the Snikket Web Portal, without logging out your other devices."
-msgstr ""
+#: snikket_web/templates/user_home.html:40
+#, fuzzy
+#| msgid "Admin area"
+msgid "Admin panel"
+msgstr "管理"
 
 #: snikket_web/templates/user_logout.html:8
 msgid "Sign out of the Snikket Web Portal"
@@ -954,15 +994,24 @@ msgstr ""
 msgid "Profile"
 msgstr "プロファイル"
 
-#: snikket_web/templates/user_profile.html:18
+#: snikket_web/templates/user_profile.html:21
 msgid "Visibility"
 msgstr ""
 
-#: snikket_web/templates/user_profile.html:19
+#: snikket_web/templates/user_profile.html:22
 msgid ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
 msgstr ""
+
+#~ msgid "This invitation link can only be used once and is then depleted."
+#~ msgstr "この紹介状は一回きり使用ができます。"
+
+#~ msgid "Modify administrative user information or delete users."
+#~ msgstr "ユーザー詳細更新や削除。"
+
+#~ msgid "Back to the main view"
+#~ msgstr "戻る"
 
 #~ msgid "Invite a group of people"
 #~ msgstr "数人に紹介"
