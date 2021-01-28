@@ -385,6 +385,13 @@ div.form.layout-expanded {
 		}
 	}
 
+	div.avatar-wrap {
+		> .avatar {
+			margin: 0;
+			margin-right: $w-0;
+		}
+	}
+
 	textarea {
 		width: 100%;
 		border: none;
@@ -848,13 +855,19 @@ ul.inline {
 
 /* welcome screen specials */
 
+#home main {
+	> h1, > p {
+		text-align: center;
+	}
+}
+
 nav.welcome {
 	> ul {
 		display: flex;
 		flex-wrap: wrap;
 		list-style-type: none;
-		justify-content: center;
 		padding: 0;
+		justify-content: center;
 
 		> li {
 			@extend .el-3;
@@ -872,7 +885,6 @@ nav.welcome {
 
 			&.wide {
 				flex: 1 0 auto;
-				text-align: left;
 				display: block;
 			}
 
@@ -900,6 +912,7 @@ div.profile-card {
 	display: flex;
 	flex-direction: row;
 	margin: $w-l1 0;
+	text-align: left;
 
 	> div.picture {
 		flex: 0 0 auto;

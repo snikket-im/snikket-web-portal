@@ -1,5 +1,6 @@
 {% extends "app.html" %}
-{% from "library.j2" import clipboard_button, standard_button %}
+{% from "library.j2" import clipboard_button, standard_button, avatar with context %}
+{% set body_id = "home" %}
 {% block head_lead %}
 {{ super() }}
 {% include "copy-snippet.html" %}
@@ -10,7 +11,7 @@
 <nav class="welcome">
 	<ul>
 		<li class="wide">
-			<h2>{% trans %}Your profile{% endtrans %}</h2>
+			<h2>{% trans %}Your account{% endtrans %}</h2>
 			<div class="profile-card">
 				<div class="picture" aria-label="Your profile picture">{% call avatar(user_info.address, user_info.avatar_hash ) %}{% endcall %}</div>
 				<div class="details">
@@ -27,31 +28,19 @@
 			{# <img aria-hidden="true" src="{{ url_for("static", filename="img/illus-profile.svg") }}"> #}
 			{#- -#}
 			<div>{% call standard_button("edit", url_for(".profile"), class="primary") %}{% trans %}Edit profile{% endtrans %}{% endcall %}</div>
-			{#- -#}
-		</li>
-		<li>
-			{#- -#}
-			<p>{% trans %}If need be, you can change your password here.{% endtrans %}</p>
-			{#- -#}
-			<div><a class="button primary" href="{{ url_for(".change_pw") }}">{% trans %}Change password{% endtrans %}</a></div>
+			<div>{% call standard_button("passwd", url_for(".change_pw"), class="secondary") %}{% trans %}Change password{% endtrans %}{% endcall %}</div>
 			{#- -#}
 		</li>
 {% if user_info.is_admin %}
 		<li>
+			<h2>{% trans %}Your Snikket{% endtrans %}</h2>
 			{#- -#}
 			<p>{% trans %}Manage users, invitations and circles of your Snikket service.{% endtrans %}</p>
 			{#- -#}
-			<div><a class="button primary" href="{{ url_for("admin.index") }}">{% trans %}Admin panel{% endtrans %}</a></div>
+			<div>{% call standard_button("admin", url_for("admin.index"), class="primary") %}{% trans %}Admin panel{% endtrans %}{% endcall %}</div>
 			{#- -#}
 		</li>
 {% endif %}
-		<li>
-			{#- -#}
-			<p>{% trans %}Exit the Snikket Web Portal, without logging out your other devices.{% endtrans %}</p>
-			{#- -#}
-			<div><a class="button secondary" href="{{ url_for(".logout") }}">{% trans %}Log out{% endtrans %}</a></div>
-			{#- -#}
-		</li>
 	</ul>
 </nav>
 {% endblock %}

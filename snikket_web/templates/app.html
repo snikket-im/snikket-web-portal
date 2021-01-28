@@ -1,8 +1,9 @@
 {% extends "unauth.html" %}
-{% from "library.j2" import avatar with context %}
+{% from "library.j2" import standard_button %}
 {% block head_lead %}
 <title>{% trans %}Snikket Web Portal{% endtrans %}</title>
 {% endblock %}
 {% block topbar_right %}
 {{- super() -}}
+{% call standard_button("logout", url_for("user.logout"), class="tertiary") %}{% trans %}Log out{% endtrans %}{% endcall %}
 {%- endblock %}
