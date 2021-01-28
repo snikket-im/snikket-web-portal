@@ -45,7 +45,7 @@ main {
 /* top bar */
 
 @mixin snikket-logo {
-	background-image: url('/static/img/snikket-logo.svg');
+	background-image: url('../img/snikket-logo.svg');
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: $w-s2 0em;
