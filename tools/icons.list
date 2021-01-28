@@ -24,3 +24,4 @@ social/person_remove:remove_user
 navigation/close:close
 image/edit:edit
 action/admin_panel_settings:admin
+content/link:link

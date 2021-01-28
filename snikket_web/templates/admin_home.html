@@ -1,37 +1,41 @@
 {% extends "admin_app.html" %}
+{% set body_id = "home" %}
 {% block content %}
-<h1>{% trans %}Welcome to the administration dashboard!{% endtrans %}</h1>
+<h1>{% trans %}Welcome to the admin panel!{% endtrans %}</h1>
 <p>{% trans user_name=user_info.display_name %}At your service, {{ user_name }}.{% endtrans %}</p>
 <nav class="welcome">
 	<ul>
 		<li>
+			<h2>{% trans %}Users{% endtrans %}</h2>
 			{#- -#}
 			<p>{% trans %}Create password reset links or delete users.{% endtrans %}</p>
 			{#- -#}
 			{# <img aria-hidden="true" src="{{ url_for("static", filename="img/illus-profile.svg") }}"> #}
 			{#- -#}
-			<div><a class="button primary" href="{{ url_for(".users") }}">{% trans %}Users{% endtrans %}</a></div>
+			<div>{% call standard_button("people", url_for(".users"), class="primary") %}{% trans %}Manage users{% endtrans %}{% endcall %}</div>
 			{#- -#}
 		</li>
 		<li>
+			<h2>{% trans %}Circles{% endtrans %}</h2>
 			{#- -#}
 			<p>{% trans %}Create and manage social circles represented on your service.{% endtrans %}</p>
 			{#- -#}
-			<div><a class="button primary" href="{{ url_for(".circles") }}">{% trans %}Circles{% endtrans %}</a></div>
+			<div>{% call standard_button("groups", url_for(".circles"), class="primary") %}{% trans %}Manage circles{% endtrans %}{% endcall %}</div>
 			{#- -#}
 		</li>
 		<li>
+			<h2>{% trans %}Invitations{% endtrans %}</h2>
 			{#- -#}
 			<p>{% trans %}Create, revoke or copy invitations.{% endtrans %}</p>
 			{#- -#}
-			<div><a class="button primary" href="{{ url_for(".invitations") }}">{% trans %}Invitations{% endtrans %}</a></div>
+			<div>{% call standard_button("link", url_for(".invitations"), class="primary") %}{% trans %}Manage invitations{% endtrans %}{% endcall %}</div>
 			{#- -#}
 		</li>
 		<li>
 			{#- -#}
 			<p>{% trans %}Go back to your user’s web portal page.{% endtrans %}</p>
 			{#- -#}
-			<div><a class="button secondary" href="{{ url_for("user.index") }}">{% trans %}Exit Admin Panel{% endtrans %}</a></div>
+			<div>{% call standard_button("logout", url_for("user.index"), class="secondary") %}{% trans %}Exit admin panel{% endtrans %}{% endcall %}</div>
 			{#- -#}
 		</li>
 	</ul>
