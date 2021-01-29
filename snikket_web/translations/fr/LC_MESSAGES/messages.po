@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-29 15:58+0100\n"
-"PO-Revision-Date: 2021-01-28 17:55+0000\n"
-"Last-Translator: pep <pep@bouah.net>\n"
-"Language-Team: French <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/fr/>\n"
+"PO-Revision-Date: 2021-01-30 09:49+0000\n"
+"Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
+"Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -429,7 +429,7 @@ msgstr "Retour"
 
 #: snikket_web/templates/admin_edit_circle.html:14
 msgid "This is your main circle"
-msgstr ""
+msgstr "Ceci est votre cercle principal"
 
 #: snikket_web/templates/admin_edit_circle.html:15
 msgid "This circle is managed automatically and cannot be removed or renamed."
@@ -506,7 +506,7 @@ msgstr "Valide jusqu’au"
 #: snikket_web/templates/admin_edit_invite.html:15
 #: snikket_web/templates/admin_reset_user_password.html:17
 msgid "<label for=\"link-field\">Link</label>"
-msgstr ""
+msgstr "<label for=\"link-field\">Lien</label>"
 
 #: snikket_web/templates/admin_edit_invite.html:22
 #: snikket_web/templates/admin_home.html:19
@@ -531,12 +531,12 @@ msgstr "L'utilisateur ne sera ajouté à aucun cercle et n  ’aura pas de c
 
 #: snikket_web/templates/admin_edit_invite.html:40
 msgid "Contact"
-msgstr ""
+msgstr "Contact"
 
 #: snikket_web/templates/admin_edit_invite.html:41
 #, python-format
 msgid "The user will get added as contact of %(peer_jid)s."
-msgstr ""
+msgstr "L’utilisateur sera ajouté en tant que contact de %(peer_jid)s."
 
 #: snikket_web/templates/admin_edit_invite.html:43
 msgid "Created"
