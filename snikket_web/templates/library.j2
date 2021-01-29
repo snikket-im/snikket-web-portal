@@ -10,11 +10,11 @@
 {%- endif -%}
 {%- endmacro %}
 
-{% macro showuri(uri, caller=None) %}
+{% macro showuri(uri, caller=None, id_=None) %}
 {%- if uri is none -%}
 <em>—</em>
 {%- else -%}
-<div><input type="text" readonly="readonly" value="{{ uri }}"></div>
+<div><input type="text" {% if id_ %}id="{{ id_ }}" {% endif %}readonly="readonly" value="{{ uri }}"></div>
 <div>{% call clipboard_button(uri, show_label=True) %}{% trans %}Copy link{% endtrans %}{% endcall %}</div>
 {%- endif -%}
 {% endmacro %}
@@ -26,7 +26,7 @@
 
 {% macro standard_button(icon_name, href, caller=None, class=None, onclick=None) -%}
 {%- set label = caller() -%}
-<a href="{{ href }}" class="button {% if class %}{{ class }}{% endif %}" aria-label="{{ a11y }}" title="{{ a11y }}"{% if onclick %} onclick="{{ onclick }}"{% endif %}>{% call icon(icon_name) %}{% endcall %}<span>{{ label }}</span></a>
+<a href="{{ href }}" class="button {% if class %}{{ class }}{% endif %}" {% if onclick %} onclick="{{ onclick }}"{% endif %}>{% call icon(icon_name) %}{% endcall %}<span>{{ label }}</span></a>
 {%- endmacro %}
 
 {% macro form_button(icon_name, button_obj, caller=None, class=None) -%}

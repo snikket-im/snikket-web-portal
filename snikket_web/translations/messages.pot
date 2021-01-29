@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-29 09:32+0100\n"
+"POT-Creation-Date: 2021-01-29 15:58+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -398,7 +398,7 @@ msgstr ""
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
 #: snikket_web/templates/user_passwd.html:30
-#: snikket_web/templates/user_profile.html:28
+#: snikket_web/templates/user_profile.html:31
 msgid "Back"
 msgstr ""
 
@@ -479,7 +479,7 @@ msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:15
 #: snikket_web/templates/admin_reset_user_password.html:17
-msgid "Link"
+msgid "<label for=\"link-field\">Link</label>"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:22
@@ -924,6 +924,10 @@ msgstr ""
 msgid "Your account"
 msgstr ""
 
+#: snikket_web/templates/user_home.html:20
+msgid "Your XMPP address"
+msgstr ""
+
 #: snikket_web/templates/user_home.html:31
 msgid "Edit profile"
 msgstr ""
@@ -972,15 +976,19 @@ msgid ""
 "all of your devices."
 msgstr ""
 
-#: snikket_web/templates/user_profile.html:8
+#: snikket_web/templates/user_profile.html:7
+msgid "Update your profile"
+msgstr ""
+
+#: snikket_web/templates/user_profile.html:9
 msgid "Profile"
 msgstr ""
 
-#: snikket_web/templates/user_profile.html:21
+#: snikket_web/templates/user_profile.html:22
 msgid "Visibility"
 msgstr ""
 
-#: snikket_web/templates/user_profile.html:22
+#: snikket_web/templates/user_profile.html:23
 msgid ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."

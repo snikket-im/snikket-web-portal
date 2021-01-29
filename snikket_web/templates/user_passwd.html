@@ -5,7 +5,7 @@
 {% endblock %}
 {% block content %}
 <div class="form layout-expanded"><form method="POST">
-	<h2 class="form-title">{% trans %}Change your password{% endtrans %}</h2>
+	<h1 class="form-title">{% trans %}Change your password{% endtrans %}</h1>
 	<p class="form-desc weak">{% trans %}To change your password, you need to provide the current password as well as the new one. To reduce the chance of typos, we ask for your new password twice.{% endtrans %}</p>
 	{{ form.csrf_token }}
 	{%- call render_errors(form) -%}

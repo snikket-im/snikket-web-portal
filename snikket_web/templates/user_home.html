@@ -17,7 +17,7 @@
 				<div class="details">
 					<div class="display-name">{{ user_info.display_name | default(user_info.username) }}</div>
 					<div class="address">
-						<input value="{{ user_info.address }}">
+						<input value="{{ user_info.address }}" aria-label="{% trans %}Your XMPP address{% endtrans %}">
 						{% call clipboard_button(user_info.address) %}{% trans %}Copy address{% endtrans %}{% endcall %}
 					</div>
 				</div>

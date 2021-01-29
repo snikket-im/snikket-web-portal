@@ -4,6 +4,7 @@
 <title>Snikket Web Portal</title>
 {% endblock %}
 {% block content %}
+<h1>{% trans %}Update your profile{% endtrans %}</h1>
 <div class="form layout-expanded"><form method="POST" enctype="multipart/form-data">
 	<h2 class="form-title">{% trans %}Profile{% endtrans %}</h2>
 	{{ form.csrf_token }}
@@ -21,8 +22,10 @@
 	<h3 class="form-title">{% trans %}Visibility{% endtrans %}</h3>
 	<p class="form-descr weak">{% trans %}This section allows you to control who can see your profile information, like avatar and nickname.{% endtrans %}</p>
 	<div class="f-ebox">
-		{{ form.profile_access_model.label }}
-		{{ form.profile_access_model }}
+		<fieldset>{#- -#}
+			<legend>{{ form.profile_access_model.label.text }}</legend>
+			{{- form.profile_access_model -}}
+		</fieldset>
 	</div>
 	<div class="f-bbox">
 		{%- call standard_button("back", url_for('.index'), class="secondary") %}{% trans %}Back{% endtrans %}{% endcall -%}

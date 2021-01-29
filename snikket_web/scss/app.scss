@@ -222,10 +222,17 @@ div.form {
 }
 
 div.form.layout-expanded {
-	label {
+	label, legend {
 		display: block;
 		font-weight: bold;
 		color: $gray-200;
+	}
+
+	fieldset {
+		display: block;
+		border: 0;
+		padding: 0;
+		margin: 0;
 	}
 
 	input[type="radio"] + label, input[type="checkbox"] + label {
@@ -262,11 +269,6 @@ div.form.layout-expanded {
 		input[type=$type]:focus {
 			border-bottom-color: $primary-800;
 		}
-	}
-
-	ul[id] {
-		padding: $w-s1 0;
-		padding-left: $w-l1;
 	}
 
 	input[type="checkbox"], input[type="radio"] {
@@ -408,11 +410,12 @@ div.form.layout-expanded {
 	}
 }
 
-.f-ebox > ul {
+fieldset > ul {
 	/* radio group */
 	list-style-type: none;
 	margin: 0;
-	padding: 0;
+	padding: $w-s1 0;
+	padding-left: $w-l1;
 
 	> li {
 		margin: 0;
@@ -474,7 +477,7 @@ input[type="submit"], button, .button {
 	&.primary {
 		background: linear-gradient(0deg, $primary-500, $primary-600);
 		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-		color: $primary-900;
+		color: white;
 		border: none;
 		/* TODO: fix vertical rhyhtm ... */
 		border-radius: $w-s4;
@@ -780,7 +783,7 @@ body#login {
 /* admin area specials */
 
 #topbar > div.admin-note {
-	color: $alert-500;
+	color: $alert-400;
 	font-size: nth($h-sizes, 5);
 	margin-left: $w-l1;
 }

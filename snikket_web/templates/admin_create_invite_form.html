@@ -5,8 +5,10 @@
 	<h2 class="form-title">{% trans %}Create new invitation{% endtrans %}</h2>
 	<p class="form-descr weak">{% trans %}Create a new invitation link to invite more users to your Snikket service by clicking the button below.{% endtrans %}</p>
 	<div class="f-ebox">
-		{{ invite_form.type_.label }}
-		{{ invite_form.type_ }}
+		<fieldset>{#- -#}
+			<legend>{{ invite_form.type_.label.text }}</legend>
+			{{- invite_form.type_ -}}
+		</fieldset>
 	</div>
 	<div class="f-ebox">
 		{{ invite_form.lifetime.label }}
