@@ -403,7 +403,7 @@ msgid "Back"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:14
-msgid "This circle cannot be modified"
+msgid "This is your main circle"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:15
@@ -460,7 +460,7 @@ msgid "Add existing user"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:94
-msgid "No users left"
+msgid "All users added"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:95

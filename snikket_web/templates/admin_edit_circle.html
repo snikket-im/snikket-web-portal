@@ -11,7 +11,7 @@
 {%- if target_circle.id_ == "default" -%}
 <input type="hidden" name="{{ form.name.name }}" value="{{ form.name.data }}">{#- -#}
 <div class="box hint form layout-expanded">
-	<header>{% trans %}This circle cannot be modified{% endtrans %}</header>
+	<header>{% trans %}This is your main circle{% endtrans %}</header>
 	<p>{% trans %}This circle is managed automatically and cannot be removed or renamed.{% endtrans %}</p>
 	{%- if target_circle.muc_jid -%}
 	<div><label for="circle-muc-jid">{% trans %}Group chat address{% endtrans %}</label></div>
@@ -90,8 +90,8 @@
 	</div>
 </div>
 {%- else -%}
-<div class="box hint el-2">
-	<header>{% trans %}No users left{% endtrans %}</header>
+<div class="elevated box success el-2">
+	<header>{% trans %}All users added{% endtrans %}</header>
 	<p>{% trans %}All users on this service are already in this circle.{% endtrans %}</p>
 </div>
 {%- endif -%}
