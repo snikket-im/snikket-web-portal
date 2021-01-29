@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-28 18:53+0100\n"
+"POT-Creation-Date: 2021-01-29 09:32+0100\n"
 "PO-Revision-Date: 2021-01-28 17:55+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
 "Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/web-"
@@ -104,35 +104,35 @@ msgstr "Tambah pengguna"
 msgid "Main"
 msgstr "Utama"
 
-#: snikket_web/invite.py:86
+#: snikket_web/invite.py:85
 msgid "Username"
 msgstr "Nama pengguna"
 
-#: snikket_web/invite.py:90 snikket_web/main.py:41
+#: snikket_web/invite.py:89 snikket_web/main.py:41
 msgid "Password"
 msgstr "Kata sandi"
 
-#: snikket_web/invite.py:94
+#: snikket_web/invite.py:93
 msgid "Confirm password"
 msgstr "Konfirmasi kata sandi"
 
-#: snikket_web/invite.py:98
+#: snikket_web/invite.py:97
 msgid "The passwords must match"
 msgstr "Kata sandi harus cocok"
 
-#: snikket_web/invite.py:103
+#: snikket_web/invite.py:102
 msgid "Create account"
 msgstr "Buat akun"
 
-#: snikket_web/invite.py:123
+#: snikket_web/invite.py:122
 msgid "That username is already taken"
 msgstr "Nama pengguna itu sudah dipakai"
 
-#: snikket_web/invite.py:127
+#: snikket_web/invite.py:126
 msgid "Registration was declined for unknown reasons"
 msgstr "Pendaftaran ditolak karena alasan yang tidak diketahui"
 
-#: snikket_web/invite.py:131
+#: snikket_web/invite.py:130
 msgid "The username is not valid"
 msgstr "Nama pengguna tidak valid"
 
@@ -419,7 +419,7 @@ msgstr ""
 "strong>"
 
 #: snikket_web/templates/admin_delete_user.html:19
-#: snikket_web/templates/admin_edit_circle.html:43
+#: snikket_web/templates/admin_edit_circle.html:44
 #: snikket_web/templates/admin_edit_invite.html:49
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
@@ -428,71 +428,71 @@ msgstr ""
 msgid "Back"
 msgstr "Kembali"
 
-#: snikket_web/templates/admin_edit_circle.html:13
-msgid "This circle cannot be modified"
-msgstr "Kelompok ini tidak bisa diubah"
-
 #: snikket_web/templates/admin_edit_circle.html:14
+msgid "This is your main circle"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:15
 msgid "This circle is managed automatically and cannot be removed or renamed."
 msgstr ""
 "Kelompok ini dikelola secara otomatis, tidak dapat dihapus atau diganti nama."
 
-#: snikket_web/templates/admin_edit_circle.html:16
-#: snikket_web/templates/admin_edit_circle.html:32
+#: snikket_web/templates/admin_edit_circle.html:17
+#: snikket_web/templates/admin_edit_circle.html:33
 msgid "Group chat address"
 msgstr "Alamat percakapan grup"
 
-#: snikket_web/templates/admin_edit_circle.html:19
-#: snikket_web/templates/admin_edit_circle.html:35
+#: snikket_web/templates/admin_edit_circle.html:20
+#: snikket_web/templates/admin_edit_circle.html:36
 #: snikket_web/templates/invite_success.html:15
 #: snikket_web/templates/user_home.html:21
 msgid "Copy address"
 msgstr "Salin alamat"
 
-#: snikket_web/templates/admin_edit_circle.html:25
+#: snikket_web/templates/admin_edit_circle.html:26
 msgid "Circle information"
 msgstr "Informasi kelompok"
 
-#: snikket_web/templates/admin_edit_circle.html:38
+#: snikket_web/templates/admin_edit_circle.html:39
 msgid "This circle has no group chat associated."
 msgstr "Kelompok ini tidak memiliki percakapan grup."
 
-#: snikket_web/templates/admin_edit_circle.html:47
+#: snikket_web/templates/admin_edit_circle.html:48
 msgid "Delete circle"
 msgstr "Hapus kelompok"
 
-#: snikket_web/templates/admin_edit_circle.html:48
+#: snikket_web/templates/admin_edit_circle.html:49
 msgid "Deleting a circle does not delete any users in the circle."
 msgstr ""
 "Menghapus kelompok tidak menghapus satu pun pengguna di dalam kelompok "
 "tersebut."
 
-#: snikket_web/templates/admin_edit_circle.html:54
+#: snikket_web/templates/admin_edit_circle.html:55
 msgid "Circle members"
 msgstr "Anggota kelompok"
 
-#: snikket_web/templates/admin_edit_circle.html:69
+#: snikket_web/templates/admin_edit_circle.html:70
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Hapus pengguna %(username)s dari kelompok"
 
-#: snikket_web/templates/admin_edit_circle.html:77
+#: snikket_web/templates/admin_edit_circle.html:78
 msgid "This circle currently has no members."
 msgstr "Kelompok ini sedang tidak memiliki anggota."
 
-#: snikket_web/templates/admin_edit_circle.html:79
+#: snikket_web/templates/admin_edit_circle.html:80
 msgid "Invite more members"
 msgstr "Ajak lebih banyak anggota"
 
-#: snikket_web/templates/admin_edit_circle.html:82
+#: snikket_web/templates/admin_edit_circle.html:83
 msgid "Add existing user"
 msgstr "Tambahkan pengguna yang ada"
 
-#: snikket_web/templates/admin_edit_circle.html:93
-msgid "No users left"
-msgstr "Tidak ada pengguna tersisa"
-
 #: snikket_web/templates/admin_edit_circle.html:94
+msgid "All users added"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:95
 msgid "All users on this service are already in this circle."
 msgstr "Semua pengguna layanan ini sudah ada di kelompok ini."
 
@@ -767,17 +767,17 @@ msgstr ""
 "menggunakan aplikasi dengan mengklik tombol di bawah ini:"
 
 #: snikket_web/templates/invite_register.html:14
-#: snikket_web/templates/invite_view.html:31
+#: snikket_web/templates/invite_view.html:37
 msgid "App already installed?"
 msgstr "Aplikasi sudah dipasang?"
 
 #: snikket_web/templates/invite_register.html:16
-#: snikket_web/templates/invite_view.html:33
+#: snikket_web/templates/invite_view.html:39
 msgid "Open the app"
 msgstr "Buka aplikasi"
 
 #: snikket_web/templates/invite_register.html:18
-#: snikket_web/templates/invite_view.html:35
+#: snikket_web/templates/invite_view.html:41
 msgid "This button works only if you have the app installed already!"
 msgstr "Tombol ini hanya berfungsi jika Anda sudah memasang aplikasinya!"
 
@@ -860,23 +860,30 @@ msgstr ""
 msgid "Get started"
 msgstr "Mulailah"
 
-#: snikket_web/templates/invite_view.html:20
+#: snikket_web/templates/invite_view.html:21
 msgid "Install the Snikket App on your Android or iOS device."
 msgstr "Instal Snikket di perangkat Android atau iOS Anda."
 
 #: snikket_web/templates/invite_view.html:23
+#, python-format
+msgid ""
+"Install the Snikket App on your Android device (<a href=\"%(ios_info_url)s\" "
+"target=\"_blank\" rel=\"noopener noreferrer\">iOS coming soon!</a>)."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:27
 msgid "Get it on Google Play"
 msgstr "Dapatkan di Google Play"
 
-#: snikket_web/templates/invite_view.html:24
+#: snikket_web/templates/invite_view.html:29
 msgid "Download on the App Store"
 msgstr "Unduh di App Store"
 
-#: snikket_web/templates/invite_view.html:27
+#: snikket_web/templates/invite_view.html:33
 msgid "Not on mobile?"
 msgstr "Bukan di ponsel?"
 
-#: snikket_web/templates/invite_view.html:30
+#: snikket_web/templates/invite_view.html:36
 msgid ""
 "After installation the app should automatically open and prompt you to "
 "create an account. If not, simply click the button below."
@@ -884,11 +891,11 @@ msgstr ""
 "Setelah instalasi, aplikasi akan terbuka otomatis dan meminta Anda untuk "
 "membuat akun. Jika tidak, cukup klik tombol di bawah."
 
-#: snikket_web/templates/invite_view.html:37
+#: snikket_web/templates/invite_view.html:43
 msgid "Alternatives"
 msgstr "Alternatif"
 
-#: snikket_web/templates/invite_view.html:38
+#: snikket_web/templates/invite_view.html:44
 #, python-format
 msgid ""
 "You can connect to Snikket using any XMPP-compatible software. If the button "
@@ -899,16 +906,16 @@ msgstr ""
 "XMPP. Jika tombol di atas tidak berfungsi dengan aplikasi, Anda mungkin "
 "perlu <a href=\"%(register_url)s\">mendaftarkan akun secara manual</a>."
 
-#: snikket_web/templates/invite_view.html:44
+#: snikket_web/templates/invite_view.html:50
 msgid "Scan invite code"
 msgstr "Pindai kode undangan"
 
-#: snikket_web/templates/invite_view.html:47
-#: snikket_web/templates/invite_view.html:76
+#: snikket_web/templates/invite_view.html:53
+#: snikket_web/templates/invite_view.html:82
 msgid "Close"
 msgstr "Tutup"
 
-#: snikket_web/templates/invite_view.html:50
+#: snikket_web/templates/invite_view.html:56
 msgid ""
 "You can transfer this invite to your mobile device by scanning a code with "
 "your camera. You can use either a QR scanner app or the Snikket app itself."
@@ -917,22 +924,22 @@ msgstr ""
 "kode dengan kamera. Anda dapat menggunakan aplikasi pemindai QR atau "
 "aplikasi Snikket."
 
-#: snikket_web/templates/invite_view.html:55
+#: snikket_web/templates/invite_view.html:61
 msgid "Using a QR code scanner"
 msgstr "Menggunakan pemindai kode QR"
 
-#: snikket_web/templates/invite_view.html:57
+#: snikket_web/templates/invite_view.html:63
 msgid "Using the Snikket app"
 msgstr "Menggunakan Snikket"
 
-#: snikket_web/templates/invite_view.html:62
+#: snikket_web/templates/invite_view.html:68
 msgid ""
 "Use a <em>QR code</em> scanner on your mobile device to scan the code below:"
 msgstr ""
 "Gunakan pemindai <em>kode QR</em> di perangkat seluler Anda untuk memindai "
 "kode di bawah:"
 
-#: snikket_web/templates/invite_view.html:68
+#: snikket_web/templates/invite_view.html:74
 msgid ""
 "Install the Snikket app on your mobile device, open it, and tap the 'Scan' "
 "button at the top."
@@ -940,7 +947,7 @@ msgstr ""
 "Instal aplikasi Snikket di perangkat seluler Anda, buka, dan ketuk tombol "
 "'Pindai'."
 
-#: snikket_web/templates/invite_view.html:69
+#: snikket_web/templates/invite_view.html:75
 msgid ""
 "Your camera will turn on. Point it at the square code below until it is "
 "within the highlighted square on your screen, and wait until the app "
@@ -1001,30 +1008,30 @@ msgstr "Selamat kembali ke rumah, %(user_name)s."
 msgid "Your account"
 msgstr "Buat akun"
 
-#: snikket_web/templates/user_home.html:30
+#: snikket_web/templates/user_home.html:31
 #, fuzzy
 #| msgid "Update profile"
 msgid "Edit profile"
 msgstr "Perbaharui profil"
 
-#: snikket_web/templates/user_home.html:31
+#: snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:32
 msgid "Change password"
 msgstr "Ganti kata sandi"
 
-#: snikket_web/templates/user_home.html:36
+#: snikket_web/templates/user_home.html:38
 #, fuzzy
 #| msgid "About Snikket"
 msgid "Your Snikket"
 msgstr "Tentang Snikket"
 
-#: snikket_web/templates/user_home.html:38
+#: snikket_web/templates/user_home.html:40
 #, fuzzy
 #| msgid "Manage users and invitations of this Snikket service."
 msgid "Manage users, invitations and circles of your Snikket service."
 msgstr "Kelola pengguna dan undangan layanan Snikket."
 
-#: snikket_web/templates/user_home.html:40
+#: snikket_web/templates/user_home.html:42
 #, fuzzy
 #| msgid "Admin area"
 msgid "Admin panel"
@@ -1079,6 +1086,12 @@ msgid ""
 msgstr ""
 "Bagian ini memungkinkan Anda untuk mengontrol siapa yang bisa melihat profil "
 "Anda, seperti avatar dan nama panggilan."
+
+#~ msgid "This circle cannot be modified"
+#~ msgstr "Kelompok ini tidak bisa diubah"
+
+#~ msgid "No users left"
+#~ msgstr "Tidak ada pengguna tersisa"
 
 #~ msgid ""
 #~ "This invitation link can be used arbitrarily often, until it expires, is "
