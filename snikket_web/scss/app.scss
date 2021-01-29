@@ -1090,14 +1090,10 @@ pre.guru-meditation {
 		}
 	}
 
-	div.welcome-cards {
-		& > .card {
-			background: black;
-		}
-
-		& > a.card {
-			& > h2 {
-				color: $primary-800;
+	nav.welcome {
+		> ul {
+			> li {
+				background-color: black;
 			}
 		}
 	}
@@ -1144,11 +1140,11 @@ pre.guru-meditation {
 		}
 
 		&.secondary {
-			background: linear-gradient(0deg, $gray-400, $gray-500);
+			background: linear-gradient(0deg, $gray-200, $gray-300);
 			color: $gray-900;
 
 			&:hover, &:focus {
-				background: linear-gradient(0deg, $gray-500, $gray-600);
+				background: linear-gradient(0deg, $gray-300, $gray-400);
 				color: white;
 			}
 
