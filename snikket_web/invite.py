@@ -7,6 +7,7 @@ import aiohttp
 import quart.flask_patch
 from quart import (
     Blueprint,
+    current_app,
     render_template,
     redirect,
     url_for,
@@ -68,9 +69,7 @@ async def view(id_: str) -> str:
             ),
         )
     )
-    apple_store_url = (
-        "https://apps.apple.com/us/app/tigase-messenger/id1153516838"
-    )
+    apple_store_url = current_app.config["APPLE_STORE_URL"]
 
     return await render_template(
         "invite_view.html",

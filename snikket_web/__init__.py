@@ -143,6 +143,7 @@ class AppConfig:
     site_name = environ.var("")
     avatar_cache_ttl = environ.var(1800, converter=int)
     languages = environ.var(["de", "en"], converter=autosplit)
+    apple_store_url = environ.var("")
 
 
 _UPPER_CASE = "".join(map(chr, range(ord("A"), ord("Z")+1)))
@@ -172,6 +173,7 @@ def create_app() -> quart.Quart:
     app.config["SNIKKET_DOMAIN"] = config.domain
     app.config["SITE_NAME"] = config.site_name or config.domain
     app.config["AVATAR_CACHE_TTL"] = config.avatar_cache_ttl
+    app.config["APPLE_STORE_URL"] = config.apple_store_url
 
     app.context_processor(proc)
     app.register_error_handler(
