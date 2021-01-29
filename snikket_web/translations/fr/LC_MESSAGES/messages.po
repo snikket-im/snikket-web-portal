@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-29 09:32+0100\n"
+"POT-Creation-Date: 2021-01-29 15:58+0100\n"
 "PO-Revision-Date: 2021-01-28 17:55+0000\n"
 "Last-Translator: pep <pep@bouah.net>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/web-"
@@ -423,7 +423,7 @@ msgstr ""
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
 #: snikket_web/templates/user_passwd.html:30
-#: snikket_web/templates/user_profile.html:28
+#: snikket_web/templates/user_profile.html:31
 msgid "Back"
 msgstr "Retour"
 
@@ -505,8 +505,8 @@ msgstr "Valide jusqu’au"
 
 #: snikket_web/templates/admin_edit_invite.html:15
 #: snikket_web/templates/admin_reset_user_password.html:17
-msgid "Link"
-msgstr "Lien"
+msgid "<label for=\"link-field\">Link</label>"
+msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:22
 #: snikket_web/templates/admin_home.html:19
@@ -1010,6 +1010,12 @@ msgstr "Bienvenue à la maison, %(user_name)s."
 msgid "Your account"
 msgstr "Créer un compte"
 
+#: snikket_web/templates/user_home.html:20
+#, fuzzy
+#| msgid "Group chat address"
+msgid "Your XMPP address"
+msgstr "Adresse de la conversation de groupe"
+
 #: snikket_web/templates/user_home.html:31
 #, fuzzy
 #| msgid "Update profile"
@@ -1073,21 +1079,30 @@ msgstr ""
 "Après avoir changé votre mot de passe, vous devez entrer le nouveau mot de "
 "passe sur chaque appareil."
 
-#: snikket_web/templates/user_profile.html:8
+#: snikket_web/templates/user_profile.html:7
+#, fuzzy
+#| msgid "Update profile"
+msgid "Update your profile"
+msgstr "Mettre à jour le profil"
+
+#: snikket_web/templates/user_profile.html:9
 msgid "Profile"
 msgstr "Profil"
 
-#: snikket_web/templates/user_profile.html:21
+#: snikket_web/templates/user_profile.html:22
 msgid "Visibility"
 msgstr "Visibilité"
 
-#: snikket_web/templates/user_profile.html:22
+#: snikket_web/templates/user_profile.html:23
 msgid ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
 msgstr ""
 "Cette section permet de configurer qui peut voir votre profil, comme par "
 "exemple votre avatar et votre pseudonyme."
+
+#~ msgid "Link"
+#~ msgstr "Lien"
 
 #~ msgid "This circle cannot be modified"
 #~ msgstr "Ce cercle ne peut pas être modifié"

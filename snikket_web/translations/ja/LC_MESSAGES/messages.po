@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-29 09:32+0100\n"
+"POT-Creation-Date: 2021-01-29 15:58+0100\n"
 "PO-Revision-Date: 2021-01-28 17:55+0000\n"
 "Last-Translator: pep <pep@bouah.net>\n"
 "Language-Team: Japanese <https://i18n.sotecware.net/projects/snikket/web-"
@@ -405,7 +405,7 @@ msgstr ""
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:13
 #: snikket_web/templates/user_passwd.html:30
-#: snikket_web/templates/user_profile.html:28
+#: snikket_web/templates/user_profile.html:31
 msgid "Back"
 msgstr "戻る"
 
@@ -486,8 +486,8 @@ msgstr "有効期限"
 
 #: snikket_web/templates/admin_edit_invite.html:15
 #: snikket_web/templates/admin_reset_user_password.html:17
-msgid "Link"
-msgstr "リンク"
+msgid "<label for=\"link-field\">Link</label>"
+msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:22
 #: snikket_web/templates/admin_home.html:19
@@ -943,6 +943,12 @@ msgstr "ようこそ、 %(user_name)s。"
 msgid "Your account"
 msgstr "アカウント作成"
 
+#: snikket_web/templates/user_home.html:20
+#, fuzzy
+#| msgid "Group chat address"
+msgid "Your XMPP address"
+msgstr "談話室アドレス"
+
 #: snikket_web/templates/user_home.html:31
 #, fuzzy
 #| msgid "Update profile"
@@ -997,19 +1003,28 @@ msgid ""
 "of your devices."
 msgstr ""
 
-#: snikket_web/templates/user_profile.html:8
+#: snikket_web/templates/user_profile.html:7
+#, fuzzy
+#| msgid "Update profile"
+msgid "Update your profile"
+msgstr "プロファイル管理"
+
+#: snikket_web/templates/user_profile.html:9
 msgid "Profile"
 msgstr "プロファイル"
 
-#: snikket_web/templates/user_profile.html:21
+#: snikket_web/templates/user_profile.html:22
 msgid "Visibility"
 msgstr ""
 
-#: snikket_web/templates/user_profile.html:22
+#: snikket_web/templates/user_profile.html:23
 msgid ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
 msgstr ""
+
+#~ msgid "Link"
+#~ msgstr "リンク"
 
 #~ msgid "This circle cannot be modified"
 #~ msgstr "このサークルの更新ができません"
