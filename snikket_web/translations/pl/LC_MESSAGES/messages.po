@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-29 15:58+0100\n"
-"PO-Revision-Date: 2021-01-28 17:55+0000\n"
+"PO-Revision-Date: 2021-01-30 09:49+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
-"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/pl/>\n"
+"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -431,7 +431,7 @@ msgstr "Wstecz"
 
 #: snikket_web/templates/admin_edit_circle.html:14
 msgid "This is your main circle"
-msgstr ""
+msgstr "To twój główny krąg"
 
 #: snikket_web/templates/admin_edit_circle.html:15
 msgid "This circle is managed automatically and cannot be removed or renamed."
@@ -490,7 +490,7 @@ msgstr "Dodaj istniejącego użytkownika"
 
 #: snikket_web/templates/admin_edit_circle.html:94
 msgid "All users added"
-msgstr ""
+msgstr "Wszyscy użytkownicy dodani"
 
 #: snikket_web/templates/admin_edit_circle.html:95
 msgid "All users on this service are already in this circle."
@@ -509,7 +509,7 @@ msgstr "Ważne do"
 #: snikket_web/templates/admin_edit_invite.html:15
 #: snikket_web/templates/admin_reset_user_password.html:17
 msgid "<label for=\"link-field\">Link</label>"
-msgstr ""
+msgstr "<label for=\"link-field\">Link</label>"
 
 #: snikket_web/templates/admin_edit_invite.html:22
 #: snikket_web/templates/admin_home.html:19
@@ -536,12 +536,12 @@ msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:40
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 #: snikket_web/templates/admin_edit_invite.html:41
 #, python-format
 msgid "The user will get added as contact of %(peer_jid)s."
-msgstr ""
+msgstr "Użytkownik zostanie dodany jako kontakt %(peer_jid)s."
 
 #: snikket_web/templates/admin_edit_invite.html:43
 msgid "Created"
@@ -573,8 +573,6 @@ msgstr ""
 "pomocą bezpiecznej formy kontaktu."
 
 #: snikket_web/templates/admin_home.html:4
-#, fuzzy
-#| msgid "Welcome to the administration dashboard!"
 msgid "Welcome to the admin panel!"
 msgstr "Witaj w panelu administracyjnym!"
 
@@ -584,16 +582,12 @@ msgid "At your service, %(user_name)s."
 msgstr "Do usług, %(user_name)s."
 
 #: snikket_web/templates/admin_home.html:9
-#, fuzzy
-#| msgid "Username"
 msgid "Users"
-msgstr "Nazwa użytkownika"
+msgstr "Użytkownicy"
 
 #: snikket_web/templates/admin_home.html:11
-#, fuzzy
-#| msgid "Create password reset link for %(user_name)s"
 msgid "Create password reset links or delete users."
-msgstr "Utwórz link resetowania hasła dla %(user_name)s"
+msgstr "Twórz linki do resetowania haseł lub usuwaj użytkowników."
 
 #: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_users.html:4
@@ -605,16 +599,12 @@ msgid "Create and manage social circles represented on your service."
 msgstr "Twórz i zarządzaj kręgami społecznościowymi na twoim serwerze."
 
 #: snikket_web/templates/admin_home.html:27
-#, fuzzy
-#| msgid "Invitation type"
 msgid "Invitations"
-msgstr "Typ zaproszenia"
+msgstr "Zaproszenia"
 
 #: snikket_web/templates/admin_home.html:29
-#, fuzzy
-#| msgid "Create, revoke or view invitations."
 msgid "Create, revoke or copy invitations."
-msgstr "Utwórz, unieważnij lub przeglądaj zaproszenia."
+msgstr "Utwórz, unieważnij lub kopiuj zaproszenia."
 
 #: snikket_web/templates/admin_home.html:31
 #: snikket_web/templates/admin_invites.html:8
@@ -627,7 +617,7 @@ msgstr "Wróć do swojej strony użytkownika."
 
 #: snikket_web/templates/admin_home.html:38
 msgid "Exit admin panel"
-msgstr ""
+msgstr "Wyjdź z panelu administracyjnego"
 
 #: snikket_web/templates/admin_invites.html:10
 msgid "Pending invitations"
@@ -875,6 +865,9 @@ msgid ""
 "Install the Snikket App on your Android device (<a href=\"%(ios_info_url)s\" "
 "target=\"_blank\" rel=\"noopener noreferrer\">iOS coming soon!</a>)."
 msgstr ""
+"Zainstaluj aplikację Snikket na swoim urządzeniu z Androidem (<a href=\""
+"%(ios_info_url)s\" rel=\"noopener noreferrer\" target=\"_blank\">iOS już "
+"niedługo!</a>)."
 
 #: snikket_web/templates/invite_view.html:27
 msgid "Get it on Google Play"
@@ -976,16 +969,15 @@ msgid "deleted"
 msgstr "usunięty"
 
 #: snikket_web/templates/library.j2:121
-#, fuzzy
-#| msgid "Manage users and invitations of this Snikket service."
 msgid "Can be used multiple times to create accounts on this Snikket service."
-msgstr "Zarządzaj użytkownikami oraz zaproszeniami na tym serwerze Snikket."
+msgstr ""
+"Może być wykorzystywany wielokrotnie, by utworzyć konto na tym serwerze "
+"Snikket."
 
 #: snikket_web/templates/library.j2:123
-#, fuzzy
-#| msgid "Manage users and invitations of this Snikket service."
 msgid "Can be used once to create an account on this Snikket service."
-msgstr "Zarządzaj użytkownikami oraz zaproszeniami na tym serwerze Snikket."
+msgstr ""
+"Może być wykorzystany jeden raz, by utworzyć konto na tym serwerze Snikket."
 
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
@@ -1009,22 +1001,16 @@ msgid "Welcome home, %(user_name)s."
 msgstr "Witaj w domu, %(user_name)s."
 
 #: snikket_web/templates/user_home.html:14
-#, fuzzy
-#| msgid "Create account"
 msgid "Your account"
-msgstr "Utwórz konto"
+msgstr "Twoje konto"
 
 #: snikket_web/templates/user_home.html:20
-#, fuzzy
-#| msgid "Group chat address"
 msgid "Your XMPP address"
-msgstr "Adres czatu grupowego"
+msgstr "Twój adres XMPP"
 
 #: snikket_web/templates/user_home.html:31
-#, fuzzy
-#| msgid "Update profile"
 msgid "Edit profile"
-msgstr "Zaktualizuj profil"
+msgstr "Edytuj profil"
 
 #: snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:32
@@ -1032,20 +1018,15 @@ msgid "Change password"
 msgstr "Zmień hasło"
 
 #: snikket_web/templates/user_home.html:38
-#, fuzzy
-#| msgid "About Snikket"
 msgid "Your Snikket"
-msgstr "O Snikket"
+msgstr "Twój Snikket"
 
 #: snikket_web/templates/user_home.html:40
-#, fuzzy
-#| msgid "Manage users and invitations of this Snikket service."
 msgid "Manage users, invitations and circles of your Snikket service."
-msgstr "Zarządzaj użytkownikami oraz zaproszeniami na tym serwerze Snikket."
+msgstr ""
+"Zarządzaj użytkownikami, zaproszeniami oraz kręgami na tym serwerze Snikket."
 
 #: snikket_web/templates/user_home.html:42
-#, fuzzy
-#| msgid "Admin area"
 msgid "Admin panel"
 msgstr "Panel administracyjny"
 
@@ -1082,10 +1063,8 @@ msgstr ""
 "Po zmianie hasła na nowe, musisz je wprowadzić na każdym swoim urządzeniu."
 
 #: snikket_web/templates/user_profile.html:7
-#, fuzzy
-#| msgid "Update profile"
 msgid "Update your profile"
-msgstr "Zaktualizuj profil"
+msgstr "Zaktualizuj swój profil"
 
 #: snikket_web/templates/user_profile.html:9
 msgid "Profile"
