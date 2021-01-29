@@ -10,7 +10,7 @@
 {% block content %}
 <div class="elevated box el-3">
 	<h1>{% trans site_name=config["SITE_NAME"] %}Invite to {{ site_name }}{% endtrans %}</h1>
-	<div class="powered-by">{% trans logo_url=url_for("static", filename="img/snikket-logo.svg") %}Powered by <img src="{{ logo_url }}" alt="Snikket">{% endtrans %}</div>
+	<div class="powered-by">{% trans logo_url=url_for("static", filename="img/snikket-logo-text.svg") %}Powered by <img src="{{ logo_url }}" alt="Snikket">{% endtrans %}</div>
 	{%- if invite.inviter -%}
 	<p>{% trans site_name=config["SITE_NAME"], inviter_name=invite.inviter %}You have been invited to chat with {{ inviter_name }} using Snikket, a secure, privacy-friendly chat app on {{ site_name }}.{% endtrans %}</p>
 	{%- else -%}

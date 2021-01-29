@@ -7,7 +7,7 @@
 {% block content %}
 <div class="elevated box el-3">
 	<h1>{% trans site_name=config["SITE_NAME"] %}Register on {{ site_name }}{% endtrans %}</h1>
-	<div class="powered-by">{% trans logo_url=url_for("static", filename="img/snikket-logo.svg") %}Powered by <img src="{{ logo_url }}" alt="Snikket">{% endtrans %}</div>
+	<div class="powered-by">{% trans logo_url=url_for("static", filename="img/snikket-logo-text.svg") %}Powered by <img src="{{ logo_url }}" alt="Snikket">{% endtrans %}</div>
 	<p>{% trans site_name=config["SITE_NAME"] %}{{ site_name }} is using Snikket - a secure, privacy-friendly chat app.{% endtrans %}</p>
 	<h2>{% trans %}Create an account{% endtrans %}</h2>
 	<p>{% trans %}Creating an account will allow to communicate with other people using the Snikket app or compatible software. If you already have the app installed, we recommend that you continue the account creation process inside the app by clicking on the button below:{% endtrans %}</p>

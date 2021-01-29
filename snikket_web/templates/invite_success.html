@@ -8,7 +8,7 @@
 {% block content %}
 <div class="elevated box el-3 form layout-expanded">
 	<h1>{% trans site_name=config["SITE_NAME"] %}Successfully registered on {{ site_name }}{% endtrans %}</h1>
-	<div class="powered-by">{% trans logo_url=url_for("static", filename="img/snikket-logo.svg") %}Powered by <img src="{{ logo_url }}" alt="Snikket">{% endtrans %}</div>
+	<div class="powered-by">{% trans logo_url=url_for("static", filename="img/snikket-logo-text.svg") %}Powered by <img src="{{ logo_url }}" alt="Snikket">{% endtrans %}</div>
 	<p>{% trans site_name=config["SITE_NAME"], jid=jid %}Congratulations! You successfully registered on {{ site_name }} as {{ jid }}.{% endtrans %}</p>
 	<input type="text" readonly="readonly" value="{{ jid }}">
 	{%- call clipboard_button(jid, show_label=True) -%}
