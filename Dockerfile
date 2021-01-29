@@ -48,5 +48,7 @@ RUN set -eu; \
 COPY docker/env.py /etc/snikket-web-portal/env.py
 ENV SNIKKET_WEB_PYENV=/etc/snikket-web-portal/env.py
 
+ENV SNIKKET_WEB_PROSODY_ENDPOINT=http://127.0.0.1:5280/
+
 ADD docker/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
