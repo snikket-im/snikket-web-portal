@@ -9,6 +9,7 @@
 <form method="POST">
 {{- form.csrf_token -}}
 {%- if target_circle.id_ == "default" -%}
+<input type="hidden" name="{{ form.name.name }}" value="{{ form.name.data }}">{#- -#}
 <div class="box hint form layout-expanded">
 	<header>{% trans %}This circle cannot be modified{% endtrans %}</header>
 	<p>{% trans %}This circle is managed automatically and cannot be removed or renamed.{% endtrans %}</p>
