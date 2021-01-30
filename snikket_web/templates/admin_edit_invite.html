@@ -12,7 +12,7 @@
 	<dl>
 		<dt>{% trans %}Valid until{% endtrans %}</dt>
 		<dd>{{ invite.expires | format_date }}</dd>
-		<dt>{% trans %}<label for="link-field">Link</label>{% endtrans %}</dt>
+		<dt><label for="link-field">{% trans %}Link{% endtrans %}</label></dt>
 		<dd>{% call showuri(invite.landing_page, id_="link-field") %}{% endcall %}</dd>
 		<dt>{% trans %}Invitation type{% endtrans %}</dt>
 		<dd>{% call invite_type_description(invite) %}{% endcall %}</dd>
