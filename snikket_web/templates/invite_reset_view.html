@@ -7,6 +7,7 @@
 {% block head_lead %}
 {{ super() }}
 <title>{% trans %}Reset your password | Snikket{% endtrans %}</title>
+<script async type="text/javascript" src="{{ url_for("static", filename="js/invite-magic.js") }}"></script>
 <script async type="text/javascript" src="{{ url_for("static", filename="js/qrcode.min.js") }}"></script>
 {% endblock %}
 {% block content %}

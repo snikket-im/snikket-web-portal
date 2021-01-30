@@ -14,7 +14,7 @@
 	{{- form.csrf_token -}}
 	<h1 class="form-title">{% trans %}Reset your password online{% endtrans %}</h1>
 	<p class="form-desc weak">{% trans %}To reset your password online, fill out the fields below and confirm using the button.{% endtrans %}</p>
-	{%- call render_errors(form.errors) %}{% endcall -%}
+	{%- call render_errors(form) %}{% endcall -%}
 	<div class="f-ebox">
 		{{ form.password.label }}
 		{{ form.password }}
