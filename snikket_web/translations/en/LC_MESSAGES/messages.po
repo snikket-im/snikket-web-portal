@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-30 11:34+0100\n"
+"POT-Creation-Date: 2021-01-30 12:45+0100\n"
 "PO-Revision-Date: 2021-01-23 17:06+0000\n"
 "Last-Translator: Matthew Wild <matthew@snikket.org>\n"
 "Language-Team: English <https://i18n.sotecware.net/projects/snikket/web-"
@@ -62,11 +62,11 @@ msgstr "Four weeks"
 msgid "Invitation type"
 msgstr "View invitation"
 
-#: snikket_web/admin.py:154 snikket_web/templates/library.j2:115
+#: snikket_web/admin.py:154 snikket_web/templates/library.j2:116
 msgid "Individual"
 msgstr ""
 
-#: snikket_web/admin.py:155 snikket_web/templates/library.j2:113
+#: snikket_web/admin.py:155 snikket_web/templates/library.j2:114
 msgid "Group"
 msgstr ""
 
@@ -78,29 +78,29 @@ msgstr "New invitation link"
 msgid "Revoke"
 msgstr "Revoke"
 
-#: snikket_web/admin.py:279 snikket_web/admin.py:323
+#: snikket_web/admin.py:283 snikket_web/admin.py:327
 msgid "Name"
 msgstr "Name"
 
-#: snikket_web/admin.py:284 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:288 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Create circle"
 
-#: snikket_web/admin.py:328
+#: snikket_web/admin.py:332
 msgid "Select user"
 msgstr "Select user"
 
-#: snikket_web/admin.py:333
+#: snikket_web/admin.py:337
 #, fuzzy
 #| msgid "Create circle"
 msgid "Update circle"
 msgstr "Create circle"
 
-#: snikket_web/admin.py:337
+#: snikket_web/admin.py:341
 msgid "Delete circle permanently"
 msgstr "Delete circle permanently"
 
-#: snikket_web/admin.py:343
+#: snikket_web/admin.py:347
 msgid "Add user"
 msgstr "Add user"
 
@@ -606,7 +606,9 @@ msgid "Manage invitations"
 msgstr "Manage invitations"
 
 #: snikket_web/templates/admin_home.html:36
-msgid "Go back to your user’s web portal page."
+#, fuzzy
+#| msgid "Go back to your user’s web portal page."
+msgid "Go back to your user's web portal page."
 msgstr "Go back to your user’s web portal page."
 
 #: snikket_web/templates/admin_home.html:38
@@ -1012,21 +1014,21 @@ msgstr ""
 msgid "Copy link"
 msgstr "Copy link"
 
-#: snikket_web/templates/library.j2:80
+#: snikket_web/templates/library.j2:81
 msgid "Invalid input"
 msgstr "Invalid input"
 
-#: snikket_web/templates/library.j2:107
+#: snikket_web/templates/library.j2:108
 msgid "deleted"
 msgstr "deleted"
 
-#: snikket_web/templates/library.j2:121
+#: snikket_web/templates/library.j2:122
 #, fuzzy
 #| msgid "Manage users and invitations of this Snikket service."
 msgid "Can be used multiple times to create accounts on this Snikket service."
 msgstr "Manage users and invitations of this Snikket service."
 
-#: snikket_web/templates/library.j2:123
+#: snikket_web/templates/library.j2:124
 #, fuzzy
 #| msgid "Manage users and invitations of this Snikket service."
 msgid "Can be used once to create an account on this Snikket service."

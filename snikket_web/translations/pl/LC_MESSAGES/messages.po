@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-30 11:34+0100\n"
+"POT-Creation-Date: 2021-01-30 12:45+0100\n"
 "PO-Revision-Date: 2021-01-30 09:49+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
 "Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/web-"
@@ -61,11 +61,11 @@ msgstr "Cztery tygodnie"
 msgid "Invitation type"
 msgstr "Typ zaproszenia"
 
-#: snikket_web/admin.py:154 snikket_web/templates/library.j2:115
+#: snikket_web/admin.py:154 snikket_web/templates/library.j2:116
 msgid "Individual"
 msgstr "Indywidualne"
 
-#: snikket_web/admin.py:155 snikket_web/templates/library.j2:113
+#: snikket_web/admin.py:155 snikket_web/templates/library.j2:114
 msgid "Group"
 msgstr "Grupowe"
 
@@ -77,27 +77,27 @@ msgstr "Nowy link z zaproszeniem"
 msgid "Revoke"
 msgstr "Unieważnij"
 
-#: snikket_web/admin.py:279 snikket_web/admin.py:323
+#: snikket_web/admin.py:283 snikket_web/admin.py:327
 msgid "Name"
 msgstr "Nazwa"
 
-#: snikket_web/admin.py:284 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:288 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Utwórz krąg"
 
-#: snikket_web/admin.py:328
+#: snikket_web/admin.py:332
 msgid "Select user"
 msgstr "Wybierz użytkownika"
 
-#: snikket_web/admin.py:333
+#: snikket_web/admin.py:337
 msgid "Update circle"
 msgstr "Zaktualizuj ustawienia kręgu"
 
-#: snikket_web/admin.py:337
+#: snikket_web/admin.py:341
 msgid "Delete circle permanently"
 msgstr "Usuń krąg bezpowrotnie"
 
-#: snikket_web/admin.py:343
+#: snikket_web/admin.py:347
 msgid "Add user"
 msgstr "Dodaj użytkownika"
 
@@ -591,7 +591,9 @@ msgid "Manage invitations"
 msgstr "Zarządzaj zaproszeniami"
 
 #: snikket_web/templates/admin_home.html:36
-msgid "Go back to your user’s web portal page."
+#, fuzzy
+#| msgid "Go back to your user’s web portal page."
+msgid "Go back to your user's web portal page."
 msgstr "Wróć do swojej strony użytkownika."
 
 #: snikket_web/templates/admin_home.html:38
@@ -1033,21 +1035,21 @@ msgstr ""
 msgid "Copy link"
 msgstr "Skopiuj link"
 
-#: snikket_web/templates/library.j2:80
+#: snikket_web/templates/library.j2:81
 msgid "Invalid input"
 msgstr "Dane nieprawidłowe"
 
-#: snikket_web/templates/library.j2:107
+#: snikket_web/templates/library.j2:108
 msgid "deleted"
 msgstr "usunięty"
 
-#: snikket_web/templates/library.j2:121
+#: snikket_web/templates/library.j2:122
 msgid "Can be used multiple times to create accounts on this Snikket service."
 msgstr ""
 "Może być wykorzystywany wielokrotnie, by utworzyć konto na tym serwerze "
 "Snikket."
 
-#: snikket_web/templates/library.j2:123
+#: snikket_web/templates/library.j2:124
 msgid "Can be used once to create an account on this Snikket service."
 msgstr ""
 "Może być wykorzystany jeden raz, by utworzyć konto na tym serwerze Snikket."
