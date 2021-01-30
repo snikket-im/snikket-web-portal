@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-30 11:15+0100\n"
+"POT-Creation-Date: 2021-01-30 11:34+0100\n"
 "PO-Revision-Date: 2021-01-30 09:49+0000\n"
 "Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/web-"
@@ -395,7 +395,6 @@ msgid "Delete user %(user_name)s"
 msgstr "Supprimer l’utilisateur %(user_name)s"
 
 #: snikket_web/templates/admin_delete_user.html:6
-#: snikket_web/templates/admin_edit_user.html:28
 msgid "Delete user"
 msgstr "Supprimer un utilisateur"
 
@@ -547,31 +546,6 @@ msgstr "L’utilisateur sera ajouté en tant que contact de %(peer_jid)s."
 msgid "Created"
 msgstr "Créé le"
 
-#: snikket_web/templates/admin_edit_user.html:3
-#, python-format
-msgid "Edit user %(user_name)s"
-msgstr "Modifier l’utilisateur %(user_name)s"
-
-#: snikket_web/templates/admin_edit_user.html:5
-msgid "User information"
-msgstr "Informations de l’utilisateur"
-
-#: snikket_web/templates/admin_edit_user.html:25
-#: snikket_web/templates/admin_reset_user_password.html:8
-msgid "Password reset"
-msgstr "Réinitialisation de mot de passe"
-
-#: snikket_web/templates/admin_edit_user.html:26
-msgid ""
-"If the user has forgotten their password, use the below button to create a "
-"password reset link. The password reset link can be used once to change the "
-"password of the account. Transmit the link to the user via a secure channel."
-msgstr ""
-"Si l’utilisateur a oublié son mot de passe, utilisez le bouton ci-dessous "
-"pour créer un lien de réinitialisation du mot de passe. Ce lien peut-être "
-"utilisé une fois pour changer le mot de passe du compte. Assurez-vous de "
-"communiquer le lien de façon sécurisée."
-
 #: snikket_web/templates/admin_home.html:4
 #, fuzzy
 #| msgid "Welcome to the administration dashboard!"
@@ -652,6 +626,10 @@ msgstr "Supprime l’invitation"
 #: snikket_web/templates/admin_invites.html:57
 msgid "Currently, there are no pending invitations."
 msgstr "Il n'y a pas d'invitation disponible actuellement."
+
+#: snikket_web/templates/admin_reset_user_password.html:8
+msgid "Password reset"
+msgstr "Réinitialisation de mot de passe"
 
 #: snikket_web/templates/admin_reset_user_password.html:12
 #, python-format
@@ -1187,6 +1165,23 @@ msgid ""
 msgstr ""
 "Cette section permet de configurer qui peut voir votre profil, comme par "
 "exemple votre avatar et votre pseudonyme."
+
+#~ msgid "Edit user %(user_name)s"
+#~ msgstr "Modifier l’utilisateur %(user_name)s"
+
+#~ msgid "User information"
+#~ msgstr "Informations de l’utilisateur"
+
+#~ msgid ""
+#~ "If the user has forgotten their password, use the below button to create "
+#~ "a password reset link. The password reset link can be used once to change "
+#~ "the password of the account. Transmit the link to the user via a secure "
+#~ "channel."
+#~ msgstr ""
+#~ "Si l’utilisateur a oublié son mot de passe, utilisez le bouton ci-dessous "
+#~ "pour créer un lien de réinitialisation du mot de passe. Ce lien peut-être "
+#~ "utilisé une fois pour changer le mot de passe du compte. Assurez-vous de "
+#~ "communiquer le lien de façon sécurisée."
 
 #~ msgid "<label for=\"link-field\">Link</label>"
 #~ msgstr "<label for=\"link-field\">Lien</label>"

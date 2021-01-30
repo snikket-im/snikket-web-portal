@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-30 11:15+0100\n"
+"POT-Creation-Date: 2021-01-30 11:34+0100\n"
 "PO-Revision-Date: 2021-01-30 09:49+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
 "Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/web-"
@@ -397,7 +397,6 @@ msgid "Delete user %(user_name)s"
 msgstr "Usuń użytkownika %(user_name)s"
 
 #: snikket_web/templates/admin_delete_user.html:6
-#: snikket_web/templates/admin_edit_user.html:28
 msgid "Delete user"
 msgstr "Usuń użytkownika"
 
@@ -552,31 +551,6 @@ msgstr "Użytkownik zostanie dodany jako kontakt %(peer_jid)s."
 msgid "Created"
 msgstr "Utworzono"
 
-#: snikket_web/templates/admin_edit_user.html:3
-#, python-format
-msgid "Edit user %(user_name)s"
-msgstr "Edytuj użytkownika %(user_name)s"
-
-#: snikket_web/templates/admin_edit_user.html:5
-msgid "User information"
-msgstr "Informacje o użytkowniku"
-
-#: snikket_web/templates/admin_edit_user.html:25
-#: snikket_web/templates/admin_reset_user_password.html:8
-msgid "Password reset"
-msgstr "Resetowanie hasła"
-
-#: snikket_web/templates/admin_edit_user.html:26
-msgid ""
-"If the user has forgotten their password, use the below button to create a "
-"password reset link. The password reset link can be used once to change the "
-"password of the account. Transmit the link to the user via a secure channel."
-msgstr ""
-"Jeśli użytkownik zapomni swojego hasła, za pomocą poniższego przycisku "
-"wygenerujesz dla niego link do zresetowania hasła. Link może być "
-"wykorzystany jednorazowo do jego zmiany. Prześlij go do użytkownika za "
-"pomocą bezpiecznej formy kontaktu."
-
 #: snikket_web/templates/admin_home.html:4
 msgid "Welcome to the admin panel!"
 msgstr "Witaj w panelu administracyjnym!"
@@ -647,6 +621,10 @@ msgstr "Usuń zaproszenie"
 #: snikket_web/templates/admin_invites.html:57
 msgid "Currently, there are no pending invitations."
 msgstr "Brak oczekujących zaproszeń."
+
+#: snikket_web/templates/admin_reset_user_password.html:8
+msgid "Password reset"
+msgstr "Resetowanie hasła"
 
 #: snikket_web/templates/admin_reset_user_password.html:12
 #, python-format
@@ -1171,6 +1149,23 @@ msgid ""
 msgstr ""
 "Ta sekcja pozwoli ci na zarządzenie widocznością informacji o twoim profilu "
 "przez innych, jak awatar lub pseudonim."
+
+#~ msgid "Edit user %(user_name)s"
+#~ msgstr "Edytuj użytkownika %(user_name)s"
+
+#~ msgid "User information"
+#~ msgstr "Informacje o użytkowniku"
+
+#~ msgid ""
+#~ "If the user has forgotten their password, use the below button to create "
+#~ "a password reset link. The password reset link can be used once to change "
+#~ "the password of the account. Transmit the link to the user via a secure "
+#~ "channel."
+#~ msgstr ""
+#~ "Jeśli użytkownik zapomni swojego hasła, za pomocą poniższego przycisku "
+#~ "wygenerujesz dla niego link do zresetowania hasła. Link może być "
+#~ "wykorzystany jednorazowo do jego zmiany. Prześlij go do użytkownika za "
+#~ "pomocą bezpiecznej formy kontaktu."
 
 #~ msgid "<label for=\"link-field\">Link</label>"
 #~ msgstr "<label for=\"link-field\">Link</label>"
