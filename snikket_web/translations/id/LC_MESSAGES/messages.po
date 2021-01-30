@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-29 15:58+0100\n"
-"PO-Revision-Date: 2021-01-28 17:55+0000\n"
+"PO-Revision-Date: 2021-01-30 09:07+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
-"Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/id/>\n"
+"Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -430,7 +430,7 @@ msgstr "Kembali"
 
 #: snikket_web/templates/admin_edit_circle.html:14
 msgid "This is your main circle"
-msgstr ""
+msgstr "Ini kelompok utama anda"
 
 #: snikket_web/templates/admin_edit_circle.html:15
 msgid "This circle is managed automatically and cannot be removed or renamed."
@@ -490,7 +490,7 @@ msgstr "Tambahkan pengguna yang ada"
 
 #: snikket_web/templates/admin_edit_circle.html:94
 msgid "All users added"
-msgstr ""
+msgstr "Semua pengguna ditambahkan"
 
 #: snikket_web/templates/admin_edit_circle.html:95
 msgid "All users on this service are already in this circle."
@@ -509,7 +509,7 @@ msgstr "Valid hingga"
 #: snikket_web/templates/admin_edit_invite.html:15
 #: snikket_web/templates/admin_reset_user_password.html:17
 msgid "<label for=\"link-field\">Link</label>"
-msgstr ""
+msgstr "<label for=\"link-field\">Tautan</label>"
 
 #: snikket_web/templates/admin_edit_invite.html:22
 #: snikket_web/templates/admin_home.html:19
@@ -536,12 +536,12 @@ msgstr ""
 
 #: snikket_web/templates/admin_edit_invite.html:40
 msgid "Contact"
-msgstr ""
+msgstr "Kontak"
 
 #: snikket_web/templates/admin_edit_invite.html:41
 #, python-format
 msgid "The user will get added as contact of %(peer_jid)s."
-msgstr ""
+msgstr "Pengguna akan ditambahkan ke kontak %(peer_jid)s."
 
 #: snikket_web/templates/admin_edit_invite.html:43
 msgid "Created"
@@ -573,10 +573,8 @@ msgstr ""
 "saluran aman."
 
 #: snikket_web/templates/admin_home.html:4
-#, fuzzy
-#| msgid "Welcome to the administration dashboard!"
 msgid "Welcome to the admin panel!"
-msgstr "Selamat datang di dasbor administrasi!"
+msgstr "Selamat datang di panel administrator!"
 
 #: snikket_web/templates/admin_home.html:5
 #, python-format
@@ -584,16 +582,12 @@ msgid "At your service, %(user_name)s."
 msgstr "Siap melayani Anda, %(user_name)s."
 
 #: snikket_web/templates/admin_home.html:9
-#, fuzzy
-#| msgid "Username"
 msgid "Users"
-msgstr "Nama pengguna"
+msgstr "Pengguna"
 
 #: snikket_web/templates/admin_home.html:11
-#, fuzzy
-#| msgid "Create password reset link for %(user_name)s"
 msgid "Create password reset links or delete users."
-msgstr "Buat tautan setel ulang kata sandi untuk %(user_name)s"
+msgstr "Buat tautan setel ulang kata sandi atau hapus pengguna."
 
 #: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_users.html:4
@@ -605,16 +599,12 @@ msgid "Create and manage social circles represented on your service."
 msgstr "Buat dan kelola kelompok yang ada di layanan Anda."
 
 #: snikket_web/templates/admin_home.html:27
-#, fuzzy
-#| msgid "Invitation type"
 msgid "Invitations"
-msgstr "Jenis undangan"
+msgstr "Undangan"
 
 #: snikket_web/templates/admin_home.html:29
-#, fuzzy
-#| msgid "Create, revoke or view invitations."
 msgid "Create, revoke or copy invitations."
-msgstr "Buat, batalkan, atau lihat undangan."
+msgstr "Buat, batalkan, atau kopi undangan."
 
 #: snikket_web/templates/admin_home.html:31
 #: snikket_web/templates/admin_invites.html:8
@@ -627,7 +617,7 @@ msgstr "Kembali ke halaman portal web pengguna Anda."
 
 #: snikket_web/templates/admin_home.html:38
 msgid "Exit admin panel"
-msgstr ""
+msgstr "Keluar panel administrator"
 
 #: snikket_web/templates/admin_invites.html:10
 msgid "Pending invitations"
@@ -870,6 +860,8 @@ msgid ""
 "Install the Snikket App on your Android device (<a href=\"%(ios_info_url)s\" "
 "target=\"_blank\" rel=\"noopener noreferrer\">iOS coming soon!</a>)."
 msgstr ""
+"Instal aplikasi Snikket di perangkat Android anda (<a href=\"%(ios_info_url)"
+"s\" rel=\"noopener noreferrer\" target=\"_blank\">iOS segera tersedia!</a>)."
 
 #: snikket_web/templates/invite_view.html:27
 msgid "Get it on Google Play"
@@ -970,16 +962,13 @@ msgid "deleted"
 msgstr "Dihapus"
 
 #: snikket_web/templates/library.j2:121
-#, fuzzy
-#| msgid "Manage users and invitations of this Snikket service."
 msgid "Can be used multiple times to create accounts on this Snikket service."
-msgstr "Kelola pengguna dan undangan layanan Snikket."
+msgstr ""
+"Dapat digunakan beberapa kali untuk membuat akun di layanan Snikket ini."
 
 #: snikket_web/templates/library.j2:123
-#, fuzzy
-#| msgid "Manage users and invitations of this Snikket service."
 msgid "Can be used once to create an account on this Snikket service."
-msgstr "Kelola pengguna dan undangan layanan Snikket."
+msgstr "Dapat digunakan satu kali untuk membuat akun di layanan Snikket ini."
 
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
@@ -1003,22 +992,16 @@ msgid "Welcome home, %(user_name)s."
 msgstr "Selamat kembali ke rumah, %(user_name)s."
 
 #: snikket_web/templates/user_home.html:14
-#, fuzzy
-#| msgid "Create account"
 msgid "Your account"
-msgstr "Buat akun"
+msgstr "Akun anda"
 
 #: snikket_web/templates/user_home.html:20
-#, fuzzy
-#| msgid "Group chat address"
 msgid "Your XMPP address"
-msgstr "Alamat percakapan grup"
+msgstr "Alamat XMPP anda"
 
 #: snikket_web/templates/user_home.html:31
-#, fuzzy
-#| msgid "Update profile"
 msgid "Edit profile"
-msgstr "Perbaharui profil"
+msgstr "Edit profil"
 
 #: snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:32
@@ -1026,22 +1009,16 @@ msgid "Change password"
 msgstr "Ganti kata sandi"
 
 #: snikket_web/templates/user_home.html:38
-#, fuzzy
-#| msgid "About Snikket"
 msgid "Your Snikket"
-msgstr "Tentang Snikket"
+msgstr "Snikket anda"
 
 #: snikket_web/templates/user_home.html:40
-#, fuzzy
-#| msgid "Manage users and invitations of this Snikket service."
 msgid "Manage users, invitations and circles of your Snikket service."
-msgstr "Kelola pengguna dan undangan layanan Snikket."
+msgstr "Kelola pengguna, undangan dan kelompok pengguna layanan Snikket."
 
 #: snikket_web/templates/user_home.html:42
-#, fuzzy
-#| msgid "Admin area"
 msgid "Admin panel"
-msgstr "Wewenang Administrator"
+msgstr "Panel Administrator"
 
 #: snikket_web/templates/user_logout.html:8
 msgid "Sign out of the Snikket Web Portal"
@@ -1078,10 +1055,8 @@ msgstr ""
 "semua perangkat anda."
 
 #: snikket_web/templates/user_profile.html:7
-#, fuzzy
-#| msgid "Update profile"
 msgid "Update your profile"
-msgstr "Perbaharui profil"
+msgstr "Perbaharui profil anda"
 
 #: snikket_web/templates/user_profile.html:9
 msgid "Profile"
