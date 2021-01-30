@@ -707,12 +707,12 @@ msgstr "Désolé, il semblerait que ce lien d’invitation ait expiré !"
 #: snikket_web/templates/invite_register.html:5
 #, python-format
 msgid "Register on %(site_name)s | Snikket"
-msgstr "S'inscrire sur %(site_name)s | Snikket"
+msgstr "S’inscrire sur %(site_name)s | Snikket"
 
 #: snikket_web/templates/invite_register.html:9
 #, python-format
 msgid "Register on %(site_name)s"
-msgstr "S'inscrire sur %(site_name)s"
+msgstr "S’inscrire sur %(site_name)s"
 
 #: snikket_web/templates/invite_register.html:11
 #, python-format
@@ -832,7 +832,7 @@ msgstr ""
 
 #: snikket_web/templates/invite_reset_view.html:17
 msgid "Using the app"
-msgstr "En utilisant l'application"
+msgstr "En utilisant l’application"
 
 #: snikket_web/templates/invite_reset_view.html:18
 msgid "To reset your password using the Snikket App, tap the button below."
@@ -1009,7 +1009,7 @@ msgstr "En utilisant un scanner de codes QR"
 
 #: snikket_web/templates/invite_view.html:63
 msgid "Using the Snikket app"
-msgstr "En utilisant l'application Snikket"
+msgstr "En utilisant l’application Snikket"
 
 #: snikket_web/templates/invite_view.html:68
 msgid ""
