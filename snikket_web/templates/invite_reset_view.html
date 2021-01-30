@@ -1,0 +1,36 @@
+{% extends "unauth.html" %}
+{% from "library.j2" import standard_button %}
+{% block style %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/invite.css") }}">
+{% endblock %}
+{% block head_lead %}
+{{ super() }}
+<title>{% trans %}Reset your password | Snikket{% endtrans %}</title>
+<script async type="text/javascript" src="{{ url_for("static", filename="js/qrcode.min.js") }}"></script>
+{% endblock %}
+{% block content %}
+<h1>{% trans %}Reset your password{% endtrans %}</h1>
+<p>{% trans account_jid=account_jid %}This page allows you to reset the password of your account, <strong>{{ account_jid }}</strong>, once.{% endtrans %}</p>
+<div class="elevated el-2">
+	<h2>{% trans %}Using the app{% endtrans %}</h2>
+	<p>{% trans %}To reset your password using the Snikket App, tap the button below.{% endtrans %}</p>
+	<div>
+	{%- call standard_button("exit_to_app", invite.xmpp_uri, class="secondary") -%}
+		{% trans %}Open the app{% endtrans %}
+	{%- endcall -%}
+	</div>
+	<img class="float-right" id="tutorial-scan" aria-hidden="true" alt="" src="{{ url_for("static", filename="img/tutorial-scan.png") }}">
+	<p>{% trans %}Alternatively, you can scan the below code with the Snikket App using the Scan button at the top.{% endtrans %}</p>
+	<p>{% trans %}Your camera will turn on. Point it at the square code below until it is within the highlighted square on your screen, and wait until the app recognises it.{% endtrans %}</p>
+	<p>{% trans %}You will then be prompted to enter a new password for your account.{% endtrans %}</p>
+	<div id="qr-uri" data-qrdata="{{ invite.xmpp_uri }}" class="qr"></div>
+	<h2>{% trans %}Alternatives{% endtrans %}</h2>
+	<p>{% trans reset_url=url_for(".reset", id_=invite_id) %}You can also <a href="{{ reset_url }}">reset your password online</a> if the above button or scanning the QR code does not work for you.{% endtrans %}</p>
+</div>
+<script type="text/javascript">
+	var onload = function() {
+		apply_qr_code(document.getElementById("qr-uri"));
+	};
+</script>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "unauth.html" %}
+{% from "library.j2" import standard_button, render_errors %}
+{% block style %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/invite.css") }}">
+{% endblock %}
+{% block head_lead %}
+{{ super() }}
+<title>{% trans %}Reset your password | Snikket{% endtrans %}</title>
+<script async type="text/javascript" src="{{ url_for("static", filename="js/qrcode.min.js") }}"></script>
+{% endblock %}
+{% block content %}
+<form method="POST"><div class="form layout-expanded">
+	{{- form.csrf_token -}}
+	<h1 class="form-title">{% trans %}Reset your password online{% endtrans %}</h1>
+	<p class="form-desc weak">{% trans %}To reset your password online, fill out the fields below and confirm using the button.{% endtrans %}</p>
+	{%- call render_errors(form.errors) %}{% endcall -%}
+	<div class="f-ebox">
+		{{ form.password.label }}
+		{{ form.password }}
+	</div>
+	<div class="f-ebox">
+		{{ form.password_confirm.label }}
+		{{ form.password_confirm }}
+	</div>
+	<div class="f-bbox">
+		{%- call form_button("passwd", form.action_reset, class="primary") -%}{%- endcall -%}
+	</div>
+</div></form>
+<script type="text/javascript">
+	var onload = function() {
+		apply_qr_code(document.getElementById("qr-uri"));
+	};
+</script>
+{% endblock %}

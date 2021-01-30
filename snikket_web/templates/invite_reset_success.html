@@ -1,0 +1,14 @@
+{% extends "unauth.html" %}
+{% from "library.j2" import standard_button %}
+{% block head_lead %}
+{{ super() }}
+<title>{% trans %}Password reset successful | Snikket{% endtrans %}</title>
+{% endblock %}
+{% block content %}
+<h1>{% trans %}Password reset successful{% endtrans %}</h1>
+<div class="box success">
+	<header>{% trans %}Your password has been changed{% endtrans %}</header>
+	<p>{% trans %}You can now log in using your new password.{% endtrans %}</p>
+	<p>{% trans %}You can now safely close this page.{% endtrans %}</p>
+</div>
+{% endblock %}

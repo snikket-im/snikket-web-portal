@@ -57,6 +57,14 @@ async def view(id_: str) -> str:
             return await render_template("invite_invalid.html")
         raise
 
+    if invite.reset_localpart is not None:
+        return await render_template(
+            "invite_reset_view.html",
+            invite=invite,
+            invite_id=id_,
+            account_jid="{}@{}".format(invite.reset_localpart, invite.domain)
+        )
+
     play_store_url = (
         "https://play.google.com/store/apps/details?" +
         urllib.parse.urlencode(
@@ -105,7 +113,14 @@ class RegisterForm(flask_wtf.FlaskForm):  # type:ignore
 
 @bp.route("/<id_>/register", methods=["GET", "POST"])
 async def register(id_: str) -> typing.Union[str, quart.Response]:
-    invite = await client.get_public_invite_by_id(id_)
+    try:
+        invite = await client.get_public_invite_by_id(id_)
+    except aiohttp.ClientResponseError as exc:
+        if exc.status == 404:
+            return redirect(url_for(".view", id_=id_))
+
+    if invite.reset_localpart is not None:
+        return redirect(url_for(".reset", id_=id_))
     form = RegisterForm()
 
     if form.validate_on_submit():
@@ -144,10 +159,78 @@ async def register(id_: str) -> typing.Union[str, quart.Response]:
     )
 
 
+class ResetForm(flask_wtf.FlaskForm):  # type:ignore
+    password = wtforms.PasswordField(
+        _l("Password"),
+    )
+
+    password_confirm = wtforms.PasswordField(
+        _l("Confirm password"),
+        validators=[wtforms.validators.InputRequired(),
+                    wtforms.validators.EqualTo(
+                        "password",
+                        _l("The passwords must match")
+                    )]
+    )
+
+    action_reset = wtforms.SubmitField(
+        _l("Change password")
+    )
+
+
+@bp.route("/<id_>/reset", methods=["GET", "POST"])
+async def reset(id_: str) -> typing.Union[str, quart.Response]:
+    try:
+        invite = await client.get_public_invite_by_id(id_)
+    except aiohttp.ClientResponseError as exc:
+        if exc.status == 404:
+            return redirect(url_for(".view", id_=id_))
+
+    if invite.reset_localpart is None:
+        return redirect(url_for(".register", id_=id_))
+
+    form = ResetForm()
+
+    if form.validate_on_submit():
+        # log the user in? show a guide? no idea.
+        try:
+            jid = await client.register_with_token(
+                username=invite.reset_localpart,
+                password=form.password.data,
+                token=id_,
+            )
+        except aiohttp.ClientResponseError as exc:
+            if exc.status == 403:
+                form.localpart.errors.append(
+                    _l("Registration was declined for unknown reasons")
+                )
+            elif exc.status == 404:
+                return redirect(url_for(".view", id_=id_))
+            else:
+                raise
+        else:
+            http_session[INVITE_SESSION_JID] = jid
+            return redirect(url_for(".reset_success"))
+
+    return await render_template(
+        "invite_reset.html",
+        invite=invite,
+        form=form,
+    )
+
+
 @bp.route("/success", methods=["GET", "POST"])
 async def success() -> str:
     return await render_template(
         "invite_success.html",
+        jid=http_session.get(INVITE_SESSION_JID, ""),
+    )
+
+
+@bp.route("/success/reset", methods=["GET", "POST"])
+async def reset_success() -> str:
+    return await render_template(
+        "invite_reset_success.html",
         jid=http_session.get(INVITE_SESSION_JID, ""),
     )
 

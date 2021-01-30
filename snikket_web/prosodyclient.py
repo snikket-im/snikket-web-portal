@@ -121,6 +121,8 @@ class AdminGroupInfo:
 class PublicInviteInfo:
     inviter: typing.Optional[str]
     xmpp_uri: str
+    reset_localpart: typing.Optional[str]
+    domain: str
 
     @classmethod
     def from_api_response(
@@ -130,6 +132,8 @@ class PublicInviteInfo:
         return cls(
             inviter=data.get("inviter") or None,
             xmpp_uri=data["uri"],
+            reset_localpart=data.get("reset", None),
+            domain=data["domain"],
         )
 
 
