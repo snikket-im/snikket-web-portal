@@ -251,7 +251,11 @@ async def create_invite() -> typing.Union[str, quart.Response]:
 @bp.route("/invitation/<id_>", methods=["GET", "POST"])
 @client.require_admin_session()
 async def edit_invite(id_: str) -> typing.Union[str, quart.Response]:
-    invite_info = await client.get_invite_by_id(id_)
+    try:
+        invite_info = await client.get_invite_by_id(id_)
+    except aiohttp.ClientResponseError as exc:
+        if exc.status == 404:
+            abort(404)
     circles = await client.list_groups()
     circle_map = {
         circle.id_: circle
