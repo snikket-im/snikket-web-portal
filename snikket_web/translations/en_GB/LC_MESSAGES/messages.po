@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-30 10:47+0100\n"
+"POT-Creation-Date: 2021-01-30 11:15+0100\n"
 "PO-Revision-Date: 2021-01-23 17:06+0000\n"
 "Last-Translator: Matthew Wild <matthew@snikket.org>\n"
 "Language-Team: English (United Kingdom) <https://i18n.sotecware.net/projects/"
@@ -523,8 +523,8 @@ msgstr "Valid until"
 
 #: snikket_web/templates/admin_edit_invite.html:15
 #: snikket_web/templates/admin_reset_user_password.html:17
-msgid "<label for=\"link-field\">Link</label>"
-msgstr ""
+msgid "Link"
+msgstr "Link"
 
 #: snikket_web/templates/admin_edit_invite.html:22
 #: snikket_web/templates/admin_home.html:19
@@ -781,7 +781,7 @@ msgid "App already installed?"
 msgstr ""
 
 #: snikket_web/templates/invite_register.html:16
-#: snikket_web/templates/invite_reset_view.html:20
+#: snikket_web/templates/invite_reset_view.html:21
 #: snikket_web/templates/invite_view.html:39
 msgid "Open the app"
 msgstr ""
@@ -852,34 +852,34 @@ msgstr ""
 msgid "You can now safely close this page."
 msgstr ""
 
-#: snikket_web/templates/invite_reset_view.html:13
+#: snikket_web/templates/invite_reset_view.html:14
 #, fuzzy
 #| msgid "Change your password"
 msgid "Reset your password"
 msgstr "Change your password"
 
-#: snikket_web/templates/invite_reset_view.html:14
+#: snikket_web/templates/invite_reset_view.html:15
 #, python-format
 msgid ""
 "This page allows you to reset the password of your account, <strong>"
 "%(account_jid)s</strong>, once."
 msgstr ""
 
-#: snikket_web/templates/invite_reset_view.html:16
+#: snikket_web/templates/invite_reset_view.html:17
 msgid "Using the app"
 msgstr ""
 
-#: snikket_web/templates/invite_reset_view.html:17
+#: snikket_web/templates/invite_reset_view.html:18
 msgid "To reset your password using the Snikket App, tap the button below."
 msgstr ""
 
-#: snikket_web/templates/invite_reset_view.html:24
+#: snikket_web/templates/invite_reset_view.html:25
 msgid ""
 "Alternatively, you can scan the below code with the Snikket App using the "
 "Scan button at the top."
 msgstr ""
 
-#: snikket_web/templates/invite_reset_view.html:25
+#: snikket_web/templates/invite_reset_view.html:26
 #: snikket_web/templates/invite_view.html:75
 msgid ""
 "Your camera will turn on. Point it at the square code below until it is "
@@ -887,16 +887,16 @@ msgid ""
 "recognises it."
 msgstr ""
 
-#: snikket_web/templates/invite_reset_view.html:26
+#: snikket_web/templates/invite_reset_view.html:27
 msgid "You will then be prompted to enter a new password for your account."
 msgstr ""
 
-#: snikket_web/templates/invite_reset_view.html:28
+#: snikket_web/templates/invite_reset_view.html:29
 #: snikket_web/templates/invite_view.html:43
 msgid "Alternatives"
 msgstr ""
 
-#: snikket_web/templates/invite_reset_view.html:29
+#: snikket_web/templates/invite_reset_view.html:30
 #, python-format
 msgid ""
 "You can also <a href=\"%(reset_url)s\">reset your password online</a> if the "
@@ -1163,9 +1163,6 @@ msgid ""
 msgstr ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
-
-#~ msgid "Link"
-#~ msgstr "Link"
 
 #~ msgid "No users left"
 #~ msgstr "No users left"

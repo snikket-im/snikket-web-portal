@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-30 10:47+0100\n"
+"POT-Creation-Date: 2021-01-30 11:15+0100\n"
 "PO-Revision-Date: 2021-01-30 09:49+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
 "Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/web-"
@@ -513,8 +513,8 @@ msgstr "Ważne do"
 
 #: snikket_web/templates/admin_edit_invite.html:15
 #: snikket_web/templates/admin_reset_user_password.html:17
-msgid "<label for=\"link-field\">Link</label>"
-msgstr "<label for=\"link-field\">Link</label>"
+msgid "Link"
+msgstr "Link"
 
 #: snikket_web/templates/admin_edit_invite.html:22
 #: snikket_web/templates/admin_home.html:19
@@ -769,7 +769,7 @@ msgid "App already installed?"
 msgstr "Aplikacja jest już zainstalowana?"
 
 #: snikket_web/templates/invite_register.html:16
-#: snikket_web/templates/invite_reset_view.html:20
+#: snikket_web/templates/invite_reset_view.html:21
 #: snikket_web/templates/invite_view.html:39
 msgid "Open the app"
 msgstr "Otwórz aplikację"
@@ -845,36 +845,36 @@ msgstr ""
 msgid "You can now safely close this page."
 msgstr "Możesz teraz bezpiecznie zamknąć tę stronę."
 
-#: snikket_web/templates/invite_reset_view.html:13
+#: snikket_web/templates/invite_reset_view.html:14
 #, fuzzy
 #| msgid "Change your password"
 msgid "Reset your password"
 msgstr "Zmień swoje hasło"
 
-#: snikket_web/templates/invite_reset_view.html:14
+#: snikket_web/templates/invite_reset_view.html:15
 #, python-format
 msgid ""
 "This page allows you to reset the password of your account, <strong>"
 "%(account_jid)s</strong>, once."
 msgstr ""
 
-#: snikket_web/templates/invite_reset_view.html:16
+#: snikket_web/templates/invite_reset_view.html:17
 #, fuzzy
 #| msgid "Using the Snikket app"
 msgid "Using the app"
 msgstr "Używając aplikacji Snikket"
 
-#: snikket_web/templates/invite_reset_view.html:17
+#: snikket_web/templates/invite_reset_view.html:18
 msgid "To reset your password using the Snikket App, tap the button below."
 msgstr ""
 
-#: snikket_web/templates/invite_reset_view.html:24
+#: snikket_web/templates/invite_reset_view.html:25
 msgid ""
 "Alternatively, you can scan the below code with the Snikket App using the "
 "Scan button at the top."
 msgstr ""
 
-#: snikket_web/templates/invite_reset_view.html:25
+#: snikket_web/templates/invite_reset_view.html:26
 #: snikket_web/templates/invite_view.html:75
 msgid ""
 "Your camera will turn on. Point it at the square code below until it is "
@@ -885,16 +885,16 @@ msgstr ""
 "się on w podświetlonym kwadracie na twoim ekranie. Poczekaj, aż aplikacja go "
 "odczyta."
 
-#: snikket_web/templates/invite_reset_view.html:26
+#: snikket_web/templates/invite_reset_view.html:27
 msgid "You will then be prompted to enter a new password for your account."
 msgstr ""
 
-#: snikket_web/templates/invite_reset_view.html:28
+#: snikket_web/templates/invite_reset_view.html:29
 #: snikket_web/templates/invite_view.html:43
 msgid "Alternatives"
 msgstr "Inne możliwości"
 
-#: snikket_web/templates/invite_reset_view.html:29
+#: snikket_web/templates/invite_reset_view.html:30
 #, python-format
 msgid ""
 "You can also <a href=\"%(reset_url)s\">reset your password online</a> if the "
@@ -1172,8 +1172,8 @@ msgstr ""
 "Ta sekcja pozwoli ci na zarządzenie widocznością informacji o twoim profilu "
 "przez innych, jak awatar lub pseudonim."
 
-#~ msgid "Link"
-#~ msgstr "Link"
+#~ msgid "<label for=\"link-field\">Link</label>"
+#~ msgstr "<label for=\"link-field\">Link</label>"
 
 #~ msgid "This circle cannot be modified"
 #~ msgstr "Ten krąg nie może być modyfikowany"
