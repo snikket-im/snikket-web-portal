@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
-"PO-Revision-Date: 2021-01-30 09:49+0000\n"
+"PO-Revision-Date: 2021-01-31 12:54+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
-"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/pl/>\n"
+"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +31,7 @@ msgstr "Zaproś do kręgu"
 
 #: snikket_web/admin.py:135
 msgid "At least one circle must be selected"
-msgstr "Wybrany musi być przynajmniej jeden krąg"
+msgstr "Należy wybrać przynajmniej jeden krąg"
 
 #: snikket_web/admin.py:140
 msgid "Valid for"
@@ -39,7 +39,7 @@ msgstr "Ważne przez"
 
 #: snikket_web/admin.py:142
 msgid "One hour"
-msgstr "Jedną godzinę"
+msgstr "Godzinę"
 
 #: snikket_web/admin.py:143
 msgid "Twelve hours"
@@ -47,11 +47,11 @@ msgstr "Dwanaście godzin"
 
 #: snikket_web/admin.py:144
 msgid "One day"
-msgstr "Jeden dzień"
+msgstr "Dzień"
 
 #: snikket_web/admin.py:145
 msgid "One week"
-msgstr "Jeden tydzień"
+msgstr "Tydzień"
 
 #: snikket_web/admin.py:146
 msgid "Four weeks"
@@ -478,7 +478,7 @@ msgstr "Członkowie kręgu"
 #: snikket_web/templates/admin_edit_circle.html:70
 #, python-format
 msgid "Remove user %(username)s from circle"
-msgstr "Usuń użytkownika %(username)s z kręgu"
+msgstr "Usuń z kręgu użytkownika %(username)s"
 
 #: snikket_web/templates/admin_edit_circle.html:78
 msgid "This circle currently has no members."
@@ -591,8 +591,6 @@ msgid "Manage invitations"
 msgstr "Zarządzaj zaproszeniami"
 
 #: snikket_web/templates/admin_home.html:36
-#, fuzzy
-#| msgid "Go back to your user’s web portal page."
 msgid "Go back to your user's web portal page."
 msgstr "Wróć do swojej strony użytkownika."
 
@@ -785,40 +783,36 @@ msgstr "Wprowadź bezpieczne hasło, którego nie używasz w innym miejscu."
 
 #: snikket_web/templates/invite_reset.html:9
 #: snikket_web/templates/invite_reset_view.html:9
-#, fuzzy
-#| msgid "Change your password"
 msgid "Reset your password | Snikket"
-msgstr "Zmień swoje hasło"
+msgstr "Zresetuj swoje hasło | Snikket"
 
 #: snikket_web/templates/invite_reset.html:15
-#, fuzzy
-#| msgid "Change your password"
 msgid "Reset your password online"
-msgstr "Zmień swoje hasło"
+msgstr "Zresetuj swoje hasło online"
 
 #: snikket_web/templates/invite_reset.html:16
 msgid ""
 "To reset your password online, fill out the fields below and confirm using "
 "the button."
 msgstr ""
+"Aby zresetować swoje hasło online, wypełnij poniższe pola i potwierdź za "
+"pomocą przycisku."
 
 #: snikket_web/templates/invite_reset_success.html:5
 msgid "Password reset successful | Snikket"
-msgstr ""
+msgstr "Zresetowanie hasła powiodło się | Snikket"
 
 #: snikket_web/templates/invite_reset_success.html:8
-#, fuzzy
-#| msgid "Password reset"
 msgid "Password reset successful"
-msgstr "Resetowanie hasła"
+msgstr "Zresetowanie hasła powiodło się"
 
 #: snikket_web/templates/invite_reset_success.html:10
 msgid "Your password has been changed"
-msgstr ""
+msgstr "Twoje hasło zostało zmienione"
 
 #: snikket_web/templates/invite_reset_success.html:11
 msgid "You can now log in using your new password."
-msgstr ""
+msgstr "Możesz się zalogować z wykorzystaniem twojego nowego hasła."
 
 #: snikket_web/templates/invite_reset_success.html:12
 #: snikket_web/templates/invite_success.html:18
@@ -826,10 +820,8 @@ msgid "You can now safely close this page."
 msgstr "Możesz teraz bezpiecznie zamknąć tę stronę."
 
 #: snikket_web/templates/invite_reset_view.html:14
-#, fuzzy
-#| msgid "Change your password"
 msgid "Reset your password"
-msgstr "Zmień swoje hasło"
+msgstr "Zresetuj swoje hasło"
 
 #: snikket_web/templates/invite_reset_view.html:15
 #, python-format
@@ -837,22 +829,26 @@ msgid ""
 "This page allows you to reset the password of your account, <strong>"
 "%(account_jid)s</strong>, once."
 msgstr ""
+"Ta strona pozwoli ci na jednorazowe zresetowanie hasła do twojego konta: "
+"<strong>%(account_jid)s</strong>."
 
 #: snikket_web/templates/invite_reset_view.html:17
-#, fuzzy
-#| msgid "Using the Snikket app"
 msgid "Using the app"
-msgstr "Używając aplikacji Snikket"
+msgstr "Używając aplikacji"
 
 #: snikket_web/templates/invite_reset_view.html:18
 msgid "To reset your password using the Snikket App, tap the button below."
 msgstr ""
+"Aby zresetować swoje hasło za pomocą aplikacji Snikket, wciśnij poniższy "
+"przycisk."
 
 #: snikket_web/templates/invite_reset_view.html:25
 msgid ""
 "Alternatively, you can scan the below code with the Snikket App using the "
 "Scan button at the top."
 msgstr ""
+"Możesz również zeskanować poniższy kod w aplikacji Snikket, korzystając z "
+"przycisku Skanowania, który znajduje się u góry."
 
 #: snikket_web/templates/invite_reset_view.html:26
 #: snikket_web/templates/invite_view.html:75
@@ -868,6 +864,7 @@ msgstr ""
 #: snikket_web/templates/invite_reset_view.html:27
 msgid "You will then be prompted to enter a new password for your account."
 msgstr ""
+"Zostaniesz wtedy poproszony o wprowadzenie nowego hasła dla twojego konta."
 
 #: snikket_web/templates/invite_reset_view.html:29
 #: snikket_web/templates/invite_view.html:43
@@ -880,6 +877,8 @@ msgid ""
 "You can also <a href=\"%(reset_url)s\">reset your password online</a> if the "
 "above button or scanning the QR code does not work for you."
 msgstr ""
+"Możesz również <a href=\"%(reset_url)s\">zresetować swoje hasło online</a>, "
+"jeśli powyższy przycisk lub skanowanie kodu QR nie zadziała."
 
 #: snikket_web/templates/invite_success.html:5
 #, python-format
@@ -899,10 +898,8 @@ msgstr ""
 "Gratulacje! Pomyślnie zarejestrowałeś się na %(site_name)s jako %(jid)s."
 
 #: snikket_web/templates/invite_success.html:13
-#, fuzzy
-#| msgid "Your XMPP address"
 msgid "Your address"
-msgstr "Twój adres XMPP"
+msgstr "Twój adres"
 
 #: snikket_web/templates/invite_success.html:17
 msgid ""
@@ -946,16 +943,13 @@ msgstr ""
 "Zainstaluj aplikację Snikket na swoim urządzeniu z systemem Android lub iOS."
 
 #: snikket_web/templates/invite_view.html:23
-#, fuzzy, python-format
-#| msgid ""
-#| "Install the Snikket App on your Android device (<a href=\"%(ios_info_url)s"
-#| "\" target=\"_blank\" rel=\"noopener noreferrer\">iOS coming soon!</a>)."
+#, python-format
 msgid ""
 "Install the Snikket App on your Android device (<a href=\"%(ios_info_url)s\" "
 "rel=\"noopener noreferrer\" target=\"_blank\">iOS coming soon!</a>)."
 msgstr ""
-"Zainstaluj aplikację Snikket na swoim urządzeniu z Androidem (<a href="
-"\"%(ios_info_url)s\" rel=\"noopener noreferrer\" target=\"_blank\">iOS już "
+"Zainstaluj aplikację Snikket na swoim urządzeniu z Androidem (<a href=\""
+"%(ios_info_url)s\" rel=\"noopener noreferrer\" target=\"_blank\">iOS już "
 "niedługo!</a>)."
 
 #: snikket_web/templates/invite_view.html:27
