@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
-"PO-Revision-Date: 2021-01-30 13:37+0000\n"
+"PO-Revision-Date: 2021-01-30 13:45+0000\n"
 "Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/fr/>\n"
@@ -70,7 +70,7 @@ msgstr "Groupe"
 
 #: snikket_web/admin.py:161
 msgid "New invitation link"
-msgstr "Nouveau lien d'invitation"
+msgstr "Nouveau lien d’invitation"
 
 #: snikket_web/admin.py:223
 msgid "Revoke"
@@ -130,11 +130,11 @@ msgstr "Ce nom d’utilisateur est déjà utilisé"
 
 #: snikket_web/invite.py:141 snikket_web/invite.py:205
 msgid "Registration was declined for unknown reasons"
-msgstr "L'enregistrement a été refusé pour des raisons inconnues"
+msgstr "L’enregistrement a été refusé pour des raisons inconnues"
 
 #: snikket_web/invite.py:145
 msgid "The username is not valid"
-msgstr "Le nom d'utilisateur n'est pas valide"
+msgstr "Le nom d’utilisateur n’est pas valide"
 
 #: snikket_web/invite.py:177 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:32
@@ -147,11 +147,11 @@ msgstr "Adresse"
 
 #: snikket_web/main.py:46
 msgid "Sign in"
-msgstr "S'identifier"
+msgstr "S’identifier"
 
 #: snikket_web/main.py:72
 msgid "Invalid username or password."
-msgstr "Nom d'utilisateur ou mot de passe incorrect."
+msgstr "Nom d’utilisateur ou mot de passe incorrect."
 
 #: snikket_web/user.py:21
 msgid "Current password"
@@ -301,7 +301,7 @@ msgid ""
 "included."
 msgstr ""
 "Les utilisateurs qui se trouvent dans le même cercle se verront dans leur "
-"liste de contacts. En outre, chaque cercle dispose d'un chat de groupe dans "
+"liste de contacts. En outre, chaque cercle dispose d’un chat de groupe dans "
 "lequel les membres du cercle sont inclus."
 
 #: snikket_web/templates/admin_circles.html:13
@@ -363,7 +363,7 @@ msgid ""
 "Create a new invitation link to invite more users to your Snikket service by "
 "clicking the button below."
 msgstr ""
-"Créez une nouvelle invitation pour inviter d'autres utilisateurs sur votre "
+"Créez une nouvelle invitation pour inviter d’autres utilisateurs sur votre "
 "instance Snikket en cliquant sur le bouton ci-dessous."
 
 #: snikket_web/templates/admin_debug_user.html:8
@@ -419,7 +419,7 @@ msgid ""
 msgstr ""
 "L’utilisateur et ses données vont être irrévocablement supprimées, "
 "immédiatement après avoir pressé le bouton ci-dessous. <strong>Il est "
-"impossible d'inverser l'opération !</strong>"
+"impossible de revenir en arrière !</strong>"
 
 #: snikket_web/templates/admin_delete_user.html:19
 #: snikket_web/templates/admin_edit_circle.html:44
@@ -450,7 +450,7 @@ msgstr "Adresse de la conversation de groupe"
 #: snikket_web/templates/invite_success.html:15
 #: snikket_web/templates/user_home.html:21
 msgid "Copy address"
-msgstr "Copier l'adresse"
+msgstr "Copier l’adresse"
 
 #: snikket_web/templates/admin_edit_circle.html:26
 msgid "Circle information"
@@ -458,7 +458,7 @@ msgstr "Information sur le cercle"
 
 #: snikket_web/templates/admin_edit_circle.html:39
 msgid "This circle has no group chat associated."
-msgstr "Ce cercle n'a pas de conversation de groupe associée."
+msgstr "Ce cercle n’a pas de conversation de groupe associée."
 
 #: snikket_web/templates/admin_edit_circle.html:48
 msgid "Delete circle"
@@ -531,7 +531,7 @@ msgstr "Cercle"
 
 #: snikket_web/templates/admin_edit_invite.html:35
 msgid "The user will not be added to any circle and will have no contacts."
-msgstr "L'utilisateur ne sera ajouté à aucun cercle et n  ’aura pas de contact."
+msgstr "L’utilisateur ne sera ajouté à aucun cercle et n  ’aura pas de contact."
 
 #: snikket_web/templates/admin_edit_invite.html:40
 msgid "Contact"
@@ -633,7 +633,7 @@ msgid ""
 "The following link will allow the user to reset their password on their "
 "device, once."
 msgstr ""
-"Le lien suivant permettra à l'utilisateur de réinitialiser son mot de passe "
+"Le lien suivant permettra à l’utilisateur de réinitialiser son mot de passe "
 "sur son appareil, une seule fois."
 
 #: snikket_web/templates/admin_reset_user_password.html:22
@@ -702,7 +702,7 @@ msgstr "Invitation expirée"
 
 #: snikket_web/templates/invite_invalid.html:9
 msgid "Sorry, it looks like this invitation link has expired!"
-msgstr "Désolé, il semble que ce lien d'invitation ait expiré !"
+msgstr "Désolé, il semblerait que ce lien d’invitation ait expiré !"
 
 #: snikket_web/templates/invite_register.html:5
 #, python-format
@@ -732,15 +732,15 @@ msgid ""
 "we recommend that you continue the account creation process inside the app "
 "by clicking on the button below:"
 msgstr ""
-"La création d'un compte permettra de communiquer avec d'autres personnes "
-"utilisant l'application Snikket ou un logiciel compatible. Si vous avez déjà "
-"installé l'application, nous vous recommandons de poursuivre le processus de "
-"création de compte dans l'application en cliquant sur le bouton ci-dessous :"
+"La création d’un compte permettra de communiquer avec d’autres personnes "
+"utilisant l’application Snikket ou un logiciel compatible. Si vous avez déjà "
+"installé l’application, nous vous recommandons de poursuivre le processus de "
+"création de compte dans l’application en cliquant sur le bouton ci-dessous :"
 
 #: snikket_web/templates/invite_register.html:14
 #: snikket_web/templates/invite_view.html:37
 msgid "App already installed?"
-msgstr "L'application est déjà installée ?"
+msgstr "L’application est déjà installée ?"
 
 #: snikket_web/templates/invite_register.html:16
 #: snikket_web/templates/invite_reset_view.html:21
@@ -751,7 +751,7 @@ msgstr "Ouvrir l'application"
 #: snikket_web/templates/invite_register.html:18
 #: snikket_web/templates/invite_view.html:41
 msgid "This button works only if you have the app installed already!"
-msgstr "Ce bouton ne fonctionne que si vous avez déjà installé l'application !"
+msgstr "Ce bouton ne fonctionne que si vous avez déjà installé l’application !"
 
 #: snikket_web/templates/invite_register.html:19
 msgid "Create an account online"
@@ -762,7 +762,7 @@ msgid ""
 "If you plan to use a legacy XMPP client, you can register an account online "
 "and enter your credentials into any XMPP-compatible software."
 msgstr ""
-"Si vous prévoyez d'utiliser un ancien client XMPP, vous pouvez ouvrir un "
+"Si vous prévoyez d’utiliser un ancien client XMPP, vous pouvez ouvrir un "
 "compte en ligne et saisir vos indentifiants dans tout logiciel compatible "
 "XMPP."
 
@@ -770,13 +770,13 @@ msgstr ""
 msgid ""
 "Choose a username, this will become the first part of your new chat address."
 msgstr ""
-"Choisissez un nom d'utilisateur, celui-ci deviendra la première partie de "
+"Choisissez un nom d’utilisateur, celui-ci deviendra la première partie de "
 "votre nouvelle adresse de messagerie."
 
 #: snikket_web/templates/invite_register.html:32
 msgid "Enter a secure password that you do not use anywhere else."
 msgstr ""
-"Entrez un mot de passe sécurisé que vous n'utilisez nulle part ailleurs."
+"Entrez un mot de passe sécurisé que vous n’utilisez nulle part ailleurs."
 
 #: snikket_web/templates/invite_reset.html:9
 #: snikket_web/templates/invite_reset_view.html:9
@@ -855,9 +855,9 @@ msgid ""
 "within the highlighted square on your screen, and wait until the app "
 "recognises it."
 msgstr ""
-"Votre caméra s'allumera. Pointez la caméra sur le code carré ci-dessous "
-"jusqu'à ce que celui-ci se trouve dans le carré surligné sur votre écran, et "
-"attendez que l'application la reconnaisse."
+"Votre caméra s’allumera. Pointez la caméra sur le code carré ci-dessous "
+"jusqu’à ce que celui-ci se trouve dans le carré surligné sur votre écran, et "
+"attendez que l’application la reconnaisse."
 
 #: snikket_web/templates/invite_reset_view.html:27
 msgid "You will then be prompted to enter a new password for your account."
@@ -907,8 +907,8 @@ msgid ""
 "You can now set up your legacy XMPP client with the above address and the "
 "password you chose during registration."
 msgstr ""
-"Vous pouvez maintenant configurer votre ancien client XMPP avec l'adresse ci-"
-"dessus et le mot de passe que vous avez choisi lors de l'enregistrement."
+"Vous pouvez maintenant configurer votre ancien client XMPP avec l’adresse ci-"
+"dessus et le mot de passe que vous avez choisi lors de l’enregistrement."
 
 #: snikket_web/templates/invite_view.html:6
 #, python-format
@@ -940,7 +940,7 @@ msgstr "Démarrer"
 
 #: snikket_web/templates/invite_view.html:21
 msgid "Install the Snikket App on your Android or iOS device."
-msgstr "Installez l'application Snikket sur votre appareil Android ou iOS."
+msgstr "Installez l’application Snikket sur votre appareil Android ou iOS."
 
 #: snikket_web/templates/invite_view.html:23
 #, python-format
@@ -958,7 +958,7 @@ msgstr "Obtenez-la sur Google Play"
 
 #: snikket_web/templates/invite_view.html:29
 msgid "Download on the App Store"
-msgstr "Télécharger sur l'App Store"
+msgstr "Télécharger sur l’App Store"
 
 #: snikket_web/templates/invite_view.html:33
 msgid "Not on mobile?"
@@ -969,8 +969,8 @@ msgid ""
 "After installation the app should automatically open and prompt you to "
 "create an account. If not, simply click the button below."
 msgstr ""
-"Après l'installation, l'application devrait s'ouvrir automatiquement et vous "
-"inviter à créer un compte. Si ce n'est pas le cas, il suffit de cliquer sur "
+"Après l’installation, l’application devrait s’ouvrir automatiquement et vous "
+"inviter à créer un compte. Si ce n’est pas le cas, il suffit de cliquer sur "
 "le bouton ci-dessous."
 
 #: snikket_web/templates/invite_view.html:44
@@ -980,14 +980,14 @@ msgid ""
 "above does not work with your app, you may need to <a href=\"%(register_url)s"
 "\">register an account manually</a>."
 msgstr ""
-"Vous pouvez vous connecter à Snikket en utilisant n'importe quel logiciel "
+"Vous pouvez vous connecter à Snikket en utilisant n’importe quel logiciel "
 "compatible XMPP. Si le bouton ci-dessus ne fonctionne pas avec votre "
 "application, vous devrez peut-être <a href=\"%(register_url)s\">enregistrer "
 "un compte manuellement</a>."
 
 #: snikket_web/templates/invite_view.html:50
 msgid "Scan invite code"
-msgstr "Scanner le code d'invitation"
+msgstr "Scanner le code d’invitation"
 
 #: snikket_web/templates/invite_view.html:53
 #: snikket_web/templates/invite_view.html:82
@@ -1001,7 +1001,7 @@ msgid ""
 msgstr ""
 "Vous pouvez transférer cette invitation sur votre appareil mobile en "
 "scannant un code avec votre appareil photo. Vous pouvez utiliser soit une "
-"application de scanner QR, soit l'application Snikket elle-même."
+"application de scanner QR, soit l’application Snikket elle-même."
 
 #: snikket_web/templates/invite_view.html:61
 msgid "Using a QR code scanner"
@@ -1023,8 +1023,8 @@ msgid ""
 "Install the Snikket app on your mobile device, open it, and tap the 'Scan' "
 "button at the top."
 msgstr ""
-"Installez l'application Snikket sur votre appareil mobile, ouvrez-la et "
-"appuyez sur le bouton \"Scan\" en haut."
+"Installez l’application Snikket sur votre appareil mobile, ouvrez-la et "
+"appuyez sur le bouton « Scan » en haut."
 
 #: snikket_web/templates/library.j2:18
 msgid "Copy link"
@@ -1056,7 +1056,7 @@ msgstr "Entrez votre adresse et mot de passe Snikket pour gérer votre compte."
 
 #: snikket_web/templates/login.html:18
 msgid "Login failed"
-msgstr "Échec de l'authentification"
+msgstr "Échec d’identification"
 
 #: snikket_web/templates/user_home.html:9
 msgid "Welcome!"
@@ -1101,7 +1101,7 @@ msgid ""
 "Click below to log yourself out of the web portal. This does not affect any "
 "other connected devices."
 msgstr ""
-"Cliquez ci-dessous pour vous déconnecter du portail. Ceci n'affecte pas vos "
+"Cliquez ci-dessous pour vous déconnecter du portail. Ceci n’affecte pas vos "
 "autres appareils connectés."
 
 #: snikket_web/templates/user_passwd.html:8
@@ -1115,7 +1115,7 @@ msgid ""
 "twice."
 msgstr ""
 "Pour changer votre mot de passe, vous devez entrer votre mot de passe actuel "
-"et votre nouveau mot de passe. Pour réduire les chances d'erreur, vous devez "
+"et votre nouveau mot de passe. Pour réduire les chances d’erreur, vous devez "
 "confirmer le nouveau mot de passe."
 
 #: snikket_web/templates/user_passwd.html:27
