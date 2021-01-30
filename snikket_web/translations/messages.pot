@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-30 11:34+0100\n"
+"POT-Creation-Date: 2021-01-30 12:45+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,11 +57,11 @@ msgstr ""
 msgid "Invitation type"
 msgstr ""
 
-#: snikket_web/admin.py:154 snikket_web/templates/library.j2:115
+#: snikket_web/admin.py:154 snikket_web/templates/library.j2:116
 msgid "Individual"
 msgstr ""
 
-#: snikket_web/admin.py:155 snikket_web/templates/library.j2:113
+#: snikket_web/admin.py:155 snikket_web/templates/library.j2:114
 msgid "Group"
 msgstr ""
 
@@ -73,27 +73,27 @@ msgstr ""
 msgid "Revoke"
 msgstr ""
 
-#: snikket_web/admin.py:279 snikket_web/admin.py:323
+#: snikket_web/admin.py:283 snikket_web/admin.py:327
 msgid "Name"
 msgstr ""
 
-#: snikket_web/admin.py:284 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:288 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr ""
 
-#: snikket_web/admin.py:328
+#: snikket_web/admin.py:332
 msgid "Select user"
 msgstr ""
 
-#: snikket_web/admin.py:333
+#: snikket_web/admin.py:337
 msgid "Update circle"
 msgstr ""
 
-#: snikket_web/admin.py:337
+#: snikket_web/admin.py:341
 msgid "Delete circle permanently"
 msgstr ""
 
-#: snikket_web/admin.py:343
+#: snikket_web/admin.py:347
 msgid "Add user"
 msgstr ""
 
@@ -557,7 +557,7 @@ msgid "Manage invitations"
 msgstr ""
 
 #: snikket_web/templates/admin_home.html:36
-msgid "Go back to your user’s web portal page."
+msgid "Go back to your user's web portal page."
 msgstr ""
 
 #: snikket_web/templates/admin_home.html:38
@@ -944,19 +944,19 @@ msgstr ""
 msgid "Copy link"
 msgstr ""
 
-#: snikket_web/templates/library.j2:80
+#: snikket_web/templates/library.j2:81
 msgid "Invalid input"
 msgstr ""
 
-#: snikket_web/templates/library.j2:107
+#: snikket_web/templates/library.j2:108
 msgid "deleted"
 msgstr ""
 
-#: snikket_web/templates/library.j2:121
+#: snikket_web/templates/library.j2:122
 msgid "Can be used multiple times to create accounts on this Snikket service."
 msgstr ""
 
-#: snikket_web/templates/library.j2:123
+#: snikket_web/templates/library.j2:124
 msgid "Can be used once to create an account on this Snikket service."
 msgstr ""
 
