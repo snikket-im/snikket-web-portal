@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
-"PO-Revision-Date: 2021-01-30 13:45+0000\n"
+"PO-Revision-Date: 2021-01-30 13:47+0000\n"
 "Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/fr/>\n"
@@ -735,7 +735,7 @@ msgstr ""
 "La création d’un compte permettra de communiquer avec d’autres personnes "
 "utilisant l’application Snikket ou un logiciel compatible. Si vous avez déjà "
 "installé l’application, nous vous recommandons de poursuivre le processus de "
-"création de compte dans l’application en cliquant sur le bouton ci-dessous :"
+"création de compte dans l’application en cliquant sur le bouton ci-dessous :"
 
 #: snikket_web/templates/invite_register.html:14
 #: snikket_web/templates/invite_view.html:37
@@ -746,7 +746,7 @@ msgstr "L’application est déjà installée ?"
 #: snikket_web/templates/invite_reset_view.html:21
 #: snikket_web/templates/invite_view.html:39
 msgid "Open the app"
-msgstr "Ouvrir l'application"
+msgstr "Ouvrir l’application"
 
 #: snikket_web/templates/invite_register.html:18
 #: snikket_web/templates/invite_view.html:41
@@ -895,7 +895,7 @@ msgstr "Enregistré avec succès sur %(site_name)s"
 msgid ""
 "Congratulations! You successfully registered on %(site_name)s as %(jid)s."
 msgstr ""
-"Félicitations ! Vous vous êtes inscrit avec succès sur %(site_name)s en tant "
+"Félicitations ! Vous vous êtes inscrit avec succès sur %(site_name)s en tant "
 "que %(jid)s."
 
 #: snikket_web/templates/invite_success.html:13
@@ -962,7 +962,7 @@ msgstr "Télécharger sur l’App Store"
 
 #: snikket_web/templates/invite_view.html:33
 msgid "Not on mobile?"
-msgstr "Pas sur mobile ?"
+msgstr "Pas sur mobile ?"
 
 #: snikket_web/templates/invite_view.html:36
 msgid ""
@@ -1016,7 +1016,7 @@ msgid ""
 "Use a <em>QR code</em> scanner on your mobile device to scan the code below:"
 msgstr ""
 "Utilisez un scanner de <em>QR code</em> sur votre appareil mobile pour "
-"scanner le code ci-dessous :"
+"scanner le code ci-dessous :"
 
 #: snikket_web/templates/invite_view.html:74
 msgid ""
