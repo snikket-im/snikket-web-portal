@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-01-29 15:58+0100\n"
+"POT-Creation-Date: 2021-01-30 10:47+0100\n"
 "PO-Revision-Date: 2021-01-30 09:49+0000\n"
 "Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
-"Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
-"web-portal/fr/>\n"
+"Language-Team: French <https://i18n.sotecware.net/projects/snikket/web-"
+"portal/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -104,37 +104,42 @@ msgstr "Ajouter un utilisateur"
 msgid "Main"
 msgstr "Principal"
 
-#: snikket_web/invite.py:85
+#: snikket_web/invite.py:93
 msgid "Username"
 msgstr "Nom d’utilisateur"
 
-#: snikket_web/invite.py:89 snikket_web/main.py:41
+#: snikket_web/invite.py:97 snikket_web/invite.py:164 snikket_web/main.py:41
 msgid "Password"
 msgstr "Mot de passe"
 
-#: snikket_web/invite.py:93
+#: snikket_web/invite.py:101 snikket_web/invite.py:168
 msgid "Confirm password"
 msgstr "Confirmer le mot de passe"
 
-#: snikket_web/invite.py:97
+#: snikket_web/invite.py:105 snikket_web/invite.py:172
 msgid "The passwords must match"
 msgstr "Les mots de passe doivent être identiques"
 
-#: snikket_web/invite.py:102
+#: snikket_web/invite.py:110
 msgid "Create account"
 msgstr "Créer un compte"
 
-#: snikket_web/invite.py:122
+#: snikket_web/invite.py:137
 msgid "That username is already taken"
 msgstr "Ce nom d’utilisateur est déjà utilisé"
 
-#: snikket_web/invite.py:126
+#: snikket_web/invite.py:141 snikket_web/invite.py:205
 msgid "Registration was declined for unknown reasons"
 msgstr "L'enregistrement a été refusé pour des raisons inconnues"
 
-#: snikket_web/invite.py:130
+#: snikket_web/invite.py:145
 msgid "The username is not valid"
 msgstr "Le nom d'utilisateur n'est pas valide"
+
+#: snikket_web/invite.py:177 snikket_web/templates/user_home.html:32
+#: snikket_web/templates/user_passwd.html:32
+msgid "Change password"
+msgstr "Changer de mot de passe"
 
 #: snikket_web/main.py:36
 msgid "Address"
@@ -768,6 +773,7 @@ msgid "App already installed?"
 msgstr "L'application est déjà installée ?"
 
 #: snikket_web/templates/invite_register.html:16
+#: snikket_web/templates/invite_reset_view.html:20
 #: snikket_web/templates/invite_view.html:39
 msgid "Open the app"
 msgstr "Ouvrir l'application"
@@ -802,6 +808,104 @@ msgid "Enter a secure password that you do not use anywhere else."
 msgstr ""
 "Entrez un mot de passe sécurisé que vous n'utilisez nulle part ailleurs."
 
+#: snikket_web/templates/invite_reset.html:9
+#: snikket_web/templates/invite_reset_view.html:9
+#, fuzzy
+#| msgid "Change your password"
+msgid "Reset your password | Snikket"
+msgstr "Changer votre mot de passe"
+
+#: snikket_web/templates/invite_reset.html:15
+#, fuzzy
+#| msgid "Change your password"
+msgid "Reset your password online"
+msgstr "Changer votre mot de passe"
+
+#: snikket_web/templates/invite_reset.html:16
+msgid ""
+"To reset your password online, fill out the fields below and confirm using "
+"the button."
+msgstr ""
+
+#: snikket_web/templates/invite_reset_success.html:5
+msgid "Password reset successful | Snikket"
+msgstr ""
+
+#: snikket_web/templates/invite_reset_success.html:8
+#, fuzzy
+#| msgid "Password reset"
+msgid "Password reset successful"
+msgstr "Réinitialisation de mot de passe"
+
+#: snikket_web/templates/invite_reset_success.html:10
+msgid "Your password has been changed"
+msgstr ""
+
+#: snikket_web/templates/invite_reset_success.html:11
+msgid "You can now log in using your new password."
+msgstr ""
+
+#: snikket_web/templates/invite_reset_success.html:12
+#: snikket_web/templates/invite_success.html:18
+msgid "You can now safely close this page."
+msgstr "Vous pouvez maintenant fermer cette page en toute sécurité."
+
+#: snikket_web/templates/invite_reset_view.html:13
+#, fuzzy
+#| msgid "Change your password"
+msgid "Reset your password"
+msgstr "Changer votre mot de passe"
+
+#: snikket_web/templates/invite_reset_view.html:14
+#, python-format
+msgid ""
+"This page allows you to reset the password of your account, <strong>"
+"%(account_jid)s</strong>, once."
+msgstr ""
+
+#: snikket_web/templates/invite_reset_view.html:16
+#, fuzzy
+#| msgid "Using the Snikket app"
+msgid "Using the app"
+msgstr "En utilisant l'application Snikket"
+
+#: snikket_web/templates/invite_reset_view.html:17
+msgid "To reset your password using the Snikket App, tap the button below."
+msgstr ""
+
+#: snikket_web/templates/invite_reset_view.html:24
+msgid ""
+"Alternatively, you can scan the below code with the Snikket App using the "
+"Scan button at the top."
+msgstr ""
+
+#: snikket_web/templates/invite_reset_view.html:25
+#: snikket_web/templates/invite_view.html:75
+msgid ""
+"Your camera will turn on. Point it at the square code below until it is "
+"within the highlighted square on your screen, and wait until the app "
+"recognises it."
+msgstr ""
+"Votre caméra s'allumera. Pointez la caméra sur le code carré ci-dessous "
+"jusqu'à ce que celui-ci se trouve dans le carré surligné sur votre écran, et "
+"attendez que l'application la reconnaisse."
+
+#: snikket_web/templates/invite_reset_view.html:26
+msgid "You will then be prompted to enter a new password for your account."
+msgstr ""
+
+#: snikket_web/templates/invite_reset_view.html:28
+#: snikket_web/templates/invite_view.html:43
+msgid "Alternatives"
+msgstr "Alternatives"
+
+#: snikket_web/templates/invite_reset_view.html:29
+#, python-format
+msgid ""
+"You can also <a href=\"%(reset_url)s\">reset your password online</a> if the "
+"above button or scanning the QR code does not work for you."
+msgstr ""
+
 #: snikket_web/templates/invite_success.html:5
 #, python-format
 msgid "Successfully registered on %(site_name)s | Snikket"
@@ -820,6 +924,12 @@ msgstr ""
 "Félicitations ! Vous vous êtes inscrit avec succès sur %(site_name)s en tant "
 "que %(jid)s."
 
+#: snikket_web/templates/invite_success.html:13
+#, fuzzy
+#| msgid "Group chat address"
+msgid "Your address"
+msgstr "Adresse de la conversation de groupe"
+
 #: snikket_web/templates/invite_success.html:17
 msgid ""
 "You can now set up your legacy XMPP client with the above address and the "
@@ -827,10 +937,6 @@ msgid ""
 msgstr ""
 "Vous pouvez maintenant configurer votre ancien client XMPP avec l'adresse ci-"
 "dessus et le mot de passe que vous avez choisi lors de l'enregistrement."
-
-#: snikket_web/templates/invite_success.html:18
-msgid "You can now safely close this page."
-msgstr "Vous pouvez maintenant fermer cette page en toute sécurité."
 
 #: snikket_web/templates/invite_view.html:6
 #, python-format
@@ -868,7 +974,7 @@ msgstr "Installez l'application Snikket sur votre appareil Android ou iOS."
 #, python-format
 msgid ""
 "Install the Snikket App on your Android device (<a href=\"%(ios_info_url)s\" "
-"target=\"_blank\" rel=\"noopener noreferrer\">iOS coming soon!</a>)."
+"rel=\"noopener noreferrer\" target=\"_blank\">iOS coming soon!</a>)."
 msgstr ""
 
 #: snikket_web/templates/invite_view.html:27
@@ -891,10 +997,6 @@ msgstr ""
 "Après l'installation, l'application devrait s'ouvrir automatiquement et vous "
 "inviter à créer un compte. Si ce n'est pas le cas, il suffit de cliquer sur "
 "le bouton ci-dessous."
-
-#: snikket_web/templates/invite_view.html:43
-msgid "Alternatives"
-msgstr "Alternatives"
 
 #: snikket_web/templates/invite_view.html:44
 #, python-format
@@ -948,16 +1050,6 @@ msgid ""
 msgstr ""
 "Installez l'application Snikket sur votre appareil mobile, ouvrez-la et "
 "appuyez sur le bouton \"Scan\" en haut."
-
-#: snikket_web/templates/invite_view.html:75
-msgid ""
-"Your camera will turn on. Point it at the square code below until it is "
-"within the highlighted square on your screen, and wait until the app "
-"recognises it."
-msgstr ""
-"Votre caméra s'allumera. Pointez la caméra sur le code carré ci-dessous "
-"jusqu'à ce que celui-ci se trouve dans le carré surligné sur votre écran, et "
-"attendez que l'application la reconnaisse."
 
 #: snikket_web/templates/library.j2:18
 msgid "Copy link"
@@ -1021,11 +1113,6 @@ msgstr "Adresse de la conversation de groupe"
 #| msgid "Update profile"
 msgid "Edit profile"
 msgstr "Mettre à jour le profil"
-
-#: snikket_web/templates/user_home.html:32
-#: snikket_web/templates/user_passwd.html:32
-msgid "Change password"
-msgstr "Changer de mot de passe"
 
 #: snikket_web/templates/user_home.html:38
 #, fuzzy
