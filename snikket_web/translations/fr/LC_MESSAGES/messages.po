@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
 "PO-Revision-Date: 2021-01-30 13:34+0000\n"
-"Last-Translator: franck <dev@monanderos.fr>\n"
+"Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/fr/>\n"
 "Language: fr\n"
@@ -491,7 +491,7 @@ msgstr "Ajouter un utilisateur existant"
 
 #: snikket_web/templates/admin_edit_circle.html:94
 msgid "All users added"
-msgstr ""
+msgstr "Tous les utilisateurs ont été ajoutés"
 
 #: snikket_web/templates/admin_edit_circle.html:95
 msgid "All users on this service are already in this circle."
@@ -547,10 +547,8 @@ msgid "Created"
 msgstr "Créé le"
 
 #: snikket_web/templates/admin_home.html:4
-#, fuzzy
-#| msgid "Welcome to the administration dashboard!"
 msgid "Welcome to the admin panel!"
-msgstr "Bienvenue sur votre tableau de bord d’administration !"
+msgstr "Bienvenue sur votre panneau d’administration !"
 
 #: snikket_web/templates/admin_home.html:5
 #, python-format
@@ -558,16 +556,14 @@ msgid "At your service, %(user_name)s."
 msgstr "À votre service, %(user_name)s."
 
 #: snikket_web/templates/admin_home.html:9
-#, fuzzy
-#| msgid "Username"
 msgid "Users"
-msgstr "Nom d’utilisateur"
+msgstr "Utilisateurs"
 
 #: snikket_web/templates/admin_home.html:11
-#, fuzzy
-#| msgid "Create password reset link for %(user_name)s"
 msgid "Create password reset links or delete users."
-msgstr "Crée un lien de réinitialisation de mot de passe pour %(user_name)s"
+msgstr ""
+"Créer des liens de réinitialisation de mot de passe ou supprimer des "
+"utilisateurs."
 
 #: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_users.html:4
@@ -579,16 +575,12 @@ msgid "Create and manage social circles represented on your service."
 msgstr "Créer et gérer les cercles sociaux présents dans votre service."
 
 #: snikket_web/templates/admin_home.html:27
-#, fuzzy
-#| msgid "Invitation type"
 msgid "Invitations"
-msgstr "Type d’invitation"
+msgstr "Invitations"
 
 #: snikket_web/templates/admin_home.html:29
-#, fuzzy
-#| msgid "Create, revoke or view invitations."
 msgid "Create, revoke or copy invitations."
-msgstr "Créer, révoquer, ou voir les invitations."
+msgstr "Créer, révoquer, ou copier des invitations."
 
 #: snikket_web/templates/admin_home.html:31
 #: snikket_web/templates/admin_invites.html:8
@@ -596,14 +588,12 @@ msgid "Manage invitations"
 msgstr "Gérer les invitations"
 
 #: snikket_web/templates/admin_home.html:36
-#, fuzzy
-#| msgid "Go back to your user’s web portal page."
 msgid "Go back to your user's web portal page."
-msgstr "Retourner à la page de l’utilisateur."
+msgstr "Retourner au portail web de votre utilisateur."
 
 #: snikket_web/templates/admin_home.html:38
 msgid "Exit admin panel"
-msgstr ""
+msgstr "Quitter le panneau d’administration"
 
 #: snikket_web/templates/admin_invites.html:10
 msgid "Pending invitations"
@@ -790,40 +780,37 @@ msgstr ""
 
 #: snikket_web/templates/invite_reset.html:9
 #: snikket_web/templates/invite_reset_view.html:9
-#, fuzzy
-#| msgid "Change your password"
 msgid "Reset your password | Snikket"
-msgstr "Changer votre mot de passe"
+msgstr "Réinitialiser votre mot de passe | Snikket"
 
 #: snikket_web/templates/invite_reset.html:15
-#, fuzzy
-#| msgid "Change your password"
 msgid "Reset your password online"
-msgstr "Changer votre mot de passe"
+msgstr "Réinitialiser votre mot de passe en ligne"
 
 #: snikket_web/templates/invite_reset.html:16
 msgid ""
 "To reset your password online, fill out the fields below and confirm using "
 "the button."
 msgstr ""
+"Pour réinitialiser votre mot de passe en ligne, veuillez remplir les champs "
+"ci-dessous et confirmez en utilisant le bouton."
 
 #: snikket_web/templates/invite_reset_success.html:5
 msgid "Password reset successful | Snikket"
-msgstr ""
+msgstr "Réinitialisation du mot de passe réussie | Snikket"
 
 #: snikket_web/templates/invite_reset_success.html:8
-#, fuzzy
-#| msgid "Password reset"
 msgid "Password reset successful"
-msgstr "Réinitialisation de mot de passe"
+msgstr "Réinitialisation du mot de passe réussie"
 
 #: snikket_web/templates/invite_reset_success.html:10
 msgid "Your password has been changed"
-msgstr ""
+msgstr "Votre mot de passe a été changé"
 
 #: snikket_web/templates/invite_reset_success.html:11
 msgid "You can now log in using your new password."
 msgstr ""
+"Vous pouvez désormais vous connecter en utilisant votre nouveau mot de passe."
 
 #: snikket_web/templates/invite_reset_success.html:12
 #: snikket_web/templates/invite_success.html:18
@@ -831,10 +818,8 @@ msgid "You can now safely close this page."
 msgstr "Vous pouvez maintenant fermer cette page en toute sécurité."
 
 #: snikket_web/templates/invite_reset_view.html:14
-#, fuzzy
-#| msgid "Change your password"
 msgid "Reset your password"
-msgstr "Changer votre mot de passe"
+msgstr "Réinitialiser votre mot de passe"
 
 #: snikket_web/templates/invite_reset_view.html:15
 #, python-format
@@ -842,22 +827,26 @@ msgid ""
 "This page allows you to reset the password of your account, <strong>"
 "%(account_jid)s</strong>, once."
 msgstr ""
+"Cette page vous permet de réinitialiser le mot de passe de votre compte, "
+"<strong>%(account_jid)s</strong>, une seule fois."
 
 #: snikket_web/templates/invite_reset_view.html:17
-#, fuzzy
-#| msgid "Using the Snikket app"
 msgid "Using the app"
-msgstr "En utilisant l'application Snikket"
+msgstr "En utilisant l'application"
 
 #: snikket_web/templates/invite_reset_view.html:18
 msgid "To reset your password using the Snikket App, tap the button below."
 msgstr ""
+"Pour réinitialiser votre mot de passe en utilisant l’Application Snikket, "
+"touchez le bouton ci-dessous."
 
 #: snikket_web/templates/invite_reset_view.html:25
 msgid ""
 "Alternatively, you can scan the below code with the Snikket App using the "
 "Scan button at the top."
 msgstr ""
+"Vous pouvez aussi scanner le code ci-dessous avec l’Application Snikket en "
+"utilisant le bouton Scan tout en haut."
 
 #: snikket_web/templates/invite_reset_view.html:26
 #: snikket_web/templates/invite_view.html:75
@@ -873,6 +862,8 @@ msgstr ""
 #: snikket_web/templates/invite_reset_view.html:27
 msgid "You will then be prompted to enter a new password for your account."
 msgstr ""
+"Il vous sera ensuite proposé d’entrer un nouveau mot de passe pour votre "
+"compte."
 
 #: snikket_web/templates/invite_reset_view.html:29
 #: snikket_web/templates/invite_view.html:43
@@ -885,6 +876,9 @@ msgid ""
 "You can also <a href=\"%(reset_url)s\">reset your password online</a> if the "
 "above button or scanning the QR code does not work for you."
 msgstr ""
+"Vous pouvez aussi <a href=\"%(reset_url)s\">réinitialiser votre mot de passe "
+"en ligne</a> si le bouton ci-dessus ou le scan du QR code ne fonctionnent "
+"pas pour vous."
 
 #: snikket_web/templates/invite_success.html:5
 #, python-format
@@ -905,10 +899,8 @@ msgstr ""
 "que %(jid)s."
 
 #: snikket_web/templates/invite_success.html:13
-#, fuzzy
-#| msgid "Group chat address"
 msgid "Your address"
-msgstr "Adresse de la conversation de groupe"
+msgstr "Votre adresse"
 
 #: snikket_web/templates/invite_success.html:17
 msgid ""
@@ -956,6 +948,9 @@ msgid ""
 "Install the Snikket App on your Android device (<a href=\"%(ios_info_url)s\" "
 "rel=\"noopener noreferrer\" target=\"_blank\">iOS coming soon!</a>)."
 msgstr ""
+"Installez l’Application Snikket sur votre appareil Android (<a href=\""
+"%(ios_info_url)s\" rel=\"noopener noreferrer\" target=\"_blank\">iOS "
+"disponible bientôt !</a>)."
 
 #: snikket_web/templates/invite_view.html:27
 msgid "Get it on Google Play"
@@ -1044,16 +1039,12 @@ msgid "deleted"
 msgstr "supprimé"
 
 #: snikket_web/templates/library.j2:122
-#, fuzzy
-#| msgid "Manage users and invitations of this Snikket service."
 msgid "Can be used multiple times to create accounts on this Snikket service."
-msgstr "Gérer les utilisateurs et invitations de ce service Snikket."
+msgstr "Peut être utilisée pour créer plusieurs comptes sur ce service Snikket."
 
 #: snikket_web/templates/library.j2:124
-#, fuzzy
-#| msgid "Manage users and invitations of this Snikket service."
 msgid "Can be used once to create an account on this Snikket service."
-msgstr "Gérer les utilisateurs et invitations de ce service Snikket."
+msgstr "Peut être utilisée pour créer un seul compte sur ce service Snikket."
 
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
@@ -1077,40 +1068,29 @@ msgid "Welcome home, %(user_name)s."
 msgstr "Bienvenue à la maison, %(user_name)s."
 
 #: snikket_web/templates/user_home.html:14
-#, fuzzy
-#| msgid "Create account"
 msgid "Your account"
-msgstr "Créer un compte"
+msgstr "Votre compte"
 
 #: snikket_web/templates/user_home.html:20
-#, fuzzy
-#| msgid "Group chat address"
 msgid "Your XMPP address"
-msgstr "Adresse de la conversation de groupe"
+msgstr "Votre adresse XMPP"
 
 #: snikket_web/templates/user_home.html:31
-#, fuzzy
-#| msgid "Update profile"
 msgid "Edit profile"
-msgstr "Mettre à jour le profil"
+msgstr "Éditer votre profil"
 
 #: snikket_web/templates/user_home.html:38
-#, fuzzy
-#| msgid "About Snikket"
 msgid "Your Snikket"
-msgstr "À propos de Snikket"
+msgstr "Votre Snikket"
 
 #: snikket_web/templates/user_home.html:40
-#, fuzzy
-#| msgid "Manage users and invitations of this Snikket service."
 msgid "Manage users, invitations and circles of your Snikket service."
-msgstr "Gérer les utilisateurs et invitations de ce service Snikket."
+msgstr ""
+"Gérer les utilisateurs, invitations et cercles de votre service Snikket."
 
 #: snikket_web/templates/user_home.html:42
-#, fuzzy
-#| msgid "Admin area"
 msgid "Admin panel"
-msgstr "Zone d’administration"
+msgstr "Panneau d’administration"
 
 #: snikket_web/templates/user_logout.html:8
 msgid "Sign out of the Snikket Web Portal"
@@ -1147,10 +1127,8 @@ msgstr ""
 "passe sur chaque appareil."
 
 #: snikket_web/templates/user_profile.html:7
-#, fuzzy
-#| msgid "Update profile"
 msgid "Update your profile"
-msgstr "Mettre à jour le profil"
+msgstr "Mettre à jour votre profil"
 
 #: snikket_web/templates/user_profile.html:9
 msgid "Profile"
