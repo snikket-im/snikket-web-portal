@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
 "PO-Revision-Date: 2021-01-30 13:34+0000\n"
-"Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
+"Last-Translator: franck <dev@monanderos.fr>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/fr/>\n"
 "Language: fr\n"
@@ -392,11 +392,11 @@ msgstr "Copier le journal complet"
 #: snikket_web/templates/admin_users.html:22
 #, python-format
 msgid "Delete user %(user_name)s"
-msgstr "Supprimer l’utilisateur %(user_name)s"
+msgstr "Désinscrire l’utilisateur %(user_name)s"
 
 #: snikket_web/templates/admin_delete_user.html:6
 msgid "Delete user"
-msgstr "Supprimer un utilisateur"
+msgstr "Désinscrire un utilisateur"
 
 #: snikket_web/templates/admin_delete_user.html:8
 msgid "Are you sure you want to delete the following user?"
@@ -483,7 +483,7 @@ msgstr "Ce cercle n’a pas encore de membres."
 
 #: snikket_web/templates/admin_edit_circle.html:80
 msgid "Invite more members"
-msgstr "Inviter plus de membres"
+msgstr "Inviter des membres"
 
 #: snikket_web/templates/admin_edit_circle.html:83
 msgid "Add existing user"
