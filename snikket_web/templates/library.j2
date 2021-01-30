@@ -60,6 +60,7 @@
 {% macro clipboard_button(data, show_label=False, caller=None, class=None) -%}
 {%- set label = caller() -%}
 <a class="button{% if class %} {{ class }}{% endif %}"
+	href="#"
 {% if not show_label %}
 	aria-label="{{ label }}"
 	title="{{ label }}"
