@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
 "PO-Revision-Date: 2021-01-30 13:37+0000\n"
-"Last-Translator: franck <dev@monanderos.fr>\n"
+"Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/fr/>\n"
 "Language: fr\n"
@@ -617,7 +617,7 @@ msgstr "Supprime l’invitation"
 
 #: snikket_web/templates/admin_invites.html:57
 msgid "Currently, there are no pending invitations."
-msgstr "Il n'y a actuellement pas d'invitation valide."
+msgstr "Il n’y a actuellement pas d’invitation valide."
 
 #: snikket_web/templates/admin_reset_user_password.html:8
 msgid "Password reset"
