@@ -15,6 +15,7 @@ from quart import (
     render_template,
     current_app,
     redirect,
+    jsonify,
 )
 
 import environ
@@ -195,6 +196,44 @@ def create_app() -> quart.Quart:
             return redirect(url_for('user.index'))
 
         return redirect(url_for('main.login'))
+
+    @app.route("/site.webmanifest")
+    def site_manifest() -> quart.Response:
+        # this is needed for icons
+        return jsonify(
+            {
+                "name": "Snikket",
+                "short_name": "Snikket",
+                "icons": [
+                    {
+                        "src": url_for(
+                            "static",
+                            filename="img/android-chrome-192x192.png",
+                        ),
+                        "sizes": "192x192",
+                        "type": "image/png"
+                    },
+                    {
+                        "src": url_for(
+                            "static",
+                            filename="img/android-chrome-256x256.png",
+                        ),
+                        "sizes": "256x256",
+                        "type": "image/png"
+                    },
+                    {
+                        "src": url_for(
+                            "static",
+                            filename="img/android-chrome-512x512.png",
+                        ),
+                        "sizes": "512x512",
+                        "type": "image/png"
+                    },
+                ],
+                "theme_color": "#fbfdff",
+                "background_color": "#fbfdff",
+            }
+        )
 
     logging_config = app.config.get("LOGGING_CONFIG")
     if logging_config is not None:
