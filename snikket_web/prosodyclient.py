@@ -144,6 +144,7 @@ class HTTPSessionManager:
     async def _create(self) -> aiohttp.ClientSession:
         return aiohttp.ClientSession(headers={
             "Accept": "application/json",
+            "Host": current_app.config["SNIKKET_DOMAIN"],
         })
 
     async def teardown(self, exc: typing.Optional[BaseException]) -> None:
@@ -204,6 +205,7 @@ class HTTPAuthSessionManager(HTTPSessionManager):
             headers={
                 "Authorization": "Bearer {}".format(token),
                 "Accept": "application/json",
+                "Host": current_app.config["SNIKKET_DOMAIN"],
             }
         )
 
