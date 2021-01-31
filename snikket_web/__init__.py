@@ -143,7 +143,12 @@ class AppConfig:
     domain = environ.var()
     site_name = environ.var("")
     avatar_cache_ttl = environ.var(1800, converter=int)
-    languages = environ.var(["de", "en"], converter=autosplit)
+    languages = environ.var([
+        "de",
+        "en",
+        "fr",
+        "id",
+    ], converter=autosplit)
     apple_store_url = environ.var("")
 
 
