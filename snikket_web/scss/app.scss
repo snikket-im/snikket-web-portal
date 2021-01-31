@@ -1046,6 +1046,12 @@ pre.guru-meditation {
 		}
 	}
 
+	body#login {
+		.form-title {
+			color: $primary-800;
+		}
+	}
+
 	body > footer {
 		background-color: $gray-200;
 		color: $gray-800;

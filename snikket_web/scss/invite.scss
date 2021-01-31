@@ -183,3 +183,13 @@ div.form.layout-expanded .lwrap {
 	background-attachment: fixed;
 	background-size: cover;
 }
+
+/* dark mode */
+
+@media (prefers-color-scheme: dark) {
+	div.form.layout-expanded .lwrap {
+		span {
+			background: $gray-200;
+		}
+	}
+}
