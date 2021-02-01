@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
-"PO-Revision-Date: 2021-02-01 15:11+0000\n"
+"PO-Revision-Date: 2021-02-02 21:01+0000\n"
 "Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/fr/>\n"
@@ -877,7 +877,7 @@ msgid ""
 "above button or scanning the QR code does not work for you."
 msgstr ""
 "Vous pouvez aussi <a href=\"%(reset_url)s\">réinitialiser votre mot de passe "
-"en ligne</a> si le bouton ci-dessus ou le scan du QR code ne fonctionnent "
+"en ligne</a> si le bouton ci-dessus ou le scan du QR code ne fonctionnent "
 "pas pour vous."
 
 #: snikket_web/templates/invite_success.html:5
@@ -954,7 +954,7 @@ msgstr ""
 
 #: snikket_web/templates/invite_view.html:27
 msgid "Get it on Google Play"
-msgstr "Obtenez-la sur Google Play"
+msgstr "Obtenez-la sur Google Play"
 
 #: snikket_web/templates/invite_view.html:29
 msgid "Download on the App Store"
@@ -1001,11 +1001,11 @@ msgid ""
 msgstr ""
 "Vous pouvez transférer cette invitation sur votre appareil mobile en "
 "scannant un code avec votre appareil photo. Vous pouvez utiliser soit une "
-"application de scanner QR, soit l’application Snikket elle-même."
+"application de scanner de QR code, soit l’application Snikket elle-même."
 
 #: snikket_web/templates/invite_view.html:61
 msgid "Using a QR code scanner"
-msgstr "En utilisant un scanner de codes QR"
+msgstr "En utilisant un scanner de QR code"
 
 #: snikket_web/templates/invite_view.html:63
 msgid "Using the Snikket app"
@@ -1015,7 +1015,7 @@ msgstr "En utilisant l’application Snikket"
 msgid ""
 "Use a <em>QR code</em> scanner on your mobile device to scan the code below:"
 msgstr ""
-"Utilisez un scanner de <em>QR code</em> sur votre appareil mobile pour "
+"Utilisez un scanner de <em>QR code</em> sur votre appareil mobile pour "
 "scanner le code ci-dessous :"
 
 #: snikket_web/templates/invite_view.html:74
