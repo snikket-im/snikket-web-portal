@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
-"PO-Revision-Date: 2021-01-31 12:54+0000\n"
+"PO-Revision-Date: 2021-02-02 21:01+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
 "Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/id/>\n"
@@ -70,7 +70,7 @@ msgstr "Grup"
 
 #: snikket_web/admin.py:161
 msgid "New invitation link"
-msgstr "Tautan undangan terbaru"
+msgstr "Tautan undangan baru"
 
 #: snikket_web/admin.py:223
 msgid "Revoke"
@@ -285,7 +285,7 @@ msgstr "Wewenang Administrator"
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:23
 msgid "Manage circles"
-msgstr "Atur kelompok"
+msgstr "Kelola kelompok"
 
 #: snikket_web/templates/admin_circles.html:5
 msgid ""
@@ -571,7 +571,7 @@ msgstr "Buat tautan setel ulang kata sandi atau hapus pengguna."
 #: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_users.html:4
 msgid "Manage users"
-msgstr "Atur pengguna"
+msgstr "Kelola pengguna"
 
 #: snikket_web/templates/admin_home.html:21
 msgid "Create and manage social circles represented on your service."
@@ -583,7 +583,7 @@ msgstr "Undangan"
 
 #: snikket_web/templates/admin_home.html:29
 msgid "Create, revoke or copy invitations."
-msgstr "Buat, batalkan, atau kopi undangan."
+msgstr "Buat, batalkan, atau salin undangan."
 
 #: snikket_web/templates/admin_home.html:31
 #: snikket_web/templates/admin_invites.html:8
@@ -612,7 +612,7 @@ msgstr "Lihat detil undangan"
 
 #: snikket_web/templates/admin_invites.html:46
 msgid "Copy invite link to clipboard"
-msgstr "Kopi tautan undangan ke papan klip"
+msgstr "Salin tautan undangan ke papan klip"
 
 #: snikket_web/templates/admin_invites.html:49
 msgid "Delete invitation"
@@ -902,8 +902,8 @@ msgid ""
 "You can now set up your legacy XMPP client with the above address and the "
 "password you chose during registration."
 msgstr ""
-"Anda sekarang dapat mengatur aplikasi XMPP lawas Anda dengan alamat di atas "
-"dan kata sandi yang Anda pilih saat pendaftaran."
+"Sekarang anda dapat mempersiapkan aplikasi XMPP lawas Anda dengan alamat di "
+"atas dan kata sandi yang dipilih saat pendaftaran."
 
 #: snikket_web/templates/invite_view.html:6
 #, python-format
@@ -1019,7 +1019,7 @@ msgstr ""
 
 #: snikket_web/templates/library.j2:18
 msgid "Copy link"
-msgstr "Kopi tautan"
+msgstr "Salin tautan"
 
 #: snikket_web/templates/library.j2:81
 msgid "Invalid input"
@@ -1044,7 +1044,7 @@ msgstr "Login Snikket"
 
 #: snikket_web/templates/login.html:14
 msgid "Enter your Snikket address and password to manage your account."
-msgstr "Ketik alamat Snikket dan kata sandinya untuk mengatur akun anda."
+msgstr "Ketik alamat Snikket dan kata sandinya untuk mengelola akun anda."
 
 #: snikket_web/templates/login.html:18
 msgid "Login failed"
