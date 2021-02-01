@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
-"PO-Revision-Date: 2021-02-01 11:20+0000\n"
+"PO-Revision-Date: 2021-02-02 21:01+0000\n"
 "Last-Translator: riccio <unriccio@email.it>\n"
 "Language-Team: Italian <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/it/>\n"
@@ -188,7 +188,7 @@ msgstr "Chiunque"
 #: snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/templates/admin_users.html:11 snikket_web/user.py:55
 msgid "Display name"
-msgstr "Nome mostrato"
+msgstr "Nome visualizzato"
 
 #: snikket_web/user.py:59
 msgid "Avatar"
@@ -292,7 +292,7 @@ msgid ""
 "<em>Circles</em> aim to help people who are in the same social circle "
 "find each other on your service."
 msgstr ""
-"Le <em>cerchie</em> cercano di aiutare le persone che appartengono agli "
+"Lo scopo delle <em>cerchie</em> è di aiutare le persone appartenenti agli "
 "stessi gruppi a trovarsi all'interno del vostro servizio."
 
 #: snikket_web/templates/admin_circles.html:6
@@ -344,8 +344,8 @@ msgid ""
 "Currently, there are no circles on this service. Use the form below to "
 "create one."
 msgstr ""
-"Non ci sono cerchie in questo servizio. Usa il modulo sottostante per "
-"crearne una."
+"Al momento non ci sono cerchie in questo servizio. Usa il modulo sottostante "
+"per crearne una."
 
 #: snikket_web/templates/admin_circles.html:44
 msgid "New circle"
@@ -397,7 +397,7 @@ msgstr "Elimina utente %(user_name)s"
 
 #: snikket_web/templates/admin_delete_user.html:6
 msgid "Delete user"
-msgstr "Delete utente"
+msgstr "Elimina utente"
 
 #: snikket_web/templates/admin_delete_user.html:8
 msgid "Are you sure you want to delete the following user?"
@@ -410,7 +410,7 @@ msgstr "Nome utente"
 
 #: snikket_web/templates/admin_delete_user.html:15
 msgid "Danger"
-msgstr "Rischio"
+msgstr "Pericolo"
 
 #: snikket_web/templates/admin_delete_user.html:16
 msgid ""
@@ -790,7 +790,7 @@ msgid ""
 "To reset your password online, fill out the fields below and confirm "
 "using the button."
 msgstr ""
-"Riempi i campi sottostanti e premi il pulsante di conferma per reimpostare "
+"Compila i campi sottostanti e premi il pulsante di conferma per reimpostare "
 "la tua password online."
 
 #: snikket_web/templates/invite_reset_success.html:5
@@ -842,7 +842,7 @@ msgid ""
 "Alternatively, you can scan the below code with the Snikket App using the"
 " Scan button at the top."
 msgstr ""
-"Alternativamente, puoi scansionare il codice sottostante con l'applicazione "
+"In alternativa, puoi scansionare il codice sottostante con l'applicazione "
 "Snikket utilizzando il pulsante di scansione in alto."
 
 #: snikket_web/templates/invite_reset_view.html:26
