@@ -48,3 +48,12 @@ jobs:
       - name: Linting
         run: |
           python -m flake8 snikket_web
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build the Docker image
+        run: >-
+          docker build .
