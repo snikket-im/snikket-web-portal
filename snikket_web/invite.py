@@ -48,6 +48,7 @@ def context() -> typing.Mapping[str, typing.Any]:
 
 
 @bp.route("/<id_>")
+@bp.route("/<id_>/")
 async def view(id_: str) -> str:
     try:
         invite = await client.get_public_invite_by_id(id_)
