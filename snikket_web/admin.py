@@ -1,4 +1,3 @@
-import asyncio
 import json
 import typing
 
@@ -362,25 +361,21 @@ async def edit_circle(id_: str) -> typing.Union[str, quart.Response]:
                 return redirect(url_for(".circles"))
             raise
 
-        circle_members = await asyncio.gather(*(
-            client.get_user_by_localpart(
-                localpart,
-                session=session,
-            )
-            for localpart in sorted(circle.members)
-        ))
-
-        users = await client.list_users()
+        users = sorted(
+            await client.list_users(),
+            key=lambda x: x.localpart
+        )
+        circle_members = [
+            user for user in users
+            if user.localpart in circle.members
+        ]
 
     form = EditCircleForm()
-    form.user_to_add.choices = sorted(
-        (
-            (u.localpart, u.localpart)
-            for u in users
-            if u.localpart not in circle.members
-        ),
-        key=lambda x: x[1]
-    )
+    form.user_to_add.choices = [
+        (user.localpart, user.localpart)
+        for user in users
+        if user.localpart not in circle.members
+    ]
     valid_users = [x[0] for x in form.user_to_add.choices]
 
     invite_form = InvitePost()
