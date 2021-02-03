@@ -67,6 +67,10 @@ div#topbar {
 		font-size: $_top-h-size;
 		line-height: 1.5;
 
+		body.debug & {
+			color: red;
+		}
+
 		@media screen and (max-width: $small-screen-threshold) {
 			font-size: $_top-h-small-size;
 		}

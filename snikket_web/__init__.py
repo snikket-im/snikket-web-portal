@@ -48,6 +48,7 @@ async def proc() -> typing.Dict[str, typing.Any]:
         "text_to_css": colour.text_to_css,
         "lang": infra.selected_locale(),
         "user_info": user_info,
+        "is_in_debug_mode": current_app.debug,
     }
 
 
