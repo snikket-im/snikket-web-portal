@@ -17,7 +17,7 @@
 		<h3>{% trans %}Software Versions{% endtrans %}</h3>
 		<pre>Snikket Server
 Domain: {{ config["SNIKKET_DOMAIN"] }}
-Snikket Web Portal ({{ version }})
+Snikket Web Portal{% if version %} ({{ version }}){% endif %}
 {%- if extra_versions -%}
 {% for name, version in extra_versions.items() %}
 {{ name }} ({{ version }}){% endfor %}

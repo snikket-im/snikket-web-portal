@@ -79,8 +79,11 @@ async def login() -> typing.Union[str, quart.Response]:
 
 @bp.route("/meta/about.html")
 async def about() -> str:
+    version = None
     extra_versions = {}
-    if current_app.debug:
+
+    if current_app.debug or client.is_admin_session:
+        version = _version.version
         extra_versions["Quart"] = quart.__version__
         extra_versions["aiohttp"] = aiohttp.__version__
         extra_versions["babel"] = babel.__version__
@@ -89,7 +92,7 @@ async def about() -> str:
 
     return await render_template(
         "about.html",
-        version=_version.version,
+        version=version,
         extra_versions=extra_versions,
     )
 
