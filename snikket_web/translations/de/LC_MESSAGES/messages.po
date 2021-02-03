@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
-"PO-Revision-Date: 2021-01-31 12:54+0000\n"
+"PO-Revision-Date: 2021-02-04 19:02+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language-Team: German <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/de/>\n"
@@ -653,7 +653,7 @@ msgstr "Debugging-Informationen für %(user_name)s anzeigen"
 #: snikket_web/templates/admin_users.html:28
 #, python-format
 msgid "Create password reset link for %(user_name)s"
-msgstr "Benutzer %(user_name)s löschen"
+msgstr "Link zum Zurücksetzen des Passwortes von %(user_name)s erzeugen"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
