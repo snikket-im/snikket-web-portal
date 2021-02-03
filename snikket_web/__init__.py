@@ -149,7 +149,7 @@ class AppConfig:
         "en",
         "fr",
         "id",
-        "po",
+        "pl",
     ], converter=autosplit)
     apple_store_url = environ.var("")
 
