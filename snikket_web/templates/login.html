@@ -32,7 +32,5 @@
 		</div>
 	</from>
 </div></main></div>
-<footer>
-	<ul><li>{% trans about_url=url_for('.about') %}A <a href="{{ about_url }}">Snikket</a> service{% endtrans %}</li></ul>
-</footer>
+{%- include "_footer.html" -%}
 {% endblock %}
