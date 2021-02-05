@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
-"PO-Revision-Date: 2021-01-31 12:54+0000\n"
+"PO-Revision-Date: 2021-02-06 18:02+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
 "Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/pl/>\n"
@@ -268,8 +268,8 @@ msgid ""
 "\"%(apache20_url)s\">Apache 2.0 License</a>."
 msgstr ""
 "Ikony wykorzystane w portalu to <a href=\"%(source_url)s\">Google’s Material "
-"Icons</a>, udostępnione przez Google na warunkach licencji<a href="
-"\"%(apache20_url)s\">Apache 2.0</a>."
+"Icons</a>, udostępnione przez Google na warunkach licencji <a href=\""
+"%(apache20_url)s\">Apache 2.0</a>."
 
 #: snikket_web/templates/about.html:17
 msgid "Software Versions"
@@ -1040,13 +1040,13 @@ msgstr "usunięty"
 #: snikket_web/templates/library.j2:122
 msgid "Can be used multiple times to create accounts on this Snikket service."
 msgstr ""
-"Może być wykorzystywany wielokrotnie, by utworzyć konto na tym serwerze "
+"Może być wykorzystywane wielokrotnie, by utworzyć konto na tym serwerze "
 "Snikket."
 
 #: snikket_web/templates/library.j2:124
 msgid "Can be used once to create an account on this Snikket service."
 msgstr ""
-"Może być wykorzystany jeden raz, by utworzyć konto na tym serwerze Snikket."
+"Może być wykorzystane jeden raz, by utworzyć konto na tym serwerze Snikket."
 
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
