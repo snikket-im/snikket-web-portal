@@ -8,18 +8,21 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-02-06 18:02+0000\n"
+"Last-Translator: Tilman Jiménez <tilman.jimenez@tu-dortmund.de>\n"
+"Language-Team: Spanish (Mexico) <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/es_MX/>\n"
 "Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.4.2\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:60
 msgid "Delete user permanently"
-msgstr ""
+msgstr "Eliminar usuario permanentemente"
 
 #: snikket_web/admin.py:129
 msgid "Invite to circle"
@@ -31,39 +34,39 @@ msgstr ""
 
 #: snikket_web/admin.py:140
 msgid "Valid for"
-msgstr ""
+msgstr "Válido por"
 
 #: snikket_web/admin.py:142
 msgid "One hour"
-msgstr ""
+msgstr "Una hora"
 
 #: snikket_web/admin.py:143
 msgid "Twelve hours"
-msgstr ""
+msgstr "Doce horas"
 
 #: snikket_web/admin.py:144
 msgid "One day"
-msgstr ""
+msgstr "Un día"
 
 #: snikket_web/admin.py:145
 msgid "One week"
-msgstr ""
+msgstr "Una semana"
 
 #: snikket_web/admin.py:146
 msgid "Four weeks"
-msgstr ""
+msgstr "Cuatro semanas"
 
 #: snikket_web/admin.py:152 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
-msgstr ""
+msgstr "Tipo de invitación"
 
 #: snikket_web/admin.py:154 snikket_web/templates/library.j2:116
 msgid "Individual"
-msgstr ""
+msgstr "Individual"
 
 #: snikket_web/admin.py:155 snikket_web/templates/library.j2:114
 msgid "Group"
-msgstr ""
+msgstr "Grupo"
 
 #: snikket_web/admin.py:161
 msgid "New invitation link"
@@ -75,7 +78,7 @@ msgstr ""
 
 #: snikket_web/admin.py:283 snikket_web/admin.py:327
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #: snikket_web/admin.py:288 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
@@ -83,7 +86,7 @@ msgstr ""
 
 #: snikket_web/admin.py:332
 msgid "Select user"
-msgstr ""
+msgstr "Seleccionar usuario"
 
 #: snikket_web/admin.py:337
 msgid "Update circle"
@@ -103,23 +106,23 @@ msgstr ""
 
 #: snikket_web/invite.py:93
 msgid "Username"
-msgstr ""
+msgstr "Usuario"
 
 #: snikket_web/invite.py:97 snikket_web/invite.py:164 snikket_web/main.py:41
 msgid "Password"
-msgstr ""
+msgstr "Contraseña"
 
 #: snikket_web/invite.py:101 snikket_web/invite.py:168
 msgid "Confirm password"
-msgstr ""
+msgstr "Confirmar contraseña"
 
 #: snikket_web/invite.py:105 snikket_web/invite.py:172
 msgid "The passwords must match"
-msgstr ""
+msgstr "Las contraseñas deben ser las mismas"
 
 #: snikket_web/invite.py:110
 msgid "Create account"
-msgstr ""
+msgstr "Crear cuenta"
 
 #: snikket_web/invite.py:137
 msgid "That username is already taken"
@@ -127,44 +130,44 @@ msgstr ""
 
 #: snikket_web/invite.py:141 snikket_web/invite.py:205
 msgid "Registration was declined for unknown reasons"
-msgstr ""
+msgstr "El registro ha sido declinado por razones no identificadas"
 
 #: snikket_web/invite.py:145
 msgid "The username is not valid"
-msgstr ""
+msgstr "El nombre de usuario no es válido"
 
 #: snikket_web/invite.py:177 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:32
 msgid "Change password"
-msgstr ""
+msgstr "Cambiar contraseña"
 
 #: snikket_web/main.py:36
 msgid "Address"
-msgstr ""
+msgstr "Dirección"
 
 #: snikket_web/main.py:46
 msgid "Sign in"
-msgstr ""
+msgstr "Ingresar"
 
 #: snikket_web/main.py:72
 msgid "Invalid username or password."
-msgstr ""
+msgstr "Nombre de usuario o contraseña no válidos."
 
 #: snikket_web/user.py:21
 msgid "Current password"
-msgstr ""
+msgstr "Contraseña actual"
 
 #: snikket_web/user.py:26
 msgid "New password"
-msgstr ""
+msgstr "Nueva contraseña"
 
 #: snikket_web/user.py:31
 msgid "Confirm new password"
-msgstr ""
+msgstr "Confirmar nueva contraseña"
 
 #: snikket_web/user.py:35
 msgid "The new passwords must match"
-msgstr ""
+msgstr "Las nuevas contraseñas deben ser iguales"
 
 #: snikket_web/user.py:42
 msgid "Sign out"
@@ -172,15 +175,15 @@ msgstr ""
 
 #: snikket_web/user.py:47
 msgid "Nobody"
-msgstr ""
+msgstr "Nadie"
 
 #: snikket_web/user.py:48
 msgid "Friends only"
-msgstr ""
+msgstr "Únicamente amigos"
 
 #: snikket_web/user.py:49
 msgid "Everyone"
-msgstr ""
+msgstr "Todos"
 
 #: snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/templates/admin_users.html:11 snikket_web/user.py:55
@@ -193,15 +196,15 @@ msgstr ""
 
 #: snikket_web/user.py:63
 msgid "Profile visibility"
-msgstr ""
+msgstr "Visibilidad de perfil"
 
 #: snikket_web/user.py:68
 msgid "Update profile"
-msgstr ""
+msgstr "Actualizar perfil"
 
 #: snikket_web/user.py:93
 msgid "Incorrect password"
-msgstr ""
+msgstr "Contraseña incorrecta"
 
 #: snikket_web/templates/_footer.html:4 snikket_web/templates/login.html:36
 #, python-format
@@ -210,7 +213,7 @@ msgstr ""
 
 #: snikket_web/templates/about.html:9
 msgid "About Snikket"
-msgstr ""
+msgstr "Acerca de Snikket"
 
 #: snikket_web/templates/about.html:10
 #, python-format
@@ -218,19 +221,21 @@ msgid ""
 "To learn more about Snikket, visit the <a "
 "href=\"%(snikket_url)s\">Snikket website</a>."
 msgstr ""
+"Para aprender más sobre Snikket, visite <a href=\"%(snikket_url)s\">la "
+"página web de Snikket</a>."
 
 #: snikket_web/templates/about.html:11
 msgid "About this Service"
-msgstr ""
+msgstr "Acerca de este servicio"
 
 #: snikket_web/templates/about.html:12
 #, python-format
 msgid "This is the Snikket service <em>%(site_name)s</em>."
-msgstr ""
+msgstr "Este es el servicio Snikket <em>%(site_name)s</em>."
 
 #: snikket_web/templates/about.html:13
 msgid "Licenses"
-msgstr ""
+msgstr "Licencias"
 
 #: snikket_web/templates/about.html:14
 #, python-format
@@ -262,11 +267,11 @@ msgstr ""
 
 #: snikket_web/templates/about.html:27
 msgid "Back to the main page"
-msgstr ""
+msgstr "Regresar a la página principal"
 
 #: snikket_web/templates/admin_app.html:5
 msgid "Admin area"
-msgstr ""
+msgstr "Administración"
 
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:23
@@ -292,13 +297,13 @@ msgstr ""
 
 #: snikket_web/templates/admin_circles.html:14
 msgid "Members"
-msgstr ""
+msgstr "Miembros"
 
 #: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_invites.html:24
 #: snikket_web/templates/admin_users.html:12
 msgid "Actions"
-msgstr ""
+msgstr "Acciones"
 
 #: snikket_web/templates/admin_circles.html:25
 #, python-format
@@ -336,13 +341,15 @@ msgstr ""
 
 #: snikket_web/templates/admin_create_invite_form.html:5
 msgid "Create new invitation"
-msgstr ""
+msgstr "Crear una nueva invitación"
 
 #: snikket_web/templates/admin_create_invite_form.html:6
 msgid ""
 "Create a new invitation link to invite more users to your Snikket service"
 " by clicking the button below."
 msgstr ""
+"Presiona el botón para crear una nueva invitación y poder añadir más "
+"usuarios a tu servicio Snikket."
 
 #: snikket_web/templates/admin_debug_user.html:8
 #, python-format
@@ -352,7 +359,7 @@ msgstr ""
 #: snikket_web/templates/admin_debug_user.html:11
 #: snikket_web/templates/user_passwd.html:26
 msgid "Warning"
-msgstr ""
+msgstr "Peligro"
 
 #: snikket_web/templates/admin_debug_user.html:12
 msgid "The below dump may contain sensitive information."
@@ -370,15 +377,15 @@ msgstr ""
 #: snikket_web/templates/admin_users.html:22
 #, python-format
 msgid "Delete user %(user_name)s"
-msgstr ""
+msgstr "Eliminar al usuario %(user_name)s"
 
 #: snikket_web/templates/admin_delete_user.html:6
 msgid "Delete user"
-msgstr ""
+msgstr "Eliminar usuario"
 
 #: snikket_web/templates/admin_delete_user.html:8
 msgid "Are you sure you want to delete the following user?"
-msgstr ""
+msgstr "¿Seguro que quieres eliminar al siguiente usuario?"
 
 #: snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_users.html:10
