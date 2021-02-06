@@ -19,7 +19,7 @@
 		<p>{{ form.errors.values() | flatten | join(", ")}}</p>
 		{% endcall %}
 		{% endif %}
-		<div class="box alert" style="display: none;" id="id-warning">
+		<div class="box alert" role="alert" style="display: none;" id="id-warning">
 			<header>{% trans %}Incorrect address{% endtrans %}</header>
 			<p>{% trans snikket_domain=config["SNIKKET_DOMAIN"] %}This Snikket service only hosts addresses ending in <em>@{{ snikket_domain }}</em>. Your password was not sent.{% endtrans %}</p>
 		</div>
