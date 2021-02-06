@@ -22,7 +22,7 @@ import wtforms
 
 import flask_wtf
 
-from flask_babel import lazy_gettext as _l, _
+from flask_babel import lazy_gettext as _l
 
 from . import xmpputil, _version
 from .infra import client
