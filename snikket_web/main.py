@@ -52,6 +52,9 @@ async def index() -> quart.Response:
     return redirect(url_for("index"))
 
 
+ERR_CREDENTIALS_INVALID = _l("Invalid username or password.")
+
+
 @bp.route("/login", methods=["GET", "POST"])
 async def login() -> typing.Union[str, quart.Response]:
     if client.has_session and (await client.test_session()):
@@ -63,16 +66,20 @@ async def login() -> typing.Union[str, quart.Response]:
         localpart, domain, resource = xmpputil.split_jid(jid)
         if not localpart:
             localpart, domain = domain, current_app.config["SNIKKET_DOMAIN"]
-        jid = "{}@{}".format(localpart, domain)
-        password = form.password.data
-        try:
-            await client.login(jid, password)
-        except quart.exceptions.Unauthorized:
-            form.password.errors.append(
-                _("Invalid username or password.")
-            )
+        if domain != current_app.config["SNIKKET_DOMAIN"]:
+            # (a) prosody throws a 400 at us and I prefer to catch that here
+            # and (b) I don’t want to pass on this obviously not-for-here
+            # password further than necessary.
+            form.password.errors.append(ERR_CREDENTIALS_INVALID)
         else:
-            return redirect(url_for('user.index'))
+            jid = "{}@{}".format(localpart, domain)
+            password = form.password.data
+            try:
+                await client.login(jid, password)
+            except quart.exceptions.Unauthorized:
+                form.password.errors.append(ERR_CREDENTIALS_INVALID)
+            else:
+                return redirect(url_for('user.index'))
 
     return await render_template("login.html", form=form)
 
