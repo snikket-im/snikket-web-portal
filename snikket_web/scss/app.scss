@@ -1017,6 +1017,23 @@ div.profile-card {
 			display: none;
 		}
 	}
+
+
+	input[type="submit"], button, .button {
+		&.slimmify {
+			> svg.icon {
+				margin-right: 0;
+			}
+
+			> span {
+				position: absolute;
+				width: 1px;
+				height: 1px;
+				overflow: hidden;
+				top: -100px;
+			}
+		}
+	}
 }
 
 /* clipboard button */

@@ -5,5 +5,5 @@
 {% endblock %}
 {% block topbar_right %}
 {{- super() -}}
-{% call standard_button("logout", url_for("user.logout"), class="tertiary") %}{% trans %}Log out{% endtrans %}{% endcall %}
+{% call standard_button("logout", url_for("user.logout"), class="tertiary slimmify") %}{% trans %}Log out{% endtrans %}{% endcall %}
 {%- endblock %}
