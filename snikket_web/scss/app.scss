@@ -33,13 +33,35 @@ body {
 
 main {
 	padding: $w-l1;
-	margin-left: auto;
-	max-width: 60rem;
-	margin-right: auto;
 }
 
 #mwrap {
 	flex: 1;
+	display: flex;
+	flex-direction: row-reverse;
+
+	> .filler, > .flashbox {
+		flex: 1 1 1rem;
+	}
+
+	> main {
+		flex: 0 1 60rem;
+	}
+}
+
+@media screen and (max-width: $large-screen-threshold) {
+	#mwrap {
+		display: block;
+
+		> main {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+.flashbox > div.box > :first-child {
+	margin-top: 0;
 }
 
 /* top bar */

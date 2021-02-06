@@ -7,6 +7,25 @@
 	<div class="filler"></div>
 	{% block topbar_right %}{% endblock %}
 </div>
-<div id="mwrap"><main>{% block content %}{% endblock %}</main></div>
+<div id="mwrap">
+	{#- -#}
+	<div class="flashbox">
+		{%- for category, message in get_flashed_messages(True) -%}
+		<div class="box {{ category }} el-5" role="alert">
+			{% if category == "success" %}
+			<header>{% trans %}Operation successful{% endtrans %}</header>
+			{% elif category == "alert" %}
+			<header>{% trans %}Error{% endtrans %}</header>
+			{% endif %}
+			<p>{{ message }}</p>
+		</div>
+		{%- endfor -%}
+	</div>
+	{#- -#}
+	<main>{% block content %}{% endblock %}</main>
+	{#- -#}
+	<div class="filler"></div>
+	{#- -#}
+</div>
 {%- include "_footer.html" -%}
 {% endblock %}
