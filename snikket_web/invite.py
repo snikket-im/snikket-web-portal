@@ -48,6 +48,10 @@ def context() -> typing.Mapping[str, typing.Any]:
 
 
 @bp.route("/<id_>")
+async def view_old(id_: str) -> quart.Response:
+    return redirect(url_for(".view", id_=id_))
+
+
 @bp.route("/<id_>/")
 async def view(id_: str) -> str:
     try:
