@@ -12,13 +12,17 @@
 <div id="mwrap"><main><div class="form layout-expanded">
 	<h1 class="form-title">{{ config["SITE_NAME"] }}</h1>
 	<p class="form-desc">{{ _("Enter your Snikket address and password to manage your account.") }}</p>
-	<form method="POST" action="{{ url_for('.login') }}" name="login">
+	<form method="POST" action="{{ url_for('.login') }}" name="login" id="login-form" onsubmit="return domainCheck();" data-addressid="{{ form.address.id }}" data-domain="{{ config["SNIKKET_DOMAIN"] }}">
 		{{ form.csrf_token }}
 		{% if form.errors %}
 		{% call box("alert", _("Login failed")) %}
 		<p>{{ form.errors.values() | flatten | join(", ")}}</p>
 		{% endcall %}
 		{% endif %}
+		<div class="box alert" style="display: none;" id="id-warning">
+			<header>{% trans %}Incorrect address{% endtrans %}</header>
+			<p>{% trans snikket_domain=config["SNIKKET_DOMAIN"] %}This Snikket service only hosts addresses ending in <em>@{{ snikket_domain }}</em>. Your password was not sent.{% endtrans %}</p>
+		</div>
 		<div class="f-ebox">
 			{{ form.address.label(class="a11y-only") }}
 			{{ form.address(placeholder=form.address.label.text) }}
@@ -31,6 +35,22 @@
 			{%- call form_button("login", form.action_signin, class="primary") -%}{% endcall -%}
 		</div>
 	</from>
+	<script type="text/javascript">
+var domainCheck = function() {
+	var form = document.getElementById("login-form");
+	var addressId = form.dataset.addressid;
+	var addressField = document.getElementById(addressId);
+	var domain = form.dataset.domain;
+	var address = addressField.value;
+	var errorBox = document.getElementById("id-warning");
+	if (address.includes("@") && !address.endsWith(domain)) {
+		errorBox.style.display = "block";
+		return false;
+	}
+	errorBox.style.display = "none";
+	return true;
+};
+	</script>
 </div></main></div>
 {%- include "_footer.html" -%}
 {% endblock %}
