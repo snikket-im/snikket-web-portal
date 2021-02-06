@@ -15,6 +15,7 @@ from quart import (
     render_template,
     request,
     Response,
+    flash,
 )
 
 import babel
@@ -22,7 +23,7 @@ import wtforms
 
 import flask_wtf
 
-from flask_babel import lazy_gettext as _l
+from flask_babel import lazy_gettext as _l, _
 
 from . import xmpputil, _version
 from .infra import client
@@ -79,6 +80,10 @@ async def login() -> typing.Union[str, quart.Response]:
             except quart.exceptions.Unauthorized:
                 form.password.errors.append(ERR_CREDENTIALS_INVALID)
             else:
+                await flash(
+                    _("Login successful!"),
+                    "success"
+                )
                 return redirect(url_for('user.index'))
 
     return await render_template("login.html", form=form)

@@ -17,10 +17,11 @@ from quart import (
     url_for,
     request,
     abort,
+    flash,
 )
 import flask_wtf
 
-from flask_babel import lazy_gettext as _l
+from flask_babel import lazy_gettext as _l, _
 
 from . import prosodyclient
 from .infra import client, circle_name
@@ -68,6 +69,10 @@ async def delete_user(localpart: str) -> typing.Union[str, quart.Response]:
     if form.validate_on_submit():
         if form.action_delete.data:
             await client.delete_user_by_localpart(localpart)
+            await flash(
+                _("User deleted"),
+                "success",
+            )
         return redirect(url_for(".users"))
 
     return await render_template(
@@ -107,8 +112,16 @@ async def create_password_reset_link() -> typing.Union[str, quart.Response]:
             localpart=localpart,
             ttl=86400,
         )
+        await flash(
+            _("Password reset link created"),
+            "success",
+        )
     elif form.action_revoke.data:
         await client.delete_invite(form.action_revoke.data)
+        await flash(
+            _("Password reset link deleted"),
+            "success",
+        )
         return redirect(url_for(".users"))
 
     return await render_template(
@@ -242,6 +255,10 @@ async def create_invite() -> typing.Union[str, quart.Response]:
                 group_ids=form.circles.data,
                 ttl=form.lifetime.data,
             )
+        await flash(
+            _("Invitation created"),
+            "success",
+        )
         return redirect(url_for(".edit_invite", id_=invite.id_))
     return await render_template("admin_create_invite.html",
                                  invite_form=form)
@@ -254,7 +271,11 @@ async def edit_invite(id_: str) -> typing.Union[str, quart.Response]:
         invite_info = await client.get_invite_by_id(id_)
     except aiohttp.ClientResponseError as exc:
         if exc.status == 404:
-            abort(404)
+            await flash(
+                _("No such invitation exists"),
+                "alert",
+            )
+            return redirect(url_for(".invitations"))
     circles = await client.list_groups()
     circle_map = {
         circle.id_: circle
@@ -265,6 +286,10 @@ async def edit_invite(id_: str) -> typing.Union[str, quart.Response]:
     if form.validate_on_submit():
         if form.action_revoke.data:
             await client.delete_invite(id_)
+            await flash(
+                _("Invitation revoked"),
+                "success",
+            )
             return redirect(url_for(".invitations"))
         return redirect(url_for(".edit_invite", id_=id_))
 
@@ -313,6 +338,10 @@ async def create_circle() -> typing.Union[str, quart.Response]:
         circle = await client.create_group(
             name=create_form.name.data,
         )
+        await flash(
+            _("Circle created"),
+            "success",
+        )
         return redirect(url_for(".edit_circle", id_=circle.id_))
 
     return await render_template(
@@ -358,6 +387,10 @@ async def edit_circle(id_: str) -> typing.Union[str, quart.Response]:
             )
         except aiohttp.ClientResponseError as exc:
             if exc.status == 404:
+                await flash(
+                    _("No such circle exists"),
+                    "alert",
+                )
                 return redirect(url_for(".circles"))
             raise
 
@@ -391,20 +424,35 @@ async def edit_circle(id_: str) -> typing.Union[str, quart.Response]:
                 id_,
                 new_name=form.name.data,
             )
+            await flash(
+                _("Circle data updated"),
+                "success",
+            )
         elif form.action_delete.data:
             await client.delete_group(id_)
+            await flash(
+                _("Circle deleted"),
+                "success",
+            )
             return redirect(url_for(".circles"))
         elif form.action_add_user.data:
             if form.user_to_add.data in valid_users:
-                print("is valid")
                 await client.add_group_member(
                     id_,
                     form.user_to_add.data,
+                )
+                await flash(
+                    _("User added to circle"),
+                    "success",
                 )
         elif form.action_remove_user.data:
             await client.remove_group_member(
                 id_,
                 form.action_remove_user.data,
+            )
+            await flash(
+                _("User removed from circle"),
+                "success",
             )
 
         return redirect(url_for(".edit_circle", id_=id_))

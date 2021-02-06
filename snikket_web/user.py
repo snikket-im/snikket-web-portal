@@ -2,7 +2,14 @@ import asyncio
 import typing
 
 import quart.flask_patch
-from quart import Blueprint, render_template, request, redirect, url_for
+from quart import (
+    Blueprint,
+    render_template,
+    request,
+    redirect,
+    url_for,
+    flash,
+)
 import quart.exceptions
 
 import wtforms
@@ -93,6 +100,10 @@ async def change_pw() -> typing.Union[str, quart.Response]:
                 _("Incorrect password"),
             )
         else:
+            await flash(
+                _("Password changed"),
+                "success",
+            )
             return redirect(url_for("user.change_pw"))
 
     return await render_template("user_passwd.html", form=form)
@@ -131,6 +142,10 @@ async def profile() -> typing.Union[str, quart.Response]:
             client.set_nickname_access_model(access_model),
         )
 
+        await flash(
+            _("Profile updated"),
+            "success",
+        )
         return redirect(url_for(".profile"))
 
     return await render_template("user_profile.html", form=form)
@@ -142,6 +157,12 @@ async def logout() -> typing.Union[quart.Response, str]:
     form = LogoutForm()
     if form.validate_on_submit():
         await client.logout()
+        # No flashing here because we don’t collect flashes in the login page
+        # and it’d be weird.
+        # await flash(
+        #     _("Logged out"),
+        #     "success",
+        # )
         return redirect(url_for("main.index"))
 
     return await render_template("user_logout.html", form=form)
