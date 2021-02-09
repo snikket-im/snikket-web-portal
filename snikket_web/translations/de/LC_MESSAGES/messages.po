@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
-"PO-Revision-Date: 2021-02-04 19:02+0000\n"
+"PO-Revision-Date: 2021-02-10 17:01+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language-Team: German <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/de/>\n"
@@ -353,7 +353,7 @@ msgstr "Neue Gemeinschaft"
 
 #: snikket_web/templates/admin_create_invite.html:3
 msgid "Create invitation"
-msgstr "Gemeinschaft gründen"
+msgstr "Einladung erzeugen"
 
 #: snikket_web/templates/admin_create_invite_form.html:5
 msgid "Create new invitation"
