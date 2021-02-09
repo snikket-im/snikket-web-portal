@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
-"PO-Revision-Date: 2021-02-06 18:02+0000\n"
+"PO-Revision-Date: 2021-02-10 17:01+0000\n"
 "Last-Translator: Tilman Jiménez <tilman.jimenez@tu-dortmund.de>\n"
 "Language-Team: Spanish (Mexico) <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/es_MX/>\n"
@@ -26,11 +26,11 @@ msgstr "Eliminar usuario permanentemente"
 
 #: snikket_web/admin.py:129
 msgid "Invite to circle"
-msgstr ""
+msgstr "Invitar al círculo"
 
 #: snikket_web/admin.py:135
 msgid "At least one circle must be selected"
-msgstr ""
+msgstr "Seleccione al menos un círculo"
 
 #: snikket_web/admin.py:140
 msgid "Valid for"
@@ -70,11 +70,11 @@ msgstr "Grupo"
 
 #: snikket_web/admin.py:161
 msgid "New invitation link"
-msgstr ""
+msgstr "Nuevo enlace de invitación"
 
 #: snikket_web/admin.py:223
 msgid "Revoke"
-msgstr ""
+msgstr "Revocar/Eliminar"
 
 #: snikket_web/admin.py:283 snikket_web/admin.py:327
 msgid "Name"
@@ -82,7 +82,7 @@ msgstr "Nombre"
 
 #: snikket_web/admin.py:288 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
-msgstr ""
+msgstr "Crear círculo"
 
 #: snikket_web/admin.py:332
 msgid "Select user"
@@ -90,19 +90,19 @@ msgstr "Seleccionar usuario"
 
 #: snikket_web/admin.py:337
 msgid "Update circle"
-msgstr ""
+msgstr "Actualizar círculo"
 
 #: snikket_web/admin.py:341
 msgid "Delete circle permanently"
-msgstr ""
+msgstr "Eliminar círculo permanentemente"
 
 #: snikket_web/admin.py:347
 msgid "Add user"
-msgstr ""
+msgstr "Añadir usuario"
 
 #: snikket_web/infra.py:40
 msgid "Main"
-msgstr ""
+msgstr "Principal"
 
 #: snikket_web/invite.py:93
 msgid "Username"
@@ -126,7 +126,7 @@ msgstr "Crear cuenta"
 
 #: snikket_web/invite.py:137
 msgid "That username is already taken"
-msgstr ""
+msgstr "Ese nombre de usuario ya está siendo utilizado"
 
 #: snikket_web/invite.py:141 snikket_web/invite.py:205
 msgid "Registration was declined for unknown reasons"
@@ -192,7 +192,7 @@ msgstr ""
 
 #: snikket_web/user.py:59
 msgid "Avatar"
-msgstr ""
+msgstr "Imagen de perfil"
 
 #: snikket_web/user.py:63
 msgid "Profile visibility"
@@ -209,7 +209,7 @@ msgstr "Contraseña incorrecta"
 #: snikket_web/templates/_footer.html:4 snikket_web/templates/login.html:36
 #, python-format
 msgid "A <a href=\"%(about_url)s\">Snikket</a> service"
-msgstr ""
+msgstr "Un servicio <a href=\"%(about_url)s\">Snikket</a>"
 
 #: snikket_web/templates/about.html:9
 msgid "About Snikket"
@@ -252,6 +252,8 @@ msgid ""
 "The source code of the web portal can be downloaded and viewed in <a "
 "href=\"%(source_url)s\">its GitHub repository</a>."
 msgstr ""
+"El código fuente del portal web puede ser descargado y visto en <a href=\""
+"%(source_url)s\">su repositorio de Github</a>."
 
 #: snikket_web/templates/about.html:16
 #, python-format
@@ -283,6 +285,8 @@ msgid ""
 "<em>Circles</em> aim to help people who are in the same social circle "
 "find each other on your service."
 msgstr ""
+"<em>Círculos</em> permiten que gente del mismo círculo social se encuentre "
+"en tu servicio."
 
 #: snikket_web/templates/admin_circles.html:6
 msgid ""
@@ -290,10 +294,13 @@ msgid ""
 "list. In addition, each circle has a group chat where the circle members "
 "are included."
 msgstr ""
+"Usuarios que están en el mismo círculo se verán en sus listas de contacto. "
+"Además, cada círculo tiene su propia conversación de grupo en el que están "
+"incluidos todos sus miembros."
 
 #: snikket_web/templates/admin_circles.html:13
 msgid "Circle name"
-msgstr ""
+msgstr "Nombre del círculo"
 
 #: snikket_web/templates/admin_circles.html:14
 msgid "Members"
@@ -308,7 +315,7 @@ msgstr "Acciones"
 #: snikket_web/templates/admin_circles.html:25
 #, python-format
 msgid "Create invitation to circle %(circle_name)s"
-msgstr ""
+msgstr "Crear una invitación para el círculo %(circle_name)s"
 
 #: snikket_web/templates/admin_circles.html:28
 #, python-format
@@ -319,25 +326,27 @@ msgstr ""
 #: snikket_web/templates/admin_edit_circle.html:8
 #, python-format
 msgid "Edit circle %(circle_name)s"
-msgstr ""
+msgstr "Editar el círculo %(circle_name)s"
 
 #: snikket_web/templates/admin_circles.html:40
 msgid "No circles"
-msgstr ""
+msgstr "No hay círculos"
 
 #: snikket_web/templates/admin_circles.html:41
 msgid ""
 "Currently, there are no circles on this service. Use the form below to "
 "create one."
 msgstr ""
+"Por el momento no hay círculos en este servicio. Usa el formulario para "
+"crear uno."
 
 #: snikket_web/templates/admin_circles.html:44
 msgid "New circle"
-msgstr ""
+msgstr "Nuevo círculo"
 
 #: snikket_web/templates/admin_create_invite.html:3
 msgid "Create invitation"
-msgstr ""
+msgstr "Crear una invitación"
 
 #: snikket_web/templates/admin_create_invite_form.html:5
 msgid "Create new invitation"
@@ -363,7 +372,7 @@ msgstr "Peligro"
 
 #: snikket_web/templates/admin_debug_user.html:12
 msgid "The below dump may contain sensitive information."
-msgstr ""
+msgstr "El siguiente texto puede contener informaciones privadas."
 
 #: snikket_web/templates/admin_debug_user.html:15
 msgid "Raw debug dump"
@@ -394,7 +403,7 @@ msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:15
 msgid "Danger"
-msgstr ""
+msgstr "Peligro"
 
 #: snikket_web/templates/admin_delete_user.html:16
 msgid ""
@@ -402,6 +411,9 @@ msgid ""
 "immediately upon pushing the below button. <strong>There is no way "
 "back!</strong>"
 msgstr ""
+"Este usuario y sus datos va a ser eliminados de manera irreversible, "
+"permanente e inmediatamente al presionar el botón. <strong>¡No hay forma de "
+"deshacer esto!</strong>"
 
 #: snikket_web/templates/admin_delete_user.html:19
 #: snikket_web/templates/admin_edit_circle.html:44
@@ -411,11 +423,11 @@ msgstr ""
 #: snikket_web/templates/user_passwd.html:30
 #: snikket_web/templates/user_profile.html:31
 msgid "Back"
-msgstr ""
+msgstr "Regresar"
 
 #: snikket_web/templates/admin_edit_circle.html:14
 msgid "This is your main circle"
-msgstr ""
+msgstr "Este es el círculo principal"
 
 #: snikket_web/templates/admin_edit_circle.html:15
 msgid "This circle is managed automatically and cannot be removed or renamed."
@@ -424,34 +436,34 @@ msgstr ""
 #: snikket_web/templates/admin_edit_circle.html:17
 #: snikket_web/templates/admin_edit_circle.html:33
 msgid "Group chat address"
-msgstr ""
+msgstr "Dirección de la conversación de grupo"
 
 #: snikket_web/templates/admin_edit_circle.html:20
 #: snikket_web/templates/admin_edit_circle.html:36
 #: snikket_web/templates/invite_success.html:15
 #: snikket_web/templates/user_home.html:21
 msgid "Copy address"
-msgstr ""
+msgstr "Copiar dirección"
 
 #: snikket_web/templates/admin_edit_circle.html:26
 msgid "Circle information"
-msgstr ""
+msgstr "Información del círculo"
 
 #: snikket_web/templates/admin_edit_circle.html:39
 msgid "This circle has no group chat associated."
-msgstr ""
+msgstr "Este círculo no está asociado con una conversación de grupo."
 
 #: snikket_web/templates/admin_edit_circle.html:48
 msgid "Delete circle"
-msgstr ""
+msgstr "Eliminar círculo"
 
 #: snikket_web/templates/admin_edit_circle.html:49
 msgid "Deleting a circle does not delete any users in the circle."
-msgstr ""
+msgstr "Eliminar un círculo no elimina a los usuarios que le pertenecen."
 
 #: snikket_web/templates/admin_edit_circle.html:55
 msgid "Circle members"
-msgstr ""
+msgstr "Miembros del círculo"
 
 #: snikket_web/templates/admin_edit_circle.html:70
 #, python-format
@@ -460,47 +472,49 @@ msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:78
 msgid "This circle currently has no members."
-msgstr ""
+msgstr "Actualmente este círculo no tiene miembros."
 
 #: snikket_web/templates/admin_edit_circle.html:80
 msgid "Invite more members"
-msgstr ""
+msgstr "Invitar a más miembros"
 
 #: snikket_web/templates/admin_edit_circle.html:83
 msgid "Add existing user"
-msgstr ""
+msgstr "Añadir a un usuario existente"
 
 #: snikket_web/templates/admin_edit_circle.html:94
 msgid "All users added"
-msgstr ""
+msgstr "Todos los usuarios han sido añadidos"
 
 #: snikket_web/templates/admin_edit_circle.html:95
 msgid "All users on this service are already in this circle."
-msgstr ""
+msgstr "Todos los usuarios de este servicio ya están en este círculo."
 
 #: snikket_web/templates/admin_edit_invite.html:8
 msgid "View invitation"
-msgstr ""
+msgstr "Mostrar invitación"
 
 #: snikket_web/templates/admin_edit_invite.html:13
 #: snikket_web/templates/admin_invites.html:21
 #: snikket_web/templates/admin_reset_user_password.html:15
 msgid "Valid until"
-msgstr ""
+msgstr "Válido hasta"
 
 #: snikket_web/templates/admin_edit_invite.html:15
 #: snikket_web/templates/admin_reset_user_password.html:17
 msgid "Link"
-msgstr ""
+msgstr "Enlace"
 
 #: snikket_web/templates/admin_edit_invite.html:22
 #: snikket_web/templates/admin_home.html:19
 msgid "Circles"
-msgstr ""
+msgstr "Círculos"
 
 #: snikket_web/templates/admin_edit_invite.html:23
 msgid "Users joining via this invitation will be added to the following circles:"
 msgstr ""
+"Los usuarios que usen esta invitación serán agregados a los siguientes "
+"círculos:"
 
 #: snikket_web/templates/admin_edit_invite.html:29
 #: snikket_web/templates/admin_invites.html:23
