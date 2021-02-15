@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
-"PO-Revision-Date: 2021-02-02 21:01+0000\n"
+"PO-Revision-Date: 2021-02-16 12:02+0000\n"
 "Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/fr/>\n"
@@ -46,7 +46,7 @@ msgstr "Douze heures"
 
 #: snikket_web/admin.py:144
 msgid "One day"
-msgstr "Un jour"
+msgstr "Une journée"
 
 #: snikket_web/admin.py:145
 msgid "One week"
@@ -382,11 +382,11 @@ msgstr "Le contenu ci-dessous peut contenir des informations sensibles."
 
 #: snikket_web/templates/admin_debug_user.html:15
 msgid "Raw debug dump"
-msgstr "Journal de débogage brute"
+msgstr "Journal de débogage brut"
 
 #: snikket_web/templates/admin_debug_user.html:17
 msgid "Copy complete output"
-msgstr "Copier le journal complet"
+msgstr "Copier le journal entier"
 
 #: snikket_web/templates/admin_delete_user.html:4
 #: snikket_web/templates/admin_users.html:22
@@ -686,7 +686,7 @@ msgstr "Le portail web a rencontré une erreur interne."
 #: snikket_web/templates/invite_view.html:12
 #, python-format
 msgid "Invite to %(site_name)s"
-msgstr "Inviter à %(site_name)s"
+msgstr "Invitation à %(site_name)s"
 
 #: snikket_web/templates/invite_invalid.html:6
 #: snikket_web/templates/invite_register.html:10
@@ -762,9 +762,8 @@ msgid ""
 "If you plan to use a legacy XMPP client, you can register an account online "
 "and enter your credentials into any XMPP-compatible software."
 msgstr ""
-"Si vous prévoyez d’utiliser un ancien client XMPP, vous pouvez ouvrir un "
-"compte en ligne et saisir vos indentifiants dans tout logiciel compatible "
-"XMPP."
+"Si vous prévoyez d’utiliser un client XMPP, vous pouvez ouvrir un compte en "
+"ligne et saisir vos indentifiants dans tout logiciel compatible XMPP."
 
 #: snikket_web/templates/invite_register.html:27
 msgid ""
@@ -907,13 +906,13 @@ msgid ""
 "You can now set up your legacy XMPP client with the above address and the "
 "password you chose during registration."
 msgstr ""
-"Vous pouvez maintenant configurer votre ancien client XMPP avec l’adresse ci-"
-"dessus et le mot de passe que vous avez choisi lors de l’enregistrement."
+"Vous pouvez maintenant configurer votre client XMPP avec l’adresse ci-dessus "
+"et le mot de passe que vous avez choisi lors de l’enregistrement."
 
 #: snikket_web/templates/invite_view.html:6
 #, python-format
 msgid "Invite to %(site_name)s | Snikket"
-msgstr "Inviter à %(site_name)s | Snikket"
+msgstr "Invitation à %(site_name)s | Snikket"
 
 #: snikket_web/templates/invite_view.html:15
 #, python-format
@@ -921,9 +920,9 @@ msgid ""
 "You have been invited to chat with %(inviter_name)s using Snikket, a secure, "
 "privacy-friendly chat app on %(site_name)s."
 msgstr ""
-"Vous avez été invité à converser avec %(inviter_name)s en utilisant Snikket, "
-"une application de messagerie sécurisée et respectueuse de la vie privée sur "
-"%(site_name)s."
+"Vous avez été invité(e) à converser avec %(inviter_name)s en utilisant "
+"Snikket, une application de messagerie sécurisée et respectueuse de la vie "
+"privée sur %(site_name)s."
 
 #: snikket_web/templates/invite_view.html:17
 #, python-format
@@ -1048,7 +1047,7 @@ msgstr "Peut être utilisée pour créer un seul compte sur ce service Snikket."
 
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
-msgstr "Identifiant Snikket"
+msgstr "Connexion à Snikket"
 
 #: snikket_web/templates/login.html:14
 msgid "Enter your Snikket address and password to manage your account."
@@ -1065,7 +1064,7 @@ msgstr "Bienvenue !"
 #: snikket_web/templates/user_home.html:10
 #, python-format
 msgid "Welcome home, %(user_name)s."
-msgstr "Bienvenue à la maison, %(user_name)s."
+msgstr "Bienvenue chez vous, %(user_name)s."
 
 #: snikket_web/templates/user_home.html:14
 msgid "Your account"
