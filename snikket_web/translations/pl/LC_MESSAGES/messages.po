@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
-"PO-Revision-Date: 2021-02-06 18:02+0000\n"
+"PO-Revision-Date: 2021-02-18 20:01+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
 "Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/pl/>\n"
@@ -690,7 +690,7 @@ msgstr "Portal internetowy napotkał błąd wewnętrzny."
 #: snikket_web/templates/invite_view.html:12
 #, python-format
 msgid "Invite to %(site_name)s"
-msgstr "Zaproś na %(site_name)s"
+msgstr "Zaproszenie na %(site_name)s"
 
 #: snikket_web/templates/invite_invalid.html:6
 #: snikket_web/templates/invite_register.html:10
@@ -930,7 +930,7 @@ msgid ""
 "You have been invited to chat on %(site_name)s using Snikket, a secure, "
 "privacy-friendly chat app."
 msgstr ""
-"Zostałeś zaproszony do czatu na %(site_name)s za pomocą Snikket - "
+"Zostałeś zaproszony do czatowania na %(site_name)s za pomocą Snikket - "
 "bezpiecznej i przyjaznej dla prywatności aplikacji do rozmów."
 
 #: snikket_web/templates/invite_view.html:19
