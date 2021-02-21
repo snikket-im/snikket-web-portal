@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-01-30 12:45+0100\n"
-"PO-Revision-Date: 2021-02-18 20:01+0000\n"
+"PO-Revision-Date: 2021-02-22 11:02+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
 "Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/pl/>\n"
@@ -508,7 +508,7 @@ msgstr "Szczegóły zaproszenia"
 #: snikket_web/templates/admin_invites.html:21
 #: snikket_web/templates/admin_reset_user_password.html:15
 msgid "Valid until"
-msgstr "Ważne do"
+msgstr "Wygasa"
 
 #: snikket_web/templates/admin_edit_invite.html:15
 #: snikket_web/templates/admin_reset_user_password.html:17
