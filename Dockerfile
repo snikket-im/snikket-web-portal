@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:buster-slim
 
 ARG BUILD_SERIES=dev
 ARG BUILD_ID=0
