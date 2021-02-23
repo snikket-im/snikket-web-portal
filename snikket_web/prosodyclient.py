@@ -332,15 +332,18 @@ class ProsodyClient:
                 )
             )
 
+    def _store_token_in_session(self, token_info: TokenInfo):
+        http_session[self.SESSION_TOKEN] = token_info.token
+        http_session[self.SESSION_CACHED_SCOPE] = " ".join(token_info.scopes)
+
     async def login(self, jid: str, password: str) -> bool:
         async with self._plain_session as session:
             token_info = await self._oauth2_bearer_token(
                 session, jid, password,
             )
 
-        http_session[self.SESSION_TOKEN] = token_info.token
+        self._store_token_in_session(token_info)
         http_session[self.SESSION_ADDRESS] = jid
-        http_session[self.SESSION_CACHED_SCOPE] = " ".join(token_info.scopes)
         return True
 
     @property
@@ -767,7 +770,7 @@ class ProsodyClient:
         # got there, replacing the current session token on the way.
 
         async with self._plain_session as session:
-            token = await self._oauth2_bearer_token(
+            token_info = await self._oauth2_bearer_token(
                 session,
                 self.session_address,
                 current_password,
@@ -779,14 +782,14 @@ class ProsodyClient:
                     new_password
                 ),
                 headers={
-                    "Authorization": "Bearer {}".format(token),
+                    "Authorization": "Bearer {}".format(token_info.token),
                 },
                 sensitive=True,
             )
             # TODO: error handling
             # TODO: obtain a new token using the new password to allow the
             # server to expire/revoke all tokens on password change.
-            http_session[self.SESSION_TOKEN] = token
+            self._store_token_in_session(token_info)
 
     def _raise_error_from_response(
             self,
