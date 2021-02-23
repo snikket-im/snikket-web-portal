@@ -448,6 +448,13 @@ class ProsodyClient:
                                 headers=final_headers,
                                 data=serialised) as resp:
             if resp.status != 200:
+                self.logger.debug(
+                    "IQ HTTP response (in-reply-to id=%s) with non-OK status "
+                    "%s: %s",
+                    id_,
+                    resp.status,
+                    resp.reason,
+                )
                 abort(resp.status)
             reply_payload = await resp.read()
             self.logger.debug(
