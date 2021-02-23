@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-02-23 07:55+0100\n"
-"PO-Revision-Date: 2021-02-02 21:01+0000\n"
+"PO-Revision-Date: 2021-02-25 16:02+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
-"Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/id/>\n"
+"Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,22 +25,16 @@ msgid "Delete user permanently"
 msgstr "Hapus permanen pengguna"
 
 #: snikket_web/admin.py:73
-#, fuzzy
-#| msgid "deleted"
 msgid "User deleted"
-msgstr "Dihapus"
+msgstr "Pengguna dihapus"
 
 #: snikket_web/admin.py:116
-#, fuzzy
-#| msgid "Password reset link for %(user_name)s"
 msgid "Password reset link created"
-msgstr "Tautan setel ulang kata sandi %(user_name)s"
+msgstr "Tautan setel ulang kata sandi dibuat"
 
 #: snikket_web/admin.py:122
-#, fuzzy
-#| msgid "Create password reset links or delete users."
 msgid "Password reset link deleted"
-msgstr "Buat tautan setel ulang kata sandi atau hapus pengguna."
+msgstr "Tautan setel ulang kata sandi dihapus"
 
 #: snikket_web/admin.py:141
 msgid "Invite to circle"
@@ -95,22 +89,16 @@ msgid "Revoke"
 msgstr "Batalkan"
 
 #: snikket_web/admin.py:259
-#, fuzzy
-#| msgid "Invitation type"
 msgid "Invitation created"
-msgstr "Jenis undangan"
+msgstr "Undangan dibuat"
 
 #: snikket_web/admin.py:275
-#, fuzzy
-#| msgid "New invitation link"
 msgid "No such invitation exists"
-msgstr "Tautan undangan baru"
+msgstr "Undangan tidak tersedia"
 
 #: snikket_web/admin.py:290
-#, fuzzy
-#| msgid "Invitation type"
 msgid "Invitation revoked"
-msgstr "Jenis undangan"
+msgstr "Undangan dibatalkan"
 
 #: snikket_web/admin.py:307 snikket_web/admin.py:355
 msgid "Name"
@@ -121,10 +109,8 @@ msgid "Create circle"
 msgstr "Buat kelompok"
 
 #: snikket_web/admin.py:342
-#, fuzzy
-#| msgid "Circle name"
 msgid "Circle created"
-msgstr "Nama kelompok"
+msgstr "Kelompok dibuat"
 
 #: snikket_web/admin.py:360
 msgid "Select user"
@@ -143,34 +129,24 @@ msgid "Add user"
 msgstr "Tambah pengguna"
 
 #: snikket_web/admin.py:391
-#, fuzzy
-#| msgid "No circles"
 msgid "No such circle exists"
-msgstr "Tidak ada kelompok"
+msgstr "Kelompok tersebut tidak ada"
 
 #: snikket_web/admin.py:428
-#, fuzzy
-#| msgid "Circle name"
 msgid "Circle data updated"
-msgstr "Nama kelompok"
+msgstr "Data kelompok diperbarui"
 
 #: snikket_web/admin.py:434
-#, fuzzy
-#| msgid "deleted"
 msgid "Circle deleted"
-msgstr "Dihapus"
+msgstr "Kelompok dihapus"
 
 #: snikket_web/admin.py:445
-#, fuzzy
-#| msgid "Invite to circle"
 msgid "User added to circle"
-msgstr "Undang masuk kelompok"
+msgstr "Pengguna ditambahkan ke kelompok"
 
 #: snikket_web/admin.py:454
-#, fuzzy
-#| msgid "Remove user %(username)s from circle"
 msgid "User removed from circle"
-msgstr "Hapus pengguna %(username)s dari kelompok"
+msgstr "Pengguna dihapus dari kelompok"
 
 #: snikket_web/infra.py:40
 msgid "Main"
@@ -227,7 +203,7 @@ msgstr "Nama pengguna atau kata sandi salah."
 
 #: snikket_web/main.py:84
 msgid "Login successful!"
-msgstr ""
+msgstr "Login berhasil!"
 
 #: snikket_web/user.py:28
 msgid "Current password"
@@ -276,23 +252,19 @@ msgstr "Visibilitas profil"
 
 #: snikket_web/user.py:75
 msgid "Update profile"
-msgstr "Perbaharui profil"
+msgstr "Perbarui profil"
 
 #: snikket_web/user.py:100
 msgid "Incorrect password"
 msgstr "Kata sandi salah"
 
 #: snikket_web/user.py:104
-#, fuzzy
-#| msgid "Password change failed"
 msgid "Password changed"
-msgstr "Gagal mengganti kata kunci"
+msgstr "Kata sandi diganti"
 
 #: snikket_web/user.py:146
-#, fuzzy
-#| msgid "Profile"
 msgid "Profile updated"
-msgstr "Profil"
+msgstr "Profil diperbarui"
 
 #: snikket_web/templates/_footer.html:4
 #, python-format
@@ -304,6 +276,8 @@ msgid ""
 "“Snikket” and the parrot logo are trademarks of Snikket Community Interest "
 "Company."
 msgstr ""
+"“Snikket” dan logo burung beo adalah merek dagang dari Snikket Community "
+"Interest Company."
 
 #: snikket_web/templates/about.html:4 snikket_web/templates/about.html:9
 msgid "About Snikket"
@@ -366,7 +340,7 @@ msgstr ""
 
 #: snikket_web/templates/about.html:17
 msgid "Trademarks"
-msgstr ""
+msgstr "Merek dagang"
 
 #: snikket_web/templates/about.html:18
 #, python-format
@@ -375,6 +349,10 @@ msgid ""
 "Company. For more information about the trademarks, visit the <a href="
 "\"%(trademarks_url)s\">Snikket Trademarks information page</a>."
 msgstr ""
+"“Snikket” dan logo burung beo adalah merek dagang dari Snikket Community "
+"Interest Company. Untuk informasi lebih lanjut tentang merek dagang, "
+"kunjungi <a href=\"%(trademarks_url)s\">halaman informasi merek dagang "
+"Snikket</a>."
 
 #: snikket_web/templates/about.html:19
 msgid "Software Versions"
@@ -709,7 +687,7 @@ msgstr "Undangan menunggu jawaban"
 
 #: snikket_web/templates/admin_invites.html:21
 msgid "Expires"
-msgstr ""
+msgstr "Kadaluarsa"
 
 #: snikket_web/templates/admin_invites.html:22
 msgid "Type"
@@ -1064,7 +1042,7 @@ msgstr "Unduh di App Store"
 
 #: snikket_web/templates/invite_view.html:34
 msgid "Send to mobile device"
-msgstr ""
+msgstr "Dikirim ke telepon seluler"
 
 #: snikket_web/templates/invite_view.html:37
 msgid ""
@@ -1160,10 +1138,8 @@ msgid "Login failed"
 msgstr "Percobaan masuk gagal"
 
 #: snikket_web/templates/login.html:23
-#, fuzzy
-#| msgid "Incorrect password"
 msgid "Incorrect address"
-msgstr "Kata sandi salah"
+msgstr "Alamat salah"
 
 #: snikket_web/templates/login.html:24
 #, python-format
@@ -1171,14 +1147,16 @@ msgid ""
 "This Snikket service only hosts addresses ending in <em>@%(snikket_domain)s</"
 "em>. Your password was not sent."
 msgstr ""
+"Layanan Snikket ini hanya menghosting alamat yang diakhiri dengan "
+"<em>@%(snikket_domain)s</em>. Kata sandi Anda tidak terkirim."
 
 #: snikket_web/templates/unauth.html:16
 msgid "Operation successful"
-msgstr ""
+msgstr "Operasi berhasil"
 
 #: snikket_web/templates/unauth.html:18
 msgid "Error"
-msgstr ""
+msgstr "Kesalahan"
 
 #: snikket_web/templates/user_home.html:9
 msgid "Welcome!"
@@ -1249,7 +1227,7 @@ msgstr ""
 
 #: snikket_web/templates/user_profile.html:4
 msgid "Update your profile"
-msgstr "Perbaharui profil anda"
+msgstr "Perbarui profil anda"
 
 #: snikket_web/templates/user_profile.html:6
 msgid "Profile"
