@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-02-23 07:55+0100\n"
-"PO-Revision-Date: 2021-02-22 23:23+0000\n"
+"PO-Revision-Date: 2021-02-25 16:02+0000\n"
 "Last-Translator: Kim Alvefur <zash@zash.se>\n"
-"Language-Team: Swedish <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/sv/>\n"
+"Language-Team: Swedish <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,30 +25,24 @@ msgid "Delete user permanently"
 msgstr "Radera användare permanent"
 
 #: snikket_web/admin.py:73
-#, fuzzy
-#| msgid "deleted"
 msgid "User deleted"
-msgstr "raderad"
+msgstr "Användare raderad"
 
 #: snikket_web/admin.py:116
-#, fuzzy
-#| msgid "Password reset link for %(user_name)s"
 msgid "Password reset link created"
-msgstr "Lösenordsåterställningslänk för %(user_name)s"
+msgstr "Skapade länk för att återställa lösenord"
 
 #: snikket_web/admin.py:122
-#, fuzzy
-#| msgid "Create password reset links or delete users."
 msgid "Password reset link deleted"
-msgstr "Skapa lösenordsåterställningslänkar eller radera användare."
+msgstr "Länk för återställning av lösenord raderad"
 
 #: snikket_web/admin.py:141
 msgid "Invite to circle"
-msgstr "Bjud in till cirkel"
+msgstr "Bjud in till krets"
 
 #: snikket_web/admin.py:147
 msgid "At least one circle must be selected"
-msgstr "Minst en cirkel behöver väljas"
+msgstr "Minst en krets behöver väljas"
 
 #: snikket_web/admin.py:152
 msgid "Valid for"
@@ -95,22 +89,16 @@ msgid "Revoke"
 msgstr "Återkalla"
 
 #: snikket_web/admin.py:259
-#, fuzzy
-#| msgid "Invitation type"
 msgid "Invitation created"
-msgstr "Typ av inbjudan"
+msgstr "Inbjudan skapad"
 
 #: snikket_web/admin.py:275
-#, fuzzy
-#| msgid "New invitation link"
 msgid "No such invitation exists"
-msgstr "Ny inbjudanslänk"
+msgstr "Inbjudanslänken finns inte"
 
 #: snikket_web/admin.py:290
-#, fuzzy
-#| msgid "Invitation type"
 msgid "Invitation revoked"
-msgstr "Typ av inbjudan"
+msgstr "Inbjudan återkallad"
 
 #: snikket_web/admin.py:307 snikket_web/admin.py:355
 msgid "Name"
@@ -118,13 +106,11 @@ msgstr "Namn"
 
 #: snikket_web/admin.py:312 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
-msgstr "Skapa cirkel"
+msgstr "Skapa krets"
 
 #: snikket_web/admin.py:342
-#, fuzzy
-#| msgid "Circle name"
 msgid "Circle created"
-msgstr "Namn på cirkel"
+msgstr "Krets skapad"
 
 #: snikket_web/admin.py:360
 msgid "Select user"
@@ -132,45 +118,35 @@ msgstr "Välj användare"
 
 #: snikket_web/admin.py:365
 msgid "Update circle"
-msgstr "Uppdatera cirkel"
+msgstr "Uppdatera krets"
 
 #: snikket_web/admin.py:369
 msgid "Delete circle permanently"
-msgstr "Radera cirkel permanent"
+msgstr "Radera krets permanent"
 
 #: snikket_web/admin.py:375
 msgid "Add user"
 msgstr "Lägg till användare"
 
 #: snikket_web/admin.py:391
-#, fuzzy
-#| msgid "No circles"
 msgid "No such circle exists"
-msgstr "Inga cirklar"
+msgstr "Kretsen finns inte"
 
 #: snikket_web/admin.py:428
-#, fuzzy
-#| msgid "Circle name"
 msgid "Circle data updated"
-msgstr "Namn på cirkel"
+msgstr "Kretsen uppdaterades"
 
 #: snikket_web/admin.py:434
-#, fuzzy
-#| msgid "deleted"
 msgid "Circle deleted"
-msgstr "raderad"
+msgstr "Krets raderad"
 
 #: snikket_web/admin.py:445
-#, fuzzy
-#| msgid "Invite to circle"
 msgid "User added to circle"
-msgstr "Bjud in till cirkel"
+msgstr "Användare tillagd i krets"
 
 #: snikket_web/admin.py:454
-#, fuzzy
-#| msgid "Remove user %(username)s from circle"
 msgid "User removed from circle"
-msgstr "Radera användaren %(username)s från cirkel"
+msgstr "Användaren %(username)s borttagen från krets"
 
 #: snikket_web/infra.py:40
 msgid "Main"
@@ -227,7 +203,7 @@ msgstr "Ogiltigt användarnamn eller lösenord."
 
 #: snikket_web/main.py:84
 msgid "Login successful!"
-msgstr ""
+msgstr "Inloggning lyckades!"
 
 #: snikket_web/user.py:28
 msgid "Current password"
@@ -283,16 +259,12 @@ msgid "Incorrect password"
 msgstr "Fel lösenord"
 
 #: snikket_web/user.py:104
-#, fuzzy
-#| msgid "Password reset"
 msgid "Password changed"
-msgstr "Återställ lösenord"
+msgstr "Lösenord ändrat"
 
 #: snikket_web/user.py:146
-#, fuzzy
-#| msgid "Profile"
 msgid "Profile updated"
-msgstr "Profil"
+msgstr "Profilen uppdaterad"
 
 #: snikket_web/templates/_footer.html:4
 #, python-format
@@ -304,6 +276,8 @@ msgid ""
 "“Snikket” and the parrot logo are trademarks of Snikket Community Interest "
 "Company."
 msgstr ""
+"“Snikket” och papegojloggan är varumärken tillhörande Snikket Community "
+"Interest Company."
 
 #: snikket_web/templates/about.html:4 snikket_web/templates/about.html:9
 msgid "About Snikket"
@@ -349,8 +323,8 @@ msgid ""
 "The source code of the web portal can be downloaded and viewed in <a href="
 "\"%(source_url)s\">its GitHub repository</a>."
 msgstr ""
-"Webbportalens källkod kan hämtas och visas på <a href=\"%(source_url)s"
-"\">dess GitHub-projekt</a>."
+"Webbportalens källkod kan hämtas från <a href=\"%(source_url)s\">dess GitHub-"
+"projekt</a>."
 
 #: snikket_web/templates/about.html:16
 #, python-format
@@ -365,7 +339,7 @@ msgstr ""
 
 #: snikket_web/templates/about.html:17
 msgid "Trademarks"
-msgstr ""
+msgstr "Varumärken"
 
 #: snikket_web/templates/about.html:18
 #, python-format
@@ -374,6 +348,9 @@ msgid ""
 "Company. For more information about the trademarks, visit the <a href="
 "\"%(trademarks_url)s\">Snikket Trademarks information page</a>."
 msgstr ""
+"“Snikket” och papegojloggan är varumärken tillhörande Snikket Community "
+"Interest Company. För mer information om varumärkena, besök <a href=\""
+"%(trademarks_url)s\">Snikkets sida om varumärken</a>."
 
 #: snikket_web/templates/about.html:19
 msgid "Software Versions"
@@ -390,14 +367,14 @@ msgstr "Administration"
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:23
 msgid "Manage circles"
-msgstr "Hantera cirklar"
+msgstr "Hantera kretsar"
 
 #: snikket_web/templates/admin_circles.html:5
 msgid ""
 "<em>Circles</em> aim to help people who are in the same social circle find "
 "each other on your service."
 msgstr ""
-"<em>Cirklar</em> är tänkta att hjälpa människor i samma bekantskapskrets "
+"<em>Kretsar</em> är tänkta att hjälpa människor i samma bekantskapskrets "
 "hitta varandra på din tjänst."
 
 #: snikket_web/templates/admin_circles.html:6
@@ -406,12 +383,12 @@ msgid ""
 "In addition, each circle has a group chat where the circle members are "
 "included."
 msgstr ""
-"Användare som är i samma cirkel kommer se varandra i sin kontaktlista. "
-"Dessutom har varje cirkel en gruppchatt som inkluderar cirkelns medlemmar."
+"Användare som är i samma krets kommer se varandra i sin kontaktlista. "
+"Dessutom har varje krets en gruppchatt som inkluderar kretsens medlemmar."
 
 #: snikket_web/templates/admin_circles.html:13
 msgid "Circle name"
-msgstr "Namn på cirkel"
+msgstr "Namn på krets"
 
 #: snikket_web/templates/admin_circles.html:14
 msgid "Members"
@@ -421,12 +398,12 @@ msgstr "Medlemmar"
 #: snikket_web/templates/admin_invites.html:24
 #: snikket_web/templates/admin_users.html:12
 msgid "Actions"
-msgstr "Aktioner"
+msgstr "Handlingar"
 
 #: snikket_web/templates/admin_circles.html:25
 #, python-format
 msgid "Create invitation to circle %(circle_name)s"
-msgstr "Skapa inbjudan till cirkeln %(circle_name)s"
+msgstr "Skapa inbjudan till kretsen %(circle_name)s"
 
 #: snikket_web/templates/admin_circles.html:28
 #, python-format
@@ -437,23 +414,23 @@ msgstr "Hantera medlemmar av %(circle_name)s"
 #: snikket_web/templates/admin_edit_circle.html:8
 #, python-format
 msgid "Edit circle %(circle_name)s"
-msgstr "Redigera cirkel %(circle_name)s"
+msgstr "Redigera krets %(circle_name)s"
 
 #: snikket_web/templates/admin_circles.html:40
 msgid "No circles"
-msgstr "Inga cirklar"
+msgstr "Inga kretsar"
 
 #: snikket_web/templates/admin_circles.html:41
 msgid ""
 "Currently, there are no circles on this service. Use the form below to "
 "create one."
 msgstr ""
-"Just nu finns inga cirklar på denna tjänst. Använd formuläret nedan för att "
+"Just nu finns inga kretsar på denna tjänst. Använd formuläret nedan för att "
 "skapa en."
 
 #: snikket_web/templates/admin_circles.html:44
 msgid "New circle"
-msgstr "Ny cirkel"
+msgstr "Ny krets"
 
 #: snikket_web/templates/admin_create_invite.html:3
 msgid "Create invitation"
@@ -522,8 +499,9 @@ msgid ""
 "immediately upon pushing the below button. <strong>There is no way back!</"
 "strong>"
 msgstr ""
-"Användaren och deras data kommer raderas skoningslöst, permanent och direkt "
-"när knappen nedanför klickas. <strong>Det finns ingen återvändo!</strong>"
+"Om du trycker på knappen nedanför kommer användaren och deras data raderas "
+"direkt, permanent och skoningslöst. <strong>Därefter finns ingen "
+"återvändo!</strong>"
 
 #: snikket_web/templates/admin_delete_user.html:19
 #: snikket_web/templates/admin_edit_circle.html:44
@@ -537,17 +515,16 @@ msgstr "Tillbaka"
 
 #: snikket_web/templates/admin_edit_circle.html:14
 msgid "This is your main circle"
-msgstr "Detta är din primära cirkel"
+msgstr "Detta är din primära krets"
 
 #: snikket_web/templates/admin_edit_circle.html:15
 msgid "This circle is managed automatically and cannot be removed or renamed."
-msgstr ""
-"Denna cirkel hanteras automatiskt och kan inte tas bort eller döpas om."
+msgstr "Denna krets hanteras automatiskt och kan inte tas bort eller döpas om."
 
 #: snikket_web/templates/admin_edit_circle.html:17
 #: snikket_web/templates/admin_edit_circle.html:33
 msgid "Group chat address"
-msgstr "Gruppchattsadress"
+msgstr "Gruppchattens adress"
 
 #: snikket_web/templates/admin_edit_circle.html:20
 #: snikket_web/templates/admin_edit_circle.html:36
@@ -558,32 +535,32 @@ msgstr "Kopiera adress"
 
 #: snikket_web/templates/admin_edit_circle.html:26
 msgid "Circle information"
-msgstr "Om cirkeln"
+msgstr "Om kretsen"
 
 #: snikket_web/templates/admin_edit_circle.html:39
 msgid "This circle has no group chat associated."
-msgstr "Denna cirkel har ingen tillhörande gruppchatt."
+msgstr "Denna krets har ingen tillhörande gruppchatt."
 
 #: snikket_web/templates/admin_edit_circle.html:48
 msgid "Delete circle"
-msgstr "Radera cirkel"
+msgstr "Radera krets"
 
 #: snikket_web/templates/admin_edit_circle.html:49
 msgid "Deleting a circle does not delete any users in the circle."
-msgstr "Användare i en cirkel raderas inte när cirkeln raderas."
+msgstr "Användare i en krets raderas inte när kretsen raderas."
 
 #: snikket_web/templates/admin_edit_circle.html:55
 msgid "Circle members"
-msgstr "Medlemmar i cirkel"
+msgstr "Medlemmar i krets"
 
 #: snikket_web/templates/admin_edit_circle.html:70
 #, python-format
 msgid "Remove user %(username)s from circle"
-msgstr "Radera användaren %(username)s från cirkel"
+msgstr "Radera användaren %(username)s från krets"
 
 #: snikket_web/templates/admin_edit_circle.html:78
 msgid "This circle currently has no members."
-msgstr "Denna cirkel har för närvarande inga medlemmar."
+msgstr "Denna krets har för närvarande inga medlemmar."
 
 #: snikket_web/templates/admin_edit_circle.html:80
 msgid "Invite more members"
@@ -599,7 +576,7 @@ msgstr "Alla användare tillagda"
 
 #: snikket_web/templates/admin_edit_circle.html:95
 msgid "All users on this service are already in this circle."
-msgstr "Alla användare på den här tjänsten är redan i denna cirkel."
+msgstr "Alla användare på den här tjänsten är redan i denna krets."
 
 #: snikket_web/templates/admin_edit_invite.html:8
 msgid "View invitation"
@@ -618,23 +595,22 @@ msgstr "Länk"
 #: snikket_web/templates/admin_edit_invite.html:22
 #: snikket_web/templates/admin_home.html:19
 msgid "Circles"
-msgstr "Cirklar"
+msgstr "Kretsar"
 
 #: snikket_web/templates/admin_edit_invite.html:23
 msgid ""
 "Users joining via this invitation will be added to the following circles:"
-msgstr ""
-"Användare som går med via denna inbjudan läggs till i följande cirklar:"
+msgstr "Användare som går med via denna inbjudan läggs till i följande kretsar:"
 
 #: snikket_web/templates/admin_edit_invite.html:29
 #: snikket_web/templates/admin_invites.html:23
 msgid "Circle"
-msgstr "Cirkel"
+msgstr "Krets"
 
 #: snikket_web/templates/admin_edit_invite.html:35
 msgid "The user will not be added to any circle and will have no contacts."
 msgstr ""
-"Användaren kommer inte läggas till i någon cirkel och kommer inte ha några "
+"Användaren kommer inte läggas till i någon krets och kommer inte ha några "
 "kontakter."
 
 #: snikket_web/templates/admin_edit_invite.html:40
@@ -665,7 +641,7 @@ msgstr "Användare"
 
 #: snikket_web/templates/admin_home.html:11
 msgid "Create password reset links or delete users."
-msgstr "Skapa lösenordsåterställningslänkar eller radera användare."
+msgstr "Skapa länkar för att återställa lösenord eller radera användare."
 
 #: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_users.html:4
@@ -703,7 +679,7 @@ msgstr "Väntande inbjudningar"
 
 #: snikket_web/templates/admin_invites.html:21
 msgid "Expires"
-msgstr ""
+msgstr "Går ut"
 
 #: snikket_web/templates/admin_invites.html:22
 msgid "Type"
@@ -732,7 +708,7 @@ msgstr "Återställ lösenord"
 #: snikket_web/templates/admin_reset_user_password.html:12
 #, python-format
 msgid "Password reset link for %(user_name)s"
-msgstr "Lösenordsåterställningslänk för %(user_name)s"
+msgstr "Länk för att återställa lösenord för %(user_name)s"
 
 #: snikket_web/templates/admin_reset_user_password.html:13
 msgid ""
@@ -754,7 +730,7 @@ msgstr "Visa felsökningsinformation för %(user_name)s"
 #: snikket_web/templates/admin_users.html:28
 #, python-format
 msgid "Create password reset link for %(user_name)s"
-msgstr "Skapa lösenordsåterställningslänk för %(user_name)s"
+msgstr "Skapa länk för att återställa lösenord för %(user_name)s"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
@@ -1055,7 +1031,7 @@ msgstr "Hämta på App Store"
 
 #: snikket_web/templates/invite_view.html:34
 msgid "Send to mobile device"
-msgstr ""
+msgstr "Skicka till mobil"
 
 #: snikket_web/templates/invite_view.html:37
 msgid ""
@@ -1151,10 +1127,8 @@ msgid "Login failed"
 msgstr "Inloggning misslyckades"
 
 #: snikket_web/templates/login.html:23
-#, fuzzy
-#| msgid "Incorrect password"
 msgid "Incorrect address"
-msgstr "Fel lösenord"
+msgstr "Fel adress"
 
 #: snikket_web/templates/login.html:24
 #, python-format
@@ -1162,14 +1136,16 @@ msgid ""
 "This Snikket service only hosts addresses ending in <em>@%(snikket_domain)s</"
 "em>. Your password was not sent."
 msgstr ""
+"Den här Snikket-tjänsten har bara adresser som slutar på "
+"<em>@%(snikket_domain)s</em>. Ditt lösenord skickades inte."
 
 #: snikket_web/templates/unauth.html:16
 msgid "Operation successful"
-msgstr ""
+msgstr "Operationen lyckades"
 
 #: snikket_web/templates/unauth.html:18
 msgid "Error"
-msgstr ""
+msgstr "Fel"
 
 #: snikket_web/templates/user_home.html:9
 msgid "Welcome!"
@@ -1198,7 +1174,7 @@ msgstr "Ditt Snikket"
 
 #: snikket_web/templates/user_home.html:40
 msgid "Manage users, invitations and circles of your Snikket service."
-msgstr "Hantera användare, inbjudningar och cirklar i din Snikket-tjänst."
+msgstr "Hantera användare, inbjudningar och kretsar i din Snikket-tjänst."
 
 #: snikket_web/templates/user_home.html:42
 msgid "Admin panel"
@@ -1256,7 +1232,7 @@ msgid ""
 "like avatar and nickname."
 msgstr ""
 "Den här avdelningen låter dig hantera vilka som kan se din profil, såsom din "
-"profilbild och smeknamn."
+"profilbild och visningsnamn."
 
 #~ msgid "Not on mobile?"
 #~ msgstr "Inte på mobilen?"
