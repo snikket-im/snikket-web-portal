@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-02-23 07:55+0100\n"
-"PO-Revision-Date: 2021-02-02 21:01+0000\n"
-"Last-Translator: riccio <unriccio@email.it>\n"
-"Language-Team: Italian <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/it/>\n"
+"PO-Revision-Date: 2021-02-25 16:02+0000\n"
+"Last-Translator: Roberto Resoli <roberto@resolutions.it>\n"
+"Language-Team: Italian <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,22 +25,16 @@ msgid "Delete user permanently"
 msgstr "Elimina definitivamente l'utente"
 
 #: snikket_web/admin.py:73
-#, fuzzy
-#| msgid "deleted"
 msgid "User deleted"
-msgstr "rimosso"
+msgstr "Utente rimosso"
 
 #: snikket_web/admin.py:116
-#, fuzzy
-#| msgid "Password reset link for %(user_name)s"
 msgid "Password reset link created"
-msgstr "Collegamento per reimpostare la password di %(user_name)s"
+msgstr "Creato collegamento per reimpostare la password"
 
 #: snikket_web/admin.py:122
-#, fuzzy
-#| msgid "Create password reset links or delete users."
 msgid "Password reset link deleted"
-msgstr "Crea collegamenti per reimpostare le password oppure elimina utenti."
+msgstr "Eliminato collegamento per reimpostare la password"
 
 #: snikket_web/admin.py:141
 msgid "Invite to circle"
@@ -95,22 +89,16 @@ msgid "Revoke"
 msgstr "Revoca"
 
 #: snikket_web/admin.py:259
-#, fuzzy
-#| msgid "Invitation type"
 msgid "Invitation created"
-msgstr "Tipo di invito"
+msgstr "Invito creato"
 
 #: snikket_web/admin.py:275
-#, fuzzy
-#| msgid "New invitation link"
 msgid "No such invitation exists"
-msgstr "Nuovo collegamento di invito"
+msgstr "Questo invito non esiste"
 
 #: snikket_web/admin.py:290
-#, fuzzy
-#| msgid "Invitation type"
 msgid "Invitation revoked"
-msgstr "Tipo di invito"
+msgstr "Invito revocato"
 
 #: snikket_web/admin.py:307 snikket_web/admin.py:355
 msgid "Name"
@@ -121,10 +109,8 @@ msgid "Create circle"
 msgstr "Crea cerchia"
 
 #: snikket_web/admin.py:342
-#, fuzzy
-#| msgid "Circle name"
 msgid "Circle created"
-msgstr "Nome cerchia"
+msgstr "Cerchia creata"
 
 #: snikket_web/admin.py:360
 msgid "Select user"
@@ -143,34 +129,24 @@ msgid "Add user"
 msgstr "Aggiungi utente"
 
 #: snikket_web/admin.py:391
-#, fuzzy
-#| msgid "No circles"
 msgid "No such circle exists"
-msgstr "Nessuna cerchia"
+msgstr "Questa cerchia non esiste"
 
 #: snikket_web/admin.py:428
-#, fuzzy
-#| msgid "Circle name"
 msgid "Circle data updated"
-msgstr "Nome cerchia"
+msgstr "Dati della cerchia aggiornati"
 
 #: snikket_web/admin.py:434
-#, fuzzy
-#| msgid "deleted"
 msgid "Circle deleted"
-msgstr "rimosso"
+msgstr "Cerchia eliminata"
 
 #: snikket_web/admin.py:445
-#, fuzzy
-#| msgid "Invite to circle"
 msgid "User added to circle"
-msgstr "Invita nella cerchia"
+msgstr "Utente aggiunto alla cerchia"
 
 #: snikket_web/admin.py:454
-#, fuzzy
-#| msgid "Remove user %(username)s from circle"
 msgid "User removed from circle"
-msgstr "Rimuovi l'utente %(username)s dalla cerchia"
+msgstr "Utente rimosso dalla cerchia"
 
 #: snikket_web/infra.py:40
 msgid "Main"
@@ -227,7 +203,7 @@ msgstr "Nome utente o password non validi."
 
 #: snikket_web/main.py:84
 msgid "Login successful!"
-msgstr ""
+msgstr "Accesso riuscito!"
 
 #: snikket_web/user.py:28
 msgid "Current password"
@@ -283,16 +259,12 @@ msgid "Incorrect password"
 msgstr "Password errata"
 
 #: snikket_web/user.py:104
-#, fuzzy
-#| msgid "Password reset"
 msgid "Password changed"
-msgstr "Reimposta password"
+msgstr "Password cambiata"
 
 #: snikket_web/user.py:146
-#, fuzzy
-#| msgid "Profile"
 msgid "Profile updated"
-msgstr "Profilo"
+msgstr "Profilo aggiornato"
 
 #: snikket_web/templates/_footer.html:4
 #, python-format
@@ -304,6 +276,8 @@ msgid ""
 "“Snikket” and the parrot logo are trademarks of Snikket Community Interest "
 "Company."
 msgstr ""
+"“Snikket” e il logo del pappagallo sono marchi registrati della Snikket "
+"Community Interest Company."
 
 #: snikket_web/templates/about.html:4 snikket_web/templates/about.html:9
 msgid "About Snikket"
@@ -366,7 +340,7 @@ msgstr ""
 
 #: snikket_web/templates/about.html:17
 msgid "Trademarks"
-msgstr ""
+msgstr "Marchi registrati"
 
 #: snikket_web/templates/about.html:18
 #, python-format
@@ -375,6 +349,9 @@ msgid ""
 "Company. For more information about the trademarks, visit the <a href="
 "\"%(trademarks_url)s\">Snikket Trademarks information page</a>."
 msgstr ""
+"\"Snikket\" e il logo del pappagallo sono marchi di Snikket Community "
+"Interest Company. Per maggiori informazioni sui marchi, visita la <a href=\""
+"%(trademarks_url)s\">pagina informativa sui marchi Snikket</a>."
 
 #: snikket_web/templates/about.html:19
 msgid "Software Versions"
@@ -707,7 +684,7 @@ msgstr "Inviti in attesa"
 
 #: snikket_web/templates/admin_invites.html:21
 msgid "Expires"
-msgstr ""
+msgstr "Scade"
 
 #: snikket_web/templates/admin_invites.html:22
 msgid "Type"
@@ -1066,7 +1043,7 @@ msgstr "Scarica dall'App Store"
 
 #: snikket_web/templates/invite_view.html:34
 msgid "Send to mobile device"
-msgstr ""
+msgstr "Invia a dispositivo mobile"
 
 #: snikket_web/templates/invite_view.html:37
 msgid ""
@@ -1166,10 +1143,8 @@ msgid "Login failed"
 msgstr "Accesso non riuscito"
 
 #: snikket_web/templates/login.html:23
-#, fuzzy
-#| msgid "Incorrect password"
 msgid "Incorrect address"
-msgstr "Password errata"
+msgstr "Indirizzo errato"
 
 #: snikket_web/templates/login.html:24
 #, python-format
@@ -1177,14 +1152,16 @@ msgid ""
 "This Snikket service only hosts addresses ending in <em>@%(snikket_domain)s</"
 "em>. Your password was not sent."
 msgstr ""
+"Questo servizio Snikket ospita solo indirizzi che terminano in "
+"<em>@%(snikket_domain)s</em>. La tua password non è stata inviata."
 
 #: snikket_web/templates/unauth.html:16
 msgid "Operation successful"
-msgstr ""
+msgstr "Operazione completata"
 
 #: snikket_web/templates/unauth.html:18
 msgid "Error"
-msgstr ""
+msgstr "Errore"
 
 #: snikket_web/templates/user_home.html:9
 msgid "Welcome!"
