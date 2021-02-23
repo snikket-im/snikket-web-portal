@@ -18,6 +18,7 @@ RUN set -eu; \
         python3 python3-pip python3-setuptools python3-wheel \
         libpython3-dev \
         make build-essential \
+        netcat \
         ; \
     pip3 install -r requirements.txt; \
     pip3 install -r build-requirements.txt; \
@@ -33,6 +34,8 @@ COPY docker/env.py /etc/snikket-web-portal/env.py
 ENV SNIKKET_WEB_PYENV=/etc/snikket-web-portal/env.py
 
 ENV SNIKKET_WEB_PROSODY_ENDPOINT=http://127.0.0.1:5280/
+
+HEALTHCHECK CMD nc -zv ${SNIKKET_TWEAK_PORTAL_INTERNAL_HTTP_INTERFACE:-127.0.0.1} ${SNIKKET_TWEAK_PORTAL_INTERNAL_HTTP_PORT:-5765}
 
 ADD docker/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
