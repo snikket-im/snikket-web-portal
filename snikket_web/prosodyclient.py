@@ -332,7 +332,7 @@ class ProsodyClient:
                 )
             )
 
-    def _store_token_in_session(self, token_info: TokenInfo):
+    def _store_token_in_session(self, token_info: TokenInfo) -> None:
         http_session[self.SESSION_TOKEN] = token_info.token
         http_session[self.SESSION_CACHED_SCOPE] = " ".join(token_info.scopes)
 
