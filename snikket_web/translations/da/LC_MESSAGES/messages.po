@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-02-23 07:55+0100\n"
-"PO-Revision-Date: 2021-03-03 22:03+0000\n"
+"PO-Revision-Date: 2021-03-06 17:03+0000\n"
 "Last-Translator: Daniel Holmgaard <annoncer@protonmail.com>\n"
 "Language-Team: Danish <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/da/>\n"
@@ -798,8 +798,7 @@ msgstr "Registrer på %(site_name)s"
 #: snikket_web/templates/invite_register.html:11
 #, python-format
 msgid "%(site_name)s is using Snikket - a secure, privacy-friendly chat app."
-msgstr ""
-"%(site_name)s bruger Snikket - en sikker og privatlivsvenlig besked app."
+msgstr "%(site_name)s bruger Snikket - en sikker og privatlivsvenlig chat-app."
 
 #: snikket_web/templates/invite_register.html:12
 msgid "Create an account"
@@ -993,7 +992,7 @@ msgid ""
 "secure, privacy-friendly chat app on %(site_name)s."
 msgstr ""
 "Du er blevet inviteret til at chatte med %(inviter_name)s ved hjælp af "
-"Snikket, en sikker, privatlivsvenlig besked-app på %(site_name)s."
+"Snikket, en sikker, privatlivsvenlig chat-app på %(site_name)s."
 
 #: snikket_web/templates/invite_view.html:18
 #, python-format
@@ -1002,7 +1001,7 @@ msgid ""
 "privacy-friendly chat app."
 msgstr ""
 "Du er blevet inviteret til at chatte på %(site_name)s ved hjælp af Snikket, "
-"en sikker, privatlivsvenlig besked-app."
+"en sikker, privatlivsvenlig chat-app."
 
 #: snikket_web/templates/invite_view.html:20
 msgid "Get started"
