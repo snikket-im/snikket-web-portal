@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-02-23 07:55+0100\n"
-"PO-Revision-Date: 2021-03-06 17:03+0000\n"
+"PO-Revision-Date: 2021-03-10 19:03+0000\n"
 "Last-Translator: Daniel Holmgaard <annoncer@protonmail.com>\n"
 "Language-Team: Danish <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/da/>\n"
@@ -240,7 +240,7 @@ msgstr "Alle"
 #: snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/templates/admin_users.html:11 snikket_web/user.py:62
 msgid "Display name"
-msgstr "Visningsnavn"
+msgstr "Kaldenavn"
 
 #: snikket_web/user.py:66
 msgid "Avatar"
