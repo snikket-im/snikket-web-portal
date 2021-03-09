@@ -101,6 +101,10 @@ async def about() -> str:
         extra_versions["babel"] = babel.__version__
         extra_versions["wtforms"] = wtforms.__version__
         extra_versions["flask-wtf"] = flask_wtf.__version__
+        try:
+            extra_versions["Prosody"] = await client.get_server_version()
+        except quart.exceptions.Unauthorized:
+            extra_versions["Prosody"] = "unknown"
 
     return await render_template(
         "about.html",

@@ -504,6 +504,22 @@ class ProsodyClient:
             return resp.status == 200
 
     @autosession
+    async def get_server_version(self, session: aiohttp.ClientSession) -> str:
+        _, domain, _ = split_jid(self.session_address)
+        req = {
+            "kind": "iq",
+            "type": "get",
+            "version": True,
+            "to": domain,
+        }
+
+        async with session.post(self._rest_endpoint, data=req) as resp:
+            try:
+                return (await resp.json())["version"]["version"]
+            except:
+                return "unknown"
+
+    @autosession
     async def get_user_nickname(
             self,
             *,
