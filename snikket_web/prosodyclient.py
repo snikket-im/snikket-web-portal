@@ -514,9 +514,16 @@ class ProsodyClient:
         }
 
         async with session.post(self._rest_endpoint, data=req) as resp:
+            if resp.status != 200:
+                return "unknwn"
             try:
                 return (await resp.json())["version"]["version"]
-            except:
+            except Exception as exc:
+                self.logger.debug(
+                    "failed to parse prosody version from response"
+                    " (%s: %s)",
+                    type(exc), exc,
+                )
                 return "unknown"
 
     @autosession
