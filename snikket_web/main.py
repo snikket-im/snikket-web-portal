@@ -165,5 +165,5 @@ async def avatar(from_: str, code: str) -> quart.Response:
     return response
 
 @bp.route("/_health")
-async def health() -> str:
-    return "OK"
+async def health() -> Response:
+    return Response("STATUS OK", content_type="text/plain")
