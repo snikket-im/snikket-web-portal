@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-02-23 07:55+0100\n"
-"PO-Revision-Date: 2021-02-16 12:02+0000\n"
-"Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
-"Language-Team: French <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/fr/>\n"
+"PO-Revision-Date: 2021-03-12 23:04+0000\n"
+"Last-Translator: GodGoldfish <godgoldfish@pm.me>\n"
+"Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.5.1\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:60
@@ -42,7 +42,7 @@ msgstr "Lien de réinitialisation du mot de passe de %(user_name)s"
 msgid "Password reset link deleted"
 msgstr ""
 "Créer des liens de réinitialisation de mot de passe ou supprimer des "
-"utilisateurs."
+"utilisateurs"
 
 #: snikket_web/admin.py:141
 msgid "Invite to circle"
@@ -228,8 +228,9 @@ msgid "Invalid username or password."
 msgstr "Nom d’utilisateur ou mot de passe incorrect."
 
 #: snikket_web/main.py:84
+#, fuzzy
 msgid "Login successful!"
-msgstr ""
+msgstr "Connexion réussite !"
 
 #: snikket_web/user.py:28
 msgid "Current password"
@@ -302,10 +303,13 @@ msgid "A <a href=\"%(about_url)s\">Snikket</a> service"
 msgstr "Un service <a href=\"%(about_url)s\">Snikket</a>"
 
 #: snikket_web/templates/_footer.html:6
+#, fuzzy
 msgid ""
 "“Snikket” and the parrot logo are trademarks of Snikket Community Interest "
 "Company."
 msgstr ""
+"\"Snikket\" et le logo de perroquet sont des marques de la Snikket Community "
+"Interest Company."
 
 #: snikket_web/templates/about.html:4 snikket_web/templates/about.html:9
 msgid "About Snikket"
@@ -366,16 +370,20 @@ msgstr ""
 "termes de la <a href=\"%(apache20_url)s\">licence Apache 2.0 </a>."
 
 #: snikket_web/templates/about.html:17
+#, fuzzy
 msgid "Trademarks"
-msgstr ""
+msgstr "Marques"
 
 #: snikket_web/templates/about.html:18
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "“Snikket” and the parrot logo are trademarks of Snikket Community Interest "
 "Company. For more information about the trademarks, visit the <a href="
 "\"%(trademarks_url)s\">Snikket Trademarks information page</a>."
 msgstr ""
+"\"Snikket\" et le logo de perroquet sont des marques de la Snikket Community "
+"Interest Company. Pour plus d'informations sur la marque, visitez le site <a "
+"href=\"%(trademarks_url)s\"> page d'information Snikket Trademarks</a>."
 
 #: snikket_web/templates/about.html:19
 msgid "Software Versions"
@@ -707,8 +715,9 @@ msgid "Pending invitations"
 msgstr "Invitations en attente"
 
 #: snikket_web/templates/admin_invites.html:21
+#, fuzzy
 msgid "Expires"
-msgstr ""
+msgstr "Expires"
 
 #: snikket_web/templates/admin_invites.html:22
 msgid "Type"
@@ -1071,8 +1080,9 @@ msgid "Download on the App Store"
 msgstr "Télécharger sur l’App Store"
 
 #: snikket_web/templates/invite_view.html:34
+#, fuzzy
 msgid "Send to mobile device"
-msgstr ""
+msgstr "Envoyer vers l'appareil"
 
 #: snikket_web/templates/invite_view.html:37
 msgid ""
@@ -1176,19 +1186,23 @@ msgid "Incorrect address"
 msgstr "Mot de passe incorrect"
 
 #: snikket_web/templates/login.html:24
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "This Snikket service only hosts addresses ending in <em>@%(snikket_domain)s</"
 "em>. Your password was not sent."
 msgstr ""
+"Le service Snikket n'héberge que les adresses se terminant par "
+"<em>@%(snikket_domain)s</em>. Votre mot de passe n'a pas été envoyé."
 
 #: snikket_web/templates/unauth.html:16
+#, fuzzy
 msgid "Operation successful"
-msgstr ""
+msgstr "Opération réussite"
 
 #: snikket_web/templates/unauth.html:18
+#, fuzzy
 msgid "Error"
-msgstr ""
+msgstr "Erreur"
 
 #: snikket_web/templates/user_home.html:9
 msgid "Welcome!"
