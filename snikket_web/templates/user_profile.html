@@ -13,7 +13,7 @@
 		{{ form.avatar.label }}
 		<div class="avatar-wrap">
 		{%- call avatar(user_info.address, user_info.avatar_hash ) %}{% endcall -%}
-		{{ form.avatar }}
+		{{ form.avatar(accept="image/png") }}
 		</div>
 	</div>
 	<h3 class="form-title">{% trans %}Visibility{% endtrans %}</h3>
