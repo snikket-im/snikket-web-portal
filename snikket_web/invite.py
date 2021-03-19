@@ -59,7 +59,7 @@ async def view(id_: str) -> typing.Union[quart.Response, str]:
     except aiohttp.ClientResponseError as exc:
         if exc.status == 404:
             # invite expired
-            return await render_template("invite_invalid.html")
+            return await render_template("invite_invalid.html"), 404
         raise
 
     if invite.reset_localpart is not None:
