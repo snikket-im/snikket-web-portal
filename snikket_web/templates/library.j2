@@ -80,7 +80,7 @@
 <div class="box warning">{#- -#}
 <header>{% trans %}Invalid input{% endtrans %}</header>
 {%- if error_list | length == 1 -%}
-<p>{{ error_list[0] }}.</p>
+<p>{{ error_list[0] }}</p>
 {%- else -%}
 <ul>
 {%- for error in error_list -%}

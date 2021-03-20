@@ -98,7 +98,7 @@ async def change_pw() -> typing.Union[str, quart.Response]:
                 quart.exceptions.Forbidden):
             # server refused current password, set an appropriate error
             form.current_password.errors.append(
-                _("Incorrect password"),
+                _("Incorrect password."),
             )
         else:
             await flash(
@@ -112,7 +112,7 @@ async def change_pw() -> typing.Union[str, quart.Response]:
 
 EAVATARTOOBIG = _l(
     "The chosen avatar is too big. To be able to upload larger "
-    "avatars, please use the app"
+    "avatars, please use the app."
 )
 
 
