@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-02-23 07:55+0100\n"
+"POT-Creation-Date: 2021-03-20 16:44+0100\n"
 "PO-Revision-Date: 2021-02-25 16:02+0000\n"
 "Last-Translator: Kim Alvefur <zash@zash.se>\n"
-"Language-Team: Swedish <https://i18n.sotecware.net/projects/snikket/"
-"web-portal/sv/>\n"
+"Language-Team: Swedish <https://i18n.sotecware.net/projects/snikket/web-"
+"portal/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,251 +20,273 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: snikket_web/admin.py:60
+#: snikket_web/admin.py:59
 msgid "Delete user permanently"
 msgstr "Radera användare permanent"
 
-#: snikket_web/admin.py:73
+#: snikket_web/admin.py:72
 msgid "User deleted"
 msgstr "Användare raderad"
 
-#: snikket_web/admin.py:116
+#: snikket_web/admin.py:115
 msgid "Password reset link created"
 msgstr "Skapade länk för att återställa lösenord"
 
-#: snikket_web/admin.py:122
+#: snikket_web/admin.py:121
 msgid "Password reset link deleted"
 msgstr "Länk för återställning av lösenord raderad"
 
-#: snikket_web/admin.py:141
+#: snikket_web/admin.py:140
 msgid "Invite to circle"
 msgstr "Bjud in till krets"
 
-#: snikket_web/admin.py:147
+#: snikket_web/admin.py:146
 msgid "At least one circle must be selected"
 msgstr "Minst en krets behöver väljas"
 
-#: snikket_web/admin.py:152
+#: snikket_web/admin.py:151
 msgid "Valid for"
 msgstr "Giltig i"
 
-#: snikket_web/admin.py:154
+#: snikket_web/admin.py:153
 msgid "One hour"
 msgstr "En timme"
 
-#: snikket_web/admin.py:155
+#: snikket_web/admin.py:154
 msgid "Twelve hours"
 msgstr "Tolv timmar"
 
-#: snikket_web/admin.py:156
+#: snikket_web/admin.py:155
 msgid "One day"
 msgstr "En dag"
 
-#: snikket_web/admin.py:157
+#: snikket_web/admin.py:156
 msgid "One week"
 msgstr "En vecka"
 
-#: snikket_web/admin.py:158
+#: snikket_web/admin.py:157
 msgid "Four weeks"
 msgstr "Fyra veckor"
 
-#: snikket_web/admin.py:164 snikket_web/templates/admin_edit_invite.html:17
+#: snikket_web/admin.py:163 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
 msgstr "Typ av inbjudan"
 
-#: snikket_web/admin.py:166 snikket_web/templates/library.j2:116
+#: snikket_web/admin.py:165 snikket_web/templates/library.j2:116
 msgid "Individual"
 msgstr "Individuell"
 
-#: snikket_web/admin.py:167 snikket_web/templates/library.j2:114
+#: snikket_web/admin.py:166 snikket_web/templates/library.j2:114
 msgid "Group"
 msgstr "Grupp"
 
-#: snikket_web/admin.py:173
+#: snikket_web/admin.py:172
 msgid "New invitation link"
 msgstr "Ny inbjudanslänk"
 
-#: snikket_web/admin.py:235
+#: snikket_web/admin.py:234
 msgid "Revoke"
 msgstr "Återkalla"
 
-#: snikket_web/admin.py:259
+#: snikket_web/admin.py:258
 msgid "Invitation created"
 msgstr "Inbjudan skapad"
 
-#: snikket_web/admin.py:275
+#: snikket_web/admin.py:274
 msgid "No such invitation exists"
 msgstr "Inbjudanslänken finns inte"
 
-#: snikket_web/admin.py:290
+#: snikket_web/admin.py:289
 msgid "Invitation revoked"
 msgstr "Inbjudan återkallad"
 
-#: snikket_web/admin.py:307 snikket_web/admin.py:355
+#: snikket_web/admin.py:306 snikket_web/admin.py:354
 msgid "Name"
 msgstr "Namn"
 
-#: snikket_web/admin.py:312 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:311 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Skapa krets"
 
-#: snikket_web/admin.py:342
+#: snikket_web/admin.py:341
 msgid "Circle created"
 msgstr "Krets skapad"
 
-#: snikket_web/admin.py:360
+#: snikket_web/admin.py:359
 msgid "Select user"
 msgstr "Välj användare"
 
-#: snikket_web/admin.py:365
+#: snikket_web/admin.py:364
 msgid "Update circle"
 msgstr "Uppdatera krets"
 
-#: snikket_web/admin.py:369
+#: snikket_web/admin.py:368
 msgid "Delete circle permanently"
 msgstr "Radera krets permanent"
 
-#: snikket_web/admin.py:375
+#: snikket_web/admin.py:374
 msgid "Add user"
 msgstr "Lägg till användare"
 
-#: snikket_web/admin.py:391
+#: snikket_web/admin.py:390
 msgid "No such circle exists"
 msgstr "Kretsen finns inte"
 
-#: snikket_web/admin.py:428
+#: snikket_web/admin.py:427
 msgid "Circle data updated"
 msgstr "Kretsen uppdaterades"
 
-#: snikket_web/admin.py:434
+#: snikket_web/admin.py:433
 msgid "Circle deleted"
 msgstr "Krets raderad"
 
-#: snikket_web/admin.py:445
+#: snikket_web/admin.py:444
 msgid "User added to circle"
 msgstr "Användare tillagd i krets"
 
-#: snikket_web/admin.py:454
+#: snikket_web/admin.py:453
 msgid "User removed from circle"
 msgstr "Användaren %(username)s borttagen från krets"
 
-#: snikket_web/infra.py:40
+#: snikket_web/infra.py:41
 msgid "Main"
 msgstr "Allmän"
 
-#: snikket_web/invite.py:104
+#: snikket_web/invite.py:106
 msgid "Username"
 msgstr "Användarnamn"
 
-#: snikket_web/invite.py:108 snikket_web/invite.py:175 snikket_web/main.py:42
+#: snikket_web/invite.py:110 snikket_web/invite.py:177 snikket_web/main.py:41
 msgid "Password"
 msgstr "Lösenord"
 
-#: snikket_web/invite.py:112 snikket_web/invite.py:179
+#: snikket_web/invite.py:114 snikket_web/invite.py:181
 msgid "Confirm password"
 msgstr "Bekräfta lösenord"
 
-#: snikket_web/invite.py:116 snikket_web/invite.py:183
-msgid "The passwords must match"
+#: snikket_web/invite.py:118 snikket_web/invite.py:185
+#, fuzzy
+#| msgid "The passwords must match"
+msgid "The passwords must match."
 msgstr "Lösenorden måste vara identiska"
 
-#: snikket_web/invite.py:121
+#: snikket_web/invite.py:123
 msgid "Create account"
 msgstr "Skapa konto"
 
-#: snikket_web/invite.py:148
-msgid "That username is already taken"
+#: snikket_web/invite.py:150
+#, fuzzy
+#| msgid "That username is already taken"
+msgid "That username is already taken."
 msgstr "Det användarnamnet är redan taget"
 
-#: snikket_web/invite.py:152 snikket_web/invite.py:216
-msgid "Registration was declined for unknown reasons"
+#: snikket_web/invite.py:154 snikket_web/invite.py:218
+#, fuzzy
+#| msgid "Registration was declined for unknown reasons"
+msgid "Registration was declined for unknown reasons."
 msgstr "Registreringen nekades av okänd anledning"
 
-#: snikket_web/invite.py:156
-msgid "The username is not valid"
+#: snikket_web/invite.py:158
+#, fuzzy
+#| msgid "The username is not valid"
+msgid "The username is not valid."
 msgstr "Användarnamnet är ogiltigt"
 
-#: snikket_web/invite.py:188 snikket_web/templates/user_home.html:32
+#: snikket_web/invite.py:190 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "Ändra lösenord"
 
-#: snikket_web/main.py:37
+#: snikket_web/main.py:36
 msgid "Address"
 msgstr "Adress"
 
-#: snikket_web/main.py:47
+#: snikket_web/main.py:46
 msgid "Sign in"
 msgstr "Logga in"
 
-#: snikket_web/main.py:56
+#: snikket_web/main.py:55
 msgid "Invalid username or password."
 msgstr "Ogiltigt användarnamn eller lösenord."
 
-#: snikket_web/main.py:84
+#: snikket_web/main.py:83
 msgid "Login successful!"
 msgstr "Inloggning lyckades!"
 
-#: snikket_web/user.py:28
+#: snikket_web/user.py:27
 msgid "Current password"
 msgstr "Nuvarande lösenord"
 
-#: snikket_web/user.py:33
+#: snikket_web/user.py:32
 msgid "New password"
 msgstr "Nytt lösenord"
 
-#: snikket_web/user.py:38
+#: snikket_web/user.py:37
 msgid "Confirm new password"
 msgstr "Bekräfta nytt lösenord"
 
-#: snikket_web/user.py:42
-msgid "The new passwords must match"
+#: snikket_web/user.py:41
+#, fuzzy
+#| msgid "The new passwords must match"
+msgid "The new passwords must match."
 msgstr "De nya lösenorden måste vara identiska"
 
-#: snikket_web/user.py:49
+#: snikket_web/user.py:48
 msgid "Sign out"
 msgstr "Logga ut"
 
-#: snikket_web/user.py:54
+#: snikket_web/user.py:53
 msgid "Nobody"
 msgstr "Ingen"
 
-#: snikket_web/user.py:55
+#: snikket_web/user.py:54
 msgid "Friends only"
 msgstr "Endast vänner"
 
-#: snikket_web/user.py:56
+#: snikket_web/user.py:55
 msgid "Everyone"
 msgstr "Alla"
 
 #: snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/templates/admin_users.html:11 snikket_web/user.py:62
+#: snikket_web/templates/admin_users.html:11 snikket_web/user.py:61
 msgid "Display name"
 msgstr "Visningsnamn"
 
-#: snikket_web/user.py:66
+#: snikket_web/user.py:65
 msgid "Avatar"
 msgstr "Profilbild"
 
-#: snikket_web/user.py:70
+#: snikket_web/user.py:69
 msgid "Profile visibility"
 msgstr "Synlighet av profil"
 
-#: snikket_web/user.py:75
+#: snikket_web/user.py:74
 msgid "Update profile"
 msgstr "Uppdatera profil"
 
-#: snikket_web/user.py:100
-msgid "Incorrect password"
+#: snikket_web/user.py:99
+#, fuzzy
+#| msgid "Incorrect password"
+msgid "Incorrect password."
 msgstr "Fel lösenord"
 
-#: snikket_web/user.py:104
+#: snikket_web/user.py:103
 msgid "Password changed"
 msgstr "Lösenord ändrat"
 
-#: snikket_web/user.py:146
+#: snikket_web/user.py:111
+msgid ""
+"The chosen avatar is too big. To be able to upload larger avatars, please "
+"use the app."
+msgstr ""
+
+#: snikket_web/user.py:159
 msgid "Profile updated"
 msgstr "Profilen uppdaterad"
+
+#: snikket_web/templates/unauth.html:18 snikket_web/user.py:167
+msgid "Error"
+msgstr "Fel"
 
 #: snikket_web/templates/_footer.html:4
 #, python-format
@@ -349,8 +371,8 @@ msgid ""
 "\"%(trademarks_url)s\">Snikket Trademarks information page</a>."
 msgstr ""
 "“Snikket” och papegojloggan är varumärken tillhörande Snikket Community "
-"Interest Company. För mer information om varumärkena, besök <a href=\""
-"%(trademarks_url)s\">Snikkets sida om varumärken</a>."
+"Interest Company. För mer information om varumärkena, besök <a href="
+"\"%(trademarks_url)s\">Snikkets sida om varumärken</a>."
 
 #: snikket_web/templates/about.html:19
 msgid "Software Versions"
@@ -500,8 +522,8 @@ msgid ""
 "strong>"
 msgstr ""
 "Om du trycker på knappen nedanför kommer användaren och deras data raderas "
-"direkt, permanent och skoningslöst. <strong>Därefter finns ingen "
-"återvändo!</strong>"
+"direkt, permanent och skoningslöst. <strong>Därefter finns ingen återvändo!</"
+"strong>"
 
 #: snikket_web/templates/admin_delete_user.html:19
 #: snikket_web/templates/admin_edit_circle.html:44
@@ -509,7 +531,7 @@ msgstr ""
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:10
 #: snikket_web/templates/user_passwd.html:27
-#: snikket_web/templates/user_profile.html:28
+#: snikket_web/templates/user_profile.html:32
 msgid "Back"
 msgstr "Tillbaka"
 
@@ -600,7 +622,8 @@ msgstr "Kretsar"
 #: snikket_web/templates/admin_edit_invite.html:23
 msgid ""
 "Users joining via this invitation will be added to the following circles:"
-msgstr "Användare som går med via denna inbjudan läggs till i följande kretsar:"
+msgstr ""
+"Användare som går med via denna inbjudan läggs till i följande kretsar:"
 
 #: snikket_web/templates/admin_edit_invite.html:29
 #: snikket_web/templates/admin_invites.html:23
@@ -820,18 +843,20 @@ msgstr ""
 "klicka på knappen nedan:"
 
 #: snikket_web/templates/invite_register.html:14
-#: snikket_web/templates/invite_view.html:38
+#: snikket_web/templates/invite_view.html:39
 msgid "App already installed?"
 msgstr "Appen redan installerad?"
 
 #: snikket_web/templates/invite_register.html:16
 #: snikket_web/templates/invite_reset_view.html:21
-#: snikket_web/templates/invite_view.html:40
+#: snikket_web/templates/invite_view.html:41
+#: snikket_web/templates/invite_view.html:106
+#: snikket_web/templates/invite_view.html:134
 msgid "Open the app"
 msgstr "Öppna appen"
 
 #: snikket_web/templates/invite_register.html:18
-#: snikket_web/templates/invite_view.html:42
+#: snikket_web/templates/invite_view.html:43
 msgid "This button works only if you have the app installed already!"
 msgstr "Den här knappen fungerar bara om du redan har appen installerad!"
 
@@ -926,7 +951,7 @@ msgstr ""
 "Scanna-knappen överst."
 
 #: snikket_web/templates/invite_reset_view.html:26
-#: snikket_web/templates/invite_view.html:76
+#: snikket_web/templates/invite_view.html:77
 msgid ""
 "Your camera will turn on. Point it at the square code below until it is "
 "within the highlighted square on your screen, and wait until the app "
@@ -940,7 +965,7 @@ msgid "You will then be prompted to enter a new password for your account."
 msgstr "Du kommer bli ombedd att skriva in ett nytt lösenord för ditt konto."
 
 #: snikket_web/templates/invite_reset_view.html:29
-#: snikket_web/templates/invite_view.html:44
+#: snikket_web/templates/invite_view.html:45
 msgid "Alternatives"
 msgstr "Alternativ"
 
@@ -1026,14 +1051,19 @@ msgid "Get it on Google Play"
 msgstr "Hämta den på Google Play"
 
 #: snikket_web/templates/invite_view.html:30
+#: snikket_web/templates/invite_view.html:102
 msgid "Download on the App Store"
 msgstr "Hämta på App Store"
 
-#: snikket_web/templates/invite_view.html:34
+#: snikket_web/templates/invite_view.html:32
+msgid "Get it on F-Droid"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:35
 msgid "Send to mobile device"
 msgstr "Skicka till mobil"
 
-#: snikket_web/templates/invite_view.html:37
+#: snikket_web/templates/invite_view.html:38
 msgid ""
 "After installation the app should automatically open and prompt you to "
 "create an account. If not, simply click the button below."
@@ -1041,7 +1071,7 @@ msgstr ""
 "Efter installationen kommer appen automatiskt öppna och be dig skapa ett "
 "konto. Om inte, klicka på knappen nedan."
 
-#: snikket_web/templates/invite_view.html:45
+#: snikket_web/templates/invite_view.html:46
 #, python-format
 msgid ""
 "You can connect to Snikket using any XMPP-compatible software. If the button "
@@ -1052,16 +1082,20 @@ msgstr ""
 "Om knappen ovan inte fungerar med din app så kan du behöva <a href="
 "\"%(register_url)s\">registrera ett konto manuellt</a>."
 
-#: snikket_web/templates/invite_view.html:51
+#: snikket_web/templates/invite_view.html:52
 msgid "Scan invite code"
 msgstr "Scanna inbjudningskoden"
 
-#: snikket_web/templates/invite_view.html:54
-#: snikket_web/templates/invite_view.html:83
+#: snikket_web/templates/invite_view.html:55
+#: snikket_web/templates/invite_view.html:84
+#: snikket_web/templates/invite_view.html:96
+#: snikket_web/templates/invite_view.html:112
+#: snikket_web/templates/invite_view.html:124
+#: snikket_web/templates/invite_view.html:140
 msgid "Close"
 msgstr "Stäng"
 
-#: snikket_web/templates/invite_view.html:57
+#: snikket_web/templates/invite_view.html:58
 msgid ""
 "You can transfer this invite to your mobile device by scanning a code with "
 "your camera. You can use either a QR scanner app or the Snikket app itself."
@@ -1070,27 +1104,63 @@ msgstr ""
 "koden med din kamera. Du kan antingen använda en app för att scanna QR-koder "
 "eller Snikket-appen själv."
 
-#: snikket_web/templates/invite_view.html:62
+#: snikket_web/templates/invite_view.html:63
 msgid "Using a QR code scanner"
 msgstr "Med en QR-kodsläsare"
 
-#: snikket_web/templates/invite_view.html:64
+#: snikket_web/templates/invite_view.html:65
 msgid "Using the Snikket app"
 msgstr "Med Snikket-appen"
 
-#: snikket_web/templates/invite_view.html:69
+#: snikket_web/templates/invite_view.html:70
 msgid ""
 "Use a <em>QR code</em> scanner on your mobile device to scan the code below:"
 msgstr ""
 "Scanna koden nedan med en <em>QR-kods</em> scanner på din mobila enhet:"
 
-#: snikket_web/templates/invite_view.html:75
+#: snikket_web/templates/invite_view.html:76
 msgid ""
 "Install the Snikket app on your mobile device, open it, and tap the 'Scan' "
 "button at the top."
 msgstr ""
 "Installera Snikket-appen på din mobila enhet, öppna den, och tryck på "
 "'Scanna'-knappen överst."
+
+#: snikket_web/templates/invite_view.html:93
+msgid "Install on iOS"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:99
+msgid ""
+"After downloading Snikket from the app store, you have to return to this "
+"invite link and tap on \"Open the app\" to proceed."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:101
+msgid "First download Snikket from the app store using the button below:"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:103
+#: snikket_web/templates/invite_view.html:131
+msgid ""
+"After the installation is complete, you can return to this page and tap the "
+"\"Open the app\" button to continue with the setup:"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:121
+#: snikket_web/templates/invite_view.html:130
+msgid "Install via F-Droid"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:127
+msgid ""
+"After installing Snikket via F-Droid, you have to return to this invite link "
+"and tap on \"Open the app\" to proceed."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:129
+msgid "First install Snikket from F-Droid using the button below:"
+msgstr ""
 
 #: snikket_web/templates/library.j2:18
 msgid "Copy link"
@@ -1122,30 +1192,22 @@ msgstr "Snikket Inloggning"
 msgid "Enter your Snikket address and password to manage your account."
 msgstr "Ange din Snikket-adress och lösenord för att hantera ditt konto."
 
-#: snikket_web/templates/login.html:18
-msgid "Login failed"
-msgstr "Inloggning misslyckades"
-
-#: snikket_web/templates/login.html:23
+#: snikket_web/templates/login.html:19
 msgid "Incorrect address"
 msgstr "Fel adress"
 
-#: snikket_web/templates/login.html:24
+#: snikket_web/templates/login.html:20
 #, python-format
 msgid ""
 "This Snikket service only hosts addresses ending in <em>@%(snikket_domain)s</"
 "em>. Your password was not sent."
 msgstr ""
-"Den här Snikket-tjänsten har bara adresser som slutar på "
-"<em>@%(snikket_domain)s</em>. Ditt lösenord skickades inte."
+"Den här Snikket-tjänsten har bara adresser som slutar på <em>@"
+"%(snikket_domain)s</em>. Ditt lösenord skickades inte."
 
 #: snikket_web/templates/unauth.html:16
 msgid "Operation successful"
 msgstr "Operationen lyckades"
-
-#: snikket_web/templates/unauth.html:18
-msgid "Error"
-msgstr "Fel"
 
 #: snikket_web/templates/user_home.html:9
 msgid "Welcome!"
@@ -1222,17 +1284,20 @@ msgstr "Uppdatera din profil"
 msgid "Profile"
 msgstr "Profil"
 
-#: snikket_web/templates/user_profile.html:19
+#: snikket_web/templates/user_profile.html:23
 msgid "Visibility"
 msgstr "Synlighet"
 
-#: snikket_web/templates/user_profile.html:20
+#: snikket_web/templates/user_profile.html:24
 msgid ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
 msgstr ""
 "Den här avdelningen låter dig hantera vilka som kan se din profil, såsom din "
 "profilbild och visningsnamn."
+
+#~ msgid "Login failed"
+#~ msgstr "Inloggning misslyckades"
 
 #~ msgid "Not on mobile?"
 #~ msgstr "Inte på mobilen?"

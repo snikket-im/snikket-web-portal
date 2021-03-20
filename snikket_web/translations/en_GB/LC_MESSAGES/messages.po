@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-02-23 07:55+0100\n"
+"POT-Creation-Date: 2021-03-20 16:44+0100\n"
 "PO-Revision-Date: 2021-02-02 21:01+0000\n"
 "Last-Translator: riccio <unriccio@email.it>\n"
 "Language-Team: English (United Kingdom) <https://i18n.sotecware.net/projects/"
@@ -20,287 +20,303 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: snikket_web/admin.py:60
+#: snikket_web/admin.py:59
 msgid "Delete user permanently"
 msgstr "Delete user permanently"
 
-#: snikket_web/admin.py:73
+#: snikket_web/admin.py:72
 #, fuzzy
 #| msgid "deleted"
 msgid "User deleted"
 msgstr "deleted"
 
-#: snikket_web/admin.py:116
+#: snikket_web/admin.py:115
 #, fuzzy
 #| msgid "Password reset link for %(user_name)s"
 msgid "Password reset link created"
 msgstr "Password reset link for %(user_name)s"
 
-#: snikket_web/admin.py:122
+#: snikket_web/admin.py:121
 #, fuzzy
 #| msgid "Create password reset links or delete users."
 msgid "Password reset link deleted"
 msgstr "Create password reset links or delete users."
 
-#: snikket_web/admin.py:141
+#: snikket_web/admin.py:140
 msgid "Invite to circle"
 msgstr "Invite to circle"
 
-#: snikket_web/admin.py:147
+#: snikket_web/admin.py:146
 msgid "At least one circle must be selected"
 msgstr "At least one circle must be selected"
 
-#: snikket_web/admin.py:152
+#: snikket_web/admin.py:151
 msgid "Valid for"
 msgstr "Valid for"
 
-#: snikket_web/admin.py:154
+#: snikket_web/admin.py:153
 msgid "One hour"
 msgstr "One hour"
 
-#: snikket_web/admin.py:155
+#: snikket_web/admin.py:154
 msgid "Twelve hours"
 msgstr "Twelve hours"
 
-#: snikket_web/admin.py:156
+#: snikket_web/admin.py:155
 msgid "One day"
 msgstr "One day"
 
-#: snikket_web/admin.py:157
+#: snikket_web/admin.py:156
 msgid "One week"
 msgstr "One week"
 
-#: snikket_web/admin.py:158
+#: snikket_web/admin.py:157
 msgid "Four weeks"
 msgstr "Four weeks"
 
-#: snikket_web/admin.py:164 snikket_web/templates/admin_edit_invite.html:17
+#: snikket_web/admin.py:163 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
 msgstr "Invitation type"
 
-#: snikket_web/admin.py:166 snikket_web/templates/library.j2:116
+#: snikket_web/admin.py:165 snikket_web/templates/library.j2:116
 msgid "Individual"
 msgstr ""
 
-#: snikket_web/admin.py:167 snikket_web/templates/library.j2:114
+#: snikket_web/admin.py:166 snikket_web/templates/library.j2:114
 msgid "Group"
 msgstr ""
 
-#: snikket_web/admin.py:173
+#: snikket_web/admin.py:172
 msgid "New invitation link"
 msgstr "New invitation link"
 
-#: snikket_web/admin.py:235
+#: snikket_web/admin.py:234
 msgid "Revoke"
 msgstr "Revoke"
 
-#: snikket_web/admin.py:259
+#: snikket_web/admin.py:258
 #, fuzzy
 #| msgid "Invitation type"
 msgid "Invitation created"
 msgstr "Invitation type"
 
-#: snikket_web/admin.py:275
+#: snikket_web/admin.py:274
 #, fuzzy
 #| msgid "New invitation link"
 msgid "No such invitation exists"
 msgstr "New invitation link"
 
-#: snikket_web/admin.py:290
+#: snikket_web/admin.py:289
 #, fuzzy
 #| msgid "Invitation type"
 msgid "Invitation revoked"
 msgstr "Invitation type"
 
-#: snikket_web/admin.py:307 snikket_web/admin.py:355
+#: snikket_web/admin.py:306 snikket_web/admin.py:354
 msgid "Name"
 msgstr "Name"
 
-#: snikket_web/admin.py:312 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:311 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Create circle"
 
-#: snikket_web/admin.py:342
+#: snikket_web/admin.py:341
 #, fuzzy
 #| msgid "Circle name"
 msgid "Circle created"
 msgstr "Circle name"
 
-#: snikket_web/admin.py:360
+#: snikket_web/admin.py:359
 msgid "Select user"
 msgstr "Select user"
 
-#: snikket_web/admin.py:365
+#: snikket_web/admin.py:364
 #, fuzzy
 #| msgid "Create circle"
 msgid "Update circle"
 msgstr "Create circle"
 
-#: snikket_web/admin.py:369
+#: snikket_web/admin.py:368
 msgid "Delete circle permanently"
 msgstr "Delete circle permanently"
 
-#: snikket_web/admin.py:375
+#: snikket_web/admin.py:374
 msgid "Add user"
 msgstr "Add user"
 
-#: snikket_web/admin.py:391
+#: snikket_web/admin.py:390
 #, fuzzy
 #| msgid "No circles"
 msgid "No such circle exists"
 msgstr "No circles"
 
-#: snikket_web/admin.py:428
+#: snikket_web/admin.py:427
 #, fuzzy
 #| msgid "Circle name"
 msgid "Circle data updated"
 msgstr "Circle name"
 
-#: snikket_web/admin.py:434
+#: snikket_web/admin.py:433
 #, fuzzy
 #| msgid "deleted"
 msgid "Circle deleted"
 msgstr "deleted"
 
-#: snikket_web/admin.py:445
+#: snikket_web/admin.py:444
 #, fuzzy
 #| msgid "Invite to circle"
 msgid "User added to circle"
 msgstr "Invite to circle"
 
-#: snikket_web/admin.py:454
+#: snikket_web/admin.py:453
 #, fuzzy
 #| msgid "Remove user %(username)s from circle"
 msgid "User removed from circle"
 msgstr "Remove user %(username)s from circle"
 
-#: snikket_web/infra.py:40
+#: snikket_web/infra.py:41
 msgid "Main"
 msgstr "Main"
 
-#: snikket_web/invite.py:104
+#: snikket_web/invite.py:106
 msgid "Username"
 msgstr ""
 
-#: snikket_web/invite.py:108 snikket_web/invite.py:175 snikket_web/main.py:42
+#: snikket_web/invite.py:110 snikket_web/invite.py:177 snikket_web/main.py:41
 msgid "Password"
 msgstr "Password"
 
-#: snikket_web/invite.py:112 snikket_web/invite.py:179
+#: snikket_web/invite.py:114 snikket_web/invite.py:181
 #, fuzzy
 #| msgid "Confirm new password"
 msgid "Confirm password"
 msgstr "Confirm new password"
 
-#: snikket_web/invite.py:116 snikket_web/invite.py:183
-msgid "The passwords must match"
+#: snikket_web/invite.py:118 snikket_web/invite.py:185
+#, fuzzy
+#| msgid "The passwords must match"
+msgid "The passwords must match."
 msgstr "The passwords must match"
 
-#: snikket_web/invite.py:121
+#: snikket_web/invite.py:123
 #, fuzzy
 #| msgid "Create circle"
 msgid "Create account"
 msgstr "Create circle"
 
-#: snikket_web/invite.py:148
-msgid "That username is already taken"
+#: snikket_web/invite.py:150
+msgid "That username is already taken."
 msgstr ""
 
-#: snikket_web/invite.py:152 snikket_web/invite.py:216
-msgid "Registration was declined for unknown reasons"
+#: snikket_web/invite.py:154 snikket_web/invite.py:218
+msgid "Registration was declined for unknown reasons."
 msgstr ""
 
-#: snikket_web/invite.py:156
-msgid "The username is not valid"
+#: snikket_web/invite.py:158
+msgid "The username is not valid."
 msgstr ""
 
-#: snikket_web/invite.py:188 snikket_web/templates/user_home.html:32
+#: snikket_web/invite.py:190 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "Change password"
 
-#: snikket_web/main.py:37
+#: snikket_web/main.py:36
 msgid "Address"
 msgstr "Address"
 
-#: snikket_web/main.py:47
+#: snikket_web/main.py:46
 msgid "Sign in"
 msgstr "Sign in"
 
-#: snikket_web/main.py:56
+#: snikket_web/main.py:55
 #, fuzzy
 #| msgid "Invalid user name or password."
 msgid "Invalid username or password."
 msgstr "Invalid user name or password."
 
-#: snikket_web/main.py:84
+#: snikket_web/main.py:83
 msgid "Login successful!"
 msgstr ""
 
-#: snikket_web/user.py:28
+#: snikket_web/user.py:27
 msgid "Current password"
 msgstr "Current password"
 
-#: snikket_web/user.py:33
+#: snikket_web/user.py:32
 msgid "New password"
 msgstr "New password"
 
-#: snikket_web/user.py:38
+#: snikket_web/user.py:37
 msgid "Confirm new password"
 msgstr "Confirm new password"
 
-#: snikket_web/user.py:42
-msgid "The new passwords must match"
+#: snikket_web/user.py:41
+#, fuzzy
+#| msgid "The new passwords must match"
+msgid "The new passwords must match."
 msgstr "The new passwords must match"
 
-#: snikket_web/user.py:49
+#: snikket_web/user.py:48
 msgid "Sign out"
 msgstr "Sign out"
 
-#: snikket_web/user.py:54
+#: snikket_web/user.py:53
 msgid "Nobody"
 msgstr "Nobody"
 
-#: snikket_web/user.py:55
+#: snikket_web/user.py:54
 msgid "Friends only"
 msgstr "Friends only"
 
-#: snikket_web/user.py:56
+#: snikket_web/user.py:55
 msgid "Everyone"
 msgstr "Everyone"
 
 #: snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/templates/admin_users.html:11 snikket_web/user.py:62
+#: snikket_web/templates/admin_users.html:11 snikket_web/user.py:61
 msgid "Display name"
 msgstr "Display name"
 
-#: snikket_web/user.py:66
+#: snikket_web/user.py:65
 msgid "Avatar"
 msgstr "Avatar"
 
-#: snikket_web/user.py:70
+#: snikket_web/user.py:69
 msgid "Profile visibility"
 msgstr "Profile visibility"
 
-#: snikket_web/user.py:75
+#: snikket_web/user.py:74
 msgid "Update profile"
 msgstr "Update profile"
 
-#: snikket_web/user.py:100
-msgid "Incorrect password"
+#: snikket_web/user.py:99
+#, fuzzy
+#| msgid "Incorrect password"
+msgid "Incorrect password."
 msgstr "Incorrect password"
 
-#: snikket_web/user.py:104
+#: snikket_web/user.py:103
 #, fuzzy
 #| msgid "Password change failed"
 msgid "Password changed"
 msgstr "Password change failed"
 
-#: snikket_web/user.py:146
+#: snikket_web/user.py:111
+msgid ""
+"The chosen avatar is too big. To be able to upload larger avatars, please "
+"use the app."
+msgstr ""
+
+#: snikket_web/user.py:159
 #, fuzzy
 #| msgid "Profile"
 msgid "Profile updated"
 msgstr "Profile"
+
+#: snikket_web/templates/unauth.html:18 snikket_web/user.py:167
+msgid "Error"
+msgstr ""
 
 #: snikket_web/templates/_footer.html:4
 #, python-format
@@ -537,7 +553,7 @@ msgstr ""
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:10
 #: snikket_web/templates/user_passwd.html:27
-#: snikket_web/templates/user_profile.html:28
+#: snikket_web/templates/user_profile.html:32
 msgid "Back"
 msgstr "Back"
 
@@ -856,18 +872,20 @@ msgid ""
 msgstr ""
 
 #: snikket_web/templates/invite_register.html:14
-#: snikket_web/templates/invite_view.html:38
+#: snikket_web/templates/invite_view.html:39
 msgid "App already installed?"
 msgstr ""
 
 #: snikket_web/templates/invite_register.html:16
 #: snikket_web/templates/invite_reset_view.html:21
-#: snikket_web/templates/invite_view.html:40
+#: snikket_web/templates/invite_view.html:41
+#: snikket_web/templates/invite_view.html:106
+#: snikket_web/templates/invite_view.html:134
 msgid "Open the app"
 msgstr ""
 
 #: snikket_web/templates/invite_register.html:18
-#: snikket_web/templates/invite_view.html:42
+#: snikket_web/templates/invite_view.html:43
 msgid "This button works only if you have the app installed already!"
 msgstr ""
 
@@ -960,7 +978,7 @@ msgid ""
 msgstr ""
 
 #: snikket_web/templates/invite_reset_view.html:26
-#: snikket_web/templates/invite_view.html:76
+#: snikket_web/templates/invite_view.html:77
 msgid ""
 "Your camera will turn on. Point it at the square code below until it is "
 "within the highlighted square on your screen, and wait until the app "
@@ -972,7 +990,7 @@ msgid "You will then be prompted to enter a new password for your account."
 msgstr ""
 
 #: snikket_web/templates/invite_reset_view.html:29
-#: snikket_web/templates/invite_view.html:44
+#: snikket_web/templates/invite_view.html:45
 msgid "Alternatives"
 msgstr ""
 
@@ -1050,20 +1068,25 @@ msgid "Get it on Google Play"
 msgstr ""
 
 #: snikket_web/templates/invite_view.html:30
+#: snikket_web/templates/invite_view.html:102
 msgid "Download on the App Store"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:34
+#: snikket_web/templates/invite_view.html:32
+msgid "Get it on F-Droid"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:35
 msgid "Send to mobile device"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:37
+#: snikket_web/templates/invite_view.html:38
 msgid ""
 "After installation the app should automatically open and prompt you to "
 "create an account. If not, simply click the button below."
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:45
+#: snikket_web/templates/invite_view.html:46
 #, python-format
 msgid ""
 "You can connect to Snikket using any XMPP-compatible software. If the button "
@@ -1071,40 +1094,80 @@ msgid ""
 "\">register an account manually</a>."
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:51
+#: snikket_web/templates/invite_view.html:52
 #, fuzzy
 #| msgid "Show invite details"
 msgid "Scan invite code"
 msgstr "Show invite details"
 
-#: snikket_web/templates/invite_view.html:54
-#: snikket_web/templates/invite_view.html:83
+#: snikket_web/templates/invite_view.html:55
+#: snikket_web/templates/invite_view.html:84
+#: snikket_web/templates/invite_view.html:96
+#: snikket_web/templates/invite_view.html:112
+#: snikket_web/templates/invite_view.html:124
+#: snikket_web/templates/invite_view.html:140
 msgid "Close"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:57
+#: snikket_web/templates/invite_view.html:58
 msgid ""
 "You can transfer this invite to your mobile device by scanning a code with "
 "your camera. You can use either a QR scanner app or the Snikket app itself."
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:62
+#: snikket_web/templates/invite_view.html:63
 msgid "Using a QR code scanner"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:64
+#: snikket_web/templates/invite_view.html:65
 msgid "Using the Snikket app"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:69
+#: snikket_web/templates/invite_view.html:70
 msgid ""
 "Use a <em>QR code</em> scanner on your mobile device to scan the code below:"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:75
+#: snikket_web/templates/invite_view.html:76
 msgid ""
 "Install the Snikket app on your mobile device, open it, and tap the 'Scan' "
 "button at the top."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:93
+msgid "Install on iOS"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:99
+msgid ""
+"After downloading Snikket from the app store, you have to return to this "
+"invite link and tap on \"Open the app\" to proceed."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:101
+msgid "First download Snikket from the app store using the button below:"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:103
+#: snikket_web/templates/invite_view.html:131
+msgid ""
+"After the installation is complete, you can return to this page and tap the "
+"\"Open the app\" button to continue with the setup:"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:121
+#: snikket_web/templates/invite_view.html:130
+msgid "Install via F-Droid"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:127
+msgid ""
+"After installing Snikket via F-Droid, you have to return to this invite link "
+"and tap on \"Open the app\" to proceed."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:129
+msgid "First install Snikket from F-Droid using the button below:"
 msgstr ""
 
 #: snikket_web/templates/library.j2:18
@@ -1139,17 +1202,13 @@ msgstr "Snikket Login"
 msgid "Enter your Snikket address and password to manage your account."
 msgstr "Enter your Snikket address and password to manage your account."
 
-#: snikket_web/templates/login.html:18
-msgid "Login failed"
-msgstr "Login failed"
-
-#: snikket_web/templates/login.html:23
+#: snikket_web/templates/login.html:19
 #, fuzzy
 #| msgid "Incorrect password"
 msgid "Incorrect address"
 msgstr "Incorrect password"
 
-#: snikket_web/templates/login.html:24
+#: snikket_web/templates/login.html:20
 #, python-format
 msgid ""
 "This Snikket service only hosts addresses ending in <em>@%(snikket_domain)s</"
@@ -1158,10 +1217,6 @@ msgstr ""
 
 #: snikket_web/templates/unauth.html:16
 msgid "Operation successful"
-msgstr ""
-
-#: snikket_web/templates/unauth.html:18
-msgid "Error"
 msgstr ""
 
 #: snikket_web/templates/user_home.html:9
@@ -1253,17 +1308,20 @@ msgstr "Update profile"
 msgid "Profile"
 msgstr "Profile"
 
-#: snikket_web/templates/user_profile.html:19
+#: snikket_web/templates/user_profile.html:23
 msgid "Visibility"
 msgstr "Visibility"
 
-#: snikket_web/templates/user_profile.html:20
+#: snikket_web/templates/user_profile.html:24
 msgid ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
 msgstr ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
+
+#~ msgid "Login failed"
+#~ msgstr "Login failed"
 
 #~ msgid "Edit user %(user_name)s"
 #~ msgstr "Edit user %(user_name)s"
