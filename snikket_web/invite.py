@@ -53,7 +53,9 @@ async def view_old(id_: str) -> quart.Response:
 
 
 @bp.route("/<id_>/")
-async def view(id_: str) -> typing.Union[quart.Response, str]:
+async def view(id_: str) -> typing.Union[quart.Response,
+                                         typing.Tuple[str, int],
+                                         str]:
     try:
         invite = await client.get_public_invite_by_id(id_)
     except aiohttp.ClientResponseError as exc:
