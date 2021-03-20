@@ -15,16 +15,14 @@ import quart.exceptions
 
 import wtforms
 
-import flask_wtf
-
 from flask_babel import lazy_gettext as _l, _
 
-from .infra import client
+from .infra import client, BaseForm
 
 bp = Blueprint('user', __name__)
 
 
-class ChangePasswordForm(flask_wtf.FlaskForm):  # type:ignore
+class ChangePasswordForm(BaseForm):
     current_password = wtforms.PasswordField(
         _l("Current password"),
         validators=[wtforms.validators.InputRequired()]
@@ -45,7 +43,7 @@ class ChangePasswordForm(flask_wtf.FlaskForm):  # type:ignore
     )
 
 
-class LogoutForm(flask_wtf.FlaskForm):  # type:ignore
+class LogoutForm(BaseForm):
     action_signout = wtforms.SubmitField(
         _l("Sign out"),
     )
@@ -58,7 +56,7 @@ _ACCESS_MODEL_CHOICES = [
 ]
 
 
-class ProfileForm(flask_wtf.FlaskForm):  # type:ignore
+class ProfileForm(BaseForm):
     nickname = wtforms.TextField(
         _l("Display name"),
     )

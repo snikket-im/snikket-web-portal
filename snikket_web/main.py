@@ -22,17 +22,16 @@ import babel
 import wtforms
 
 import flask_wtf
-
 from flask_babel import lazy_gettext as _l, _
 
 from . import xmpputil, _version
-from .infra import client
+from .infra import client, BaseForm
 
 
 bp = quart.Blueprint("main", __name__)
 
 
-class LoginForm(flask_wtf.FlaskForm):  # type:ignore
+class LoginForm(BaseForm):
     address = wtforms.TextField(
         _l("Address"),
         validators=[wtforms.validators.InputRequired()],

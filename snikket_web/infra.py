@@ -10,6 +10,7 @@ from quart import (
 )
 
 import flask_babel
+import flask_wtf
 from flask_babel import _
 
 from . import prosodyclient
@@ -55,3 +56,14 @@ def generate_error_id() -> str:
     return base64.b32encode(secrets.token_bytes(8)).decode(
         "ascii"
     ).rstrip("=")
+
+
+class BaseForm(flask_wtf.FlaskForm):  # type:ignore
+    def __init__(self, *args: typing.Any, **kwargs: typing.Any):
+        meta = kwargs["meta"] = dict(kwargs.get("meta", {}))
+        if "locales" not in meta:
+            locale = flask_babel.get_locale()
+            if locale:
+                meta["locales"] = [str(locale)]
+
+        super().__init__(*args, **kwargs)

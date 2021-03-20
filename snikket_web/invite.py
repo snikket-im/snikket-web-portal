@@ -16,10 +16,9 @@ from quart import (
 
 import wtforms
 
-import flask_wtf
 from flask_babel import lazy_gettext as _l
 
-from .infra import client, selected_locale
+from .infra import client, selected_locale, BaseForm
 
 
 bp = Blueprint("invite", __name__)
@@ -102,7 +101,7 @@ async def view(id_: str) -> typing.Union[quart.Response,
     )
 
 
-class RegisterForm(flask_wtf.FlaskForm):  # type:ignore
+class RegisterForm(BaseForm):
     localpart = wtforms.StringField(
         _l("Username"),
     )
@@ -173,7 +172,7 @@ async def register(id_: str) -> typing.Union[str, quart.Response]:
     )
 
 
-class ResetForm(flask_wtf.FlaskForm):  # type:ignore
+class ResetForm(BaseForm):
     password = wtforms.PasswordField(
         _l("Password"),
     )

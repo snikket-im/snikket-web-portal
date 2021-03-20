@@ -19,12 +19,11 @@ from quart import (
     abort,
     flash,
 )
-import flask_wtf
 
 from flask_babel import lazy_gettext as _l, _
 
 from . import prosodyclient
-from .infra import client, circle_name
+from .infra import client, circle_name, BaseForm
 
 bp = Blueprint("admin", __name__, url_prefix="/admin")
 
@@ -35,7 +34,7 @@ async def index() -> str:
     return await render_template("admin_home.html")
 
 
-class PasswordResetLinkPost(flask_wtf.FlaskForm):  # type: ignore
+class PasswordResetLinkPost(BaseForm):
     action_create = wtforms.StringField()
     action_revoke = wtforms.StringField()
 
@@ -55,7 +54,7 @@ async def users() -> str:
     )
 
 
-class DeleteUserForm(flask_wtf.FlaskForm):  # type:ignore
+class DeleteUserForm(BaseForm):
     action_delete = wtforms.SubmitField(
         _l("Delete user permanently")
     )
@@ -132,11 +131,11 @@ async def create_password_reset_link() -> typing.Union[str, quart.Response]:
     )
 
 
-class InvitesListForm(flask_wtf.FlaskForm):  # type:ignore
+class InvitesListForm(BaseForm):
     action_revoke = wtforms.StringField()
 
 
-class InvitePost(flask_wtf.FlaskForm):  # type:ignore
+class InvitePost(BaseForm):
     circles = wtforms.SelectMultipleField(
         _l("Invite to circle"),
         # NOTE: This is for when/if we ever support multi-group invites.
@@ -230,7 +229,7 @@ async def invitations() -> typing.Union[str, quart.Response]:
     )
 
 
-class InviteForm(flask_wtf.FlaskForm):  # type:ignore
+class InviteForm(BaseForm):
     action_revoke = wtforms.SubmitField(
         _l("Revoke")
     )
@@ -302,7 +301,7 @@ async def edit_invite(id_: str) -> typing.Union[str, quart.Response]:
     )
 
 
-class CirclePost(flask_wtf.FlaskForm):  # type:ignore
+class CirclePost(BaseForm):
     name = wtforms.StringField(
         _l("Name"),
         validators=[wtforms.validators.InputRequired()],
@@ -350,7 +349,7 @@ async def create_circle() -> typing.Union[str, quart.Response]:
     )
 
 
-class EditCircleForm(flask_wtf.FlaskForm):  # type:ignore
+class EditCircleForm(BaseForm):
     name = wtforms.StringField(
         _l("Name"),
         validators=[wtforms.validators.InputRequired()],

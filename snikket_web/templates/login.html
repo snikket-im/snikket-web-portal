@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "library.j2" import box, form_button %}
+{% from "library.j2" import box, form_button, render_errors %}
 {% set body_id = "login" %}
 {% block head_lead %}
 <title>{{ _("Snikket Login") }}</title>
@@ -14,11 +14,7 @@
 	<p class="form-desc">{{ _("Enter your Snikket address and password to manage your account.") }}</p>
 	<form method="POST" action="{{ url_for('.login') }}" name="login" id="login-form" onsubmit="return domainCheck();" data-addressid="{{ form.address.id }}" data-domain="{{ config["SNIKKET_DOMAIN"] }}">
 		{{ form.csrf_token }}
-		{% if form.errors %}
-		{% call box("alert", _("Login failed")) %}
-		<p>{{ form.errors.values() | flatten | join(", ")}}</p>
-		{% endcall %}
-		{% endif %}
+		{% call render_errors(form) %}{% endcall %}
 		<div class="box alert" role="alert" style="display: none;" id="id-warning">
 			<header>{% trans %}Incorrect address{% endtrans %}</header>
 			<p>{% trans snikket_domain=config["SNIKKET_DOMAIN"] %}This Snikket service only hosts addresses ending in <em>@{{ snikket_domain }}</em>. Your password was not sent.{% endtrans %}</p>
