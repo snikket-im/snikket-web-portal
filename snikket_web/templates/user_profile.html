@@ -44,6 +44,7 @@
 			var warning_header = this.dataset.warningHeader;
 			var warning_text = this.dataset.maxsizeWarning;
 			this.setCustomValidity(warning_text);
+			this.reportValidity();
 			this.value = null;
 		} else {
 			this.setCustomValidity("");
