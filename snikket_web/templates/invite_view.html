@@ -29,6 +29,7 @@
 {%- if apple_store_url -%}
 			<li><a href="{{ apple_store_url }}" class="popover" data-popover-id="apple-popover"><img alt='{% trans %}Download on the App Store{% endtrans %}' src="{{ apple_store_badge() }}" class="apple"></a></li>
 {%- endif -%}
+			<li><a href="{{ f_droid_url }}" class="popover" data-popover-id="fdroid-popover"><img alt='{% trans %}Get it on F-Droid{% endtrans %}' src='{{ url_for('static', filename='img/f-droid-badge.png') }}' class="fdroid"/></a></li>
 		</ul>
 		{%- call standard_button("qrcode", "#qr-modal", class="primary", onclick="open_modal(this); return false;") -%}
 			{% trans %}Send to mobile device{% endtrans %}
@@ -113,6 +114,33 @@
 	</div>
 </div>
 {%- endif -%}
+<div id="fdroid-popover" class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;" onclick="close_modal(this); return false;">
+	<div role="document" class="elevated box el-2" onclick="event.stopPropagation();">
+		<header class="modal-title">
+			{#- -#}
+			<span>{% trans %}Install via F-Droid{% endtrans %}</span>
+			{#- -#}
+			{%- call action_button("close", "#", onclick="close_modal(this.parentNode.parentNode.parentNode); return false;", class="tertiary") -%}
+				{% trans %}Close{% endtrans %}
+			{%- endcall -%}
+		</header>
+		<p>{% trans %}After installing Snikket via F-Droid, you have to return to this invite link and tap on "Open the app" to proceed.{% endtrans %}</p>
+		<ol>
+			<li><p>{% trans %}First install Snikket from F-Droid using the button below:{% endtrans %}</p>
+			<p><a href="{{ f_droid_url }}" class="popover" data-popover-id="fdroid-popover"><img alt='{% trans %}Install via F-Droid{% endtrans %}' src='{{ url_for('static', filename='img/f-droid-badge.png') }}' class="fdroid"/></a></p></li>
+			<li><p>{% trans %}After the installation is complete, you can return to this page and tap the "Open the app" button to continue with the setup:{% endtrans %}</p>
+			<p>
+			{%- call standard_button("exit_to_app", invite.xmpp_uri, class="primary") -%}
+				{% trans %}Open the app{% endtrans %}
+			{%- endcall -%}
+			</p></li>
+		</ol>
+		{#- -#}
+		{%- call standard_button("close", "#", onclick="close_modal(this.parentNode.parentNode); return false;", class="secondary") -%}
+			{% trans %}Close{% endtrans %}
+		{%- endcall -%}
+	</div>
+</div>
 <script type="text/javascript">
 	var catch_popover = function() {
 		open_modal(this);

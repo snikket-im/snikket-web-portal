@@ -91,6 +91,7 @@ async def view(id_: str) -> typing.Union[quart.Response,
         invite=invite,
         play_store_url=play_store_url,
         apple_store_url=apple_store_url,
+        f_droid_url="market://details?id=org.snikket.android",
         invite_id=id_,
     )
     return quart.Response(
