@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-03-20 16:44+0100\n"
-"PO-Revision-Date: 2021-03-12 23:04+0000\n"
-"Last-Translator: GodGoldfish <godgoldfish@pm.me>\n"
-"Language-Team: French <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/fr/>\n"
+"PO-Revision-Date: 2021-03-21 16:31+0000\n"
+"Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
+"Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,24 +25,16 @@ msgid "Delete user permanently"
 msgstr "Désinscrire définitivement l’utilisateur"
 
 #: snikket_web/admin.py:72
-#, fuzzy
-#| msgid "deleted"
 msgid "User deleted"
-msgstr "supprimé"
+msgstr "Utilisateur supprimé"
 
 #: snikket_web/admin.py:115
-#, fuzzy
-#| msgid "Password reset link for %(user_name)s"
 msgid "Password reset link created"
-msgstr "Lien de réinitialisation du mot de passe de %(user_name)s"
+msgstr "Lien de réinitialisation du mot de passe créé"
 
 #: snikket_web/admin.py:121
-#, fuzzy
-#| msgid "Create password reset links or delete users."
 msgid "Password reset link deleted"
-msgstr ""
-"Créer des liens de réinitialisation de mot de passe ou supprimer des "
-"utilisateurs"
+msgstr "Liens de réinitialisation de mot de passe supprimé"
 
 #: snikket_web/admin.py:140
 msgid "Invite to circle"
@@ -97,22 +89,16 @@ msgid "Revoke"
 msgstr "Révoquer"
 
 #: snikket_web/admin.py:258
-#, fuzzy
-#| msgid "Invitation type"
 msgid "Invitation created"
-msgstr "Type d’invitation"
+msgstr "Invitation créée"
 
 #: snikket_web/admin.py:274
-#, fuzzy
-#| msgid "New invitation link"
 msgid "No such invitation exists"
-msgstr "Nouveau lien d’invitation"
+msgstr "Cette invitation n’existe pas"
 
 #: snikket_web/admin.py:289
-#, fuzzy
-#| msgid "Invitation type"
 msgid "Invitation revoked"
-msgstr "Type d’invitation"
+msgstr "Invitation révoquée"
 
 #: snikket_web/admin.py:306 snikket_web/admin.py:354
 msgid "Name"
@@ -123,10 +109,8 @@ msgid "Create circle"
 msgstr "Créer un cercle"
 
 #: snikket_web/admin.py:341
-#, fuzzy
-#| msgid "Circle name"
 msgid "Circle created"
-msgstr "Nom du cercle"
+msgstr "Cercle créé"
 
 #: snikket_web/admin.py:359
 msgid "Select user"
@@ -145,34 +129,24 @@ msgid "Add user"
 msgstr "Ajouter un utilisateur"
 
 #: snikket_web/admin.py:390
-#, fuzzy
-#| msgid "No circles"
 msgid "No such circle exists"
-msgstr "Aucun cercle"
+msgstr "Ce cercle n’existe pas"
 
 #: snikket_web/admin.py:427
-#, fuzzy
-#| msgid "Circle name"
 msgid "Circle data updated"
-msgstr "Nom du cercle"
+msgstr "Données du cercle mises à jour"
 
 #: snikket_web/admin.py:433
-#, fuzzy
-#| msgid "deleted"
 msgid "Circle deleted"
-msgstr "supprimé"
+msgstr "Cercle supprimé"
 
 #: snikket_web/admin.py:444
-#, fuzzy
-#| msgid "Invite to circle"
 msgid "User added to circle"
-msgstr "Inviter dans le cercle"
+msgstr "Utilisateur ajouté à ce cercle"
 
 #: snikket_web/admin.py:453
-#, fuzzy
-#| msgid "Remove user %(username)s from circle"
 msgid "User removed from circle"
-msgstr "Retirer l’utilisateur %(username)s du cercle"
+msgstr "Utilisateur retiré du cercle"
 
 #: snikket_web/infra.py:41
 msgid "Main"
@@ -191,32 +165,24 @@ msgid "Confirm password"
 msgstr "Confirmer le mot de passe"
 
 #: snikket_web/invite.py:118 snikket_web/invite.py:185
-#, fuzzy
-#| msgid "The passwords must match"
 msgid "The passwords must match."
-msgstr "Les mots de passe doivent être identiques"
+msgstr "Les mots de passe doivent être identiques."
 
 #: snikket_web/invite.py:123
 msgid "Create account"
 msgstr "Créer un compte"
 
 #: snikket_web/invite.py:150
-#, fuzzy
-#| msgid "That username is already taken"
 msgid "That username is already taken."
-msgstr "Ce nom d’utilisateur est déjà utilisé"
+msgstr "Ce nom d’utilisateur est déjà utilisé."
 
 #: snikket_web/invite.py:154 snikket_web/invite.py:218
-#, fuzzy
-#| msgid "Registration was declined for unknown reasons"
 msgid "Registration was declined for unknown reasons."
-msgstr "L’enregistrement a été refusé pour des raisons inconnues"
+msgstr "L’enregistrement a été refusé pour des raisons inconnues."
 
 #: snikket_web/invite.py:158
-#, fuzzy
-#| msgid "The username is not valid"
 msgid "The username is not valid."
-msgstr "Le nom d’utilisateur n’est pas valide"
+msgstr "Le nom d’utilisateur n’est pas valide."
 
 #: snikket_web/invite.py:190 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:29
@@ -236,9 +202,8 @@ msgid "Invalid username or password."
 msgstr "Nom d’utilisateur ou mot de passe incorrect."
 
 #: snikket_web/main.py:83
-#, fuzzy
 msgid "Login successful!"
-msgstr "Connexion réussite !"
+msgstr "Connexion réussie !"
 
 #: snikket_web/user.py:27
 msgid "Current password"
@@ -253,10 +218,8 @@ msgid "Confirm new password"
 msgstr "Confirmer le nouveau mot de passe"
 
 #: snikket_web/user.py:41
-#, fuzzy
-#| msgid "The new passwords must match"
 msgid "The new passwords must match."
-msgstr "Les nouveaux mots de passe doivent être identiques"
+msgstr "Les nouveaux mots de passe doivent être identiques."
 
 #: snikket_web/user.py:48
 msgid "Sign out"
@@ -292,31 +255,26 @@ msgid "Update profile"
 msgstr "Mettre à jour le profil"
 
 #: snikket_web/user.py:99
-#, fuzzy
-#| msgid "Incorrect password"
 msgid "Incorrect password."
-msgstr "Mot de passe incorrect"
+msgstr "Mot de passe incorrect."
 
 #: snikket_web/user.py:103
-#, fuzzy
-#| msgid "Password reset"
 msgid "Password changed"
-msgstr "Réinitialisation de mot de passe"
+msgstr "Mot de passe changé"
 
 #: snikket_web/user.py:111
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
 msgstr ""
+"L’avatar choisi est trop gros. Pour utiliser un avatar aussi large, veuillez "
+"utiliser l’application."
 
 #: snikket_web/user.py:159
-#, fuzzy
-#| msgid "Profile"
 msgid "Profile updated"
-msgstr "Profil"
+msgstr "Profil mis à jour"
 
 #: snikket_web/templates/unauth.html:18 snikket_web/user.py:167
-#, fuzzy
 msgid "Error"
 msgstr "Erreur"
 
@@ -326,12 +284,11 @@ msgid "A <a href=\"%(about_url)s\">Snikket</a> service"
 msgstr "Un service <a href=\"%(about_url)s\">Snikket</a>"
 
 #: snikket_web/templates/_footer.html:6
-#, fuzzy
 msgid ""
 "“Snikket” and the parrot logo are trademarks of Snikket Community Interest "
 "Company."
 msgstr ""
-"\"Snikket\" et le logo de perroquet sont des marques de la Snikket Community "
+"« Snikket » et le logo perroquet sont des marques de la Snikket Community "
 "Interest Company."
 
 #: snikket_web/templates/about.html:4 snikket_web/templates/about.html:9
@@ -393,20 +350,19 @@ msgstr ""
 "termes de la <a href=\"%(apache20_url)s\">licence Apache 2.0 </a>."
 
 #: snikket_web/templates/about.html:17
-#, fuzzy
 msgid "Trademarks"
 msgstr "Marques"
 
 #: snikket_web/templates/about.html:18
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "“Snikket” and the parrot logo are trademarks of Snikket Community Interest "
 "Company. For more information about the trademarks, visit the <a href="
 "\"%(trademarks_url)s\">Snikket Trademarks information page</a>."
 msgstr ""
-"\"Snikket\" et le logo de perroquet sont des marques de la Snikket Community "
-"Interest Company. Pour plus d'informations sur la marque, visitez le site <a "
-"href=\"%(trademarks_url)s\"> page d'information Snikket Trademarks</a>."
+"« Snikket » et le logo perroquet sont des marques de la Snikket Community "
+"Interest Company. Pour plus d’informations sur la marque, visitez la <a href="
+"\"%(trademarks_url)s\"> page d’information sur les marques Snikket</a>."
 
 #: snikket_web/templates/about.html:19
 msgid "Software Versions"
@@ -1182,7 +1138,7 @@ msgstr ""
 
 #: snikket_web/templates/invite_view.html:93
 msgid "Install on iOS"
-msgstr ""
+msgstr "Installer sur iOS"
 
 #: snikket_web/templates/invite_view.html:99
 msgid ""
@@ -1204,7 +1160,7 @@ msgstr ""
 #: snikket_web/templates/invite_view.html:121
 #: snikket_web/templates/invite_view.html:130
 msgid "Install via F-Droid"
-msgstr ""
+msgstr "Installer via F-Droid"
 
 #: snikket_web/templates/invite_view.html:127
 msgid ""
@@ -1246,24 +1202,21 @@ msgid "Enter your Snikket address and password to manage your account."
 msgstr "Entrez votre adresse et mot de passe Snikket pour gérer votre compte."
 
 #: snikket_web/templates/login.html:19
-#, fuzzy
-#| msgid "Incorrect password"
 msgid "Incorrect address"
-msgstr "Mot de passe incorrect"
+msgstr "Adresse incorrecte"
 
 #: snikket_web/templates/login.html:20
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "This Snikket service only hosts addresses ending in <em>@%(snikket_domain)s</"
 "em>. Your password was not sent."
 msgstr ""
-"Le service Snikket n'héberge que les adresses se terminant par <em>@"
-"%(snikket_domain)s</em>. Votre mot de passe n'a pas été envoyé."
+"Ce service Snikket n’héberge que les adresses se terminant par "
+"<em>@%(snikket_domain)s</em>. Votre mot de passe n’a pas été envoyé."
 
 #: snikket_web/templates/unauth.html:16
-#, fuzzy
 msgid "Operation successful"
-msgstr "Opération réussite"
+msgstr "Opération réussie"
 
 #: snikket_web/templates/user_home.html:9
 msgid "Welcome!"
