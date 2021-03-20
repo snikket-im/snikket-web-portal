@@ -27,7 +27,7 @@
 		<ul>
 			<li><a href="{{ play_store_url }}"><img alt='{% trans %}Get it on Google Play{% endtrans %}' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' class="play"/></a></li>
 {%- if apple_store_url -%}
-			<li><a href="{{ apple_store_url }}"><img alt='{% trans %}Download on the App Store{% endtrans %}' src="{{ apple_store_badge() }}" class="apple"></a></li>
+			<li><a href="{{ apple_store_url }}" class="popover" data-popover-id="apple-popover"><img alt='{% trans %}Download on the App Store{% endtrans %}' src="{{ apple_store_badge() }}" class="apple"></a></li>
 {%- endif -%}
 		</ul>
 		{%- call standard_button("qrcode", "#qr-modal", class="primary", onclick="open_modal(this); return false;") -%}
@@ -84,10 +84,50 @@
 		{%- endcall -%}
 	</div>
 </div>
+{%- if apple_store_url -%}
+<div id="apple-popover" class="modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;" onclick="close_modal(this); return false;">
+	<div role="document" class="elevated box el-2" onclick="event.stopPropagation();">
+		<header class="modal-title">
+			{#- -#}
+			<span>{% trans %}Install on iOS{% endtrans %}</span>
+			{#- -#}
+			{%- call action_button("close", "#", onclick="close_modal(this.parentNode.parentNode.parentNode); return false;", class="tertiary") -%}
+				{% trans %}Close{% endtrans %}
+			{%- endcall -%}
+		</header>
+		<p>{% trans %}After downloading Snikket from the app store, you have to return to this invite link and tap on "Open the app" to proceed.{% endtrans %}</p>
+		<ol>
+			<li><p>{% trans %}First download Snikket from the app store using the button below:{% endtrans %}</p>
+			<p><a href="{{ apple_store_url }}"><img alt='{% trans %}Download on the App Store{% endtrans %}' src="{{ apple_store_badge() }}" class="apple"></a></p>
+			<li><p>{% trans %}After the installation is complete, you can return to this page and tap the "Open the app" button to continue with the setup:{% endtrans %}</p>
+			<p>
+			{%- call standard_button("exit_to_app", invite.xmpp_uri, class="primary") -%}
+				{% trans %}Open the app{% endtrans %}
+			{%- endcall -%}
+			</p></li>
+		</ol>
+		{#- -#}
+		{%- call standard_button("close", "#", onclick="close_modal(this.parentNode.parentNode); return false;", class="secondary") -%}
+			{% trans %}Close{% endtrans %}
+		{%- endcall -%}
+	</div>
+</div>
+{%- endif -%}
 <script type="text/javascript">
+	var catch_popover = function() {
+		open_modal(this);
+		return false;
+	}
+
 	var onload = function() {
 		apply_qr_code(document.getElementById("qr-invite-page"));
 		apply_qr_code(document.getElementById("qr-uri"));
+		var popover_as = document.getElementsByClassName("popover");
+		for (var i = 0; i < popover_as.length; ++i) {
+			var a = popover_as[i];
+			a.onclick = catch_popover;
+			a.href = "#" + a.dataset.popoverId;
+		}
 	};
 </script>
 {% endblock %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-20 12:56+0100\n"
+"POT-Creation-Date: 2021-03-20 16:15+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -796,6 +796,7 @@ msgstr ""
 #: snikket_web/templates/invite_register.html:16
 #: snikket_web/templates/invite_reset_view.html:21
 #: snikket_web/templates/invite_view.html:40
+#: snikket_web/templates/invite_view.html:105
 msgid "Open the app"
 msgstr ""
 
@@ -974,6 +975,7 @@ msgid "Get it on Google Play"
 msgstr ""
 
 #: snikket_web/templates/invite_view.html:30
+#: snikket_web/templates/invite_view.html:101
 msgid "Download on the App Store"
 msgstr ""
 
@@ -1001,6 +1003,8 @@ msgstr ""
 
 #: snikket_web/templates/invite_view.html:54
 #: snikket_web/templates/invite_view.html:83
+#: snikket_web/templates/invite_view.html:95
+#: snikket_web/templates/invite_view.html:111
 msgid "Close"
 msgstr ""
 
@@ -1029,6 +1033,26 @@ msgstr ""
 msgid ""
 "Install the Snikket app on your mobile device, open it, and tap the "
 "'Scan' button at the top."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:92
+msgid "Install on iOS"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:98
+msgid ""
+"After downloading Snikket from the app store, you have to return to this "
+"invite link and tap on \"Open the app\" to proceed."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:100
+msgid "First download Snikket from the app store using the button below:"
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:102
+msgid ""
+"After the installation is complete, you can return to this page and tap "
+"the \"Open the app\" button to continue with the setup:"
 msgstr ""
 
 #: snikket_web/templates/library.j2:18
