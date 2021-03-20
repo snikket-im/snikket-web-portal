@@ -43,25 +43,10 @@
 		if (this.files[0].size > maxsize) {
 			var warning_header = this.dataset.warningHeader;
 			var warning_text = this.dataset.maxsizeWarning;
-			var flash = document.createElement("div");
-			flash.id = "avatar-alert";
-			flash.classList.add("box");
-			flash.classList.add("alert");
-			flash.classList.add("el-5");
-			flash.setAttribute("role", "alert");
-
-			var header = document.createElement("header");
-			header.innerText = warning_header;
-			flash.appendChild(header);
-
-			var p = document.createElement("p")
-			p.innerText = warning_text + ".";
-			flash.appendChild(p);
-
-			var flashbox = document.getElementById("flashbox");
-			flashbox.appendChild(flash);
-
+			this.setCustomValidity(warning_text);
 			this.value = null;
+		} else {
+			this.setCustomValidity("");
 		}
 	};
 	</script>
