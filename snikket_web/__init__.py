@@ -155,6 +155,11 @@ class AppConfig:
         "sv",
     ], converter=autosplit)
     apple_store_url = environ.var("")
+    # Default limit of 1 MiB is what was discovered to be the effective limit
+    # in #67, hence we set that here for now.
+    # Future versions may change this default, and the standard deployment
+    # tools may also very well override it.
+    max_avatar_size = environ.var(1024*1024, converter=int)
 
 
 _UPPER_CASE = "".join(map(chr, range(ord("A"), ord("Z")+1)))
@@ -185,6 +190,7 @@ def create_app() -> quart.Quart:
     app.config["SITE_NAME"] = config.site_name or config.domain
     app.config["AVATAR_CACHE_TTL"] = config.avatar_cache_ttl
     app.config["APPLE_STORE_URL"] = config.apple_store_url
+    app.config["MAX_AVATAR_SIZE"] = config.max_avatar_size
 
     app.context_processor(proc)
     app.register_error_handler(

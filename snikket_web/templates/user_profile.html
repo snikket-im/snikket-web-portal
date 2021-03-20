@@ -1,10 +1,11 @@
 {% extends "app.html" %}
-{% from "library.j2" import standard_button, form_button, avatar with context %}
+{% from "library.j2" import standard_button, form_button, render_errors, avatar with context %}
 {% block content %}
 <h1>{% trans %}Update your profile{% endtrans %}</h1>
 <div class="form layout-expanded"><form method="POST" enctype="multipart/form-data">
 	<h2 class="form-title">{% trans %}Profile{% endtrans %}</h2>
 	{{ form.csrf_token }}
+	{% call render_errors(form) %}{% endcall %}
 	<div class="f-ebox">
 		{{ form.nickname.label }}
 		{{ form.nickname(placeholder=user_info.username) }}
@@ -13,7 +14,10 @@
 		{{ form.avatar.label }}
 		<div class="avatar-wrap">
 		{%- call avatar(user_info.address, user_info.avatar_hash ) %}{% endcall -%}
-		{{ form.avatar(accept="image/png") }}
+		{{ form.avatar(accept="image/png",
+				 data_maxsize=max_avatar_size,
+				 data_warning_header=avatar_too_big_warning_header,
+				 data_maxsize_warning=avatar_too_big_warning) }}
 		</div>
 	</div>
 	<h3 class="form-title">{% trans %}Visibility{% endtrans %}</h3>
@@ -28,5 +32,38 @@
 		{%- call standard_button("back", url_for('.index'), class="secondary") %}{% trans %}Back{% endtrans %}{% endcall -%}
 		{%- call form_button("done", form.action_save, class="primary") %}{% endcall -%}
 	</div>
+	<script type="text/javascript">
+	document.getElementById("{{ form.avatar.id }}").onchange = function() {
+		var maxsize_s = this.dataset.maxsize;
+		var maxsize = parseInt(maxsize_s);
+		var existing_alert = document.getElementById("avatar-alert");
+		if (existing_alert) {
+			existing_alert.parentNode.removeChild(existing_alert);
+		}
+		if (this.files[0].size > maxsize) {
+			var warning_header = this.dataset.warningHeader;
+			var warning_text = this.dataset.maxsizeWarning;
+			var flash = document.createElement("div");
+			flash.id = "avatar-alert";
+			flash.classList.add("box");
+			flash.classList.add("alert");
+			flash.classList.add("el-5");
+			flash.setAttribute("role", "alert");
+
+			var header = document.createElement("header");
+			header.innerText = warning_header;
+			flash.appendChild(header);
+
+			var p = document.createElement("p")
+			p.innerText = warning_text + ".";
+			flash.appendChild(p);
+
+			var flashbox = document.getElementById("flashbox");
+			flashbox.appendChild(flash);
+
+			this.value = null;
+		}
+	};
+	</script>
 </form></div>
 {% endblock %}

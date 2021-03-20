@@ -9,6 +9,7 @@ from quart import (
     redirect,
     url_for,
     flash,
+    current_app,
 )
 import quart.exceptions
 
@@ -109,9 +110,17 @@ async def change_pw() -> typing.Union[str, quart.Response]:
     return await render_template("user_passwd.html", form=form)
 
 
+EAVATARTOOBIG = _l(
+    "The chosen avatar is too big. To be able to upload larger "
+    "avatars, please use the app"
+)
+
+
 @bp.route("/profile", methods=["GET", "POST"])
 @client.require_session()
 async def profile() -> typing.Union[str, quart.Response]:
+    max_avatar_size = current_app.config["MAX_AVATAR_SIZE"]
+
     form = ProfileForm()
     if request.method != "POST":
         user_info = await client.get_user_info()
@@ -125,30 +134,40 @@ async def profile() -> typing.Union[str, quart.Response]:
     if form.validate_on_submit():
         user_info = await client.get_user_info()
 
+        ok = True
         file_info = (await request.files).get(form.avatar.name)
         if file_info is not None:
             mimetype = file_info.mimetype
             data = file_info.stream.read()
-            if len(data) > 0:
+            if len(data) > max_avatar_size:
+                print(len(data), max_avatar_size)
+                form.avatar.errors.append(EAVATARTOOBIG)
+                ok = False
+            elif len(data) > 0:
                 await client.set_user_avatar(data, mimetype)
 
-        if user_info.get("nickname") != form.nickname.data:
-            await client.set_user_nickname(form.nickname.data)
+        if ok:
+            if user_info.get("nickname") != form.nickname.data:
+                await client.set_user_nickname(form.nickname.data)
 
-        access_model = form.profile_access_model.data
-        await asyncio.gather(
-            client.set_avatar_access_model(access_model),
-            client.set_vcard_access_model(access_model),
-            client.set_nickname_access_model(access_model),
-        )
+            access_model = form.profile_access_model.data
+            await asyncio.gather(
+                client.set_avatar_access_model(access_model),
+                client.set_vcard_access_model(access_model),
+                client.set_nickname_access_model(access_model),
+            )
 
-        await flash(
-            _("Profile updated"),
-            "success",
-        )
-        return redirect(url_for(".profile"))
+            await flash(
+                _("Profile updated"),
+                "success",
+            )
+            return redirect(url_for(".profile"))
 
-    return await render_template("user_profile.html", form=form)
+    return await render_template("user_profile.html",
+                                 form=form,
+                                 max_avatar_size=max_avatar_size,
+                                 avatar_too_big_warning_header=_l("Error"),
+                                 avatar_too_big_warning=EAVATARTOOBIG)
 
 
 @bp.route("/logout", methods=["GET", "POST"])

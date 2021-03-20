@@ -9,7 +9,7 @@
 </div>
 <div id="mwrap">
 	{#- -#}
-	<div class="flashbox">
+	<div class="flashbox" id="flashbox">
 		{%- for category, message in get_flashed_messages(True) -%}
 		<div class="box {{ category }} el-5" role="alert">
 			{% if category == "success" %}
