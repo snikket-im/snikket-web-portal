@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-03-20 16:44+0100\n"
-"PO-Revision-Date: 2021-02-25 16:02+0000\n"
+"PO-Revision-Date: 2021-03-21 16:31+0000\n"
 "Last-Translator: Kim Alvefur <zash@zash.se>\n"
-"Language-Team: Swedish <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/sv/>\n"
+"Language-Team: Swedish <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.5.1\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:59
@@ -165,32 +165,24 @@ msgid "Confirm password"
 msgstr "Bekräfta lösenord"
 
 #: snikket_web/invite.py:118 snikket_web/invite.py:185
-#, fuzzy
-#| msgid "The passwords must match"
 msgid "The passwords must match."
-msgstr "Lösenorden måste vara identiska"
+msgstr "Lösenorden måste vara identiska."
 
 #: snikket_web/invite.py:123
 msgid "Create account"
 msgstr "Skapa konto"
 
 #: snikket_web/invite.py:150
-#, fuzzy
-#| msgid "That username is already taken"
 msgid "That username is already taken."
-msgstr "Det användarnamnet är redan taget"
+msgstr "Det användarnamnet är redan taget."
 
 #: snikket_web/invite.py:154 snikket_web/invite.py:218
-#, fuzzy
-#| msgid "Registration was declined for unknown reasons"
 msgid "Registration was declined for unknown reasons."
-msgstr "Registreringen nekades av okänd anledning"
+msgstr "Registreringen nekades av okänd anledning."
 
 #: snikket_web/invite.py:158
-#, fuzzy
-#| msgid "The username is not valid"
 msgid "The username is not valid."
-msgstr "Användarnamnet är ogiltigt"
+msgstr "Användarnamnet är ogiltigt."
 
 #: snikket_web/invite.py:190 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:29
@@ -226,10 +218,8 @@ msgid "Confirm new password"
 msgstr "Bekräfta nytt lösenord"
 
 #: snikket_web/user.py:41
-#, fuzzy
-#| msgid "The new passwords must match"
 msgid "The new passwords must match."
-msgstr "De nya lösenorden måste vara identiska"
+msgstr "De nya lösenorden måste vara identiska."
 
 #: snikket_web/user.py:48
 msgid "Sign out"
@@ -265,10 +255,8 @@ msgid "Update profile"
 msgstr "Uppdatera profil"
 
 #: snikket_web/user.py:99
-#, fuzzy
-#| msgid "Incorrect password"
 msgid "Incorrect password."
-msgstr "Fel lösenord"
+msgstr "Fel lösenord."
 
 #: snikket_web/user.py:103
 msgid "Password changed"
@@ -279,6 +267,8 @@ msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
 msgstr ""
+"Den valda profilbilden är för stor. Vänligen använd appen för att kunna "
+"välja större bilder."
 
 #: snikket_web/user.py:159
 msgid "Profile updated"
@@ -1057,7 +1047,7 @@ msgstr "Hämta på App Store"
 
 #: snikket_web/templates/invite_view.html:32
 msgid "Get it on F-Droid"
-msgstr ""
+msgstr "Hämta den på F-Droid"
 
 #: snikket_web/templates/invite_view.html:35
 msgid "Send to mobile device"
@@ -1128,17 +1118,19 @@ msgstr ""
 
 #: snikket_web/templates/invite_view.html:93
 msgid "Install on iOS"
-msgstr ""
+msgstr "Installera på iOS"
 
 #: snikket_web/templates/invite_view.html:99
 msgid ""
 "After downloading Snikket from the app store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
 msgstr ""
+"Efter att ha laddat ner Snikket från App Store behöver du komma tillbaka "
+"till den här inbjudan och klicka på \"Öppna appen\" för att fortsätta."
 
 #: snikket_web/templates/invite_view.html:101
 msgid "First download Snikket from the app store using the button below:"
-msgstr ""
+msgstr "Ladda först ner Snikket från App Store med knappen nedan:"
 
 #: snikket_web/templates/invite_view.html:103
 #: snikket_web/templates/invite_view.html:131
@@ -1146,21 +1138,25 @@ msgid ""
 "After the installation is complete, you can return to this page and tap the "
 "\"Open the app\" button to continue with the setup:"
 msgstr ""
+"Efter att installationen är färdig behöver du komma tillbaka till den här "
+"inbjudan och klicka på \"Öppna appen\" för att fortsätta:"
 
 #: snikket_web/templates/invite_view.html:121
 #: snikket_web/templates/invite_view.html:130
 msgid "Install via F-Droid"
-msgstr ""
+msgstr "Installera via F-Droid"
 
 #: snikket_web/templates/invite_view.html:127
 msgid ""
 "After installing Snikket via F-Droid, you have to return to this invite link "
 "and tap on \"Open the app\" to proceed."
 msgstr ""
+"Efter att ha installerat Snikket via F-Droid behöver du komma tillbaka till "
+"den här inbjudan och klicka på \"Öppna appen\" för att fortsätta."
 
 #: snikket_web/templates/invite_view.html:129
 msgid "First install Snikket from F-Droid using the button below:"
-msgstr ""
+msgstr "Installera först Snikket från F-Droid med knappen nedan:"
 
 #: snikket_web/templates/library.j2:18
 msgid "Copy link"
