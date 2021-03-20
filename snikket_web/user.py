@@ -38,7 +38,7 @@ class ChangePasswordForm(BaseForm):
         validators=[wtforms.validators.InputRequired(),
                     wtforms.validators.EqualTo(
                         "new_password",
-                        _l("The new passwords must match")
+                        _l("The new passwords must match.")
                     )]
     )
 

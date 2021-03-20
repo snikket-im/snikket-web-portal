@@ -115,7 +115,7 @@ class RegisterForm(BaseForm):
         validators=[wtforms.validators.InputRequired(),
                     wtforms.validators.EqualTo(
                         "password",
-                        _l("The passwords must match")
+                        _l("The passwords must match.")
                     )]
     )
 
@@ -182,7 +182,7 @@ class ResetForm(BaseForm):
         validators=[wtforms.validators.InputRequired(),
                     wtforms.validators.EqualTo(
                         "password",
-                        _l("The passwords must match")
+                        _l("The passwords must match.")
                     )]
     )
 

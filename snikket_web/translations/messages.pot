@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-20 16:27+0100\n"
+"POT-Creation-Date: 2021-03-20 16:44+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -162,7 +162,7 @@ msgid "Confirm password"
 msgstr ""
 
 #: snikket_web/invite.py:118 snikket_web/invite.py:185
-msgid "The passwords must match"
+msgid "The passwords must match."
 msgstr ""
 
 #: snikket_web/invite.py:123
@@ -215,7 +215,7 @@ msgid "Confirm new password"
 msgstr ""
 
 #: snikket_web/user.py:41
-msgid "The new passwords must match"
+msgid "The new passwords must match."
 msgstr ""
 
 #: snikket_web/user.py:48
