@@ -1,0 +1,47 @@
+{% extends "admin_app.html" %}
+{% from "library.j2" import box, form_button, standard_button %}
+{% block content %}
+<h1>{% trans user_name=target_user.localpart %}Edit user {{ user_name }}{% endtrans %}</h1>
+<div class="form layout-expanded"><form method="POST">
+	{{ form.csrf_token }}
+	<h2 class="form-title">{% trans %}Edit user{% endtrans %}</h2>
+	<div class="f-ebox">
+		{{ form.localpart.label }}
+		{{ form.localpart(readonly="readonly") }}
+		<p class="form-desc weak">{% trans %}The login name cannot be changed.{% endtrans %}</p>
+	</div>
+	<div class="f-ebox">
+		{{ form.display_name.label }}
+		{{ form.display_name }}
+	</div>
+	<div class="f-bbox">
+		{%- call standard_button("back", url_for(".users"), class="tertiary") -%}
+			{%- trans -%}Return to user list{%- endtrans -%}
+		{%- endcall -%}
+		{%- call standard_button("delete", url_for(".delete_user", localpart=target_user.localpart), class="secondary") -%}
+			{%- trans -%}Delete user{%- endtrans -%}
+		{%- endcall -%}
+		{%- call form_button("done", form.action_save, class="primary") %}{% endcall -%}
+	</div>
+</form></div>
+<h2>{% trans %}Further actions{% endtrans %}</h2>
+<div class="form layout-expanded"><form method="POST">
+	<h2 class="form-title">{% trans %}Reset password{% endtrans %}</h2>
+	{{ form.csrf_token }}
+	<p class="form-desc">
+		{% trans %}If the user has lost their password, you can use the button below to create a special link which allows to change the password of the account, once.{% endtrans %}
+	</p>
+	<div class="f-bbox">
+		{%- call form_button("passwd", form.action_create_reset, class="primary") -%}{%- endcall -%}
+	</div>
+	<h2 class="form-title">{% trans %}Debug information{% endtrans %}</h2>
+	<p class="form-desc">
+		{% trans %}In some cases, extended information about the user account and the connected devices is necessary to troubleshoot issues. The button below reveals this (sensitive) information.{% endtrans %}
+	</p>
+	<div class="f-bbox">
+		{%- call standard_button("bug_report", url_for(".debug_user", localpart=target_user.localpart), class="primary") -%}
+			{%- trans -%}Show debug information{%- endtrans -%}
+		{%- endcall -%}
+	</div>
+</form></div>
+{% endblock %}
