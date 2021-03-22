@@ -354,6 +354,15 @@ div.form.layout-expanded {
 		display: block;
 	}
 
+	.radio-button-ext > label > p {
+		margin-left: 1.75rem;
+		margin-top: 0;
+	}
+
+	.radio-button-ext > label .icon {
+		margin-left: 0.25em;
+	}
+
 	div.select-wrap {
 		display: block;
 		border-bottom: $w-s4 solid $primary-500;

@@ -65,6 +65,15 @@ class EditUserForm(BaseForm):
         _l("Display name"),
     )
 
+    role = wtforms.RadioField(
+        _l("Access Level"),
+        choices=[
+            ("prosody:restricted", _l("Limited")),
+            ("prosody:normal", _l("Normal user")),
+            ("prosody:admin", _l("Administrator")),
+        ],
+    )
+
     action_save = wtforms.SubmitField(
         _l("Update user"),
     )
@@ -99,6 +108,7 @@ async def edit_user(localpart: str) -> typing.Union[quart.Response, str]:
         await client.update_user(
             localpart,
             display_name=form.display_name.data,
+            roles=[form.role.data],
         )
 
         await flash(
@@ -110,6 +120,10 @@ async def edit_user(localpart: str) -> typing.Union[quart.Response, str]:
     elif request.method == "GET":
         form.localpart.data = target_user_info.localpart
         form.display_name.data = target_user_info.display_name
+        if target_user_info.roles:
+            form.role.data = target_user_info.roles[0]
+        else:
+            form.role.data = "prosody:normal"
 
     return await render_template(
         "admin_edit_user.html",

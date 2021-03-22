@@ -1,5 +1,21 @@
 {% extends "admin_app.html" %}
-{% from "library.j2" import box, form_button, standard_button %}
+{% from "library.j2" import box, form_button, standard_button, icon %}
+{% macro access_level_description(role, caller=None) %}
+{%- if role == "prosody:restricted" -%}
+{% trans %}Limited users can interact with users on the same Snikket service and be members of circles.{% endtrans %}
+{%- elif role == "prosody:normal" -%}
+{% trans %}Like limited users and can also interact with users on other Snikket services.{% endtrans %}
+{%- elif role == "prosody:admin" -%}
+{% trans %}Like normal users and can access the admin panel in the web portal.{% endtrans %}
+{%- endif -%}
+{% endmacro %}
+{% macro access_level_icon(role, caller=None) %}
+{%- if role == "prosody:restricted" -%}
+{% call icon("lock") %}{% endcall %}
+{%- elif role == "prosody:admin" -%}
+{% call icon("admin") %}{% endcall %}
+{%- endif -%}
+{% endmacro %}
 {% block content %}
 <h1>{% trans user_name=target_user.localpart %}Edit user {{ user_name }}{% endtrans %}</h1>
 <div class="form layout-expanded"><form method="POST">
@@ -13,6 +29,22 @@
 	<div class="f-ebox">
 		{{ form.display_name.label }}
 		{{ form.display_name }}
+	</div>
+	<h3 class="form-title">{% trans %}Access Level{% endtrans %}</h3>
+	<p class="form-descr weak">{% trans %}The access level of a user determines what interactions are allowed for them on your Snikket service.{% endtrans %}</p>
+	<div class="f-ebox">
+		<fieldset>{#- -#}
+			<legend class="a11y-only">{{ form.role.label.text }}</legend>
+			{%- for level in form.role -%}
+			<div class="radio-button-ext">
+				{{ level }}<label for="{{ level.id }}">
+					{%- trans title=level.label.text, icon=access_level_icon(level.data), description=access_level_description(level.data) -%}
+					<strong>{{ title }}{{ icon }}</strong><p>{{ description }}</p>
+					{%- endtrans -%}
+				</label>
+			</div>
+			{%- endfor -%}
+		</fieldset>
 	</div>
 	<div class="f-bbox">
 		{%- call standard_button("back", url_for(".users"), class="tertiary") -%}

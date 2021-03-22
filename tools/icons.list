@@ -5,6 +5,7 @@ action/delete:delete
 action/logout:logout
 action/login:login
 action/exit_to_app:exit_to_app
+action/lock:lock
 communication/qr_code:qrcode
 communication/vpn_key:passwd
 content/add_circle_outline:add
