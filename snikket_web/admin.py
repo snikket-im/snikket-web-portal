@@ -46,11 +46,14 @@ async def users() -> str:
         await client.list_users(),
         key=lambda x: x.localpart
     )
+    invite_form = InvitePost()
+    await invite_form.init_choices()
     reset_form = PasswordResetLinkPost()
     return await render_template(
         "admin_users.html",
         users=users,
         reset_form=reset_form,
+        invite_form=invite_form,
     )
 
 
