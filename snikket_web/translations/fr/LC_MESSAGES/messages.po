@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-20 16:44+0100\n"
+"POT-Creation-Date: 2021-03-22 15:08+0100\n"
 "PO-Revision-Date: 2021-03-21 16:31+0000\n"
 "Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
-"Language-Team: French <https://i18n.sotecware.net/projects/snikket/"
-"web-portal/fr/>\n"
+"Language-Team: French <https://i18n.sotecware.net/projects/snikket/web-"
+"portal/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -517,8 +517,6 @@ msgstr ""
 "impossible de revenir en arrière !</strong>"
 
 #: snikket_web/templates/admin_delete_user.html:19
-#: snikket_web/templates/admin_edit_circle.html:44
-#: snikket_web/templates/admin_edit_invite.html:49
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:10
 #: snikket_web/templates/user_passwd.html:27
@@ -554,6 +552,10 @@ msgstr "Information sur le cercle"
 #: snikket_web/templates/admin_edit_circle.html:39
 msgid "This circle has no group chat associated."
 msgstr "Ce cercle n’a pas de conversation de groupe associée."
+
+#: snikket_web/templates/admin_edit_circle.html:44
+msgid "Return to circle list"
+msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:48
 msgid "Delete circle"
@@ -639,6 +641,12 @@ msgstr "L’utilisateur sera ajouté en tant que contact de %(peer_jid)s."
 #: snikket_web/templates/admin_edit_invite.html:43
 msgid "Created"
 msgstr "Créé le"
+
+#: snikket_web/templates/admin_edit_invite.html:49
+#, fuzzy
+#| msgid "New invitation link"
+msgid "Return to invitation list"
+msgstr "Nouveau lien d’invitation"
 
 #: snikket_web/templates/admin_home.html:4
 msgid "Welcome to the admin panel!"
@@ -1211,8 +1219,8 @@ msgid ""
 "This Snikket service only hosts addresses ending in <em>@%(snikket_domain)s</"
 "em>. Your password was not sent."
 msgstr ""
-"Ce service Snikket n’héberge que les adresses se terminant par "
-"<em>@%(snikket_domain)s</em>. Votre mot de passe n’a pas été envoyé."
+"Ce service Snikket n’héberge que les adresses se terminant par <em>@"
+"%(snikket_domain)s</em>. Votre mot de passe n’a pas été envoyé."
 
 #: snikket_web/templates/unauth.html:16
 msgid "Operation successful"

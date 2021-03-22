@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-20 16:44+0100\n"
+"POT-Creation-Date: 2021-03-22 15:08+0100\n"
 "PO-Revision-Date: 2021-03-12 23:04+0000\n"
 "Last-Translator: GodGoldfish <godgoldfish@pm.me>\n"
 "Language-Team: Russian <https://i18n.sotecware.net/projects/snikket/web-"
@@ -530,8 +530,6 @@ msgstr ""
 "после нажатия нижней кнопки. <strong>Назад дороги нет!</strong>"
 
 #: snikket_web/templates/admin_delete_user.html:19
-#: snikket_web/templates/admin_edit_circle.html:44
-#: snikket_web/templates/admin_edit_invite.html:49
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:10
 #: snikket_web/templates/user_passwd.html:27
@@ -567,6 +565,10 @@ msgstr "Информация о круге"
 #: snikket_web/templates/admin_edit_circle.html:39
 msgid "This circle has no group chat associated."
 msgstr "С этим кругом не связан ни один групповой чат."
+
+#: snikket_web/templates/admin_edit_circle.html:44
+msgid "Return to circle list"
+msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:48
 msgid "Delete circle"
@@ -654,6 +656,12 @@ msgstr "Пользователь будет добавлен как контак
 #: snikket_web/templates/admin_edit_invite.html:43
 msgid "Created"
 msgstr "Создано"
+
+#: snikket_web/templates/admin_edit_invite.html:49
+#, fuzzy
+#| msgid "New invitation link"
+msgid "Return to invitation list"
+msgstr "Новая ссылка на приглашение"
 
 #: snikket_web/templates/admin_home.html:4
 msgid "Welcome to the admin panel!"

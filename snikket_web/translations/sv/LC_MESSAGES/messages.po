@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-20 16:44+0100\n"
+"POT-Creation-Date: 2021-03-22 15:08+0100\n"
 "PO-Revision-Date: 2021-03-21 16:31+0000\n"
 "Last-Translator: Kim Alvefur <zash@zash.se>\n"
-"Language-Team: Swedish <https://i18n.sotecware.net/projects/snikket/"
-"web-portal/sv/>\n"
+"Language-Team: Swedish <https://i18n.sotecware.net/projects/snikket/web-"
+"portal/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -516,8 +516,6 @@ msgstr ""
 "strong>"
 
 #: snikket_web/templates/admin_delete_user.html:19
-#: snikket_web/templates/admin_edit_circle.html:44
-#: snikket_web/templates/admin_edit_invite.html:49
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:10
 #: snikket_web/templates/user_passwd.html:27
@@ -552,6 +550,10 @@ msgstr "Om kretsen"
 #: snikket_web/templates/admin_edit_circle.html:39
 msgid "This circle has no group chat associated."
 msgstr "Denna krets har ingen tillhörande gruppchatt."
+
+#: snikket_web/templates/admin_edit_circle.html:44
+msgid "Return to circle list"
+msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:48
 msgid "Delete circle"
@@ -638,6 +640,12 @@ msgstr "Användaren läggs till som kontakt för %(peer_jid)s."
 #: snikket_web/templates/admin_edit_invite.html:43
 msgid "Created"
 msgstr "Skapad"
+
+#: snikket_web/templates/admin_edit_invite.html:49
+#, fuzzy
+#| msgid "New invitation link"
+msgid "Return to invitation list"
+msgstr "Ny inbjudanslänk"
 
 #: snikket_web/templates/admin_home.html:4
 msgid "Welcome to the admin panel!"

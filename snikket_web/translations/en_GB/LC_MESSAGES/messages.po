@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-20 16:44+0100\n"
+"POT-Creation-Date: 2021-03-22 15:08+0100\n"
 "PO-Revision-Date: 2021-02-02 21:01+0000\n"
 "Last-Translator: riccio <unriccio@email.it>\n"
 "Language-Team: English (United Kingdom) <https://i18n.sotecware.net/projects/"
@@ -548,8 +548,6 @@ msgid ""
 msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:19
-#: snikket_web/templates/admin_edit_circle.html:44
-#: snikket_web/templates/admin_edit_invite.html:49
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:10
 #: snikket_web/templates/user_passwd.html:27
@@ -587,6 +585,10 @@ msgstr "Circle information"
 
 #: snikket_web/templates/admin_edit_circle.html:39
 msgid "This circle has no group chat associated."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:44
+msgid "Return to circle list"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:48
@@ -672,6 +674,12 @@ msgstr ""
 #: snikket_web/templates/admin_edit_invite.html:43
 msgid "Created"
 msgstr "Created"
+
+#: snikket_web/templates/admin_edit_invite.html:49
+#, fuzzy
+#| msgid "New invitation link"
+msgid "Return to invitation list"
+msgstr "New invitation link"
 
 #: snikket_web/templates/admin_home.html:4
 #, fuzzy
