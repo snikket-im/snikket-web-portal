@@ -16,7 +16,7 @@
 	<p>{% trans %}The user and their data will be deleted irrevocably, permanently and immediately upon pushing the below button. <strong>There is no way back!</strong>{% endtrans %}</p>
 	{% endcall %}
 	<div class="f-bbox">
-		{%- call standard_button("back", url_for(".index"), class="secondary") %}{% trans %}Back{% endtrans %}{% endcall -%}
+		{%- call standard_button("back", url_for(".index"), class="tertiary") %}{% trans %}Back{% endtrans %}{% endcall -%}
 		{%- call form_button("delete", form.action_delete, class="primary danger") %}{% endcall -%}
 	</div>
 </form></div>

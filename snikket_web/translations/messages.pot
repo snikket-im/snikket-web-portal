@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-22 15:08+0100\n"
+"POT-Creation-Date: 2021-03-25 17:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,131 +17,131 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: snikket_web/admin.py:59
+#: snikket_web/admin.py:62
 msgid "Delete user permanently"
 msgstr ""
 
-#: snikket_web/admin.py:72
+#: snikket_web/admin.py:75
 msgid "User deleted"
 msgstr ""
 
-#: snikket_web/admin.py:115
+#: snikket_web/admin.py:118
 msgid "Password reset link created"
 msgstr ""
 
-#: snikket_web/admin.py:121
+#: snikket_web/admin.py:124
 msgid "Password reset link deleted"
 msgstr ""
 
-#: snikket_web/admin.py:140
+#: snikket_web/admin.py:143
 msgid "Invite to circle"
 msgstr ""
 
-#: snikket_web/admin.py:146
+#: snikket_web/admin.py:149
 msgid "At least one circle must be selected"
 msgstr ""
 
-#: snikket_web/admin.py:151
+#: snikket_web/admin.py:154
 msgid "Valid for"
 msgstr ""
 
-#: snikket_web/admin.py:153
+#: snikket_web/admin.py:156
 msgid "One hour"
 msgstr ""
 
-#: snikket_web/admin.py:154
+#: snikket_web/admin.py:157
 msgid "Twelve hours"
 msgstr ""
 
-#: snikket_web/admin.py:155
+#: snikket_web/admin.py:158
 msgid "One day"
 msgstr ""
 
-#: snikket_web/admin.py:156
+#: snikket_web/admin.py:159
 msgid "One week"
 msgstr ""
 
-#: snikket_web/admin.py:157
+#: snikket_web/admin.py:160
 msgid "Four weeks"
 msgstr ""
 
-#: snikket_web/admin.py:163 snikket_web/templates/admin_edit_invite.html:17
+#: snikket_web/admin.py:166 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
 msgstr ""
 
-#: snikket_web/admin.py:165 snikket_web/templates/library.j2:116
+#: snikket_web/admin.py:168 snikket_web/templates/library.j2:116
 msgid "Individual"
 msgstr ""
 
-#: snikket_web/admin.py:166 snikket_web/templates/library.j2:114
+#: snikket_web/admin.py:169 snikket_web/templates/library.j2:114
 msgid "Group"
 msgstr ""
 
-#: snikket_web/admin.py:172
+#: snikket_web/admin.py:175
 msgid "New invitation link"
 msgstr ""
 
-#: snikket_web/admin.py:234
+#: snikket_web/admin.py:237
 msgid "Revoke"
 msgstr ""
 
-#: snikket_web/admin.py:258
+#: snikket_web/admin.py:261
 msgid "Invitation created"
 msgstr ""
 
-#: snikket_web/admin.py:274
+#: snikket_web/admin.py:277
 msgid "No such invitation exists"
 msgstr ""
 
-#: snikket_web/admin.py:289
+#: snikket_web/admin.py:292
 msgid "Invitation revoked"
 msgstr ""
 
-#: snikket_web/admin.py:306 snikket_web/admin.py:354
+#: snikket_web/admin.py:309 snikket_web/admin.py:357
 msgid "Name"
 msgstr ""
 
-#: snikket_web/admin.py:311 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:314 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr ""
 
-#: snikket_web/admin.py:341
+#: snikket_web/admin.py:344
 msgid "Circle created"
 msgstr ""
 
-#: snikket_web/admin.py:359
+#: snikket_web/admin.py:362
 msgid "Select user"
 msgstr ""
 
-#: snikket_web/admin.py:364
+#: snikket_web/admin.py:367
 msgid "Update circle"
 msgstr ""
 
-#: snikket_web/admin.py:368
+#: snikket_web/admin.py:371
 msgid "Delete circle permanently"
 msgstr ""
 
-#: snikket_web/admin.py:374
+#: snikket_web/admin.py:377
 msgid "Add user"
 msgstr ""
 
-#: snikket_web/admin.py:390
+#: snikket_web/admin.py:393
 msgid "No such circle exists"
 msgstr ""
 
-#: snikket_web/admin.py:427
+#: snikket_web/admin.py:430
 msgid "Circle data updated"
 msgstr ""
 
-#: snikket_web/admin.py:433
+#: snikket_web/admin.py:436
 msgid "Circle deleted"
 msgstr ""
 
-#: snikket_web/admin.py:444
+#: snikket_web/admin.py:447
 msgid "User added to circle"
 msgstr ""
 
-#: snikket_web/admin.py:453
+#: snikket_web/admin.py:456
 msgid "User removed from circle"
 msgstr ""
 
@@ -606,7 +606,7 @@ msgstr ""
 msgid "Created"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_invite.html:49
+#: snikket_web/templates/admin_edit_invite.html:48
 msgid "Return to invitation list"
 msgstr ""
 
@@ -1054,12 +1054,12 @@ msgstr ""
 
 #: snikket_web/templates/invite_view.html:99
 msgid ""
-"After downloading Snikket from the app store, you have to return to this "
+"After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
 msgstr ""
 
 #: snikket_web/templates/invite_view.html:101
-msgid "First download Snikket from the app store using the button below:"
+msgid "First download Snikket from the App Store using the button below:"
 msgstr ""
 
 #: snikket_web/templates/invite_view.html:103

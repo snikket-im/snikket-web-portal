@@ -44,10 +44,10 @@
 		<dd>{{ invite.created_at | format_date }}</dd>
 	</dl>
 	<div class="f-bbox">
-		{%- call form_button("remove_link", form.action_revoke, class="secondary danger") %}{% endcall -%}
-		{%- call standard_button("back", url_for(".invitations"), class="primary") %}
+		{%- call standard_button("back", url_for(".invitations"), class="tertiary") %}
 			{% trans %}Return to invitation list{% endtrans %}
 		{%- endcall %}
+		{%- call form_button("remove_link", form.action_revoke, class="primary danger") %}{% endcall -%}
 	</div>
 </div>
 </form>

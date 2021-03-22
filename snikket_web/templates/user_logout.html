@@ -6,7 +6,7 @@
 	<p class="form-desc">{% trans %}Click below to log yourself out of the web portal. This does not affect any other connected devices.{% endtrans %}</p>
 	{{ form.csrf_token }}
 	<div class="f-bbox">
-		{%- call standard_button("back", url_for("user.index"), class="secondary") -%}
+		{%- call standard_button("back", url_for("user.index"), class="tertiary") -%}
 			{% trans %}Back{% endtrans %}
 		{%- endcall -%}
 		{%- call form_button("logout", form.action_signout, class="primary") %}{% endcall -%}
