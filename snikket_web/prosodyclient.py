@@ -859,6 +859,26 @@ class ProsodyClient:
             return AdminUserInfo.from_api_response(await resp.json())
 
     @autosession
+    async def update_user(
+            self,
+            localpart: str,
+            *,
+            display_name: typing.Optional[str],
+            session: aiohttp.ClientSession,
+            ) -> None:
+        payload = {
+            "username": localpart,
+        }
+        if display_name is not None:
+            payload["display_name"] = display_name
+
+        async with session.put(
+                self._admin_v1_endpoint("/users/{}".format(localpart)),
+                json=payload,
+                ) as resp:
+            self._raise_error_from_response(resp)
+
+    @autosession
     async def get_user_debug_info(
             self,
             localpart: str,

@@ -2,8 +2,6 @@
 {% from "library.j2" import action_button, value_or_hint, custom_form_button %}
 {% block content %}
 <h1>{% trans %}Manage users{% endtrans %}</h1>
-<form method="POST" action="{{ url_for(".create_password_reset_link") }}">
-{{- reset_form.csrf_token -}}
 <div class="elevated el-2"><table>
 	<thead>
 		<tr>
@@ -18,14 +16,8 @@
 			<td>{{ user.localpart }}</td>
 			<td>{% call value_or_hint(user.display_name) %}{% endcall %}</td>
 			<td class="nowrap">
-				{%- call action_button("delete", url_for(".delete_user", localpart=user.localpart), class="secondary") -%}
-					{% trans user_name=user.localpart %}Delete user {{ user_name }}{% endtrans %}
-				{%- endcall -%}
-				{%- call action_button("bug_report", url_for(".debug_user", localpart=user.localpart), class="secondary") -%}
-					{% trans user_name=user.localpart %}Show debug information for {{ user_name }}{% endtrans %}
-				{%- endcall -%}
-				{%- call custom_form_button("passwd", reset_form.action_create.name, user.localpart, class="secondary", slim=True) -%}
-					{% trans user_name=user.localpart %}Create password reset link for {{ user_name }}{% endtrans %}
+				{%- call action_button("edit", url_for(".edit_user", localpart=user.localpart), class="primary") -%}
+					{% trans user_name=user.localpart %}Edit user {{ user_name }}{% endtrans %}
 				{%- endcall -%}
 				</form>
 			</td>
@@ -33,6 +25,5 @@
 {% endfor %}
 	</tbody>
 </table></div>
-</form>
 {%- include "admin_create_invite_form.html" -%}
 {% endblock %}
