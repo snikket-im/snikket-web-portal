@@ -509,7 +509,7 @@ class ProsodyClient:
         req = {
             "kind": "iq",
             "type": "get",
-            "version": True,
+            "version": {},
             "to": domain,
         }
 
