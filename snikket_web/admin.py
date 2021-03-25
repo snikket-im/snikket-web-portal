@@ -56,6 +56,9 @@ async def users() -> str:
     )
 
 
+_LIMITED_ROLE_NAME = _("Limited")
+
+
 class EditUserForm(BaseForm):
     localpart = wtforms.StringField(
         _l("Login name"),
@@ -68,7 +71,9 @@ class EditUserForm(BaseForm):
     role = wtforms.RadioField(
         _l("Access Level"),
         choices=[
-            ("prosody:restricted", _l("Limited")),
+            # NOTE: enable this only after something has been done which
+            # actually enforces the described restrictions :).
+            # ("prosody:restricted", _l("Limited")),
             ("prosody:normal", _l("Normal user")),
             ("prosody:admin", _l("Administrator")),
         ],
