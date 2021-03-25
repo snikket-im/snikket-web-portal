@@ -18,8 +18,7 @@
 {% endmacro %}
 {% block content %}
 <h1>{% trans user_name=target_user.localpart %}Edit user {{ user_name }}{% endtrans %}</h1>
-<div class="form layout-expanded"><form method="POST">
-	{{ form.csrf_token }}
+<form method="POST">{{ form.csrf_token }}<div class="form layout-expanded">
 	<h2 class="form-title">{% trans %}Edit user{% endtrans %}</h2>
 	<div class="f-ebox">
 		{{ form.localpart.label }}
@@ -55,9 +54,9 @@
 		{%- endcall -%}
 		{%- call form_button("done", form.action_save, class="primary") %}{% endcall -%}
 	</div>
-</form></div>
+</div>
 <h2>{% trans %}Further actions{% endtrans %}</h2>
-<div class="form layout-expanded"><form method="POST">
+<div class="form layout-expanded">
 	<h2 class="form-title">{% trans %}Reset password{% endtrans %}</h2>
 	{{ form.csrf_token }}
 	<p class="form-desc">
@@ -75,5 +74,5 @@
 			{%- trans -%}Show debug information{%- endtrans -%}
 		{%- endcall -%}
 	</div>
-</form></div>
+</div></form>
 {% endblock %}
