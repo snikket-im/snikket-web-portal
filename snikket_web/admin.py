@@ -35,7 +35,6 @@ async def index() -> str:
 
 
 class PasswordResetLinkPost(BaseForm):
-    action_create = wtforms.StringField()
     action_revoke = wtforms.StringField()
 
 
@@ -54,6 +53,87 @@ async def users() -> str:
         users=users,
         reset_form=reset_form,
         invite_form=invite_form,
+    )
+
+
+_LIMITED_ROLE_NAME = _("Limited")
+
+
+class EditUserForm(BaseForm):
+    localpart = wtforms.StringField(
+        _l("Login name"),
+    )
+
+    display_name = wtforms.StringField(
+        _l("Display name"),
+    )
+
+    role = wtforms.RadioField(
+        _l("Access Level"),
+        choices=[
+            # NOTE: enable this only after something has been done which
+            # actually enforces the described restrictions :).
+            # ("prosody:restricted", _l("Limited")),
+            ("prosody:normal", _l("Normal user")),
+            ("prosody:admin", _l("Administrator")),
+        ],
+    )
+
+    action_save = wtforms.SubmitField(
+        _l("Update user"),
+    )
+
+    action_create_reset = wtforms.SubmitField(
+        _l("Create password reset link"),
+    )
+
+
+@bp.route("/user/<localpart>/", methods=["GET", "POST"])
+@client.require_admin_session()
+async def edit_user(localpart: str) -> typing.Union[quart.Response, str]:
+    target_user_info = await client.get_user_by_localpart(localpart)
+
+    form = EditUserForm()
+    if form.validate_on_submit():
+        if form.action_create_reset.data:
+            target_user_info = await client.get_user_by_localpart(localpart)
+            reset_link = await client.create_password_reset_invite(
+                localpart=localpart,
+                ttl=86400,
+            )
+            await flash(
+                _("Password reset link created"),
+                "success",
+            )
+            return redirect(url_for(
+                ".user_password_reset_link",
+                id_=reset_link.id_,
+            ))
+
+        await client.update_user(
+            localpart,
+            display_name=form.display_name.data,
+            roles=[form.role.data],
+        )
+
+        await flash(
+            _("User information updated."),
+            "success",
+        )
+        return redirect(url_for(".edit_user", localpart=localpart))
+
+    elif request.method == "GET":
+        form.localpart.data = target_user_info.localpart
+        form.display_name.data = target_user_info.display_name
+        if target_user_info.roles:
+            form.role.data = target_user_info.roles[0]
+        else:
+            form.role.data = "prosody:normal"
+
+    return await render_template(
+        "admin_edit_user.html",
+        target_user=target_user_info,
+        form=form,
     )
 
 
@@ -100,36 +180,38 @@ async def debug_user(localpart: str) -> typing.Union[str, quart.Response]:
     )
 
 
-@bp.route("/users/password-reset/-", methods=["POST"])
+@bp.route("/users/password-reset/<id_>", methods=["GET", "POST"])
 @client.require_admin_session()
-async def create_password_reset_link() -> typing.Union[str, quart.Response]:
-    form = PasswordResetLinkPost()
-    if not form.validate_on_submit():
-        abort(400)
-
-    if form.action_create.data:
-        localpart = form.action_create.data
-        target_user_info = await client.get_user_by_localpart(localpart)
-        reset_link = await client.create_password_reset_invite(
-            localpart=localpart,
-            ttl=86400,
-        )
+async def user_password_reset_link(
+        id_: str,
+        ) -> typing.Union[str, quart.Response]:
+    invite_info = await client.get_invite_by_id(
+        id_,
+    )
+    if invite_info.jid is None:
         await flash(
-            _("Password reset link created"),
-            "success",
-        )
-    elif form.action_revoke.data:
-        await client.delete_invite(form.action_revoke.data)
-        await flash(
-            _("Password reset link deleted"),
-            "success",
+            _("Password reset link not found"),
+            "alert",
         )
         return redirect(url_for(".users"))
 
+    localpart = prosodyclient.split_jid(invite_info.jid)[0]
+
+    form = PasswordResetLinkPost()
+    if form.validate_on_submit():
+        if form.action_revoke.data:
+            await client.delete_invite(id_)
+            await flash(
+                _("Password reset link deleted"),
+                "success",
+            )
+            return redirect(url_for(".edit_user", localpart=localpart))
+        abort(400)
+
     return await render_template(
         "admin_reset_user_password.html",
-        target_user=target_user_info,
-        reset_link=reset_link,
+        localpart=localpart,
+        reset_link=invite_info,
         form=form,
     )
 

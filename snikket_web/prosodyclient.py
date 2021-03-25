@@ -44,6 +44,15 @@ class AdminUserInfo:
     display_name: typing.Optional[str]
     email: typing.Optional[str]
     phone: typing.Optional[str]
+    roles: typing.Optional[typing.List[str]]
+
+    @property
+    def has_admin_role(self) -> bool:
+        return bool(self.roles and "prosody:admin" in self.roles)
+
+    @property
+    def has_restricted_role(self) -> bool:
+        return bool(self.roles and "prosody:restricted" in self.roles)
 
     @classmethod
     def from_api_response(
@@ -55,6 +64,7 @@ class AdminUserInfo:
             display_name=data.get("display_name") or None,
             email=data.get("email") or None,
             phone=data.get("phone") or None,
+            roles=data.get("roles"),
         )
 
 
@@ -857,6 +867,29 @@ class ProsodyClient:
                 ) as resp:
             self._raise_error_from_response(resp)
             return AdminUserInfo.from_api_response(await resp.json())
+
+    @autosession
+    async def update_user(
+            self,
+            localpart: str,
+            *,
+            display_name: typing.Optional[str],
+            roles: typing.Optional[typing.Collection[str]],
+            session: aiohttp.ClientSession,
+            ) -> None:
+        payload: typing.Dict[str, typing.Any] = {
+            "username": localpart,
+        }
+        if display_name is not None:
+            payload["display_name"] = display_name
+        if roles is not None:
+            payload["roles"] = list(roles)
+
+        async with session.put(
+                self._admin_v1_endpoint("/users/{}".format(localpart)),
+                json=payload,
+                ) as resp:
+            self._raise_error_from_response(resp)
 
     @autosession
     async def get_user_debug_info(

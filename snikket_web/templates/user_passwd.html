@@ -24,7 +24,7 @@
 		<p>{% trans %}After changing your password, you will have to enter the new password on all of your devices.{% endtrans %}</p>
 	</div>
 	<div class="f-bbox">
-		{%- call standard_button("back", url_for('.index'), class="secondary") %}{% trans %}Back{% endtrans %}{% endcall -%}
+		{%- call standard_button("back", url_for('.index'), class="tertiary") %}{% trans %}Back{% endtrans %}{% endcall -%}
 		{%- call custom_form_button("passwd", "", "", class="primary") -%}
 			{% trans %}Change password{% endtrans %}
 		{%- endcall -%}

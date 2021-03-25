@@ -1,0 +1,79 @@
+{% extends "admin_app.html" %}
+{% from "library.j2" import box, form_button, standard_button, icon %}
+{% macro access_level_description(role, caller=None) %}
+{%- if role == "prosody:restricted" -%}
+{% trans %}Limited users can interact with users on the same Snikket service and be members of circles.{% endtrans %}
+{%- elif role == "prosody:normal" -%}
+{% trans %}Like limited users and can also interact with users on other Snikket services.{% endtrans %}
+{%- elif role == "prosody:admin" -%}
+{% trans %}Like normal users and can access the admin panel in the web portal.{% endtrans %}
+{%- endif -%}
+{% endmacro %}
+{% macro access_level_icon(role, caller=None) %}
+{%- if role == "prosody:restricted" -%}
+{% call icon("lock") %}{% endcall %}
+{%- elif role == "prosody:admin" -%}
+{% call icon("admin") %}{% endcall %}
+{%- endif -%}
+{% endmacro %}
+{% block content %}
+<h1>{% trans user_name=target_user.localpart %}Edit user {{ user_name }}{% endtrans %}</h1>
+<div class="form layout-expanded"><form method="POST">
+	{{ form.csrf_token }}
+	<h2 class="form-title">{% trans %}Edit user{% endtrans %}</h2>
+	<div class="f-ebox">
+		{{ form.localpart.label }}
+		{{ form.localpart(readonly="readonly") }}
+		<p class="form-desc weak">{% trans %}The login name cannot be changed.{% endtrans %}</p>
+	</div>
+	<div class="f-ebox">
+		{{ form.display_name.label }}
+		{{ form.display_name }}
+	</div>
+	<h3 class="form-title">{% trans %}Access Level{% endtrans %}</h3>
+	<p class="form-descr weak">{% trans %}The access level of a user determines what interactions are allowed for them on your Snikket service.{% endtrans %}</p>
+	<div class="f-ebox">
+		<fieldset>{#- -#}
+			<legend class="a11y-only">{{ form.role.label.text }}</legend>
+			{%- for level in form.role -%}
+			<div class="radio-button-ext">
+				{{ level }}<label for="{{ level.id }}">
+					{%- trans title=level.label.text, icon=access_level_icon(level.data), description=access_level_description(level.data) -%}
+					<strong>{{ title }}{{ icon }}</strong><p>{{ description }}</p>
+					{%- endtrans -%}
+				</label>
+			</div>
+			{%- endfor -%}
+		</fieldset>
+	</div>
+	<div class="f-bbox">
+		{%- call standard_button("back", url_for(".users"), class="tertiary") -%}
+			{%- trans -%}Return to user list{%- endtrans -%}
+		{%- endcall -%}
+		{%- call standard_button("delete", url_for(".delete_user", localpart=target_user.localpart), class="secondary") -%}
+			{%- trans -%}Delete user{%- endtrans -%}
+		{%- endcall -%}
+		{%- call form_button("done", form.action_save, class="primary") %}{% endcall -%}
+	</div>
+</form></div>
+<h2>{% trans %}Further actions{% endtrans %}</h2>
+<div class="form layout-expanded"><form method="POST">
+	<h2 class="form-title">{% trans %}Reset password{% endtrans %}</h2>
+	{{ form.csrf_token }}
+	<p class="form-desc">
+		{% trans %}If the user has lost their password, you can use the button below to create a special link which allows to change the password of the account, once.{% endtrans %}
+	</p>
+	<div class="f-bbox">
+		{%- call form_button("passwd", form.action_create_reset, class="primary") -%}{%- endcall -%}
+	</div>
+	<h2 class="form-title">{% trans %}Debug information{% endtrans %}</h2>
+	<p class="form-desc">
+		{% trans %}In some cases, extended information about the user account and the connected devices is necessary to troubleshoot issues. The button below reveals this (sensitive) information.{% endtrans %}
+	</p>
+	<div class="f-bbox">
+		{%- call standard_button("bug_report", url_for(".debug_user", localpart=target_user.localpart), class="primary") -%}
+			{%- trans -%}Show debug information{%- endtrans -%}
+		{%- endcall -%}
+	</div>
+</form></div>
+{% endblock %}
