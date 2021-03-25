@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-03-25 17:32+0100\n"
-"PO-Revision-Date: 2021-03-23 15:00+0000\n"
+"PO-Revision-Date: 2021-03-27 00:01+0000\n"
 "Last-Translator: Kim Alvefur <zash@zash.se>\n"
-"Language-Team: Swedish <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/sv/>\n"
+"Language-Team: Swedish <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: snikket_web/admin.py:59
 msgid "Limited"
-msgstr ""
+msgstr "Begränsad"
 
 #: snikket_web/admin.py:64 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_users.html:8
@@ -36,39 +36,31 @@ msgstr "Visningsnamn"
 
 #: snikket_web/admin.py:72 snikket_web/templates/admin_edit_user.html:33
 msgid "Access Level"
-msgstr ""
+msgstr "Användarnivåer"
 
 #: snikket_web/admin.py:77
 msgid "Normal user"
-msgstr ""
+msgstr "Vanlig användare"
 
 #: snikket_web/admin.py:78
-#, fuzzy
-#| msgid "Admin area"
 msgid "Administrator"
-msgstr "Administration"
+msgstr "Administratör"
 
 #: snikket_web/admin.py:83
-#, fuzzy
-#| msgid "Update circle"
 msgid "Update user"
-msgstr "Uppdatera krets"
+msgstr "Uppdatera användare"
 
 #: snikket_web/admin.py:87
-#, fuzzy
-#| msgid "Create password reset links or delete users."
 msgid "Create password reset link"
-msgstr "Skapa länkar för att återställa lösenord eller radera användare."
+msgstr "Skapa länk för återställning av lösenord"
 
 #: snikket_web/admin.py:105
 msgid "Password reset link created"
 msgstr "Skapade länk för att återställa lösenord"
 
 #: snikket_web/admin.py:120
-#, fuzzy
-#| msgid "Circle information"
 msgid "User information updated."
-msgstr "Om kretsen"
+msgstr "Användarinformation uppdaterad."
 
 #: snikket_web/admin.py:142
 msgid "Delete user permanently"
@@ -79,10 +71,8 @@ msgid "User deleted"
 msgstr "Användare raderad"
 
 #: snikket_web/admin.py:193
-#, fuzzy
-#| msgid "Password reset link created"
 msgid "Password reset link not found"
-msgstr "Skapade länk för att återställa lösenord"
+msgstr "Länk för återställning av lösenord hittades inte"
 
 #: snikket_web/admin.py:205
 msgid "Password reset link deleted"
@@ -692,72 +682,72 @@ msgid ""
 "Limited users can interact with users on the same Snikket service and be "
 "members of circles."
 msgstr ""
+"Begränsade användare kan interagera med andra användare på samma Snikket-"
+"tjänst och vara medlemmar av kretsar."
 
 #: snikket_web/templates/admin_edit_user.html:7
 msgid ""
 "Like limited users and can also interact with users on other Snikket "
 "services."
 msgstr ""
+"Som begränsade användare samt kan även interagera med användare på andra "
+"Snikket-tjänster."
 
 #: snikket_web/templates/admin_edit_user.html:9
 msgid "Like normal users and can access the admin panel in the web portal."
 msgstr ""
+"Som vanliga användare samt har även tillgång till administrationspanelen."
 
 #: snikket_web/templates/admin_edit_user.html:20
 #: snikket_web/templates/admin_users.html:28
-#, fuzzy, python-format
-#| msgid "Delete user %(user_name)s"
+#, python-format
 msgid "Edit user %(user_name)s"
-msgstr "Radera användaren %(user_name)s"
+msgstr "Redigera användaren %(user_name)s"
 
 #: snikket_web/templates/admin_edit_user.html:23
-#, fuzzy
-#| msgid "Add user"
 msgid "Edit user"
-msgstr "Lägg till användare"
+msgstr "Redigera användare"
 
 #: snikket_web/templates/admin_edit_user.html:27
 msgid "The login name cannot be changed."
-msgstr ""
+msgstr "Inloggningsnamnet kan inte ändras."
 
 #: snikket_web/templates/admin_edit_user.html:34
 msgid ""
 "The access level of a user determines what interactions are allowed for them "
 "on your Snikket service."
 msgstr ""
+"Användarnivåer bestämmer vilka interaktioner är tillåtna för användare på "
+"din Snikket-tjänst."
 
 #: snikket_web/templates/admin_edit_user.html:41
 #, python-format
 msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
-msgstr ""
+msgstr "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 
 #: snikket_web/templates/admin_edit_user.html:51
-#, fuzzy
-#| msgid "Return to circle list"
 msgid "Return to user list"
-msgstr "Tillbaka till cirkellistan"
+msgstr "Tillbaka till användarlistan"
 
 #: snikket_web/templates/admin_edit_user.html:59
 msgid "Further actions"
-msgstr ""
+msgstr "Fler handlingar"
 
 #: snikket_web/templates/admin_edit_user.html:61
-#, fuzzy
-#| msgid "Reset your password"
 msgid "Reset password"
-msgstr "Återställ ditt lösenord"
+msgstr "Återställ lösenord"
 
 #: snikket_web/templates/admin_edit_user.html:64
 msgid ""
 "If the user has lost their password, you can use the button below to create "
 "a special link which allows to change the password of the account, once."
 msgstr ""
+"Om användaren har tappat bort sitt lösenord så kan du använda knappen nedan "
+"för att skapa en speciell engångslänk som låter dem ange ett nytt lösenord."
 
 #: snikket_web/templates/admin_edit_user.html:69
-#, fuzzy
-#| msgid "Circle information"
 msgid "Debug information"
-msgstr "Om kretsen"
+msgstr "Felsökningsinformation"
 
 #: snikket_web/templates/admin_edit_user.html:71
 msgid ""
@@ -765,12 +755,12 @@ msgid ""
 "devices is necessary to troubleshoot issues. The button below reveals this "
 "(sensitive) information."
 msgstr ""
+"Ibland behövs utökad information om användarkontot och anslutna enheter för "
+"att felsöka problem. Knappen nedan visar denna (känsliga) information."
 
 #: snikket_web/templates/admin_edit_user.html:75
-#, fuzzy
-#| msgid "Show debug information for %(user_name)s"
 msgid "Show debug information"
-msgstr "Visa felsökningsinformation för %(user_name)s"
+msgstr "Visa felsökningsinformation"
 
 #: snikket_web/templates/admin_home.html:4
 msgid "Welcome to the admin panel!"
@@ -869,24 +859,20 @@ msgid "Destroy link"
 msgstr "Förstör länk"
 
 #: snikket_web/templates/admin_users.html:19
-#, fuzzy
-#| msgid "The username is not valid."
 msgid "The user is an administrator."
-msgstr "Användarnamnet är ogiltigt."
+msgstr "Användaren är en administratör."
 
 #: snikket_web/templates/admin_users.html:19
 msgid " (Administrator)"
-msgstr ""
+msgstr " (Administratör)"
 
 #: snikket_web/templates/admin_users.html:22
-#, fuzzy
-#| msgid "The username is not valid."
 msgid "The user is restricted."
-msgstr "Användarnamnet är ogiltigt."
+msgstr "Begränsad användare."
 
 #: snikket_web/templates/admin_users.html:22
 msgid " (Restricted)"
-msgstr ""
+msgstr " (Begränsad)"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
@@ -1264,10 +1250,6 @@ msgid "Install on iOS"
 msgstr "Installera på iOS"
 
 #: snikket_web/templates/invite_view.html:99
-#, fuzzy
-#| msgid ""
-#| "After downloading Snikket from the app store, you have to return to this "
-#| "invite link and tap on \"Open the app\" to proceed."
 msgid ""
 "After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
@@ -1276,8 +1258,6 @@ msgstr ""
 "till den här inbjudan och klicka på \"Öppna appen\" för att fortsätta."
 
 #: snikket_web/templates/invite_view.html:101
-#, fuzzy
-#| msgid "First download Snikket from the app store using the button below:"
 msgid "First download Snikket from the App Store using the button below:"
 msgstr "Ladda först ner Snikket från App Store med knappen nedan:"
 
