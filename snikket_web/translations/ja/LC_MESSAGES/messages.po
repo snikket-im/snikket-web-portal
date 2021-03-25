@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-22 15:08+0100\n"
+"POT-Creation-Date: 2021-03-25 17:32+0100\n"
 "PO-Revision-Date: 2021-01-28 17:55+0000\n"
 "Last-Translator: pep <pep@bouah.net>\n"
 "Language-Team: Japanese <https://i18n.sotecware.net/projects/snikket/web-"
@@ -21,150 +21,202 @@ msgstr ""
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:59
-msgid "Delete user permanently"
-msgstr "ユーザーを削除する"
-
-#: snikket_web/admin.py:72
-msgid "User deleted"
+msgid "Limited"
 msgstr ""
 
-#: snikket_web/admin.py:115
+#: snikket_web/admin.py:64 snikket_web/templates/admin_delete_user.html:10
+#: snikket_web/templates/admin_users.html:8
+msgid "Login name"
+msgstr "ロゲイン名"
+
+#: snikket_web/admin.py:68 snikket_web/templates/admin_delete_user.html:12
+#: snikket_web/templates/admin_users.html:9 snikket_web/user.py:61
+msgid "Display name"
+msgstr "表示名"
+
+#: snikket_web/admin.py:72 snikket_web/templates/admin_edit_user.html:33
+msgid "Access Level"
+msgstr ""
+
+#: snikket_web/admin.py:77
+msgid "Normal user"
+msgstr ""
+
+#: snikket_web/admin.py:78
+#, fuzzy
+#| msgid "Admin area"
+msgid "Administrator"
+msgstr "管理"
+
+#: snikket_web/admin.py:83
+#, fuzzy
+#| msgid "Update circle"
+msgid "Update user"
+msgstr "サークルを更新"
+
+#: snikket_web/admin.py:87
+#, fuzzy
+#| msgid "Password reset link for %(user_name)s"
+msgid "Create password reset link"
+msgstr "%(user_name)s のパスワード再設定リンク"
+
+#: snikket_web/admin.py:105
 #, fuzzy
 #| msgid "Password reset link for %(user_name)s"
 msgid "Password reset link created"
 msgstr "%(user_name)s のパスワード再設定リンク"
 
-#: snikket_web/admin.py:121
+#: snikket_web/admin.py:120
+#, fuzzy
+#| msgid "User information"
+msgid "User information updated."
+msgstr "ユーザー詳細"
+
+#: snikket_web/admin.py:142
+msgid "Delete user permanently"
+msgstr "ユーザーを削除する"
+
+#: snikket_web/admin.py:155
+msgid "User deleted"
+msgstr ""
+
+#: snikket_web/admin.py:193
+#, fuzzy
+#| msgid "Password reset link for %(user_name)s"
+msgid "Password reset link not found"
+msgstr "%(user_name)s のパスワード再設定リンク"
+
+#: snikket_web/admin.py:205
 #, fuzzy
 #| msgid "Password reset link for %(user_name)s"
 msgid "Password reset link deleted"
 msgstr "%(user_name)s のパスワード再設定リンク"
 
-#: snikket_web/admin.py:140
+#: snikket_web/admin.py:225
 msgid "Invite to circle"
 msgstr "サークルに紹介する"
 
-#: snikket_web/admin.py:146
+#: snikket_web/admin.py:231
 msgid "At least one circle must be selected"
 msgstr "サークルを選択してください"
 
-#: snikket_web/admin.py:151
+#: snikket_web/admin.py:236
 msgid "Valid for"
 msgstr "有効期限"
 
-#: snikket_web/admin.py:153
+#: snikket_web/admin.py:238
 msgid "One hour"
 msgstr "一時間"
 
-#: snikket_web/admin.py:154
+#: snikket_web/admin.py:239
 msgid "Twelve hours"
 msgstr "１２時間"
 
-#: snikket_web/admin.py:155
+#: snikket_web/admin.py:240
 msgid "One day"
 msgstr "一日"
 
-#: snikket_web/admin.py:156
+#: snikket_web/admin.py:241
 msgid "One week"
 msgstr "一週間"
 
-#: snikket_web/admin.py:157
+#: snikket_web/admin.py:242
 msgid "Four weeks"
 msgstr "４週間"
 
-#: snikket_web/admin.py:163 snikket_web/templates/admin_edit_invite.html:17
+#: snikket_web/admin.py:248 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
 msgstr "紹介の種類"
 
-#: snikket_web/admin.py:165 snikket_web/templates/library.j2:116
+#: snikket_web/admin.py:250 snikket_web/templates/library.j2:116
 msgid "Individual"
 msgstr "一回"
 
-#: snikket_web/admin.py:166 snikket_web/templates/library.j2:114
+#: snikket_web/admin.py:251 snikket_web/templates/library.j2:114
 msgid "Group"
 msgstr "複数回"
 
-#: snikket_web/admin.py:172
+#: snikket_web/admin.py:257
 msgid "New invitation link"
 msgstr "新しい紹介状"
 
-#: snikket_web/admin.py:234
+#: snikket_web/admin.py:319
 msgid "Revoke"
 msgstr "取り消す"
 
-#: snikket_web/admin.py:258
+#: snikket_web/admin.py:343
 #, fuzzy
 #| msgid "Invitation type"
 msgid "Invitation created"
 msgstr "紹介の種類"
 
-#: snikket_web/admin.py:274
+#: snikket_web/admin.py:359
 #, fuzzy
 #| msgid "New invitation link"
 msgid "No such invitation exists"
 msgstr "新しい紹介状"
 
-#: snikket_web/admin.py:289
+#: snikket_web/admin.py:374
 #, fuzzy
 #| msgid "Invitation type"
 msgid "Invitation revoked"
 msgstr "紹介の種類"
 
-#: snikket_web/admin.py:306 snikket_web/admin.py:354
+#: snikket_web/admin.py:391 snikket_web/admin.py:439
 msgid "Name"
 msgstr "名"
 
-#: snikket_web/admin.py:311 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:396 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "サークルを作成"
 
-#: snikket_web/admin.py:341
+#: snikket_web/admin.py:426
 #, fuzzy
 #| msgid "Circle name"
 msgid "Circle created"
 msgstr "サークル名"
 
-#: snikket_web/admin.py:359
+#: snikket_web/admin.py:444
 msgid "Select user"
 msgstr "ユーザー選択"
 
-#: snikket_web/admin.py:364
+#: snikket_web/admin.py:449
 msgid "Update circle"
 msgstr "サークルを更新"
 
-#: snikket_web/admin.py:368
+#: snikket_web/admin.py:453
 msgid "Delete circle permanently"
 msgstr "サークルを削除"
 
-#: snikket_web/admin.py:374
+#: snikket_web/admin.py:459
 msgid "Add user"
 msgstr "ユーザーを追加する"
 
-#: snikket_web/admin.py:390
+#: snikket_web/admin.py:475
 #, fuzzy
 #| msgid "No circles"
 msgid "No such circle exists"
 msgstr "なし"
 
-#: snikket_web/admin.py:427
+#: snikket_web/admin.py:512
 #, fuzzy
 #| msgid "Circle name"
 msgid "Circle data updated"
 msgstr "サークル名"
 
-#: snikket_web/admin.py:433
+#: snikket_web/admin.py:518
 #, fuzzy
 #| msgid "Circle members"
 msgid "Circle deleted"
 msgstr "サークル会員"
 
-#: snikket_web/admin.py:444
+#: snikket_web/admin.py:529
 #, fuzzy
 #| msgid "Invite to circle"
 msgid "User added to circle"
 msgstr "サークルに紹介する"
 
-#: snikket_web/admin.py:453
+#: snikket_web/admin.py:538
 #, fuzzy
 #| msgid "Remove user %(username)s from circle"
 msgid "User removed from circle"
@@ -268,11 +320,6 @@ msgstr "コンタクト限定"
 #: snikket_web/user.py:55
 msgid "Everyone"
 msgstr "全員"
-
-#: snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/templates/admin_users.html:11 snikket_web/user.py:61
-msgid "Display name"
-msgstr "表示名"
 
 #: snikket_web/user.py:65
 msgid "Avatar"
@@ -427,7 +474,7 @@ msgstr "サークル員"
 
 #: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_invites.html:24
-#: snikket_web/templates/admin_users.html:12
+#: snikket_web/templates/admin_users.html:10
 msgid "Actions"
 msgstr "操作"
 
@@ -498,23 +545,18 @@ msgid "Copy complete output"
 msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:4
-#: snikket_web/templates/admin_users.html:22
 #, python-format
 msgid "Delete user %(user_name)s"
 msgstr "%(user_name)s を削除"
 
 #: snikket_web/templates/admin_delete_user.html:6
+#: snikket_web/templates/admin_edit_user.html:54
 msgid "Delete user"
 msgstr "ユーザー削除"
 
 #: snikket_web/templates/admin_delete_user.html:8
 msgid "Are you sure you want to delete the following user?"
 msgstr "本当にこのユーザーを削除していいですか？"
-
-#: snikket_web/templates/admin_delete_user.html:10
-#: snikket_web/templates/admin_users.html:10
-msgid "Login name"
-msgstr "ロゲイン名"
 
 #: snikket_web/templates/admin_delete_user.html:15
 msgid "Danger"
@@ -652,11 +694,95 @@ msgstr ""
 msgid "Created"
 msgstr "作成時"
 
-#: snikket_web/templates/admin_edit_invite.html:49
+#: snikket_web/templates/admin_edit_invite.html:48
 #, fuzzy
 #| msgid "New invitation link"
 msgid "Return to invitation list"
 msgstr "新しい紹介状"
+
+#: snikket_web/templates/admin_edit_user.html:5
+msgid ""
+"Limited users can interact with users on the same Snikket service and be "
+"members of circles."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:7
+msgid ""
+"Like limited users and can also interact with users on other Snikket "
+"services."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:9
+msgid "Like normal users and can access the admin panel in the web portal."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:20
+#: snikket_web/templates/admin_users.html:28
+#, python-format
+msgid "Edit user %(user_name)s"
+msgstr "%(user_name)s を更新"
+
+#: snikket_web/templates/admin_edit_user.html:23
+#, fuzzy
+#| msgid "Add user"
+msgid "Edit user"
+msgstr "ユーザーを追加する"
+
+#: snikket_web/templates/admin_edit_user.html:27
+msgid "The login name cannot be changed."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:34
+msgid ""
+"The access level of a user determines what interactions are allowed for them "
+"on your Snikket service."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:41
+#, python-format
+msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:51
+#, fuzzy
+#| msgid "New invitation link"
+msgid "Return to user list"
+msgstr "新しい紹介状"
+
+#: snikket_web/templates/admin_edit_user.html:59
+msgid "Further actions"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:61
+#, fuzzy
+#| msgid "Change your password"
+msgid "Reset password"
+msgstr "パスワード変更"
+
+#: snikket_web/templates/admin_edit_user.html:64
+msgid ""
+"If the user has lost their password, you can use the button below to create "
+"a special link which allows to change the password of the account, once."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:69
+#, fuzzy
+#| msgid "User information"
+msgid "Debug information"
+msgstr "ユーザー詳細"
+
+#: snikket_web/templates/admin_edit_user.html:71
+msgid ""
+"In some cases, extended information about the user account and the connected "
+"devices is necessary to troubleshoot issues. The button below reveals this "
+"(sensitive) information."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:75
+#, fuzzy
+#| msgid "User information"
+msgid "Show debug information"
+msgstr "ユーザー詳細"
 
 #: snikket_web/templates/admin_home.html:4
 #, fuzzy
@@ -764,14 +890,24 @@ msgstr "このリンクはパスワードを一回きり再設定可能にする
 msgid "Destroy link"
 msgstr "リンク取り消す"
 
-#: snikket_web/templates/admin_users.html:25
-#, python-format
-msgid "Show debug information for %(user_name)s"
+#: snikket_web/templates/admin_users.html:19
+#, fuzzy
+#| msgid "The username is not valid"
+msgid "The user is an administrator."
+msgstr "ユーザー名が不正"
+
+#: snikket_web/templates/admin_users.html:19
+msgid " (Administrator)"
 msgstr ""
 
-#: snikket_web/templates/admin_users.html:28
-#, python-format
-msgid "Create password reset link for %(user_name)s"
+#: snikket_web/templates/admin_users.html:22
+#, fuzzy
+#| msgid "The username is not valid"
+msgid "The user is restricted."
+msgstr "ユーザー名が不正"
+
+#: snikket_web/templates/admin_users.html:22
+msgid " (Restricted)"
 msgstr ""
 
 #: snikket_web/templates/app.html:4
@@ -1124,12 +1260,12 @@ msgstr ""
 
 #: snikket_web/templates/invite_view.html:99
 msgid ""
-"After downloading Snikket from the app store, you have to return to this "
+"After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
 msgstr ""
 
 #: snikket_web/templates/invite_view.html:101
-msgid "First download Snikket from the app store using the button below:"
+msgid "First download Snikket from the App Store using the button below:"
 msgstr ""
 
 #: snikket_web/templates/invite_view.html:103
@@ -1288,12 +1424,6 @@ msgid ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
 msgstr ""
-
-#~ msgid "Edit user %(user_name)s"
-#~ msgstr "%(user_name)s を更新"
-
-#~ msgid "User information"
-#~ msgstr "ユーザー詳細"
 
 #~ msgid "This circle cannot be modified"
 #~ msgstr "このサークルの更新ができません"
