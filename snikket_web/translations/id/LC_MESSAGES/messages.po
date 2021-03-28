@@ -8,21 +8,21 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-03-25 17:32+0100\n"
-"PO-Revision-Date: 2021-02-25 16:02+0000\n"
+"PO-Revision-Date: 2021-03-29 08:00+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
-"Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/id/>\n"
+"Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.5.1\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:59
 msgid "Limited"
-msgstr ""
+msgstr "Terbatas"
 
 #: snikket_web/admin.py:64 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_users.html:8
@@ -36,39 +36,31 @@ msgstr "Nama tampilan"
 
 #: snikket_web/admin.py:72 snikket_web/templates/admin_edit_user.html:33
 msgid "Access Level"
-msgstr ""
+msgstr "Level akses"
 
 #: snikket_web/admin.py:77
 msgid "Normal user"
-msgstr ""
+msgstr "Pengguna normal"
 
 #: snikket_web/admin.py:78
-#, fuzzy
-#| msgid "Admin area"
 msgid "Administrator"
-msgstr "Wewenang Administrator"
+msgstr "Administrator"
 
 #: snikket_web/admin.py:83
-#, fuzzy
-#| msgid "Update circle"
 msgid "Update user"
-msgstr "Memperbarui kelompok"
+msgstr "Memperbarui pengguna"
 
 #: snikket_web/admin.py:87
-#, fuzzy
-#| msgid "Create password reset links or delete users."
 msgid "Create password reset link"
-msgstr "Buat tautan setel ulang kata sandi atau hapus pengguna."
+msgstr "Buat tautan setel ulang kata sandi"
 
 #: snikket_web/admin.py:105
 msgid "Password reset link created"
 msgstr "Tautan setel ulang kata sandi dibuat"
 
 #: snikket_web/admin.py:120
-#, fuzzy
-#| msgid "User information"
 msgid "User information updated."
-msgstr "Informasi pengguna"
+msgstr "Informasi pengguna diperbarui."
 
 #: snikket_web/admin.py:142
 msgid "Delete user permanently"
@@ -79,10 +71,8 @@ msgid "User deleted"
 msgstr "Pengguna dihapus"
 
 #: snikket_web/admin.py:193
-#, fuzzy
-#| msgid "Password reset link created"
 msgid "Password reset link not found"
-msgstr "Tautan setel ulang kata sandi dibuat"
+msgstr "Tautan setel ulang kata sandi tidak ditemukan"
 
 #: snikket_web/admin.py:205
 msgid "Password reset link deleted"
@@ -217,32 +207,24 @@ msgid "Confirm password"
 msgstr "Konfirmasi kata sandi"
 
 #: snikket_web/invite.py:118 snikket_web/invite.py:185
-#, fuzzy
-#| msgid "The passwords must match"
 msgid "The passwords must match."
-msgstr "Kata sandi harus cocok"
+msgstr "Kata sandi harus cocok."
 
 #: snikket_web/invite.py:123
 msgid "Create account"
 msgstr "Buat akun"
 
 #: snikket_web/invite.py:150
-#, fuzzy
-#| msgid "That username is already taken"
 msgid "That username is already taken."
-msgstr "Nama pengguna itu sudah dipakai"
+msgstr "Nama pengguna itu sudah dipakai."
 
 #: snikket_web/invite.py:154 snikket_web/invite.py:218
-#, fuzzy
-#| msgid "Registration was declined for unknown reasons"
 msgid "Registration was declined for unknown reasons."
-msgstr "Pendaftaran ditolak karena alasan yang tidak diketahui"
+msgstr "Pendaftaran ditolak karena alasan yang tidak diketahui."
 
 #: snikket_web/invite.py:158
-#, fuzzy
-#| msgid "The username is not valid"
 msgid "The username is not valid."
-msgstr "Nama pengguna tidak valid"
+msgstr "Nama pengguna tidak valid."
 
 #: snikket_web/invite.py:190 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:29
@@ -278,10 +260,8 @@ msgid "Confirm new password"
 msgstr "Konfirmasi kata sandi"
 
 #: snikket_web/user.py:41
-#, fuzzy
-#| msgid "The new passwords must match"
 msgid "The new passwords must match."
-msgstr "Kata sandi baru harus cocok"
+msgstr "Kata sandi baru harus cocok."
 
 #: snikket_web/user.py:48
 msgid "Sign out"
@@ -312,10 +292,8 @@ msgid "Update profile"
 msgstr "Perbarui profil"
 
 #: snikket_web/user.py:99
-#, fuzzy
-#| msgid "Incorrect password"
 msgid "Incorrect password."
-msgstr "Kata sandi salah"
+msgstr "Kata sandi salah."
 
 #: snikket_web/user.py:103
 msgid "Password changed"
@@ -326,6 +304,8 @@ msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
 msgstr ""
+"Avatar yang dipilih terlalu besar. Untuk dapat mengunggah avatar yang lebih "
+"besar, sila gunakan aplikasi."
 
 #: snikket_web/user.py:159
 msgid "Profile updated"
@@ -609,7 +589,7 @@ msgstr "Kelompok ini tidak memiliki percakapan grup."
 
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Return to circle list"
-msgstr ""
+msgstr "Kembali ke daftar circle"
 
 #: snikket_web/templates/admin_edit_circle.html:48
 msgid "Delete circle"
@@ -701,26 +681,28 @@ msgid "Created"
 msgstr "Dibuat"
 
 #: snikket_web/templates/admin_edit_invite.html:48
-#, fuzzy
-#| msgid "New invitation link"
 msgid "Return to invitation list"
-msgstr "Tautan undangan baru"
+msgstr "Kembali ke daftar undangan"
 
 #: snikket_web/templates/admin_edit_user.html:5
 msgid ""
 "Limited users can interact with users on the same Snikket service and be "
 "members of circles."
 msgstr ""
+"Pengguna terbatas dapat berinteraksi dengan pengguna di layanan Snikket yang "
+"sama dan menjadi anggota kelompok."
 
 #: snikket_web/templates/admin_edit_user.html:7
 msgid ""
 "Like limited users and can also interact with users on other Snikket "
 "services."
 msgstr ""
+"Seperti pengguna terbatas dan juga dapat berinteraksi dengan pengguna di "
+"layanan Snikket lain."
 
 #: snikket_web/templates/admin_edit_user.html:9
 msgid "Like normal users and can access the admin panel in the web portal."
-msgstr ""
+msgstr "Seperti pengguna biasa dan dapat mengakses panel admin di portal web."
 
 #: snikket_web/templates/admin_edit_user.html:20
 #: snikket_web/templates/admin_users.html:28
@@ -729,63 +711,50 @@ msgid "Edit user %(user_name)s"
 msgstr "Edit pengguna %(user_name)s"
 
 #: snikket_web/templates/admin_edit_user.html:23
-#, fuzzy
-#| msgid "Add user"
 msgid "Edit user"
-msgstr "Tambah pengguna"
+msgstr "Edit pengguna"
 
 #: snikket_web/templates/admin_edit_user.html:27
 msgid "The login name cannot be changed."
-msgstr ""
+msgstr "Nama login tidak dapat diganti."
 
 #: snikket_web/templates/admin_edit_user.html:34
 msgid ""
 "The access level of a user determines what interactions are allowed for them "
 "on your Snikket service."
 msgstr ""
+"Level akses pengguna menentukan interaksi apa yang diizinkan untuk mereka di "
+"layanan Snikket Anda."
 
 #: snikket_web/templates/admin_edit_user.html:41
-#, python-format
+#, fuzzy, python-format
 msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
-msgstr ""
+msgstr "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 
 #: snikket_web/templates/admin_edit_user.html:51
-#, fuzzy
-#| msgid "New invitation link"
 msgid "Return to user list"
-msgstr "Tautan undangan baru"
+msgstr "Kembali ke daftar pengguna"
 
 #: snikket_web/templates/admin_edit_user.html:59
 msgid "Further actions"
-msgstr ""
+msgstr "Tindakan lanjutan"
 
 #: snikket_web/templates/admin_edit_user.html:61
-#, fuzzy
-#| msgid "Reset your password"
 msgid "Reset password"
-msgstr "Setel ulang kata sandi"
+msgstr "Setel kata sandi"
 
 #: snikket_web/templates/admin_edit_user.html:64
-#, fuzzy
-#| msgid ""
-#| "If the user has forgotten their password, use the below button to create "
-#| "a password reset link. The password reset link can be used once to change "
-#| "the password of the account. Transmit the link to the user via a secure "
-#| "channel."
 msgid ""
 "If the user has lost their password, you can use the button below to create "
 "a special link which allows to change the password of the account, once."
 msgstr ""
-"Jika pengguna lupa kata sandi, gunakan tombol di bawah untuk membuat tautan "
-"setel ulang kata sandi. Tautan pengaturan ulang kata sandi dapat digunakan "
-"satu kali untuk mengubah kata sandi akun. Kirimkan link ke pengguna melalui "
-"saluran aman."
+"Jika pengguna lupa kata sandi, Anda dapat menggunakan tombol di bawah ini "
+"untuk membuat tautan khusus yang memungkinkan untuk mengubah kata sandi "
+"akun, sekali."
 
 #: snikket_web/templates/admin_edit_user.html:69
-#, fuzzy
-#| msgid "User information"
 msgid "Debug information"
-msgstr "Informasi pengguna"
+msgstr "Informasi debug"
 
 #: snikket_web/templates/admin_edit_user.html:71
 msgid ""
@@ -793,12 +762,13 @@ msgid ""
 "devices is necessary to troubleshoot issues. The button below reveals this "
 "(sensitive) information."
 msgstr ""
+"Dalam beberapa kasus, informasi tambahan tentang akun pengguna dan perangkat "
+"yang terhubung diperlukan untuk memecahkan masalah. Tombol di bawah "
+"mengungkapkan informasi (sensitif) ini."
 
 #: snikket_web/templates/admin_edit_user.html:75
-#, fuzzy
-#| msgid "Show debug information for %(user_name)s"
 msgid "Show debug information"
-msgstr "Lihat informasi debug untuk %(user_name)s"
+msgstr "Tampilkan informasi debug"
 
 #: snikket_web/templates/admin_home.html:4
 msgid "Welcome to the admin panel!"
@@ -897,24 +867,21 @@ msgid "Destroy link"
 msgstr "Hancurkan tautan"
 
 #: snikket_web/templates/admin_users.html:19
-#, fuzzy
-#| msgid "The username is not valid"
 msgid "The user is an administrator."
-msgstr "Nama pengguna tidak valid"
+msgstr "Pengguna adalah administrator."
 
 #: snikket_web/templates/admin_users.html:19
+#, fuzzy
 msgid " (Administrator)"
-msgstr ""
+msgstr " (Administrator)"
 
 #: snikket_web/templates/admin_users.html:22
-#, fuzzy
-#| msgid "The username is not valid"
 msgid "The user is restricted."
-msgstr "Nama pengguna tidak valid"
+msgstr "Pengguna terbatas."
 
 #: snikket_web/templates/admin_users.html:22
 msgid " (Restricted)"
-msgstr ""
+msgstr " (Terbatas)"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
@@ -1221,7 +1188,7 @@ msgstr "Unduh di App Store"
 
 #: snikket_web/templates/invite_view.html:32
 msgid "Get it on F-Droid"
-msgstr ""
+msgstr "Dapatkan di F-Droid"
 
 #: snikket_web/templates/invite_view.html:35
 msgid "Send to mobile device"
@@ -1293,17 +1260,19 @@ msgstr ""
 
 #: snikket_web/templates/invite_view.html:93
 msgid "Install on iOS"
-msgstr ""
+msgstr "Pasang di iOS"
 
 #: snikket_web/templates/invite_view.html:99
 msgid ""
 "After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
 msgstr ""
+"Setelah mengunduh Snikket dari App Store, Anda harus kembali ke tautan "
+"undangan ini dan klik \"Buka aplikasi\" untuk melanjutkan."
 
 #: snikket_web/templates/invite_view.html:101
 msgid "First download Snikket from the App Store using the button below:"
-msgstr ""
+msgstr "Pertama, unduh Snikket dari App Store menggunakan tombol di bawah ini:"
 
 #: snikket_web/templates/invite_view.html:103
 #: snikket_web/templates/invite_view.html:131
@@ -1311,21 +1280,25 @@ msgid ""
 "After the installation is complete, you can return to this page and tap the "
 "\"Open the app\" button to continue with the setup:"
 msgstr ""
+"Setelah instalasi selesai, Anda dapat kembali ke halaman ini dan mengetuk "
+"tombol \"Buka aplikasi\" untuk melanjutkan pemasangan:"
 
 #: snikket_web/templates/invite_view.html:121
 #: snikket_web/templates/invite_view.html:130
 msgid "Install via F-Droid"
-msgstr ""
+msgstr "Install melalui F-Droid"
 
 #: snikket_web/templates/invite_view.html:127
 msgid ""
 "After installing Snikket via F-Droid, you have to return to this invite link "
 "and tap on \"Open the app\" to proceed."
 msgstr ""
+"Setelah menginstal Snikket melalui F-Droid, Anda harus kembali ke tautan "
+"undangan ini dan ketuk \"Buka aplikasi\" untuk melanjutkan."
 
 #: snikket_web/templates/invite_view.html:129
 msgid "First install Snikket from F-Droid using the button below:"
-msgstr ""
+msgstr "Pertama install Snikket dari F-Droid menggunakan tombol di bawah ini:"
 
 #: snikket_web/templates/library.j2:18
 msgid "Copy link"
