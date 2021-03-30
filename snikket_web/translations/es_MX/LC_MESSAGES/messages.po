@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-03-25 17:32+0100\n"
-"PO-Revision-Date: 2021-02-10 17:01+0000\n"
+"PO-Revision-Date: 2021-03-31 13:00+0000\n"
 "Last-Translator: Tilman Jiménez <tilman.jimenez@tu-dortmund.de>\n"
 "Language-Team: Spanish (Mexico) <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/es_MX/>\n"
@@ -17,30 +17,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.5.1\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:59
 msgid "Limited"
-msgstr ""
+msgstr "Limitado"
 
 #: snikket_web/admin.py:64 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_users.html:8
 msgid "Login name"
-msgstr ""
+msgstr "Nombre de ingreso del usuario"
 
 #: snikket_web/admin.py:68 snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/templates/admin_users.html:9 snikket_web/user.py:61
 msgid "Display name"
-msgstr ""
+msgstr "Nombre mostrado"
 
 #: snikket_web/admin.py:72 snikket_web/templates/admin_edit_user.html:33
 msgid "Access Level"
-msgstr ""
+msgstr "Nivel de acceso"
 
 #: snikket_web/admin.py:77
 msgid "Normal user"
-msgstr ""
+msgstr "Usuario normal"
 
 #: snikket_web/admin.py:78
 #, fuzzy
@@ -49,10 +49,8 @@ msgid "Administrator"
 msgstr "Administración"
 
 #: snikket_web/admin.py:83
-#, fuzzy
-#| msgid "Update circle"
 msgid "Update user"
-msgstr "Actualizar círculo"
+msgstr "Actualizar usuario"
 
 #: snikket_web/admin.py:87
 #, fuzzy
@@ -62,7 +60,7 @@ msgstr "Contraseña actual"
 
 #: snikket_web/admin.py:105
 msgid "Password reset link created"
-msgstr ""
+msgstr "Un enlace para restablecer la contraseña ha sido creado"
 
 #: snikket_web/admin.py:120
 #, fuzzy
@@ -76,15 +74,15 @@ msgstr "Eliminar usuario permanentemente"
 
 #: snikket_web/admin.py:155
 msgid "User deleted"
-msgstr ""
+msgstr "Usuario eliminado"
 
 #: snikket_web/admin.py:193
 msgid "Password reset link not found"
-msgstr ""
+msgstr "No hemos encontrado un enlace para restablecer la contraseña"
 
 #: snikket_web/admin.py:205
 msgid "Password reset link deleted"
-msgstr ""
+msgstr "Enlace para restablecer la contraseña eliminado"
 
 #: snikket_web/admin.py:225
 msgid "Invite to circle"
@@ -441,7 +439,7 @@ msgstr "Administración"
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:23
 msgid "Manage circles"
-msgstr ""
+msgstr "Administrar círculos"
 
 #: snikket_web/templates/admin_circles.html:5
 msgid ""
@@ -483,7 +481,7 @@ msgstr "Crear una invitación para el círculo %(circle_name)s"
 #: snikket_web/templates/admin_circles.html:28
 #, python-format
 msgid "Manage members of %(circle_name)s"
-msgstr ""
+msgstr "Administrar miembros de %(circle_name)s"
 
 #: snikket_web/templates/admin_circles.html:31
 #: snikket_web/templates/admin_edit_circle.html:8
@@ -543,7 +541,7 @@ msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:17
 msgid "Copy complete output"
-msgstr ""
+msgstr "Copiar el todo el output"
 
 #: snikket_web/templates/admin_delete_user.html:4
 #, python-format
@@ -588,6 +586,8 @@ msgstr "Este es el círculo principal"
 #: snikket_web/templates/admin_edit_circle.html:15
 msgid "This circle is managed automatically and cannot be removed or renamed."
 msgstr ""
+"Este círculo es administrado automáticamente y no puede ser eliminado o "
+"renombrado."
 
 #: snikket_web/templates/admin_edit_circle.html:17
 #: snikket_web/templates/admin_edit_circle.html:33
@@ -628,7 +628,7 @@ msgstr "Miembros del círculo"
 #: snikket_web/templates/admin_edit_circle.html:70
 #, python-format
 msgid "Remove user %(username)s from circle"
-msgstr ""
+msgstr "Remover al usuario %(username)s del círculo"
 
 #: snikket_web/templates/admin_edit_circle.html:78
 msgid "This circle currently has no members."
@@ -679,24 +679,25 @@ msgstr ""
 #: snikket_web/templates/admin_edit_invite.html:29
 #: snikket_web/templates/admin_invites.html:23
 msgid "Circle"
-msgstr ""
+msgstr "Círculo"
 
 #: snikket_web/templates/admin_edit_invite.html:35
 msgid "The user will not be added to any circle and will have no contacts."
 msgstr ""
+"Este usuario no va a ser añadido a ningún círculo y no tendrá contactos."
 
 #: snikket_web/templates/admin_edit_invite.html:40
 msgid "Contact"
-msgstr ""
+msgstr "Contacto"
 
 #: snikket_web/templates/admin_edit_invite.html:41
 #, python-format
 msgid "The user will get added as contact of %(peer_jid)s."
-msgstr ""
+msgstr "El usuario será añadido como contacto de %(peer_jid)s."
 
 #: snikket_web/templates/admin_edit_invite.html:43
 msgid "Created"
-msgstr ""
+msgstr "Creado"
 
 #: snikket_web/templates/admin_edit_invite.html:48
 #, fuzzy
@@ -791,54 +792,54 @@ msgstr "Información del círculo"
 
 #: snikket_web/templates/admin_home.html:4
 msgid "Welcome to the admin panel!"
-msgstr ""
+msgstr "¡Bienvenido al panel administrativo!"
 
 #: snikket_web/templates/admin_home.html:5
 #, python-format
 msgid "At your service, %(user_name)s."
-msgstr ""
+msgstr "A tu servicio, %(user_name)s."
 
 #: snikket_web/templates/admin_home.html:9
 msgid "Users"
-msgstr ""
+msgstr "Usuarios"
 
 #: snikket_web/templates/admin_home.html:11
 msgid "Create password reset links or delete users."
-msgstr ""
+msgstr "Crea enlaces para restablecer la contraseña o elimina usuarios."
 
 #: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_users.html:4
 msgid "Manage users"
-msgstr ""
+msgstr "Administrar usuarios"
 
 #: snikket_web/templates/admin_home.html:21
 msgid "Create and manage social circles represented on your service."
-msgstr ""
+msgstr "Crea y administra círculos sociales en tu servicio."
 
 #: snikket_web/templates/admin_home.html:27
 msgid "Invitations"
-msgstr ""
+msgstr "Invitaciones"
 
 #: snikket_web/templates/admin_home.html:29
 msgid "Create, revoke or copy invitations."
-msgstr ""
+msgstr "Crea, revoca o copia invitaciones."
 
 #: snikket_web/templates/admin_home.html:31
 #: snikket_web/templates/admin_invites.html:8
 msgid "Manage invitations"
-msgstr ""
+msgstr "Administrar invitaciones"
 
 #: snikket_web/templates/admin_home.html:36
 msgid "Go back to your user's web portal page."
-msgstr ""
+msgstr "Regresa a la página de inicio de tu usuario."
 
 #: snikket_web/templates/admin_home.html:38
 msgid "Exit admin panel"
-msgstr ""
+msgstr "Salir del panel administrativo"
 
 #: snikket_web/templates/admin_invites.html:10
 msgid "Pending invitations"
-msgstr ""
+msgstr "Invitaciones pendientes"
 
 #: snikket_web/templates/admin_invites.html:21
 msgid "Expires"
@@ -846,42 +847,43 @@ msgstr ""
 
 #: snikket_web/templates/admin_invites.html:22
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #: snikket_web/templates/admin_invites.html:43
 msgid "Show invite details"
-msgstr ""
+msgstr "Mostrar detalles de la invitación"
 
 #: snikket_web/templates/admin_invites.html:46
 msgid "Copy invite link to clipboard"
-msgstr ""
+msgstr "Copiar enlace de invitación"
 
 #: snikket_web/templates/admin_invites.html:49
 msgid "Delete invitation"
-msgstr ""
+msgstr "Eliminar invitación"
 
 #: snikket_web/templates/admin_invites.html:57
 msgid "Currently, there are no pending invitations."
-msgstr ""
+msgstr "Actualmente no hay invitaciones pendientes."
 
 #: snikket_web/templates/admin_reset_user_password.html:8
 msgid "Password reset"
-msgstr ""
+msgstr "Restablecer contraseña"
 
 #: snikket_web/templates/admin_reset_user_password.html:12
 #, python-format
 msgid "Password reset link for %(user_name)s"
-msgstr ""
+msgstr "Enlace para restablecer la contraseña de %(user_name)s"
 
 #: snikket_web/templates/admin_reset_user_password.html:13
 msgid ""
 "The following link will allow the user to reset their password on their "
 "device, once."
 msgstr ""
+"Este enlace le permitirá al usuario restablecer su contraseña una sola vez."
 
 #: snikket_web/templates/admin_reset_user_password.html:22
 msgid "Destroy link"
-msgstr ""
+msgstr "Eliminar enlace"
 
 #: snikket_web/templates/admin_users.html:19
 #, fuzzy
@@ -905,40 +907,42 @@ msgstr ""
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
-msgstr ""
+msgstr "Portal web de Snikket"
 
 #: snikket_web/templates/app.html:8
 msgid "Log out"
-msgstr ""
+msgstr "Cerrar sesión"
 
 #: snikket_web/templates/backend_error.html:3
 #: snikket_web/templates/exception.html:3
 #: snikket_web/templates/internal_error.html:3
 msgid "Internal error"
-msgstr ""
+msgstr "Error interno"
 
 #: snikket_web/templates/backend_error.html:4
 msgid "The web portal was not able to communicate with the backend."
-msgstr ""
+msgstr "El portal web no pudo conectarse con el servidor."
 
 #: snikket_web/templates/backend_error.html:5
 #: snikket_web/templates/internal_error.html:5
 msgid "Please try again later and/or inform your Snikket service admin."
 msgstr ""
+"Por favor intente más tarde y/o informe al administrador de su servicio "
+"Snikket."
 
 #: snikket_web/templates/generic_http_error.html:9
 msgid "Go back to the main page"
-msgstr ""
+msgstr "Regresar a la página principal"
 
 #: snikket_web/templates/internal_error.html:4
 msgid "The web portal encountered an internal error."
-msgstr ""
+msgstr "El portal web tuvo un error interno."
 
 #: snikket_web/templates/invite_invalid.html:5
 #: snikket_web/templates/invite_view.html:13
 #, python-format
 msgid "Invite to %(site_name)s"
-msgstr ""
+msgstr "Invitación para %(site_name)s"
 
 #: snikket_web/templates/invite_invalid.html:6
 #: snikket_web/templates/invite_register.html:10
@@ -950,11 +954,11 @@ msgstr ""
 
 #: snikket_web/templates/invite_invalid.html:8
 msgid "Invite expired"
-msgstr ""
+msgstr "La invitación ha expirado"
 
 #: snikket_web/templates/invite_invalid.html:9
 msgid "Sorry, it looks like this invitation link has expired!"
-msgstr ""
+msgstr "¡Disculpe, parece que esta invitación ha expirado!"
 
 #: snikket_web/templates/invite_register.html:5
 #, python-format
