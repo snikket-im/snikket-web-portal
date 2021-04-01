@@ -8,21 +8,21 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-03-25 17:32+0100\n"
-"PO-Revision-Date: 2021-03-10 19:03+0000\n"
+"PO-Revision-Date: 2021-04-02 19:01+0000\n"
 "Last-Translator: Daniel Holmgaard <annoncer@protonmail.com>\n"
-"Language-Team: Danish <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/da/>\n"
+"Language-Team: Danish <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.5.1\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:59
 msgid "Limited"
-msgstr ""
+msgstr "Begrænset"
 
 #: snikket_web/admin.py:64 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_users.html:8
@@ -36,39 +36,31 @@ msgstr "Kaldenavn"
 
 #: snikket_web/admin.py:72 snikket_web/templates/admin_edit_user.html:33
 msgid "Access Level"
-msgstr ""
+msgstr "Adgangsniveau"
 
 #: snikket_web/admin.py:77
 msgid "Normal user"
-msgstr ""
+msgstr "Normal bruger"
 
 #: snikket_web/admin.py:78
-#, fuzzy
-#| msgid "Admin area"
 msgid "Administrator"
-msgstr "Administrator område"
+msgstr "Administrator"
 
 #: snikket_web/admin.py:83
-#, fuzzy
-#| msgid "Update circle"
 msgid "Update user"
-msgstr "Opdater cirkel"
+msgstr "Opdater bruger"
 
 #: snikket_web/admin.py:87
-#, fuzzy
-#| msgid "Create password reset links or delete users."
 msgid "Create password reset link"
-msgstr "Opret links til nulstilling af adgangskode, eller slet brugere."
+msgstr "Opret link til nulstilling af adgangskode"
 
 #: snikket_web/admin.py:105
 msgid "Password reset link created"
 msgstr "Link til nulstilling af adgangskode oprettet"
 
 #: snikket_web/admin.py:120
-#, fuzzy
-#| msgid "Circle information"
 msgid "User information updated."
-msgstr "Cirkel information"
+msgstr "Brugerinformation opdateret."
 
 #: snikket_web/admin.py:142
 msgid "Delete user permanently"
@@ -79,10 +71,8 @@ msgid "User deleted"
 msgstr "Bruger slettet"
 
 #: snikket_web/admin.py:193
-#, fuzzy
-#| msgid "Password reset link created"
 msgid "Password reset link not found"
-msgstr "Link til nulstilling af adgangskode oprettet"
+msgstr "Link til nulstilling af adgangskode ikke fundet"
 
 #: snikket_web/admin.py:205
 msgid "Password reset link deleted"
@@ -186,7 +176,7 @@ msgstr "Denne cirkel findes ikke"
 
 #: snikket_web/admin.py:512
 msgid "Circle data updated"
-msgstr "Cirkel data opdateret"
+msgstr "Cirkel-data opdateret"
 
 #: snikket_web/admin.py:518
 msgid "Circle deleted"
@@ -217,32 +207,24 @@ msgid "Confirm password"
 msgstr "Bekræft adgangskode"
 
 #: snikket_web/invite.py:118 snikket_web/invite.py:185
-#, fuzzy
-#| msgid "The passwords must match"
 msgid "The passwords must match."
-msgstr "Adgangskoderne skal matche"
+msgstr "Adgangskoderne skal matche."
 
 #: snikket_web/invite.py:123
 msgid "Create account"
 msgstr "Opret konto"
 
 #: snikket_web/invite.py:150
-#, fuzzy
-#| msgid "That username is already taken"
 msgid "That username is already taken."
-msgstr "Det brugernavn er allerede taget"
+msgstr "Det brugernavn er allerede taget."
 
 #: snikket_web/invite.py:154 snikket_web/invite.py:218
-#, fuzzy
-#| msgid "Registration was declined for unknown reasons"
 msgid "Registration was declined for unknown reasons."
-msgstr "Registrering blev afvist af ukendte årsager"
+msgstr "Registrering blev afvist af ukendte årsager."
 
 #: snikket_web/invite.py:158
-#, fuzzy
-#| msgid "The username is not valid"
 msgid "The username is not valid."
-msgstr "Brugernavnet er ikke gyldigt"
+msgstr "Brugernavnet er ikke gyldigt."
 
 #: snikket_web/invite.py:190 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:29
@@ -278,10 +260,8 @@ msgid "Confirm new password"
 msgstr "Bekræft ny adgangskode"
 
 #: snikket_web/user.py:41
-#, fuzzy
-#| msgid "The new passwords must match"
 msgid "The new passwords must match."
-msgstr "Den nye adgangskode skal matche"
+msgstr "Den nye adgangskode skal matche."
 
 #: snikket_web/user.py:48
 msgid "Sign out"
@@ -312,10 +292,8 @@ msgid "Update profile"
 msgstr "Opdater profil"
 
 #: snikket_web/user.py:99
-#, fuzzy
-#| msgid "Incorrect password"
 msgid "Incorrect password."
-msgstr "Forkert adgangskode"
+msgstr "Forkert adgangskode."
 
 #: snikket_web/user.py:103
 msgid "Password changed"
@@ -326,6 +304,8 @@ msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
 msgstr ""
+"Den valgte avatar er for stor. For at kunne uploade større avatarer skal du "
+"bruge appen."
 
 #: snikket_web/user.py:159
 msgid "Profile updated"
@@ -605,7 +585,7 @@ msgstr "Denne cirkel er ikke tilknyttet nogen gruppechat."
 
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Return to circle list"
-msgstr ""
+msgstr "Retur til cirkeliste"
 
 #: snikket_web/templates/admin_edit_circle.html:48
 msgid "Delete circle"
@@ -694,82 +674,81 @@ msgid "Created"
 msgstr "Oprettet"
 
 #: snikket_web/templates/admin_edit_invite.html:48
-#, fuzzy
-#| msgid "New invitation link"
 msgid "Return to invitation list"
-msgstr "Ny invitationslink"
+msgstr "Retur til invitationsliste"
 
 #: snikket_web/templates/admin_edit_user.html:5
 msgid ""
 "Limited users can interact with users on the same Snikket service and be "
 "members of circles."
 msgstr ""
+"Begrænset brugere kan interagere med brugere på den samme Snikket-tjeneste "
+"og være medlemmer af cirkler."
 
 #: snikket_web/templates/admin_edit_user.html:7
 msgid ""
 "Like limited users and can also interact with users on other Snikket "
 "services."
 msgstr ""
+"Som begrænset brugere og kan desuden også interagere med brugere på andre "
+"Snikket-tjenester."
 
 #: snikket_web/templates/admin_edit_user.html:9
 msgid "Like normal users and can access the admin panel in the web portal."
 msgstr ""
+"Som normale brugere og kan desuden få adgang til adminpanelet i webportalen."
 
 #: snikket_web/templates/admin_edit_user.html:20
 #: snikket_web/templates/admin_users.html:28
-#, fuzzy, python-format
-#| msgid "Delete user %(user_name)s"
+#, python-format
 msgid "Edit user %(user_name)s"
-msgstr "Slet bruger %(user_name)s"
+msgstr "Rediger bruger %(user_name)s"
 
 #: snikket_web/templates/admin_edit_user.html:23
-#, fuzzy
-#| msgid "Add user"
 msgid "Edit user"
-msgstr "Tilføj bruger"
+msgstr "Rediger bruger"
 
 #: snikket_web/templates/admin_edit_user.html:27
 msgid "The login name cannot be changed."
-msgstr ""
+msgstr "Login-navnet kan ikke ændres."
 
 #: snikket_web/templates/admin_edit_user.html:34
 msgid ""
 "The access level of a user determines what interactions are allowed for them "
 "on your Snikket service."
 msgstr ""
+"En brugers adgangsniveau bestemmer, hvilke interaktioner der er tilladt for "
+"dem på din Snikket-tjeneste."
 
 #: snikket_web/templates/admin_edit_user.html:41
 #, python-format
 msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
-msgstr ""
+msgstr "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 
 #: snikket_web/templates/admin_edit_user.html:51
-#, fuzzy
-#| msgid "New invitation link"
 msgid "Return to user list"
-msgstr "Ny invitationslink"
+msgstr "Retur til brugerliste"
 
 #: snikket_web/templates/admin_edit_user.html:59
 msgid "Further actions"
-msgstr ""
+msgstr "Yderligere handlinger"
 
 #: snikket_web/templates/admin_edit_user.html:61
-#, fuzzy
-#| msgid "Reset your password"
 msgid "Reset password"
-msgstr "Nustil din adgangskode"
+msgstr "Nustil adgangskode"
 
 #: snikket_web/templates/admin_edit_user.html:64
 msgid ""
 "If the user has lost their password, you can use the button below to create "
 "a special link which allows to change the password of the account, once."
 msgstr ""
+"Hvis brugeren har mistet deres adgangskode, kan du bruge knappen nedenfor "
+"til at oprette et specielt link, der giver mulighed for at ændre "
+"adgangskoden til kontoen en gang."
 
 #: snikket_web/templates/admin_edit_user.html:69
-#, fuzzy
-#| msgid "Circle information"
 msgid "Debug information"
-msgstr "Cirkel information"
+msgstr "Fejlretningsoplysninger"
 
 #: snikket_web/templates/admin_edit_user.html:71
 msgid ""
@@ -777,12 +756,13 @@ msgid ""
 "devices is necessary to troubleshoot issues. The button below reveals this "
 "(sensitive) information."
 msgstr ""
+"I nogle tilfælde er detaljeret oplysninger om brugerkontoen og de "
+"tilsluttede enheder nødvendige for at foretage fejlfinding af problemer. "
+"Knappen nedenfor afslører disse (følsomme) oplysninger."
 
 #: snikket_web/templates/admin_edit_user.html:75
-#, fuzzy
-#| msgid "Show debug information for %(user_name)s"
 msgid "Show debug information"
-msgstr "Vis fejlretningsoplysninger for %(user_name)s"
+msgstr "Vis fejlretningsoplysninger"
 
 #: snikket_web/templates/admin_home.html:4
 msgid "Welcome to the admin panel!"
@@ -882,24 +862,20 @@ msgid "Destroy link"
 msgstr "Ødelæg link"
 
 #: snikket_web/templates/admin_users.html:19
-#, fuzzy
-#| msgid "The username is not valid"
 msgid "The user is an administrator."
-msgstr "Brugernavnet er ikke gyldigt"
+msgstr "Brugeren er administrator."
 
 #: snikket_web/templates/admin_users.html:19
 msgid " (Administrator)"
-msgstr ""
+msgstr " (Administrator)"
 
 #: snikket_web/templates/admin_users.html:22
-#, fuzzy
-#| msgid "The username is not valid"
 msgid "The user is restricted."
-msgstr "Brugernavnet er ikke gyldigt"
+msgstr "Brugeren er begrænset."
 
 #: snikket_web/templates/admin_users.html:22
 msgid " (Restricted)"
-msgstr ""
+msgstr " (Begrænset)"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
@@ -1203,7 +1179,7 @@ msgstr "Download i App Store"
 
 #: snikket_web/templates/invite_view.html:32
 msgid "Get it on F-Droid"
-msgstr ""
+msgstr "Få den på F-Droid"
 
 #: snikket_web/templates/invite_view.html:35
 msgid "Send to mobile device"
@@ -1275,17 +1251,19 @@ msgstr ""
 
 #: snikket_web/templates/invite_view.html:93
 msgid "Install on iOS"
-msgstr ""
+msgstr "Installer på iOS"
 
 #: snikket_web/templates/invite_view.html:99
 msgid ""
 "After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
 msgstr ""
+"Efter download af Snikket fra App Store, skal du vende tilbage til dette "
+"invitationslink og trykke på \"Åbn appen\" for at fortsætte."
 
 #: snikket_web/templates/invite_view.html:101
 msgid "First download Snikket from the App Store using the button below:"
-msgstr ""
+msgstr "Download først Snikket fra App Store ved hjælp af nedenstående knap:"
 
 #: snikket_web/templates/invite_view.html:103
 #: snikket_web/templates/invite_view.html:131
@@ -1293,21 +1271,25 @@ msgid ""
 "After the installation is complete, you can return to this page and tap the "
 "\"Open the app\" button to continue with the setup:"
 msgstr ""
+"Når installationen er afsluttet, kan du vende tilbage til denne side og "
+"trykke på knappen \"Åbn appen\" for at fortsætte med opsætningen:"
 
 #: snikket_web/templates/invite_view.html:121
 #: snikket_web/templates/invite_view.html:130
 msgid "Install via F-Droid"
-msgstr ""
+msgstr "Installer via F-droid"
 
 #: snikket_web/templates/invite_view.html:127
 msgid ""
 "After installing Snikket via F-Droid, you have to return to this invite link "
 "and tap on \"Open the app\" to proceed."
 msgstr ""
+"Efter installation af Snikket via F-Droid, skal du vende tilbage til dette "
+"invitationslink og trykke på \"Åbn appen\" for at fortsætte."
 
 #: snikket_web/templates/invite_view.html:129
 msgid "First install Snikket from F-Droid using the button below:"
-msgstr ""
+msgstr "Installer først Snikket fra F-Droid ved hjælp af knappen nedenfor:"
 
 #: snikket_web/templates/library.j2:18
 msgid "Copy link"
@@ -1337,7 +1319,7 @@ msgstr "Snikket Login"
 
 #: snikket_web/templates/login.html:14
 msgid "Enter your Snikket address and password to manage your account."
-msgstr "Indtast din Snikket adresse og adgangskode for håndter din konto."
+msgstr "Indtast din Snikket adresse og adgangskode for at håndter din konto."
 
 #: snikket_web/templates/login.html:19
 msgid "Incorrect address"
