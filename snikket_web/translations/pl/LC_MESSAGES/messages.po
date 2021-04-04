@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-03-25 17:32+0100\n"
-"PO-Revision-Date: 2021-03-25 16:35+0000\n"
+"PO-Revision-Date: 2021-04-05 19:01+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
-"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/pl/>\n"
+"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: snikket_web/admin.py:59
 msgid "Limited"
-msgstr ""
+msgstr "Ograniczone"
 
 #: snikket_web/admin.py:64 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_users.html:8
@@ -37,39 +37,31 @@ msgstr "Nazwa wyświetlana"
 
 #: snikket_web/admin.py:72 snikket_web/templates/admin_edit_user.html:33
 msgid "Access Level"
-msgstr ""
+msgstr "Poziom dostępu"
 
 #: snikket_web/admin.py:77
 msgid "Normal user"
-msgstr ""
+msgstr "Zwykły użytkownik"
 
 #: snikket_web/admin.py:78
-#, fuzzy
-#| msgid "Admin area"
 msgid "Administrator"
-msgstr "Panel administracyjny"
+msgstr "Administrator"
 
 #: snikket_web/admin.py:83
-#, fuzzy
-#| msgid "Update circle"
 msgid "Update user"
-msgstr "Zaktualizuj ustawienia kręgu"
+msgstr "Zapisz ustawienia użytkownika"
 
 #: snikket_web/admin.py:87
-#, fuzzy
-#| msgid "Create password reset links or delete users."
 msgid "Create password reset link"
-msgstr "Twórz linki do resetowania haseł lub usuwaj użytkowników."
+msgstr "Stwórz link do zresetowania hasła"
 
 #: snikket_web/admin.py:105
 msgid "Password reset link created"
 msgstr "Utworzono link resetowania hasła"
 
 #: snikket_web/admin.py:120
-#, fuzzy
-#| msgid "User information"
 msgid "User information updated."
-msgstr "Informacje o użytkowniku"
+msgstr "Zaktualizowano informacje o użytkowniku."
 
 #: snikket_web/admin.py:142
 msgid "Delete user permanently"
@@ -80,10 +72,8 @@ msgid "User deleted"
 msgstr "Użytkownik został usunięty"
 
 #: snikket_web/admin.py:193
-#, fuzzy
-#| msgid "Password reset link created"
 msgid "Password reset link not found"
-msgstr "Utworzono link resetowania hasła"
+msgstr "Nie znaleziono linku do zresetowania hasła"
 
 #: snikket_web/admin.py:205
 msgid "Password reset link deleted"
@@ -698,16 +688,22 @@ msgid ""
 "Limited users can interact with users on the same Snikket service and be "
 "members of circles."
 msgstr ""
+"Użytkownicy z ograniczonym dostępem mogą wchodzić w interakcje z innymi "
+"użytkownikami na tym samym serwerze Snikket oraz być członkami kręgów."
 
 #: snikket_web/templates/admin_edit_user.html:7
 msgid ""
 "Like limited users and can also interact with users on other Snikket "
 "services."
 msgstr ""
+"Jak użytkownicy z ograniczonym dostępem, ale dodatkowo mogą wchodzić w "
+"interakcje z użytkownikami innych serwerów Snikket."
 
 #: snikket_web/templates/admin_edit_user.html:9
 msgid "Like normal users and can access the admin panel in the web portal."
 msgstr ""
+"Jak zwykli użytkownicy, ale dodatkowo mają dostęp do panelu "
+"administracyjnego w portalu użytkownika Snikket."
 
 #: snikket_web/templates/admin_edit_user.html:20
 #: snikket_web/templates/admin_users.html:28
@@ -716,14 +712,12 @@ msgid "Edit user %(user_name)s"
 msgstr "Edytuj użytkownika %(user_name)s"
 
 #: snikket_web/templates/admin_edit_user.html:23
-#, fuzzy
-#| msgid "Add user"
 msgid "Edit user"
-msgstr "Dodaj użytkownika"
+msgstr "Edytuj użytkownika"
 
 #: snikket_web/templates/admin_edit_user.html:27
 msgid "The login name cannot be changed."
-msgstr ""
+msgstr "Login nie może zostać zmieniony."
 
 #: snikket_web/templates/admin_edit_user.html:34
 msgid ""
@@ -737,42 +731,29 @@ msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_user.html:51
-#, fuzzy
-#| msgid "Return to circle list"
 msgid "Return to user list"
-msgstr "Wróć do listy kręgów"
+msgstr "Wróć do listy użytkowników"
 
 #: snikket_web/templates/admin_edit_user.html:59
 msgid "Further actions"
-msgstr ""
+msgstr "Dodatkowe funkcje"
 
 #: snikket_web/templates/admin_edit_user.html:61
-#, fuzzy
-#| msgid "Reset your password"
 msgid "Reset password"
-msgstr "Zresetuj swoje hasło"
+msgstr "Resetowanie hasła"
 
 #: snikket_web/templates/admin_edit_user.html:64
-#, fuzzy
-#| msgid ""
-#| "If the user has forgotten their password, use the below button to create "
-#| "a password reset link. The password reset link can be used once to change "
-#| "the password of the account. Transmit the link to the user via a secure "
-#| "channel."
 msgid ""
 "If the user has lost their password, you can use the button below to create "
 "a special link which allows to change the password of the account, once."
 msgstr ""
-"Jeśli użytkownik zapomni swojego hasła, za pomocą poniższego przycisku "
-"wygenerujesz dla niego link do zresetowania hasła. Link może być "
-"wykorzystany jednorazowo do jego zmiany. Prześlij go do użytkownika za "
-"pomocą bezpiecznej formy kontaktu."
+"Jeśli użytkownik utraci swoje hasło, za pomocą poniższego przycisku "
+"wygenerujesz dla niego link do jego zresetowania. Odnośnik pozwoli na "
+"jednorazową zmianę hasła na nowe."
 
 #: snikket_web/templates/admin_edit_user.html:69
-#, fuzzy
-#| msgid "User information"
 msgid "Debug information"
-msgstr "Informacje o użytkowniku"
+msgstr "Informacje debugowania"
 
 #: snikket_web/templates/admin_edit_user.html:71
 msgid ""
@@ -782,10 +763,8 @@ msgid ""
 msgstr ""
 
 #: snikket_web/templates/admin_edit_user.html:75
-#, fuzzy
-#| msgid "Show debug information for %(user_name)s"
 msgid "Show debug information"
-msgstr "Pokaż informacje debugowania dla %(user_name)s"
+msgstr "Pokaż informacje debugowania"
 
 #: snikket_web/templates/admin_home.html:4
 msgid "Welcome to the admin panel!"
@@ -884,20 +863,16 @@ msgid "Destroy link"
 msgstr "Zniszcz link"
 
 #: snikket_web/templates/admin_users.html:19
-#, fuzzy
-#| msgid "The username is not valid."
 msgid "The user is an administrator."
-msgstr "Ta nazwa użytkownika jest nieprawidłowa."
+msgstr "Użytkownik jest administratorem."
 
 #: snikket_web/templates/admin_users.html:19
 msgid " (Administrator)"
 msgstr ""
 
 #: snikket_web/templates/admin_users.html:22
-#, fuzzy
-#| msgid "The username is not valid."
 msgid "The user is restricted."
-msgstr "Ta nazwa użytkownika jest nieprawidłowa."
+msgstr "Użytkownik ma konto z ograniczonym dostępem."
 
 #: snikket_web/templates/admin_users.html:22
 msgid " (Restricted)"
