@@ -72,7 +72,7 @@ async def view(id_: str) -> typing.Union[quart.Response,
         )
 
     play_store_url = (
-        "https://play.google.com/store/apps/details?" +
+        "market://details?" +
         urllib.parse.urlencode(
             (
                 ("id", "org.snikket.android"),
