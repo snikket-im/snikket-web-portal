@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-03-25 17:32+0100\n"
-"PO-Revision-Date: 2021-04-05 19:01+0000\n"
+"PO-Revision-Date: 2021-04-23 20:00+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
 "Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/pl/>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: snikket_web/admin.py:59
 msgid "Limited"
-msgstr "Ograniczone"
+msgstr "Ograniczony"
 
 #: snikket_web/admin.py:64 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_users.html:8
@@ -724,11 +724,13 @@ msgid ""
 "The access level of a user determines what interactions are allowed for them "
 "on your Snikket service."
 msgstr ""
+"Poziom dostępu użytkownika określa, jakie interakcje są dla niego dozwolone "
+"na Twoim serwerze Snikket."
 
 #: snikket_web/templates/admin_edit_user.html:41
 #, python-format
 msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
-msgstr ""
+msgstr "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 
 #: snikket_web/templates/admin_edit_user.html:51
 msgid "Return to user list"
@@ -761,6 +763,9 @@ msgid ""
 "devices is necessary to troubleshoot issues. The button below reveals this "
 "(sensitive) information."
 msgstr ""
+"W niektórych przypadkach do rozwiązania problemu wymagane są dodatkowe "
+"informacje o użytkowniku oraz podłączonych urządzeniach. Poniższy przycisk "
+"ujawni te (wrażliwe) informacje."
 
 #: snikket_web/templates/admin_edit_user.html:75
 msgid "Show debug information"
@@ -868,7 +873,7 @@ msgstr "Użytkownik jest administratorem."
 
 #: snikket_web/templates/admin_users.html:19
 msgid " (Administrator)"
-msgstr ""
+msgstr " (Administrator)"
 
 #: snikket_web/templates/admin_users.html:22
 msgid "The user is restricted."
@@ -876,7 +881,7 @@ msgstr "Użytkownik ma konto z ograniczonym dostępem."
 
 #: snikket_web/templates/admin_users.html:22
 msgid " (Restricted)"
-msgstr ""
+msgstr " (Ograniczony)"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
