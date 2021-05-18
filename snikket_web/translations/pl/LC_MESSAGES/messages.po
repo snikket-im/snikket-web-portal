@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-03-25 17:32+0100\n"
-"PO-Revision-Date: 2021-05-18 13:29+0000\n"
+"PO-Revision-Date: 2021-05-19 15:12+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
 "Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/pl/>\n"
@@ -349,7 +349,7 @@ msgstr "O tej usłudze"
 #: snikket_web/templates/about.html:12
 #, python-format
 msgid "This is the Snikket service <em>%(site_name)s</em>."
-msgstr "To serwer Snikket: <em>%(site_name)s</em>."
+msgstr "Ten serwer Snikket to: <em>%(site_name)s</em>."
 
 #: snikket_web/templates/about.html:13
 msgid "Licenses"
