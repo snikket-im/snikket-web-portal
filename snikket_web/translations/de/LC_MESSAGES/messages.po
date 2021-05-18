@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-03-25 17:32+0100\n"
-"PO-Revision-Date: 2021-03-21 16:31+0000\n"
+"PO-Revision-Date: 2021-05-18 13:28+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
-"Language-Team: German <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/de/>\n"
+"Language-Team: German <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: snikket_web/admin.py:59
 msgid "Limited"
-msgstr ""
+msgstr "Eingeschränkt"
 
 #: snikket_web/admin.py:64 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_users.html:8
@@ -36,40 +36,31 @@ msgstr "Anzeigename"
 
 #: snikket_web/admin.py:72 snikket_web/templates/admin_edit_user.html:33
 msgid "Access Level"
-msgstr ""
+msgstr "Berechtigungen"
 
 #: snikket_web/admin.py:77
 msgid "Normal user"
-msgstr ""
+msgstr "Normaler Benutzer"
 
 #: snikket_web/admin.py:78
-#, fuzzy
-#| msgid "Admin area"
 msgid "Administrator"
-msgstr "Administration"
+msgstr "Administrator"
 
 #: snikket_web/admin.py:83
-#, fuzzy
-#| msgid "Update circle"
 msgid "Update user"
-msgstr "Gemeinschaft ändern"
+msgstr "Benutzer ändern"
 
 #: snikket_web/admin.py:87
-#, fuzzy
-#| msgid "Create password reset links or delete users."
 msgid "Create password reset link"
-msgstr ""
-"Löschen von Benutzern und Anlegen von Links zum Zurücksetzen des Passwortes."
+msgstr "Passwort-Link erzeugen"
 
 #: snikket_web/admin.py:105
 msgid "Password reset link created"
 msgstr "Link zum Zurücksetzen des Passwortes erzeugt"
 
 #: snikket_web/admin.py:120
-#, fuzzy
-#| msgid "User information"
 msgid "User information updated."
-msgstr "Benutzerinformationen"
+msgstr "Benutzerinformationen gespeichert."
 
 #: snikket_web/admin.py:142
 msgid "Delete user permanently"
@@ -80,10 +71,8 @@ msgid "User deleted"
 msgstr "Benutzer gelöscht"
 
 #: snikket_web/admin.py:193
-#, fuzzy
-#| msgid "Password reset link created"
 msgid "Password reset link not found"
-msgstr "Link zum Zurücksetzen des Passwortes erzeugt"
+msgstr "Link zum Zurücksetzen des Passwortes nicht gefunden"
 
 #: snikket_web/admin.py:205
 msgid "Password reset link deleted"
@@ -600,7 +589,7 @@ msgstr "Diese Gemeinschaft hat keinen zugehörigen Gruppenchat."
 
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Return to circle list"
-msgstr ""
+msgstr "Zurück zur Gemeinschaftsliste"
 
 #: snikket_web/templates/admin_edit_circle.html:48
 msgid "Delete circle"
@@ -692,26 +681,30 @@ msgid "Created"
 msgstr "Erzeugt"
 
 #: snikket_web/templates/admin_edit_invite.html:48
-#, fuzzy
-#| msgid "New invitation link"
 msgid "Return to invitation list"
-msgstr "Neuer Einladungslink"
+msgstr "Zurück zur Einladungsliste"
 
 #: snikket_web/templates/admin_edit_user.html:5
 msgid ""
 "Limited users can interact with users on the same Snikket service and be "
 "members of circles."
 msgstr ""
+"Eingeschränkte Benutzer können mit anderen Benutzern auf dem selben Snikket-"
+"Server interagieren und Mitglieder in Gemeinschaften sein."
 
 #: snikket_web/templates/admin_edit_user.html:7
 msgid ""
 "Like limited users and can also interact with users on other Snikket "
 "services."
 msgstr ""
+"Wie eingeschränkte Benutzer, zusätzlich können normale Benutzer auch mit "
+"Benutzern auf anderen Snikket-Servern interagieren."
 
 #: snikket_web/templates/admin_edit_user.html:9
 msgid "Like normal users and can access the admin panel in the web portal."
 msgstr ""
+"Wie normale Benutzer, zusätzlich können Administratoren auf den Adminbereich "
+"zugreifen."
 
 #: snikket_web/templates/admin_edit_user.html:20
 #: snikket_web/templates/admin_users.html:28
@@ -720,64 +713,50 @@ msgid "Edit user %(user_name)s"
 msgstr "Benutzer %(user_name)s bearbeiten"
 
 #: snikket_web/templates/admin_edit_user.html:23
-#, fuzzy
-#| msgid "Add user"
 msgid "Edit user"
-msgstr "Benutzer hinzufügen"
+msgstr "Benutzer bearbeiten"
 
 #: snikket_web/templates/admin_edit_user.html:27
 msgid "The login name cannot be changed."
-msgstr ""
+msgstr "Der Anmeldename kann nicht geändert werden."
 
 #: snikket_web/templates/admin_edit_user.html:34
 msgid ""
 "The access level of a user determines what interactions are allowed for them "
 "on your Snikket service."
 msgstr ""
+"Die Berechtigungen von Benutzern bestimmen, welche Interaktionen ihnen auf "
+"deinem Snikket-Server erlaubt sind."
 
 #: snikket_web/templates/admin_edit_user.html:41
 #, python-format
 msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
-msgstr ""
+msgstr "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 
 #: snikket_web/templates/admin_edit_user.html:51
-#, fuzzy
-#| msgid "New invitation link"
 msgid "Return to user list"
-msgstr "Neuer Einladungslink"
+msgstr "Zurück zur Benutzerliste"
 
 #: snikket_web/templates/admin_edit_user.html:59
 msgid "Further actions"
-msgstr ""
+msgstr "Weitere Aktionen"
 
 #: snikket_web/templates/admin_edit_user.html:61
-#, fuzzy
-#| msgid "Reset your password"
 msgid "Reset password"
 msgstr "Passwort zurücksetzen"
 
 #: snikket_web/templates/admin_edit_user.html:64
-#, fuzzy
-#| msgid ""
-#| "If the user has forgotten their password, use the below button to create "
-#| "a password reset link. The password reset link can be used once to change "
-#| "the password of the account. Transmit the link to the user via a secure "
-#| "channel."
 msgid ""
 "If the user has lost their password, you can use the button below to create "
 "a special link which allows to change the password of the account, once."
 msgstr ""
-"Wenn ein Benutzer das Passwort vergessen hat, kannst du den folgenden Button "
-"benutzen um einen Link zum Zurücksetzen des Passworts zu erzeugen. Dieser "
-"Link kann dann ein einziges Mal verwendet werden um das Passwort des Kontos "
-"zu ändern. Lasse den Link dem Benutzer auf einem sicheren Übertragungsweg "
-"zukommen."
+"Wenn ein Benutzer das Passwort verloren oder vergessen hat, kannst du den "
+"folgenden Button verwenden um einen Link zu erzeugen. Dieser Link erlaubt es "
+"einmalig, das Passwort des Kontos zu ändern."
 
 #: snikket_web/templates/admin_edit_user.html:69
-#, fuzzy
-#| msgid "User information"
 msgid "Debug information"
-msgstr "Benutzerinformationen"
+msgstr "Informationen zur Fehlerbehebung"
 
 #: snikket_web/templates/admin_edit_user.html:71
 msgid ""
@@ -785,12 +764,14 @@ msgid ""
 "devices is necessary to troubleshoot issues. The button below reveals this "
 "(sensitive) information."
 msgstr ""
+"In seltenen Fällen kann es vorkommen, dass weiterführende Informationen über "
+"das Benutzerkonto sowie die verbundenen Geräte erforderlich sind um ein "
+"Problem zu beheben. Der folgende Button zeigt diese (teilweise vertraulichen)"
+" Informationen an."
 
 #: snikket_web/templates/admin_edit_user.html:75
-#, fuzzy
-#| msgid "Show debug information for %(user_name)s"
 msgid "Show debug information"
-msgstr "Debugging-Informationen für %(user_name)s anzeigen"
+msgstr "Debugging-Informationen anzeigen"
 
 #: snikket_web/templates/admin_home.html:4
 msgid "Welcome to the admin panel!"
@@ -890,24 +871,20 @@ msgid "Destroy link"
 msgstr "Link zerstören"
 
 #: snikket_web/templates/admin_users.html:19
-#, fuzzy
-#| msgid "The username is not valid."
 msgid "The user is an administrator."
-msgstr "Der Benutzername ist ungültig."
+msgstr "Der Benutzer ist ein Administrator."
 
 #: snikket_web/templates/admin_users.html:19
 msgid " (Administrator)"
-msgstr ""
+msgstr " (Administrator)"
 
 #: snikket_web/templates/admin_users.html:22
-#, fuzzy
-#| msgid "The username is not valid."
 msgid "The user is restricted."
-msgstr "Der Benutzername ist ungültig."
+msgstr "Dieser Benutzer ist eingeschränkt."
 
 #: snikket_web/templates/admin_users.html:22
 msgid " (Restricted)"
-msgstr ""
+msgstr " (Eingeschränkt)"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
@@ -1297,10 +1274,6 @@ msgid "Install on iOS"
 msgstr "Installation auf iOS"
 
 #: snikket_web/templates/invite_view.html:99
-#, fuzzy
-#| msgid ""
-#| "After downloading Snikket from the app store, you have to return to this "
-#| "invite link and tap on \"Open the app\" to proceed."
 msgid ""
 "After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
@@ -1309,8 +1282,6 @@ msgstr ""
 "Einladungslink zurückkehren und \"App öffnen\" antippen um fortzufahren."
 
 #: snikket_web/templates/invite_view.html:101
-#, fuzzy
-#| msgid "First download Snikket from the app store using the button below:"
 msgid "First download Snikket from the App Store using the button below:"
 msgstr ""
 "Lade zunächst Snikket aus dem App Store herunter indem du den folgenden "
