@@ -511,7 +511,7 @@ class ProsodyClient:
             "to": self.session_address,
         }
 
-        async with session.post(self._rest_endpoint, data=req) as resp:
+        async with session.post(self._rest_endpoint, json=req) as resp:
             return resp.status == 200
 
     @autosession
@@ -524,7 +524,7 @@ class ProsodyClient:
             "to": domain,
         }
 
-        async with session.post(self._rest_endpoint, data=req) as resp:
+        async with session.post(self._rest_endpoint, json=req) as resp:
             if resp.status != 200:
                 return "unknwn"
             try:
