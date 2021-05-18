@@ -17,6 +17,7 @@ from quart import (
     Response,
     flash,
 )
+import werkzeug.exceptions
 
 import babel
 import wtforms
@@ -76,7 +77,7 @@ async def login() -> typing.Union[str, quart.Response]:
             password = form.password.data
             try:
                 await client.login(jid, password)
-            except quart.exceptions.Unauthorized:
+            except werkzeug.exceptions.Unauthorized:
                 form.password.errors.append(ERR_CREDENTIALS_INVALID)
             else:
                 await flash(
@@ -102,7 +103,7 @@ async def about() -> str:
         extra_versions["flask-wtf"] = flask_wtf.__version__
         try:
             extra_versions["Prosody"] = await client.get_server_version()
-        except quart.exceptions.Unauthorized:
+        except werkzeug.exceptions.Unauthorized:
             extra_versions["Prosody"] = "unknown"
 
     return await render_template(

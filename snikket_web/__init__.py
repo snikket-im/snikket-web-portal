@@ -17,6 +17,7 @@ from quart import (
     redirect,
     jsonify,
 )
+import werkzeug.exceptions
 
 import environ
 
@@ -40,7 +41,7 @@ async def proc() -> typing.Dict[str, typing.Any]:
 
     try:
         user_info = await infra.client.get_user_info()
-    except (aiohttp.ClientError, quart.exceptions.HTTPException):
+    except (aiohttp.ClientError, werkzeug.exceptions.HTTPException):
         user_info = {}
 
     return {
@@ -105,7 +106,7 @@ async def backend_error_handler(exc: Exception) -> quart.Response:
 
 
 async def generic_http_error(
-        exc: quart.exceptions.HTTPException,
+        exc: werkzeug.exceptions.HTTPException,
         ) -> quart.Response:
     return quart.Response(
         await render_template(
@@ -198,7 +199,7 @@ def create_app() -> quart.Quart:
         backend_error_handler,  # type:ignore
     )
     app.register_error_handler(
-        quart.exceptions.HTTPException,
+        werkzeug.exceptions.HTTPException,
         generic_http_error,  # type:ignore
     )
     app.register_error_handler(

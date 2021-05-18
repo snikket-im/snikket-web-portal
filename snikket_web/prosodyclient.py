@@ -19,7 +19,8 @@ from quart import (
     current_app, _app_ctx_stack, session as http_session, abort, redirect,
     url_for,
 )
-import quart.exceptions
+import werkzeug.exceptions
+import quart
 
 from . import xmpputil
 from .xmpputil import split_jid
@@ -489,7 +490,7 @@ class ProsodyClient:
                 session=session,
             )
             avatar_hash = avatar_info["sha1"]
-        except quart.exceptions.HTTPException:
+        except werkzeug.exceptions.HTTPException:
             avatar_hash = None
 
         return {
@@ -641,7 +642,7 @@ class ProsodyClient:
                     new_access_model,
                 )
             ))
-        except quart.exceptions.NotFound:
+        except werkzeug.exceptions.NotFound:
             if ignore_not_found:
                 return
             raise
@@ -771,7 +772,7 @@ class ProsodyClient:
             session: aiohttp.ClientSession,
             ) -> str:
         access_models = filter(
-            lambda x: not isinstance(x, quart.exceptions.NotFound),
+            lambda x: not isinstance(x, werkzeug.exceptions.NotFound),
             await asyncio.gather(
                 self.get_avatar_access_model(session=session),
                 self.get_nickname_access_model(session=session),

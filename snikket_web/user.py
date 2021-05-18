@@ -1,6 +1,7 @@
 import asyncio
 import typing
 
+import quart
 import quart.flask_patch
 from quart import (
     Blueprint,
@@ -11,7 +12,7 @@ from quart import (
     flash,
     current_app,
 )
-import quart.exceptions
+import werkzeug.exceptions
 
 import wtforms
 
@@ -92,8 +93,8 @@ async def change_pw() -> typing.Union[str, quart.Response]:
                 form.current_password.data,
                 form.new_password.data,
             )
-        except (quart.exceptions.Unauthorized,
-                quart.exceptions.Forbidden):
+        except (werkzeug.exceptions.Unauthorized,
+                werkzeug.exceptions.Forbidden):
             # server refused current password, set an appropriate error
             form.current_password.errors.append(
                 _("Incorrect password."),
