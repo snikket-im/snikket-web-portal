@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-03-25 17:32+0100\n"
-"PO-Revision-Date: 2021-03-29 08:00+0000\n"
+"PO-Revision-Date: 2021-05-19 15:12+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
 "Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/"
 "web-portal/id/>\n"
@@ -727,7 +727,7 @@ msgstr ""
 "layanan Snikket Anda."
 
 #: snikket_web/templates/admin_edit_user.html:41
-#, fuzzy, python-format
+#, python-format
 msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 msgstr "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 
@@ -871,9 +871,8 @@ msgid "The user is an administrator."
 msgstr "Pengguna adalah administrator."
 
 #: snikket_web/templates/admin_users.html:19
-#, fuzzy
 msgid " (Administrator)"
-msgstr " (Administrator)"
+msgstr " (Admin)"
 
 #: snikket_web/templates/admin_users.html:22
 msgid "The user is restricted."
