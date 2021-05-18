@@ -111,11 +111,11 @@ async def generic_http_error(
     return quart.Response(
         await render_template(
             "generic_http_error.html",
-            status=exc.status_code,
+            status=exc.code,
             description=exc.description,
             name=exc.name,
         ),
-        status=exc.status_code,
+        status=exc.code,
     )
 
 
@@ -196,25 +196,25 @@ def create_app() -> quart.Quart:
     app.context_processor(proc)
     app.register_error_handler(
         aiohttp.ClientConnectorError,
-        backend_error_handler,  # type:ignore
+        backend_error_handler,
     )
     app.register_error_handler(
         werkzeug.exceptions.HTTPException,
-        generic_http_error,  # type:ignore
+        generic_http_error,
     )
     app.register_error_handler(
         Exception,
-        generic_error_handler,  # type:ignore
+        generic_error_handler,
     )
 
-    @app.route("/")
+    @app.route("/")  # type: ignore
     async def index() -> quart.Response:
         if infra.client.has_session:
             return redirect(url_for('user.index'))
 
         return redirect(url_for('main.login'))
 
-    @app.route("/site.webmanifest")
+    @app.route("/site.webmanifest")  # type: ignore
     def site_manifest() -> quart.Response:
         # this is needed for icons
         return jsonify(

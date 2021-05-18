@@ -28,7 +28,7 @@ from .infra import client, circle_name, BaseForm
 bp = Blueprint("admin", __name__, url_prefix="/admin")
 
 
-@bp.route("/")
+@bp.route("/")  # type:ignore
 @client.require_admin_session()
 async def index() -> str:
     return await render_template("admin_home.html")
@@ -38,7 +38,7 @@ class PasswordResetLinkPost(BaseForm):
     action_revoke = wtforms.StringField()
 
 
-@bp.route("/users")
+@bp.route("/users")  # type:ignore
 @client.require_admin_session()
 async def users() -> str:
     users = sorted(
@@ -73,7 +73,7 @@ class EditUserForm(BaseForm):
         choices=[
             # NOTE: enable this only after something has been done which
             # actually enforces the described restrictions :).
-            # ("prosody:restricted", _l("Limited")),
+            ("prosody:restricted", _LIMITED_ROLE_NAME),
             ("prosody:normal", _l("Normal user")),
             ("prosody:admin", _l("Administrator")),
         ],
@@ -88,7 +88,7 @@ class EditUserForm(BaseForm):
     )
 
 
-@bp.route("/user/<localpart>/", methods=["GET", "POST"])
+@bp.route("/user/<localpart>/", methods=["GET", "POST"])  # type:ignore
 @client.require_admin_session()
 async def edit_user(localpart: str) -> typing.Union[quart.Response, str]:
     target_user_info = await client.get_user_by_localpart(localpart)
@@ -143,7 +143,7 @@ class DeleteUserForm(BaseForm):
     )
 
 
-@bp.route("/user/<localpart>/delete", methods=["GET", "POST"])
+@bp.route("/user/<localpart>/delete", methods=["GET", "POST"])  # type:ignore
 @client.require_admin_session()
 async def delete_user(localpart: str) -> typing.Union[str, quart.Response]:
     target_user_info = await client.get_user_by_localpart(localpart)
@@ -164,7 +164,7 @@ async def delete_user(localpart: str) -> typing.Union[str, quart.Response]:
     )
 
 
-@bp.route("/user/<localpart>/debug")
+@bp.route("/user/<localpart>/debug")  # type:ignore
 @client.require_admin_session()
 async def debug_user(localpart: str) -> typing.Union[str, quart.Response]:
     target_user_info = await client.get_user_by_localpart(localpart)
@@ -180,7 +180,7 @@ async def debug_user(localpart: str) -> typing.Union[str, quart.Response]:
     )
 
 
-@bp.route("/users/password-reset/<id_>", methods=["GET", "POST"])
+@bp.route("/users/password-reset/<id_>", methods=["GET", "POST"])  # type:ignore  # noqa:E501
 @client.require_admin_session()
 async def user_password_reset_link(
         id_: str,
@@ -274,7 +274,7 @@ class InvitePost(BaseForm):
         )
 
 
-@bp.route("/invitations", methods=["GET", "POST"])
+@bp.route("/invitations", methods=["GET", "POST"])  # type:ignore
 @client.require_admin_session()
 async def invitations() -> typing.Union[str, quart.Response]:
     invites = sorted(
@@ -320,7 +320,7 @@ class InviteForm(BaseForm):
     )
 
 
-@bp.route("/invitation/-/new", methods=["POST"])
+@bp.route("/invitation/-/new", methods=["POST"])  # type:ignore
 @client.require_admin_session()
 async def create_invite() -> typing.Union[str, quart.Response]:
     form = InvitePost()
@@ -348,7 +348,7 @@ async def create_invite() -> typing.Union[str, quart.Response]:
                                  invite_form=form)
 
 
-@bp.route("/invitation/<id_>", methods=["GET", "POST"])
+@bp.route("/invitation/<id_>", methods=["GET", "POST"])  # type:ignore
 @client.require_admin_session()
 async def edit_invite(id_: str) -> typing.Union[str, quart.Response]:
     try:
@@ -397,7 +397,7 @@ class CirclePost(BaseForm):
     )
 
 
-@bp.route("/circles")
+@bp.route("/circles")  # type:ignore
 @client.require_admin_session()
 async def circles() -> str:
     circles = sorted(
@@ -414,7 +414,7 @@ async def circles() -> str:
     )
 
 
-@bp.route("/circle/-/new", methods=["POST"])
+@bp.route("/circle/-/new", methods=["POST"])  # type:ignore
 @client.require_admin_session()
 async def create_circle() -> typing.Union[str, quart.Response]:
     create_form = CirclePost()
@@ -460,7 +460,7 @@ class EditCircleForm(BaseForm):
     )
 
 
-@bp.route("/circle/<id_>", methods=["GET", "POST"])
+@bp.route("/circle/<id_>", methods=["GET", "POST"])  # type:ignore
 @client.require_admin_session()
 async def edit_circle(id_: str) -> typing.Union[str, quart.Response]:
     async with client.authenticated_session() as session:

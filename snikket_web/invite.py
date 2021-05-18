@@ -46,12 +46,12 @@ def context() -> typing.Mapping[str, typing.Any]:
     }
 
 
-@bp.route("/<id_>")
+@bp.route("/<id_>")  # type:ignore
 async def view_old(id_: str) -> quart.Response:
     return redirect(url_for(".view", id_=id_))
 
 
-@bp.route("/<id_>/")
+@bp.route("/<id_>/")  # type:ignore
 async def view(id_: str) -> typing.Union[quart.Response,
                                          typing.Tuple[str, int],
                                          str]:
@@ -124,7 +124,7 @@ class RegisterForm(BaseForm):
     )
 
 
-@bp.route("/<id_>/register", methods=["GET", "POST"])
+@bp.route("/<id_>/register", methods=["GET", "POST"])  # type:ignore
 async def register(id_: str) -> typing.Union[str, quart.Response]:
     try:
         invite = await client.get_public_invite_by_id(id_)
@@ -191,7 +191,7 @@ class ResetForm(BaseForm):
     )
 
 
-@bp.route("/<id_>/reset", methods=["GET", "POST"])
+@bp.route("/<id_>/reset", methods=["GET", "POST"])  # type:ignore
 async def reset(id_: str) -> typing.Union[str, quart.Response]:
     try:
         invite = await client.get_public_invite_by_id(id_)
@@ -232,7 +232,7 @@ async def reset(id_: str) -> typing.Union[str, quart.Response]:
     )
 
 
-@bp.route("/success", methods=["GET", "POST"])
+@bp.route("/success", methods=["GET", "POST"])  # type:ignore
 async def success() -> str:
     return await render_template(
         "invite_success.html",
@@ -240,7 +240,7 @@ async def success() -> str:
     )
 
 
-@bp.route("/success/reset", methods=["GET", "POST"])
+@bp.route("/success/reset", methods=["GET", "POST"])  # type:ignore
 async def reset_success() -> str:
     return await render_template(
         "invite_reset_success.html",
@@ -248,6 +248,6 @@ async def reset_success() -> str:
     )
 
 
-@bp.route("/-")
+@bp.route("/-")  # type:ignore
 async def index() -> quart.Response:
     return redirect(url_for("index"))

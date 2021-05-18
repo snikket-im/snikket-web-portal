@@ -76,14 +76,14 @@ class ProfileForm(BaseForm):
     )
 
 
-@bp.route("/")
+@bp.route("/")  # type:ignore
 @client.require_session()
 async def index() -> str:
     user_info = await client.get_user_info()
     return await render_template("user_home.html", user_info=user_info)
 
 
-@bp.route('/passwd', methods=["GET", "POST"])
+@bp.route('/passwd', methods=["GET", "POST"])  # type:ignore
 @client.require_session()
 async def change_pw() -> typing.Union[str, quart.Response]:
     form = ChangePasswordForm()
@@ -115,7 +115,7 @@ EAVATARTOOBIG = _l(
 )
 
 
-@bp.route("/profile", methods=["GET", "POST"])
+@bp.route("/profile", methods=["GET", "POST"])  # type:ignore
 @client.require_session()
 async def profile() -> typing.Union[str, quart.Response]:
     max_avatar_size = current_app.config["MAX_AVATAR_SIZE"]
@@ -169,7 +169,7 @@ async def profile() -> typing.Union[str, quart.Response]:
                                  avatar_too_big_warning=EAVATARTOOBIG)
 
 
-@bp.route("/logout", methods=["GET", "POST"])
+@bp.route("/logout", methods=["GET", "POST"])  # type:ignore
 @client.require_session()
 async def logout() -> typing.Union[quart.Response, str]:
     form = LogoutForm()

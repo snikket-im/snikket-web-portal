@@ -26,7 +26,7 @@ babel = flask_babel.Babel()
 def selected_locale() -> str:
     selected = request.accept_languages.best_match(
         current_app.config['LANGUAGES']
-    )
+    ) or current_app.config['LANGUAGES'][0]
     return selected
 
 
