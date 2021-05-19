@@ -8,21 +8,21 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-03-25 17:32+0100\n"
-"PO-Revision-Date: 2021-02-25 16:02+0000\n"
+"PO-Revision-Date: 2021-05-19 15:12+0000\n"
 "Last-Translator: Roberto Resoli <roberto@resolutions.it>\n"
-"Language-Team: Italian <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/it/>\n"
+"Language-Team: Italian <https://i18n.sotecware.net/projects/snikket/"
+"web-portal/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.5.1\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:59
 msgid "Limited"
-msgstr ""
+msgstr "Limitato"
 
 #: snikket_web/admin.py:64 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_users.html:8
@@ -36,39 +36,31 @@ msgstr "Nome visualizzato"
 
 #: snikket_web/admin.py:72 snikket_web/templates/admin_edit_user.html:33
 msgid "Access Level"
-msgstr ""
+msgstr "Livello di accesso"
 
 #: snikket_web/admin.py:77
 msgid "Normal user"
-msgstr ""
+msgstr "Utente normale"
 
 #: snikket_web/admin.py:78
-#, fuzzy
-#| msgid "Admin area"
 msgid "Administrator"
-msgstr "Area amministrativa"
+msgstr "Amministratore"
 
 #: snikket_web/admin.py:83
-#, fuzzy
-#| msgid "Update circle"
 msgid "Update user"
-msgstr "Modifica cerchia"
+msgstr "Aggiorna utente"
 
 #: snikket_web/admin.py:87
-#, fuzzy
-#| msgid "Create password reset links or delete users."
 msgid "Create password reset link"
-msgstr "Crea collegamenti per reimpostare le password oppure elimina utenti."
+msgstr "Crea collegamento per reimpostare la password"
 
 #: snikket_web/admin.py:105
 msgid "Password reset link created"
 msgstr "Creato collegamento per reimpostare la password"
 
 #: snikket_web/admin.py:120
-#, fuzzy
-#| msgid "Circle information"
 msgid "User information updated."
-msgstr "Informazioni cerchia"
+msgstr "Informazioni utente aggiornate."
 
 #: snikket_web/admin.py:142
 msgid "Delete user permanently"
@@ -79,10 +71,8 @@ msgid "User deleted"
 msgstr "Utente rimosso"
 
 #: snikket_web/admin.py:193
-#, fuzzy
-#| msgid "Password reset link created"
 msgid "Password reset link not found"
-msgstr "Creato collegamento per reimpostare la password"
+msgstr "Collegamento per reimpostare la password non trovato"
 
 #: snikket_web/admin.py:205
 msgid "Password reset link deleted"
@@ -217,32 +207,24 @@ msgid "Confirm password"
 msgstr "Conferma password"
 
 #: snikket_web/invite.py:118 snikket_web/invite.py:185
-#, fuzzy
-#| msgid "The passwords must match"
 msgid "The passwords must match."
-msgstr "Le password devono essere identiche"
+msgstr "Le password devono essere identiche."
 
 #: snikket_web/invite.py:123
 msgid "Create account"
 msgstr "Crea utenza"
 
 #: snikket_web/invite.py:150
-#, fuzzy
-#| msgid "That username is already taken"
 msgid "That username is already taken."
-msgstr "Nome utente già in uso"
+msgstr "Nome utente già in uso."
 
 #: snikket_web/invite.py:154 snikket_web/invite.py:218
-#, fuzzy
-#| msgid "Registration was declined for unknown reasons"
 msgid "Registration was declined for unknown reasons."
-msgstr "Registrazione rifiutata per motivi sconosciuti"
+msgstr "Registrazione rifiutata per motivi sconosciuti."
 
 #: snikket_web/invite.py:158
-#, fuzzy
-#| msgid "The username is not valid"
 msgid "The username is not valid."
-msgstr "Nome utente non valido"
+msgstr "Nome utente non valido."
 
 #: snikket_web/invite.py:190 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:29
@@ -278,10 +260,8 @@ msgid "Confirm new password"
 msgstr "Conferma nuova password"
 
 #: snikket_web/user.py:41
-#, fuzzy
-#| msgid "The new passwords must match"
 msgid "The new passwords must match."
-msgstr "Le nuove password devono essere identiche"
+msgstr "Le nuove password devono essere identiche."
 
 #: snikket_web/user.py:48
 msgid "Sign out"
@@ -312,10 +292,8 @@ msgid "Update profile"
 msgstr "Modifica profilo"
 
 #: snikket_web/user.py:99
-#, fuzzy
-#| msgid "Incorrect password"
 msgid "Incorrect password."
-msgstr "Password errata"
+msgstr "Password errata."
 
 #: snikket_web/user.py:103
 msgid "Password changed"
@@ -326,6 +304,8 @@ msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
 msgstr ""
+"L'avatar scelto è troppo grande. Per utilizzare un avatar così grande, "
+"utilizzate l'app."
 
 #: snikket_web/user.py:159
 msgid "Profile updated"
@@ -609,7 +589,7 @@ msgstr "Questa cerchia non è collegata ad una chat di gruppo."
 
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Return to circle list"
-msgstr ""
+msgstr "Ritorna alle lista delle cerchie"
 
 #: snikket_web/templates/admin_edit_circle.html:48
 msgid "Delete circle"
@@ -698,82 +678,82 @@ msgid "Created"
 msgstr "Creato"
 
 #: snikket_web/templates/admin_edit_invite.html:48
-#, fuzzy
-#| msgid "New invitation link"
 msgid "Return to invitation list"
-msgstr "Nuovo collegamento di invito"
+msgstr "Ritorna alla lista degli inviti"
 
 #: snikket_web/templates/admin_edit_user.html:5
 msgid ""
 "Limited users can interact with users on the same Snikket service and be "
 "members of circles."
 msgstr ""
+"Gli utenti limitati possono interagire con utenti sullo stesso servizio "
+"Snikket ed essere membri di cerchie."
 
 #: snikket_web/templates/admin_edit_user.html:7
 msgid ""
 "Like limited users and can also interact with users on other Snikket "
 "services."
 msgstr ""
+"Come gli utenti limitati, e possono anche interagire con utenti di altri "
+"servizi Snikket."
 
 #: snikket_web/templates/admin_edit_user.html:9
 msgid "Like normal users and can access the admin panel in the web portal."
 msgstr ""
+"Come gli utenti normali e possono accedere al pannello amministrativo del "
+"portale web."
 
 #: snikket_web/templates/admin_edit_user.html:20
 #: snikket_web/templates/admin_users.html:28
-#, fuzzy, python-format
-#| msgid "Delete user %(user_name)s"
+#, python-format
 msgid "Edit user %(user_name)s"
-msgstr "Elimina utente %(user_name)s"
+msgstr "Modifica utente %(user_name)s"
 
 #: snikket_web/templates/admin_edit_user.html:23
-#, fuzzy
-#| msgid "Add user"
 msgid "Edit user"
-msgstr "Aggiungi utente"
+msgstr "Modifica utente"
 
 #: snikket_web/templates/admin_edit_user.html:27
 msgid "The login name cannot be changed."
-msgstr ""
+msgstr "Il nome di login non può essere cambiato."
 
 #: snikket_web/templates/admin_edit_user.html:34
 msgid ""
 "The access level of a user determines what interactions are allowed for them "
 "on your Snikket service."
 msgstr ""
+"Il livello di accesso di un utente determina quali interazioni gli sono "
+"consentite sul tuo servizio Snikket."
 
 #: snikket_web/templates/admin_edit_user.html:41
 #, python-format
 msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
-msgstr ""
+msgstr "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 
 #: snikket_web/templates/admin_edit_user.html:51
-#, fuzzy
-#| msgid "New invitation link"
 msgid "Return to user list"
-msgstr "Nuovo collegamento di invito"
+msgstr "Ritorna alla lista utenti"
 
 #: snikket_web/templates/admin_edit_user.html:59
 msgid "Further actions"
-msgstr ""
+msgstr "Azioni ulteriori"
 
 #: snikket_web/templates/admin_edit_user.html:61
-#, fuzzy
-#| msgid "Reset your password"
 msgid "Reset password"
-msgstr "Reimposta la tua password"
+msgstr "Reimposta la password"
 
 #: snikket_web/templates/admin_edit_user.html:64
 msgid ""
 "If the user has lost their password, you can use the button below to create "
 "a special link which allows to change the password of the account, once."
 msgstr ""
+"Se l'utente ha perso la sua password, è possibile utilizzare il pulsante qui "
+"sotto per creare un link speciale che permette di cambiare la password "
+"dell'account, una sola volta."
 
 #: snikket_web/templates/admin_edit_user.html:69
-#, fuzzy
-#| msgid "Circle information"
 msgid "Debug information"
-msgstr "Informazioni cerchia"
+msgstr "Informazioni diagnostiche"
 
 #: snikket_web/templates/admin_edit_user.html:71
 msgid ""
@@ -781,12 +761,13 @@ msgid ""
 "devices is necessary to troubleshoot issues. The button below reveals this "
 "(sensitive) information."
 msgstr ""
+"In alcuni casi, informazioni estese sull'account utente e sui dispositivi "
+"collegati sono necessarie per risolvere i problemi. Il pulsante qui sotto "
+"rivela queste informazioni (sensibili)."
 
 #: snikket_web/templates/admin_edit_user.html:75
-#, fuzzy
-#| msgid "Show debug information for %(user_name)s"
 msgid "Show debug information"
-msgstr "Mostra informazioni diagnostiche per %(user_name)s"
+msgstr "Mostra informazioni diagnostiche"
 
 #: snikket_web/templates/admin_home.html:4
 msgid "Welcome to the admin panel!"
@@ -885,24 +866,20 @@ msgid "Destroy link"
 msgstr "Elimina collegamento"
 
 #: snikket_web/templates/admin_users.html:19
-#, fuzzy
-#| msgid "The username is not valid"
 msgid "The user is an administrator."
-msgstr "Nome utente non valido"
+msgstr "L'utente è un amministratore."
 
 #: snikket_web/templates/admin_users.html:19
 msgid " (Administrator)"
-msgstr ""
+msgstr " (Amministratore)"
 
 #: snikket_web/templates/admin_users.html:22
-#, fuzzy
-#| msgid "The username is not valid"
 msgid "The user is restricted."
-msgstr "Nome utente non valido"
+msgstr "L'utente è limitato."
 
 #: snikket_web/templates/admin_users.html:22
 msgid " (Restricted)"
-msgstr ""
+msgstr " (Limitato)"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
@@ -1213,7 +1190,7 @@ msgstr "Scarica dall'App Store"
 
 #: snikket_web/templates/invite_view.html:32
 msgid "Get it on F-Droid"
-msgstr ""
+msgstr "Scaricalo da F-Droid"
 
 #: snikket_web/templates/invite_view.html:35
 msgid "Send to mobile device"
@@ -1286,17 +1263,21 @@ msgstr ""
 
 #: snikket_web/templates/invite_view.html:93
 msgid "Install on iOS"
-msgstr ""
+msgstr "Installa su iOS"
 
 #: snikket_web/templates/invite_view.html:99
 msgid ""
 "After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
 msgstr ""
+"Dopo aver scaricato Snikket dall'App Store, devi tornare a questo link di "
+"invito e toccare \"Apri nell'app\" per procedere."
 
 #: snikket_web/templates/invite_view.html:101
 msgid "First download Snikket from the App Store using the button below:"
 msgstr ""
+"Per prima cosa, scarica Snikket dall'App Store utilizzando il pulsante qui "
+"sotto:"
 
 #: snikket_web/templates/invite_view.html:103
 #: snikket_web/templates/invite_view.html:131
@@ -1304,21 +1285,26 @@ msgid ""
 "After the installation is complete, you can return to this page and tap the "
 "\"Open the app\" button to continue with the setup:"
 msgstr ""
+"Dopo che l'installazione è completa, puoi tornare a questa pagina e toccare "
+"il pulsante \"Apri nell'app\" per continuare con la configurazione:"
 
 #: snikket_web/templates/invite_view.html:121
 #: snikket_web/templates/invite_view.html:130
 msgid "Install via F-Droid"
-msgstr ""
+msgstr "Installa da F-Droid"
 
 #: snikket_web/templates/invite_view.html:127
 msgid ""
 "After installing Snikket via F-Droid, you have to return to this invite link "
 "and tap on \"Open the app\" to proceed."
 msgstr ""
+"Dopo aver installato Snikket da F-Droid, devi tornare a questo link di "
+"invito e toccare su \"Apri nell'app\" per procedere."
 
 #: snikket_web/templates/invite_view.html:129
 msgid "First install Snikket from F-Droid using the button below:"
 msgstr ""
+"Per prima cosa installa Snikket da F-Droid utilizzando il pulsante qui sotto:"
 
 #: snikket_web/templates/library.j2:18
 msgid "Copy link"
