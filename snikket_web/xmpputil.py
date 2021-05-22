@@ -4,7 +4,7 @@ import typing
 import xml.etree.ElementTree as ET
 
 from quart import abort
-import werkzeug.exceptions
+import quart.exceptions
 
 
 TAG_XMPP_ERROR = "error"
@@ -234,7 +234,7 @@ def extract_pubsub_item_get_reply(
         ) -> typing.Optional[ET.Element]:
     try:
         pubsub = extract_iq_reply(iq_tree, TAG_PUBSUB)
-    except werkzeug.exceptions.NotFound:
+    except quart.exceptions.NotFound:
         return None
 
     if pubsub is None:
