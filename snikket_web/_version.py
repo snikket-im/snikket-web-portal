@@ -1,4 +1,4 @@
-version_info = (0, 1, 2, "a0")
+version_info = (0, 2, 1, None)
 version = (
     ".".join(map(str, version_info[:3])) +
     (f"-{version_info[3]}" if version_info[3] else "")
