@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-25 17:32+0100\n"
+"POT-Creation-Date: 2021-05-27 17:59+0200\n"
 "PO-Revision-Date: 2021-02-02 21:01+0000\n"
 "Last-Translator: riccio <unriccio@email.it>\n"
 "Language-Team: English (United Kingdom) <https://i18n.sotecware.net/projects/"
@@ -20,213 +20,233 @@ msgstr ""
 "X-Generator: Weblate 4.4.2\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: snikket_web/admin.py:59
+#: snikket_web/admin.py:66
 msgid "Limited"
 msgstr ""
 
-#: snikket_web/admin.py:64 snikket_web/templates/admin_delete_user.html:10
+#: snikket_web/admin.py:71 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_users.html:8
 msgid "Login name"
 msgstr "Login name"
 
-#: snikket_web/admin.py:68 snikket_web/templates/admin_delete_user.html:12
+#: snikket_web/admin.py:75 snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/templates/admin_users.html:9 snikket_web/user.py:61
 msgid "Display name"
 msgstr "Display name"
 
-#: snikket_web/admin.py:72 snikket_web/templates/admin_edit_user.html:33
+#: snikket_web/admin.py:79 snikket_web/templates/admin_edit_user.html:32
 msgid "Access Level"
 msgstr ""
 
-#: snikket_web/admin.py:77
+#: snikket_web/admin.py:84
 msgid "Normal user"
 msgstr ""
 
-#: snikket_web/admin.py:78
+#: snikket_web/admin.py:85
 #, fuzzy
 #| msgid "Admin dashboard"
 msgid "Administrator"
 msgstr "Admin dashboard"
 
-#: snikket_web/admin.py:83
+#: snikket_web/admin.py:90
 #, fuzzy
 #| msgid "Create circle"
 msgid "Update user"
 msgstr "Create circle"
 
-#: snikket_web/admin.py:87
+#: snikket_web/admin.py:94
 #, fuzzy
 #| msgid "Create password reset links or delete users."
 msgid "Create password reset link"
 msgstr "Create password reset links or delete users."
 
-#: snikket_web/admin.py:105
+#: snikket_web/admin.py:112
 #, fuzzy
 #| msgid "Password reset link for %(user_name)s"
 msgid "Password reset link created"
 msgstr "Password reset link for %(user_name)s"
 
-#: snikket_web/admin.py:120
+#: snikket_web/admin.py:127
 #, fuzzy
 #| msgid "User information"
 msgid "User information updated."
 msgstr "User information"
 
-#: snikket_web/admin.py:142
+#: snikket_web/admin.py:149
 msgid "Delete user permanently"
 msgstr "Delete user permanently"
 
-#: snikket_web/admin.py:155
+#: snikket_web/admin.py:162
 #, fuzzy
 #| msgid "deleted"
 msgid "User deleted"
 msgstr "deleted"
 
-#: snikket_web/admin.py:193
+#: snikket_web/admin.py:200
 #, fuzzy
 #| msgid "Password reset link for %(user_name)s"
 msgid "Password reset link not found"
 msgstr "Password reset link for %(user_name)s"
 
-#: snikket_web/admin.py:205
+#: snikket_web/admin.py:212
 #, fuzzy
 #| msgid "Create password reset links or delete users."
 msgid "Password reset link deleted"
 msgstr "Create password reset links or delete users."
 
-#: snikket_web/admin.py:225
+#: snikket_web/admin.py:232
 msgid "Invite to circle"
 msgstr "Invite to circle"
 
-#: snikket_web/admin.py:231
+#: snikket_web/admin.py:238
 msgid "At least one circle must be selected"
 msgstr "At least one circle must be selected"
 
-#: snikket_web/admin.py:236
+#: snikket_web/admin.py:243
 msgid "Valid for"
 msgstr "Valid for"
 
-#: snikket_web/admin.py:238
+#: snikket_web/admin.py:245
 msgid "One hour"
 msgstr "One hour"
 
-#: snikket_web/admin.py:239
+#: snikket_web/admin.py:246
 msgid "Twelve hours"
 msgstr "Twelve hours"
 
-#: snikket_web/admin.py:240
+#: snikket_web/admin.py:247
 msgid "One day"
 msgstr "One day"
 
-#: snikket_web/admin.py:241
+#: snikket_web/admin.py:248
 msgid "One week"
 msgstr "One week"
 
-#: snikket_web/admin.py:242
+#: snikket_web/admin.py:249
 msgid "Four weeks"
 msgstr "Four weeks"
 
-#: snikket_web/admin.py:248 snikket_web/templates/admin_edit_invite.html:17
+#: snikket_web/admin.py:255 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
 msgstr "Invitation type"
 
-#: snikket_web/admin.py:250 snikket_web/templates/library.j2:116
+#: snikket_web/admin.py:257 snikket_web/templates/library.j2:116
 msgid "Individual"
 msgstr ""
 
-#: snikket_web/admin.py:251 snikket_web/templates/library.j2:114
+#: snikket_web/admin.py:258 snikket_web/templates/library.j2:114
 msgid "Group"
 msgstr ""
 
-#: snikket_web/admin.py:257
+#: snikket_web/admin.py:264
 msgid "New invitation link"
 msgstr "New invitation link"
 
-#: snikket_web/admin.py:319
+#: snikket_web/admin.py:326
 msgid "Revoke"
 msgstr "Revoke"
 
-#: snikket_web/admin.py:343
+#: snikket_web/admin.py:350
 #, fuzzy
 #| msgid "Invitation type"
 msgid "Invitation created"
 msgstr "Invitation type"
 
-#: snikket_web/admin.py:359
+#: snikket_web/admin.py:366
 #, fuzzy
 #| msgid "New invitation link"
 msgid "No such invitation exists"
 msgstr "New invitation link"
 
-#: snikket_web/admin.py:374
+#: snikket_web/admin.py:381
 #, fuzzy
 #| msgid "Invitation type"
 msgid "Invitation revoked"
 msgstr "Invitation type"
 
-#: snikket_web/admin.py:391 snikket_web/admin.py:439
+#: snikket_web/admin.py:398 snikket_web/admin.py:446
 msgid "Name"
 msgstr "Name"
 
-#: snikket_web/admin.py:396 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:403 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Create circle"
 
-#: snikket_web/admin.py:426
+#: snikket_web/admin.py:433
 #, fuzzy
 #| msgid "Circle name"
 msgid "Circle created"
 msgstr "Circle name"
 
-#: snikket_web/admin.py:444
+#: snikket_web/admin.py:451
 msgid "Select user"
 msgstr "Select user"
 
-#: snikket_web/admin.py:449
+#: snikket_web/admin.py:456
 #, fuzzy
 #| msgid "Create circle"
 msgid "Update circle"
 msgstr "Create circle"
 
-#: snikket_web/admin.py:453
+#: snikket_web/admin.py:460
 msgid "Delete circle permanently"
 msgstr "Delete circle permanently"
 
-#: snikket_web/admin.py:459
+#: snikket_web/admin.py:466
 msgid "Add user"
 msgstr "Add user"
 
-#: snikket_web/admin.py:475
+#: snikket_web/admin.py:482
 #, fuzzy
 #| msgid "No circles"
 msgid "No such circle exists"
 msgstr "No circles"
 
-#: snikket_web/admin.py:512
+#: snikket_web/admin.py:519
 #, fuzzy
 #| msgid "Circle name"
 msgid "Circle data updated"
 msgstr "Circle name"
 
-#: snikket_web/admin.py:518
+#: snikket_web/admin.py:525
 #, fuzzy
 #| msgid "deleted"
 msgid "Circle deleted"
 msgstr "deleted"
 
-#: snikket_web/admin.py:529
+#: snikket_web/admin.py:536
 #, fuzzy
 #| msgid "Invite to circle"
 msgid "User added to circle"
 msgstr "Invite to circle"
 
-#: snikket_web/admin.py:538
+#: snikket_web/admin.py:545
 #, fuzzy
 #| msgid "Remove user %(username)s from circle"
 msgid "User removed from circle"
 msgstr "Remove user %(username)s from circle"
 
-#: snikket_web/infra.py:41
+#: snikket_web/admin.py:616
+msgid "Message contents"
+msgstr ""
+
+#: snikket_web/admin.py:622
+msgid "Only send to online users"
+msgstr ""
+
+#: snikket_web/admin.py:626
+msgid "Post to all users"
+msgstr ""
+
+#: snikket_web/admin.py:630
+msgid "Send preview to yourself"
+msgstr ""
+
+#: snikket_web/admin.py:652
+msgid "Announcement sent!"
+msgstr ""
+
+#: snikket_web/infra.py:51
 msgid "Main"
 msgstr "Main"
 
@@ -570,7 +590,7 @@ msgid "Delete user %(user_name)s"
 msgstr "Delete user %(user_name)s"
 
 #: snikket_web/templates/admin_delete_user.html:6
-#: snikket_web/templates/admin_edit_user.html:54
+#: snikket_web/templates/admin_edit_user.html:53
 msgid "Delete user"
 msgstr "Delete user"
 
@@ -745,44 +765,44 @@ msgstr ""
 msgid "Edit user %(user_name)s"
 msgstr "Edit user %(user_name)s"
 
-#: snikket_web/templates/admin_edit_user.html:23
+#: snikket_web/templates/admin_edit_user.html:22
 #, fuzzy
 #| msgid "Add user"
 msgid "Edit user"
 msgstr "Add user"
 
-#: snikket_web/templates/admin_edit_user.html:27
+#: snikket_web/templates/admin_edit_user.html:26
 msgid "The login name cannot be changed."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_user.html:34
+#: snikket_web/templates/admin_edit_user.html:33
 msgid ""
 "The access level of a user determines what interactions are allowed for them "
 "on your Snikket service."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_user.html:41
+#: snikket_web/templates/admin_edit_user.html:40
 #, python-format
 msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_user.html:51
+#: snikket_web/templates/admin_edit_user.html:50
 #, fuzzy
 #| msgid "New invitation link"
 msgid "Return to user list"
 msgstr "New invitation link"
 
-#: snikket_web/templates/admin_edit_user.html:59
+#: snikket_web/templates/admin_edit_user.html:58
 msgid "Further actions"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_user.html:61
+#: snikket_web/templates/admin_edit_user.html:60
 #, fuzzy
 #| msgid "Change your password"
 msgid "Reset password"
 msgstr "Change your password"
 
-#: snikket_web/templates/admin_edit_user.html:64
+#: snikket_web/templates/admin_edit_user.html:63
 #, fuzzy
 #| msgid ""
 #| "If the user has forgotten their password, use the below button to create "
@@ -797,20 +817,20 @@ msgstr ""
 "password reset link. The password reset link can be used once to change the "
 "password of the account. Transmit the link to the user via a secure channel."
 
-#: snikket_web/templates/admin_edit_user.html:69
+#: snikket_web/templates/admin_edit_user.html:68
 #, fuzzy
 #| msgid "User information"
 msgid "Debug information"
 msgstr "User information"
 
-#: snikket_web/templates/admin_edit_user.html:71
+#: snikket_web/templates/admin_edit_user.html:70
 msgid ""
 "In some cases, extended information about the user account and the connected "
 "devices is necessary to troubleshoot issues. The button below reveals this "
 "(sensitive) information."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_user.html:75
+#: snikket_web/templates/admin_edit_user.html:74
 #, fuzzy
 #| msgid "Show debug information for %(user_name)s"
 msgid "Show debug information"
@@ -861,13 +881,32 @@ msgstr "Create, revoke or view invitations."
 msgid "Manage invitations"
 msgstr "Manage invitations"
 
-#: snikket_web/templates/admin_home.html:36
+#: snikket_web/templates/admin_home.html:35
+msgid "System health"
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:38
+msgid "View the server status or send a broadcast message to all users."
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:40
+msgid "Send a broadcast message to all users."
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:43
+#: snikket_web/templates/admin_system.html:4
+#, fuzzy
+#| msgid "Manage users"
+msgid "Manage system"
+msgstr "Manage users"
+
+#: snikket_web/templates/admin_home.html:48
 #, fuzzy
 #| msgid "Go back to your user’s web portal page."
 msgid "Go back to your user's web portal page."
 msgstr "Go back to your user’s web portal page."
 
-#: snikket_web/templates/admin_home.html:38
+#: snikket_web/templates/admin_home.html:50
 msgid "Exit admin panel"
 msgstr ""
 
@@ -919,6 +958,79 @@ msgstr ""
 #: snikket_web/templates/admin_reset_user_password.html:22
 msgid "Destroy link"
 msgstr "Destroy link"
+
+#: snikket_web/templates/admin_system.html:6
+msgid "Overall system status"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:9
+msgid "System load (5 minute average)"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:14
+#: snikket_web/templates/admin_system.html:22
+#: snikket_web/templates/admin_system.html:37
+#: snikket_web/templates/admin_system.html:45
+#: snikket_web/templates/admin_system.html:60
+#: snikket_web/templates/admin_system.html:68
+#: snikket_web/templates/admin_system.html:76
+msgid "unknown"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:17
+msgid "Memory use"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:20
+#, python-format
+msgid ""
+"%(percentage_global)s of %(mem_available)s. Of that, Snikket uses "
+"%(percentage_snikket)s."
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:27
+msgid "Web portal status"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:30
+#: snikket_web/templates/admin_system.html:53
+msgid "Version"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:31
+#: snikket_web/templates/admin_system.html:54
+msgid "View all versions"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:32
+#: snikket_web/templates/admin_system.html:55
+msgid "Average CPU use"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:40
+#: snikket_web/templates/admin_system.html:63
+msgid "Current memory use"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:50
+#, fuzzy
+#| msgid "Snikket Web Portal"
+msgid "Snikket server status"
+msgstr "Snikket Web Portal"
+
+#: snikket_web/templates/admin_system.html:71
+msgid "Connected devices"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:82
+msgid "Broadcast message"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:84
+msgid ""
+"This form allows you to send a message to all users currently online on your "
+"Snikket server. Use it wisely."
+msgstr ""
 
 #: snikket_web/templates/admin_users.html:19
 msgid "The user is an administrator."

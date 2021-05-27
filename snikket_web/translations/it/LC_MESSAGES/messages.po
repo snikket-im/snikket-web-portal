@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-25 17:32+0100\n"
+"POT-Creation-Date: 2021-05-27 17:59+0200\n"
 "PO-Revision-Date: 2021-05-19 15:12+0000\n"
 "Last-Translator: Roberto Resoli <roberto@resolutions.it>\n"
-"Language-Team: Italian <https://i18n.sotecware.net/projects/snikket/"
-"web-portal/it/>\n"
+"Language-Team: Italian <https://i18n.sotecware.net/projects/snikket/web-"
+"portal/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,177 +20,197 @@ msgstr ""
 "X-Generator: Weblate 4.5.1\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: snikket_web/admin.py:59
+#: snikket_web/admin.py:66
 msgid "Limited"
 msgstr "Limitato"
 
-#: snikket_web/admin.py:64 snikket_web/templates/admin_delete_user.html:10
+#: snikket_web/admin.py:71 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_users.html:8
 msgid "Login name"
 msgstr "Nome utente"
 
-#: snikket_web/admin.py:68 snikket_web/templates/admin_delete_user.html:12
+#: snikket_web/admin.py:75 snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/templates/admin_users.html:9 snikket_web/user.py:61
 msgid "Display name"
 msgstr "Nome visualizzato"
 
-#: snikket_web/admin.py:72 snikket_web/templates/admin_edit_user.html:33
+#: snikket_web/admin.py:79 snikket_web/templates/admin_edit_user.html:32
 msgid "Access Level"
 msgstr "Livello di accesso"
 
-#: snikket_web/admin.py:77
+#: snikket_web/admin.py:84
 msgid "Normal user"
 msgstr "Utente normale"
 
-#: snikket_web/admin.py:78
+#: snikket_web/admin.py:85
 msgid "Administrator"
 msgstr "Amministratore"
 
-#: snikket_web/admin.py:83
+#: snikket_web/admin.py:90
 msgid "Update user"
 msgstr "Aggiorna utente"
 
-#: snikket_web/admin.py:87
+#: snikket_web/admin.py:94
 msgid "Create password reset link"
 msgstr "Crea collegamento per reimpostare la password"
 
-#: snikket_web/admin.py:105
+#: snikket_web/admin.py:112
 msgid "Password reset link created"
 msgstr "Creato collegamento per reimpostare la password"
 
-#: snikket_web/admin.py:120
+#: snikket_web/admin.py:127
 msgid "User information updated."
 msgstr "Informazioni utente aggiornate."
 
-#: snikket_web/admin.py:142
+#: snikket_web/admin.py:149
 msgid "Delete user permanently"
 msgstr "Elimina definitivamente l'utente"
 
-#: snikket_web/admin.py:155
+#: snikket_web/admin.py:162
 msgid "User deleted"
 msgstr "Utente rimosso"
 
-#: snikket_web/admin.py:193
+#: snikket_web/admin.py:200
 msgid "Password reset link not found"
 msgstr "Collegamento per reimpostare la password non trovato"
 
-#: snikket_web/admin.py:205
+#: snikket_web/admin.py:212
 msgid "Password reset link deleted"
 msgstr "Eliminato collegamento per reimpostare la password"
 
-#: snikket_web/admin.py:225
+#: snikket_web/admin.py:232
 msgid "Invite to circle"
 msgstr "Invita nella cerchia"
 
-#: snikket_web/admin.py:231
+#: snikket_web/admin.py:238
 msgid "At least one circle must be selected"
 msgstr "Devi selezionare almeno una cerchia"
 
-#: snikket_web/admin.py:236
+#: snikket_web/admin.py:243
 msgid "Valid for"
 msgstr "Valido per"
 
-#: snikket_web/admin.py:238
+#: snikket_web/admin.py:245
 msgid "One hour"
 msgstr "Un'ora"
 
-#: snikket_web/admin.py:239
+#: snikket_web/admin.py:246
 msgid "Twelve hours"
 msgstr "Dodici ore"
 
-#: snikket_web/admin.py:240
+#: snikket_web/admin.py:247
 msgid "One day"
 msgstr "Un giorno"
 
-#: snikket_web/admin.py:241
+#: snikket_web/admin.py:248
 msgid "One week"
 msgstr "Una settimana"
 
-#: snikket_web/admin.py:242
+#: snikket_web/admin.py:249
 msgid "Four weeks"
 msgstr "Quattro settimane"
 
-#: snikket_web/admin.py:248 snikket_web/templates/admin_edit_invite.html:17
+#: snikket_web/admin.py:255 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
 msgstr "Tipo di invito"
 
-#: snikket_web/admin.py:250 snikket_web/templates/library.j2:116
+#: snikket_web/admin.py:257 snikket_web/templates/library.j2:116
 msgid "Individual"
 msgstr "Individuale"
 
-#: snikket_web/admin.py:251 snikket_web/templates/library.j2:114
+#: snikket_web/admin.py:258 snikket_web/templates/library.j2:114
 msgid "Group"
 msgstr "Gruppo"
 
-#: snikket_web/admin.py:257
+#: snikket_web/admin.py:264
 msgid "New invitation link"
 msgstr "Nuovo collegamento di invito"
 
-#: snikket_web/admin.py:319
+#: snikket_web/admin.py:326
 msgid "Revoke"
 msgstr "Revoca"
 
-#: snikket_web/admin.py:343
+#: snikket_web/admin.py:350
 msgid "Invitation created"
 msgstr "Invito creato"
 
-#: snikket_web/admin.py:359
+#: snikket_web/admin.py:366
 msgid "No such invitation exists"
 msgstr "Questo invito non esiste"
 
-#: snikket_web/admin.py:374
+#: snikket_web/admin.py:381
 msgid "Invitation revoked"
 msgstr "Invito revocato"
 
-#: snikket_web/admin.py:391 snikket_web/admin.py:439
+#: snikket_web/admin.py:398 snikket_web/admin.py:446
 msgid "Name"
 msgstr "Nome"
 
-#: snikket_web/admin.py:396 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:403 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Crea cerchia"
 
-#: snikket_web/admin.py:426
+#: snikket_web/admin.py:433
 msgid "Circle created"
 msgstr "Cerchia creata"
 
-#: snikket_web/admin.py:444
+#: snikket_web/admin.py:451
 msgid "Select user"
 msgstr "Seleziona utente"
 
-#: snikket_web/admin.py:449
+#: snikket_web/admin.py:456
 msgid "Update circle"
 msgstr "Modifica cerchia"
 
-#: snikket_web/admin.py:453
+#: snikket_web/admin.py:460
 msgid "Delete circle permanently"
 msgstr "Elimina cerchia definitivamente"
 
-#: snikket_web/admin.py:459
+#: snikket_web/admin.py:466
 msgid "Add user"
 msgstr "Aggiungi utente"
 
-#: snikket_web/admin.py:475
+#: snikket_web/admin.py:482
 msgid "No such circle exists"
 msgstr "Questa cerchia non esiste"
 
-#: snikket_web/admin.py:512
+#: snikket_web/admin.py:519
 msgid "Circle data updated"
 msgstr "Dati della cerchia aggiornati"
 
-#: snikket_web/admin.py:518
+#: snikket_web/admin.py:525
 msgid "Circle deleted"
 msgstr "Cerchia eliminata"
 
-#: snikket_web/admin.py:529
+#: snikket_web/admin.py:536
 msgid "User added to circle"
 msgstr "Utente aggiunto alla cerchia"
 
-#: snikket_web/admin.py:538
+#: snikket_web/admin.py:545
 msgid "User removed from circle"
 msgstr "Utente rimosso dalla cerchia"
 
-#: snikket_web/infra.py:41
+#: snikket_web/admin.py:616
+msgid "Message contents"
+msgstr ""
+
+#: snikket_web/admin.py:622
+msgid "Only send to online users"
+msgstr ""
+
+#: snikket_web/admin.py:626
+msgid "Post to all users"
+msgstr ""
+
+#: snikket_web/admin.py:630
+msgid "Send preview to yourself"
+msgstr ""
+
+#: snikket_web/admin.py:652
+msgid "Announcement sent!"
+msgstr ""
+
+#: snikket_web/infra.py:51
 msgid "Main"
 msgstr "Principale"
 
@@ -527,7 +547,7 @@ msgid "Delete user %(user_name)s"
 msgstr "Elimina utente %(user_name)s"
 
 #: snikket_web/templates/admin_delete_user.html:6
-#: snikket_web/templates/admin_edit_user.html:54
+#: snikket_web/templates/admin_edit_user.html:53
 msgid "Delete user"
 msgstr "Elimina utente"
 
@@ -709,15 +729,15 @@ msgstr ""
 msgid "Edit user %(user_name)s"
 msgstr "Modifica utente %(user_name)s"
 
-#: snikket_web/templates/admin_edit_user.html:23
+#: snikket_web/templates/admin_edit_user.html:22
 msgid "Edit user"
 msgstr "Modifica utente"
 
-#: snikket_web/templates/admin_edit_user.html:27
+#: snikket_web/templates/admin_edit_user.html:26
 msgid "The login name cannot be changed."
 msgstr "Il nome di login non può essere cambiato."
 
-#: snikket_web/templates/admin_edit_user.html:34
+#: snikket_web/templates/admin_edit_user.html:33
 msgid ""
 "The access level of a user determines what interactions are allowed for them "
 "on your Snikket service."
@@ -725,24 +745,24 @@ msgstr ""
 "Il livello di accesso di un utente determina quali interazioni gli sono "
 "consentite sul tuo servizio Snikket."
 
-#: snikket_web/templates/admin_edit_user.html:41
+#: snikket_web/templates/admin_edit_user.html:40
 #, python-format
 msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 msgstr "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 
-#: snikket_web/templates/admin_edit_user.html:51
+#: snikket_web/templates/admin_edit_user.html:50
 msgid "Return to user list"
 msgstr "Ritorna alla lista utenti"
 
-#: snikket_web/templates/admin_edit_user.html:59
+#: snikket_web/templates/admin_edit_user.html:58
 msgid "Further actions"
 msgstr "Azioni ulteriori"
 
-#: snikket_web/templates/admin_edit_user.html:61
+#: snikket_web/templates/admin_edit_user.html:60
 msgid "Reset password"
 msgstr "Reimposta la password"
 
-#: snikket_web/templates/admin_edit_user.html:64
+#: snikket_web/templates/admin_edit_user.html:63
 msgid ""
 "If the user has lost their password, you can use the button below to create "
 "a special link which allows to change the password of the account, once."
@@ -751,11 +771,11 @@ msgstr ""
 "sotto per creare un link speciale che permette di cambiare la password "
 "dell'account, una sola volta."
 
-#: snikket_web/templates/admin_edit_user.html:69
+#: snikket_web/templates/admin_edit_user.html:68
 msgid "Debug information"
 msgstr "Informazioni diagnostiche"
 
-#: snikket_web/templates/admin_edit_user.html:71
+#: snikket_web/templates/admin_edit_user.html:70
 msgid ""
 "In some cases, extended information about the user account and the connected "
 "devices is necessary to troubleshoot issues. The button below reveals this "
@@ -765,7 +785,7 @@ msgstr ""
 "collegati sono necessarie per risolvere i problemi. Il pulsante qui sotto "
 "rivela queste informazioni (sensibili)."
 
-#: snikket_web/templates/admin_edit_user.html:75
+#: snikket_web/templates/admin_edit_user.html:74
 msgid "Show debug information"
 msgstr "Mostra informazioni diagnostiche"
 
@@ -808,11 +828,30 @@ msgstr "Crea, revoca o copia inviti."
 msgid "Manage invitations"
 msgstr "Gestisci inviti"
 
-#: snikket_web/templates/admin_home.html:36
+#: snikket_web/templates/admin_home.html:35
+msgid "System health"
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:38
+msgid "View the server status or send a broadcast message to all users."
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:40
+msgid "Send a broadcast message to all users."
+msgstr ""
+
+#: snikket_web/templates/admin_home.html:43
+#: snikket_web/templates/admin_system.html:4
+#, fuzzy
+#| msgid "Manage users"
+msgid "Manage system"
+msgstr "Gestisci utenti"
+
+#: snikket_web/templates/admin_home.html:48
 msgid "Go back to your user's web portal page."
 msgstr "Torna al tuo portale utente."
 
-#: snikket_web/templates/admin_home.html:38
+#: snikket_web/templates/admin_home.html:50
 msgid "Exit admin panel"
 msgstr "Esci dal pannello amministrativo"
 
@@ -864,6 +903,79 @@ msgstr ""
 #: snikket_web/templates/admin_reset_user_password.html:22
 msgid "Destroy link"
 msgstr "Elimina collegamento"
+
+#: snikket_web/templates/admin_system.html:6
+msgid "Overall system status"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:9
+msgid "System load (5 minute average)"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:14
+#: snikket_web/templates/admin_system.html:22
+#: snikket_web/templates/admin_system.html:37
+#: snikket_web/templates/admin_system.html:45
+#: snikket_web/templates/admin_system.html:60
+#: snikket_web/templates/admin_system.html:68
+#: snikket_web/templates/admin_system.html:76
+msgid "unknown"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:17
+msgid "Memory use"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:20
+#, python-format
+msgid ""
+"%(percentage_global)s of %(mem_available)s. Of that, Snikket uses "
+"%(percentage_snikket)s."
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:27
+msgid "Web portal status"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:30
+#: snikket_web/templates/admin_system.html:53
+msgid "Version"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:31
+#: snikket_web/templates/admin_system.html:54
+msgid "View all versions"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:32
+#: snikket_web/templates/admin_system.html:55
+msgid "Average CPU use"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:40
+#: snikket_web/templates/admin_system.html:63
+msgid "Current memory use"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:50
+#, fuzzy
+#| msgid "Snikket Web Portal"
+msgid "Snikket server status"
+msgstr "Portale Web di Snikket"
+
+#: snikket_web/templates/admin_system.html:71
+msgid "Connected devices"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:82
+msgid "Broadcast message"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:84
+msgid ""
+"This form allows you to send a message to all users currently online on your "
+"Snikket server. Use it wisely."
+msgstr ""
 
 #: snikket_web/templates/admin_users.html:19
 msgid "The user is an administrator."
