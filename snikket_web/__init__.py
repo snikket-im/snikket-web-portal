@@ -195,25 +195,25 @@ def create_app() -> quart.Quart:
     app.context_processor(proc)
     app.register_error_handler(
         aiohttp.ClientConnectorError,
-        backend_error_handler,
+        backend_error_handler,  # type:ignore
     )
     app.register_error_handler(
         quart.exceptions.HTTPException,
-        generic_http_error,
+        generic_http_error,  # type:ignore
     )
     app.register_error_handler(
         Exception,
-        generic_error_handler,
+        generic_error_handler,  # type:ignore
     )
 
-    @app.route("/")  # type: ignore
+    @app.route("/")
     async def index() -> quart.Response:
         if infra.client.has_session:
             return redirect(url_for('user.index'))
 
         return redirect(url_for('main.login'))
 
-    @app.route("/site.webmanifest")  # type: ignore
+    @app.route("/site.webmanifest")
     def site_manifest() -> quart.Response:
         # this is needed for icons
         return jsonify(

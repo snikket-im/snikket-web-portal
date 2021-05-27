@@ -28,7 +28,7 @@ from .infra import client, circle_name, BaseForm
 bp = Blueprint("admin", __name__, url_prefix="/admin")
 
 
-@bp.route("/")  # type:ignore
+@bp.route("/")
 @client.require_admin_session()
 async def index() -> str:
     return await render_template("admin_home.html")
@@ -38,7 +38,7 @@ class PasswordResetLinkPost(BaseForm):
     action_revoke = wtforms.StringField()
 
 
-@bp.route("/users")  # type:ignore
+@bp.route("/users")
 @client.require_admin_session()
 async def users() -> str:
     users = sorted(
@@ -88,7 +88,7 @@ class EditUserForm(BaseForm):
     )
 
 
-@bp.route("/user/<localpart>/", methods=["GET", "POST"])  # type:ignore
+@bp.route("/user/<localpart>/", methods=["GET", "POST"])
 @client.require_admin_session()
 async def edit_user(localpart: str) -> typing.Union[quart.Response, str]:
     target_user_info = await client.get_user_by_localpart(localpart)
@@ -143,7 +143,7 @@ class DeleteUserForm(BaseForm):
     )
 
 
-@bp.route("/user/<localpart>/delete", methods=["GET", "POST"])  # type:ignore
+@bp.route("/user/<localpart>/delete", methods=["GET", "POST"])
 @client.require_admin_session()
 async def delete_user(localpart: str) -> typing.Union[str, quart.Response]:
     target_user_info = await client.get_user_by_localpart(localpart)
@@ -164,7 +164,7 @@ async def delete_user(localpart: str) -> typing.Union[str, quart.Response]:
     )
 
 
-@bp.route("/user/<localpart>/debug")  # type:ignore
+@bp.route("/user/<localpart>/debug")
 @client.require_admin_session()
 async def debug_user(localpart: str) -> typing.Union[str, quart.Response]:
     target_user_info = await client.get_user_by_localpart(localpart)
@@ -180,7 +180,7 @@ async def debug_user(localpart: str) -> typing.Union[str, quart.Response]:
     )
 
 
-@bp.route("/users/password-reset/<id_>", methods=["GET", "POST"])  # type:ignore  # noqa:E501
+@bp.route("/users/password-reset/<id_>", methods=["GET", "POST"])
 @client.require_admin_session()
 async def user_password_reset_link(
         id_: str,
@@ -274,7 +274,7 @@ class InvitePost(BaseForm):
         )
 
 
-@bp.route("/invitations", methods=["GET", "POST"])  # type:ignore
+@bp.route("/invitations", methods=["GET", "POST"])
 @client.require_admin_session()
 async def invitations() -> typing.Union[str, quart.Response]:
     invites = sorted(
@@ -320,7 +320,7 @@ class InviteForm(BaseForm):
     )
 
 
-@bp.route("/invitation/-/new", methods=["POST"])  # type:ignore
+@bp.route("/invitation/-/new", methods=["POST"])
 @client.require_admin_session()
 async def create_invite() -> typing.Union[str, quart.Response]:
     form = InvitePost()
@@ -348,7 +348,7 @@ async def create_invite() -> typing.Union[str, quart.Response]:
                                  invite_form=form)
 
 
-@bp.route("/invitation/<id_>", methods=["GET", "POST"])  # type:ignore
+@bp.route("/invitation/<id_>", methods=["GET", "POST"])
 @client.require_admin_session()
 async def edit_invite(id_: str) -> typing.Union[str, quart.Response]:
     try:
@@ -397,7 +397,7 @@ class CirclePost(BaseForm):
     )
 
 
-@bp.route("/circles")  # type:ignore
+@bp.route("/circles")
 @client.require_admin_session()
 async def circles() -> str:
     circles = sorted(
@@ -414,7 +414,7 @@ async def circles() -> str:
     )
 
 
-@bp.route("/circle/-/new", methods=["POST"])  # type:ignore
+@bp.route("/circle/-/new", methods=["POST"])
 @client.require_admin_session()
 async def create_circle() -> typing.Union[str, quart.Response]:
     create_form = CirclePost()
@@ -460,7 +460,7 @@ class EditCircleForm(BaseForm):
     )
 
 
-@bp.route("/circle/<id_>", methods=["GET", "POST"])  # type:ignore
+@bp.route("/circle/<id_>", methods=["GET", "POST"])
 @client.require_admin_session()
 async def edit_circle(id_: str) -> typing.Union[str, quart.Response]:
     async with client.authenticated_session() as session:

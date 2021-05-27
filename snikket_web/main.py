@@ -47,7 +47,7 @@ class LoginForm(BaseForm):
     )
 
 
-@bp.route("/-")  # type:ignore
+@bp.route("/-")
 async def index() -> quart.Response:
     return redirect(url_for("index"))
 
@@ -55,7 +55,7 @@ async def index() -> quart.Response:
 ERR_CREDENTIALS_INVALID = _l("Invalid username or password.")
 
 
-@bp.route("/login", methods=["GET", "POST"])  # type:ignore
+@bp.route("/login", methods=["GET", "POST"])
 async def login() -> typing.Union[str, quart.Response]:
     if client.has_session and (await client.test_session()):
         return redirect(url_for('user.index'))
@@ -88,7 +88,7 @@ async def login() -> typing.Union[str, quart.Response]:
     return await render_template("login.html", form=form)
 
 
-@bp.route("/meta/about.html")  # type:ignore
+@bp.route("/meta/about.html")
 async def about() -> str:
     version = None
     extra_versions = {}
@@ -112,7 +112,7 @@ async def about() -> str:
     )
 
 
-@bp.route("/meta/demo.html")  # type:ignore
+@bp.route("/meta/demo.html")
 async def demo() -> str:
     return await render_template("demo.html")
 
@@ -121,7 +121,7 @@ def repad(s: str) -> str:
     return s + "=" * (4 - len(s) % 4)
 
 
-@bp.route("/avatar/<from_>/<code>")  # type:ignore
+@bp.route("/avatar/<from_>/<code>")
 async def avatar(from_: str, code: str) -> quart.Response:
     etag: typing.Optional[str]
     try:
@@ -165,6 +165,6 @@ async def avatar(from_: str, code: str) -> quart.Response:
     return response
 
 
-@bp.route("/_health")  # type:ignore
+@bp.route("/_health")
 async def health() -> Response:
     return Response("STATUS OK", content_type="text/plain")

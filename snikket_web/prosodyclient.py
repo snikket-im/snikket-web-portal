@@ -271,9 +271,8 @@ class ProsodyClient:
 
     def init_app(self, app: quart.Quart) -> None:
         app.config[self.CONFIG_ENDPOINT]
-        # the type annotation in quart seems to be wrong here
-        app.teardown_appcontext(self._plain_session.teardown)  # type:ignore
-        app.teardown_appcontext(self._auth_session.teardown)  # type:ignore
+        app.teardown_appcontext(self._plain_session.teardown)
+        app.teardown_appcontext(self._auth_session.teardown)
 
     @property
     def _endpoint_base(self) -> str:
