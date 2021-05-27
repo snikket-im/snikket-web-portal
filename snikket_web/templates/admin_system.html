@@ -2,6 +2,7 @@
 {% from "library.j2" import form_button %}
 {% block content %}
 <h1>{% trans %}Manage system{% endtrans %}</h1>
+{% if show_metrics %}
 <h2>{% trans %}Overall system status{% endtrans %}</h2>
 <div class="elevated el-2">
 	<dl>
@@ -77,6 +78,7 @@
 		</dd>
 	</dl>
 </div>
+{% endif %}
 <h2>{% trans %}Broadcast message{% endtrans %}</h2>
 <form method="POST">{{ form.csrf_token }}<div class="form layout-expanded">
 	<p class="form-desc">{% trans %}This form allows you to send a message to all users currently online on your Snikket server. Use it wisely.{% endtrans %}</p>

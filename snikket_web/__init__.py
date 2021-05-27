@@ -160,6 +160,7 @@ class AppConfig:
     # Future versions may change this default, and the standard deployment
     # tools may also very well override it.
     max_avatar_size = environ.var(1024*1024, converter=int)
+    show_metrics = environ.bool_var(True)
 
 
 _UPPER_CASE = "".join(map(chr, range(ord("A"), ord("Z")+1)))
@@ -191,6 +192,7 @@ def create_app() -> quart.Quart:
     app.config["AVATAR_CACHE_TTL"] = config.avatar_cache_ttl
     app.config["APPLE_STORE_URL"] = config.apple_store_url
     app.config["MAX_AVATAR_SIZE"] = config.max_avatar_size
+    app.config["SHOW_METRICS"] = config.show_metrics
 
     app.context_processor(proc)
     app.register_error_handler(

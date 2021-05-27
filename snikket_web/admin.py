@@ -20,6 +20,7 @@ from quart import (
     request,
     abort,
     flash,
+    current_app,
 )
 
 from flask_babel import lazy_gettext as _l, _
@@ -33,7 +34,11 @@ bp = Blueprint("admin", __name__, url_prefix="/admin")
 @bp.route("/")
 @client.require_admin_session()
 async def index() -> str:
-    return await render_template("admin_home.html")
+    show_metrics = current_app.config["SHOW_METRICS"]
+    return await render_template(
+        "admin_home.html",
+        show_metrics=show_metrics,
+    )
 
 
 class PasswordResetLinkPost(BaseForm):
@@ -575,7 +580,9 @@ def get_system_stats() -> typing.MutableMapping[
         (time.monotonic() - _MONOTONIC_EPOCH)
     )
 
+    mem_total, mem_available = None, None
     load5: typing.Optional[float] = None
+
     try:
         with open("/proc/loadavg") as f:
             stats = f.read().split()
@@ -583,7 +590,6 @@ def get_system_stats() -> typing.MutableMapping[
     except (ValueError, IndexError, TypeError, OSError):
         pass
 
-    mem_total, mem_available = None, None
     try:
         with open("/proc/meminfo") as f:
             for line in f:
@@ -650,37 +656,43 @@ async def system() -> typing.Union[str, quart.Response]:
             # redirect only if not previewing
             return redirect(url_for(".system"))
 
-    version = await client.get_server_version()
-    now = time.time()
-    try:
-        prosody_metrics = await client.get_system_metrics()
-    except quart.exceptions.NotFound:
-        # server does not offer the endpoint for whatever reason -- ignore
-        prosody_metrics = {}
+    version = None
+    now = None
+    show_metrics = current_app.config["SHOW_METRICS"]
+    if show_metrics:
+        version = await client.get_server_version()
+        now = time.time()
+        try:
+            prosody_metrics = await client.get_system_metrics()
+        except quart.exceptions.NotFound:
+            # server does not offer the endpoint for whatever reason -- ignore
+            prosody_metrics = {}
 
-    metrics = get_system_stats()
-    try:
-        prosody_cpu_metrics = prosody_metrics["cpu"]
-    except KeyError:
-        pass
+        metrics = get_system_stats()
+        try:
+            prosody_cpu_metrics = prosody_metrics["cpu"]
+        except KeyError:
+            pass
+        else:
+            metrics["prosody_cpu"] = (prosody_cpu_metrics["value"] /
+                                      (now - prosody_cpu_metrics["since"]))
+
+        try:
+            metrics["prosody_rss"] = prosody_metrics["memory"]
+        except KeyError:
+            pass
+
+        try:
+            metrics["prosody_devices"] = prosody_metrics["c2s"]
+        except KeyError:
+            pass
+
+        for k in list(metrics.keys()):
+            if metrics[k] is None:
+                # so that defaulting in jinja works
+                del metrics[k]
     else:
-        metrics["prosody_cpu"] = (prosody_cpu_metrics["value"] /
-                                  (now - prosody_cpu_metrics["since"]))
-
-    try:
-        metrics["prosody_rss"] = prosody_metrics["memory"]
-    except KeyError:
-        pass
-
-    try:
-        metrics["prosody_devices"] = prosody_metrics["c2s"]
-    except KeyError:
-        pass
-
-    for k in list(metrics.keys()):
-        if metrics[k] is None:
-            # so that defaulting in jinja works
-            del metrics[k]
+        metrics = {}
 
     return await render_template(
         "admin_system.html",
@@ -688,4 +700,5 @@ async def system() -> typing.Union[str, quart.Response]:
         version=_version.version,
         prosody_version=version,
         form=form,
+        show_metrics=show_metrics,
     )
