@@ -1,5 +1,6 @@
 import base64
 import itertools
+import math
 import secrets
 import typing
 
@@ -22,6 +23,15 @@ client.default_login_redirect = "main.login"
 babel = flask_babel.Babel()
 
 
+BYTE_UNIT_SCALE_MAP = [
+    "B",
+    "kiB",
+    "MiB",
+    "GiB",
+    "TiB",
+]
+
+
 @babel.localeselector  # type:ignore
 def selected_locale() -> str:
     selected = request.accept_languages.best_match(
@@ -42,12 +52,27 @@ def circle_name(c: typing.Any) -> str:
     return c.name
 
 
+def format_bytes(n: float) -> str:
+    scale = math.floor(math.log(n, 1024))
+    try:
+        unit = BYTE_UNIT_SCALE_MAP[scale]
+        factor = 1024**scale
+    except ValueError:
+        unit = "TiB"
+        factor = 1024**4
+    if factor > 1:
+        return "{:.1f} {}".format(n / factor, unit)
+    return "{} {}".format(n, unit)
+
+
 def init_templating(app: quart.Quart) -> None:
     app.template_filter("repr")(repr)
     app.template_filter("format_datetime")(flask_babel.format_datetime)
     app.template_filter("format_date")(flask_babel.format_date)
     app.template_filter("format_time")(flask_babel.format_time)
     app.template_filter("format_timedelta")(flask_babel.format_timedelta)
+    app.template_filter("format_percent")(flask_babel.format_percent)
+    app.template_filter("format_bytes")(format_bytes)
     app.template_filter("flatten")(flatten)
     app.template_filter("circle_name")(circle_name)
 

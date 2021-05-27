@@ -32,6 +32,14 @@
 			{#- -#}
 		</li>
 		<li>
+			<h2>{% trans %}System health{% endtrans %}</h2>
+			{#- -#}
+			<p>{% trans %}View the server status or send a broadcast message to all users.{% endtrans %}</p>
+			{#- -#}
+			<div>{% call standard_button("insights", url_for(".system"), class="primary") %}{% trans %}Manage system{% endtrans %}{% endcall %}</div>
+			{#- -#}
+		</li>
+		<li>
 			{#- -#}
 			<p>{% trans %}Go back to your user's web portal page.{% endtrans %}</p>
 			{#- -#}

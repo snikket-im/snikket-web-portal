@@ -1,4 +1,6 @@
 import json
+import resource
+import time
 import typing
 
 from datetime import datetime
@@ -22,7 +24,7 @@ from quart import (
 
 from flask_babel import lazy_gettext as _l, _
 
-from . import prosodyclient
+from . import prosodyclient, _version
 from .infra import client, circle_name, BaseForm
 
 bp = Blueprint("admin", __name__, url_prefix="/admin")
@@ -549,4 +551,141 @@ async def edit_circle(id_: str) -> typing.Union[str, quart.Response]:
         form=form,
         circle_members=circle_members,
         invite_form=invite_form,
+    )
+
+
+_CPU_EPOCH = time.process_time()
+_MONOTONIC_EPOCH = time.monotonic()
+
+
+def get_system_stats() -> typing.MutableMapping[
+        str,
+        typing.Optional[typing.Union[int, float]]]:
+    pagesize = resource.getpagesize()
+    my_rss: typing.Optional[int] = None
+    try:
+        with open("/proc/self/statm") as f:
+            stats = f.read().split()
+        my_rss = int(stats[1]) * pagesize
+    except (ValueError, IndexError, TypeError, OSError):
+        pass
+
+    my_cpu = (
+        (time.process_time() - _CPU_EPOCH) /
+        (time.monotonic() - _MONOTONIC_EPOCH)
+    )
+
+    load5: typing.Optional[float] = None
+    try:
+        with open("/proc/loadavg") as f:
+            stats = f.read().split()
+        load5 = float(stats[1])
+    except (ValueError, IndexError, TypeError, OSError):
+        pass
+
+    mem_total, mem_available = None, None
+    try:
+        with open("/proc/meminfo") as f:
+            for line in f:
+                if line.startswith("MemTotal"):
+                    mem_total = int(line.split()[1]) * 1024
+                elif line.startswith("MemAvailable"):
+                    mem_available = int(line.split()[1]) * 1024
+                if mem_total is not None and mem_available is not None:
+                    break
+    except (ValueError, TypeError, IndexError, OSError):
+        pass
+
+    return {
+        "portal_rss": my_rss,
+        "portal_cpu": my_cpu,
+        "load5": load5,
+        "mem_total": mem_total,
+        "mem_available": mem_available,
+    }
+
+
+class AnnouncementForm(BaseForm):
+    text = wtforms.StringField(
+        _("Message contents"),
+        widget=wtforms.widgets.TextArea(),
+        validators=[wtforms.validators.DataRequired()],
+    )
+
+    online_only = wtforms.BooleanField(
+        _("Only send to online users"),
+    )
+
+    action_post_all = wtforms.SubmitField(
+        _("Post to all users"),
+    )
+
+    action_send_preview = wtforms.SubmitField(
+        _("Send preview to yourself"),
+    )
+
+
+@bp.route("/system/", methods=["GET", "POST"])
+@client.require_admin_session()
+async def system() -> typing.Union[str, quart.Response]:
+    form = AnnouncementForm()
+
+    if form.validate_on_submit():
+        recipients = "self"
+        if form.action_post_all.data:
+            if form.online_only.data:
+                recipients = "online"
+            else:
+                recipients = "all"
+
+        await client.post_announcement(
+            form.text.data,
+            recipients=recipients,
+        )
+        await flash(
+            _("Announcement sent!"),
+            "success",
+        )
+        if recipients != "self":
+            # redirect only if not previewing
+            return redirect(url_for(".system"))
+
+    version = await client.get_server_version()
+    now = time.time()
+    try:
+        prosody_metrics = await client.get_system_metrics()
+    except quart.exceptions.NotFound:
+        # server does not offer the endpoint for whatever reason -- ignore
+        prosody_metrics = {}
+
+    metrics = get_system_stats()
+    try:
+        prosody_cpu_metrics = prosody_metrics["cpu"]
+    except KeyError:
+        pass
+    else:
+        metrics["prosody_cpu"] = (prosody_cpu_metrics["value"] /
+                                  (now - prosody_cpu_metrics["since"]))
+
+    try:
+        metrics["prosody_rss"] = prosody_metrics["memory"]
+    except KeyError:
+        pass
+
+    try:
+        metrics["prosody_devices"] = prosody_metrics["c2s"]
+    except KeyError:
+        pass
+
+    for k in list(metrics.keys()):
+        if metrics[k] is None:
+            # so that defaulting in jinja works
+            del metrics[k]
+
+    return await render_template(
+        "admin_system.html",
+        metrics=metrics,
+        version=_version.version,
+        prosody_version=version,
+        form=form,
     )

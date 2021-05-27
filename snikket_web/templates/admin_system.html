@@ -1,0 +1,95 @@
+{% extends "admin_app.html" %}
+{% from "library.j2" import form_button %}
+{% block content %}
+<h1>{% trans %}Manage system{% endtrans %}</h1>
+<h2>{% trans %}Overall system status{% endtrans %}</h2>
+<div class="elevated el-2">
+	<dl>
+		<dt>{% trans %}System load (5 minute average){% endtrans %}</dt>
+		<dd>
+			{%- if metrics.load5 -%}
+			{{ metrics.load5 }}
+			{%- else -%}
+			<em>{% trans %}unknown{% endtrans %}</em>
+			{%- endif -%}
+		</dd>
+		<dt>{% trans %}Memory use{% endtrans %}</dt>
+		<dd>
+			{%- if metrics.mem_total and metrics.mem_available -%}
+			{% trans percentage_global=((1 - (metrics.mem_available / metrics.mem_total)) | format_percent), percentage_snikket=((((metrics.prosody_rss | default(0)) + (metrics.portal_rss | default(0))) / metrics.mem_total) | format_percent), mem_available=(metrics.mem_total | format_bytes) %}{{ percentage_global }} of {{ mem_available }}. Of that, Snikket uses {{ percentage_snikket }}.{% endtrans %}
+			{%- else -%}
+			<em>{% trans %}unknown{% endtrans %}</em>
+			{%- endif -%}
+		</dd>
+	</dl>
+</div>
+<h2>{% trans %}Web portal status{% endtrans %}</h2>
+<div class="elevated el-2">
+	<dl>
+		<dt>{% trans %}Version{% endtrans %}</dt>
+		<dd>{{ version }} <a href="{{ url_for("main.about") }}">{% trans %}View all versions{% endtrans %}</a></dd>
+		<dt>{% trans %}Average CPU use{% endtrans %}</dt>
+		<dd>
+			{%- if metrics.portal_cpu -%}
+			{{ metrics.portal_cpu | format_percent }}
+			{%- else -%}
+			<em>{% trans %}unknown{% endtrans %}</em>
+			{%- endif -%}
+		</dd>
+		<dt>{% trans %}Current memory use{% endtrans %}</dt>
+		<dd>
+			{%- if metrics.portal_rss -%}
+			{{ metrics.portal_rss | format_bytes }}
+			{%- else -%}
+			<em>{% trans %}unknown{% endtrans %}</em>
+			{%- endif -%}
+		</dd>
+	</dl>
+</div>
+<h2>{% trans %}Snikket server status{% endtrans %}</h2>
+<div class="elevated el-2">
+	<dl>
+		<dt>{% trans %}Version{% endtrans %}</dt>
+		<dd>{{ prosody_version }} <a href="{{ url_for("main.about") }}">{% trans %}View all versions{% endtrans %}</a></dd>
+		<dt>{% trans %}Average CPU use{% endtrans %}</dt>
+		<dd>
+			{%- if metrics.prosody_cpu -%}
+			{{ metrics.prosody_cpu | format_percent }}
+			{%- else -%}
+			<em>{% trans %}unknown{% endtrans %}</em>
+			{%- endif -%}
+		</dd>
+		<dt>{% trans %}Current memory use{% endtrans %}</dt>
+		<dd>
+			{%- if metrics.prosody_rss -%}
+			{{ metrics.prosody_rss | format_bytes }}
+			{%- else -%}
+			<em>{% trans %}unknown{% endtrans %}</em>
+			{%- endif -%}
+		</dd>
+		<dt>{% trans %}Connected devices{% endtrans %}</dt>
+		<dd>
+			{%- if metrics.prosody_devices | default(None) is not none -%}
+			{{ metrics.prosody_devices }}
+			{%- else -%}
+			<em>{% trans %}unknown{% endtrans %}</em>
+			{%- endif -%}
+		</dd>
+	</dl>
+</div>
+<h2>{% trans %}Broadcast message{% endtrans %}</h2>
+<form method="POST">{{ form.csrf_token }}<div class="form layout-expanded">
+	<p class="form-desc">{% trans %}This form allows you to send a message to all users currently online on your Snikket server. Use it wisely.{% endtrans %}</p>
+	<div class="f-ebox">
+		{{ form.text.label }}
+		{{ form.text }}
+	</div>
+	<div class="f-ebox">
+		{{ form.online_only }}{{ form.online_only.label }}
+	</div>
+	<div class="f-bbox">
+		{%- call form_button("send", form.action_send_preview, class="primary") -%}{%- endcall -%}
+		{%- call form_button("broadcast", form.action_post_all, class="secondary accent") -%}{%- endcall -%}
+	</div>
+</div></form>
+{% endblock %}

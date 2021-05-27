@@ -8,11 +8,13 @@ action/exit_to_app:exit_to_app
 action/lock:lock
 communication/qr_code:qrcode
 communication/vpn_key:passwd
+communication/rss_feed:broadcast
 content/add_circle_outline:add
 content/add_link:create_link
 content/remove_circle_outline:remove
 content/content_copy:copy
 content/link_off:remove_link
+content/send:send
 navigation/arrow_back:back
 navigation/arrow_forward:forward
 navigation/cancel:cancel
@@ -26,3 +28,4 @@ navigation/close:close
 image/edit:edit
 action/admin_panel_settings:admin
 content/link:link
+content/insights:insights

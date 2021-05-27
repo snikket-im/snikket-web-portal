@@ -1175,3 +1175,41 @@ class ProsodyClient:
                     json=payload) as resp:
                 resp.raise_for_status()
                 return (await resp.json())["jid"]
+
+    @autosession
+    async def get_system_metrics(
+            self,
+            *,
+            session: aiohttp.ClientSession) -> typing.Mapping:
+        async with session.get(
+                self._admin_v1_endpoint("/server/metrics"),
+                ) as resp:
+            if resp.status == 404:
+                return {}
+            self._raise_error_from_response(resp)
+            resp.raise_for_status()
+            return await resp.json()
+
+    @autosession
+    async def post_announcement(
+            self,
+            body: str,
+            recipients: str,
+            *,
+            session: aiohttp.ClientSession) -> None:
+        recipients_payload: typing.Union[str, typing.Sequence[str]]
+        if recipients == "self":
+            recipients_payload = [self.session_address]
+        else:
+            recipients_payload = recipients
+
+        payload = {
+            "recipients": recipients_payload,
+            "body": body,
+        }
+
+        async with session.post(
+                self._admin_v1_endpoint("/server/announcement"),
+                json=payload) as resp:
+            self._raise_error_from_response(resp)
+            resp.raise_for_status()
