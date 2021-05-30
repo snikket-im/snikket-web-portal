@@ -1,5 +1,11 @@
 # Snikket Web Portal
 
+This is the web component of a [Snikket service](https://snikket.org/service/)
+that allows users to manage accounts, and administrators to manage the
+service. For general setup, see the [Snikket install
+guide](https://snikket.org/service/quickstart/). For developers working on
+Snikket, see the development quickstart below.
+
 ![Screenshot of the app](docs/readme-screenshot.png)
 
 ## Development quickstart
