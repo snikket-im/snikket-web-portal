@@ -21,7 +21,7 @@ from quart import (
 import environ
 
 from . import colour, infra
-from ._version import version, version_info  # noqa:F401
+from ._version import version  # noqa:F401
 
 
 async def proc() -> typing.Dict[str, typing.Any]:
