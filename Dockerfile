@@ -37,5 +37,7 @@ ENV SNIKKET_WEB_PROSODY_ENDPOINT=http://127.0.0.1:5280/
 
 HEALTHCHECK CMD nc -zv ${SNIKKET_TWEAK_PORTAL_INTERNAL_HTTP_INTERFACE:-127.0.0.1} ${SNIKKET_TWEAK_PORTAL_INTERNAL_HTTP_PORT:-5765}
 
+RUN echo "$BUILD_SERIES $BUILD_ID" > /opt/snikket-web-portal/.app_version
+
 ADD docker/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
