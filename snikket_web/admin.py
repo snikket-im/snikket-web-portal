@@ -485,21 +485,21 @@ async def edit_circle(id_: str) -> typing.Union[str, quart.Response]:
                 return redirect(url_for(".circles"))
             raise
 
-        users = sorted(
-            await client.list_users(),
-            key=lambda x: x.localpart
-        )
+        users = {
+            user.localpart: user
+            for user in await client.list_users()
+        }
         circle_members = [
-            user for user in users
-            if user.localpart in circle.members
+            (localpart, users.get(localpart))
+            for localpart in sorted(circle.members)
         ]
 
     form = EditCircleForm()
-    form.user_to_add.choices = [
-        (user.localpart, user.localpart)
-        for user in users
-        if user.localpart not in circle.members
-    ]
+    form.user_to_add.choices = sorted(
+        (localpart, localpart)
+        for localpart in users.keys()
+        if localpart not in circle.members
+    )
     valid_users = [x[0] for x in form.user_to_add.choices]
 
     invite_form = InvitePost()
