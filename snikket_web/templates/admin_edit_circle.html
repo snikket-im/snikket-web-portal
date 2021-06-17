@@ -56,9 +56,9 @@
 {%- if circle_members -%}
 <div class="el-2 elevated"><table>
 	<thead>
-		<th>Login name</th>
-		<th class="collapsible">Display name</th>
-		<th>Actions</th>
+		<th>{% trans %}Login name{% endtrans %}</th>
+		<th class="collapsible">{% trans %}Display name{% endtrans %}</th>
+		<th>{% trans %}Actions{% endtrans %}</th>
 	</thead>
 	<tbody>
 {%- for member in circle_members -%}
