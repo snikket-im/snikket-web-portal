@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-06-18 16:05+0200\n"
-"PO-Revision-Date: 2021-02-02 21:01+0000\n"
-"Last-Translator: riccio <unriccio@email.it>\n"
+"PO-Revision-Date: 2021-06-19 15:01+0000\n"
+"Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language-Team: English (United Kingdom) <https://i18n.sotecware.net/projects/"
 "snikket/web-portal/en_GB/>\n"
 "Language: en_GB\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.5.1\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:66
@@ -977,7 +977,7 @@ msgstr ""
 
 #: snikket_web/templates/admin_system.html:9
 msgid "System load (5 minute average)"
-msgstr ""
+msgstr "System load (5-minute average)"
 
 #: snikket_web/templates/admin_system.html:14
 #: snikket_web/templates/admin_system.html:22
