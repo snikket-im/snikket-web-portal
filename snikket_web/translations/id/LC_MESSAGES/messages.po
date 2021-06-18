@@ -628,28 +628,37 @@ msgstr ""
 msgid "Circle members"
 msgstr "Anggota kelompok"
 
-#: snikket_web/templates/admin_edit_circle.html:70
+#: snikket_web/templates/admin_edit_circle.html:71
+msgid "The user has been deleted from the server."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:71
+#: snikket_web/templates/library.j2:108
+msgid "deleted"
+msgstr "Dihapus"
+
+#: snikket_web/templates/admin_edit_circle.html:77
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Hapus pengguna %(username)s dari kelompok"
 
-#: snikket_web/templates/admin_edit_circle.html:78
+#: snikket_web/templates/admin_edit_circle.html:85
 msgid "This circle currently has no members."
 msgstr "Kelompok ini sedang tidak memiliki anggota."
 
-#: snikket_web/templates/admin_edit_circle.html:80
+#: snikket_web/templates/admin_edit_circle.html:87
 msgid "Invite more members"
 msgstr "Ajak lebih banyak anggota"
 
-#: snikket_web/templates/admin_edit_circle.html:83
+#: snikket_web/templates/admin_edit_circle.html:90
 msgid "Add existing user"
 msgstr "Tambahkan pengguna yang ada"
 
-#: snikket_web/templates/admin_edit_circle.html:94
+#: snikket_web/templates/admin_edit_circle.html:101
 msgid "All users added"
 msgstr "Semua pengguna ditambahkan"
 
-#: snikket_web/templates/admin_edit_circle.html:95
+#: snikket_web/templates/admin_edit_circle.html:102
 msgid "All users on this service are already in this circle."
 msgstr "Semua pengguna layanan ini sudah ada di kelompok ini."
 
@@ -1421,10 +1430,6 @@ msgstr "Salin tautan"
 #: snikket_web/templates/library.j2:81
 msgid "Invalid input"
 msgstr "Input tidak valid"
-
-#: snikket_web/templates/library.j2:108
-msgid "deleted"
-msgstr "Dihapus"
 
 #: snikket_web/templates/library.j2:122
 msgid "Can be used multiple times to create accounts on this Snikket service."

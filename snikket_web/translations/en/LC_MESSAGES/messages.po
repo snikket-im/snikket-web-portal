@@ -667,28 +667,37 @@ msgstr "Deleting a circle does not delete any users in the circle."
 msgid "Circle members"
 msgstr "Circle members"
 
-#: snikket_web/templates/admin_edit_circle.html:70
+#: snikket_web/templates/admin_edit_circle.html:71
+msgid "The user has been deleted from the server."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:71
+#: snikket_web/templates/library.j2:108
+msgid "deleted"
+msgstr "deleted"
+
+#: snikket_web/templates/admin_edit_circle.html:77
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Remove user %(username)s from circle"
 
-#: snikket_web/templates/admin_edit_circle.html:78
+#: snikket_web/templates/admin_edit_circle.html:85
 msgid "This circle currently has no members."
 msgstr "This circle currently has no members."
 
-#: snikket_web/templates/admin_edit_circle.html:80
+#: snikket_web/templates/admin_edit_circle.html:87
 msgid "Invite more members"
 msgstr "Invite more members"
 
-#: snikket_web/templates/admin_edit_circle.html:83
+#: snikket_web/templates/admin_edit_circle.html:90
 msgid "Add existing user"
 msgstr "Add existing user"
 
-#: snikket_web/templates/admin_edit_circle.html:94
+#: snikket_web/templates/admin_edit_circle.html:101
 msgid "All users added"
 msgstr "All users added"
 
-#: snikket_web/templates/admin_edit_circle.html:95
+#: snikket_web/templates/admin_edit_circle.html:102
 msgid "All users on this service are already in this circle."
 msgstr "All users on this service are already in this circle."
 
@@ -1457,10 +1466,6 @@ msgstr "Copy link"
 #: snikket_web/templates/library.j2:81
 msgid "Invalid input"
 msgstr "Invalid input"
-
-#: snikket_web/templates/library.j2:108
-msgid "deleted"
-msgstr "deleted"
 
 #: snikket_web/templates/library.j2:122
 msgid "Can be used multiple times to create accounts on this Snikket service."

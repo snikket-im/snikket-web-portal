@@ -622,28 +622,37 @@ msgstr "Sletning af en cirkel vil ikke slette brugere i cirklen."
 msgid "Circle members"
 msgstr "Cirkel medlemmer"
 
-#: snikket_web/templates/admin_edit_circle.html:70
+#: snikket_web/templates/admin_edit_circle.html:71
+msgid "The user has been deleted from the server."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_circle.html:71
+#: snikket_web/templates/library.j2:108
+msgid "deleted"
+msgstr "Slettet"
+
+#: snikket_web/templates/admin_edit_circle.html:77
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Fjern bruger %(username)s fra cirkel"
 
-#: snikket_web/templates/admin_edit_circle.html:78
+#: snikket_web/templates/admin_edit_circle.html:85
 msgid "This circle currently has no members."
 msgstr "Den nuværende cirkel har ingen medlemmer."
 
-#: snikket_web/templates/admin_edit_circle.html:80
+#: snikket_web/templates/admin_edit_circle.html:87
 msgid "Invite more members"
 msgstr "Inviter flere medlemmer"
 
-#: snikket_web/templates/admin_edit_circle.html:83
+#: snikket_web/templates/admin_edit_circle.html:90
 msgid "Add existing user"
 msgstr "Tilføj eksisterende bruger"
 
-#: snikket_web/templates/admin_edit_circle.html:94
+#: snikket_web/templates/admin_edit_circle.html:101
 msgid "All users added"
 msgstr "Alle brugere tilføjet"
 
-#: snikket_web/templates/admin_edit_circle.html:95
+#: snikket_web/templates/admin_edit_circle.html:102
 msgid "All users on this service are already in this circle."
 msgstr "Alle brugerne af denne tjeneste er allerede i denne cirkel."
 
@@ -1413,10 +1422,6 @@ msgstr "Kopier link"
 #: snikket_web/templates/library.j2:81
 msgid "Invalid input"
 msgstr "Ugyldig input"
-
-#: snikket_web/templates/library.j2:108
-msgid "deleted"
-msgstr "Slettet"
 
 #: snikket_web/templates/library.j2:122
 msgid "Can be used multiple times to create accounts on this Snikket service."
