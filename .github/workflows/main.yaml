@@ -27,6 +27,7 @@ jobs:
           set -euo pipefail
           pip install mypy
           pip install -r requirements.txt
+          pip install -r build-requirements.txt
       - name: Typecheck
         run: |
           python -m mypy --config mypy.ini -p snikket_web
