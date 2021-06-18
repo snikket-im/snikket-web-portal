@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-27 17:59+0200\n"
+"POT-Creation-Date: 2021-06-18 16:05+0200\n"
 "PO-Revision-Date: 2021-05-28 21:00+0000\n"
 "Last-Translator: Kim Alvefur <zash@zash.se>\n"
-"Language-Team: Swedish <https://i18n.sotecware.net/projects/snikket/"
-"web-portal/sv/>\n"
+"Language-Team: Swedish <https://i18n.sotecware.net/projects/snikket/web-"
+"portal/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,11 +25,13 @@ msgid "Limited"
 msgstr "Begränsad"
 
 #: snikket_web/admin.py:71 snikket_web/templates/admin_delete_user.html:10
+#: snikket_web/templates/admin_edit_circle.html:59
 #: snikket_web/templates/admin_users.html:8
 msgid "Login name"
 msgstr "Inloggningsnamn"
 
 #: snikket_web/admin.py:75 snikket_web/templates/admin_delete_user.html:12
+#: snikket_web/templates/admin_edit_circle.html:60
 #: snikket_web/templates/admin_users.html:9 snikket_web/user.py:61
 msgid "Display name"
 msgstr "Visningsnamn"
@@ -464,6 +466,7 @@ msgid "Members"
 msgstr "Medlemmar"
 
 #: snikket_web/templates/admin_circles.html:15
+#: snikket_web/templates/admin_edit_circle.html:61
 #: snikket_web/templates/admin_invites.html:24
 #: snikket_web/templates/admin_users.html:10
 msgid "Actions"

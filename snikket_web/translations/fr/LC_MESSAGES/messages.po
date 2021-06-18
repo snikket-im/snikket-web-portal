@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-27 17:59+0200\n"
+"POT-Creation-Date: 2021-06-18 16:05+0200\n"
 "PO-Revision-Date: 2021-05-27 18:31+0000\n"
 "Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
 "Language-Team: French <https://i18n.sotecware.net/projects/snikket/web-"
@@ -25,11 +25,13 @@ msgid "Limited"
 msgstr "Limité"
 
 #: snikket_web/admin.py:71 snikket_web/templates/admin_delete_user.html:10
+#: snikket_web/templates/admin_edit_circle.html:59
 #: snikket_web/templates/admin_users.html:8
 msgid "Login name"
 msgstr "Identifiant"
 
 #: snikket_web/admin.py:75 snikket_web/templates/admin_delete_user.html:12
+#: snikket_web/templates/admin_edit_circle.html:60
 #: snikket_web/templates/admin_users.html:9 snikket_web/user.py:61
 msgid "Display name"
 msgstr "Nom à afficher"
@@ -465,6 +467,7 @@ msgid "Members"
 msgstr "Membres"
 
 #: snikket_web/templates/admin_circles.html:15
+#: snikket_web/templates/admin_edit_circle.html:61
 #: snikket_web/templates/admin_invites.html:24
 #: snikket_web/templates/admin_users.html:10
 msgid "Actions"
