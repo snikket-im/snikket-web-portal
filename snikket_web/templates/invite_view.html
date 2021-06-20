@@ -127,7 +127,7 @@
 		<p>{% trans %}After installing Snikket via F-Droid, you have to return to this invite link and tap on "Open the app" to proceed.{% endtrans %}</p>
 		<ol>
 			<li><p>{% trans %}First install Snikket from F-Droid using the button below:{% endtrans %}</p>
-			<p><a href="{{ f_droid_url }}" class="popover" data-popover-id="fdroid-popover"><img alt='{% trans %}Install via F-Droid{% endtrans %}' src='{{ url_for('static', filename='img/f-droid-badge.png') }}' class="fdroid"/></a></p></li>
+			<p><a href="{{ f_droid_url }}"><img alt='{% trans %}Install via F-Droid{% endtrans %}' src='{{ url_for('static', filename='img/f-droid-badge.png') }}' class="fdroid"/></a></p></li>
 			<li><p>{% trans %}After the installation is complete, you can return to this page and tap the "Open the app" button to continue with the setup:{% endtrans %}</p>
 			<p>
 			{%- call standard_button("exit_to_app", invite.xmpp_uri, class="primary") -%}
