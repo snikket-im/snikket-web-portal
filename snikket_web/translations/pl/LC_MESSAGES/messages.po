@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-06-18 16:05+0200\n"
-"PO-Revision-Date: 2021-05-19 15:12+0000\n"
+"PO-Revision-Date: 2021-08-01 14:00+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
-"Language-Team: Polish <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/pl/>\n"
+"Language-Team: Polish <http://i18n.sotecware.net/projects/snikket/web-portal/"
+"pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.7.2\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:66
@@ -195,23 +195,23 @@ msgstr "Usunięto użytkownika z kręgu"
 
 #: snikket_web/admin.py:616
 msgid "Message contents"
-msgstr ""
+msgstr "Treść wiadomości"
 
 #: snikket_web/admin.py:622
 msgid "Only send to online users"
-msgstr ""
+msgstr "Wyślij jedynie do użytkowników online"
 
 #: snikket_web/admin.py:626
 msgid "Post to all users"
-msgstr ""
+msgstr "Wyślij do wszystkich użytkowników"
 
 #: snikket_web/admin.py:630
 msgid "Send preview to yourself"
-msgstr ""
+msgstr "Prześlij do siebie podgląd wiadomości"
 
 #: snikket_web/admin.py:652
 msgid "Announcement sent!"
-msgstr ""
+msgstr "Komunikat wysłany!"
 
 #: snikket_web/infra.py:51
 msgid "Main"
@@ -629,7 +629,7 @@ msgstr "Członkowie kręgu"
 
 #: snikket_web/templates/admin_edit_circle.html:71
 msgid "The user has been deleted from the server."
-msgstr ""
+msgstr "Użytkownik został usunięty z serwera."
 
 #: snikket_web/templates/admin_edit_circle.html:71
 #: snikket_web/templates/library.j2:108
@@ -844,22 +844,21 @@ msgstr "Zarządzaj zaproszeniami"
 
 #: snikket_web/templates/admin_home.html:35
 msgid "System health"
-msgstr ""
+msgstr "Stan systemu"
 
 #: snikket_web/templates/admin_home.html:38
 msgid "View the server status or send a broadcast message to all users."
 msgstr ""
+"Podejrzyj status serwera lub prześlij komunikat do wszystkich użytkowników."
 
 #: snikket_web/templates/admin_home.html:40
 msgid "Send a broadcast message to all users."
-msgstr ""
+msgstr "Prześlij komunikat do wszystkich użytkowników."
 
 #: snikket_web/templates/admin_home.html:43
 #: snikket_web/templates/admin_system.html:4
-#, fuzzy
-#| msgid "Manage users"
 msgid "Manage system"
-msgstr "Zarządzaj użytkownikami"
+msgstr "Zarządzaj systemem"
 
 #: snikket_web/templates/admin_home.html:48
 msgid "Go back to your user's web portal page."
@@ -920,11 +919,11 @@ msgstr "Zniszcz link"
 
 #: snikket_web/templates/admin_system.html:6
 msgid "Overall system status"
-msgstr ""
+msgstr "Ogólny status systemu"
 
 #: snikket_web/templates/admin_system.html:9
 msgid "System load (5 minute average)"
-msgstr ""
+msgstr "Obciążenie systemu (dla ostatnich 5 minut)"
 
 #: snikket_web/templates/admin_system.html:14
 #: snikket_web/templates/admin_system.html:22
@@ -934,11 +933,11 @@ msgstr ""
 #: snikket_web/templates/admin_system.html:68
 #: snikket_web/templates/admin_system.html:76
 msgid "unknown"
-msgstr ""
+msgstr "nieznane"
 
 #: snikket_web/templates/admin_system.html:17
 msgid "Memory use"
-msgstr ""
+msgstr "Wykorzystanie pamięci"
 
 #: snikket_web/templates/admin_system.html:20
 #, python-format
@@ -972,10 +971,8 @@ msgid "Current memory use"
 msgstr ""
 
 #: snikket_web/templates/admin_system.html:50
-#, fuzzy
-#| msgid "Snikket Web Portal"
 msgid "Snikket server status"
-msgstr "Portal użytkownika Snikket"
+msgstr "Status serwera Snikket"
 
 #: snikket_web/templates/admin_system.html:71
 msgid "Connected devices"
