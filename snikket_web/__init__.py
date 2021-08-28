@@ -163,6 +163,9 @@ class AppConfig:
     # tools may also very well override it.
     max_avatar_size = environ.var(1024*1024, converter=int)
     show_metrics = environ.bool_var(True)
+    retention_days = environ.var(7, converter=int, name="SNIKKET_RETENTION_DAYS")
+    operator_name = environ.var(None, name="SNIKKET_OPERATOR_NAME")
+    provider_name = environ.var(None, name="SNIKKET_PROVIDER_NAME")
 
 
 _UPPER_CASE = "".join(map(chr, range(ord("A"), ord("Z")+1)))
@@ -195,6 +198,9 @@ def create_app() -> quart.Quart:
     app.config["APPLE_STORE_URL"] = config.apple_store_url
     app.config["MAX_AVATAR_SIZE"] = config.max_avatar_size
     app.config["SHOW_METRICS"] = config.show_metrics
+    app.config["RETENTION_DAYS"] = config.retention_days
+    app.config["OPERATOR_NAME"] = config.operator_name
+    app.config["PROVIDER_NAME"] = config.provider_name
 
     app.context_processor(proc)
     app.register_error_handler(

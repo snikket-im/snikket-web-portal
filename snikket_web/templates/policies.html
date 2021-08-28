@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% from "library.j2" import standard_button %}
+{% block head_lead %}
+<title>{% trans %}Service Policies{% endtrans %}</title>
+{% endblock %}
+{% block body %}
+<main>
+	<div class="box el-2">
+		<h1>{% trans %}Service Policies{% endtrans %}</h1>
+		<p>{% trans %}Here you will find the policies and legal notices that govern your use of the {{ snikket_domain }} communication service.{% endtrans %}</p>
+
+		<p>{% trans %}If you do not agree to these policies, or are below the minimum age required to understand and consent to
+these terms, you must not use this service.{% endtrans %}</p>
+
+		<p>{% trans %}This page contains the following policies:{% endtrans %}</p>
+
+		<ul>
+			<li><strong><a href="#tos">{% trans %}Terms of Service{% endtrans %}</a></strong> {% trans %}The terms describe the acceptable use of our service, what we expect from you and what you can expect from us.{% endtrans %}</li>
+			<li><strong><a href="#privacy">{% trans %}Privacy Policy{% endtrans %}</a></strong> {% trans %}The what, why and how we handle your personal data here on {{ snikket_domain }}.{% endtrans %}</li>
+		</ul>
+
+		<h2 id="tos">{% trans %}Terms of Service{% endtrans %}</h2>
+
+		<h3>{% trans %}1. Introduction{% endtrans %}</h3>
+
+		<p>{% trans %}Snikket is a privacy-oriented communication and messaging system that is designed to give you freedom of choice, privacy, and control over your communication and your data.{% endtrans %}</p>
+
+		<p>{% trans %}The Snikket software allows anyone to set up their own online communication service, and connect it to other services in the network. There is a global network of Snikket services online run by independent operators. When you read about the "Service" in this document, it refers to this particular Snikket messaging and communication service available at the internet address <em>{{ snikket_domain }}</em>.{% endtrans %}</p>
+
+		{%- if operator_name and provider_name -%}
+		<p>{% trans %}The Service is operated by <em>{{ operator_name }}</em> (us, the "Operator"), using facilities provided by <em>{{ provider_name }}</em>.{% endtrans %}</p>
+		{%- elif operator_name -%}
+		<p>{% trans %}The Service is operated by <em>{{ operator_name }}</em> (us, the "Operator").{% endtrans %}</p>
+		{%- else -%}
+		<p>{% trans %}The Service is operated privately by us (the "Operator").{% endtrans %}</p>
+		{%- endif -%}
+
+		<p>{% trans %}The Service is using software developed by <em>Snikket Community Interest Company</em> and community contributors (collectively "the Developers"). The Developers are not associated with this Service, and they are not responsible for its reliability, security, maintenance, messages it sends, content it hosts, or the actions and activities of the Operator and users of the Service.{% endtrans %}</p>
+
+		<p>{% trans %}"Snikket" and the parrot logo are trademarks of Snikket Community Interest Company.{% endtrans %}</p>
+
+		<h3>{% trans %}2. Your Data{% endtrans %}</h3>
+
+		<p>{% trans %}Certain data that you provide to us may be stored on your behalf to provide you with a secure, reliable and pleasant communication experience. You can request a copy of your data from the Operator at any time, and you can close your account if you no longer wish to use our service. For more information about the data we store, how long we store it for, and the purposes we store it for, please see the <a href="#privacy">Privacy Policy</a>.{% endtrans %}</p>
+
+		<p><strong>{% trans %}Legal basis for data processing.{% endtrans %}</strong> {% trans %}We process your data on the basis of Legitimate Interest. This means that we process your data only as necessary to deliver the Service, and in a manner that you understand and expect. This Legitimate Interest pertains to providing you with a secure communication service through which you may exchange messages, files and other data with other users and services. The processing of user data we undertake is necessary to provide this service.{% endtrans %}</p>
+
+		<p><strong>{% trans %}Third parties.{% endtrans %}</strong> {% trans %}Note well that, according to the nature of an open communication network, certain data you exchange with others (including messages and files) in the course of using the Service may be shared with, and possibly stored by, other users and their service operators on the basis of Legitimate Interest or any other applicable legal basis. We have no control over such copies of the data.{% endtrans %}</p>
+
+		<h3>{% trans %}3. Third-party services{% endtrans %}</h3>
+
+		<p><strong>{% trans %}Communication with third-party services.{% endtrans %}</strong> {% trans %}This Service is part of a global messaging network facilitated by standard technologies such as XMPP. In a similar fashion to the email and phone networks, this network allows people to communicate with each other even if they are using different services managed by different operators. When you communicate with users and groups that reside on other services, certain data may necessarily be exchanged with those services for the purposes of facilitating your communication. This includes your username, profile (e.g. display name and picture), messages and files that you send to the users and groups on those services.{% endtrans %}</p>
+
+		<p><strong>{% trans %}Third-party policies.{% endtrans %}</strong> {% trans %}Our Service may allow you to access, use, or interact with third-party websites, apps, content, and other products and services. When you use third-party services, their terms and privacy policies govern your use of those services.{% endtrans %}</p>
+
+		<p><strong>{% trans %}Right to be forgotten.{% endtrans %}</strong> {% trans %}Your copy of your data on {{ snikket_domain }} will be erased upon your request to us. You may also make such requests to the operators of third-party services you have communicated with, however these services are not under our control and we cannot guarantee they will forget your data. Such services can be located anywhere in the world, and are subject to local laws and regulations.{% endtrans %}</p>
+
+		<h3>{% trans %}4. Acceptable use{% endtrans %}</h3>
+
+		<p><strong>{% trans %}Legal and acceptable purposes.{% endtrans %}</strong> {% trans %}You agree to access and use the Service only for legal, authorized, and acceptable purposes. You will not use (or assist others in using) our Service in ways that: (a) violate or infringe the rights of the Operator, users, or others, including privacy, publicity, intellectual property, or other proprietary rights; (b) involve sending illegal or impermissible communications such as unsolicited bulk communications (e.g. spam).{% endtrans %}</p>
+
+		<p><strong>{% trans %}Encryption.{% endtrans %}</strong> {% trans %}In the event that you wish to use encrypted communications within the Services, it is your responsibility to ensure this is permitted in under the laws and regulations applicable to you based on where and how you use the Services.{% endtrans %}</p>
+
+		<h3>{% trans %}5. Availability of Services{% endtrans %}</h3>
+
+		<p><strong>{% trans %}General availability{% endtrans %}</strong> {% trans %}Our Services may be interrupted, including for maintenance, upgrades, or network or equipment failures. We may discontinue some or all of our Services, including certain features and the support for certain devices and platforms, at any time.{% endtrans %}</p>
+
+		<p><strong>{% trans %}Termination of access.{% endtrans %}</strong> {% trans %}We may remove your access to the Service at any time, at our sole discretion.{% endtrans %}</p>
+
+		<p><strong>{% trans %}Emergency services inaccessibility.{% endtrans %}</strong> {% trans %}The Communication Service is not to be used to make calls to any emergency services.  Therefore you must arrange for other communications such as though a mobile phone or otherwise to enable you to contact any emergency services.  We disclaim any liability relating to the inability to use the Communication Services in this way.{% endtrans %}</p>
+
+		<hr/>
+
+		<h2 id="privacy">{% trans %}Privacy Policy{% endtrans %}</h2>
+
+		<h3 id="what-information-does-a-snikket-service-collect">{% trans %}What information does a Snikket service collect?{% endtrans %}</h3>
+		<h4 id="basic-account-information">{% trans %}Basic account information{% endtrans %}</h4>
+		<p>{% trans %}When you create an account on this service, your username will be stored, along with a hashed version of your password.{% endtrans %}</p>
+		<p>{% trans %}You may additionally provide a profile picture (avatar) and display name. These will be shared with other users on the network, so they are able to identify you. You can control visibility of this information in the profile section of the {{ snikket_domain }} website.{% endtrans %}</p>
+		<p>{% trans %}Contacts that you add within the app will be stored in your contact list on the {{ snikket_domain }} server. This is so that the server can identify who you have permitted to view your online status, profile and other information, and to synchronize your Snikket contacts if you have multiple apps or devices.{% endtrans %}</p>
+
+		<h4 id="messages">{% trans %}Messages{% endtrans %}</h4>
+
+		<p>{% trans %}When you send or receive a message on Snikket, we store this temporarily in your personal &ldquo;message archive&rdquo; on {{ snikket_domain }}. The purpose of your message archive is to enable an app you use with your account to &ldquo;catch up&rdquo; on recent conversations. This allows Snikket to:{% endtrans %}</p>
+		<ul>
+			<li>{% trans %}ensure delivery of messages even if you are temporarily offline or
+			experiencing connectivity issues, and{% endtrans %}</li>
+			<li>{% trans %}allow synchronization of messages across multiple devices and apps
+			that you may use.{% endtrans %}</li>
+		</ul>
+
+		<p>{% trans %}The data stored for each entry in the message archive is:{% endtrans %}</p>
+		<ul>
+			<li>{% trans %}A unique identifier for the message{% endtrans %}</li>
+			<li>{% trans %}The time and date that the message was sent/received{% endtrans %}</li>
+			<li>{% trans %}The sender and recipient of the message{% endtrans %}</li>
+			<li>{% trans %}The message contents (encrypted according to your app&rsquo;s settings){% endtrans %}</li>
+		</ul>
+
+		<p>{% trans %}Entries in the message archive are stored for a minimum of {{ retention_days }} days. The server will routinely erase all entries after they have been in the archive for this amount of time.{% endtrans %}</p>
+
+		<p>{% trans %}We encourage the use of encryption of your message contents, as is the default within the Snikket app.{% endtrans %}</p>
+
+		<h4 id="uploaded-files">{% trans %}Uploaded files{% endtrans %}</h4>
+		<p>{% trans %}You may also use the server to upload files (including images and videos) within your conversations. These files will remain on the server for a minimum of {{ retention_days }} days. This allows your contacts time to retrieve the file, even if they are offline. Similarly to message archives, the server will routinely erase files beyond this age.{% endtrans %}</p>
+
+		<p>{% trans %}Uploaded files are assigned a long random identifier, included in the link to the file. This ensures your files can only be viewed by people you share the link with.{% endtrans %}</p>
+
+		<p>{% trans %}The server will store the following information for every shared file:{% endtrans %}</p>
+		<ul>
+			<li>{% trans %}A unique identifier{% endtrans %}</li>
+			<li>{% trans %}The time and date that the file was uploaded{% endtrans %}</li>
+			<li>{% trans %}The file name{% endtrans %}</li>
+			<li>{% trans %}The file size{% endtrans %}</li>
+			<li>{% trans %}The file type (as reported by the app){% endtrans %}</li>
+			<li>{% trans %}The file contents (encrypted according to your app&rsquo;s settings){% endtrans %}</li>
+		</ul>
+
+		<p>{% trans %}The Snikket app will automatically encrypt file contents when sharing a file within an encrypted conversation.{% endtrans %}</p>
+		<p>{% trans %}Once you share a file with a contact, understand that the contact may store a copy of the file on their device that is beyond our control and may remain even after the file is removed from {{ snikket_domain }}.{% endtrans %}</p>
+
+		<h4 id="access-and-network-information">{% trans %}Access and network information{% endtrans %}</h4>
+		<p>{% trans %}The Snikket server may record the time and general location from which you connect to your account or perform certain security-related actions, such as changing your password.{% endtrans %}</p>
+		<p>{% trans %}This is to help identify unauthorized access to your account, and detect when your account becomes inactive for administrative purposes (for example, so that it may be erased when no longer needed).{% endtrans %}</p>
+
+		<h4 id="cookies">{% trans %}Cookies{% endtrans %}</h4>
+		<p>{% trans %}When you access your account through the {{ snikket_domain }} website, one or more small pieces of data known as &ldquo;cookies&rdquo; may be stored in your web browser. These essential cookies allow us to securely identify your browser as you move between different pages on {{ snikket_domain }}, and therefore protect your account from unauthorized access. The cookies are not shared with third-parties or used for tracking, advertising or any such purposes.{% endtrans %}</p>
+
+	</div>
+</main>
+{% endblock %}

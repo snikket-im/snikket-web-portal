@@ -111,6 +111,16 @@ async def about() -> str:
         extra_versions=extra_versions,
     )
 
+@bp.route("/policies")
+async def policies() -> str:
+    return await render_template(
+        "policies.html",
+        snikket_domain=current_app.config["SNIKKET_DOMAIN"],
+        retention_days=current_app.config["RETENTION_DAYS"],
+        operator_name=current_app.config["OPERATOR_NAME"],
+        provider_name=current_app.config["PROVIDER_NAME"],
+    )
+
 
 @bp.route("/meta/demo.html")
 async def demo() -> str:
