@@ -15,6 +15,6 @@
 		{% trans %}Copy address{% endtrans %}
 	{%- endcall -%}
 	<p>{% trans %}You can now set up your legacy XMPP client with the above address and the password you chose during registration.{% endtrans %}</p>
-	<p>{% trans %}You can now safely close this page.{% endtrans %}</p>
+	<p>{% trans login_url=url_for('main.login') %}You can now safely close this page, or log in to the web portal to <a href="{{ login_url }}">manage your account</a>.{% endtrans %}</p>
 </div>
 {% endblock %}
