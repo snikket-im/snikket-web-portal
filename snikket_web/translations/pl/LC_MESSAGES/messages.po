@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2021-06-18 16:05+0200\n"
-"PO-Revision-Date: 2021-08-01 14:00+0000\n"
+"PO-Revision-Date: 2021-09-03 15:00+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
 "Language-Team: Polish <http://i18n.sotecware.net/projects/snikket/web-portal/"
 "pl/>\n"
@@ -945,30 +945,32 @@ msgid ""
 "%(percentage_global)s of %(mem_available)s. Of that, Snikket uses "
 "%(percentage_snikket)s."
 msgstr ""
+"%(percentage_global)s z %(mem_available)s. Z tego Snikket używa "
+"%(percentage_snikket)s."
 
 #: snikket_web/templates/admin_system.html:27
 msgid "Web portal status"
-msgstr ""
+msgstr "Status portalu internetowego"
 
 #: snikket_web/templates/admin_system.html:30
 #: snikket_web/templates/admin_system.html:53
 msgid "Version"
-msgstr ""
+msgstr "Wersja"
 
 #: snikket_web/templates/admin_system.html:31
 #: snikket_web/templates/admin_system.html:54
 msgid "View all versions"
-msgstr ""
+msgstr "Pokaż wszystkie wersje"
 
 #: snikket_web/templates/admin_system.html:32
 #: snikket_web/templates/admin_system.html:55
 msgid "Average CPU use"
-msgstr ""
+msgstr "Średnie użycie CPU"
 
 #: snikket_web/templates/admin_system.html:40
 #: snikket_web/templates/admin_system.html:63
 msgid "Current memory use"
-msgstr ""
+msgstr "Bieżące użycie pamięci"
 
 #: snikket_web/templates/admin_system.html:50
 msgid "Snikket server status"
@@ -976,17 +978,19 @@ msgstr "Status serwera Snikket"
 
 #: snikket_web/templates/admin_system.html:71
 msgid "Connected devices"
-msgstr ""
+msgstr "Podłączone urządzenia"
 
 #: snikket_web/templates/admin_system.html:82
 msgid "Broadcast message"
-msgstr ""
+msgstr "Wiadomość globalna"
 
 #: snikket_web/templates/admin_system.html:84
 msgid ""
 "This form allows you to send a message to all users currently online on your "
 "Snikket server. Use it wisely."
 msgstr ""
+"Ten formularz pozwala na wysłanie wiadomości do wszystkich użytkowników, "
+"którzy obecnie są online na twoim serwerze Snikket. Używaj go z rozwagą."
 
 #: snikket_web/templates/admin_users.html:19
 msgid "The user is an administrator."
