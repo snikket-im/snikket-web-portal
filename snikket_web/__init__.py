@@ -154,7 +154,9 @@ class AppConfig:
         "pl",
         "sv",
     ], converter=autosplit)
-    apple_store_url = environ.var("")
+    apple_store_url = environ.var(
+        "https://apps.apple.com/us/app/snikket/id1545164189",
+    )
     # Default limit of 1 MiB is what was discovered to be the effective limit
     # in #67, hence we set that here for now.
     # Future versions may change this default, and the standard deployment
