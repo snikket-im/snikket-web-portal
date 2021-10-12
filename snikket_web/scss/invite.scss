@@ -80,60 +80,6 @@ img.fdroid {
 	height: $w-l3;
 }
 
-.tabbox {
-	display: flex;
-	flex-direction: column;
-	margin: $w-l1 0;
-
-	> nav.tabs {
-		display: flex;
-		flex-direction: row;
-
-		> a {
-			display: inline-block;
-			padding: $w-s2;
-			border-top-left-radius: $w-s4;
-			border-top-right-radius: $w-s4;
-
-			&, &:visited {
-				color: inherit;
-				text-decoration: underline;
-				text-decoration-color: $accent-500;
-			}
-
-			&:hover {
-				background: $accent-900;
-				border-color: $accent-800;
-				color: black;
-			}
-
-			&.active {
-				text-decoration: none;
-				background: linear-gradient(0deg, $accent-600, $accent-700);
-				color: $accent-200;
-
-				&:hover, &:focus {
-					background: linear-gradient(0deg, $accent-700, $accent-800);
-				}
-
-				&:active {
-					background: $accent-600;
-				}
-			}
-		}
-	}
-
-	> .tab-pane {
-		display: none;
-		padding: 0 $w-0;
-		background: $accent-900;
-
-		&.active {
-			display: block;
-		}
-	}
-}
-
 .qr {
 	margin: $w-l1 0;
 	display: flex;
