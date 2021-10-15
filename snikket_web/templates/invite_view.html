@@ -68,7 +68,7 @@
 			{#- -#}
 			<div id="qr-info-url" class="tab-pane active">
 				<p>{% trans %}Use a <em>QR code</em> scanner on your mobile device to scan the code below:{% endtrans %}</p>
-				<div id="qr-invite-page" data-qrdata="{{ url_for(".view", id_=invite_id, _external=True) }}" class="qr"></div>
+				<div id="qr-invite-page" data-qrdata="{{ url_for(".view", id_=invite_id, _external=True, _scheme="https") }}" class="qr"></div>
 			</div>
 			{#- -#}
 			<div id="qr-info-uri" class="tab-pane">
