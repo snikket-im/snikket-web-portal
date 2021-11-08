@@ -5,4 +5,5 @@ hsluv~=0.0.2
 flask-babel~=1.0
 email-validator~=1.1
 environ-config~=20.0
+wtforms~=2.3
 typing-extensions
