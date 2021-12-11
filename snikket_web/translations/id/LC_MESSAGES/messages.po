@@ -6,18 +6,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2021-06-18 16:05+0200\n"
-"PO-Revision-Date: 2021-06-21 23:01+0000\n"
+"PO-Revision-Date: 2021-12-12 07:00+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
-"Language-Team: Indonesian <https://i18n.sotecware.net/projects/snikket/"
+"Language-Team: Indonesian <http://i18n.sotecware.net/projects/snikket/"
 "web-portal/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.8.1\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:66
@@ -980,7 +980,7 @@ msgstr "Perangkat terhubung"
 
 #: snikket_web/templates/admin_system.html:82
 msgid "Broadcast message"
-msgstr "Siarkan pesan"
+msgstr "Sebarkan pesan"
 
 #: snikket_web/templates/admin_system.html:84
 msgid ""
