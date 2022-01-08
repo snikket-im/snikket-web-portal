@@ -97,7 +97,7 @@ async def about() -> str:
         version = _version.version
         extra_versions["Quart"] = quart.__version__
         extra_versions["aiohttp"] = aiohttp.__version__
-        extra_versions["babel"] = babel.__version__
+        extra_versions["babel"] = babel.__version__  # type:ignore
         extra_versions["wtforms"] = wtforms.__version__
         extra_versions["flask-wtf"] = flask_wtf.__version__
         try:
