@@ -40,12 +40,14 @@ RUN set -eu; \
     apt-get update ; \
     apt-get install -y --no-install-recommends \
         python3 python3-pip python3-setuptools python3-wheel; \
-    pip3 install hypercorn;
+    apt-get clean ; rm -rf /var/lib/apt/lists; \
+    pip3 install hypercorn; \
+    rm -rf /root/.cache;
 
 WORKDIR /opt/snikket-web-portal
 
 COPY requirements.txt /opt/snikket-web-portal/requirements.txt
-RUN pip3 install -r requirements.txt;
+RUN pip3 install -r requirements.txt; rm -rf /root/.cache;
 
 COPY --from=build /opt/snikket-web-portal/snikket_web/ /opt/snikket-web-portal/snikket_web
 COPY babel.cfg /opt/snikket-web-portal/babel.cfg
