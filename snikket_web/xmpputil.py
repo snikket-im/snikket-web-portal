@@ -207,7 +207,7 @@ def make_avatar_metadata_set_request(
         item,
         "metadata", xmlns=NS_USER_AVATAR_METADATA)
 
-    attr: typing.MutableMapping[str, str] = {
+    attr: typing.Dict[str, str] = {
         "id": id_,
         "bytes": str(size),
         "type": mimetype,
@@ -217,7 +217,12 @@ def make_avatar_metadata_set_request(
     if height is not None:
         attr["height"] = str(height)
 
-    ET.SubElement(metadata_wrap, "info", xmlns=NS_USER_AVATAR_METADATA, **attr)
+    ET.SubElement(
+        metadata_wrap,
+        "info",
+        xmlns=NS_USER_AVATAR_METADATA,
+        **attr,  # type: ignore
+    )
     return req
 
 
