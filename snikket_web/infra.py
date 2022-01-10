@@ -60,7 +60,7 @@ def format_bytes(n: float) -> str:
     try:
         unit = BYTE_UNIT_SCALE_MAP[scale]
         factor = 1024**scale
-    except ValueError:
+    except IndexError:
         unit = "TiB"
         factor = 1024**4
     if factor > 1:
