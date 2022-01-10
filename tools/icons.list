@@ -6,6 +6,7 @@ action/logout:logout
 action/login:login
 action/exit_to_app:exit_to_app
 action/lock:lock
+communication/import_export:import_export
 communication/qr_code:qrcode
 communication/vpn_key:passwd
 communication/rss_feed:broadcast
@@ -15,6 +16,8 @@ content/remove_circle_outline:remove
 content/content_copy:copy
 content/link_off:remove_link
 content/send:send
+file/file_download:download
+file/folder:folder
 navigation/arrow_back:back
 navigation/arrow_forward:forward
 navigation/cancel:cancel
