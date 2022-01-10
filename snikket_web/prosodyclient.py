@@ -296,6 +296,9 @@ class ProsodyClient:
     def _public_v1_endpoint(self, subpath: str) -> str:
         return "{}/register_api{}".format(self._endpoint_base, subpath)
 
+    def _xep227_endpoint(self, subpath: str) -> str:
+        return "{}/xep227{}".format(self._endpoint_base, subpath)
+
     async def _oauth2_bearer_token(self,
                                    session: aiohttp.ClientSession,
                                    jid: str,
@@ -1120,6 +1123,18 @@ class ProsodyClient:
                 self._admin_v1_endpoint("/groups/{}".format(id_)),
                 ) as resp:
             self._raise_error_from_response(resp)
+
+    @autosession
+    async def export_account_data(
+            self,
+            *,
+            session: aiohttp.ClientSession,
+            ) -> str:
+        async with session.get(
+                self._xep227_endpoint("/export?stores=roster,vcard,pep"),
+                ) as resp:
+            self._raise_error_from_response(resp)
+            return await resp.text()
 
     @autosession
     async def revoke_token(
