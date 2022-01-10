@@ -1,4 +1,4 @@
-FROM debian:buster-slim AS build
+FROM debian:bullseye-slim AS build
 
 RUN set -eu; \
     export DEBIAN_FRONTEND=noninteractive ; \
@@ -22,7 +22,7 @@ RUN pip3 install -r requirements.txt; \
     make;
 
 
-FROM debian:buster-slim
+FROM debian:bullseye-slim
 
 ARG BUILD_SERIES=dev
 ARG BUILD_ID=0
