@@ -1,4 +1,3 @@
-import aiohttp
 import asyncio
 import typing
 import urllib
@@ -188,16 +187,12 @@ async def manage_data() -> typing.Union[str, quart.Response]:
         encoded_address = urllib.parse.quote(
             user_info["address"].encode(encoding='utf-8', errors='strict')
         )
-        try:
-            account_data = await client.export_account_data()
-        except aiohttp.ClientResponseError as e:
-            if e.status == 404:
-                await flash(
-                    _("You currently have no account data to export."),
-                    "alert"
-                )
-            else:
-                raise e
+        account_data = await client.export_account_data()
+        if account_data is None:
+            await flash(
+                _("You currently have no account data to export."),
+                "alert"
+            )
         else:
             return Response(account_data,
                             mimetype="application/xml",

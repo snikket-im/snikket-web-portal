@@ -1129,11 +1129,13 @@ class ProsodyClient:
             self,
             *,
             session: aiohttp.ClientSession,
-            ) -> str:
+            ) -> typing.Optional[str]:
         async with session.get(
                 self._xep227_endpoint("/export?stores=roster,vcard,pep"),
                 ) as resp:
             self._raise_error_from_response(resp)
+            if resp.status == 204:
+                return None
             return await resp.text()
 
     @autosession
