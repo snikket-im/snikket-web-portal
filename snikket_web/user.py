@@ -77,6 +77,16 @@ class ProfileForm(BaseForm):
     )
 
 
+class ImportAccountDataForm(BaseForm):
+    account_data_file = wtforms.FileField(
+        _l("Account data")
+    )
+
+    action_upload = wtforms.SubmitField(
+        _l("Upload"),
+    )
+
+
 @bp.route("/")
 @client.require_session()
 async def index() -> str:

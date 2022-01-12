@@ -17,6 +17,7 @@ content/content_copy:copy
 content/link_off:remove_link
 content/send:send
 file/file_download:download
+file/file_upload:upload
 file/folder:folder
 navigation/arrow_back:back
 navigation/arrow_forward:forward

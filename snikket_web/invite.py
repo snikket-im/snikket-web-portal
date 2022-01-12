@@ -26,6 +26,8 @@ bp = Blueprint("invite", __name__)
 
 INVITE_SESSION_JID = "invite-session-jid"
 
+EIMPORTTOOBIG = _l("The account data you tried to import is too large to"
+                   "upload. Please contact your Snikket operator.")
 
 # https://play.google.com/store/apps/details?id=org.snikket.android&referrer={uri|urlescape}&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1
 
@@ -163,6 +165,7 @@ async def register(id_: str) -> typing.Union[str, quart.Response]:
                 raise
         else:
             http_session[INVITE_SESSION_JID] = jid
+            await client.login(jid, form.password.data)
             return redirect(url_for(".success"))
 
     return await render_template(
@@ -232,11 +235,36 @@ async def reset(id_: str) -> typing.Union[str, quart.Response]:
     )
 
 
+class DataImportForm(BaseForm):
+    account_data_file = wtforms.FileField(
+        _l("Account data file")
+    )
+
+    action_import = wtforms.SubmitField(
+        _l("Import data")
+    )
+
+
 @bp.route("/success", methods=["GET", "POST"])
+@client.require_session()
 async def success() -> str:
+    form = DataImportForm()
+    if form.validate_on_submit():
+        client.import_account_data()
+        # Re-render success page, this time with no import option
+        return await render_template(
+            "invite_success.html",
+            jid=http_session.get(INVITE_SESSION_JID, ""),
+            migration_success=True,
+                )
     return await render_template(
         "invite_success.html",
         jid=http_session.get(INVITE_SESSION_JID, ""),
+        migration_success=False,
+        form=form,
+        max_import_size=5*1024*1024,  # 5MB
+        import_too_big_warning_header=_l("Error"),
+        import_too_big_warning=EIMPORTTOOBIG,
     )
 
 

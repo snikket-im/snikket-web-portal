@@ -1,6 +1,6 @@
 {% extends "invite.html" %}
 {% set body_id = "invite" %}
-{% from "library.j2" import form_button, clipboard_button %}
+{% from "library.j2" import form_button, clipboard_button, render_errors %}
 {% block head_lead %}
 <title>{% trans site_name=config["SITE_NAME"] %}Successfully registered on {{ site_name }} | Snikket{% endtrans %}</title>
 {%- include "copy-snippet.html" -%}
@@ -16,5 +16,46 @@
 	{%- endcall -%}
 	<p>{% trans %}You can now set up your legacy XMPP client with the above address and the password you chose during registration.{% endtrans %}</p>
 	<p>{% trans login_url=url_for('main.login') %}You can now safely close this page, or log in to the web portal to <a href="{{ login_url }}">manage your account</a>.{% endtrans %}</p>
+
+	{% if migration_success %}
+		<h2>{% trans %}Import successful{% endtrans %}</h2>
+		<p>{% trans %}Congratulations! Your account data has been successfully imported.{% endtrans %}</p>
+	{% endif %}
+
+	{% if form %}
+		<h2>{% trans %}Moving to Snikket?{% endtrans %}</h2>
+		<p>{% trans %}If you are moving from a different Snikket instance or another XMPP-compatible service, you may optionally import the data (contacts, profile information, etc.) from your previous account. When you have exported the data from your previous account, upload it using the form below.{% endtrans %}</p>
+
+		<div class="form layout-expanded"><form method="POST" enctype="multipart/form-data">
+			<h3 class="form-title">{% trans %}Upload account data{% endtrans %}</h3>
+			{{ form.csrf_token }}
+			{% call render_errors(form) %}{% endcall %}
+			<div class="f-ebox">
+				{{ form.account_data_file.label }}
+				{{ form.account_data_file(accept="application/xml",
+						 data_maxsize=max_import_size,
+						 data_warning_header=import_too_big_warning_header,
+						 data_maxsize_warning=import_too_big_warning) }}
+			</div>
+			<div class="f-bbox">
+				{%- call form_button("upload", form.action_import, class="secondary") %}{% endcall -%}
+			</div>
+			<script type="text/javascript">
+			document.getElementById("{{ form.account_data_file.id }}").onchange = function() {
+				var maxsize_s = this.dataset.maxsize;
+				var maxsize = parseInt(maxsize_s);
+				if (this.files[0].size > maxsize) {
+					var warning_header = this.dataset.warningHeader;
+					var warning_text = this.dataset.maxsizeWarning;
+					this.setCustomValidity(warning_text);
+					this.reportValidity();
+					this.value = null;
+				} else {
+					this.setCustomValidity("");
+				}
+			};
+			</script>
+	</form></div>
+	{% endif %}
 </div>
 {% endblock %}
