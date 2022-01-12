@@ -1139,6 +1139,20 @@ class ProsodyClient:
             return await resp.text()
 
     @autosession
+    async def import_account_data(
+            self,
+            user_xml: str,
+            *,
+            session: aiohttp.ClientSession,
+            ) -> bool:
+        async with session.post(
+                self._xep227_endpoint("/import?stores=roster,vcard,pep"),
+                data=user_xml,
+                ) as resp:
+            self._raise_error_from_response(resp)
+            return True
+
+    @autosession
     async def revoke_token(
             self,
             *,
