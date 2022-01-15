@@ -138,7 +138,6 @@ async def profile() -> typing.Union[str, quart.Response]:
             mimetype = file_info.mimetype
             data = file_info.stream.read()
             if len(data) > max_avatar_size:
-                print(len(data), max_avatar_size)
                 form.avatar.errors.append(EAVATARTOOBIG)
                 ok = False
             elif len(data) > 0:

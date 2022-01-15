@@ -542,8 +542,6 @@ async def edit_circle(id_: str) -> typing.Union[str, quart.Response]:
             )
 
         return redirect(url_for(".edit_circle", id_=id_))
-    else:
-        print(form.errors)
 
     return await render_template(
         "admin_edit_circle.html",
