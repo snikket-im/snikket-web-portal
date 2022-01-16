@@ -1131,7 +1131,7 @@ class ProsodyClient:
             session: aiohttp.ClientSession,
             ) -> typing.Optional[str]:
         async with session.get(
-                self._xep227_endpoint("/export?stores=roster,vcard,pep"),
+                self._xep227_endpoint("/export?stores=roster,vcard,pep,pep_data"),  # noqa:E501
                 ) as resp:
             self._raise_error_from_response(resp)
             if resp.status == 204:
@@ -1146,7 +1146,7 @@ class ProsodyClient:
             session: aiohttp.ClientSession,
             ) -> bool:
         async with session.post(
-                self._xep227_endpoint("/import?stores=roster,vcard,pep"),
+                self._xep227_endpoint("/import?stores=roster,vcard,pep,pep_data"),  # noqa:E501
                 data=user_xml,
                 ) as resp:
             self._raise_error_from_response(resp)
