@@ -1145,7 +1145,7 @@ class ProsodyClient:
             *,
             session: aiohttp.ClientSession,
             ) -> bool:
-        async with session.post(
+        async with session.put(
                 self._xep227_endpoint("/import?stores=roster,vcard,pep,pep_data"),  # noqa:E501
                 data=user_xml,
                 ) as resp:
