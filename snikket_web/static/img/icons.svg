@@ -42,6 +42,11 @@ licensed under the terms of the Apache 2.0 License -->
 <g fill="none"><path d="M0 0h24v24H0V0z" /><path d="M0 0h24v24H0V0z" opacity=".87" /></g>
 <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z" />
 </symbol>
+<!-- from: communication/import_export/materialiconsround/24px.svg -->
+<symbol id="icon-import_export" viewBox="0 0 24 24">
+<path d="M0 0h24v24H0V0z" fill="none" />
+<path d="M8.65 3.35L5.86 6.14c-.32.31-.1.85.35.85H8V13c0 .55.45 1 1 1s1-.45 1-1V6.99h1.79c.45 0 .67-.54.35-.85L9.35 3.35c-.19-.19-.51-.19-.7 0zM16 17.01V11c0-.55-.45-1-1-1s-1 .45-1 1v6.01h-1.79c-.45 0-.67.54-.35.85l2.79 2.78c.2.19.51.19.71 0l2.79-2.78c.32-.31.09-.85-.35-.85H16z" />
+</symbol>
 <!-- from: communication/qr_code/materialiconsround/24px.svg -->
 <symbol id="icon-qrcode" viewBox="0 0 24 24">
 <g><rect fill="none" height="24" width="24" /><rect fill="none" height="24" width="24" /></g>
@@ -87,6 +92,21 @@ licensed under the terms of the Apache 2.0 License -->
 <symbol id="icon-send" viewBox="0 0 24 24">
 <path d="M0 0h24v24H0V0z" fill="none" />
 <path d="M3.4 20.4l17.45-7.48c.81-.35.81-1.49 0-1.84L3.4 3.6c-.66-.29-1.39.2-1.39.91L2 9.12c0 .5.37.93.87.99L17 12 2.87 13.88c-.5.07-.87.5-.87 1l.01 4.61c0 .71.73 1.2 1.39.91z" />
+</symbol>
+<!-- from: file/file_download/materialicons/24px.svg -->
+<symbol id="icon-download" viewBox="0 0 24 24">
+<path d="M0 0h24v24H0z" fill="none" />
+<path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+</symbol>
+<!-- from: file/file_upload/materialicons/24px.svg -->
+<symbol id="icon-upload" viewBox="0 0 24 24">
+<path d="M0 0h24v24H0z" fill="none" />
+<path d="M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z" />
+</symbol>
+<!-- from: file/folder/materialiconsround/24px.svg -->
+<symbol id="icon-folder" viewBox="0 0 24 24">
+<path d="M0 0h24v24H0V0z" fill="none" />
+<path d="M10.59 4.59C10.21 4.21 9.7 4 9.17 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-1.41-1.41z" />
 </symbol>
 <!-- from: navigation/arrow_back/materialiconsround/24px.svg -->
 <symbol id="icon-back" viewBox="0 0 24 24">

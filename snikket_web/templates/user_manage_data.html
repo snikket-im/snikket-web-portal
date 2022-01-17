@@ -1,0 +1,22 @@
+{% extends "app.html" %}
+{% from "library.j2" import standard_button, form_button, render_errors, avatar with context %}
+{% block content %}
+<h1>{% trans %}Manage your data{% endtrans %}</h1>
+<nav class="welcome">
+	<ul>
+		<li>
+			<h2>{% trans %}Export account{% endtrans %}</h2>
+			<p>{% trans %}Download your account data as a file for backup purposes or to move your account to another service.{% endtrans %}</p>
+
+			{% call render_errors(form) %}{% endcall %}
+
+			<div class="f-bbox">
+				<form method="POST">
+					{{ form.csrf_token }}
+					{%- call form_button("download", form.action_export, class="primary") %}{% endcall -%}
+				</form>
+			</div>
+		</li>
+	</ul>
+</nav>
+{% endblock %}
