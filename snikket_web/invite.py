@@ -30,9 +30,6 @@ INVITE_SESSION_JID = "invite-session-jid"
 MAX_IMPORT_DATA_SIZE = 5*1024*1024  # 5MB
 SUPPORTED_IMPORT_TYPES = ["application/xml", "text/xml"]
 
-EIMPORTTOOBIG = _l("The account data you tried to import is too large to"
-                   "upload. Please contact your Snikket operator.")
-
 # https://play.google.com/store/apps/details?id=org.snikket.android&referrer={uri|urlescape}&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1
 
 
@@ -286,8 +283,11 @@ async def success() -> str:
         migration_success=False,
         form=form,
         max_import_size=MAX_IMPORT_DATA_SIZE,
-        import_too_big_warning_header=_l("Error"),
-        import_too_big_warning=EIMPORTTOOBIG,
+        import_too_big_warning_header=gettext("Error"),
+        import_too_big_warning=gettext(
+            "The account data you tried to import is too large to upload. "
+            "Please contact your Snikket operator."
+        ),
     )
 
 
