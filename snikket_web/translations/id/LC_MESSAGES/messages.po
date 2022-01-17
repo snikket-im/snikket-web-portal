@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2022-01-17 17:27+0100\n"
-"PO-Revision-Date: 2021-12-12 07:00+0000\n"
+"PO-Revision-Date: 2022-01-18 14:59+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
-"Language-Team: Indonesian <http://i18n.sotecware.net/projects/snikket/web-"
-"portal/id/>\n"
+"Language-Team: Indonesian <http://i18n.sotecware.net/projects/snikket/"
+"web-portal/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -221,6 +221,8 @@ msgid ""
 "The account data you tried to import is too large to upload. Please contact "
 "your Snikket operator."
 msgstr ""
+"Data akun yang coba diimpor terlalu besar untuk diunggah. Silakan hubungi "
+"operator Snikket Anda."
 
 #: snikket_web/invite.py:112
 msgid "Username"
@@ -261,11 +263,11 @@ msgstr "Ganti kata sandi"
 
 #: snikket_web/invite.py:244
 msgid "Account data file"
-msgstr ""
+msgstr "File data akun"
 
 #: snikket_web/invite.py:248
 msgid "Import data"
-msgstr ""
+msgstr "Impor data"
 
 #: snikket_web/invite.py:269
 #, python-format
@@ -273,6 +275,8 @@ msgid ""
 "The account data you tried to import is in an unknown format. Please upload "
 "an XML file in XEP-0227 format (provided format: %(mimetype)s)."
 msgstr ""
+"Data akun yang coba diimpor dalam format yang tidak dikenal. Harap unggah "
+"file XML dalam format XEP-0227 (format yang disediakan: %(mimetype)s)."
 
 #: snikket_web/invite.py:289 snikket_web/templates/unauth.html:18
 #: snikket_web/user.py:178
@@ -341,11 +345,11 @@ msgstr "Perbarui profil"
 
 #: snikket_web/user.py:82
 msgid "Account data"
-msgstr ""
+msgstr "Data akun"
 
 #: snikket_web/user.py:86
 msgid "Upload"
-msgstr ""
+msgstr "Unggah"
 
 #: snikket_web/user.py:111
 msgid "Incorrect password."
@@ -369,11 +373,11 @@ msgstr "Profil diperbarui"
 
 #: snikket_web/user.py:184
 msgid "Export"
-msgstr ""
+msgstr "Ekspor"
 
 #: snikket_web/user.py:202
 msgid "You currently have no account data to export."
-msgstr ""
+msgstr "Anda tidak memiliki data akun untuk diekspor."
 
 #: snikket_web/templates/_footer.html:4
 #, python-format
@@ -1015,7 +1019,7 @@ msgstr "Status server Snikket"
 
 #: snikket_web/templates/admin_system.html:71
 msgid "Storage used by shared files"
-msgstr ""
+msgstr "Penyimpanan yang digunakan oleh file bersama"
 
 #: snikket_web/templates/admin_system.html:79
 msgid "Connected devices"
@@ -1308,22 +1312,20 @@ msgid ""
 "You can now safely close this page, or log in to the web portal to <a href="
 "\"%(login_url)s\">manage your account</a>."
 msgstr ""
+"Anda dapat menutup halaman ini dengan aman, atau masuk ke portal web untuk "
+"<a href=\"%(login_url)s\">mengelola akun anda</a>."
 
 #: snikket_web/templates/invite_success.html:21
-#, fuzzy
-#| msgid "Operation successful"
 msgid "Import successful"
-msgstr "Operasi berhasil"
+msgstr "Impor berhasil"
 
 #: snikket_web/templates/invite_success.html:22
 msgid "Congratulations! Your account data has been successfully imported."
-msgstr ""
+msgstr "Selamat! Data akun Anda telah berhasil diimpor."
 
 #: snikket_web/templates/invite_success.html:26
-#, fuzzy
-#| msgid "Using the Snikket app"
 msgid "Moving to Snikket?"
-msgstr "Menggunakan Snikket"
+msgstr "Pindahkan ke Snikket?"
 
 #: snikket_web/templates/invite_success.html:27
 msgid ""
@@ -1332,10 +1334,15 @@ msgid ""
 "information, etc.) from your previous account. When you have exported the "
 "data from your previous account, upload it using the form below."
 msgstr ""
+"Jika Anda berpindah dari instans Snikket yang berbeda atau layanan lain yang "
+"kompatibel dengan XMPP, Anda memiliki pilihan mengimpor data (kontak, "
+"informasi profil, dll.) dari akun Anda sebelumnya. Ketika Anda telah "
+"mengekspor data dari akun Anda sebelumnya, unggah menggunakan form di bawah "
+"ini."
 
 #: snikket_web/templates/invite_success.html:30
 msgid "Upload account data"
-msgstr ""
+msgstr "Unggah data akun"
 
 #: snikket_web/templates/invite_view.html:6
 #, python-format
@@ -1565,10 +1572,8 @@ msgstr "Edit profil"
 
 #: snikket_web/templates/user_home.html:33
 #: snikket_web/templates/user_manage_data.html:4
-#, fuzzy
-#| msgid "Manage users"
 msgid "Manage your data"
-msgstr "Kelola pengguna"
+msgstr "Kelola data anda"
 
 #: snikket_web/templates/user_home.html:39
 msgid "Your Snikket"
@@ -1595,16 +1600,16 @@ msgstr ""
 "lain yang terhubung."
 
 #: snikket_web/templates/user_manage_data.html:8
-#, fuzzy
-#| msgid "Your account"
 msgid "Export account"
-msgstr "Akun anda"
+msgstr "Ekspor akun"
 
 #: snikket_web/templates/user_manage_data.html:9
 msgid ""
 "Download your account data as a file for backup purposes or to move your "
 "account to another service."
 msgstr ""
+"Unduh data akun sebagai file untuk backup atau untuk memindahkan akun Anda "
+"ke layanan lain."
 
 #: snikket_web/templates/user_passwd.html:5
 msgid "Change your password"
