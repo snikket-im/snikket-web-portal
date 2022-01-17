@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-01-17 17:25+0100\n"
+"POT-Creation-Date: 2022-01-17 17:27+0100\n"
 "PO-Revision-Date: 2021-03-31 13:00+0000\n"
 "Last-Translator: Tilman Jiménez <tilman.jimenez@tu-dortmund.de>\n"
 "Language-Team: Spanish (Mexico) <https://i18n.sotecware.net/projects/snikket/"
@@ -240,7 +240,7 @@ msgstr "Principal"
 
 #: snikket_web/invite.py:33
 msgid ""
-"The account data you tried to import is too large toupload. Please contact "
+"The account data you tried to import is too large to upload. Please contact "
 "your Snikket operator."
 msgstr ""
 
