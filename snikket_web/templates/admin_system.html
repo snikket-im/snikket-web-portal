@@ -68,6 +68,14 @@
 			<em>{% trans %}unknown{% endtrans %}</em>
 			{%- endif -%}
 		</dd>
+		<dt>{% trans %}Storage used by shared files{% endtrans %}</dt>
+		<dd>
+			{%- if metrics.prosody_uploads | default(None) is not none -%}
+			{{ metrics.prosody_uploads | format_bytes }}
+			{%- else -%}
+			<em>{% trans %}unknown{% endtrans %}</em>
+			{%- endif -%}
+		</dd>
 		<dt>{% trans %}Connected devices{% endtrans %}</dt>
 		<dd>
 			{%- if metrics.prosody_devices | default(None) is not none -%}
