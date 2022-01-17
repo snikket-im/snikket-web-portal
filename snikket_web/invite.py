@@ -31,7 +31,7 @@ MAX_IMPORT_DATA_SIZE = 5*1024*1024  # 5MB
 SUPPORTED_IMPORT_TYPES = ["application/xml", "text/xml"]
 
 EIMPORTTOOBIG = _l("The account data you tried to import is too large to"
-                   "upload. Please contact your Snikket operator.")
+                   " upload. Please contact your Snikket operator.")
 
 # https://play.google.com/store/apps/details?id=org.snikket.android&referrer={uri|urlescape}&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1
 
