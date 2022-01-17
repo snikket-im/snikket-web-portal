@@ -53,11 +53,14 @@ def circle_name(c: typing.Any) -> str:
 
 
 def format_bytes(n: float) -> str:
-    scale = math.floor(math.log(n, 1024))
+    try:
+        scale = max(math.floor(math.log(n, 1024)), 0)
+    except ValueError:
+        scale = 0
     try:
         unit = BYTE_UNIT_SCALE_MAP[scale]
         factor = 1024**scale
-    except ValueError:
+    except IndexError:
         unit = "TiB"
         factor = 1024**4
     if factor > 1:
