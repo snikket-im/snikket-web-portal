@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2022-01-17 17:27+0100\n"
-"PO-Revision-Date: 2021-09-03 15:00+0000\n"
+"PO-Revision-Date: 2022-01-21 15:00+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
 "Language-Team: Polish <http://i18n.sotecware.net/projects/snikket/web-portal/"
 "pl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.7.2\n"
+"X-Generator: Weblate 4.8.1\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:68 snikket_web/templates/admin_delete_user.html:10
@@ -222,6 +222,8 @@ msgid ""
 "The account data you tried to import is too large to upload. Please contact "
 "your Snikket operator."
 msgstr ""
+"Plik z danymi konta, które próbujesz zaimportować, jest zbyt duży. "
+"Skontaktuj się z administratorem twojego serwera Snikket."
 
 #: snikket_web/invite.py:112
 msgid "Username"
@@ -262,11 +264,11 @@ msgstr "Zmień hasło"
 
 #: snikket_web/invite.py:244
 msgid "Account data file"
-msgstr ""
+msgstr "Plik z danymi konta"
 
 #: snikket_web/invite.py:248
 msgid "Import data"
-msgstr ""
+msgstr "Importuj dane"
 
 #: snikket_web/invite.py:269
 #, python-format
@@ -274,6 +276,8 @@ msgid ""
 "The account data you tried to import is in an unknown format. Please upload "
 "an XML file in XEP-0227 format (provided format: %(mimetype)s)."
 msgstr ""
+"Dane konta, które próbujesz zaimportować, mają nieznany format. Proszę "
+"wybrać plik w formacie XML zgodnym z XEP-0227 (podany format: %(mimetype)s)."
 
 #: snikket_web/invite.py:289 snikket_web/templates/unauth.html:18
 #: snikket_web/user.py:178
@@ -342,11 +346,11 @@ msgstr "Zaktualizuj profil"
 
 #: snikket_web/user.py:82
 msgid "Account data"
-msgstr ""
+msgstr "Dane konta"
 
 #: snikket_web/user.py:86
 msgid "Upload"
-msgstr ""
+msgstr "Prześlij"
 
 #: snikket_web/user.py:111
 msgid "Incorrect password."
@@ -370,11 +374,11 @@ msgstr "Zaktualizowano profil"
 
 #: snikket_web/user.py:184
 msgid "Export"
-msgstr ""
+msgstr "Eksportuj"
 
 #: snikket_web/user.py:202
 msgid "You currently have no account data to export."
-msgstr ""
+msgstr "Obecnie nie masz danych konta, które można wyeksportować."
 
 #: snikket_web/templates/_footer.html:4
 #, python-format
@@ -1017,7 +1021,7 @@ msgstr "Status serwera Snikket"
 
 #: snikket_web/templates/admin_system.html:71
 msgid "Storage used by shared files"
-msgstr ""
+msgstr "Miejsce wykorzystane przez przesłane pliki"
 
 #: snikket_web/templates/admin_system.html:79
 msgid "Connected devices"
@@ -1314,22 +1318,21 @@ msgid ""
 "You can now safely close this page, or log in to the web portal to <a href="
 "\"%(login_url)s\">manage your account</a>."
 msgstr ""
+"Możesz bezpiecznie zamknąć tę stronę lub zalogować się do Portalu "
+"Użytkownika Snikket, aby <a href=\"%(login_url)s\">zarządzać swoim "
+"kontem</a>."
 
 #: snikket_web/templates/invite_success.html:21
-#, fuzzy
-#| msgid "Operation successful"
 msgid "Import successful"
-msgstr "Operacja zakończona sukcesem"
+msgstr "Import zakończony sukcesem"
 
 #: snikket_web/templates/invite_success.html:22
 msgid "Congratulations! Your account data has been successfully imported."
-msgstr ""
+msgstr "Gratulacje! Dane twojego konta zostały prawidłowo zaimportowane."
 
 #: snikket_web/templates/invite_success.html:26
-#, fuzzy
-#| msgid "Using the Snikket app"
 msgid "Moving to Snikket?"
-msgstr "Używając aplikacji Snikket"
+msgstr "Przenosisz się na Snikket?"
 
 #: snikket_web/templates/invite_success.html:27
 msgid ""
@@ -1338,10 +1341,14 @@ msgid ""
 "information, etc.) from your previous account. When you have exported the "
 "data from your previous account, upload it using the form below."
 msgstr ""
+"Jeśli przenosisz się z innego serwera Snikket lub kompatybilnej usługi XMPP, "
+"możesz opcjonalnie zaimportować dane (kontakty, informacje o profilu, itp.) "
+"ze swojego poprzedniego konta. Gdy wyeksportujesz dane z poprzedniej usługi, "
+"możesz je przesłać za pomocą poniższego formularza."
 
 #: snikket_web/templates/invite_success.html:30
 msgid "Upload account data"
-msgstr ""
+msgstr "Prześlij dane konta"
 
 #: snikket_web/templates/invite_view.html:6
 #, python-format
@@ -1582,10 +1589,8 @@ msgstr "Edytuj profil"
 
 #: snikket_web/templates/user_home.html:33
 #: snikket_web/templates/user_manage_data.html:4
-#, fuzzy
-#| msgid "Manage users"
 msgid "Manage your data"
-msgstr "Zarządzaj użytkownikami"
+msgstr "Zarządzaj danymi konta"
 
 #: snikket_web/templates/user_home.html:39
 msgid "Your Snikket"
@@ -1613,16 +1618,16 @@ msgstr ""
 "podłączone urządzenia."
 
 #: snikket_web/templates/user_manage_data.html:8
-#, fuzzy
-#| msgid "Your account"
 msgid "Export account"
-msgstr "Twoje konto"
+msgstr "Wyeksportuj swoje dane"
 
 #: snikket_web/templates/user_manage_data.html:9
 msgid ""
 "Download your account data as a file for backup purposes or to move your "
 "account to another service."
 msgstr ""
+"Pobierz dane swojego konta jako plik w celu backupu lub przeniesienia konta "
+"na inną usługę."
 
 #: snikket_web/templates/user_passwd.html:5
 msgid "Change your password"
