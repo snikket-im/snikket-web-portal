@@ -91,24 +91,27 @@ async def login() -> typing.Union[str, quart.Response]:
 @bp.route("/meta/about.html")
 async def about() -> str:
     version = None
+    core_versions = {}
     extra_versions = {}
-
     if current_app.debug or client.is_admin_session:
         version = _version.version
+        try:
+            core_versions["Prosody"] = await client.get_server_version()
+        except quart.exceptions.Unauthorized:
+            core_versions["Prosody"] = "unknown"
+
+    if current_app.debug:
         extra_versions["Quart"] = quart.__version__
         extra_versions["aiohttp"] = aiohttp.__version__
         extra_versions["babel"] = babel.__version__
         extra_versions["wtforms"] = wtforms.__version__
         extra_versions["flask-wtf"] = flask_wtf.__version__
-        try:
-            extra_versions["Prosody"] = await client.get_server_version()
-        except quart.exceptions.Unauthorized:
-            extra_versions["Prosody"] = "unknown"
 
     return await render_template(
         "about.html",
         version=version,
         extra_versions=extra_versions,
+        core_versions=core_versions,
     )
 
 
