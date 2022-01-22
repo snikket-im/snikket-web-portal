@@ -59,7 +59,7 @@ _ACCESS_MODEL_CHOICES = [
 
 
 class ProfileForm(BaseForm):
-    nickname = wtforms.TextField(
+    nickname = wtforms.StringField(
         _l("Display name"),
     )
 

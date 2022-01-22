@@ -10,7 +10,6 @@ import aiohttp
 import quart.flask_patch
 
 import wtforms
-import wtforms.fields.html5
 
 from quart import (
     Blueprint,
