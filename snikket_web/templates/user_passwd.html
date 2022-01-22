@@ -9,15 +9,15 @@
 	{%- endcall -%}
 	<div class="f-ebox">
 		{{ form.current_password.label(class="required") }}
-		{{ form.current_password(class=("has-error" if form.current_password.name in form.errors else "")) }}
+		{{ form.current_password(class=("has-error" if form.current_password.name in form.errors else ""), autocomplete="current-password") }}
 	</div>
 	<div class="f-ebox">
 		{{ form.new_password.label(class="required") }}
-		{{ form.new_password }}
+		{{ form.new_password(autocomplete="new-password") }}
 	</div>
 	<div class="f-ebox">
 		{{ form.new_password_confirm.label(class="required") }}
-		{{ form.new_password_confirm(class=("has-error" if form.new_password_confirm.name in form.errors else "")) }}
+		{{ form.new_password_confirm(class=("has-error" if form.new_password_confirm.name in form.errors else ""), autocomplete="new-password") }}
 	</div>
 	<div class="box warning">
 		<header>{% trans %}Warning{% endtrans %}</header>

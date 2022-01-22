@@ -28,12 +28,12 @@
 		</div>
 		<div class="f-ebox">
 			{{ form.password.label }}
-			{{ form.password }}
+			{{ form.password(autocomplete="new-password") }}
 			<p class="field-desc weak">{% trans %}Enter a secure password that you do not use anywhere else.{% endtrans %}</p>
 		</div>
 		<div class="f-ebox">
 			{{ form.password_confirm.label }}
-			{{ form.password_confirm }}
+			{{ form.password_confirm(autocomplete="new-password") }}
 		</div>
 		<div class="f-bbox">
 			{%- call form_button("done", form.action_register, class="primary") -%}{%- endcall -%}
