@@ -17,7 +17,8 @@ COPY babel.cfg /opt/snikket-web-portal/babel.cfg
 
 WORKDIR /opt/snikket-web-portal
 
-RUN pip3 install -r requirements.txt; \
+RUN set -eu; \
+    pip3 install -r requirements.txt; \
     pip3 install -r build-requirements.txt; \
     make;
 
@@ -47,7 +48,7 @@ RUN set -eu; \
 WORKDIR /opt/snikket-web-portal
 
 COPY requirements.txt /opt/snikket-web-portal/requirements.txt
-RUN pip3 install -r requirements.txt; rm -rf /root/.cache;
+RUN set -eu; pip3 install -r requirements.txt; rm -rf /root/.cache;
 
 COPY --from=build /opt/snikket-web-portal/snikket_web/ /opt/snikket-web-portal/snikket_web
 COPY babel.cfg /opt/snikket-web-portal/babel.cfg
