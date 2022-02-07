@@ -6,8 +6,7 @@ RUN set -eu; \
     apt-get install -y --no-install-recommends \
         python3 python3-pip python3-setuptools python3-wheel \
         libpython3-dev \
-        make build-essential \
-        netcat;
+        make build-essential;
 
 COPY requirements.txt /opt/snikket-web-portal/requirements.txt
 COPY build-requirements.txt /opt/snikket-web-portal/build-requirements.txt
@@ -34,8 +33,6 @@ ENV SNIKKET_WEB_PYENV=/etc/snikket-web-portal/env.py
 
 ENV SNIKKET_WEB_PROSODY_ENDPOINT=http://127.0.0.1:5280/
 
-HEALTHCHECK CMD nc -zv ${SNIKKET_TWEAK_PORTAL_INTERNAL_HTTP_INTERFACE:-127.0.0.1} ${SNIKKET_TWEAK_PORTAL_INTERNAL_HTTP_PORT:-5765}
-
 COPY requirements.txt /opt/snikket-web-portal/requirements.txt
 
 WORKDIR /opt/snikket-web-portal
@@ -44,12 +41,14 @@ RUN set -eu; \
     export DEBIAN_FRONTEND=noninteractive ; \
     apt-get update ; \
     apt-get install -y --no-install-recommends \
-        python3 python3-pip python3-setuptools python3-wheel build-essential libpython3-dev; \
+        python3 python3-pip python3-setuptools python3-wheel build-essential libpython3-dev netcat; \
     pip3 install -r requirements.txt; \
     apt-get remove -y --autoremove build-essential libpython3-dev; \
     apt-get clean ; rm -rf /var/lib/apt/lists; \
     pip3 install hypercorn; \
     rm -rf /root/.cache;
+
+HEALTHCHECK CMD nc -zv ${SNIKKET_TWEAK_PORTAL_INTERNAL_HTTP_INTERFACE:-127.0.0.1} ${SNIKKET_TWEAK_PORTAL_INTERNAL_HTTP_PORT:-5765}
 
 COPY --from=build /opt/snikket-web-portal/snikket_web/ /opt/snikket-web-portal/snikket_web
 COPY babel.cfg /opt/snikket-web-portal/babel.cfg
