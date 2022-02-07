@@ -17,11 +17,11 @@
 	{%- call render_errors(form) %}{% endcall -%}
 	<div class="f-ebox">
 		{{ form.password.label }}
-		{{ form.password }}
+		{{ form.password(autocomplete="new-password") }}
 	</div>
 	<div class="f-ebox">
 		{{ form.password_confirm.label }}
-		{{ form.password_confirm }}
+		{{ form.password_confirm(autocomplete="new-password") }}
 	</div>
 	<div class="f-bbox">
 		{%- call form_button("passwd", form.action_reset, class="primary") -%}{%- endcall -%}
