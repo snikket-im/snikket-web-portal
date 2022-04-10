@@ -6,18 +6,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2022-01-17 17:27+0100\n"
-"PO-Revision-Date: 2021-06-19 15:01+0000\n"
-"Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
-"Language-Team: French <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/fr/>\n"
+"PO-Revision-Date: 2022-04-11 13:00+0000\n"
+"Last-Translator: David Baraniak <admin@chipmnk.dev>\n"
+"Language-Team: French <http://i18n.sotecware.net/projects/snikket/web-portal/"
+"fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.8.1\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:68 snikket_web/templates/admin_delete_user.html:10
@@ -221,6 +221,8 @@ msgid ""
 "The account data you tried to import is too large to upload. Please contact "
 "your Snikket operator."
 msgstr ""
+"Les données du compte que vous avez essayé d'importer sont trop volumineuses "
+"pour être téléchargées. Veuillez contacter votre opérateur Snikket."
 
 #: snikket_web/invite.py:112
 msgid "Username"
@@ -261,11 +263,11 @@ msgstr "Changer de mot de passe"
 
 #: snikket_web/invite.py:244
 msgid "Account data file"
-msgstr ""
+msgstr "Fichier de données du compte"
 
 #: snikket_web/invite.py:248
 msgid "Import data"
-msgstr ""
+msgstr "Importer les données"
 
 #: snikket_web/invite.py:269
 #, python-format
@@ -273,6 +275,9 @@ msgid ""
 "The account data you tried to import is in an unknown format. Please upload "
 "an XML file in XEP-0227 format (provided format: %(mimetype)s)."
 msgstr ""
+"Les données du compte que vous avez essayé d'importer sont dans un format "
+"inconnu. Veuillez télécharger un fichier XML au format XEP-0227 (format "
+"fourni : %(mimetype)s)."
 
 #: snikket_web/invite.py:289 snikket_web/templates/unauth.html:18
 #: snikket_web/user.py:178
@@ -341,11 +346,11 @@ msgstr "Mettre à jour le profil"
 
 #: snikket_web/user.py:82
 msgid "Account data"
-msgstr ""
+msgstr "Données du compte"
 
 #: snikket_web/user.py:86
 msgid "Upload"
-msgstr ""
+msgstr "Télécharger"
 
 #: snikket_web/user.py:111
 msgid "Incorrect password."
@@ -369,11 +374,11 @@ msgstr "Profil mis à jour"
 
 #: snikket_web/user.py:184
 msgid "Export"
-msgstr ""
+msgstr "Exporter"
 
 #: snikket_web/user.py:202
 msgid "You currently have no account data to export."
-msgstr ""
+msgstr "Vous n'avez actuellement aucune donnée de compte à exporter."
 
 #: snikket_web/templates/_footer.html:4
 #, python-format
@@ -1014,7 +1019,7 @@ msgstr "Statut du serveur Snikket"
 
 #: snikket_web/templates/admin_system.html:71
 msgid "Storage used by shared files"
-msgstr ""
+msgstr "Stockage utilisé par les fichiers partagés"
 
 #: snikket_web/templates/admin_system.html:79
 msgid "Connected devices"
@@ -1314,22 +1319,22 @@ msgid ""
 "You can now safely close this page, or log in to the web portal to <a href="
 "\"%(login_url)s\">manage your account</a>."
 msgstr ""
+"Vous pouvez maintenant fermer cette page en toute sécurité, ou vous "
+"connecter au portail web pour <a href=\"%(login_url)s\">gérer votre "
+"compte</a>."
 
 #: snikket_web/templates/invite_success.html:21
-#, fuzzy
-#| msgid "Operation successful"
 msgid "Import successful"
-msgstr "Opération réussie"
+msgstr "Importation réussie"
 
 #: snikket_web/templates/invite_success.html:22
 msgid "Congratulations! Your account data has been successfully imported."
 msgstr ""
+"Félicitations ! Les données de votre compte ont été importées avec succès."
 
 #: snikket_web/templates/invite_success.html:26
-#, fuzzy
-#| msgid "Using the Snikket app"
 msgid "Moving to Snikket?"
-msgstr "En utilisant l’application Snikket"
+msgstr "Nouveau utilisateur Snikket ?"
 
 #: snikket_web/templates/invite_success.html:27
 msgid ""
@@ -1338,10 +1343,15 @@ msgid ""
 "information, etc.) from your previous account. When you have exported the "
 "data from your previous account, upload it using the form below."
 msgstr ""
+"Si vous passez d'une autre instance de Snikket ou d'un autre service "
+"compatible XMPP, vous pouvez éventuellement importer les données (contacts, "
+"informations de profil, etc.) de votre ancien compte. Lorsque vous avez "
+"exporté les données de votre ancien compte, téléchargez-les en utilisant le "
+"formulaire ci-dessous."
 
 #: snikket_web/templates/invite_success.html:30
 msgid "Upload account data"
-msgstr ""
+msgstr "Télécharger les données du compte"
 
 #: snikket_web/templates/invite_view.html:6
 #, python-format
@@ -1396,10 +1406,9 @@ msgstr "Télécharger sur l’App Store"
 
 #: snikket_web/templates/invite_view.html:32
 msgid "Get it on F-Droid"
-msgstr ""
+msgstr "Obtenez-le sur F-Droid"
 
 #: snikket_web/templates/invite_view.html:35
-#, fuzzy
 msgid "Send to mobile device"
 msgstr "Envoyer vers l'appareil"
 
@@ -1478,10 +1487,14 @@ msgid ""
 "After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
 msgstr ""
+"Après avoir téléchargé Snikket depuis l'App Store, vous devez revenir à ce "
+"lien d'invitation et cliquer sur \"Ouvrir l'application\" pour continuer."
 
 #: snikket_web/templates/invite_view.html:101
 msgid "First download Snikket from the App Store using the button below:"
 msgstr ""
+"Téléchargez d'abord Snikket depuis l'App Store en utilisant le bouton ci-"
+"dessous :"
 
 #: snikket_web/templates/invite_view.html:103
 #: snikket_web/templates/invite_view.html:131
@@ -1489,6 +1502,9 @@ msgid ""
 "After the installation is complete, you can return to this page and tap the "
 "\"Open the app\" button to continue with the setup:"
 msgstr ""
+"Une fois l'installation terminée, vous pouvez revenir à cette page et "
+"appuyer sur le bouton \"Ouvrir l'application\" pour poursuivre la "
+"configuration :"
 
 #: snikket_web/templates/invite_view.html:121
 #: snikket_web/templates/invite_view.html:130
@@ -1500,10 +1516,13 @@ msgid ""
 "After installing Snikket via F-Droid, you have to return to this invite link "
 "and tap on \"Open the app\" to proceed."
 msgstr ""
+"Après avoir installé Snikket via F-Droid, vous devez revenir à ce lien "
+"d'invitation et appuyer sur \"Ouvrir l'application\" pour continuer."
 
 #: snikket_web/templates/invite_view.html:129
 msgid "First install Snikket from F-Droid using the button below:"
 msgstr ""
+"Installez d'abord Snikket depuis F-Droid en utilisant le bouton ci-dessous :"
 
 #: snikket_web/templates/library.j2:18
 msgid "Copy link"
@@ -1570,10 +1589,8 @@ msgstr "Éditer votre profil"
 
 #: snikket_web/templates/user_home.html:33
 #: snikket_web/templates/user_manage_data.html:4
-#, fuzzy
-#| msgid "Manage users"
 msgid "Manage your data"
-msgstr "Gérer les utilisateurs"
+msgstr "Gérer vos données"
 
 #: snikket_web/templates/user_home.html:39
 msgid "Your Snikket"
@@ -1601,16 +1618,16 @@ msgstr ""
 "autres appareils connectés."
 
 #: snikket_web/templates/user_manage_data.html:8
-#, fuzzy
-#| msgid "Your account"
 msgid "Export account"
-msgstr "Votre compte"
+msgstr "Exportation du compte"
 
 #: snikket_web/templates/user_manage_data.html:9
 msgid ""
 "Download your account data as a file for backup purposes or to move your "
 "account to another service."
 msgstr ""
+"Téléchargez les données de votre compte sous forme d'un fichier à des fins "
+"de sauvegarde ou pour transférer votre compte vers un autre service."
 
 #: snikket_web/templates/user_passwd.html:5
 msgid "Change your password"
