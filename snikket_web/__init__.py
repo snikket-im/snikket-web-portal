@@ -153,6 +153,7 @@ class AppConfig:
         "it",
         "pl",
         "sv",
+        "zh_Hans_CN",
     ], converter=autosplit)
     apple_store_url = environ.var(
         "https://apps.apple.com/us/app/snikket/id1545164189",
