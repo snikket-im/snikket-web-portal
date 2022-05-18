@@ -6,18 +6,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2022-01-17 17:27+0100\n"
-"PO-Revision-Date: 2022-05-14 14:42+0800\n"
-"Last-Translator: Raka <me@bihu.im>\n"
-"Language-Team: zh_Hans_CN <LL@li.org>\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2022-05-20 00:01+0000\n"
+"Last-Translator: Zack Zhou <lnx@outlook.com>\n"
+"Language-Team: Chinese (Simplified) <http://i18n.sotecware.net/projects/"
+"snikket/web-portal/zh_Hans/>\n"
+"Language: zh_Hans_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.8.1\n"
 "Generated-By: Babel 2.10.1\n"
-"X-Generator: Poedit 3.0.1\n"
 
 #: snikket_web/admin.py:68 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_edit_circle.html:59
@@ -371,7 +372,7 @@ msgstr "导出"
 
 #: snikket_web/user.py:202
 msgid "You currently have no account data to export."
-msgstr "目前没有需要导出的数据"
+msgstr "目前没有需要导出的数据。"
 
 #: snikket_web/templates/_footer.html:4
 #, python-format
@@ -415,13 +416,15 @@ msgid ""
 "\"%(agpl_url)s\">Affero GNU General Public License, version 3.0 or later</a>. "
 "The full terms of the license can be reviewed using the aforementioned link."
 msgstr ""
+"此Web门户软件许可遵循 <a href=\"%(agpl_url)s\">GNU Affero通用公共许可证（版本3."
+"0及之后版本）</a>中的条款。此许可证的完整条款请使用前文中的链接查看。"
 
 #: snikket_web/templates/about.html:15
 #, python-format
 msgid ""
 "The source code of the web portal can be downloaded and viewed in <a href="
 "\"%(source_url)s\">its GitHub repository</a>."
-msgstr ""
+msgstr "此Web门户的源代码可在<a href=\"%(source_url)s\">其GitHub repository</a>查看并下载。"
 
 #: snikket_web/templates/about.html:16
 #, python-format
@@ -430,6 +433,8 @@ msgid ""
 "Material Icons</a>, made available by Google under the terms of the <a href="
 "\"%(apache20_url)s\">Apache 2.0 License</a>."
 msgstr ""
+"Web门户中使用的图标为<a href=\"%(source_url)s\">Google’s Material Icons</a>，"
+"由Google制作分发并遵循<a href=\"%(apache20_url)s\">Apache 2.0 许可证</a>中的条款。"
 
 #: snikket_web/templates/about.html:17
 msgid "Trademarks"
@@ -442,6 +447,8 @@ msgid ""
 "Company. For more information about the trademarks, visit the <a href="
 "\"%(trademarks_url)s\">Snikket Trademarks information page</a>."
 msgstr ""
+"“Snikket”和鹦鹉logo是Snikket Community Interest Company的商标。关于商标的更多信息，请访问<a href="
+"\"%(trademarks_url)s\">Snikket商标信息页面</a>。"
 
 #: snikket_web/templates/about.html:19
 msgid "Software Versions"
@@ -544,12 +551,11 @@ msgstr "警告"
 
 #: snikket_web/templates/admin_debug_user.html:12
 msgid "The below dump may contain sensitive information."
-msgstr "Dump可能包括敏感信息"
+msgstr "调试信息中可能包括敏感信息。"
 
 #: snikket_web/templates/admin_debug_user.html:15
-#, fuzzy
 msgid "Raw debug dump"
-msgstr "Debug信息"
+msgstr "原始调试信息"
 
 #: snikket_web/templates/admin_debug_user.html:17
 msgid "Copy complete output"
@@ -596,7 +602,7 @@ msgstr "这是你的主圈子"
 
 #: snikket_web/templates/admin_edit_circle.html:15
 msgid "This circle is managed automatically and cannot be removed or renamed."
-msgstr "此圈子由系统自动生成，无法被修改或删除"
+msgstr "此圈子由系统自动生成，无法被修改或删除。"
 
 #: snikket_web/templates/admin_edit_circle.html:17
 #: snikket_web/templates/admin_edit_circle.html:33
@@ -636,7 +642,7 @@ msgstr "圈子成员"
 
 #: snikket_web/templates/admin_edit_circle.html:71
 msgid "The user has been deleted from the server."
-msgstr "用户已从实例删除"
+msgstr "用户已从实例删除。"
 
 #: snikket_web/templates/admin_edit_circle.html:71
 #: snikket_web/templates/library.j2:108
@@ -698,7 +704,7 @@ msgstr "圈子"
 
 #: snikket_web/templates/admin_edit_invite.html:35
 msgid "The user will not be added to any circle and will have no contacts."
-msgstr "此用户将不会有圈子和联系人"
+msgstr "此用户将不会有任何圈子和联系人。"
 
 #: snikket_web/templates/admin_edit_invite.html:40
 msgid "Contact"
@@ -744,7 +750,7 @@ msgstr "编辑用户"
 
 #: snikket_web/templates/admin_edit_user.html:26
 msgid "The login name cannot be changed."
-msgstr "账号无法修改"
+msgstr "登录账号无法被修改。"
 
 #: snikket_web/templates/admin_edit_user.html:33
 msgid ""
@@ -755,7 +761,7 @@ msgstr "权限级别控制此Sknikket实例的用户能发起交流的范围。"
 #: snikket_web/templates/admin_edit_user.html:40
 #, python-format
 msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
-msgstr ""
+msgstr "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 
 #: snikket_web/templates/admin_edit_user.html:50
 msgid "Return to user list"
@@ -807,7 +813,7 @@ msgstr "用户"
 
 #: snikket_web/templates/admin_home.html:11
 msgid "Create password reset links or delete users."
-msgstr "创建密码重置链接或删除用户"
+msgstr "创建密码重置链接或删除用户。"
 
 #: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_users.html:4
@@ -837,7 +843,7 @@ msgstr "系统健康状况"
 
 #: snikket_web/templates/admin_home.html:38
 msgid "View the server status or send a broadcast message to all users."
-msgstr "查看服务器状态或向所有用户发布广播消息"
+msgstr "查看服务器状态或向所有用户发布广播消息。"
 
 #: snikket_web/templates/admin_home.html:40
 msgid "Send a broadcast message to all users."
@@ -850,7 +856,7 @@ msgstr "系统管理"
 
 #: snikket_web/templates/admin_home.html:48
 msgid "Go back to your user's web portal page."
-msgstr "返回用户门户页面"
+msgstr "返回用户门户页面。"
 
 #: snikket_web/templates/admin_home.html:50
 msgid "Exit admin panel"
@@ -882,7 +888,7 @@ msgstr "删除邀请"
 
 #: snikket_web/templates/admin_invites.html:57
 msgid "Currently, there are no pending invitations."
-msgstr "当前没有待定邀请"
+msgstr "当前没有待定邀请。"
 
 #: snikket_web/templates/admin_reset_user_password.html:8
 msgid "Password reset"
@@ -987,7 +993,7 @@ msgstr "此用户是管理员。"
 
 #: snikket_web/templates/admin_users.html:19
 msgid " (Administrator)"
-msgstr "（管理员）"
+msgstr " （管理员）"
 
 #: snikket_web/templates/admin_users.html:22
 msgid "The user is restricted."
@@ -995,7 +1001,7 @@ msgstr "此用户受到限制。"
 
 #: snikket_web/templates/admin_users.html:22
 msgid " (Restricted)"
-msgstr "（受限）"
+msgstr " （受限）"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
@@ -1040,7 +1046,7 @@ msgstr "邀请到 %(site_name)s"
 #: snikket_web/templates/invite_view.html:14
 #, python-format
 msgid "Powered by <img src=\"%(logo_url)s\" alt=\"Snikket\">"
-msgstr ""
+msgstr "由<img alt=\"Snikket\" src=\"%(logo_url)s\">强力驱动"
 
 #: snikket_web/templates/invite_invalid.html:8
 msgid "Invite expired"
@@ -1131,7 +1137,7 @@ msgstr "在线重置密码"
 msgid ""
 "To reset your password online, fill out the fields below and confirm using the "
 "button."
-msgstr "填写信息并提交来重置密码"
+msgstr "填写信息并使用下面的按钮提交来在线重置密码。"
 
 #: snikket_web/templates/invite_reset_success.html:5
 msgid "Password reset successful | Snikket"
@@ -1300,6 +1306,8 @@ msgid ""
 "Install the Snikket App on your Android device (<a href=\"%(ios_info_url)s\" "
 "rel=\"noopener noreferrer\" target=\"_blank\">iOS coming soon!</a>)."
 msgstr ""
+"在你的Android设备上安装Snikket App（<a href=\"%(ios_info_url)s\" rel=\"noopener "
+"noreferrer\" target=\"_blank\">iOS 版本即将到来！</a>）。"
 
 #: snikket_web/templates/invite_view.html:28
 msgid "Get it on Google Play"
