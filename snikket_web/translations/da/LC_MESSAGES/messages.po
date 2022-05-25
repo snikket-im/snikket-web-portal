@@ -6,18 +6,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2022-01-17 17:27+0100\n"
-"PO-Revision-Date: 2021-04-02 19:01+0000\n"
-"Last-Translator: Daniel Holmgaard <annoncer@protonmail.com>\n"
-"Language-Team: Danish <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/da/>\n"
+"PO-Revision-Date: 2022-05-26 23:01+0000\n"
+"Last-Translator: Daniel Holmgaard <fovatis@tutanota.com>\n"
+"Language-Team: Danish <http://i18n.sotecware.net/projects/snikket/web-portal/"
+"da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.8.1\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:68 snikket_web/templates/admin_delete_user.html:10
@@ -198,19 +198,19 @@ msgstr ""
 
 #: snikket_web/admin.py:615
 msgid "Only send to online users"
-msgstr ""
+msgstr "Send kun til online brugere"
 
 #: snikket_web/admin.py:619
 msgid "Post to all users"
-msgstr ""
+msgstr "Send til alle brugere"
 
 #: snikket_web/admin.py:623
 msgid "Send preview to yourself"
-msgstr ""
+msgstr "Send forhåndsvisning til dig selv"
 
 #: snikket_web/admin.py:645
 msgid "Announcement sent!"
-msgstr ""
+msgstr "Bekendgørelse sendt!"
 
 #: snikket_web/infra.py:51
 msgid "Main"
@@ -265,7 +265,7 @@ msgstr ""
 
 #: snikket_web/invite.py:248
 msgid "Import data"
-msgstr ""
+msgstr "Importer data"
 
 #: snikket_web/invite.py:269
 #, python-format
@@ -341,11 +341,11 @@ msgstr "Opdater profil"
 
 #: snikket_web/user.py:82
 msgid "Account data"
-msgstr ""
+msgstr "Kontodata"
 
 #: snikket_web/user.py:86
 msgid "Upload"
-msgstr ""
+msgstr "Upload"
 
 #: snikket_web/user.py:111
 msgid "Incorrect password."
@@ -369,11 +369,11 @@ msgstr "Profil opdateret"
 
 #: snikket_web/user.py:184
 msgid "Export"
-msgstr ""
+msgstr "Exporter"
 
 #: snikket_web/user.py:202
 msgid "You currently have no account data to export."
-msgstr ""
+msgstr "Du har i øjeblikket ingen kontodata at eksportere."
 
 #: snikket_web/templates/_footer.html:4
 #, python-format
@@ -662,7 +662,7 @@ msgstr "Cirkel medlemmer"
 
 #: snikket_web/templates/admin_edit_circle.html:71
 msgid "The user has been deleted from the server."
-msgstr ""
+msgstr "Brugeren er blevet slettet fra serveren."
 
 #: snikket_web/templates/admin_edit_circle.html:71
 #: snikket_web/templates/library.j2:108
@@ -876,11 +876,11 @@ msgstr "Håndter invitationer"
 
 #: snikket_web/templates/admin_home.html:35
 msgid "System health"
-msgstr ""
+msgstr "Systemets sundhed"
 
 #: snikket_web/templates/admin_home.html:38
 msgid "View the server status or send a broadcast message to all users."
-msgstr ""
+msgstr "Vis serverstatus, eller send en udsendelsesmeddelelse til alle brugere."
 
 #: snikket_web/templates/admin_home.html:40
 msgid "Send a broadcast message to all users."
@@ -952,11 +952,11 @@ msgstr "Ødelæg link"
 
 #: snikket_web/templates/admin_system.html:6
 msgid "Overall system status"
-msgstr ""
+msgstr "Samlet systemstatus"
 
 #: snikket_web/templates/admin_system.html:9
 msgid "System load (5 minute average)"
-msgstr ""
+msgstr "Systembelastning (5 minutters gennemsnit)"
 
 #: snikket_web/templates/admin_system.html:14
 #: snikket_web/templates/admin_system.html:22
@@ -967,11 +967,11 @@ msgstr ""
 #: snikket_web/templates/admin_system.html:76
 #: snikket_web/templates/admin_system.html:84
 msgid "unknown"
-msgstr ""
+msgstr "ukendt"
 
 #: snikket_web/templates/admin_system.html:17
 msgid "Memory use"
-msgstr ""
+msgstr "Forbrug af hukommelse"
 
 #: snikket_web/templates/admin_system.html:20
 #, python-format
@@ -982,27 +982,27 @@ msgstr ""
 
 #: snikket_web/templates/admin_system.html:27
 msgid "Web portal status"
-msgstr ""
+msgstr "Webportalens status"
 
 #: snikket_web/templates/admin_system.html:30
 #: snikket_web/templates/admin_system.html:53
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 #: snikket_web/templates/admin_system.html:31
 #: snikket_web/templates/admin_system.html:54
 msgid "View all versions"
-msgstr ""
+msgstr "Vis alle versioner"
 
 #: snikket_web/templates/admin_system.html:32
 #: snikket_web/templates/admin_system.html:55
 msgid "Average CPU use"
-msgstr ""
+msgstr "Gennemsnitlig CPU-forbrug"
 
 #: snikket_web/templates/admin_system.html:40
 #: snikket_web/templates/admin_system.html:63
 msgid "Current memory use"
-msgstr ""
+msgstr "Nuværende hukommelsesbrug"
 
 #: snikket_web/templates/admin_system.html:50
 #, fuzzy
@@ -1012,21 +1012,23 @@ msgstr "Snikket Webportal"
 
 #: snikket_web/templates/admin_system.html:71
 msgid "Storage used by shared files"
-msgstr ""
+msgstr "Lagerplads, der bruges af delte filer"
 
 #: snikket_web/templates/admin_system.html:79
 msgid "Connected devices"
-msgstr ""
+msgstr "Forbundet enheder"
 
 #: snikket_web/templates/admin_system.html:90
 msgid "Broadcast message"
-msgstr ""
+msgstr "Send besked"
 
 #: snikket_web/templates/admin_system.html:92
 msgid ""
 "This form allows you to send a message to all users currently online on your "
 "Snikket server. Use it wisely."
 msgstr ""
+"Denne formular giver dig mulighed for at sende en besked til alle brugere, "
+"der i øjeblikket er online på din Snikket-server. Brug den med omtanke."
 
 #: snikket_web/templates/admin_users.html:19
 msgid "The user is an administrator."
@@ -1327,7 +1329,7 @@ msgstr ""
 
 #: snikket_web/templates/invite_success.html:30
 msgid "Upload account data"
-msgstr ""
+msgstr "Upload kontodata"
 
 #: snikket_web/templates/invite_view.html:6
 #, python-format
@@ -1558,10 +1560,8 @@ msgstr "Rediger profil"
 
 #: snikket_web/templates/user_home.html:33
 #: snikket_web/templates/user_manage_data.html:4
-#, fuzzy
-#| msgid "Manage users"
 msgid "Manage your data"
-msgstr "Håndter brugere"
+msgstr "Håndter dine data"
 
 #: snikket_web/templates/user_home.html:39
 msgid "Your Snikket"
@@ -1598,6 +1598,8 @@ msgid ""
 "Download your account data as a file for backup purposes or to move your "
 "account to another service."
 msgstr ""
+"Download dine kontodata som en fil til sikkerhedskopieringsformål eller for "
+"at flytte din konto til en anden tjeneste."
 
 #: snikket_web/templates/user_passwd.html:5
 msgid "Change your password"
