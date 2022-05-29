@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2022-01-17 17:27+0100\n"
-"PO-Revision-Date: 2022-05-26 23:01+0000\n"
+"PO-Revision-Date: 2022-05-30 14:01+0000\n"
 "Last-Translator: Daniel Holmgaard <fovatis@tutanota.com>\n"
 "Language-Team: Danish <http://i18n.sotecware.net/projects/snikket/web-portal/"
 "da/>\n"
@@ -194,7 +194,7 @@ msgstr "Bruger fjernet fra cirkel"
 
 #: snikket_web/admin.py:609
 msgid "Message contents"
-msgstr ""
+msgstr "Meddelelsens indhold"
 
 #: snikket_web/admin.py:615
 msgid "Only send to online users"
@@ -221,6 +221,8 @@ msgid ""
 "The account data you tried to import is too large to upload. Please contact "
 "your Snikket operator."
 msgstr ""
+"De kontodata, du forsøgte at importere, er for store til at uploade. Kontakt "
+"din Snikket-operatør."
 
 #: snikket_web/invite.py:112
 msgid "Username"
@@ -261,7 +263,7 @@ msgstr "Ændr adgangskode"
 
 #: snikket_web/invite.py:244
 msgid "Account data file"
-msgstr ""
+msgstr "Kontodatafil"
 
 #: snikket_web/invite.py:248
 msgid "Import data"
@@ -273,6 +275,8 @@ msgid ""
 "The account data you tried to import is in an unknown format. Please upload "
 "an XML file in XEP-0227 format (provided format: %(mimetype)s)."
 msgstr ""
+"De kontodata, du forsøgte at importere, er i et ukendt format. Upload en XML-"
+"fil i XEP-0227-format (forudsat format: %(mimetype)s)."
 
 #: snikket_web/invite.py:289 snikket_web/templates/unauth.html:18
 #: snikket_web/user.py:178
@@ -884,14 +888,12 @@ msgstr "Vis serverstatus, eller send en udsendelsesmeddelelse til alle brugere."
 
 #: snikket_web/templates/admin_home.html:40
 msgid "Send a broadcast message to all users."
-msgstr ""
+msgstr "Send en udsendelsesmeddelelse til alle brugere."
 
 #: snikket_web/templates/admin_home.html:43
 #: snikket_web/templates/admin_system.html:4
-#, fuzzy
-#| msgid "Manage users"
 msgid "Manage system"
-msgstr "Håndter brugere"
+msgstr "Håndter system"
 
 #: snikket_web/templates/admin_home.html:48
 msgid "Go back to your user's web portal page."
@@ -979,6 +981,8 @@ msgid ""
 "%(percentage_global)s of %(mem_available)s. Of that, Snikket uses "
 "%(percentage_snikket)s."
 msgstr ""
+"%(percentage_global)s af %(mem_available)s. Der af bruger Snikket "
+"%(percentage_snikket)s."
 
 #: snikket_web/templates/admin_system.html:27
 msgid "Web portal status"
@@ -1005,10 +1009,8 @@ msgid "Current memory use"
 msgstr "Nuværende hukommelsesbrug"
 
 #: snikket_web/templates/admin_system.html:50
-#, fuzzy
-#| msgid "Snikket Web Portal"
 msgid "Snikket server status"
-msgstr "Snikket Webportal"
+msgstr "Snikket server status"
 
 #: snikket_web/templates/admin_system.html:71
 msgid "Storage used by shared files"
@@ -1302,22 +1304,20 @@ msgid ""
 "You can now safely close this page, or log in to the web portal to <a href="
 "\"%(login_url)s\">manage your account</a>."
 msgstr ""
+"Du kan nu trygt lukke denne side eller logge ind på webportalen for at <a "
+"href=\"%(login_url)s\">administrere din konto</a>."
 
 #: snikket_web/templates/invite_success.html:21
-#, fuzzy
-#| msgid "Operation successful"
 msgid "Import successful"
-msgstr "Operation lykkes"
+msgstr "Importering lykkes"
 
 #: snikket_web/templates/invite_success.html:22
 msgid "Congratulations! Your account data has been successfully imported."
-msgstr ""
+msgstr "Tillykke! Dine kontodata er blevet importeret."
 
 #: snikket_web/templates/invite_success.html:26
-#, fuzzy
-#| msgid "Using the Snikket app"
 msgid "Moving to Snikket?"
-msgstr "Bruger Snikket appen"
+msgstr "Flytte til Snikket?"
 
 #: snikket_web/templates/invite_success.html:27
 msgid ""
@@ -1326,6 +1326,10 @@ msgid ""
 "information, etc.) from your previous account. When you have exported the "
 "data from your previous account, upload it using the form below."
 msgstr ""
+"Hvis du flytter fra en anden Snikket-platform eller en anden XMPP-kompatibel "
+"tjeneste, kan du eventuelt importere dataene (kontakter, profiloplysninger "
+"osv.) fra din tidligere konto. Når du har eksporteret dataene fra din "
+"tidligere konto, skal du uploade dem ved hjælp af nedenstående formular."
 
 #: snikket_web/templates/invite_success.html:30
 msgid "Upload account data"
@@ -1588,10 +1592,8 @@ msgstr ""
 "af de forbundne enheder."
 
 #: snikket_web/templates/user_manage_data.html:8
-#, fuzzy
-#| msgid "Your account"
 msgid "Export account"
-msgstr "Din konto"
+msgstr "Eksporter konto"
 
 #: snikket_web/templates/user_manage_data.html:9
 msgid ""
