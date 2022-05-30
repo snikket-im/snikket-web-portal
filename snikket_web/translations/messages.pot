@@ -8,204 +8,204 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-01-17 17:27+0100\n"
+"POT-Creation-Date: 2022-05-30 20:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.1\n"
 
-#: snikket_web/admin.py:68 snikket_web/templates/admin_delete_user.html:10
+#: snikket_web/admin.py:70 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_edit_circle.html:59
 #: snikket_web/templates/admin_users.html:8
 msgid "Login name"
 msgstr ""
 
-#: snikket_web/admin.py:72 snikket_web/templates/admin_delete_user.html:12
+#: snikket_web/admin.py:74 snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/templates/admin_edit_circle.html:60
 #: snikket_web/templates/admin_users.html:9 snikket_web/user.py:63
 msgid "Display name"
 msgstr ""
 
-#: snikket_web/admin.py:76 snikket_web/templates/admin_edit_user.html:32
+#: snikket_web/admin.py:78 snikket_web/templates/admin_edit_user.html:32
 msgid "Access Level"
 msgstr ""
 
-#: snikket_web/admin.py:78
+#: snikket_web/admin.py:80
 msgid "Limited"
 msgstr ""
 
-#: snikket_web/admin.py:79
+#: snikket_web/admin.py:81
 msgid "Normal user"
 msgstr ""
 
-#: snikket_web/admin.py:80
+#: snikket_web/admin.py:82
 msgid "Administrator"
 msgstr ""
 
-#: snikket_web/admin.py:85
+#: snikket_web/admin.py:87
 msgid "Update user"
 msgstr ""
 
-#: snikket_web/admin.py:89
+#: snikket_web/admin.py:91
 msgid "Create password reset link"
 msgstr ""
 
-#: snikket_web/admin.py:107
+#: snikket_web/admin.py:109
 msgid "Password reset link created"
 msgstr ""
 
-#: snikket_web/admin.py:122
+#: snikket_web/admin.py:124
 msgid "User information updated."
 msgstr ""
 
-#: snikket_web/admin.py:144
+#: snikket_web/admin.py:146
 msgid "Delete user permanently"
 msgstr ""
 
-#: snikket_web/admin.py:157
+#: snikket_web/admin.py:159
 msgid "User deleted"
 msgstr ""
 
-#: snikket_web/admin.py:195
+#: snikket_web/admin.py:197
 msgid "Password reset link not found"
 msgstr ""
 
-#: snikket_web/admin.py:207
+#: snikket_web/admin.py:209
 msgid "Password reset link deleted"
 msgstr ""
 
-#: snikket_web/admin.py:227
+#: snikket_web/admin.py:229
 msgid "Invite to circle"
 msgstr ""
 
-#: snikket_web/admin.py:233
+#: snikket_web/admin.py:235
 msgid "At least one circle must be selected"
 msgstr ""
 
-#: snikket_web/admin.py:238
+#: snikket_web/admin.py:240
 msgid "Valid for"
 msgstr ""
 
-#: snikket_web/admin.py:240
+#: snikket_web/admin.py:242
 msgid "One hour"
 msgstr ""
 
-#: snikket_web/admin.py:241
+#: snikket_web/admin.py:243
 msgid "Twelve hours"
 msgstr ""
 
-#: snikket_web/admin.py:242
+#: snikket_web/admin.py:244
 msgid "One day"
 msgstr ""
 
-#: snikket_web/admin.py:243
+#: snikket_web/admin.py:245
 msgid "One week"
 msgstr ""
 
-#: snikket_web/admin.py:244
+#: snikket_web/admin.py:246
 msgid "Four weeks"
 msgstr ""
 
-#: snikket_web/admin.py:250 snikket_web/templates/admin_edit_invite.html:17
+#: snikket_web/admin.py:252 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
 msgstr ""
 
-#: snikket_web/admin.py:252 snikket_web/templates/library.j2:116
+#: snikket_web/admin.py:254 snikket_web/templates/library.j2:116
 msgid "Individual"
 msgstr ""
 
-#: snikket_web/admin.py:253 snikket_web/templates/library.j2:114
+#: snikket_web/admin.py:255 snikket_web/templates/library.j2:114
 msgid "Group"
 msgstr ""
 
-#: snikket_web/admin.py:259
+#: snikket_web/admin.py:261
 msgid "New invitation link"
 msgstr ""
 
-#: snikket_web/admin.py:321
+#: snikket_web/admin.py:323
 msgid "Revoke"
 msgstr ""
 
-#: snikket_web/admin.py:345
+#: snikket_web/admin.py:347
 msgid "Invitation created"
 msgstr ""
 
-#: snikket_web/admin.py:361
+#: snikket_web/admin.py:363
 msgid "No such invitation exists"
 msgstr ""
 
-#: snikket_web/admin.py:376
+#: snikket_web/admin.py:378
 msgid "Invitation revoked"
 msgstr ""
 
-#: snikket_web/admin.py:393 snikket_web/admin.py:441
+#: snikket_web/admin.py:395 snikket_web/admin.py:443
 msgid "Name"
 msgstr ""
 
-#: snikket_web/admin.py:398 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:400 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr ""
 
-#: snikket_web/admin.py:428
+#: snikket_web/admin.py:430
 msgid "Circle created"
 msgstr ""
 
-#: snikket_web/admin.py:446
+#: snikket_web/admin.py:448
 msgid "Select user"
 msgstr ""
 
-#: snikket_web/admin.py:451
+#: snikket_web/admin.py:453
 msgid "Update circle"
 msgstr ""
 
-#: snikket_web/admin.py:455
+#: snikket_web/admin.py:457
 msgid "Delete circle permanently"
 msgstr ""
 
-#: snikket_web/admin.py:461
+#: snikket_web/admin.py:463
 msgid "Add user"
 msgstr ""
 
-#: snikket_web/admin.py:477
+#: snikket_web/admin.py:479
 msgid "No such circle exists"
 msgstr ""
 
-#: snikket_web/admin.py:514
+#: snikket_web/admin.py:516
 msgid "Circle data updated"
 msgstr ""
 
-#: snikket_web/admin.py:520
+#: snikket_web/admin.py:522
 msgid "Circle deleted"
 msgstr ""
 
-#: snikket_web/admin.py:531
+#: snikket_web/admin.py:533
 msgid "User added to circle"
 msgstr ""
 
-#: snikket_web/admin.py:540
+#: snikket_web/admin.py:542
 msgid "User removed from circle"
 msgstr ""
 
-#: snikket_web/admin.py:609
+#: snikket_web/admin.py:611
 msgid "Message contents"
 msgstr ""
 
-#: snikket_web/admin.py:615
+#: snikket_web/admin.py:617
 msgid "Only send to online users"
 msgstr ""
 
-#: snikket_web/admin.py:619
+#: snikket_web/admin.py:621
 msgid "Post to all users"
 msgstr ""
 
-#: snikket_web/admin.py:623
+#: snikket_web/admin.py:625
 msgid "Send preview to yourself"
 msgstr ""
 
-#: snikket_web/admin.py:645
+#: snikket_web/admin.py:647
 msgid "Announcement sent!"
 msgstr ""
 
@@ -213,82 +213,82 @@ msgstr ""
 msgid "Main"
 msgstr ""
 
-#: snikket_web/invite.py:33
+#: snikket_web/invite.py:35
 msgid ""
 "The account data you tried to import is too large to upload. Please "
 "contact your Snikket operator."
 msgstr ""
 
-#: snikket_web/invite.py:112
+#: snikket_web/invite.py:114
 msgid "Username"
 msgstr ""
 
-#: snikket_web/invite.py:116 snikket_web/invite.py:184 snikket_web/main.py:41
+#: snikket_web/invite.py:118 snikket_web/invite.py:186 snikket_web/main.py:43
 msgid "Password"
 msgstr ""
 
-#: snikket_web/invite.py:120 snikket_web/invite.py:188
+#: snikket_web/invite.py:122 snikket_web/invite.py:190
 msgid "Confirm password"
 msgstr ""
 
-#: snikket_web/invite.py:124 snikket_web/invite.py:192
+#: snikket_web/invite.py:126 snikket_web/invite.py:194
 msgid "The passwords must match."
 msgstr ""
 
-#: snikket_web/invite.py:129
+#: snikket_web/invite.py:131
 msgid "Create account"
 msgstr ""
 
-#: snikket_web/invite.py:156
+#: snikket_web/invite.py:158
 msgid "That username is already taken."
 msgstr ""
 
-#: snikket_web/invite.py:160 snikket_web/invite.py:225
+#: snikket_web/invite.py:162 snikket_web/invite.py:227
 msgid "Registration was declined for unknown reasons."
 msgstr ""
 
-#: snikket_web/invite.py:164
+#: snikket_web/invite.py:166
 msgid "The username is not valid."
 msgstr ""
 
-#: snikket_web/invite.py:197 snikket_web/templates/user_home.html:32
+#: snikket_web/invite.py:199 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr ""
 
-#: snikket_web/invite.py:244
+#: snikket_web/invite.py:246
 msgid "Account data file"
 msgstr ""
 
-#: snikket_web/invite.py:248
+#: snikket_web/invite.py:250
 msgid "Import data"
 msgstr ""
 
-#: snikket_web/invite.py:269
+#: snikket_web/invite.py:271
 #, python-format
 msgid ""
 "The account data you tried to import is in an unknown format. Please "
 "upload an XML file in XEP-0227 format (provided format: %(mimetype)s)."
 msgstr ""
 
-#: snikket_web/invite.py:289 snikket_web/templates/unauth.html:18
+#: snikket_web/invite.py:291 snikket_web/templates/unauth.html:18
 #: snikket_web/user.py:178
 msgid "Error"
 msgstr ""
 
-#: snikket_web/main.py:36
+#: snikket_web/main.py:38
 msgid "Address"
 msgstr ""
 
-#: snikket_web/main.py:46
+#: snikket_web/main.py:48
 msgid "Sign in"
 msgstr ""
 
-#: snikket_web/main.py:55
+#: snikket_web/main.py:57
 msgid "Invalid username or password."
 msgstr ""
 
-#: snikket_web/main.py:83
+#: snikket_web/main.py:85
 msgid "Login successful!"
 msgstr ""
 
