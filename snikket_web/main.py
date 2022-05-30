@@ -18,6 +18,8 @@ from quart import (
     flash,
 )
 
+import werkzeug.exceptions
+
 import babel
 import wtforms
 
@@ -48,7 +50,7 @@ class LoginForm(BaseForm):
 
 
 @bp.route("/-")
-async def index() -> quart.Response:
+async def index() -> werkzeug.Response:
     return redirect(url_for("index"))
 
 
@@ -56,7 +58,7 @@ ERR_CREDENTIALS_INVALID = _l("Invalid username or password.")
 
 
 @bp.route("/login", methods=["GET", "POST"])
-async def login() -> typing.Union[str, quart.Response]:
+async def login() -> typing.Union[str, werkzeug.Response]:
     if client.has_session and (await client.test_session()):
         return redirect(url_for('user.index'))
 
@@ -76,7 +78,7 @@ async def login() -> typing.Union[str, quart.Response]:
             password = form.password.data
             try:
                 await client.login(jid, password)
-            except quart.exceptions.Unauthorized:
+            except werkzeug.exceptions.Unauthorized:
                 form.password.errors.append(ERR_CREDENTIALS_INVALID)
             else:
                 await flash(
@@ -95,14 +97,13 @@ async def about() -> str:
 
     if current_app.debug or client.is_admin_session:
         version = _version.version
-        extra_versions["Quart"] = quart.__version__
         extra_versions["aiohttp"] = aiohttp.__version__
         extra_versions["babel"] = babel.__version__
         extra_versions["wtforms"] = wtforms.__version__
         extra_versions["flask-wtf"] = flask_wtf.__version__
         try:
             extra_versions["Prosody"] = await client.get_server_version()
-        except quart.exceptions.Unauthorized:
+        except werkzeug.exceptions.Unauthorized:
             extra_versions["Prosody"] = "unknown"
 
     return await render_template(

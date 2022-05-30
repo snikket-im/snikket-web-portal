@@ -15,6 +15,8 @@ from quart import (
     session as http_session,
 )
 
+import werkzeug
+
 import wtforms
 
 from flask_babel import lazy_gettext as _l, gettext
@@ -46,14 +48,14 @@ def apple_store_badge() -> str:
 
 
 @bp.context_processor
-def context() -> typing.Mapping[str, typing.Any]:
+def context() -> typing.Dict[str, typing.Any]:
     return {
         "apple_store_badge": apple_store_badge,
     }
 
 
 @bp.route("/<id_>")
-async def view_old(id_: str) -> quart.Response:
+async def view_old(id_: str) -> werkzeug.Response:
     return redirect(url_for(".view", id_=id_))
 
 
@@ -131,7 +133,7 @@ class RegisterForm(BaseForm):
 
 
 @bp.route("/<id_>/register", methods=["GET", "POST"])
-async def register(id_: str) -> typing.Union[str, quart.Response]:
+async def register(id_: str) -> typing.Union[str, werkzeug.Response]:
     try:
         invite = await client.get_public_invite_by_id(id_)
     except aiohttp.ClientResponseError as exc:
@@ -199,7 +201,7 @@ class ResetForm(BaseForm):
 
 
 @bp.route("/<id_>/reset", methods=["GET", "POST"])
-async def reset(id_: str) -> typing.Union[str, quart.Response]:
+async def reset(id_: str) -> typing.Union[str, werkzeug.Response]:
     try:
         invite = await client.get_public_invite_by_id(id_)
     except aiohttp.ClientResponseError as exc:
@@ -300,5 +302,5 @@ async def reset_success() -> str:
 
 
 @bp.route("/-")
-async def index() -> quart.Response:
+async def index() -> werkzeug.Response:
     return redirect(url_for("index"))
