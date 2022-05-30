@@ -13,7 +13,7 @@ from quart import (
     flash,
     current_app,
 )
-import quart.exceptions
+import werkzeug.exceptions
 
 import wtforms
 
@@ -96,7 +96,7 @@ async def index() -> str:
 
 @bp.route('/passwd', methods=["GET", "POST"])
 @client.require_session()
-async def change_pw() -> typing.Union[str, quart.Response]:
+async def change_pw() -> typing.Union[str, werkzeug.Response]:
     form = ChangePasswordForm()
     if form.validate_on_submit():
         try:
@@ -104,8 +104,8 @@ async def change_pw() -> typing.Union[str, quart.Response]:
                 form.current_password.data,
                 form.new_password.data,
             )
-        except (quart.exceptions.Unauthorized,
-                quart.exceptions.Forbidden):
+        except (werkzeug.exceptions.Unauthorized,
+                werkzeug.exceptions.Forbidden):
             # server refused current password, set an appropriate error
             form.current_password.errors.append(
                 _("Incorrect password."),
@@ -128,7 +128,7 @@ EAVATARTOOBIG = _l(
 
 @bp.route("/profile", methods=["GET", "POST"])
 @client.require_session()
-async def profile() -> typing.Union[str, quart.Response]:
+async def profile() -> typing.Union[str, werkzeug.Response]:
     max_avatar_size = current_app.config["MAX_AVATAR_SIZE"]
 
     form = ProfileForm()
@@ -221,7 +221,7 @@ async def manage_data() -> typing.Union[str, quart.Response]:
 
 @bp.route("/logout", methods=["GET", "POST"])
 @client.require_session()
-async def logout() -> typing.Union[quart.Response, str]:
+async def logout() -> typing.Union[werkzeug.Response, str]:
     form = LogoutForm()
     if form.validate_on_submit():
         await client.logout()

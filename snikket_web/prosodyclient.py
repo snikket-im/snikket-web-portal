@@ -19,7 +19,9 @@ from quart import (
     current_app, _app_ctx_stack, session as http_session, abort, redirect,
     url_for,
 )
-import quart.exceptions
+import quart
+
+import werkzeug.exceptions
 
 from . import xmpputil
 from .xmpputil import split_jid
@@ -386,16 +388,16 @@ class ProsodyClient:
             ) -> typing.Callable[
                 [typing.Callable[..., typing.Awaitable[T]]],
                 typing.Callable[..., typing.Awaitable[
-                    typing.Union[T, quart.Response]]]]:
+                    typing.Union[T, quart.Response, werkzeug.Response]]]]:
         def decorator(
                 f: typing.Callable[..., typing.Awaitable[T]],
                 ) -> typing.Callable[..., typing.Awaitable[
-                    typing.Union[T, quart.Response]]]:
+                    typing.Union[T, quart.Response, werkzeug.Response]]]:
             @functools.wraps(f)
             async def wrapped(
                     *args: typing.Any,
                     **kwargs: typing.Any,
-                    ) -> typing.Union[T, quart.Response]:
+                    ) -> typing.Union[T, quart.Response, werkzeug.Response]:
                 if not self.has_session or not (await self.test_session()):
                     redirect_to_value = redirect_to
                     if redirect_to_value is not False:
@@ -415,17 +417,17 @@ class ProsodyClient:
             ) -> typing.Callable[
                 [typing.Callable[..., typing.Awaitable[T]]],
                 typing.Callable[..., typing.Awaitable[
-                    typing.Union[T, quart.Response]]]]:
+                    typing.Union[T, quart.Response, werkzeug.Response]]]]:
         def decorator(
                 f: typing.Callable[..., typing.Awaitable[T]],
                 ) -> typing.Callable[..., typing.Awaitable[
-                    typing.Union[T, quart.Response]]]:
+                    typing.Union[T, quart.Response, werkzeug.Response]]]:
             @functools.wraps(f)
             @self.require_session(redirect_to=redirect_to)
             async def wrapped(
                     *args: typing.Any,
                     **kwargs: typing.Any,
-                    ) -> typing.Union[T, quart.Response]:
+                    ) -> typing.Union[T, quart.Response, werkzeug.Response]:
                 if not self.is_admin_session:
                     raise abort(403, "This is not for you.")
 
@@ -492,7 +494,7 @@ class ProsodyClient:
                 session=session,
             )
             avatar_hash = avatar_info["sha1"]
-        except quart.exceptions.HTTPException:
+        except werkzeug.exceptions.HTTPException:
             avatar_hash = None
 
         return {
@@ -644,7 +646,7 @@ class ProsodyClient:
                     new_access_model,
                 )
             ))
-        except quart.exceptions.NotFound:
+        except werkzeug.exceptions.NotFound:
             if ignore_not_found:
                 return
             raise
@@ -774,7 +776,7 @@ class ProsodyClient:
             session: aiohttp.ClientSession,
             ) -> str:
         access_models = filter(
-            lambda x: not isinstance(x, quart.exceptions.NotFound),
+            lambda x: not isinstance(x, werkzeug.exceptions.NotFound),
             await asyncio.gather(
                 self.get_avatar_access_model(session=session),
                 self.get_nickname_access_model(session=session),

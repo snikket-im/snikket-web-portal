@@ -7,6 +7,8 @@ from datetime import datetime
 
 import aiohttp
 
+import werkzeug.exceptions
+
 import quart.flask_patch
 
 import wtforms
@@ -92,7 +94,7 @@ class EditUserForm(BaseForm):
 
 @bp.route("/user/<localpart>/", methods=["GET", "POST"])
 @client.require_admin_session()
-async def edit_user(localpart: str) -> typing.Union[quart.Response, str]:
+async def edit_user(localpart: str) -> typing.Union[werkzeug.Response, str]:
     target_user_info = await client.get_user_by_localpart(localpart)
 
     form = EditUserForm()
@@ -147,7 +149,7 @@ class DeleteUserForm(BaseForm):
 
 @bp.route("/user/<localpart>/delete", methods=["GET", "POST"])
 @client.require_admin_session()
-async def delete_user(localpart: str) -> typing.Union[str, quart.Response]:
+async def delete_user(localpart: str) -> typing.Union[str, werkzeug.Response]:
     target_user_info = await client.get_user_by_localpart(localpart)
     form = DeleteUserForm()
     if form.validate_on_submit():
@@ -186,7 +188,7 @@ async def debug_user(localpart: str) -> typing.Union[str, quart.Response]:
 @client.require_admin_session()
 async def user_password_reset_link(
         id_: str,
-        ) -> typing.Union[str, quart.Response]:
+        ) -> typing.Union[str, werkzeug.Response]:
     invite_info = await client.get_invite_by_id(
         id_,
     )
@@ -278,7 +280,7 @@ class InvitePost(BaseForm):
 
 @bp.route("/invitations", methods=["GET", "POST"])
 @client.require_admin_session()
-async def invitations() -> typing.Union[str, quart.Response]:
+async def invitations() -> typing.Union[str, werkzeug.Response]:
     invites = sorted(
         (
             invite
@@ -324,7 +326,7 @@ class InviteForm(BaseForm):
 
 @bp.route("/invitation/-/new", methods=["POST"])
 @client.require_admin_session()
-async def create_invite() -> typing.Union[str, quart.Response]:
+async def create_invite() -> typing.Union[str, werkzeug.Response]:
     form = InvitePost()
     circles = await client.list_groups()
     form.circles.choices = [
@@ -352,7 +354,7 @@ async def create_invite() -> typing.Union[str, quart.Response]:
 
 @bp.route("/invitation/<id_>", methods=["GET", "POST"])
 @client.require_admin_session()
-async def edit_invite(id_: str) -> typing.Union[str, quart.Response]:
+async def edit_invite(id_: str) -> typing.Union[str, werkzeug.Response]:
     try:
         invite_info = await client.get_invite_by_id(id_)
     except aiohttp.ClientResponseError as exc:
@@ -418,7 +420,7 @@ async def circles() -> str:
 
 @bp.route("/circle/-/new", methods=["POST"])
 @client.require_admin_session()
-async def create_circle() -> typing.Union[str, quart.Response]:
+async def create_circle() -> typing.Union[str, werkzeug.Response]:
     create_form = CirclePost()
     if create_form.validate_on_submit():
         circle = await client.create_group(
@@ -464,7 +466,7 @@ class EditCircleForm(BaseForm):
 
 @bp.route("/circle/<id_>", methods=["GET", "POST"])
 @client.require_admin_session()
-async def edit_circle(id_: str) -> typing.Union[str, quart.Response]:
+async def edit_circle(id_: str) -> typing.Union[str, werkzeug.Response]:
     async with client.authenticated_session() as session:
         try:
             circle = await client.get_group_by_id(
@@ -626,7 +628,7 @@ class AnnouncementForm(BaseForm):
 
 @bp.route("/system/", methods=["GET", "POST"])
 @client.require_admin_session()
-async def system() -> typing.Union[str, quart.Response]:
+async def system() -> typing.Union[str, werkzeug.Response]:
     form = AnnouncementForm()
 
     if form.validate_on_submit():
@@ -657,7 +659,7 @@ async def system() -> typing.Union[str, quart.Response]:
         now = time.time()
         try:
             prosody_metrics = await client.get_system_metrics()
-        except quart.exceptions.NotFound:
+        except werkzeug.exceptions.NotFound:
             # server does not offer the endpoint for whatever reason -- ignore
             prosody_metrics = {}
 
