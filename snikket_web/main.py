@@ -34,7 +34,7 @@ bp = quart.Blueprint("main", __name__)
 
 
 class LoginForm(BaseForm):
-    address = wtforms.TextField(
+    address = wtforms.StringField(
         _l("Address"),
         validators=[wtforms.validators.InputRequired()],
     )
