@@ -99,7 +99,7 @@ async def about() -> str:
         version = _version.version
         try:
             core_versions["Prosody"] = await client.get_server_version()
-        except quart.exceptions.Unauthorized:
+        except werkzeug.exceptions.Unauthorized:
             core_versions["Prosody"] = "unknown"
 
     if current_app.debug:

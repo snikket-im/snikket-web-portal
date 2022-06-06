@@ -35,9 +35,7 @@ BYTE_UNIT_SCALE_MAP = [
 
 @babel.localeselector  # type:ignore
 def selected_locale() -> str:
-    # Needs mypy ignore because this is a free-for-all object and has no
-    # publicly known attributes.
-    g.language_header_accessed = True  # type: ignore
+    g.language_header_accessed = True
     selected = request.accept_languages.best_match(
         current_app.config['LANGUAGES']
     ) or current_app.config['LANGUAGES'][0]
