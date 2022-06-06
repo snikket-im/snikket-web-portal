@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
-"Report-Msgid-Bugs-To: translations@snikket.org\n"
-"POT-Creation-Date: 2022-01-17 17:27+0100\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-06-06 19:52+0200\n"
 "PO-Revision-Date: 2022-01-18 14:59+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language-Team: German <http://i18n.sotecware.net/projects/snikket/web-portal/"
@@ -20,255 +20,255 @@ msgstr ""
 "X-Generator: Weblate 4.8.1\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: snikket_web/admin.py:68 snikket_web/templates/admin_delete_user.html:10
+#: snikket_web/admin.py:69 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_edit_circle.html:59
 #: snikket_web/templates/admin_users.html:8
 msgid "Login name"
 msgstr "Anmeldename"
 
-#: snikket_web/admin.py:72 snikket_web/templates/admin_delete_user.html:12
+#: snikket_web/admin.py:73 snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/templates/admin_edit_circle.html:60
 #: snikket_web/templates/admin_users.html:9 snikket_web/user.py:63
 msgid "Display name"
 msgstr "Anzeigename"
 
-#: snikket_web/admin.py:76 snikket_web/templates/admin_edit_user.html:32
+#: snikket_web/admin.py:77 snikket_web/templates/admin_edit_user.html:32
 msgid "Access Level"
 msgstr "Berechtigungen"
 
-#: snikket_web/admin.py:78
+#: snikket_web/admin.py:79
 msgid "Limited"
 msgstr "Eingeschränkt"
 
-#: snikket_web/admin.py:79
+#: snikket_web/admin.py:80
 msgid "Normal user"
 msgstr "Normaler Benutzer"
 
-#: snikket_web/admin.py:80
+#: snikket_web/admin.py:81
 msgid "Administrator"
 msgstr "Administrator"
 
-#: snikket_web/admin.py:85
+#: snikket_web/admin.py:86
 msgid "Update user"
 msgstr "Benutzer ändern"
 
-#: snikket_web/admin.py:89
+#: snikket_web/admin.py:90
 msgid "Create password reset link"
 msgstr "Passwort-Link erzeugen"
 
-#: snikket_web/admin.py:107
+#: snikket_web/admin.py:108
 msgid "Password reset link created"
 msgstr "Link zum Zurücksetzen des Passwortes erzeugt"
 
-#: snikket_web/admin.py:122
+#: snikket_web/admin.py:123
 msgid "User information updated."
 msgstr "Benutzerinformationen gespeichert."
 
-#: snikket_web/admin.py:144
+#: snikket_web/admin.py:145
 msgid "Delete user permanently"
 msgstr "Benutzer endgültig löschen"
 
-#: snikket_web/admin.py:157
+#: snikket_web/admin.py:158
 msgid "User deleted"
 msgstr "Benutzer gelöscht"
 
-#: snikket_web/admin.py:195
+#: snikket_web/admin.py:196
 msgid "Password reset link not found"
 msgstr "Link zum Zurücksetzen des Passwortes nicht gefunden"
 
-#: snikket_web/admin.py:207
+#: snikket_web/admin.py:208
 msgid "Password reset link deleted"
 msgstr "Link gelöscht"
 
-#: snikket_web/admin.py:227
+#: snikket_web/admin.py:228
 msgid "Invite to circle"
 msgstr "In Gemeinschaft einladen"
 
-#: snikket_web/admin.py:233
+#: snikket_web/admin.py:234
 msgid "At least one circle must be selected"
 msgstr "Mindestens eine Gemeinschaft muss ausgewählt sein"
 
-#: snikket_web/admin.py:238
+#: snikket_web/admin.py:239
 msgid "Valid for"
 msgstr "Gültig für"
 
-#: snikket_web/admin.py:240
+#: snikket_web/admin.py:241
 msgid "One hour"
 msgstr "Eine Stunde"
 
-#: snikket_web/admin.py:241
+#: snikket_web/admin.py:242
 msgid "Twelve hours"
 msgstr "Zwölf Stunden"
 
-#: snikket_web/admin.py:242
+#: snikket_web/admin.py:243
 msgid "One day"
 msgstr "Ein Tag"
 
-#: snikket_web/admin.py:243
+#: snikket_web/admin.py:244
 msgid "One week"
 msgstr "Eine Woche"
 
-#: snikket_web/admin.py:244
+#: snikket_web/admin.py:245
 msgid "Four weeks"
 msgstr "Vier Wochen"
 
-#: snikket_web/admin.py:250 snikket_web/templates/admin_edit_invite.html:17
+#: snikket_web/admin.py:251 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
 msgstr "Art der Einladung"
 
-#: snikket_web/admin.py:252 snikket_web/templates/library.j2:116
+#: snikket_web/admin.py:253 snikket_web/templates/library.j2:116
 msgid "Individual"
 msgstr "Einzelperson"
 
-#: snikket_web/admin.py:253 snikket_web/templates/library.j2:114
+#: snikket_web/admin.py:254 snikket_web/templates/library.j2:114
 msgid "Group"
 msgstr "Gruppe"
 
-#: snikket_web/admin.py:259
+#: snikket_web/admin.py:260
 msgid "New invitation link"
 msgstr "Neuer Einladungslink"
 
-#: snikket_web/admin.py:321
+#: snikket_web/admin.py:322
 msgid "Revoke"
 msgstr "Löschen"
 
-#: snikket_web/admin.py:345
+#: snikket_web/admin.py:346
 msgid "Invitation created"
 msgstr "Einladung angelegt"
 
-#: snikket_web/admin.py:361
+#: snikket_web/admin.py:362
 msgid "No such invitation exists"
 msgstr "Diese Einladung existiert nicht"
 
-#: snikket_web/admin.py:376
+#: snikket_web/admin.py:377
 msgid "Invitation revoked"
 msgstr "Einladung gelöscht"
 
-#: snikket_web/admin.py:393 snikket_web/admin.py:441
+#: snikket_web/admin.py:394 snikket_web/admin.py:442
 msgid "Name"
 msgstr "Name"
 
-#: snikket_web/admin.py:398 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:399 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Gemeinschaft gründen"
 
-#: snikket_web/admin.py:428
+#: snikket_web/admin.py:429
 msgid "Circle created"
 msgstr "Gemeinschaft gegründet"
 
-#: snikket_web/admin.py:446
+#: snikket_web/admin.py:447
 msgid "Select user"
 msgstr "Benutzer auswählen"
 
-#: snikket_web/admin.py:451
+#: snikket_web/admin.py:452
 msgid "Update circle"
 msgstr "Gemeinschaft ändern"
 
-#: snikket_web/admin.py:455
+#: snikket_web/admin.py:456
 msgid "Delete circle permanently"
 msgstr "Gemeinschaft endgültig löschen"
 
-#: snikket_web/admin.py:461
+#: snikket_web/admin.py:462
 msgid "Add user"
 msgstr "Benutzer hinzufügen"
 
-#: snikket_web/admin.py:477
+#: snikket_web/admin.py:478
 msgid "No such circle exists"
 msgstr "Diese Gemeinschaft existiert nicht"
 
-#: snikket_web/admin.py:514
+#: snikket_web/admin.py:515
 msgid "Circle data updated"
 msgstr "Gemeinschaftsdaten aktualisiert"
 
-#: snikket_web/admin.py:520
+#: snikket_web/admin.py:521
 msgid "Circle deleted"
 msgstr "Gemeinschaft gelöscht"
 
-#: snikket_web/admin.py:531
+#: snikket_web/admin.py:532
 msgid "User added to circle"
 msgstr "Benutzer zur Gemeinschaft hinzugefügt"
 
-#: snikket_web/admin.py:540
+#: snikket_web/admin.py:541
 msgid "User removed from circle"
 msgstr "Benutzer aus der Gemeinschaft entfernt"
 
-#: snikket_web/admin.py:609
+#: snikket_web/admin.py:610
 msgid "Message contents"
 msgstr "Nachrichteninhalt"
 
-#: snikket_web/admin.py:615
+#: snikket_web/admin.py:616
 msgid "Only send to online users"
 msgstr "Nur an verbundene Benutzer senden"
 
-#: snikket_web/admin.py:619
+#: snikket_web/admin.py:620
 msgid "Post to all users"
 msgstr "An alle Benutzer senden"
 
-#: snikket_web/admin.py:623
+#: snikket_web/admin.py:624
 msgid "Send preview to yourself"
 msgstr "Vorschau an dich selbst senden"
 
-#: snikket_web/admin.py:645
+#: snikket_web/admin.py:646
 msgid "Announcement sent!"
 msgstr "Ankündigung verschickt!"
 
-#: snikket_web/infra.py:51
+#: snikket_web/infra.py:53
 msgid "Main"
 msgstr "Kern"
 
-#: snikket_web/invite.py:33
+#: snikket_web/invite.py:35
 msgid ""
 "The account data you tried to import is too large to upload. Please contact "
 "your Snikket operator."
 msgstr ""
 "Der Kontoexport ist zu groß. Bitte kontaktiere deinen Snikket-Betreiber."
 
-#: snikket_web/invite.py:112
+#: snikket_web/invite.py:114
 msgid "Username"
 msgstr "Benutzername"
 
-#: snikket_web/invite.py:116 snikket_web/invite.py:184 snikket_web/main.py:41
+#: snikket_web/invite.py:118 snikket_web/invite.py:186 snikket_web/main.py:43
 msgid "Password"
 msgstr "Passwort"
 
-#: snikket_web/invite.py:120 snikket_web/invite.py:188
+#: snikket_web/invite.py:122 snikket_web/invite.py:190
 msgid "Confirm password"
 msgstr "Passwort (Bestätigung)"
 
-#: snikket_web/invite.py:124 snikket_web/invite.py:192
+#: snikket_web/invite.py:126 snikket_web/invite.py:194
 msgid "The passwords must match."
 msgstr "Die Passwörter müssen übereinstimmen."
 
-#: snikket_web/invite.py:129
+#: snikket_web/invite.py:131
 msgid "Create account"
 msgstr "Konto anlegen"
 
-#: snikket_web/invite.py:156
+#: snikket_web/invite.py:158
 msgid "That username is already taken."
 msgstr "Dieser Benutzername ist bereits belegt."
 
-#: snikket_web/invite.py:160 snikket_web/invite.py:225
+#: snikket_web/invite.py:162 snikket_web/invite.py:227
 msgid "Registration was declined for unknown reasons."
 msgstr "Die Registrierung wurde aus unbekannten Gründen abgelehnt."
 
-#: snikket_web/invite.py:164
+#: snikket_web/invite.py:166
 msgid "The username is not valid."
 msgstr "Der Benutzername ist ungültig."
 
-#: snikket_web/invite.py:197 snikket_web/templates/user_home.html:32
+#: snikket_web/invite.py:199 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "Passwort ändern"
 
-#: snikket_web/invite.py:244
+#: snikket_web/invite.py:246
 msgid "Account data file"
 msgstr "Kontoexportdatei"
 
-#: snikket_web/invite.py:248
+#: snikket_web/invite.py:250
 msgid "Import data"
 msgstr "Daten importieren"
 
-#: snikket_web/invite.py:269
+#: snikket_web/invite.py:271
 #, python-format
 msgid ""
 "The account data you tried to import is in an unknown format. Please upload "
@@ -277,24 +277,24 @@ msgstr ""
 "Der Kontoexport ist in einem unbekannten Format. Es können nur XML-Dateien "
 "im XEP-0227-Format verarbeitet werden (erhaltenes Format: %(mimetype)s)."
 
-#: snikket_web/invite.py:289 snikket_web/templates/unauth.html:18
+#: snikket_web/invite.py:291 snikket_web/templates/unauth.html:18
 #: snikket_web/user.py:178
 msgid "Error"
 msgstr "Fehler"
 
-#: snikket_web/main.py:36
+#: snikket_web/main.py:38
 msgid "Address"
 msgstr "Adresse"
 
-#: snikket_web/main.py:46
+#: snikket_web/main.py:48
 msgid "Sign in"
 msgstr "Anmelden"
 
-#: snikket_web/main.py:55
+#: snikket_web/main.py:57
 msgid "Invalid username or password."
 msgstr "Benutzername oder Passwort falsch."
 
-#: snikket_web/main.py:83
+#: snikket_web/main.py:85
 msgid "Login successful!"
 msgstr "Anmeldung erfolgreich!"
 
@@ -469,7 +469,7 @@ msgstr ""
 msgid "Software Versions"
 msgstr "Softwareversionen"
 
-#: snikket_web/templates/about.html:29
+#: snikket_web/templates/about.html:32
 msgid "Back to the main page"
 msgstr "Zurück zur Hauptseite"
 
@@ -616,6 +616,7 @@ msgstr ""
 #: snikket_web/templates/admin_delete_user.html:19
 #: snikket_web/templates/admin_reset_user_password.html:25
 #: snikket_web/templates/user_logout.html:10
+#: snikket_web/templates/user_manage_data.html:14
 #: snikket_web/templates/user_passwd.html:27
 #: snikket_web/templates/user_profile.html:32
 msgid "Back"
@@ -1344,10 +1345,10 @@ msgid ""
 "data from your previous account, upload it using the form below."
 msgstr ""
 "Wenn du dabei bist, dein Konto von einer anderen Snikket-Instanz oder XMPP-"
-"kompatiblen Dienst umzuziehen, kannst du optional deine Kontodaten ("
-"Kontakte, Profilinformationen etc.) von deinem vorherigen Konto importieren. "
-"Wenn du die Daten von deinem alten Konto exportiert hast, lade sie mit dem "
-"untenstehenden Formular hoch."
+"kompatiblen Dienst umzuziehen, kannst du optional deine Kontodaten "
+"(Kontakte, Profilinformationen etc.) von deinem vorherigen Konto "
+"importieren. Wenn du die Daten von deinem alten Konto exportiert hast, lade "
+"sie mit dem untenstehenden Formular hoch."
 
 #: snikket_web/templates/invite_success.html:30
 msgid "Upload account data"
