@@ -8,6 +8,7 @@ import quart.flask_patch  # noqa:F401
 from quart import (
     current_app,
     request,
+    g,
 )
 
 import flask_babel
@@ -34,6 +35,7 @@ BYTE_UNIT_SCALE_MAP = [
 
 @babel.localeselector  # type:ignore
 def selected_locale() -> str:
+    g.language_header_accessed = True
     selected = request.accept_languages.best_match(
         current_app.config['LANGUAGES']
     ) or current_app.config['LANGUAGES'][0]
@@ -68,6 +70,12 @@ def format_bytes(n: float) -> str:
     return "{} {}".format(n, unit)
 
 
+def add_vary_language_header(resp: quart.Response) -> quart.Response:
+    if getattr(g, "language_header_accessed", False):
+        resp.vary.add("Accept-Language")
+    return resp
+
+
 def init_templating(app: quart.Quart) -> None:
     app.template_filter("repr")(repr)
     app.template_filter("format_datetime")(flask_babel.format_datetime)
@@ -78,6 +86,7 @@ def init_templating(app: quart.Quart) -> None:
     app.template_filter("format_bytes")(format_bytes)
     app.template_filter("flatten")(flatten)
     app.template_filter("circle_name")(circle_name)
+    app.after_request(add_vary_language_header)
 
 
 def generate_error_id() -> str:

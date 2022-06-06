@@ -34,7 +34,7 @@ bp = quart.Blueprint("main", __name__)
 
 
 class LoginForm(BaseForm):
-    address = wtforms.TextField(
+    address = wtforms.StringField(
         _l("Address"),
         validators=[wtforms.validators.InputRequired()],
     )
@@ -93,10 +93,16 @@ async def login() -> typing.Union[str, werkzeug.Response]:
 @bp.route("/meta/about.html")
 async def about() -> str:
     version = None
+    core_versions = {}
     extra_versions = {}
-
     if current_app.debug or client.is_admin_session:
         version = _version.version
+        try:
+            core_versions["Prosody"] = await client.get_server_version()
+        except werkzeug.exceptions.Unauthorized:
+            core_versions["Prosody"] = "unknown"
+
+    if current_app.debug:
         extra_versions["aiohttp"] = aiohttp.__version__
         extra_versions["babel"] = babel.__version__
         extra_versions["wtforms"] = wtforms.__version__
@@ -110,6 +116,7 @@ async def about() -> str:
         "about.html",
         version=version,
         extra_versions=extra_versions,
+        core_versions=core_versions,
     )
 
 

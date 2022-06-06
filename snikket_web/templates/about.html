@@ -17,9 +17,12 @@
 		<h3>{% trans %}Trademarks{% endtrans %}</h3>
 		<p>{% trans trademarks_url="https://snikket.org/about/trademarks/" %}“Snikket” and the parrot logo are trademarks of Snikket Community Interest Company. For more information about the trademarks, visit the <a href="{{ trademarks_url }}">Snikket Trademarks information page</a>.{% endtrans %}
 		<h3>{% trans %}Software Versions{% endtrans %}</h3>
-		<pre>Snikket Server
-Domain: {{ config["SNIKKET_DOMAIN"] }}
-Snikket Web Portal{% if version %} ({{ version }}){% endif %}
+		<pre>Domain: {{ config["SNIKKET_DOMAIN"] }}
+Web Portal{% if version %} ({{ version }}){% endif %}
+{%- if core_versions -%}
+{% for name, version in core_versions.items() %}
+{{ name }} ({{ version }}){% endfor %}
+{%- endif -%}
 {%- if extra_versions -%}
 {% for name, version in extra_versions.items() %}
 {{ name }} ({{ version }}){% endfor %}

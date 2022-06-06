@@ -147,9 +147,13 @@ class AppConfig:
     site_name = environ.var("")
     avatar_cache_ttl = environ.var(1800, converter=int)
     languages = environ.var([
+        # Keep `en` as the first language, because it is used as a fallback
+        # if the language negotiation cannot find another match. It is more
+        # likely that users are able to read english (or find a suitable
+        # online translator) than, for instance, danish.
+        "en",
         "da",
         "de",
-        "en",
         "fr",
         "id",
         "it",
