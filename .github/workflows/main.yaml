@@ -50,6 +50,29 @@ jobs:
         run: |
           python -m flake8 snikket_web
 
+  translation-check:
+    runs-on: ubuntu-latest
+
+    name: 'lint: i18n'
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install
+        run: |
+          set -euo pipefail
+          pip install flask-babel
+      - name: Linting
+        run: |
+          sed -ri '/^"POT-Creation-Date: /d' snikket_web/translations/messages.pot
+          git add snikket_web/translations/messages.pot
+          make extract_translations
+          sed -ri '/^"POT-Creation-Date: /d' snikket_web/translations/messages.pot
+          git diff --exit-code --color -- snikket_web/translations/messages.pot
+
+
   build:
     runs-on: ubuntu-latest
 
