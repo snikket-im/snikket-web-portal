@@ -11,6 +11,8 @@
 			{% call render_errors(form) %}{% endcall %}
 
 			<div class="f-bbox">
+				{%- call standard_button("back", url_for('.index'), class="tertiary") %}{% trans %}Back{% endtrans %}{% endcall -%}
+
 				<form method="POST">
 					{{ form.csrf_token }}
 					{%- call form_button("download", form.action_export, class="primary") %}{% endcall -%}
