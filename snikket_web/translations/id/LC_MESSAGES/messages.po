@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-06 19:52+0200\n"
+"POT-Creation-Date: 2022-06-07 22:31+0200\n"
 "PO-Revision-Date: 2022-01-18 14:59+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
 "Language-Team: Indonesian <http://i18n.sotecware.net/projects/snikket/web-"
@@ -1148,8 +1148,8 @@ msgstr "Aplikasi sudah dipasang?"
 #: snikket_web/templates/invite_register.html:16
 #: snikket_web/templates/invite_reset_view.html:21
 #: snikket_web/templates/invite_view.html:41
-#: snikket_web/templates/invite_view.html:106
-#: snikket_web/templates/invite_view.html:134
+#: snikket_web/templates/invite_view.html:84
+#: snikket_web/templates/invite_view.html:112
 msgid "Open the app"
 msgstr "Buka aplikasi"
 
@@ -1251,7 +1251,6 @@ msgstr ""
 "tombol Pindai di bagian atas."
 
 #: snikket_web/templates/invite_reset_view.html:26
-#: snikket_web/templates/invite_view.html:77
 msgid ""
 "Your camera will turn on. Point it at the square code below until it is "
 "within the highlighted square on your screen, and wait until the app "
@@ -1390,7 +1389,7 @@ msgid "Get it on Google Play"
 msgstr "Dapatkan di Google Play"
 
 #: snikket_web/templates/invite_view.html:30
-#: snikket_web/templates/invite_view.html:102
+#: snikket_web/templates/invite_view.html:80
 msgid "Download on the App Store"
 msgstr "Unduh di App Store"
 
@@ -1426,11 +1425,11 @@ msgid "Scan invite code"
 msgstr "Pindai kode undangan"
 
 #: snikket_web/templates/invite_view.html:55
-#: snikket_web/templates/invite_view.html:84
-#: snikket_web/templates/invite_view.html:96
-#: snikket_web/templates/invite_view.html:112
-#: snikket_web/templates/invite_view.html:124
-#: snikket_web/templates/invite_view.html:140
+#: snikket_web/templates/invite_view.html:62
+#: snikket_web/templates/invite_view.html:74
+#: snikket_web/templates/invite_view.html:90
+#: snikket_web/templates/invite_view.html:102
+#: snikket_web/templates/invite_view.html:118
 msgid "Close"
 msgstr "Tutup"
 
@@ -1443,34 +1442,11 @@ msgstr ""
 "kode dengan kamera. Anda dapat menggunakan aplikasi pemindai QR atau "
 "aplikasi Snikket."
 
-#: snikket_web/templates/invite_view.html:63
-msgid "Using a QR code scanner"
-msgstr "Menggunakan pemindai kode QR"
-
-#: snikket_web/templates/invite_view.html:65
-msgid "Using the Snikket app"
-msgstr "Menggunakan Snikket"
-
-#: snikket_web/templates/invite_view.html:70
-msgid ""
-"Use a <em>QR code</em> scanner on your mobile device to scan the code below:"
-msgstr ""
-"Gunakan pemindai <em>kode QR</em> di perangkat seluler Anda untuk memindai "
-"kode di bawah:"
-
-#: snikket_web/templates/invite_view.html:76
-msgid ""
-"Install the Snikket app on your mobile device, open it, and tap the 'Scan' "
-"button at the top."
-msgstr ""
-"Instal aplikasi Snikket di perangkat seluler Anda, buka, dan ketuk tombol "
-"'Pindai'."
-
-#: snikket_web/templates/invite_view.html:93
+#: snikket_web/templates/invite_view.html:71
 msgid "Install on iOS"
 msgstr "Pasang di iOS"
 
-#: snikket_web/templates/invite_view.html:99
+#: snikket_web/templates/invite_view.html:77
 msgid ""
 "After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
@@ -1478,12 +1454,12 @@ msgstr ""
 "Setelah mengunduh Snikket dari App Store, Anda harus kembali ke tautan "
 "undangan ini dan klik \"Buka aplikasi\" untuk melanjutkan."
 
-#: snikket_web/templates/invite_view.html:101
+#: snikket_web/templates/invite_view.html:79
 msgid "First download Snikket from the App Store using the button below:"
 msgstr "Pertama, unduh Snikket dari App Store menggunakan tombol di bawah ini:"
 
-#: snikket_web/templates/invite_view.html:103
-#: snikket_web/templates/invite_view.html:131
+#: snikket_web/templates/invite_view.html:81
+#: snikket_web/templates/invite_view.html:109
 msgid ""
 "After the installation is complete, you can return to this page and tap the "
 "\"Open the app\" button to continue with the setup:"
@@ -1491,12 +1467,12 @@ msgstr ""
 "Setelah instalasi selesai, Anda dapat kembali ke halaman ini dan mengetuk "
 "tombol \"Buka aplikasi\" untuk melanjutkan pemasangan:"
 
-#: snikket_web/templates/invite_view.html:121
-#: snikket_web/templates/invite_view.html:130
+#: snikket_web/templates/invite_view.html:99
+#: snikket_web/templates/invite_view.html:108
 msgid "Install via F-Droid"
 msgstr "Install melalui F-Droid"
 
-#: snikket_web/templates/invite_view.html:127
+#: snikket_web/templates/invite_view.html:105
 msgid ""
 "After installing Snikket via F-Droid, you have to return to this invite link "
 "and tap on \"Open the app\" to proceed."
@@ -1504,7 +1480,7 @@ msgstr ""
 "Setelah menginstal Snikket melalui F-Droid, Anda harus kembali ke tautan "
 "undangan ini dan ketuk \"Buka aplikasi\" untuk melanjutkan."
 
-#: snikket_web/templates/invite_view.html:129
+#: snikket_web/templates/invite_view.html:107
 msgid "First install Snikket from F-Droid using the button below:"
 msgstr "Pertama install Snikket dari F-Droid menggunakan tombol di bawah ini:"
 
@@ -1653,6 +1629,26 @@ msgid ""
 msgstr ""
 "Bagian ini memungkinkan Anda untuk mengontrol siapa yang bisa melihat profil "
 "Anda, seperti avatar dan nama panggilan."
+
+#~ msgid "Using a QR code scanner"
+#~ msgstr "Menggunakan pemindai kode QR"
+
+#~ msgid "Using the Snikket app"
+#~ msgstr "Menggunakan Snikket"
+
+#~ msgid ""
+#~ "Use a <em>QR code</em> scanner on your mobile device to scan the code "
+#~ "below:"
+#~ msgstr ""
+#~ "Gunakan pemindai <em>kode QR</em> di perangkat seluler Anda untuk "
+#~ "memindai kode di bawah:"
+
+#~ msgid ""
+#~ "Install the Snikket app on your mobile device, open it, and tap the "
+#~ "'Scan' button at the top."
+#~ msgstr ""
+#~ "Instal aplikasi Snikket di perangkat seluler Anda, buka, dan ketuk tombol "
+#~ "'Pindai'."
 
 #~ msgid "Create password reset link for %(user_name)s"
 #~ msgstr "Buat tautan setel ulang kata sandi untuk %(user_name)s"

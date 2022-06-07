@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-06 19:52+0200\n"
+"POT-Creation-Date: 2022-06-07 22:31+0200\n"
 "PO-Revision-Date: 2021-05-19 15:12+0000\n"
 "Last-Translator: Roberto Resoli <roberto@resolutions.it>\n"
 "Language-Team: Italian <https://i18n.sotecware.net/projects/snikket/web-"
@@ -1143,8 +1143,8 @@ msgstr "Applicazione già installata?"
 #: snikket_web/templates/invite_register.html:16
 #: snikket_web/templates/invite_reset_view.html:21
 #: snikket_web/templates/invite_view.html:41
-#: snikket_web/templates/invite_view.html:106
-#: snikket_web/templates/invite_view.html:134
+#: snikket_web/templates/invite_view.html:84
+#: snikket_web/templates/invite_view.html:112
 msgid "Open the app"
 msgstr "Apri l'applicazione"
 
@@ -1246,7 +1246,6 @@ msgstr ""
 "Snikket utilizzando il pulsante di scansione in alto."
 
 #: snikket_web/templates/invite_reset_view.html:26
-#: snikket_web/templates/invite_view.html:77
 msgid ""
 "Your camera will turn on. Point it at the square code below until it is "
 "within the highlighted square on your screen, and wait until the app "
@@ -1386,7 +1385,7 @@ msgid "Get it on Google Play"
 msgstr "Scarica da Google Play"
 
 #: snikket_web/templates/invite_view.html:30
-#: snikket_web/templates/invite_view.html:102
+#: snikket_web/templates/invite_view.html:80
 msgid "Download on the App Store"
 msgstr "Scarica dall'App Store"
 
@@ -1423,11 +1422,11 @@ msgid "Scan invite code"
 msgstr "Scansiona il codice di invito"
 
 #: snikket_web/templates/invite_view.html:55
-#: snikket_web/templates/invite_view.html:84
-#: snikket_web/templates/invite_view.html:96
-#: snikket_web/templates/invite_view.html:112
-#: snikket_web/templates/invite_view.html:124
-#: snikket_web/templates/invite_view.html:140
+#: snikket_web/templates/invite_view.html:62
+#: snikket_web/templates/invite_view.html:74
+#: snikket_web/templates/invite_view.html:90
+#: snikket_web/templates/invite_view.html:102
+#: snikket_web/templates/invite_view.html:118
 msgid "Close"
 msgstr "Chiudi"
 
@@ -1440,34 +1439,11 @@ msgstr ""
 "con la fotocamera. Puoi usare un lettore di codici QR o l'applicazione "
 "Snikket stessa."
 
-#: snikket_web/templates/invite_view.html:63
-msgid "Using a QR code scanner"
-msgstr "Usa un lettore di codici QR"
-
-#: snikket_web/templates/invite_view.html:65
-msgid "Using the Snikket app"
-msgstr "Usa l'applicazione Snikket"
-
-#: snikket_web/templates/invite_view.html:70
-msgid ""
-"Use a <em>QR code</em> scanner on your mobile device to scan the code below:"
-msgstr ""
-"Usa un lettore di <em>codici QR</em> sul tuo dispositivo mobile per "
-"scansionare il seguente codice:"
-
-#: snikket_web/templates/invite_view.html:76
-msgid ""
-"Install the Snikket app on your mobile device, open it, and tap the 'Scan' "
-"button at the top."
-msgstr ""
-"Installa l'applicazione Snikket sul tuo dispositivo mobile, aprila e poi "
-"premi il pulsante di scansione in alto."
-
-#: snikket_web/templates/invite_view.html:93
+#: snikket_web/templates/invite_view.html:71
 msgid "Install on iOS"
 msgstr "Installa su iOS"
 
-#: snikket_web/templates/invite_view.html:99
+#: snikket_web/templates/invite_view.html:77
 msgid ""
 "After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
@@ -1475,14 +1451,14 @@ msgstr ""
 "Dopo aver scaricato Snikket dall'App Store, devi tornare a questo link di "
 "invito e toccare \"Apri nell'app\" per procedere."
 
-#: snikket_web/templates/invite_view.html:101
+#: snikket_web/templates/invite_view.html:79
 msgid "First download Snikket from the App Store using the button below:"
 msgstr ""
 "Per prima cosa, scarica Snikket dall'App Store utilizzando il pulsante qui "
 "sotto:"
 
-#: snikket_web/templates/invite_view.html:103
-#: snikket_web/templates/invite_view.html:131
+#: snikket_web/templates/invite_view.html:81
+#: snikket_web/templates/invite_view.html:109
 msgid ""
 "After the installation is complete, you can return to this page and tap the "
 "\"Open the app\" button to continue with the setup:"
@@ -1490,12 +1466,12 @@ msgstr ""
 "Dopo che l'installazione è completa, puoi tornare a questa pagina e toccare "
 "il pulsante \"Apri nell'app\" per continuare con la configurazione:"
 
-#: snikket_web/templates/invite_view.html:121
-#: snikket_web/templates/invite_view.html:130
+#: snikket_web/templates/invite_view.html:99
+#: snikket_web/templates/invite_view.html:108
 msgid "Install via F-Droid"
 msgstr "Installa da F-Droid"
 
-#: snikket_web/templates/invite_view.html:127
+#: snikket_web/templates/invite_view.html:105
 msgid ""
 "After installing Snikket via F-Droid, you have to return to this invite link "
 "and tap on \"Open the app\" to proceed."
@@ -1503,7 +1479,7 @@ msgstr ""
 "Dopo aver installato Snikket da F-Droid, devi tornare a questo link di "
 "invito e toccare su \"Apri nell'app\" per procedere."
 
-#: snikket_web/templates/invite_view.html:129
+#: snikket_web/templates/invite_view.html:107
 msgid "First install Snikket from F-Droid using the button below:"
 msgstr ""
 "Per prima cosa installa Snikket da F-Droid utilizzando il pulsante qui sotto:"
@@ -1658,6 +1634,26 @@ msgid ""
 msgstr ""
 "Questa sezione ti permette di controllare chi può visualizzare i dettagli "
 "del tuo profilo, come ad esempio l'avatar o il soprannome."
+
+#~ msgid "Using a QR code scanner"
+#~ msgstr "Usa un lettore di codici QR"
+
+#~ msgid "Using the Snikket app"
+#~ msgstr "Usa l'applicazione Snikket"
+
+#~ msgid ""
+#~ "Use a <em>QR code</em> scanner on your mobile device to scan the code "
+#~ "below:"
+#~ msgstr ""
+#~ "Usa un lettore di <em>codici QR</em> sul tuo dispositivo mobile per "
+#~ "scansionare il seguente codice:"
+
+#~ msgid ""
+#~ "Install the Snikket app on your mobile device, open it, and tap the "
+#~ "'Scan' button at the top."
+#~ msgstr ""
+#~ "Installa l'applicazione Snikket sul tuo dispositivo mobile, aprila e poi "
+#~ "premi il pulsante di scansione in alto."
 
 #~ msgid "Create password reset link for %(user_name)s"
 #~ msgstr "Crea collegamento per reimpostare la password di %(user_name)s"

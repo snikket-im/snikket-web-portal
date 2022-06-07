@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-06 19:52+0200\n"
+"POT-Creation-Date: 2022-06-07 22:31+0200\n"
 "PO-Revision-Date: 2022-01-18 09:21+0000\n"
 "Last-Translator: Kim Alvefur <zash@zash.se>\n"
 "Language-Team: Swedish <http://i18n.sotecware.net/projects/snikket/web-"
@@ -1141,8 +1141,8 @@ msgstr "Appen redan installerad?"
 #: snikket_web/templates/invite_register.html:16
 #: snikket_web/templates/invite_reset_view.html:21
 #: snikket_web/templates/invite_view.html:41
-#: snikket_web/templates/invite_view.html:106
-#: snikket_web/templates/invite_view.html:134
+#: snikket_web/templates/invite_view.html:84
+#: snikket_web/templates/invite_view.html:112
 msgid "Open the app"
 msgstr "Öppna appen"
 
@@ -1241,7 +1241,6 @@ msgstr ""
 "Scanna-knappen överst."
 
 #: snikket_web/templates/invite_reset_view.html:26
-#: snikket_web/templates/invite_view.html:77
 msgid ""
 "Your camera will turn on. Point it at the square code below until it is "
 "within the highlighted square on your screen, and wait until the app "
@@ -1378,7 +1377,7 @@ msgid "Get it on Google Play"
 msgstr "Hämta den på Google Play"
 
 #: snikket_web/templates/invite_view.html:30
-#: snikket_web/templates/invite_view.html:102
+#: snikket_web/templates/invite_view.html:80
 msgid "Download on the App Store"
 msgstr "Hämta på App Store"
 
@@ -1414,11 +1413,11 @@ msgid "Scan invite code"
 msgstr "Scanna inbjudningskoden"
 
 #: snikket_web/templates/invite_view.html:55
-#: snikket_web/templates/invite_view.html:84
-#: snikket_web/templates/invite_view.html:96
-#: snikket_web/templates/invite_view.html:112
-#: snikket_web/templates/invite_view.html:124
-#: snikket_web/templates/invite_view.html:140
+#: snikket_web/templates/invite_view.html:62
+#: snikket_web/templates/invite_view.html:74
+#: snikket_web/templates/invite_view.html:90
+#: snikket_web/templates/invite_view.html:102
+#: snikket_web/templates/invite_view.html:118
 msgid "Close"
 msgstr "Stäng"
 
@@ -1431,33 +1430,11 @@ msgstr ""
 "koden med din kamera. Du kan antingen använda en app för att scanna QR-koder "
 "eller Snikket-appen själv."
 
-#: snikket_web/templates/invite_view.html:63
-msgid "Using a QR code scanner"
-msgstr "Med en QR-kodsläsare"
-
-#: snikket_web/templates/invite_view.html:65
-msgid "Using the Snikket app"
-msgstr "Med Snikket-appen"
-
-#: snikket_web/templates/invite_view.html:70
-msgid ""
-"Use a <em>QR code</em> scanner on your mobile device to scan the code below:"
-msgstr ""
-"Scanna koden nedan med en <em>QR-kods</em> scanner på din mobila enhet:"
-
-#: snikket_web/templates/invite_view.html:76
-msgid ""
-"Install the Snikket app on your mobile device, open it, and tap the 'Scan' "
-"button at the top."
-msgstr ""
-"Installera Snikket-appen på din mobila enhet, öppna den, och tryck på "
-"'Scanna'-knappen överst."
-
-#: snikket_web/templates/invite_view.html:93
+#: snikket_web/templates/invite_view.html:71
 msgid "Install on iOS"
 msgstr "Installera på iOS"
 
-#: snikket_web/templates/invite_view.html:99
+#: snikket_web/templates/invite_view.html:77
 msgid ""
 "After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
@@ -1465,12 +1442,12 @@ msgstr ""
 "Efter att ha laddat ner Snikket från App Store behöver du komma tillbaka "
 "till den här inbjudan och klicka på \"Öppna appen\" för att fortsätta."
 
-#: snikket_web/templates/invite_view.html:101
+#: snikket_web/templates/invite_view.html:79
 msgid "First download Snikket from the App Store using the button below:"
 msgstr "Ladda först ner Snikket från App Store med knappen nedan:"
 
-#: snikket_web/templates/invite_view.html:103
-#: snikket_web/templates/invite_view.html:131
+#: snikket_web/templates/invite_view.html:81
+#: snikket_web/templates/invite_view.html:109
 msgid ""
 "After the installation is complete, you can return to this page and tap the "
 "\"Open the app\" button to continue with the setup:"
@@ -1478,12 +1455,12 @@ msgstr ""
 "Efter att installationen är färdig behöver du komma tillbaka till den här "
 "inbjudan och klicka på \"Öppna appen\" för att fortsätta:"
 
-#: snikket_web/templates/invite_view.html:121
-#: snikket_web/templates/invite_view.html:130
+#: snikket_web/templates/invite_view.html:99
+#: snikket_web/templates/invite_view.html:108
 msgid "Install via F-Droid"
 msgstr "Installera via F-Droid"
 
-#: snikket_web/templates/invite_view.html:127
+#: snikket_web/templates/invite_view.html:105
 msgid ""
 "After installing Snikket via F-Droid, you have to return to this invite link "
 "and tap on \"Open the app\" to proceed."
@@ -1491,7 +1468,7 @@ msgstr ""
 "Efter att ha installerat Snikket via F-Droid behöver du komma tillbaka till "
 "den här inbjudan och klicka på \"Öppna appen\" för att fortsätta."
 
-#: snikket_web/templates/invite_view.html:129
+#: snikket_web/templates/invite_view.html:107
 msgid "First install Snikket from F-Droid using the button below:"
 msgstr "Installera först Snikket från F-Droid med knappen nedan:"
 
@@ -1641,6 +1618,25 @@ msgid ""
 msgstr ""
 "Den här avdelningen låter dig hantera vilka som kan se din profil, såsom din "
 "profilbild och visningsnamn."
+
+#~ msgid "Using a QR code scanner"
+#~ msgstr "Med en QR-kodsläsare"
+
+#~ msgid "Using the Snikket app"
+#~ msgstr "Med Snikket-appen"
+
+#~ msgid ""
+#~ "Use a <em>QR code</em> scanner on your mobile device to scan the code "
+#~ "below:"
+#~ msgstr ""
+#~ "Scanna koden nedan med en <em>QR-kods</em> scanner på din mobila enhet:"
+
+#~ msgid ""
+#~ "Install the Snikket app on your mobile device, open it, and tap the "
+#~ "'Scan' button at the top."
+#~ msgstr ""
+#~ "Installera Snikket-appen på din mobila enhet, öppna den, och tryck på "
+#~ "'Scanna'-knappen överst."
 
 #~ msgid "Create password reset link for %(user_name)s"
 #~ msgstr "Skapa länk för att återställa lösenord för %(user_name)s"

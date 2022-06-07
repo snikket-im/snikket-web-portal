@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-06 19:52+0200\n"
+"POT-Creation-Date: 2022-06-07 22:31+0200\n"
 "PO-Revision-Date: 2022-05-20 00:01+0000\n"
 "Last-Translator: Zack Zhou <lnx@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <http://i18n.sotecware.net/projects/"
@@ -1101,8 +1101,8 @@ msgstr "已经安装APP？"
 #: snikket_web/templates/invite_register.html:16
 #: snikket_web/templates/invite_reset_view.html:21
 #: snikket_web/templates/invite_view.html:41
-#: snikket_web/templates/invite_view.html:106
-#: snikket_web/templates/invite_view.html:134
+#: snikket_web/templates/invite_view.html:84
+#: snikket_web/templates/invite_view.html:112
 msgid "Open the app"
 msgstr "打开APP"
 
@@ -1193,7 +1193,6 @@ msgid ""
 msgstr "或者，使用Snikket APP顶部的扫码按钮扫一扫下面的码。"
 
 #: snikket_web/templates/invite_reset_view.html:26
-#: snikket_web/templates/invite_view.html:77
 msgid ""
 "Your camera will turn on. Point it at the square code below until it is "
 "within the highlighted square on your screen, and wait until the app "
@@ -1324,7 +1323,7 @@ msgid "Get it on Google Play"
 msgstr "从Google Play获取"
 
 #: snikket_web/templates/invite_view.html:30
-#: snikket_web/templates/invite_view.html:102
+#: snikket_web/templates/invite_view.html:80
 msgid "Download on the App Store"
 msgstr "从App Store下载"
 
@@ -1357,11 +1356,11 @@ msgid "Scan invite code"
 msgstr "扫描邀请码"
 
 #: snikket_web/templates/invite_view.html:55
-#: snikket_web/templates/invite_view.html:84
-#: snikket_web/templates/invite_view.html:96
-#: snikket_web/templates/invite_view.html:112
-#: snikket_web/templates/invite_view.html:124
-#: snikket_web/templates/invite_view.html:140
+#: snikket_web/templates/invite_view.html:62
+#: snikket_web/templates/invite_view.html:74
+#: snikket_web/templates/invite_view.html:90
+#: snikket_web/templates/invite_view.html:102
+#: snikket_web/templates/invite_view.html:118
 msgid "Close"
 msgstr "关闭"
 
@@ -1373,59 +1372,40 @@ msgstr ""
 "你可以用手机相机扫码来打开邀请链接。你可以使用Snikket APP或者任意的二维码扫码"
 "APP。"
 
-#: snikket_web/templates/invite_view.html:63
-msgid "Using a QR code scanner"
-msgstr "使用二维码扫码APP"
-
-#: snikket_web/templates/invite_view.html:65
-msgid "Using the Snikket app"
-msgstr "使用Snikket APP"
-
-#: snikket_web/templates/invite_view.html:70
-msgid ""
-"Use a <em>QR code</em> scanner on your mobile device to scan the code below:"
-msgstr "使用 <em>扫码APP</em> 扫描下面的二维码："
-
-#: snikket_web/templates/invite_view.html:76
-msgid ""
-"Install the Snikket app on your mobile device, open it, and tap the 'Scan' "
-"button at the top."
-msgstr "安装并打开Snikket APP，点击顶部的“扫码”按钮。"
-
-#: snikket_web/templates/invite_view.html:93
+#: snikket_web/templates/invite_view.html:71
 msgid "Install on iOS"
 msgstr "在iOS安装"
 
-#: snikket_web/templates/invite_view.html:99
+#: snikket_web/templates/invite_view.html:77
 msgid ""
 "After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
 msgstr "从App Store下载后，你需要回到这个邀请链接，然后点击“打开APP”来继续。"
 
-#: snikket_web/templates/invite_view.html:101
+#: snikket_web/templates/invite_view.html:79
 msgid "First download Snikket from the App Store using the button below:"
 msgstr "首先使用下面的按钮从App Store下载Snikket APP："
 
-#: snikket_web/templates/invite_view.html:103
-#: snikket_web/templates/invite_view.html:131
+#: snikket_web/templates/invite_view.html:81
+#: snikket_web/templates/invite_view.html:109
 msgid ""
 "After the installation is complete, you can return to this page and tap the "
 "\"Open the app\" button to continue with the setup:"
 msgstr "安装完之后，你可以回到此页面，然后点击“打开APP”按钮来继续安装："
 
-#: snikket_web/templates/invite_view.html:121
-#: snikket_web/templates/invite_view.html:130
+#: snikket_web/templates/invite_view.html:99
+#: snikket_web/templates/invite_view.html:108
 msgid "Install via F-Droid"
 msgstr "从F-Droid安装"
 
-#: snikket_web/templates/invite_view.html:127
+#: snikket_web/templates/invite_view.html:105
 msgid ""
 "After installing Snikket via F-Droid, you have to return to this invite link "
 "and tap on \"Open the app\" to proceed."
 msgstr ""
 "从F-Droid安装Snikket APP后，你需要回到这个邀请链接，然后点击“打开APP”来继续。"
 
-#: snikket_web/templates/invite_view.html:129
+#: snikket_web/templates/invite_view.html:107
 msgid "First install Snikket from F-Droid using the button below:"
 msgstr "首先使用下面的按钮从F-Droid安装Snikket APP："
 
@@ -1564,3 +1544,19 @@ msgid ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
 msgstr "允许你控制谁能看到你的个人资料，比如头像和昵称。"
+
+#~ msgid "Using a QR code scanner"
+#~ msgstr "使用二维码扫码APP"
+
+#~ msgid "Using the Snikket app"
+#~ msgstr "使用Snikket APP"
+
+#~ msgid ""
+#~ "Use a <em>QR code</em> scanner on your mobile device to scan the code "
+#~ "below:"
+#~ msgstr "使用 <em>扫码APP</em> 扫描下面的二维码："
+
+#~ msgid ""
+#~ "Install the Snikket app on your mobile device, open it, and tap the "
+#~ "'Scan' button at the top."
+#~ msgstr "安装并打开Snikket APP，点击顶部的“扫码”按钮。"

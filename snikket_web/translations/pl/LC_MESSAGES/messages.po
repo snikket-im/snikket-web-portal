@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-06 19:52+0200\n"
+"POT-Creation-Date: 2022-06-07 22:31+0200\n"
 "PO-Revision-Date: 2022-01-21 15:00+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
 "Language-Team: Polish <http://i18n.sotecware.net/projects/snikket/web-portal/"
@@ -1152,8 +1152,8 @@ msgstr "Aplikacja jest już zainstalowana?"
 #: snikket_web/templates/invite_register.html:16
 #: snikket_web/templates/invite_reset_view.html:21
 #: snikket_web/templates/invite_view.html:41
-#: snikket_web/templates/invite_view.html:106
-#: snikket_web/templates/invite_view.html:134
+#: snikket_web/templates/invite_view.html:84
+#: snikket_web/templates/invite_view.html:112
 msgid "Open the app"
 msgstr "Otwórz aplikację"
 
@@ -1255,7 +1255,6 @@ msgstr ""
 "przycisku Skanowania, który znajduje się u góry."
 
 #: snikket_web/templates/invite_reset_view.html:26
-#: snikket_web/templates/invite_view.html:77
 msgid ""
 "Your camera will turn on. Point it at the square code below until it is "
 "within the highlighted square on your screen, and wait until the app "
@@ -1399,7 +1398,7 @@ msgid "Get it on Google Play"
 msgstr "Pobierz w Google Play"
 
 #: snikket_web/templates/invite_view.html:30
-#: snikket_web/templates/invite_view.html:102
+#: snikket_web/templates/invite_view.html:80
 msgid "Download on the App Store"
 msgstr "Pobierz w App Store"
 
@@ -1436,11 +1435,11 @@ msgid "Scan invite code"
 msgstr "Zeskanuj kod zaproszenia"
 
 #: snikket_web/templates/invite_view.html:55
-#: snikket_web/templates/invite_view.html:84
-#: snikket_web/templates/invite_view.html:96
-#: snikket_web/templates/invite_view.html:112
-#: snikket_web/templates/invite_view.html:124
-#: snikket_web/templates/invite_view.html:140
+#: snikket_web/templates/invite_view.html:62
+#: snikket_web/templates/invite_view.html:74
+#: snikket_web/templates/invite_view.html:90
+#: snikket_web/templates/invite_view.html:102
+#: snikket_web/templates/invite_view.html:118
 msgid "Close"
 msgstr "Zamknij"
 
@@ -1453,34 +1452,11 @@ msgstr ""
 "poniższy kod aparatem. Możesz również skorzystać ze skanera kodów QR lub "
 "samej aplikacji Snikket."
 
-#: snikket_web/templates/invite_view.html:63
-msgid "Using a QR code scanner"
-msgstr "Używając skanera kodów QR"
-
-#: snikket_web/templates/invite_view.html:65
-msgid "Using the Snikket app"
-msgstr "Używając aplikacji Snikket"
-
-#: snikket_web/templates/invite_view.html:70
-msgid ""
-"Use a <em>QR code</em> scanner on your mobile device to scan the code below:"
-msgstr ""
-"Użyj skanera <em>kodów QR</em> na swoim urządzeniu mobilnym, by zeskanować "
-"poniższy kod:"
-
-#: snikket_web/templates/invite_view.html:76
-msgid ""
-"Install the Snikket app on your mobile device, open it, and tap the 'Scan' "
-"button at the top."
-msgstr ""
-"Zainstaluj aplikację Snikket na swoim urządzeniu mobilnym, otwórz ją, "
-"następnie wciśnij przycisk \"Skanuj\" u góry."
-
-#: snikket_web/templates/invite_view.html:93
+#: snikket_web/templates/invite_view.html:71
 msgid "Install on iOS"
 msgstr "Zainstaluj na iOS"
 
-#: snikket_web/templates/invite_view.html:99
+#: snikket_web/templates/invite_view.html:77
 msgid ""
 "After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
@@ -1488,14 +1464,14 @@ msgstr ""
 "Po pobraniu aplikacji Snikket z App Store musisz wrócić do tego linku z "
 "zaproszeniem, następnie kliknąć \"Otwórz aplikację\", aby kontynuować."
 
-#: snikket_web/templates/invite_view.html:101
+#: snikket_web/templates/invite_view.html:79
 msgid "First download Snikket from the App Store using the button below:"
 msgstr ""
 "Najpierw pobierz aplikację Snikket z App Store za pomocą poniższego "
 "przycisku:"
 
-#: snikket_web/templates/invite_view.html:103
-#: snikket_web/templates/invite_view.html:131
+#: snikket_web/templates/invite_view.html:81
+#: snikket_web/templates/invite_view.html:109
 msgid ""
 "After the installation is complete, you can return to this page and tap the "
 "\"Open the app\" button to continue with the setup:"
@@ -1503,12 +1479,12 @@ msgstr ""
 "Po zakończeniu instalacji możesz wrócić do tej strony i kliknąć przycisk "
 "\"Otwórz aplikację\", aby kontynuować:"
 
-#: snikket_web/templates/invite_view.html:121
-#: snikket_web/templates/invite_view.html:130
+#: snikket_web/templates/invite_view.html:99
+#: snikket_web/templates/invite_view.html:108
 msgid "Install via F-Droid"
 msgstr "Zainstaluj przez F-Droid"
 
-#: snikket_web/templates/invite_view.html:127
+#: snikket_web/templates/invite_view.html:105
 msgid ""
 "After installing Snikket via F-Droid, you have to return to this invite link "
 "and tap on \"Open the app\" to proceed."
@@ -1517,7 +1493,7 @@ msgstr ""
 "linku z zaproszeniem, następnie kliknąć \"Otwórz aplikację\", aby "
 "kontynuować."
 
-#: snikket_web/templates/invite_view.html:129
+#: snikket_web/templates/invite_view.html:107
 msgid "First install Snikket from F-Droid using the button below:"
 msgstr ""
 "Najpierw zainstaluj aplikację Snikket z F-Droid, korzystając z poniższego "
@@ -1669,6 +1645,26 @@ msgid ""
 msgstr ""
 "Ta sekcja pozwoli ci na zarządzenie widocznością informacji o twoim profilu "
 "przez innych, jak awatar lub pseudonim."
+
+#~ msgid "Using a QR code scanner"
+#~ msgstr "Używając skanera kodów QR"
+
+#~ msgid "Using the Snikket app"
+#~ msgstr "Używając aplikacji Snikket"
+
+#~ msgid ""
+#~ "Use a <em>QR code</em> scanner on your mobile device to scan the code "
+#~ "below:"
+#~ msgstr ""
+#~ "Użyj skanera <em>kodów QR</em> na swoim urządzeniu mobilnym, by "
+#~ "zeskanować poniższy kod:"
+
+#~ msgid ""
+#~ "Install the Snikket app on your mobile device, open it, and tap the "
+#~ "'Scan' button at the top."
+#~ msgstr ""
+#~ "Zainstaluj aplikację Snikket na swoim urządzeniu mobilnym, otwórz ją, "
+#~ "następnie wciśnij przycisk \"Skanuj\" u góry."
 
 #~ msgid "Create password reset link for %(user_name)s"
 #~ msgstr "Utwórz link resetowania hasła dla %(user_name)s"
