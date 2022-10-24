@@ -1,6 +1,6 @@
 aiohttp~=3.6
-quart~=0.17
-flask-wtf~=0.14
+quart~=0.17,<0.18
+flask-wtf~=1.0
 hsluv~=5.0
 flask-babel~=1.0
 email-validator~=1.1
