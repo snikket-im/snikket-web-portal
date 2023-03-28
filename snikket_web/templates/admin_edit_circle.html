@@ -1,12 +1,12 @@
 {% extends "admin_app.html" %}
-{% from "library.j2" import form_button, standard_button, value_or_hint, custom_form_button, clipboard_button, icon %}
+{% from "library.j2" import form_button, standard_button, value_or_hint, custom_form_button, clipboard_button, icon, avatar with context %}
 {% block head_lead %}
 {{ super() }}
 {% include "copy-snippet.html" %}
 {% endblock %}
 {% block content %}
 <h1>{% trans circle_name=(target_circle | circle_name) %}Edit circle {{ circle_name }}{% endtrans %}</h1>
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
 {{- form.csrf_token -}}
 {%- if target_circle.id_ == "default" -%}
 <input type="hidden" name="{{ form.name.name }}" value="{{ form.name.data }}">{#- -#}
@@ -38,6 +38,15 @@
 		{%- else -%}
 		<p>{% trans %}This circle has no group chat associated.{% endtrans %}<p>
 		{%- endif -%}
+	</div>
+	<div class="f-ebox">
+		{{ form.avatar.label }}
+		<div class="avatar-wrap">
+		{{ form.avatar(accept="image/png",
+				 data_maxsize=max_avatar_size,
+				 data_warning_header=avatar_too_big_warning_header,
+				 data_maxsize_warning=avatar_too_big_warning) }}
+		</div>
 	</div>
 	<div class="f-bbox">
 		{%- call standard_button("back", url_for(".circles"), class="tertiary") -%}

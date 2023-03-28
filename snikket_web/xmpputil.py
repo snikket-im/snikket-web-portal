@@ -49,6 +49,8 @@ TAG_DATA_FORM_VALUE = "{{{}}}value".format(NS_DATA_FORM)
 FORM_NODE_CONFIG = "http://jabber.org/protocol/pubsub#node_config"
 FORM_FIELD_PUBSUB_ACCESS_MODEL = "pubsub#access_model"
 
+NS_VCARD_TEMP = "vcard-temp"
+
 
 SimpleJID = typing.Tuple[typing.Optional[str], str, typing.Optional[str]]
 T = typing.TypeVar("T")
@@ -223,6 +225,35 @@ def make_avatar_metadata_set_request(
         xmlns=NS_USER_AVATAR_METADATA,
         **attr,  # type: ignore
     )
+    return req
+
+
+def make_muc_avatar_set_request(
+        to: str,
+        data: bytes,
+        mimetype: str,
+        ) -> ET.Element:
+    req = ET.Element("iq", type="set", to=to)
+    vcard = ET.SubElement(
+        req,
+        "vCard",
+        xmlns=NS_VCARD_TEMP,
+    )
+    photo_el = ET.SubElement(
+        vcard,
+        "PHOTO",
+        xmlns=NS_VCARD_TEMP,
+    )
+    ET.SubElement(
+        photo_el,
+        "BINVAL",
+        xmlns=NS_VCARD_TEMP,
+    ).text = base64.b64encode(data).decode("ascii")
+    ET.SubElement(
+        photo_el,
+        "TYPE",
+        xmlns=NS_VCARD_TEMP,
+    ).text = mimetype
     return req
 
 

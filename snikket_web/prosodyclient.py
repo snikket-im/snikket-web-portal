@@ -1246,3 +1246,23 @@ class ProsodyClient:
                 json=payload) as resp:
             self._raise_error_from_response(resp)
             resp.raise_for_status()
+
+    @autosession
+    async def set_muc_avatar(
+            self,
+            muc_jid: str,
+            data: bytes,
+            mimetype: str,
+            *,
+            session: aiohttp.ClientSession,
+            ):
+        xmpputil.extract_iq_reply(
+            await self._xml_iq_call(
+                session,
+                xmpputil.make_muc_avatar_set_request(
+                    muc_jid,
+                    data,
+                    mimetype,
+                ),
+            )
+        )
