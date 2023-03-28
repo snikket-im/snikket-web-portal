@@ -104,7 +104,7 @@ async def view(id_: str) -> typing.Union[quart.Response,
     return quart.Response(
         body,
         headers={
-            "Link": "<{}> rel=\"alternate\"".format(invite.xmpp_uri),
+            "Link": "<{}>; rel=\"alternate\"".format(invite.xmpp_uri),
         }
     )
 
