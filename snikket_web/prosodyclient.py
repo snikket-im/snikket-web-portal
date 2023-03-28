@@ -27,8 +27,8 @@ from . import xmpputil
 from .xmpputil import split_jid
 
 
-SCOPE_DEFAULT = "prosody:scope:default"
-SCOPE_ADMIN = "prosody:scope:admin"
+SCOPE_DEFAULT = "prosody:user"
+SCOPE_ADMIN = "prosody:admin"
 
 
 T = typing.TypeVar("T")
