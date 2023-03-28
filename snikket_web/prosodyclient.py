@@ -61,12 +61,18 @@ class AdminUserInfo:
             cls,
             data: typing.Mapping[str, typing.Any],
             ) -> "AdminUserInfo":
+        try:
+            roles: typing.Optional[typing.List[str]] = [data["role"]]
+            assert roles is not None  # make mypy happy
+            roles.extend(data.get("secondary_roles", []))
+        except KeyError:
+            roles = data.get("roles")
         return cls(
             localpart=data["username"],
             display_name=data.get("display_name") or None,
             email=data.get("email") or None,
             phone=data.get("phone") or None,
-            roles=data.get("roles"),
+            roles=roles,
         )
 
 
