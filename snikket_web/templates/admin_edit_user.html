@@ -3,7 +3,7 @@
 {% macro access_level_description(role, caller=None) %}
 {%- if role == "prosody:restricted" -%}
 {% trans %}Limited users can interact with users on the same Snikket service and be members of circles.{% endtrans %}
-{%- elif role == "prosody:normal" -%}
+{%- elif role == "prosody:user" -%}
 {% trans %}Like limited users and can also interact with users on other Snikket services.{% endtrans %}
 {%- elif role == "prosody:admin" -%}
 {% trans %}Like normal users and can access the admin panel in the web portal.{% endtrans %}

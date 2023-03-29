@@ -885,7 +885,7 @@ class ProsodyClient:
             localpart: str,
             *,
             display_name: typing.Optional[str],
-            roles: typing.Optional[typing.Collection[str]],
+            role: typing.Optional[str],
             session: aiohttp.ClientSession,
             ) -> None:
         payload: typing.Dict[str, typing.Any] = {
@@ -893,8 +893,8 @@ class ProsodyClient:
         }
         if display_name is not None:
             payload["display_name"] = display_name
-        if roles is not None:
-            payload["roles"] = list(roles)
+        if role is not None:
+            payload["role"] = role
 
         async with session.put(
                 self._admin_v1_endpoint("/users/{}".format(localpart)),
