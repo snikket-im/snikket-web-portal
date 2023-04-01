@@ -6,18 +6,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-04-01 10:07+0200\n"
-"PO-Revision-Date: 2022-01-18 09:21+0000\n"
+"PO-Revision-Date: 2023-04-02 15:17+0000\n"
 "Last-Translator: Kim Alvefur <zash@zash.se>\n"
-"Language-Team: Swedish <http://i18n.sotecware.net/projects/snikket/web-"
-"portal/sv/>\n"
+"Language-Team: Swedish <http://i18n.sotecware.net/projects/snikket/"
+"web-portal/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.8.1\n"
+"X-Generator: Weblate 4.14.1\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:69 snikket_web/templates/admin_delete_user.html:10
@@ -586,10 +586,9 @@ msgid "Copy complete output"
 msgstr "Kopiera allt"
 
 #: snikket_web/templates/admin_delete_circle.html:4
-#, fuzzy, python-format
-#| msgid "Edit circle %(circle_name)s"
+#, python-format
 msgid "Delete circle %(circle_name)s"
-msgstr "Redigera krets %(circle_name)s"
+msgstr "Radera krets %(circle_name)s"
 
 #: snikket_web/templates/admin_delete_circle.html:6
 #: snikket_web/templates/admin_edit_circle.html:48
@@ -598,10 +597,8 @@ msgid "Delete circle"
 msgstr "Radera krets"
 
 #: snikket_web/templates/admin_delete_circle.html:8
-#, fuzzy
-#| msgid "Are you sure you want to delete the following user?"
 msgid "Are you sure you want to delete the following circle?"
-msgstr "Är du säker på att du vill radera denna användare?"
+msgstr "Är du säker på att du vill radera denna krets?"
 
 #: snikket_web/templates/admin_delete_circle.html:13
 #: snikket_web/templates/admin_delete_user.html:15
@@ -609,19 +606,14 @@ msgid "Danger"
 msgstr "Fara"
 
 #: snikket_web/templates/admin_delete_circle.html:14
-#, fuzzy
-#| msgid ""
-#| "The user and their data will be deleted irrevocably, permanently and "
-#| "immediately upon pushing the below button. <strong>There is no way back!</"
-#| "strong>"
 msgid ""
 "The circle and the corresponding chat will be deleted, permanently and "
 "immediately upon pushing the below button. <strong>There is no way back!</"
 "strong>"
 msgstr ""
-"Om du trycker på knappen nedanför kommer användaren och deras data raderas "
-"direkt, permanent och skoningslöst. <strong>Därefter finns ingen återvändo!</"
-"strong>"
+"Om du trycker på knappen nedanför kommer kretsen och dess data raderas "
+"direkt, permanent och skoningslöst. <strong>Därefter finns ingen "
+"återvändo!</strong>"
 
 #: snikket_web/templates/admin_delete_circle.html:17
 #: snikket_web/templates/admin_delete_user.html:19
