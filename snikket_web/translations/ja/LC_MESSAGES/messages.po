@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-07 22:31+0200\n"
+"POT-Creation-Date: 2023-04-01 10:07+0200\n"
 "PO-Revision-Date: 2021-01-28 17:55+0000\n"
 "Last-Translator: pep <pep@bouah.net>\n"
 "Language-Team: Japanese <https://i18n.sotecware.net/projects/snikket/web-"
@@ -165,6 +165,7 @@ msgid "Invitation revoked"
 msgstr "紹介の種類"
 
 #: snikket_web/admin.py:394 snikket_web/admin.py:442
+#: snikket_web/templates/admin_delete_circle.html:10
 msgid "Name"
 msgstr "名"
 
@@ -186,21 +187,17 @@ msgstr "ユーザー選択"
 msgid "Update circle"
 msgstr "サークルを更新"
 
-#: snikket_web/admin.py:456
-msgid "Delete circle permanently"
-msgstr "サークルを削除"
-
-#: snikket_web/admin.py:462
+#: snikket_web/admin.py:458
 msgid "Add user"
 msgstr "ユーザーを追加する"
 
-#: snikket_web/admin.py:478
+#: snikket_web/admin.py:474 snikket_web/admin.py:563
 #, fuzzy
 #| msgid "No circles"
 msgid "No such circle exists"
 msgstr "なし"
 
-#: snikket_web/admin.py:515
+#: snikket_web/admin.py:511
 #, fuzzy
 #| msgid "Circle name"
 msgid "Circle data updated"
@@ -208,39 +205,43 @@ msgstr "サークル名"
 
 #: snikket_web/admin.py:521
 #, fuzzy
-#| msgid "Circle members"
-msgid "Circle deleted"
-msgstr "サークル会員"
-
-#: snikket_web/admin.py:532
-#, fuzzy
 #| msgid "Invite to circle"
 msgid "User added to circle"
 msgstr "サークルに紹介する"
 
-#: snikket_web/admin.py:541
+#: snikket_web/admin.py:530
 #, fuzzy
 #| msgid "Remove user %(username)s from circle"
 msgid "User removed from circle"
 msgstr "%(username)s をサークルから外す"
 
-#: snikket_web/admin.py:610
+#: snikket_web/admin.py:547
+msgid "Delete circle permanently"
+msgstr "サークルを削除"
+
+#: snikket_web/admin.py:574
+#, fuzzy
+#| msgid "Circle members"
+msgid "Circle deleted"
+msgstr "サークル会員"
+
+#: snikket_web/admin.py:640
 msgid "Message contents"
 msgstr ""
 
-#: snikket_web/admin.py:616
+#: snikket_web/admin.py:646
 msgid "Only send to online users"
 msgstr ""
 
-#: snikket_web/admin.py:620
+#: snikket_web/admin.py:650
 msgid "Post to all users"
 msgstr ""
 
-#: snikket_web/admin.py:624
+#: snikket_web/admin.py:654
 msgid "Send preview to yourself"
 msgstr ""
 
-#: snikket_web/admin.py:646
+#: snikket_web/admin.py:676
 msgid "Announcement sent!"
 msgstr ""
 
@@ -605,6 +606,53 @@ msgstr ""
 msgid "Copy complete output"
 msgstr ""
 
+#: snikket_web/templates/admin_delete_circle.html:4
+#, fuzzy, python-format
+#| msgid "Edit circle %(circle_name)s"
+msgid "Delete circle %(circle_name)s"
+msgstr "%(circle_name)s を管理"
+
+#: snikket_web/templates/admin_delete_circle.html:6
+#: snikket_web/templates/admin_edit_circle.html:48
+#: snikket_web/templates/admin_edit_circle.html:51
+msgid "Delete circle"
+msgstr "サークル削除"
+
+#: snikket_web/templates/admin_delete_circle.html:8
+#, fuzzy
+#| msgid "Are you sure you want to delete the following user?"
+msgid "Are you sure you want to delete the following circle?"
+msgstr "本当にこのユーザーを削除していいですか？"
+
+#: snikket_web/templates/admin_delete_circle.html:13
+#: snikket_web/templates/admin_delete_user.html:15
+msgid "Danger"
+msgstr "警告"
+
+#: snikket_web/templates/admin_delete_circle.html:14
+#, fuzzy
+#| msgid ""
+#| "The user and their data will be deleted irrevocably, permanently and "
+#| "immediately upon pushing the below button. <strong>There is no way back!</"
+#| "strong>"
+msgid ""
+"The circle and the corresponding chat will be deleted, permanently and "
+"immediately upon pushing the below button. <strong>There is no way back!</"
+"strong>"
+msgstr ""
+"ユーザーとそのユーザーのデータが削除されます。<strong>戻ることができません</"
+"strong>"
+
+#: snikket_web/templates/admin_delete_circle.html:17
+#: snikket_web/templates/admin_delete_user.html:19
+#: snikket_web/templates/admin_reset_user_password.html:25
+#: snikket_web/templates/user_logout.html:10
+#: snikket_web/templates/user_manage_data.html:14
+#: snikket_web/templates/user_passwd.html:27
+#: snikket_web/templates/user_profile.html:32
+msgid "Back"
+msgstr "戻る"
+
 #: snikket_web/templates/admin_delete_user.html:4
 #, python-format
 msgid "Delete user %(user_name)s"
@@ -619,10 +667,6 @@ msgstr "ユーザー削除"
 msgid "Are you sure you want to delete the following user?"
 msgstr "本当にこのユーザーを削除していいですか？"
 
-#: snikket_web/templates/admin_delete_user.html:15
-msgid "Danger"
-msgstr "警告"
-
 #: snikket_web/templates/admin_delete_user.html:16
 msgid ""
 "The user and their data will be deleted irrevocably, permanently and "
@@ -631,15 +675,6 @@ msgid ""
 msgstr ""
 "ユーザーとそのユーザーのデータが削除されます。<strong>戻ることができません</"
 "strong>"
-
-#: snikket_web/templates/admin_delete_user.html:19
-#: snikket_web/templates/admin_reset_user_password.html:25
-#: snikket_web/templates/user_logout.html:10
-#: snikket_web/templates/user_manage_data.html:14
-#: snikket_web/templates/user_passwd.html:27
-#: snikket_web/templates/user_profile.html:32
-msgid "Back"
-msgstr "戻る"
 
 #: snikket_web/templates/admin_edit_circle.html:14
 msgid "This is your main circle"
@@ -672,10 +707,6 @@ msgstr ""
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Return to circle list"
 msgstr ""
-
-#: snikket_web/templates/admin_edit_circle.html:48
-msgid "Delete circle"
-msgstr "サークル削除"
 
 #: snikket_web/templates/admin_edit_circle.html:49
 msgid "Deleting a circle does not delete any users in the circle."

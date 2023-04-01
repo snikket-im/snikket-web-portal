@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-07 22:31+0200\n"
+"POT-Creation-Date: 2023-04-01 10:07+0200\n"
 "PO-Revision-Date: 2022-01-18 09:21+0000\n"
 "Last-Translator: Kim Alvefur <zash@zash.se>\n"
 "Language-Team: Swedish <http://i18n.sotecware.net/projects/snikket/web-"
@@ -145,6 +145,7 @@ msgid "Invitation revoked"
 msgstr "Inbjudan återkallad"
 
 #: snikket_web/admin.py:394 snikket_web/admin.py:442
+#: snikket_web/templates/admin_delete_circle.html:10
 msgid "Name"
 msgstr "Namn"
 
@@ -164,51 +165,51 @@ msgstr "Välj användare"
 msgid "Update circle"
 msgstr "Uppdatera krets"
 
-#: snikket_web/admin.py:456
-msgid "Delete circle permanently"
-msgstr "Radera krets permanent"
-
-#: snikket_web/admin.py:462
+#: snikket_web/admin.py:458
 msgid "Add user"
 msgstr "Lägg till användare"
 
-#: snikket_web/admin.py:478
+#: snikket_web/admin.py:474 snikket_web/admin.py:563
 msgid "No such circle exists"
 msgstr "Kretsen finns inte"
 
-#: snikket_web/admin.py:515
+#: snikket_web/admin.py:511
 msgid "Circle data updated"
 msgstr "Kretsen uppdaterades"
 
 #: snikket_web/admin.py:521
-msgid "Circle deleted"
-msgstr "Krets raderad"
-
-#: snikket_web/admin.py:532
 msgid "User added to circle"
 msgstr "Användare tillagd i krets"
 
-#: snikket_web/admin.py:541
+#: snikket_web/admin.py:530
 msgid "User removed from circle"
 msgstr "Användaren %(username)s borttagen från krets"
 
-#: snikket_web/admin.py:610
+#: snikket_web/admin.py:547
+msgid "Delete circle permanently"
+msgstr "Radera krets permanent"
+
+#: snikket_web/admin.py:574
+msgid "Circle deleted"
+msgstr "Krets raderad"
+
+#: snikket_web/admin.py:640
 msgid "Message contents"
 msgstr "Meddelandeinnehåll"
 
-#: snikket_web/admin.py:616
+#: snikket_web/admin.py:646
 msgid "Only send to online users"
 msgstr "Skicka bara till användare som är online"
 
-#: snikket_web/admin.py:620
+#: snikket_web/admin.py:650
 msgid "Post to all users"
 msgstr "Skicka till alla användare"
 
-#: snikket_web/admin.py:624
+#: snikket_web/admin.py:654
 msgid "Send preview to yourself"
 msgstr "Skicka förhandsvisning till dig själv"
 
-#: snikket_web/admin.py:646
+#: snikket_web/admin.py:676
 msgid "Announcement sent!"
 msgstr "Tillkännagivande skickat!"
 
@@ -584,6 +585,54 @@ msgstr "Felsökningsdata"
 msgid "Copy complete output"
 msgstr "Kopiera allt"
 
+#: snikket_web/templates/admin_delete_circle.html:4
+#, fuzzy, python-format
+#| msgid "Edit circle %(circle_name)s"
+msgid "Delete circle %(circle_name)s"
+msgstr "Redigera krets %(circle_name)s"
+
+#: snikket_web/templates/admin_delete_circle.html:6
+#: snikket_web/templates/admin_edit_circle.html:48
+#: snikket_web/templates/admin_edit_circle.html:51
+msgid "Delete circle"
+msgstr "Radera krets"
+
+#: snikket_web/templates/admin_delete_circle.html:8
+#, fuzzy
+#| msgid "Are you sure you want to delete the following user?"
+msgid "Are you sure you want to delete the following circle?"
+msgstr "Är du säker på att du vill radera denna användare?"
+
+#: snikket_web/templates/admin_delete_circle.html:13
+#: snikket_web/templates/admin_delete_user.html:15
+msgid "Danger"
+msgstr "Fara"
+
+#: snikket_web/templates/admin_delete_circle.html:14
+#, fuzzy
+#| msgid ""
+#| "The user and their data will be deleted irrevocably, permanently and "
+#| "immediately upon pushing the below button. <strong>There is no way back!</"
+#| "strong>"
+msgid ""
+"The circle and the corresponding chat will be deleted, permanently and "
+"immediately upon pushing the below button. <strong>There is no way back!</"
+"strong>"
+msgstr ""
+"Om du trycker på knappen nedanför kommer användaren och deras data raderas "
+"direkt, permanent och skoningslöst. <strong>Därefter finns ingen återvändo!</"
+"strong>"
+
+#: snikket_web/templates/admin_delete_circle.html:17
+#: snikket_web/templates/admin_delete_user.html:19
+#: snikket_web/templates/admin_reset_user_password.html:25
+#: snikket_web/templates/user_logout.html:10
+#: snikket_web/templates/user_manage_data.html:14
+#: snikket_web/templates/user_passwd.html:27
+#: snikket_web/templates/user_profile.html:32
+msgid "Back"
+msgstr "Tillbaka"
+
 #: snikket_web/templates/admin_delete_user.html:4
 #, python-format
 msgid "Delete user %(user_name)s"
@@ -598,10 +647,6 @@ msgstr "Radera användare"
 msgid "Are you sure you want to delete the following user?"
 msgstr "Är du säker på att du vill radera denna användare?"
 
-#: snikket_web/templates/admin_delete_user.html:15
-msgid "Danger"
-msgstr "Fara"
-
 #: snikket_web/templates/admin_delete_user.html:16
 msgid ""
 "The user and their data will be deleted irrevocably, permanently and "
@@ -611,15 +656,6 @@ msgstr ""
 "Om du trycker på knappen nedanför kommer användaren och deras data raderas "
 "direkt, permanent och skoningslöst. <strong>Därefter finns ingen återvändo!</"
 "strong>"
-
-#: snikket_web/templates/admin_delete_user.html:19
-#: snikket_web/templates/admin_reset_user_password.html:25
-#: snikket_web/templates/user_logout.html:10
-#: snikket_web/templates/user_manage_data.html:14
-#: snikket_web/templates/user_passwd.html:27
-#: snikket_web/templates/user_profile.html:32
-msgid "Back"
-msgstr "Tillbaka"
 
 #: snikket_web/templates/admin_edit_circle.html:14
 msgid "This is your main circle"
@@ -652,10 +688,6 @@ msgstr "Denna krets har ingen tillhörande gruppchatt."
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Return to circle list"
 msgstr "Tillbaka till cirkellistan"
-
-#: snikket_web/templates/admin_edit_circle.html:48
-msgid "Delete circle"
-msgstr "Radera krets"
 
 #: snikket_web/templates/admin_edit_circle.html:49
 msgid "Deleting a circle does not delete any users in the circle."

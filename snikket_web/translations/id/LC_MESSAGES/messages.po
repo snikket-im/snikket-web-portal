@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-07 22:31+0200\n"
+"POT-Creation-Date: 2023-04-01 10:07+0200\n"
 "PO-Revision-Date: 2022-01-18 14:59+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
 "Language-Team: Indonesian <http://i18n.sotecware.net/projects/snikket/web-"
@@ -145,6 +145,7 @@ msgid "Invitation revoked"
 msgstr "Undangan dibatalkan"
 
 #: snikket_web/admin.py:394 snikket_web/admin.py:442
+#: snikket_web/templates/admin_delete_circle.html:10
 msgid "Name"
 msgstr "Nama"
 
@@ -164,51 +165,51 @@ msgstr "Pilih pengguna"
 msgid "Update circle"
 msgstr "Memperbarui kelompok"
 
-#: snikket_web/admin.py:456
-msgid "Delete circle permanently"
-msgstr "Hapus kelompok secara permanen"
-
-#: snikket_web/admin.py:462
+#: snikket_web/admin.py:458
 msgid "Add user"
 msgstr "Tambah pengguna"
 
-#: snikket_web/admin.py:478
+#: snikket_web/admin.py:474 snikket_web/admin.py:563
 msgid "No such circle exists"
 msgstr "Kelompok tersebut tidak ada"
 
-#: snikket_web/admin.py:515
+#: snikket_web/admin.py:511
 msgid "Circle data updated"
 msgstr "Data kelompok diperbarui"
 
 #: snikket_web/admin.py:521
-msgid "Circle deleted"
-msgstr "Kelompok dihapus"
-
-#: snikket_web/admin.py:532
 msgid "User added to circle"
 msgstr "Pengguna ditambahkan ke kelompok"
 
-#: snikket_web/admin.py:541
+#: snikket_web/admin.py:530
 msgid "User removed from circle"
 msgstr "Pengguna dihapus dari kelompok"
 
-#: snikket_web/admin.py:610
+#: snikket_web/admin.py:547
+msgid "Delete circle permanently"
+msgstr "Hapus kelompok secara permanen"
+
+#: snikket_web/admin.py:574
+msgid "Circle deleted"
+msgstr "Kelompok dihapus"
+
+#: snikket_web/admin.py:640
 msgid "Message contents"
 msgstr "Isi pesan"
 
-#: snikket_web/admin.py:616
+#: snikket_web/admin.py:646
 msgid "Only send to online users"
 msgstr "Hanya kirim ke pengguna online"
 
-#: snikket_web/admin.py:620
+#: snikket_web/admin.py:650
 msgid "Post to all users"
 msgstr "Kirim ke semua pengguna"
 
-#: snikket_web/admin.py:624
+#: snikket_web/admin.py:654
 msgid "Send preview to yourself"
 msgstr "Kirim pratinjau ke diri sendiri"
 
-#: snikket_web/admin.py:646
+#: snikket_web/admin.py:676
 msgid "Announcement sent!"
 msgstr "Pengumuman terkirim!"
 
@@ -587,6 +588,54 @@ msgstr "Kumpulan data debug mentah"
 msgid "Copy complete output"
 msgstr "Salin keluaran lengkap"
 
+#: snikket_web/templates/admin_delete_circle.html:4
+#, fuzzy, python-format
+#| msgid "Edit circle %(circle_name)s"
+msgid "Delete circle %(circle_name)s"
+msgstr "Edit kelompok %(circle_name)s"
+
+#: snikket_web/templates/admin_delete_circle.html:6
+#: snikket_web/templates/admin_edit_circle.html:48
+#: snikket_web/templates/admin_edit_circle.html:51
+msgid "Delete circle"
+msgstr "Hapus kelompok"
+
+#: snikket_web/templates/admin_delete_circle.html:8
+#, fuzzy
+#| msgid "Are you sure you want to delete the following user?"
+msgid "Are you sure you want to delete the following circle?"
+msgstr "Apakah anda yakin mau menghapus pengguna tersebut?"
+
+#: snikket_web/templates/admin_delete_circle.html:13
+#: snikket_web/templates/admin_delete_user.html:15
+msgid "Danger"
+msgstr "Berbahaya"
+
+#: snikket_web/templates/admin_delete_circle.html:14
+#, fuzzy
+#| msgid ""
+#| "The user and their data will be deleted irrevocably, permanently and "
+#| "immediately upon pushing the below button. <strong>There is no way back!</"
+#| "strong>"
+msgid ""
+"The circle and the corresponding chat will be deleted, permanently and "
+"immediately upon pushing the below button. <strong>There is no way back!</"
+"strong>"
+msgstr ""
+"Pengguna dan datanya akan dihapus secara permanen, tidak bisa dibatalkan, "
+"segera setelah menekan tombol di bawah. <strong>Tidak ada jalan kembali!</"
+"strong>"
+
+#: snikket_web/templates/admin_delete_circle.html:17
+#: snikket_web/templates/admin_delete_user.html:19
+#: snikket_web/templates/admin_reset_user_password.html:25
+#: snikket_web/templates/user_logout.html:10
+#: snikket_web/templates/user_manage_data.html:14
+#: snikket_web/templates/user_passwd.html:27
+#: snikket_web/templates/user_profile.html:32
+msgid "Back"
+msgstr "Kembali"
+
 #: snikket_web/templates/admin_delete_user.html:4
 #, python-format
 msgid "Delete user %(user_name)s"
@@ -601,10 +650,6 @@ msgstr "Hapus pengguna"
 msgid "Are you sure you want to delete the following user?"
 msgstr "Apakah anda yakin mau menghapus pengguna tersebut?"
 
-#: snikket_web/templates/admin_delete_user.html:15
-msgid "Danger"
-msgstr "Berbahaya"
-
 #: snikket_web/templates/admin_delete_user.html:16
 msgid ""
 "The user and their data will be deleted irrevocably, permanently and "
@@ -614,15 +659,6 @@ msgstr ""
 "Pengguna dan datanya akan dihapus secara permanen, tidak bisa dibatalkan, "
 "segera setelah menekan tombol di bawah. <strong>Tidak ada jalan kembali!</"
 "strong>"
-
-#: snikket_web/templates/admin_delete_user.html:19
-#: snikket_web/templates/admin_reset_user_password.html:25
-#: snikket_web/templates/user_logout.html:10
-#: snikket_web/templates/user_manage_data.html:14
-#: snikket_web/templates/user_passwd.html:27
-#: snikket_web/templates/user_profile.html:32
-msgid "Back"
-msgstr "Kembali"
 
 #: snikket_web/templates/admin_edit_circle.html:14
 msgid "This is your main circle"
@@ -656,10 +692,6 @@ msgstr "Kelompok ini tidak memiliki percakapan grup."
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Return to circle list"
 msgstr "Kembali ke daftar circle"
-
-#: snikket_web/templates/admin_edit_circle.html:48
-msgid "Delete circle"
-msgstr "Hapus kelompok"
 
 #: snikket_web/templates/admin_edit_circle.html:49
 msgid "Deleting a circle does not delete any users in the circle."

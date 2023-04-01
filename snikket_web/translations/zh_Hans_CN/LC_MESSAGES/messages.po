@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-06-07 22:31+0200\n"
+"POT-Creation-Date: 2023-04-01 10:07+0200\n"
 "PO-Revision-Date: 2022-05-20 00:01+0000\n"
 "Last-Translator: Zack Zhou <lnx@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <http://i18n.sotecware.net/projects/"
@@ -145,6 +145,7 @@ msgid "Invitation revoked"
 msgstr "邀请已撤销"
 
 #: snikket_web/admin.py:394 snikket_web/admin.py:442
+#: snikket_web/templates/admin_delete_circle.html:10
 msgid "Name"
 msgstr "名称"
 
@@ -164,51 +165,51 @@ msgstr "选择用户"
 msgid "Update circle"
 msgstr "更新圈子"
 
-#: snikket_web/admin.py:456
-msgid "Delete circle permanently"
-msgstr "永久删除圈子"
-
-#: snikket_web/admin.py:462
+#: snikket_web/admin.py:458
 msgid "Add user"
 msgstr "增加用户"
 
-#: snikket_web/admin.py:478
+#: snikket_web/admin.py:474 snikket_web/admin.py:563
 msgid "No such circle exists"
 msgstr "圈子不存在"
 
-#: snikket_web/admin.py:515
+#: snikket_web/admin.py:511
 msgid "Circle data updated"
 msgstr "圈子数据已更新"
 
 #: snikket_web/admin.py:521
-msgid "Circle deleted"
-msgstr "圈子已删除"
-
-#: snikket_web/admin.py:532
 msgid "User added to circle"
 msgstr "用户已添加到圈子"
 
-#: snikket_web/admin.py:541
+#: snikket_web/admin.py:530
 msgid "User removed from circle"
 msgstr "用户已从圈子移除"
 
-#: snikket_web/admin.py:610
+#: snikket_web/admin.py:547
+msgid "Delete circle permanently"
+msgstr "永久删除圈子"
+
+#: snikket_web/admin.py:574
+msgid "Circle deleted"
+msgstr "圈子已删除"
+
+#: snikket_web/admin.py:640
 msgid "Message contents"
 msgstr "消息内容"
 
-#: snikket_web/admin.py:616
+#: snikket_web/admin.py:646
 msgid "Only send to online users"
 msgstr "仅发送给在线用户"
 
-#: snikket_web/admin.py:620
+#: snikket_web/admin.py:650
 msgid "Post to all users"
 msgstr "发送给所有用户"
 
-#: snikket_web/admin.py:624
+#: snikket_web/admin.py:654
 msgid "Send preview to yourself"
 msgstr "发送预览"
 
-#: snikket_web/admin.py:646
+#: snikket_web/admin.py:676
 msgid "Announcement sent!"
 msgstr "公告已发送！"
 
@@ -566,6 +567,53 @@ msgstr "原始调试信息"
 msgid "Copy complete output"
 msgstr "复制"
 
+#: snikket_web/templates/admin_delete_circle.html:4
+#, fuzzy, python-format
+#| msgid "Edit circle %(circle_name)s"
+msgid "Delete circle %(circle_name)s"
+msgstr "修改 %(circle_name)s 圈子信息"
+
+#: snikket_web/templates/admin_delete_circle.html:6
+#: snikket_web/templates/admin_edit_circle.html:48
+#: snikket_web/templates/admin_edit_circle.html:51
+msgid "Delete circle"
+msgstr "删除圈子"
+
+#: snikket_web/templates/admin_delete_circle.html:8
+#, fuzzy
+#| msgid "Are you sure you want to delete the following user?"
+msgid "Are you sure you want to delete the following circle?"
+msgstr "你确定要删除以下用户吗？"
+
+#: snikket_web/templates/admin_delete_circle.html:13
+#: snikket_web/templates/admin_delete_user.html:15
+msgid "Danger"
+msgstr "危险"
+
+#: snikket_web/templates/admin_delete_circle.html:14
+#, fuzzy
+#| msgid ""
+#| "The user and their data will be deleted irrevocably, permanently and "
+#| "immediately upon pushing the below button. <strong>There is no way back!</"
+#| "strong>"
+msgid ""
+"The circle and the corresponding chat will be deleted, permanently and "
+"immediately upon pushing the below button. <strong>There is no way back!</"
+"strong>"
+msgstr ""
+"当你按下按钮的时候，此用户的相关数据将被立刻永久删除，此操作无法撤销。"
+"<strong>没有后悔药！</strong>"
+
+#: snikket_web/templates/admin_delete_circle.html:17
+#: snikket_web/templates/admin_delete_user.html:19
+#: snikket_web/templates/admin_reset_user_password.html:25
+#: snikket_web/templates/user_logout.html:10
+#: snikket_web/templates/user_manage_data.html:14
+#: snikket_web/templates/user_passwd.html:27
+#: snikket_web/templates/user_profile.html:32
+msgid "Back"
+msgstr "返回"
+
 #: snikket_web/templates/admin_delete_user.html:4
 #, python-format
 msgid "Delete user %(user_name)s"
@@ -580,10 +628,6 @@ msgstr "删除用户"
 msgid "Are you sure you want to delete the following user?"
 msgstr "你确定要删除以下用户吗？"
 
-#: snikket_web/templates/admin_delete_user.html:15
-msgid "Danger"
-msgstr "危险"
-
 #: snikket_web/templates/admin_delete_user.html:16
 msgid ""
 "The user and their data will be deleted irrevocably, permanently and "
@@ -592,15 +636,6 @@ msgid ""
 msgstr ""
 "当你按下按钮的时候，此用户的相关数据将被立刻永久删除，此操作无法撤销。"
 "<strong>没有后悔药！</strong>"
-
-#: snikket_web/templates/admin_delete_user.html:19
-#: snikket_web/templates/admin_reset_user_password.html:25
-#: snikket_web/templates/user_logout.html:10
-#: snikket_web/templates/user_manage_data.html:14
-#: snikket_web/templates/user_passwd.html:27
-#: snikket_web/templates/user_profile.html:32
-msgid "Back"
-msgstr "返回"
 
 #: snikket_web/templates/admin_edit_circle.html:14
 msgid "This is your main circle"
@@ -633,10 +668,6 @@ msgstr "此圈子没有群聊。"
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Return to circle list"
 msgstr "返回圈子列表"
-
-#: snikket_web/templates/admin_edit_circle.html:48
-msgid "Delete circle"
-msgstr "删除圈子"
 
 #: snikket_web/templates/admin_edit_circle.html:49
 msgid "Deleting a circle does not delete any users in the circle."
