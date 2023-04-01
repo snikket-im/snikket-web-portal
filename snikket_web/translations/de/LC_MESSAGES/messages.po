@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-04-01 10:07+0200\n"
-"PO-Revision-Date: 2022-01-18 14:59+0000\n"
+"PO-Revision-Date: 2023-04-01 11:13+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language-Team: German <http://i18n.sotecware.net/projects/snikket/web-portal/"
 "de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.8.1\n"
+"X-Generator: Weblate 4.14.1\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:69 snikket_web/templates/admin_delete_user.html:10
@@ -587,10 +587,9 @@ msgid "Copy complete output"
 msgstr "Komplette Ausgabe kopieren"
 
 #: snikket_web/templates/admin_delete_circle.html:4
-#, fuzzy, python-format
-#| msgid "Edit circle %(circle_name)s"
+#, python-format
 msgid "Delete circle %(circle_name)s"
-msgstr "Gemeinschaft %(circle_name)s bearbeiten"
+msgstr "Gemeinschaft %(circle_name)s löschen"
 
 #: snikket_web/templates/admin_delete_circle.html:6
 #: snikket_web/templates/admin_edit_circle.html:48
@@ -599,10 +598,8 @@ msgid "Delete circle"
 msgstr "Gemeinschaft löschen"
 
 #: snikket_web/templates/admin_delete_circle.html:8
-#, fuzzy
-#| msgid "Are you sure you want to delete the following user?"
 msgid "Are you sure you want to delete the following circle?"
-msgstr "Bist du sicher dass du den folgenden Benutzer löschen willst?"
+msgstr "Bist du sicher dass du die folgende Gemeinschaft löschen willst?"
 
 #: snikket_web/templates/admin_delete_circle.html:13
 #: snikket_web/templates/admin_delete_user.html:15
@@ -610,19 +607,14 @@ msgid "Danger"
 msgstr "Gefahr"
 
 #: snikket_web/templates/admin_delete_circle.html:14
-#, fuzzy
-#| msgid ""
-#| "The user and their data will be deleted irrevocably, permanently and "
-#| "immediately upon pushing the below button. <strong>There is no way back!</"
-#| "strong>"
 msgid ""
 "The circle and the corresponding chat will be deleted, permanently and "
 "immediately upon pushing the below button. <strong>There is no way back!</"
 "strong>"
 msgstr ""
-"Das Benutzerkonto und die zugehörigen Daten werden beim Betätigen des "
-"Buttons unwiderruflich, permanent und sofortig gelöscht. <strong>Es gibt "
-"keinen Weg zurück!</strong>"
+"Die Gemeinschaft und die zugehörigen Daten werden beim Betätigen des Buttons "
+"unwiderruflich, permanent und sofortig gelöscht. <strong>Es gibt keinen Weg "
+"zurück!</strong>"
 
 #: snikket_web/templates/admin_delete_circle.html:17
 #: snikket_web/templates/admin_delete_user.html:19
