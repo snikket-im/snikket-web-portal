@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-03-28 19:16+0200\n"
+"POT-Creation-Date: 2023-04-01 10:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -142,6 +142,7 @@ msgid "Invitation revoked"
 msgstr ""
 
 #: snikket_web/admin.py:394 snikket_web/admin.py:442
+#: snikket_web/templates/admin_delete_circle.html:10
 msgid "Name"
 msgstr ""
 
@@ -161,51 +162,51 @@ msgstr ""
 msgid "Update circle"
 msgstr ""
 
-#: snikket_web/admin.py:456
-msgid "Delete circle permanently"
-msgstr ""
-
-#: snikket_web/admin.py:462
+#: snikket_web/admin.py:458
 msgid "Add user"
 msgstr ""
 
-#: snikket_web/admin.py:478
+#: snikket_web/admin.py:474 snikket_web/admin.py:563
 msgid "No such circle exists"
 msgstr ""
 
-#: snikket_web/admin.py:515
+#: snikket_web/admin.py:511
 msgid "Circle data updated"
 msgstr ""
 
 #: snikket_web/admin.py:521
-msgid "Circle deleted"
-msgstr ""
-
-#: snikket_web/admin.py:532
 msgid "User added to circle"
 msgstr ""
 
-#: snikket_web/admin.py:541
+#: snikket_web/admin.py:530
 msgid "User removed from circle"
 msgstr ""
 
-#: snikket_web/admin.py:610
+#: snikket_web/admin.py:547
+msgid "Delete circle permanently"
+msgstr ""
+
+#: snikket_web/admin.py:574
+msgid "Circle deleted"
+msgstr ""
+
+#: snikket_web/admin.py:640
 msgid "Message contents"
 msgstr ""
 
-#: snikket_web/admin.py:616
+#: snikket_web/admin.py:646
 msgid "Only send to online users"
 msgstr ""
 
-#: snikket_web/admin.py:620
+#: snikket_web/admin.py:650
 msgid "Post to all users"
 msgstr ""
 
-#: snikket_web/admin.py:624
+#: snikket_web/admin.py:654
 msgid "Send preview to yourself"
 msgstr ""
 
-#: snikket_web/admin.py:646
+#: snikket_web/admin.py:676
 msgid "Announcement sent!"
 msgstr ""
 
@@ -552,6 +553,43 @@ msgstr ""
 msgid "Copy complete output"
 msgstr ""
 
+#: snikket_web/templates/admin_delete_circle.html:4
+#, python-format
+msgid "Delete circle %(circle_name)s"
+msgstr ""
+
+#: snikket_web/templates/admin_delete_circle.html:6
+#: snikket_web/templates/admin_edit_circle.html:48
+#: snikket_web/templates/admin_edit_circle.html:51
+msgid "Delete circle"
+msgstr ""
+
+#: snikket_web/templates/admin_delete_circle.html:8
+msgid "Are you sure you want to delete the following circle?"
+msgstr ""
+
+#: snikket_web/templates/admin_delete_circle.html:13
+#: snikket_web/templates/admin_delete_user.html:15
+msgid "Danger"
+msgstr ""
+
+#: snikket_web/templates/admin_delete_circle.html:14
+msgid ""
+"The circle and the corresponding chat will be deleted, permanently and "
+"immediately upon pushing the below button. <strong>There is no way "
+"back!</strong>"
+msgstr ""
+
+#: snikket_web/templates/admin_delete_circle.html:17
+#: snikket_web/templates/admin_delete_user.html:19
+#: snikket_web/templates/admin_reset_user_password.html:25
+#: snikket_web/templates/user_logout.html:10
+#: snikket_web/templates/user_manage_data.html:14
+#: snikket_web/templates/user_passwd.html:27
+#: snikket_web/templates/user_profile.html:32
+msgid "Back"
+msgstr ""
+
 #: snikket_web/templates/admin_delete_user.html:4
 #, python-format
 msgid "Delete user %(user_name)s"
@@ -566,24 +604,11 @@ msgstr ""
 msgid "Are you sure you want to delete the following user?"
 msgstr ""
 
-#: snikket_web/templates/admin_delete_user.html:15
-msgid "Danger"
-msgstr ""
-
 #: snikket_web/templates/admin_delete_user.html:16
 msgid ""
 "The user and their data will be deleted irrevocably, permanently and "
 "immediately upon pushing the below button. <strong>There is no way "
 "back!</strong>"
-msgstr ""
-
-#: snikket_web/templates/admin_delete_user.html:19
-#: snikket_web/templates/admin_reset_user_password.html:25
-#: snikket_web/templates/user_logout.html:10
-#: snikket_web/templates/user_manage_data.html:14
-#: snikket_web/templates/user_passwd.html:27
-#: snikket_web/templates/user_profile.html:32
-msgid "Back"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:14
@@ -616,10 +641,6 @@ msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Return to circle list"
-msgstr ""
-
-#: snikket_web/templates/admin_edit_circle.html:48
-msgid "Delete circle"
 msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:49

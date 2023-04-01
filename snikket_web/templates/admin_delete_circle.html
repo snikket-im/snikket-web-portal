@@ -1,0 +1,21 @@
+{% extends "admin_app.html" %}
+{% from "library.j2" import box, form_button, standard_button %}
+{% block content %}
+<h1>{% trans circle_name=target_circle.name %}Delete circle {{ circle_name }}{% endtrans %}</h1>
+<div class="form layout-expanded"><form method="POST">
+	<h2 class="form-title">{% trans %}Delete circle{% endtrans %}</h2>
+	{{ form.csrf_token }}
+	<p class="form-descr">{% trans %}Are you sure you want to delete the following circle?{% endtrans %}</p>
+	<dl>
+		<dt>{% trans %}Name{% endtrans %}</dt>
+		<dd>{{ target_circle.name }}</dd>
+	</dl>
+	{% call box("alert", _("Danger")) %}
+	<p>{% trans %}The circle and the corresponding chat will be deleted, permanently and immediately upon pushing the below button. <strong>There is no way back!</strong>{% endtrans %}</p>
+	{% endcall %}
+	<div class="f-bbox">
+		{%- call standard_button("back", url_for(".edit_circle", id_=target_circle.id_), class="tertiary") %}{% trans %}Back{% endtrans %}{% endcall -%}
+		{%- call form_button("delete", form.action_delete, class="primary danger") %}{% endcall -%}
+	</div>
+</form></div>
+{% endblock %}

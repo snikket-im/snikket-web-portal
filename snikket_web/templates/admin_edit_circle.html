@@ -48,7 +48,7 @@
 	<h3 class="form-title">{% trans %}Delete circle{% endtrans %}</h3>
 	<p class="form-desc">{% trans %}Deleting a circle does not delete any users in the circle.{% endtrans %}</p>
 	<div class="f-bbox">
-		{%- call form_button("delete", form.action_delete, class="secondary danger") %}{% endcall -%}
+		{%- call standard_button("delete", url_for(".delete_circle", id_=target_circle.id_), class="secondary danger") %}{% trans %}Delete circle{% endtrans %}{% endcall -%}
 	</div>
 </div>
 {%- endif -%}
