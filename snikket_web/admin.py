@@ -452,10 +452,6 @@ class EditCircleForm(BaseForm):
         _l("Update circle")
     )
 
-    action_delete = wtforms.SubmitField(
-        _l("Delete circle permanently")
-    )
-
     action_remove_user = wtforms.StringField()
 
     action_add_user = wtforms.SubmitField(
@@ -515,13 +511,6 @@ async def edit_circle(id_: str) -> typing.Union[str, werkzeug.Response]:
                 _("Circle data updated"),
                 "success",
             )
-        elif form.action_delete.data:
-            await client.delete_group(id_)
-            await flash(
-                _("Circle deleted"),
-                "success",
-            )
-            return redirect(url_for(".circles"))
         elif form.action_add_user.data:
             if form.user_to_add.data in valid_users:
                 await client.add_group_member(
@@ -550,6 +539,47 @@ async def edit_circle(id_: str) -> typing.Union[str, werkzeug.Response]:
         form=form,
         circle_members=circle_members,
         invite_form=invite_form,
+    )
+
+
+class DeleteCircleForm(BaseForm):
+    action_delete = wtforms.SubmitField(
+        _l("Delete circle permanently")
+    )
+
+
+@bp.route("/circle/<id_>/delete", methods=["GET", "POST"])
+@client.require_admin_session()
+async def delete_circle(id_: str) -> typing.Union[str, werkzeug.Response]:
+    async with client.authenticated_session() as session:
+        try:
+            circle = await client.get_group_by_id(
+                id_,
+                session=session,
+            )
+        except aiohttp.ClientResponseError as exc:
+            if exc.status == 404:
+                await flash(
+                    _("No such circle exists"),
+                    "alert",
+                )
+                return redirect(url_for(".circles"))
+            raise
+
+    form = DeleteCircleForm()
+    if form.validate_on_submit():
+        if form.action_delete.data:
+            await client.delete_group(id_)
+            await flash(
+                _("Circle deleted"),
+                "success",
+            )
+        return redirect(url_for(".circles"))
+
+    return await render_template(
+        "admin_delete_circle.html",
+        target_circle=circle,
+        form=form,
     )
 
 
