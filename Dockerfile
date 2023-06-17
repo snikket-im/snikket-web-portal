@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim AS build
+FROM debian:bookworm-slim AS build
 
 RUN set -eu; \
     export DEBIAN_FRONTEND=noninteractive ; \
@@ -18,12 +18,12 @@ COPY babel.cfg /opt/snikket-web-portal/babel.cfg
 WORKDIR /opt/snikket-web-portal
 
 RUN set -eu; \
-    pip3 install -r requirements.txt; \
-    pip3 install -r build-requirements.txt; \
+    pip3 install --break-system-packages -r requirements.txt; \
+    pip3 install --break-system-packages -r build-requirements.txt; \
     make;
 
 
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
 ARG BUILD_SERIES=dev
 ARG BUILD_ID=0
@@ -42,11 +42,11 @@ RUN set -eu; \
     export DEBIAN_FRONTEND=noninteractive ; \
     apt-get update ; \
     apt-get install -y --no-install-recommends \
-        python3 python3-pip python3-setuptools python3-wheel build-essential libpython3-dev netcat; \
-    pip3 install -r requirements.txt; \
+        python3 python3-pip python3-setuptools python3-wheel build-essential libpython3-dev netcat-traditional; \
+    pip3 install --break-system-packages -r requirements.txt; \
     apt-get remove -y --autoremove build-essential libpython3-dev; \
     apt-get clean ; rm -rf /var/lib/apt/lists; \
-    pip3 install hypercorn; \
+    pip3 install --break-system-packages hypercorn; \
     rm -rf /root/.cache;
 
 HEALTHCHECK CMD nc -zv ${SNIKKET_TWEAK_PORTAL_INTERNAL_HTTP_INTERFACE:-127.0.0.1} ${SNIKKET_TWEAK_PORTAL_INTERNAL_HTTP_PORT:-5765}
