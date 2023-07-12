@@ -6,18 +6,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-04-01 10:07+0200\n"
-"PO-Revision-Date: 2021-05-19 15:12+0000\n"
+"PO-Revision-Date: 2023-07-13 11:17+0000\n"
 "Last-Translator: Roberto Resoli <roberto@resolutions.it>\n"
-"Language-Team: Italian <https://i18n.sotecware.net/projects/snikket/web-"
-"portal/it/>\n"
+"Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/"
+"web-portal/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5.1\n"
+"X-Generator: Weblate 4.14.1\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:69 snikket_web/templates/admin_delete_user.html:10
@@ -195,23 +195,23 @@ msgstr "Cerchia eliminata"
 
 #: snikket_web/admin.py:640
 msgid "Message contents"
-msgstr ""
+msgstr "Contenuto dei messaggi"
 
 #: snikket_web/admin.py:646
 msgid "Only send to online users"
-msgstr ""
+msgstr "Inviare solo agli utenti online"
 
 #: snikket_web/admin.py:650
 msgid "Post to all users"
-msgstr ""
+msgstr "Inviare a tutti gli utenti"
 
 #: snikket_web/admin.py:654
 msgid "Send preview to yourself"
-msgstr ""
+msgstr "Inviare una anteprima a te stesso"
 
 #: snikket_web/admin.py:676
 msgid "Announcement sent!"
-msgstr ""
+msgstr "Annuncio inviato!"
 
 #: snikket_web/infra.py:53
 msgid "Main"
@@ -222,6 +222,8 @@ msgid ""
 "The account data you tried to import is too large to upload. Please contact "
 "your Snikket operator."
 msgstr ""
+"I dati dell'utenza che hai provato ad importare sono troppo grandi per "
+"essere caricati. Contatta il tuo operatore Snikket."
 
 #: snikket_web/invite.py:114
 msgid "Username"
@@ -262,11 +264,11 @@ msgstr "Cambia password"
 
 #: snikket_web/invite.py:246
 msgid "Account data file"
-msgstr ""
+msgstr "File con i dati dell'utenza"
 
 #: snikket_web/invite.py:250
 msgid "Import data"
-msgstr ""
+msgstr "Importa i dati"
 
 #: snikket_web/invite.py:271
 #, python-format
@@ -274,6 +276,9 @@ msgid ""
 "The account data you tried to import is in an unknown format. Please upload "
 "an XML file in XEP-0227 format (provided format: %(mimetype)s)."
 msgstr ""
+"I dati dell'utenza che stai cercando di importare sono in un formato "
+"sconosciuto. Per favore, carica un file XML in formato XEP-0227 (formato "
+"fornito: %(mimetype)s)."
 
 #: snikket_web/invite.py:291 snikket_web/templates/unauth.html:18
 #: snikket_web/user.py:178
@@ -342,11 +347,11 @@ msgstr "Modifica profilo"
 
 #: snikket_web/user.py:82
 msgid "Account data"
-msgstr ""
+msgstr "Dati dell'utenza"
 
 #: snikket_web/user.py:86
 msgid "Upload"
-msgstr ""
+msgstr "Caricare"
 
 #: snikket_web/user.py:111
 msgid "Incorrect password."
@@ -370,11 +375,11 @@ msgstr "Profilo aggiornato"
 
 #: snikket_web/user.py:184
 msgid "Export"
-msgstr ""
+msgstr "Esportare"
 
 #: snikket_web/user.py:202
 msgid "You currently have no account data to export."
-msgstr ""
+msgstr "Al momento non hai dati utente da esportare."
 
 #: snikket_web/templates/_footer.html:4
 #, python-format
@@ -584,10 +589,9 @@ msgid "Copy complete output"
 msgstr "Copia l'intero output"
 
 #: snikket_web/templates/admin_delete_circle.html:4
-#, fuzzy, python-format
-#| msgid "Edit circle %(circle_name)s"
+#, python-format
 msgid "Delete circle %(circle_name)s"
-msgstr "Modifica cerchia %(circle_name)s"
+msgstr "Elimina la cerchia %(circle_name)s"
 
 #: snikket_web/templates/admin_delete_circle.html:6
 #: snikket_web/templates/admin_edit_circle.html:48
@@ -596,10 +600,8 @@ msgid "Delete circle"
 msgstr "Elimina cerchia"
 
 #: snikket_web/templates/admin_delete_circle.html:8
-#, fuzzy
-#| msgid "Are you sure you want to delete the following user?"
 msgid "Are you sure you want to delete the following circle?"
-msgstr "Sei sicura/o di volere eliminare il seguente utente?"
+msgstr "Vuoi veramente eliminare la seguente cerchia?"
 
 #: snikket_web/templates/admin_delete_circle.html:13
 #: snikket_web/templates/admin_delete_user.html:15
@@ -607,19 +609,14 @@ msgid "Danger"
 msgstr "Pericolo"
 
 #: snikket_web/templates/admin_delete_circle.html:14
-#, fuzzy
-#| msgid ""
-#| "The user and their data will be deleted irrevocably, permanently and "
-#| "immediately upon pushing the below button. <strong>There is no way back!</"
-#| "strong>"
 msgid ""
 "The circle and the corresponding chat will be deleted, permanently and "
 "immediately upon pushing the below button. <strong>There is no way back!</"
 "strong>"
 msgstr ""
-"L'utenza e i relativi dati verranno eliminati in modo permanente ed "
+"La cerchia e la relativa chat verranno eliminate in modo permanente ed "
 "irreversibile non appena verrà premuto il pulsante sottostante. <strong>Non "
-"sarà possibile tornare sui propri passi!</strong>"
+"sarà possibile tornare indietro!</strong>"
 
 #: snikket_web/templates/admin_delete_circle.html:17
 #: snikket_web/templates/admin_delete_user.html:19
@@ -699,7 +696,7 @@ msgstr "Membri della cerchia"
 
 #: snikket_web/templates/admin_edit_circle.html:71
 msgid "The user has been deleted from the server."
-msgstr ""
+msgstr "L'utenza è stata eliminata dal server."
 
 #: snikket_web/templates/admin_edit_circle.html:71
 #: snikket_web/templates/library.j2:108
@@ -913,11 +910,12 @@ msgstr "Gestisci inviti"
 
 #: snikket_web/templates/admin_home.html:35
 msgid "System health"
-msgstr ""
+msgstr "Stato di salute del sistema"
 
 #: snikket_web/templates/admin_home.html:38
 msgid "View the server status or send a broadcast message to all users."
 msgstr ""
+"Veder e lo stato del server e trasmettere un messaggio a tutti gli utenti."
 
 #: snikket_web/templates/admin_home.html:40
 msgid "Send a broadcast message to all users."
