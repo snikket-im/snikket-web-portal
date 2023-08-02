@@ -6,7 +6,7 @@ translation_basepath = snikket_web/translations
 pot_file = $(translation_basepath)/messages.pot
 
 PYTHON3 ?= python3
-SCSSC ?= $(PYTHON3) -m scss --load-path snikket_web/scss/
+SCSSC ?= sassc --load-path snikket_web/scss/
 
 all: build_css compile_translations
 
@@ -14,7 +14,7 @@ build_css: $(generated_css_files)
 
 $(generated_css_files): snikket_web/static/css/%.css: snikket_web/scss/%.scss $(scss_files) $(scss_includes)
 	mkdir -p snikket_web/static/css/
-	$(SCSSC) -o "$@" "$<"
+	$(SCSSC) "$<" "$@"
 
 clean:
 	rm -f $(generated_css_files)
