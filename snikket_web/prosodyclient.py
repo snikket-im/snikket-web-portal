@@ -29,7 +29,7 @@ from . import xmpputil
 from .xmpputil import split_jid
 
 
-SCOPE_DEFAULT = "prosody:user"
+SCOPE_DEFAULT = "prosody:registered"
 SCOPE_ADMIN = "prosody:admin"
 
 
