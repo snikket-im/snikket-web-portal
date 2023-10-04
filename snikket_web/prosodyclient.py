@@ -16,10 +16,12 @@ import aiohttp
 import xml.etree.ElementTree as ET
 
 from quart import (
-    current_app, _app_ctx_stack, session as http_session, abort, redirect,
+    current_app, session as http_session, abort, redirect,
     url_for,
 )
 import quart
+
+from flask import g as _app_ctx_stack
 
 import werkzeug.exceptions
 
@@ -166,7 +168,7 @@ class HTTPSessionManager:
         })
 
     async def teardown(self, exc: typing.Optional[BaseException]) -> None:
-        app_ctx = _app_ctx_stack.top
+        app_ctx = _app_ctx_stack
         try:
             session = getattr(app_ctx, self._app_context_attribute)
         except AttributeError:
@@ -183,7 +185,7 @@ class HTTPSessionManager:
         await session.__aexit__(exc_type, exc, traceback)
 
     async def __aenter__(self) -> aiohttp.ClientSession:
-        app_ctx = _app_ctx_stack.top
+        app_ctx = _app_ctx_stack
         try:
             return getattr(app_ctx, self._app_context_attribute)
         except AttributeError:
