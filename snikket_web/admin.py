@@ -77,7 +77,7 @@ class EditUserForm(BaseForm):
         _l("Access Level"),
         choices=[
             ("prosody:restricted", _("Limited")),
-            ("prosody:user", _l("Normal user")),
+            ("prosody:registered", _l("Normal user")),
             ("prosody:admin", _l("Administrator")),
         ],
     )
@@ -131,7 +131,7 @@ async def edit_user(localpart: str) -> typing.Union[werkzeug.Response, str]:
         if target_user_info.roles:
             form.role.data = target_user_info.roles[0]
         else:
-            form.role.data = "prosody:user"
+            form.role.data = "prosody:registered"
 
     return await render_template(
         "admin_edit_user.html",
