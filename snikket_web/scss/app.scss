@@ -275,22 +275,22 @@ div.form.layout-expanded {
 	}
 
 	@each $type in $text-entry-inputs {
-		input[type=$type] {
+		input[type=#{$type}] {
 			width: 100%;
 			border: none;
 			border-bottom: $w-s4 solid $primary-500;
 			margin-bottom: -$w-s4;
 		}
 
-		input[type=$type].has-error {
+		input[type=#{$type}].has-error {
 			border-right: $w-s4 solid $alert-500;
 		}
 
-		input[type=$type]:hover {
+		input[type=#{$type}]:hover {
 			border-bottom-color: $primary-700;
 		}
 
-		input[type=$type]:focus {
+		input[type=#{$type}]:focus {
 			border-bottom-color: $primary-800;
 		}
 	}
@@ -645,69 +645,6 @@ input[type="submit"], button, .button {
 }
 
 
-
-/* button, .button {
-	margin: 0 $w-s2;
-}
-
-button.lv-primary, .button.lv-primary {
-	background-color: $gray-500;
-	color: $gray-900;
-	border-radius: $w-s4;
-	border: $w-s4 solid $gray-400;
-
-	@each $type, $values in $colours {
-		&.c-#{$type} {
-			border-color: nth($values, 4);
-			background-color: nth($values, 5);
-			color: nth($values, 9);
-		}
-
-		&.c-#{$type}:hover {
-			background-color: nth($values, 4);
-		}
-	}
-}
-
-button.lv-secondary, .button.lv-secondary {
-	background-color: $gray-700;
-	color: $gray-100;
-	border-radius: $w-s4;
-
-	@each $type, $values in $colours {
-		&.c-#{$type} {
-			background-color: nth($values, 7);
-			color: nth($values, 1);
-		}
-	}
-}
-
-button.lv-tertiary, .button.lv-tertiary {
-	background-color: inherit;
-	color: $gray-300;
-	border-radius: $w-s4;
-	text-decoration: underline;
-
-	@each $type, $values in $colours {
-		&.c-#{$type} {
-			color: nth($values, 3);
-		}
-	}
-}
-*/
-
-/*
-	button.lv-secondary.c-#{$type}, .button.lv-secondary.c-#{$type} {
-		background-color: nth($values, 7);
-		color: nth($values, 1);
-	}
-
-	button.lv-tertiary.c-#{$type}, .button.lv-tertiary.c-#{$type} {
-		color: nth($values, 3);
-		text-decoration: underline;
-		background-color: transparent;
-	}
-}*/
 
 /* boxes */
 
@@ -1121,7 +1058,7 @@ pre.guru-meditation {
 		}
 
 		@each $type in $text-entry-inputs {
-			input[type=$type] {
+			input[type=#{$type}] {
 				background-color: black;
 			}
 

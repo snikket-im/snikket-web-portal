@@ -1,28 +1,22 @@
-FROM debian:bullseye-slim AS build
+FROM debian:bookworm-slim AS build
 
 RUN set -eu; \
     export DEBIAN_FRONTEND=noninteractive ; \
     apt-get update ; \
     apt-get install -y --no-install-recommends \
-        python3 python3-pip python3-setuptools python3-wheel \
-        libpython3-dev \
-        make build-essential;
+        python3 python3-mypy python3-dotenv python3-toml python3-babel python3-distutils \
+        sassc make;
 
-COPY requirements.txt /opt/snikket-web-portal/requirements.txt
-COPY build-requirements.txt /opt/snikket-web-portal/build-requirements.txt
 COPY Makefile /opt/snikket-web-portal/Makefile
 COPY snikket_web/ /opt/snikket-web-portal/snikket_web
 COPY babel.cfg /opt/snikket-web-portal/babel.cfg
 
 WORKDIR /opt/snikket-web-portal
 
-RUN set -eu; \
-    pip3 install -r requirements.txt; \
-    pip3 install -r build-requirements.txt; \
-    make;
+RUN make
 
 
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
 ARG BUILD_SERIES=dev
 ARG BUILD_ID=0
@@ -33,19 +27,19 @@ ENV SNIKKET_WEB_PYENV=/etc/snikket-web-portal/env.py
 
 ENV SNIKKET_WEB_PROSODY_ENDPOINT=http://127.0.0.1:5280/
 
-COPY requirements.txt /opt/snikket-web-portal/requirements.txt
-
 WORKDIR /opt/snikket-web-portal
 
 RUN set -eu; \
     export DEBIAN_FRONTEND=noninteractive ; \
     apt-get update ; \
     apt-get install -y --no-install-recommends \
-        python3 python3-pip python3-setuptools python3-wheel build-essential libpython3-dev netcat; \
-    pip3 install -r requirements.txt; \
-    apt-get remove -y --autoremove build-essential libpython3-dev; \
+      netcat-traditional python3 python3-setuptools python3-pip \
+      python3-aiohttp python3-email-validator python3-flask-babel \
+      python3-flaskext.wtf python3-hsluv python3-hypercorn \
+      python3-quart python3-typing-extensions python3-wtforms ; \
+      pip3 install --break-system-packages environ-config ; \
+    apt-get remove -y --purge python3-pip python3-setuptools; \
     apt-get clean ; rm -rf /var/lib/apt/lists; \
-    pip3 install hypercorn; \
     rm -rf /root/.cache;
 
 HEALTHCHECK CMD nc -zv ${SNIKKET_TWEAK_PORTAL_INTERNAL_HTTP_INTERFACE:-127.0.0.1} ${SNIKKET_TWEAK_PORTAL_INTERNAL_HTTP_PORT:-5765}
