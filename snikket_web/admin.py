@@ -28,6 +28,7 @@ from flask_babel import lazy_gettext as _l, _
 
 from . import prosodyclient, _version
 from .infra import client, circle_name, BaseForm
+from .user import EAVATARTOOBIG
 
 bp = Blueprint("admin", __name__, url_prefix="/admin")
 
@@ -443,6 +444,10 @@ class EditCircleForm(BaseForm):
         validators=[wtforms.validators.InputRequired()],
     )
 
+    avatar = wtforms.FileField(
+        _l("Avatar")
+    )
+
     user_to_add = wtforms.SelectField(
         _l("Select user"),
         validate_choice=False,
@@ -462,6 +467,8 @@ class EditCircleForm(BaseForm):
 @bp.route("/circle/<id_>", methods=["GET", "POST"])
 @client.require_admin_session()
 async def edit_circle(id_: str) -> typing.Union[str, werkzeug.Response]:
+    max_avatar_size = current_app.config["MAX_AVATAR_SIZE"]
+
     async with client.authenticated_session() as session:
         try:
             circle = await client.get_group_by_id(
@@ -507,6 +514,20 @@ async def edit_circle(id_: str) -> typing.Union[str, werkzeug.Response]:
                 id_,
                 new_name=form.name.data,
             )
+            file_info = (await request.files).get(form.avatar.name)
+            if file_info is not None:
+                mimetype = file_info.mimetype
+                data = file_info.stream.read()
+                if len(data) > max_avatar_size:
+                    form.avatar.errors.append(EAVATARTOOBIG)
+                    ok = False
+                elif len(data) > 0:
+                    print("setting muc avatar")
+                    await client.set_muc_avatar(
+                        circle.muc_jid,
+                        data,
+                        mimetype,
+                    )
             await flash(
                 _("Circle data updated"),
                 "success",
@@ -539,6 +560,9 @@ async def edit_circle(id_: str) -> typing.Union[str, werkzeug.Response]:
         form=form,
         circle_members=circle_members,
         invite_form=invite_form,
+        max_avatar_size=max_avatar_size,
+        avatar_too_big_warning_header=_l("Error"),
+        avatar_too_big_warning=EAVATARTOOBIG,
     )
 
 
