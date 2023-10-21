@@ -1162,7 +1162,6 @@ class ProsodyClient:
             self._raise_error_from_response(resp)
             return True
 
-    @autosession
     async def revoke_token(
             self,
             *,
@@ -1176,7 +1175,8 @@ class ProsodyClient:
 
     async def logout(self) -> None:
         try:
-            await self.revoke_token()
+            async with self._plain_session as session:
+                await self.revoke_token(session=session)
         except aiohttp.ClientError:
             self.logger.warn("failed to revoke token!",
                              exc_info=True)
