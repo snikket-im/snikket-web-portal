@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% from "library.j2" import standard_button %}
+{% block head_lead %}
+<title>{% trans %}Policies{% endtrans %} - {{ config["SITE_NAME"] }}</title>
+{% endblock %}
+{% block body %}
+<main>
+	<div class="box el-2">
+		<h1>{{ config["SITE_NAME"] }}</h1>
+		<h2>{% trans %}Policies{% endtrans %}</h2>
+
+		{% if config["TOS_URI"] or config["PRIVACY_URI"] -%}
+		<p>{% trans %}Use of this service is subject to the following policies:{% endtrans %}</p>
+		<ul>
+		{%- if config["TOS_URI"] %}
+			<li><a href="{{ config["TOS_URI"] }}">{% trans %}Terms of Service{% endtrans %}</a></li>
+		{%- endif %}
+		{%- if config["PRIVACY_URI"] %}
+			<li><a href="{{ config["PRIVACY_URI"] }}">{% trans %}Privacy Policy{% endtrans %}</a></li>
+		{%- endif %}
+		</ul>
+		{%- else -%}
+		<p>{% trans %}Please contact the administrator of this instance if you have questions about policies.{% endtrans %}</p>
+		{% endif -%}
+
+		<p>{% trans url="https://snikket.org/app/privacy/" %}Use of the Snikket apps is subject to the <a href="{{url}}">Snikket Apps Privacy Policy</a>.{% endtrans %}</p>
+		
+		{%- if config["ABUSE_EMAIL"] %}
+		<p>{% trans email=config["ABUSE_EMAIL"], domain=config["SNIKKET_DOMAIN"] %}To report policy violations or other abuse from this service, please send an email to {{email}}. Specify the domain name of this instance ({{domain}}) and include details of the incident(s).{% endtrans %}</p>
+		{%- endif %}
+
+		<p>
+			{%- call standard_button("back", url_for("index"), class="primary") -%}
+				{% trans %}Back to the main page{% endtrans %}
+			{%- endcall -%}
+		</p>
+	</div>
+</main>
+{% endblock %}
