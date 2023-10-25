@@ -170,6 +170,10 @@ class AppConfig:
     # tools may also very well override it.
     max_avatar_size = environ.var(1024*1024, converter=int)
     show_metrics = environ.bool_var(True)
+    tos_uri = environ.var("")
+    privacy_uri = environ.var("")
+    abuse_email = environ.var("")
+    security_email = environ.var("")
 
 
 _UPPER_CASE = "".join(map(chr, range(ord("A"), ord("Z")+1)))
@@ -202,6 +206,10 @@ def create_app() -> quart.Quart:
     app.config["APPLE_STORE_URL"] = config.apple_store_url
     app.config["MAX_AVATAR_SIZE"] = config.max_avatar_size
     app.config["SHOW_METRICS"] = config.show_metrics
+    app.config["TOS_URI"] = config.tos_uri
+    app.config["PRIVACY_URI"] = config.privacy_uri
+    app.config["ABUSE_EMAIL"] = config.abuse_email
+    app.config["SECURITY_EMAIL"] = config.security_email
 
     app.context_processor(proc)
     app.register_error_handler(

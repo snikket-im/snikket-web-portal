@@ -1,0 +1,16 @@
+# {{ config["SNIKKET_DOMAIN"] }} is running open-source software
+# from the Snikket project: https://snikket.org/
+
+{% if config["SECURITY_EMAIL"] -%}
+# Security issues related to this service should be addressed to the
+# following security contact:
+Contact: mailto:{{ config["SECURITY_EMAIL"] }}
+{% else -%}
+# This service does not have a public security contact. You might find
+# more information about the service at the following link:
+Contact: https://{{ config["SNIKKET_DOMAIN"] }}/policies/
+{%- endif %}
+
+# Please report software defects to the project developers, per the
+# instructions at the following link:
+Contact: https://snikket.org/security/

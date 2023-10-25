@@ -17,6 +17,13 @@
 	{%- else -%}
 	<p>{% trans site_name=config["SITE_NAME"] %}You have been invited to chat on {{ site_name }} using Snikket, a secure, privacy-friendly chat app.{% endtrans %}</p>
 	{%- endif -%}
+
+	{%- if config["TOS_URI"] and config["PRIVACY_URI"] -%}
+	<p>
+	  {% trans site_name=config["SITE_NAME"], tos_uri=config["TOS_URI"], privacy_uri=config["PRIVACY_URI"] %}By continuing, you agree to the <a href="{{tos_uri}}">Terms of Service</a> and <a href="{{privacy_uri}}">Privacy Policy</a>.{% endtrans %}
+	</p>
+	{%- endif -%}
+
 	<h2>{% trans %}Get started{% endtrans %}</h2>
 {%- if apple_store_url -%}
 	<p>{% trans %}Install the Snikket App on your Android or iOS device.{% endtrans %}</p>

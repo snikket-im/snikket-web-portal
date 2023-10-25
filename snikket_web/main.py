@@ -173,6 +173,42 @@ async def avatar(from_: str, code: str) -> quart.Response:
     return response
 
 
+@bp.route("/terms")
+async def terms() -> Response:
+    if not current_app.config["TOS_URI"]:
+        return Response("", 404)
+
+    return Response("", status=303, headers={
+        "Location": current_app.config["TOS_URI"],
+    })
+
+
+@bp.route("/privacy")
+async def privacy() -> Response:
+    if not current_app.config["PRIVACY_URI"]:
+        return Response("", 404)
+
+    return Response("", status=303, headers={
+        "Location": current_app.config["PRIVACY_URI"],
+    })
+
+
+# This is linked from the iOS app and about page
+@bp.route("/policies/")
+async def policies() -> str:
+    return await render_template(
+        "policies.html",
+    )
+
+
+@bp.route("/.well-known/security.txt")
+async def securitytxt() -> Response:
+    return Response(
+        await render_template("security.txt"),
+        mimetype="text/plain;charset=UTF-8",
+    )
+
+
 @bp.route("/_health")
 async def health() -> Response:
     return Response("STATUS OK", content_type="text/plain")

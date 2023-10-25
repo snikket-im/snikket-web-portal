@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-04-01 10:07+0200\n"
+"POT-Creation-Date: 2023-10-25 16:15+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.12.1\n"
+"Generated-By: Babel 2.13.1\n"
 
 #: snikket_web/admin.py:69 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_edit_circle.html:59
@@ -382,31 +382,37 @@ msgid ""
 "Interest Company."
 msgstr ""
 
-#: snikket_web/templates/about.html:4 snikket_web/templates/about.html:9
+#: snikket_web/templates/about.html:4
 msgid "About Snikket"
 msgstr ""
 
+#: snikket_web/templates/about.html:9
+msgid "About this Service"
+msgstr ""
+
 #: snikket_web/templates/about.html:10
+#, python-format
+msgid ""
+"This is the Snikket service <em>%(site_name)s</em>, running open-source "
+"software from the Snikket project."
+msgstr ""
+
+#: snikket_web/templates/about.html:11
 #, python-format
 msgid ""
 "To learn more about Snikket, visit the <a "
 "href=\"%(snikket_url)s\">Snikket website</a>."
 msgstr ""
 
-#: snikket_web/templates/about.html:11
-msgid "About this Service"
-msgstr ""
-
-#: snikket_web/templates/about.html:12
-#, python-format
-msgid "This is the Snikket service <em>%(site_name)s</em>."
-msgstr ""
-
 #: snikket_web/templates/about.html:13
+msgid "View service policies"
+msgstr ""
+
+#: snikket_web/templates/about.html:15
 msgid "Licenses"
 msgstr ""
 
-#: snikket_web/templates/about.html:14
+#: snikket_web/templates/about.html:16
 #, python-format
 msgid ""
 "The web portal software is licensed under the terms of the <a "
@@ -415,14 +421,14 @@ msgid ""
 "aforementioned link."
 msgstr ""
 
-#: snikket_web/templates/about.html:15
+#: snikket_web/templates/about.html:17
 #, python-format
 msgid ""
 "The source code of the web portal can be downloaded and viewed in <a "
 "href=\"%(source_url)s\">its GitHub repository</a>."
 msgstr ""
 
-#: snikket_web/templates/about.html:16
+#: snikket_web/templates/about.html:18
 #, python-format
 msgid ""
 "The icons used in the web portal are <a href=\"%(source_url)s\">Google’s "
@@ -430,11 +436,11 @@ msgid ""
 "href=\"%(apache20_url)s\">Apache 2.0 License</a>."
 msgstr ""
 
-#: snikket_web/templates/about.html:17
+#: snikket_web/templates/about.html:20
 msgid "Trademarks"
 msgstr ""
 
-#: snikket_web/templates/about.html:18
+#: snikket_web/templates/about.html:21
 #, python-format
 msgid ""
 "“Snikket” and the parrot logo are trademarks of Snikket Community "
@@ -442,11 +448,11 @@ msgid ""
 " href=\"%(trademarks_url)s\">Snikket Trademarks information page</a>."
 msgstr ""
 
-#: snikket_web/templates/about.html:19
+#: snikket_web/templates/about.html:23
 msgid "Software Versions"
 msgstr ""
 
-#: snikket_web/templates/about.html:32
+#: snikket_web/templates/about.html:37 snikket_web/templates/policies.html:34
 msgid "Back to the main page"
 msgstr ""
 
@@ -1093,20 +1099,20 @@ msgid ""
 msgstr ""
 
 #: snikket_web/templates/invite_register.html:14
-#: snikket_web/templates/invite_view.html:39
+#: snikket_web/templates/invite_view.html:46
 msgid "App already installed?"
 msgstr ""
 
 #: snikket_web/templates/invite_register.html:16
 #: snikket_web/templates/invite_reset_view.html:21
-#: snikket_web/templates/invite_view.html:41
-#: snikket_web/templates/invite_view.html:84
-#: snikket_web/templates/invite_view.html:112
+#: snikket_web/templates/invite_view.html:48
+#: snikket_web/templates/invite_view.html:91
+#: snikket_web/templates/invite_view.html:119
 msgid "Open the app"
 msgstr ""
 
 #: snikket_web/templates/invite_register.html:18
-#: snikket_web/templates/invite_view.html:43
+#: snikket_web/templates/invite_view.html:50
 msgid "This button works only if you have the app installed already!"
 msgstr ""
 
@@ -1202,7 +1208,7 @@ msgid "You will then be prompted to enter a new password for your account."
 msgstr ""
 
 #: snikket_web/templates/invite_reset_view.html:29
-#: snikket_web/templates/invite_view.html:45
+#: snikket_web/templates/invite_view.html:52
 msgid "Alternatives"
 msgstr ""
 
@@ -1288,15 +1294,22 @@ msgid ""
 "privacy-friendly chat app."
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:20
+#: snikket_web/templates/invite_view.html:23
+#, python-format
+msgid ""
+"By continuing, you agree to the <a href=\"%(tos_uri)s\">Terms of "
+"Service</a> and <a href=\"%(privacy_uri)s\">Privacy Policy</a>."
+msgstr ""
+
+#: snikket_web/templates/invite_view.html:27
 msgid "Get started"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:22
+#: snikket_web/templates/invite_view.html:29
 msgid "Install the Snikket App on your Android or iOS device."
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:24
+#: snikket_web/templates/invite_view.html:31
 #, python-format
 msgid ""
 "Install the Snikket App on your Android device (<a "
@@ -1304,30 +1317,30 @@ msgid ""
 "target=\"_blank\">iOS coming soon!</a>)."
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:28
+#: snikket_web/templates/invite_view.html:35
 msgid "Get it on Google Play"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:30
-#: snikket_web/templates/invite_view.html:80
+#: snikket_web/templates/invite_view.html:37
+#: snikket_web/templates/invite_view.html:87
 msgid "Download on the App Store"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:32
+#: snikket_web/templates/invite_view.html:39
 msgid "Get it on F-Droid"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:35
+#: snikket_web/templates/invite_view.html:42
 msgid "Send to mobile device"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:38
+#: snikket_web/templates/invite_view.html:45
 msgid ""
 "After installation the app should automatically open and prompt you to "
 "create an account. If not, simply click the button below."
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:46
+#: snikket_web/templates/invite_view.html:53
 #, python-format
 msgid ""
 "You can connect to Snikket using any XMPP-compatible software. If the "
@@ -1335,59 +1348,59 @@ msgid ""
 "href=\"%(register_url)s\">register an account manually</a>."
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:52
+#: snikket_web/templates/invite_view.html:59
 msgid "Scan invite code"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:55
 #: snikket_web/templates/invite_view.html:62
-#: snikket_web/templates/invite_view.html:74
-#: snikket_web/templates/invite_view.html:90
-#: snikket_web/templates/invite_view.html:102
-#: snikket_web/templates/invite_view.html:118
+#: snikket_web/templates/invite_view.html:69
+#: snikket_web/templates/invite_view.html:81
+#: snikket_web/templates/invite_view.html:97
+#: snikket_web/templates/invite_view.html:109
+#: snikket_web/templates/invite_view.html:125
 msgid "Close"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:58
+#: snikket_web/templates/invite_view.html:65
 msgid ""
 "You can transfer this invite to your mobile device by scanning a code "
 "with your camera. You can use either a QR scanner app or the Snikket app "
 "itself."
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:71
+#: snikket_web/templates/invite_view.html:78
 msgid "Install on iOS"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:77
+#: snikket_web/templates/invite_view.html:84
 msgid ""
 "After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:79
+#: snikket_web/templates/invite_view.html:86
 msgid "First download Snikket from the App Store using the button below:"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:81
-#: snikket_web/templates/invite_view.html:109
+#: snikket_web/templates/invite_view.html:88
+#: snikket_web/templates/invite_view.html:116
 msgid ""
 "After the installation is complete, you can return to this page and tap "
 "the \"Open the app\" button to continue with the setup:"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:99
-#: snikket_web/templates/invite_view.html:108
+#: snikket_web/templates/invite_view.html:106
+#: snikket_web/templates/invite_view.html:115
 msgid "Install via F-Droid"
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:105
+#: snikket_web/templates/invite_view.html:112
 msgid ""
 "After installing Snikket via F-Droid, you have to return to this invite "
 "link and tap on \"Open the app\" to proceed."
 msgstr ""
 
-#: snikket_web/templates/invite_view.html:107
+#: snikket_web/templates/invite_view.html:114
 msgid "First install Snikket from F-Droid using the button below:"
 msgstr ""
 
@@ -1424,6 +1437,43 @@ msgstr ""
 msgid ""
 "This Snikket service only hosts addresses ending in "
 "<em>@%(snikket_domain)s</em>. Your password was not sent."
+msgstr ""
+
+#: snikket_web/templates/policies.html:4 snikket_web/templates/policies.html:10
+msgid "Policies"
+msgstr ""
+
+#: snikket_web/templates/policies.html:13
+msgid "Use of this service is subject to the following policies:"
+msgstr ""
+
+#: snikket_web/templates/policies.html:16
+msgid "Terms of Service"
+msgstr ""
+
+#: snikket_web/templates/policies.html:19
+msgid "Privacy Policy"
+msgstr ""
+
+#: snikket_web/templates/policies.html:23
+msgid ""
+"Please contact the administrator of this instance if you have questions "
+"about policies."
+msgstr ""
+
+#: snikket_web/templates/policies.html:26
+#, python-format
+msgid ""
+"Use of the Snikket apps is subject to the <a href=\"%(url)s\">Snikket "
+"Apps Privacy Policy</a>."
+msgstr ""
+
+#: snikket_web/templates/policies.html:29
+#, python-format
+msgid ""
+"To report policy violations or other abuse from this service, please send"
+" an email to %(email)s. Specify the domain name of this instance "
+"(%(domain)s) and include details of the incident(s)."
 msgstr ""
 
 #: snikket_web/templates/unauth.html:16
