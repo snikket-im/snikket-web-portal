@@ -458,6 +458,8 @@ class EditCircleForm(BaseForm):
         _l("Add user")
     )
 
+    action_remove_group_chat = wtforms.StringField()
+
 
 @bp.route("/circle/<id_>", methods=["GET", "POST"])
 @client.require_admin_session()
@@ -530,6 +532,15 @@ async def edit_circle(id_: str) -> typing.Union[str, werkzeug.Response]:
                 _("User removed from circle"),
                 "success",
             )
+        elif form.action_remove_group_chat.data:
+            await client.remove_group_chat(
+                id_,
+                form.action_remove_group_chat.data,
+            )
+            await flash(
+                _("Chat removed from circle"),
+                "success",
+            )
 
         return redirect(url_for(".edit_circle", id_=id_))
 
@@ -537,6 +548,7 @@ async def edit_circle(id_: str) -> typing.Union[str, werkzeug.Response]:
         "admin_edit_circle.html",
         target_circle=circle,
         form=form,
+        circle_chats=circle.chats,
         circle_members=circle_members,
         invite_form=invite_form,
     )
@@ -580,6 +592,56 @@ async def delete_circle(id_: str) -> typing.Union[str, werkzeug.Response]:
         "admin_delete_circle.html",
         target_circle=circle,
         form=form,
+    )
+
+
+class AddCircleChatForm(BaseForm):
+    name = wtforms.StringField(
+        _l("Group chat name"),
+        validators=[wtforms.validators.InputRequired()],
+    )
+
+    action_save = wtforms.SubmitField(
+        _l("Create group chat")
+    )
+
+
+@bp.route("/circle/<id_>/add_chat", methods=["GET", "POST"])
+@client.require_admin_session()
+async def edit_circle_add_chat(
+    id_: str
+) -> typing.Union[str, werkzeug.Response]:
+    async with client.authenticated_session() as session:
+        try:
+            circle = await client.get_group_by_id(
+                id_,
+                session=session,
+            )
+        except aiohttp.ClientResponseError as exc:
+            if exc.status == 404:
+                await flash(
+                    _("No such circle exists"),
+                    "alert",
+                )
+                return redirect(url_for(".circles"))
+            raise
+
+    form = AddCircleChatForm()
+
+    if form.validate_on_submit():
+        if form.action_save.data:
+            await client.add_group_chat(id_, form.name.data)
+            await flash(
+                _("New group chat added to circle"),
+                "success",
+            )
+
+            return redirect(url_for(".edit_circle", id_=id_))
+
+    return await render_template(
+        "admin_create_circle_chat.html",
+        target_circle=circle,
+        group_chat_form=form,
     )
 
 

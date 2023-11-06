@@ -1,0 +1,15 @@
+{% from "library.j2" import form_button, render_errors %}
+<form method="POST" action="{{ url_for(".edit_circle_add_chat", id_=target_circle.id_) }}">
+{{- group_chat_form.csrf_token -}}
+<div class="form layout-expanded">
+	<h2 class="form-title">{% trans %}Create new circle group chat{% endtrans %}</h2>
+	<p class="form-descr weak">{% trans %}Add a chat to your circle so its members can hold group discussions.{% endtrans %}</p>
+	<p class="form-descr weak"><strong>{% trans %}Tip:{% endtrans %}</strong> {% trans %}This is only for creating group chats that automatically include <em>all</em> members of the circle. If you want a normal group chat, create it in the Snikket app instead.{% endtrans %}</p>
+	<div class="f-ebox">
+		{{ group_chat_form.name.label }}
+		{{ group_chat_form.name }}
+	</div>
+	<div class="f-bbox">
+		{%- call form_button("add", group_chat_form.action_save, class="primary") %}{% endcall -%}
+	</div>
+</div></form>

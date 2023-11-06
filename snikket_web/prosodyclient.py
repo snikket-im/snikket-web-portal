@@ -118,11 +118,29 @@ class AdminInviteInfo:
 
 
 @dataclasses.dataclass(frozen=True)
+class AdminGroupChatInfo:
+    id_: str
+    jid: str
+    name: str
+
+    @classmethod
+    def from_api_response(
+            cls,
+            data: typing.Mapping[str, typing.Any],
+            ) -> "AdminGroupChatInfo":
+        return cls(
+            id_=data["id"],
+            jid=data["jid"],
+            name=data["name"],
+        )
+
+
+@dataclasses.dataclass(frozen=True)
 class AdminGroupInfo:
     id_: str
     name: str
-    muc_jid: typing.Optional[str]
     members: typing.Collection[str]
+    chats: typing.Collection[AdminGroupChatInfo]
 
     @classmethod
     def from_api_response(
@@ -132,8 +150,11 @@ class AdminGroupInfo:
         return cls(
             id_=data["id"],
             name=data["name"],
-            muc_jid=data.get("muc_jid") or None,
             members=data.get("members", []),
+            chats=[
+                AdminGroupChatInfo.from_api_response(x)
+                for x in data.get("chats", [])
+            ]
         )
 
 
@@ -1032,7 +1053,7 @@ class ProsodyClient:
             self,
             name: str,
             *,
-            create_muc: bool = True,
+            create_muc: bool = False,
             session: aiohttp.ClientSession,
             ) -> AdminGroupInfo:
         payload = {
@@ -1108,6 +1129,27 @@ class ProsodyClient:
             self._raise_error_from_response(resp)
 
     @autosession
+    async def add_group_chat(
+            self,
+            id_: str,
+            name: str,
+            *,
+            session: aiohttp.ClientSession,
+            ) -> None:
+
+        payload: typing.Dict[str, typing.Any] = {
+            "name": name,
+        }
+
+        async with session.post(
+                self._admin_v1_endpoint(
+                    "/groups/{}/chats".format(id_)
+                ),
+                json=payload,
+                ) as resp:
+            self._raise_error_from_response(resp)
+
+    @autosession
     async def remove_group_member(
             self,
             id_: str,
@@ -1118,6 +1160,21 @@ class ProsodyClient:
         async with session.delete(
                 self._admin_v1_endpoint(
                     "/groups/{}/members/{}".format(id_, localpart)
+                ),
+                ) as resp:
+            self._raise_error_from_response(resp)
+
+    @autosession
+    async def remove_group_chat(
+            self,
+            group_id: str,
+            chat_id: str,
+            *,
+            session: aiohttp.ClientSession,
+            ) -> None:
+        async with session.delete(
+                self._admin_v1_endpoint(
+                    "/groups/{}/chats/{}".format(group_id, chat_id)
                 ),
                 ) as resp:
             self._raise_error_from_response(resp)
