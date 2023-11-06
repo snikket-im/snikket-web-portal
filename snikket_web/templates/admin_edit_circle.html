@@ -13,13 +13,6 @@
 <div class="box hint form layout-expanded">
 	<header>{% trans %}This is your main circle{% endtrans %}</header>
 	<p>{% trans %}This circle is managed automatically and cannot be removed or renamed.{% endtrans %}</p>
-	{%- if target_circle.muc_jid -%}
-	<div><label for="circle-muc-jid">{% trans %}Group chat address{% endtrans %}</label></div>
-	<div><input type="text" readonly="readonly" id="circle-muc-jid" value="{{ target_circle.muc_jid }}"></div>
-	{%- call clipboard_button(target_circle.muc_jid, show_label=True) -%}
-		{%- trans -%}Copy address{%- endtrans -%}
-	{%- endcall -%}
-	{%- endif -%}
 </div>
 {%- else -%}
 <div class="form layout-expanded">
@@ -27,17 +20,6 @@
 	<div class="f-ebox">
 		{{ form.name.label }}
 		{{ form.name }}
-	</div>
-	<div class="f-ebox">
-		{%- if target_circle.muc_jid -%}
-		<label for="circle-muc-jid">{% trans %}Group chat address{% endtrans %}</label>
-		<input type="text" readonly="readonly" id="circle-muc-jid" value="{{ target_circle.muc_jid }}">
-		{%- call clipboard_button(target_circle.muc_jid, show_label=True) -%}
-			{%- trans -%}Copy address{%- endtrans -%}
-		{%- endcall -%}
-		{%- else -%}
-		<p>{% trans %}This circle has no group chat associated.{% endtrans %}<p>
-		{%- endif -%}
 	</div>
 	<div class="f-bbox">
 		{%- call standard_button("back", url_for(".circles"), class="tertiary") -%}
@@ -52,7 +34,39 @@
 	</div>
 </div>
 {%- endif -%}
+
+<h2 id="chats">{% trans %}Group chats{% endtrans %}</h2>
+<p>{% trans %}These group chats will be available to all members of the circle.{% endtrans %}</p>
+
+{%- if circle_chats -%}
+<div class="el-2 elevated"><table>
+	<thead>
+		<th>{% trans %}Name{% endtrans %}</th>
+		<th>{% trans %}Actions{% endtrans %}</th>
+	</thead>
+	<tbody>
+{%- for chat in circle_chats -%}
+		<tr>
+			<td class="collapsible">{% call value_or_hint(chat.name) %}{% endcall %}</td>
+			<td class="nowrap">
+				{%- call custom_form_button("delete", form.action_remove_group_chat.name, chat.id_, class="primary danger", slim=True) -%}
+					{% trans name=chat.name %}Delete group chat '{{ name }}'{% endtrans %}
+				{%- endcall -%}
+			</td>
+		</tr>
+{%- endfor -%}
+	</tbody>
+</table></div>
+{%- else -%}
+<p>{% trans %}This circle currently has no group chats.{% endtrans %}</p>
+{%- endif -%}
+{%- call standard_button("add", url_for(".edit_circle_add_chat", id_=target_circle.id_), class="secondary") -%}
+	{% trans %}Add group chat{% endtrans %}
+{%- endcall -%}
+
 <h2 id="members">{% trans %}Circle members{% endtrans %}</h2>
+<p>{% trans %}All members of the circle will see each other in their contact list.{% endtrans %}</p>
+
 {%- if circle_members -%}
 <div class="el-2 elevated"><table>
 	<thead>

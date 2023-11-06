@@ -3,7 +3,7 @@
 {% block content %}
 <h1>{% trans %}Manage circles{% endtrans %}</h1>
 <p>{% trans %}<em>Circles</em> aim to help people who are in the same social circle find each other on your service.{% endtrans %}</p>
-<p>{% trans %}Users who are in the same circle will see each other in their contact list. In addition, each circle has a group chat where the circle members are included.{% endtrans %}</p>
+<p>{% trans %}Users who are in the same circle will see each other in their contact list. In addition, each circle may have group chats where the circle members are included.{% endtrans %}</p>
 {%- if circles -%}
 <form method="POST" action="{{ url_for(".create_invite") }}">
 {{- invite_form.csrf_token -}}
