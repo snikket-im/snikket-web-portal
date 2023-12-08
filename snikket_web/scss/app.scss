@@ -1269,6 +1269,10 @@ pre.guru-meditation {
 
 	.avatar-container {
 		position: relative;
+
+		.avatar {
+			margin-left: 0;
+		}
 	}
 
 	.user-badge-icon {
