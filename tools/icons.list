@@ -6,6 +6,8 @@ action/logout:logout
 action/login:login
 action/exit_to_app:exit_to_app
 action/lock:lock
+action/lock_open:lock_open
+action/restore_from_trash:restore_from_trash
 communication/import_export:import_export
 communication/qr_code:qrcode
 communication/vpn_key:passwd
