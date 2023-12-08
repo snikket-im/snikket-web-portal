@@ -1068,6 +1068,10 @@ pre.guru-meditation {
 		}
 	}
 
+	label, legend {
+		color: $gray-800 !important;
+	}
+
 	.box {
 		background-color: black;
 		border-color: $gray-800;
