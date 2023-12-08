@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-11-06 13:46+0000\n"
+"POT-Creation-Date: 2023-12-08 12:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,17 +19,15 @@ msgstr ""
 
 #: snikket_web/admin.py:69 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_edit_circle.html:73
-#: snikket_web/templates/admin_users.html:8
 msgid "Login name"
 msgstr ""
 
 #: snikket_web/admin.py:73 snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/templates/admin_edit_circle.html:74
-#: snikket_web/templates/admin_users.html:9 snikket_web/user.py:63
+#: snikket_web/templates/admin_edit_circle.html:74 snikket_web/user.py:63
 msgid "Display name"
 msgstr ""
 
-#: snikket_web/admin.py:77 snikket_web/templates/admin_edit_user.html:32
+#: snikket_web/admin.py:77 snikket_web/templates/admin_edit_user.html:53
 msgid "Access Level"
 msgstr ""
 
@@ -50,185 +48,226 @@ msgid "Update user"
 msgstr ""
 
 #: snikket_web/admin.py:90
+msgid "Restore account"
+msgstr ""
+
+#: snikket_web/admin.py:94
+msgid "Unlock account"
+msgstr ""
+
+#: snikket_web/admin.py:98
 msgid "Create password reset link"
 msgstr ""
 
-#: snikket_web/admin.py:108
+#: snikket_web/admin.py:116
 msgid "Password reset link created"
 msgstr ""
 
-#: snikket_web/admin.py:123
-msgid "User information updated."
+#: snikket_web/admin.py:128
+msgid "User account restored"
+msgstr ""
+
+#: snikket_web/admin.py:133
+msgid "User account unlocked"
+msgstr ""
+
+#: snikket_web/admin.py:140
+msgid "Could not restore user account"
 msgstr ""
 
 #: snikket_web/admin.py:145
+msgid "Could not unlock user account"
+msgstr ""
+
+#: snikket_web/admin.py:157
+msgid "User information updated."
+msgstr ""
+
+#: snikket_web/admin.py:179
 msgid "Delete user permanently"
 msgstr ""
 
-#: snikket_web/admin.py:158
+#: snikket_web/admin.py:192
 msgid "User deleted"
 msgstr ""
 
-#: snikket_web/admin.py:196
+#: snikket_web/admin.py:230
 msgid "Password reset link not found"
 msgstr ""
 
-#: snikket_web/admin.py:208
+#: snikket_web/admin.py:242
 msgid "Password reset link deleted"
 msgstr ""
 
-#: snikket_web/admin.py:228
+#: snikket_web/admin.py:262
 msgid "Invite to circle"
 msgstr ""
 
-#: snikket_web/admin.py:234
+#: snikket_web/admin.py:268
 msgid "At least one circle must be selected"
 msgstr ""
 
-#: snikket_web/admin.py:239
+#: snikket_web/admin.py:273
 msgid "Valid for"
 msgstr ""
 
-#: snikket_web/admin.py:241
+#: snikket_web/admin.py:275
 msgid "One hour"
 msgstr ""
 
-#: snikket_web/admin.py:242
+#: snikket_web/admin.py:276
 msgid "Twelve hours"
 msgstr ""
 
-#: snikket_web/admin.py:243
+#: snikket_web/admin.py:277
 msgid "One day"
 msgstr ""
 
-#: snikket_web/admin.py:244
+#: snikket_web/admin.py:278
 msgid "One week"
 msgstr ""
 
-#: snikket_web/admin.py:245
+#: snikket_web/admin.py:279
 msgid "Four weeks"
 msgstr ""
 
-#: snikket_web/admin.py:251 snikket_web/templates/admin_edit_invite.html:17
+#: snikket_web/admin.py:285 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
 msgstr ""
 
-#: snikket_web/admin.py:253 snikket_web/templates/library.j2:116
+#: snikket_web/admin.py:287 snikket_web/templates/library.j2:139
 msgid "Individual"
 msgstr ""
 
-#: snikket_web/admin.py:254 snikket_web/templates/library.j2:114
+#: snikket_web/admin.py:288 snikket_web/templates/library.j2:137
 msgid "Group"
 msgstr ""
 
-#: snikket_web/admin.py:260
+#: snikket_web/admin.py:294
 msgid "New invitation link"
 msgstr ""
 
-#: snikket_web/admin.py:322
+#: snikket_web/admin.py:356
 msgid "Revoke"
 msgstr ""
 
-#: snikket_web/admin.py:346
+#: snikket_web/admin.py:380
 msgid "Invitation created"
 msgstr ""
 
-#: snikket_web/admin.py:362
+#: snikket_web/admin.py:396
 msgid "No such invitation exists"
 msgstr ""
 
-#: snikket_web/admin.py:377
+#: snikket_web/admin.py:411
 msgid "Invitation revoked"
 msgstr ""
 
-#: snikket_web/admin.py:394 snikket_web/admin.py:442
+#: snikket_web/admin.py:428 snikket_web/admin.py:476
 #: snikket_web/templates/admin_delete_circle.html:10
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Name"
 msgstr ""
 
-#: snikket_web/admin.py:399 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:433 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr ""
 
-#: snikket_web/admin.py:429
+#: snikket_web/admin.py:463
 msgid "Circle created"
 msgstr ""
 
-#: snikket_web/admin.py:447
+#: snikket_web/admin.py:481
 msgid "Select user"
 msgstr ""
 
-#: snikket_web/admin.py:452
+#: snikket_web/admin.py:486
 msgid "Update circle"
 msgstr ""
 
-#: snikket_web/admin.py:458
+#: snikket_web/admin.py:492
 msgid "Add user"
 msgstr ""
 
-#: snikket_web/admin.py:476 snikket_web/admin.py:575 snikket_web/admin.py:623
+#: snikket_web/admin.py:510 snikket_web/admin.py:609 snikket_web/admin.py:657
 msgid "No such circle exists"
 msgstr ""
 
-#: snikket_web/admin.py:513
+#: snikket_web/admin.py:547
 msgid "Circle data updated"
 msgstr ""
 
-#: snikket_web/admin.py:523
+#: snikket_web/admin.py:557
 msgid "User added to circle"
 msgstr ""
 
-#: snikket_web/admin.py:532
+#: snikket_web/admin.py:566
 msgid "User removed from circle"
 msgstr ""
 
-#: snikket_web/admin.py:541
+#: snikket_web/admin.py:575
 msgid "Chat removed from circle"
 msgstr ""
 
-#: snikket_web/admin.py:559
+#: snikket_web/admin.py:593
 msgid "Delete circle permanently"
 msgstr ""
 
-#: snikket_web/admin.py:586
+#: snikket_web/admin.py:620
 msgid "Circle deleted"
 msgstr ""
 
-#: snikket_web/admin.py:600
+#: snikket_web/admin.py:634
 msgid "Group chat name"
 msgstr ""
 
-#: snikket_web/admin.py:605
+#: snikket_web/admin.py:639
 msgid "Create group chat"
 msgstr ""
 
-#: snikket_web/admin.py:635
+#: snikket_web/admin.py:669
 msgid "New group chat added to circle"
 msgstr ""
 
-#: snikket_web/admin.py:702
+#: snikket_web/admin.py:736
 msgid "Message contents"
 msgstr ""
 
-#: snikket_web/admin.py:708
+#: snikket_web/admin.py:742
 msgid "Only send to online users"
 msgstr ""
 
-#: snikket_web/admin.py:712
+#: snikket_web/admin.py:746
 msgid "Post to all users"
 msgstr ""
 
-#: snikket_web/admin.py:716
+#: snikket_web/admin.py:750
 msgid "Send preview to yourself"
 msgstr ""
 
-#: snikket_web/admin.py:738
+#: snikket_web/admin.py:772
 msgid "Announcement sent!"
 msgstr ""
 
-#: snikket_web/infra.py:53
+#: snikket_web/infra.py:56
 msgid "Main"
+msgstr ""
+
+#: snikket_web/infra.py:78
+msgid "Never"
+msgstr ""
+
+#: snikket_web/infra.py:95
+msgid "Today"
+msgstr ""
+
+#: snikket_web/infra.py:101
+msgid "Yesterday"
+msgstr ""
+
+#: snikket_web/infra.py:105
+#, python-format
+msgid "%(time)s ago"
 msgstr ""
 
 #: snikket_web/invite.py:35
@@ -639,7 +678,7 @@ msgid "Delete user %(user_name)s"
 msgstr ""
 
 #: snikket_web/templates/admin_delete_user.html:6
-#: snikket_web/templates/admin_edit_user.html:53
+#: snikket_web/templates/admin_edit_user.html:74
 msgid "Delete user"
 msgstr ""
 
@@ -708,7 +747,7 @@ msgid "The user has been deleted from the server."
 msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:85
-#: snikket_web/templates/library.j2:108
+#: snikket_web/templates/library.j2:131
 msgid "deleted"
 msgstr ""
 
@@ -808,56 +847,90 @@ msgstr ""
 msgid "Edit user %(user_name)s"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_user.html:22
-msgid "Edit user"
+#: snikket_web/templates/admin_edit_user.html:24
+msgid "This user account is pending deletion"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:25
+#, python-format
+msgid ""
+"The owner of the account sent a deletion request on %(date)s using their "
+"app."
 msgstr ""
 
 #: snikket_web/templates/admin_edit_user.html:26
+#, python-format
+msgid ""
+"The account has been locked, and will be automatically deleted "
+"permanently in %(time)s."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:28
+msgid ""
+"If this was a mistake, you can cancel the deletion and restore the "
+"account."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:34
+msgid "This user account is locked"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:35
+msgid ""
+"The user will not be able to log in to their account until it is unlocked"
+" again."
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:41
+msgid "Edit user"
+msgstr ""
+
+#: snikket_web/templates/admin_edit_user.html:46
 msgid "The login name cannot be changed."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_user.html:33
+#: snikket_web/templates/admin_edit_user.html:54
 msgid ""
 "The access level of a user determines what interactions are allowed for "
 "them on your Snikket service."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_user.html:40
+#: snikket_web/templates/admin_edit_user.html:61
 #, python-format
 msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_user.html:50
+#: snikket_web/templates/admin_edit_user.html:71
 msgid "Return to user list"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_user.html:58
+#: snikket_web/templates/admin_edit_user.html:79
 msgid "Further actions"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_user.html:60
+#: snikket_web/templates/admin_edit_user.html:81
 msgid "Reset password"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_user.html:63
+#: snikket_web/templates/admin_edit_user.html:84
 msgid ""
 "If the user has lost their password, you can use the button below to "
 "create a special link which allows to change the password of the account,"
 " once."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_user.html:68
+#: snikket_web/templates/admin_edit_user.html:89
 msgid "Debug information"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_user.html:70
+#: snikket_web/templates/admin_edit_user.html:91
 msgid ""
 "In some cases, extended information about the user account and the "
 "connected devices is necessary to troubleshoot issues. The button below "
 "reveals this (sensitive) information."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_user.html:74
+#: snikket_web/templates/admin_edit_user.html:95
 msgid "Show debug information"
 msgstr ""
 
@@ -1048,20 +1121,20 @@ msgid ""
 "your Snikket server. Use it wisely."
 msgstr ""
 
-#: snikket_web/templates/admin_users.html:19
-msgid "The user is an administrator."
+#: snikket_web/templates/admin_users.html:8
+msgid "User"
 msgstr ""
 
-#: snikket_web/templates/admin_users.html:19
-msgid " (Administrator)"
-msgstr ""
-
-#: snikket_web/templates/admin_users.html:22
-msgid "The user is restricted."
+#: snikket_web/templates/admin_users.html:9
+msgid "Last active"
 msgstr ""
 
 #: snikket_web/templates/admin_users.html:22
-msgid " (Restricted)"
+msgid "Deleted"
+msgstr ""
+
+#: snikket_web/templates/admin_users.html:24
+msgid "Locked"
 msgstr ""
 
 #: snikket_web/templates/app.html:4
@@ -1455,19 +1528,35 @@ msgstr ""
 msgid "First install Snikket from F-Droid using the button below:"
 msgstr ""
 
-#: snikket_web/templates/library.j2:18
+#: snikket_web/templates/library.j2:19
+msgid "The user is an administrator."
+msgstr ""
+
+#: snikket_web/templates/library.j2:19
+msgid " (Administrator)"
+msgstr ""
+
+#: snikket_web/templates/library.j2:23
+msgid "The user is restricted."
+msgstr ""
+
+#: snikket_web/templates/library.j2:23
+msgid " (Restricted)"
+msgstr ""
+
+#: snikket_web/templates/library.j2:41
 msgid "Copy link"
 msgstr ""
 
-#: snikket_web/templates/library.j2:81
+#: snikket_web/templates/library.j2:104
 msgid "Invalid input"
 msgstr ""
 
-#: snikket_web/templates/library.j2:122
+#: snikket_web/templates/library.j2:145
 msgid "Can be used multiple times to create accounts on this Snikket service."
 msgstr ""
 
-#: snikket_web/templates/library.j2:124
+#: snikket_web/templates/library.j2:147
 msgid "Can be used once to create an account on this Snikket service."
 msgstr ""
 
