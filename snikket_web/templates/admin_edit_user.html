@@ -19,12 +19,33 @@
 {% block content %}
 <h1>{% trans user_name=target_user.localpart %}Edit user {{ user_name }}{% endtrans %}</h1>
 <form method="POST">{{ form.csrf_token }}<div class="form layout-expanded">
+	{% if target_user.deletion_request %}
+	<div class="box alert">
+		<header>{% trans %}This user account is pending deletion{% endtrans %}</header>
+		<p>{% trans date=target_user.deletion_request.deleted_at | format_datetime %}The owner of the account sent a deletion request on {{ date }} using their app.{% endtrans %}
+		<p>{% trans time=(target_user.deletion_request.pending_until - now())|format_timedelta %}The account has been locked, and will be automatically deleted permanently in {{ time }}.{% endtrans %}</p>
+
+		<p>{% trans %}If this was a mistake, you can cancel the deletion and restore the account.{% endtrans %}</p>
+
+		{%- call form_button("restore_from_trash", form.action_restore, class="secondary") %}{% endcall %}
+	</div>
+	{% elif not target_user.enabled %}
+	<div class="box alert">
+		<header>{% trans %}This user account is locked{% endtrans %}</header>
+		<p>{% trans %}The user will not be able to log in to their account until it is unlocked again.{% endtrans %}</p>
+
+		{%- call form_button("lock_open", form.action_enable, class="secondary") %}{% endcall %}
+	</div>
+	{% endif %}
+
 	<h2 class="form-title">{% trans %}Edit user{% endtrans %}</h2>
+
 	<div class="f-ebox">
 		{{ form.localpart.label }}
 		{{ form.localpart(readonly="readonly") }}
 		<p class="form-desc weak">{% trans %}The login name cannot be changed.{% endtrans %}</p>
 	</div>
+
 	<div class="f-ebox">
 		{{ form.display_name.label }}
 		{{ form.display_name }}

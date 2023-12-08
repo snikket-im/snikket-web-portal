@@ -86,6 +86,14 @@ class EditUserForm(BaseForm):
         _l("Update user"),
     )
 
+    action_restore = wtforms.SubmitField(
+        _l("Restore account"),
+    )
+
+    action_enable = wtforms.SubmitField(
+        _l("Unlock account"),
+    )
+
     action_create_reset = wtforms.SubmitField(
         _l("Create password reset link"),
     )
@@ -112,6 +120,32 @@ async def edit_user(localpart: str) -> typing.Union[werkzeug.Response, str]:
                 ".user_password_reset_link",
                 id_=reset_link.id_,
             ))
+        elif form.action_restore.data or form.action_enable.data:
+            await client.enable_user_account(localpart)
+            try:
+                if form.action_restore.data:
+                    await flash(
+                        _("User account restored"),
+                        "success",
+                    )
+                else:
+                    await flash(
+                        _("User account unlocked"),
+                        "success",
+                    )
+                return redirect(url_for(".users"))
+            except aiohttp.ClientResponseError as exc:
+                if form.action_restore.data:
+                    await flash(
+                        _("Could not restore user account"),
+                        "alert",
+                    )
+                else:
+                    await flash(
+                        _("Could not unlock user account"),
+                        "alert",
+                    )
+                return redirect(url_for(".edit_user", localpart=localpart))
 
         await client.update_user(
             localpart,
