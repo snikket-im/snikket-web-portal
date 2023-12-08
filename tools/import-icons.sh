@@ -9,9 +9,9 @@ set -euo pipefail
 #   FLAVOR    one of '', 'round', 'sharp', 'outlined', 'twoshade'
 #   SVGOUT    path to the newly created SVG file
 root="$1/src"
-iconlist_file="$2"
-flavor="$3"
-output_file="$4"
+iconlist_file="${2-tools/icons.list}"
+flavor="${3-round}"
+output_file="${4-snikket_web/static/img/icons.svg}"
 
 printf '<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n<defs>\n' > "$output_file"
 printf '<!-- These icons are sourced from Google’s Material Icons set,\nlicensed under the terms of the Apache 2.0 License -->\n' >> "$output_file"
