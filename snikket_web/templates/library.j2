@@ -10,6 +10,29 @@
 {%- endif -%}
 {%- endmacro %}
 
+{% macro render_user(user, caller=None) -%}
+<div class="username-with-avatar">
+	<div class="avatar-container">
+		{%- call avatar(user.localpart+"@"+config["SNIKKET_DOMAIN"], user.avatar_info[0].hash if user.avatar_info | length > 0 else None ) %}{% endcall -%}
+		{%- if user.has_admin_role -%}
+		<div class="user-badge-icon">
+			<span class="with-tooltip above" data-tooltip="{% trans %}The user is an administrator.{% endtrans %}">{% call icon("admin") %}{% trans %} (Administrator){% endtrans %}{% endcall %}</span>
+		</div>
+		{%- elif user.has_restricted_role -%}
+		<div class="user-badge-icon">
+			<span class="with-tooltip above" data-tooltip="{% trans %}The user is restricted.{% endtrans %}">{% call icon("lock") %}{% trans %} (Restricted){% endtrans %}{% endcall %}</span>
+		</div>
+		{%- endif -%}
+	</div>
+	<div class="user-info-container">
+		<div class="user-localpart">{{- user.localpart -}}</div>
+		{%- if user.display_name %}
+		<div class="user-display-name">{{- user.display_name -}}</div>
+		{%- endif %}
+	</div>
+</div>
+{%- endmacro -%}
+
 {% macro showuri(uri, caller=None, id_=None) %}
 {%- if uri is none -%}
 <em>—</em>
