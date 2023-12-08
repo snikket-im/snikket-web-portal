@@ -123,7 +123,7 @@ async def edit_user(localpart: str) -> typing.Union[werkzeug.Response, str]:
             _("User information updated."),
             "success",
         )
-        return redirect(url_for(".edit_user", localpart=localpart))
+        return redirect(url_for(".users"))
 
     elif request.method == "GET":
         form.localpart.data = target_user_info.localpart
