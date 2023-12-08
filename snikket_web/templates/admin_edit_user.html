@@ -84,14 +84,14 @@
 		{% trans %}If the user has lost their password, you can use the button below to create a special link which allows to change the password of the account, once.{% endtrans %}
 	</p>
 	<div class="f-bbox">
-		{%- call form_button("passwd", form.action_create_reset, class="primary") -%}{%- endcall -%}
+		{%- call form_button("passwd", form.action_create_reset, class="secondary") -%}{%- endcall -%}
 	</div>
 	<h2 class="form-title">{% trans %}Debug information{% endtrans %}</h2>
 	<p class="form-desc">
 		{% trans %}In some cases, extended information about the user account and the connected devices is necessary to troubleshoot issues. The button below reveals this (sensitive) information.{% endtrans %}
 	</p>
 	<div class="f-bbox">
-		{%- call standard_button("bug_report", url_for(".debug_user", localpart=target_user.localpart), class="primary") -%}
+		{%- call standard_button("bug_report", url_for(".debug_user", localpart=target_user.localpart), class="secondary") -%}
 			{%- trans -%}Show debug information{%- endtrans -%}
 		{%- endcall -%}
 	</div>
