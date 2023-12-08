@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-08 12:08+0000\n"
-"PO-Revision-Date: 2023-04-02 15:17+0000\n"
+"PO-Revision-Date: 2023-12-09 16:59+0000\n"
 "Last-Translator: Kim Alvefur <zash@zash.se>\n"
-"Language-Team: Swedish <http://i18n.sotecware.net/projects/snikket/web-"
-"portal/sv/>\n"
+"Language-Team: Swedish <http://i18n.sotecware.net/projects/snikket/"
+"web-portal/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,16 +51,12 @@ msgid "Update user"
 msgstr "Uppdatera användare"
 
 #: snikket_web/admin.py:90
-#, fuzzy
-#| msgid "Create account"
 msgid "Restore account"
-msgstr "Skapa konto"
+msgstr "Återställ konto"
 
 #: snikket_web/admin.py:94
-#, fuzzy
-#| msgid "Your account"
 msgid "Unlock account"
-msgstr "Ditt konto"
+msgstr "Lås upp konto"
 
 #: snikket_web/admin.py:98
 msgid "Create password reset link"
@@ -72,19 +68,19 @@ msgstr "Skapade länk för att återställa lösenord"
 
 #: snikket_web/admin.py:128
 msgid "User account restored"
-msgstr ""
+msgstr "Användarkonto återställt"
 
 #: snikket_web/admin.py:133
 msgid "User account unlocked"
-msgstr ""
+msgstr "Användarkonto upplåst"
 
 #: snikket_web/admin.py:140
 msgid "Could not restore user account"
-msgstr ""
+msgstr "Kunde inte återställa användarkonto"
 
 #: snikket_web/admin.py:145
 msgid "Could not unlock user account"
-msgstr ""
+msgstr "Kunde inte låsa upp användarkonto"
 
 #: snikket_web/admin.py:157
 msgid "User information updated."
@@ -213,10 +209,8 @@ msgid "User removed from circle"
 msgstr "Användaren %(username)s borttagen från krets"
 
 #: snikket_web/admin.py:575
-#, fuzzy
-#| msgid "User removed from circle"
 msgid "Chat removed from circle"
-msgstr "Användaren %(username)s borttagen från krets"
+msgstr "Gruppchatten borttagen från kretsen"
 
 #: snikket_web/admin.py:593
 msgid "Delete circle permanently"
@@ -227,22 +221,16 @@ msgid "Circle deleted"
 msgstr "Krets raderad"
 
 #: snikket_web/admin.py:634
-#, fuzzy
-#| msgid "Group chat address"
 msgid "Group chat name"
-msgstr "Gruppchattens adress"
+msgstr "Gruppchattnamn"
 
 #: snikket_web/admin.py:639
-#, fuzzy
-#| msgid "Create account"
 msgid "Create group chat"
-msgstr "Skapa konto"
+msgstr "Skapa gruppchatt"
 
 #: snikket_web/admin.py:669
-#, fuzzy
-#| msgid "User added to circle"
 msgid "New group chat added to circle"
-msgstr "Användare tillagd i krets"
+msgstr "Ny gruppchatt tillagt i kretsen"
 
 #: snikket_web/admin.py:736
 msgid "Message contents"
@@ -270,20 +258,20 @@ msgstr "Allmän"
 
 #: snikket_web/infra.py:78
 msgid "Never"
-msgstr ""
+msgstr "Aldrig"
 
 #: snikket_web/infra.py:95
 msgid "Today"
-msgstr ""
+msgstr "Idag"
 
 #: snikket_web/infra.py:101
 msgid "Yesterday"
-msgstr ""
+msgstr "Igår"
 
 #: snikket_web/infra.py:105
 #, python-format
 msgid "%(time)s ago"
-msgstr ""
+msgstr "%(time)s sedan"
 
 #: snikket_web/invite.py:35
 msgid ""
@@ -470,12 +458,13 @@ msgid "About this Service"
 msgstr "Om Tjänsten"
 
 #: snikket_web/templates/about.html:10
-#, fuzzy, python-format
-#| msgid "This is the Snikket service <em>%(site_name)s</em>."
+#, python-format
 msgid ""
 "This is the Snikket service <em>%(site_name)s</em>, running open-source "
 "software from the Snikket project."
-msgstr "Detta är Snikket-tjänsten <em>%(site_name)s</em>."
+msgstr ""
+"Detta är Snikket-tjänsten <em>%(site_name)s</em> som kör mjukvara med öppen "
+"källkod från Snkkket-projektet."
 
 #: snikket_web/templates/about.html:11
 #, python-format
@@ -488,7 +477,7 @@ msgstr ""
 
 #: snikket_web/templates/about.html:13
 msgid "View service policies"
-msgstr ""
+msgstr "Visa tjänstepolicy"
 
 #: snikket_web/templates/about.html:15
 msgid "Licenses"
@@ -567,18 +556,13 @@ msgstr ""
 "hitta varandra på din tjänst."
 
 #: snikket_web/templates/admin_circles.html:6
-#, fuzzy
-#| msgid ""
-#| "Users who are in the same circle will see each other in their contact "
-#| "list. In addition, each circle has a group chat where the circle members "
-#| "are included."
 msgid ""
 "Users who are in the same circle will see each other in their contact list. "
 "In addition, each circle may have group chats where the circle members are "
 "included."
 msgstr ""
 "Användare som är i samma krets kommer se varandra i sin kontaktlista. "
-"Dessutom har varje krets en gruppchatt som inkluderar kretsens medlemmar."
+"Dessutom kan varje krets ha gruppchattar som inkluderar kretsens medlemmar."
 
 #: snikket_web/templates/admin_circles.html:13
 msgid "Circle name"
@@ -629,18 +613,17 @@ msgid "New circle"
 msgstr "Ny krets"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:5
-#, fuzzy
-#| msgid "Create circle"
 msgid "Create new circle group chat"
-msgstr "Skapa krets"
+msgstr "Skapa gruppchatt för krets"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:6
 msgid "Add a chat to your circle so its members can hold group discussions."
 msgstr ""
+"Lägg till en gruppchatt till kretsen så dess medlemmar kan diskutera i grupp."
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:7
 msgid "Tip:"
-msgstr ""
+msgstr "Tips:"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:7
 msgid ""
@@ -648,6 +631,9 @@ msgid ""
 "em> members of the circle. If you want a normal group chat, create it in the "
 "Snikket app instead."
 msgstr ""
+"Detta är bara för att skapa gruppchattar som automatiskt inkluderar "
+"<em>alla</em> medlemmar av kretsen. Om du vill ha en normal gruppchatt, "
+"skapa den i Snikket-appen istället."
 
 #: snikket_web/templates/admin_create_invite.html:3
 msgid "Create invitation"
@@ -772,30 +758,25 @@ msgid "Deleting a circle does not delete any users in the circle."
 msgstr "Användare i en krets raderas inte när kretsen raderas."
 
 #: snikket_web/templates/admin_edit_circle.html:38
-#, fuzzy
-#| msgid "Group chat address"
 msgid "Group chats"
-msgstr "Gruppchattens adress"
+msgstr "Gruppchattar"
 
 #: snikket_web/templates/admin_edit_circle.html:39
 msgid "These group chats will be available to all members of the circle."
-msgstr ""
+msgstr "Dessa gruppchattar blir tillgängliga för alla medlemmar i kretsen."
 
 #: snikket_web/templates/admin_edit_circle.html:53
-#, fuzzy, python-format
-#| msgid "Delete user %(user_name)s"
+#, python-format
 msgid "Delete group chat '%(name)s'"
-msgstr "Radera användaren %(user_name)s"
+msgstr "Radera gruppchatten '%(name)s'"
 
 #: snikket_web/templates/admin_edit_circle.html:61
-#, fuzzy
-#| msgid "This circle currently has no members."
 msgid "This circle currently has no group chats."
-msgstr "Denna krets har för närvarande inga medlemmar."
+msgstr "Denna krets har för närvarande inga gruppchattar."
 
 #: snikket_web/templates/admin_edit_circle.html:64
 msgid "Add group chat"
-msgstr ""
+msgstr "Lägg till gruppchatt"
 
 #: snikket_web/templates/admin_edit_circle.html:67
 msgid "Circle members"
@@ -803,7 +784,7 @@ msgstr "Medlemmar i krets"
 
 #: snikket_web/templates/admin_edit_circle.html:68
 msgid "All members of the circle will see each other in their contact list."
-msgstr ""
+msgstr "Alla medlemmar av kretsen kommer se varandra i sin kontaktlista."
 
 #: snikket_web/templates/admin_edit_circle.html:85
 msgid "The user has been deleted from the server."
@@ -921,35 +902,38 @@ msgstr "Redigera användaren %(user_name)s"
 
 #: snikket_web/templates/admin_edit_user.html:24
 msgid "This user account is pending deletion"
-msgstr ""
+msgstr "Detta användarkonto är flaggat för radering"
 
 #: snikket_web/templates/admin_edit_user.html:25
 #, python-format
 msgid ""
 "The owner of the account sent a deletion request on %(date)s using their app."
-msgstr ""
+msgstr "Ägaren av kontot skickade en raderingsförfrågan %(date)s med sin app."
 
 #: snikket_web/templates/admin_edit_user.html:26
 #, python-format
 msgid ""
 "The account has been locked, and will be automatically deleted permanently "
 "in %(time)s."
-msgstr ""
+msgstr "Kontot har låsts, och kommer automatiskt raderas permanent om %(time)s."
 
 #: snikket_web/templates/admin_edit_user.html:28
 msgid ""
 "If this was a mistake, you can cancel the deletion and restore the account."
 msgstr ""
+"Om detta var ett misstag kan du avbryta raderingen och återställa kontot."
 
 #: snikket_web/templates/admin_edit_user.html:34
 msgid "This user account is locked"
-msgstr ""
+msgstr "Detta användarkont är låst"
 
 #: snikket_web/templates/admin_edit_user.html:35
 msgid ""
 "The user will not be able to log in to their account until it is unlocked "
 "again."
 msgstr ""
+"Användaren kommer inte kunna logga in till sitt konto tills det är upplåst "
+"igen."
 
 #: snikket_web/templates/admin_edit_user.html:41
 msgid "Edit user"
@@ -1203,24 +1187,20 @@ msgstr ""
 "som just nu är online på din Snikket-server. Använd det med vishet."
 
 #: snikket_web/templates/admin_users.html:8
-#, fuzzy
-#| msgid "Users"
 msgid "User"
 msgstr "Användare"
 
 #: snikket_web/templates/admin_users.html:9
 msgid "Last active"
-msgstr ""
+msgstr "Senast aktiv"
 
 #: snikket_web/templates/admin_users.html:22
-#, fuzzy
-#| msgid "deleted"
 msgid "Deleted"
-msgstr "raderad"
+msgstr "Raderad"
 
 #: snikket_web/templates/admin_users.html:24
 msgid "Locked"
-msgstr ""
+msgstr "Låst"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
@@ -1542,6 +1522,8 @@ msgid ""
 "By continuing, you agree to the <a href=\"%(tos_uri)s\">Terms of Service</a> "
 "and <a href=\"%(privacy_uri)s\">Privacy Policy</a>."
 msgstr ""
+"Genom att fortsätta så godkänner du <a href=\"%(tos_uri)s\""
+">Tjänstevillkoren</a> och <a href=\"%(privacy_uri)s\">Integritetspolicyn</a>."
 
 #: snikket_web/templates/invite_view.html:27
 msgid "Get started"
@@ -1717,41 +1699,36 @@ msgstr ""
 
 #: snikket_web/templates/policies.html:4 snikket_web/templates/policies.html:10
 msgid "Policies"
-msgstr ""
+msgstr "Policy"
 
 #: snikket_web/templates/policies.html:13
-#, fuzzy
-#| msgid ""
-#| "Users joining via this invitation will be added to the following circles:"
 msgid "Use of this service is subject to the following policies:"
-msgstr ""
-"Användare som går med via denna inbjudan läggs till i följande kretsar:"
+msgstr "Användande av denna tjänst omfattas av följande policyer:"
 
 #: snikket_web/templates/policies.html:16
 msgid "Terms of Service"
-msgstr ""
+msgstr "Tjänstevillkor"
 
 #: snikket_web/templates/policies.html:19
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Integritetspolicy"
 
 #: snikket_web/templates/policies.html:23
 msgid ""
 "Please contact the administrator of this instance if you have questions "
 "about policies."
 msgstr ""
+"Vänligen kontakta den här instansens administratör om du har frågor om "
+"policyer."
 
 #: snikket_web/templates/policies.html:26
-#, fuzzy, python-format
-#| msgid ""
-#| "To learn more about Snikket, visit the <a href=\"%(snikket_url)s"
-#| "\">Snikket website</a>."
+#, python-format
 msgid ""
 "Use of the Snikket apps is subject to the <a href=\"%(url)s\">Snikket Apps "
 "Privacy Policy</a>."
 msgstr ""
-"För att lära dig mer om Snikket, besök <a href=\"%(snikket_url)s\">Snikkets "
-"webplats</a>."
+"Användande av Snikket-apparna omfattas av <a href=\"%(url)s\""
+">Integritetspolicy för Snikket-apparna</a>."
 
 #: snikket_web/templates/policies.html:29
 #, python-format
@@ -1760,6 +1737,9 @@ msgid ""
 "email to %(email)s. Specify the domain name of this instance (%(domain)s) "
 "and include details of the incident(s)."
 msgstr ""
+"För att rapportera policyöverträdelser eller annat missbruk av denna tjänst, "
+"vänligen skicka ett epost-meddelande till %(email)s. Ange domännamnet för "
+"denna instans (%(domain)s) och inkludera detaljer om incidenten."
 
 #: snikket_web/templates/unauth.html:16
 msgid "Operation successful"
