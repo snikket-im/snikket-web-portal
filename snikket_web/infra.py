@@ -4,6 +4,8 @@ import math
 import secrets
 import typing
 
+from datetime import datetime, timedelta, timezone
+
 import quart.flask_patch  # noqa:F401
 from quart import (
     current_app,
@@ -13,7 +15,8 @@ from quart import (
 
 import flask_babel
 import flask_wtf
-from flask_babel import _
+from flask_babel import lazy_gettext as _l
+import flask_babel as _
 
 from . import prosodyclient
 
@@ -70,6 +73,43 @@ def format_bytes(n: float) -> str:
     return "{} {}".format(n, unit)
 
 
+def format_last_activity(timestamp: typing.Optional[int]) -> str:
+    if timestamp is None:
+        return _l("Never")
+
+    last_active = datetime.fromtimestamp(timestamp, tz=timezone.utc)
+    # TODO: This 'now' should use the user's local time zone, but we
+    # don't have that information. Thus 'today'/'yesterday' may be
+    # slightly inaccurate, but compared to alternative solutions it
+    # should hopefully be "good enough".
+    now = datetime.now(tz=timezone.utc)
+    time_ago = now - last_active
+
+    yesterday = now - timedelta(days=1)
+
+    if (
+        last_active.year == now.year
+        and last_active.month == now.month
+        and last_active.day == now.day
+    ):
+        return _l("Today")
+    elif (
+        last_active.year == yesterday.year
+        and last_active.month == yesterday.month
+        and last_active.day == yesterday.day
+    ):
+        return _l("Yesterday")
+
+    return _.gettext(
+        "%(time)s ago",
+        time=flask_babel.format_timedelta(time_ago, granularity="day"),
+    )
+
+
+def template_now() -> typing.Dict[str, typing.Any]:
+    return dict(now=lambda: datetime.now(timezone.utc))
+
+
 def add_vary_language_header(resp: quart.Response) -> quart.Response:
     if getattr(g, "language_header_accessed", False):
         resp.vary.add("Accept-Language")
@@ -86,6 +126,8 @@ def init_templating(app: quart.Quart) -> None:
     app.template_filter("format_bytes")(format_bytes)
     app.template_filter("flatten")(flatten)
     app.template_filter("circle_name")(circle_name)
+    app.template_filter("format_last_activity")(format_last_activity)
+    app.context_processor(template_now)
     app.after_request(add_vary_language_header)
 
 

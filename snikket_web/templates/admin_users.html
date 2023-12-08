@@ -1,12 +1,12 @@
 {% extends "admin_app.html" %}
-{% from "library.j2" import action_button, icon, value_or_hint, custom_form_button %}
+{% from "library.j2" import action_button, avatar, icon, render_user, value_or_hint, custom_form_button with context %}
 {% block content %}
 <h1>{% trans %}Manage users{% endtrans %}</h1>
 <div class="elevated el-2"><table>
 	<thead>
 		<tr>
-			<th>{% trans %}Login name{% endtrans %}</th>
-			<th>{% trans %}Display name{% endtrans %}</th>
+			<th>{% trans %}User{% endtrans %}</th>
+			<th>{% trans %}Last active{% endtrans %}</th>
 			<th>{% trans %}Actions{% endtrans %}</th>
 		</tr>
 	</thead>
@@ -14,15 +14,15 @@
 {% for user in users %}
 		<tr>
 			<td>
-				{{- user.localpart -}}
-				{%- if user.has_admin_role -%}
-					<span class="with-tooltip above" data-tooltip="{% trans %}The user is an administrator.{% endtrans %}">{% call icon("admin") %}{% trans %} (Administrator){% endtrans %}{% endcall %}</span>
-				{%- endif -%}
-				{%- if user.has_restricted_role -%}
-					<span class="with-tooltip above" data-tooltip="{% trans %}The user is restricted.{% endtrans %}">{% call icon("lock") %}{% trans %} (Restricted){% endtrans %}{% endcall %}</span>
-				{%- endif -%}
+				{%- call render_user(user) -%}{%- endcall -%}
 			</td>
-			<td>{% call value_or_hint(user.display_name) %}{% endcall %}</td>
+			{% if user.enabled %}
+			<td>{{ user.last_active | format_last_activity }}</td>
+			{% elif user.deletion_request %}
+			<td>{% trans %}Deleted{% endtrans %}</td>
+			{% else %}
+			<td>{% trans %}Locked{% endtrans %}</td>
+			{% endif %}
 			<td class="nowrap">
 				{%- call action_button("edit", url_for(".edit_user", localpart=user.localpart), class="primary") -%}
 					{% trans user_name=user.localpart %}Edit user {{ user_name }}{% endtrans %}

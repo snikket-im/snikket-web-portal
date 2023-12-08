@@ -9,7 +9,7 @@ import types
 import typing
 import typing_extensions
 
-from datetime import datetime
+from datetime import datetime, timezone
 
 import aiohttp
 
@@ -43,12 +43,62 @@ class TokenInfo:
 
 
 @dataclasses.dataclass(frozen=True)
+class UserDeletionRequestInfo:
+    deleted_at: datetime
+    pending_until: datetime
+
+    @classmethod
+    def from_api_response(
+            cls,
+            data: typing.Optional[typing.Mapping[str, typing.Any]],
+            ) -> typing.Optional["UserDeletionRequestInfo"]:
+        if data is None:
+            return None
+        return cls(
+            deleted_at=datetime.fromtimestamp(
+                data["deleted_at"],
+                tz=timezone.utc
+            ),
+            pending_until=datetime.fromtimestamp(
+                data["pending_until"],
+                tz=timezone.utc
+            )
+        )
+
+
+@dataclasses.dataclass(frozen=True)
+class AvatarMetadata:
+    bytes: int
+    hash: str
+    type: str
+    width: typing.Optional[int]
+    height: typing.Optional[int]
+
+    @classmethod
+    def from_api_response(
+        cls,
+        data: typing.Mapping[str, typing.Any],
+    ) -> "AvatarMetadata":
+        return cls(
+            hash=data["hash"],
+            bytes=data["bytes"],
+            type=data["type"],
+            width=data.get("width") or None,
+            height=data.get("height") or None,
+        )
+
+
+@dataclasses.dataclass(frozen=True)
 class AdminUserInfo:
     localpart: str
     display_name: typing.Optional[str]
     email: typing.Optional[str]
     phone: typing.Optional[str]
     roles: typing.Optional[typing.List[str]]
+    enabled: bool
+    last_active: typing.Optional[int]
+    deletion_request: typing.Optional[UserDeletionRequestInfo]
+    avatar_info: typing.List[AvatarMetadata]
 
     @property
     def has_admin_role(self) -> bool:
@@ -75,6 +125,15 @@ class AdminUserInfo:
             email=data.get("email") or None,
             phone=data.get("phone") or None,
             roles=roles,
+            enabled=data.get("enabled", True),
+            last_active=data.get("last_active") or None,
+            deletion_request=UserDeletionRequestInfo.from_api_response(
+                data.get("deletion_request")
+            ),
+            avatar_info=[
+                AvatarMetadata.from_api_response(avatar_info)
+                for avatar_info in data.get("avatar_info", [])
+            ],
         )
 
 
@@ -922,6 +981,36 @@ class ProsodyClient:
         async with session.put(
                 self._admin_v1_endpoint("/users/{}".format(localpart)),
                 json=payload,
+                ) as resp:
+            self._raise_error_from_response(resp)
+
+    @autosession
+    async def enable_user_account(
+            self,
+            localpart: str,
+            *,
+            session: aiohttp.ClientSession,
+            ) -> None:
+        async with session.patch(
+                self._admin_v1_endpoint("/users/{}".format(localpart)),
+                json={
+                    "enabled": True,
+                },
+                ) as resp:
+            self._raise_error_from_response(resp)
+
+    @autosession
+    async def disable_user_account(
+            self,
+            localpart: str,
+            *,
+            session: aiohttp.ClientSession,
+            ) -> None:
+        async with session.patch(
+                self._admin_v1_endpoint("/users/{}".format(localpart)),
+                json={
+                    "enabled": False,
+                },
                 ) as resp:
             self._raise_error_from_response(resp)
 

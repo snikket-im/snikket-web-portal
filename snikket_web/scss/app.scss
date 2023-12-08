@@ -708,8 +708,7 @@ input[type="submit"], button, .button {
 	height: 1.5em;
 	vertical-align: middle;
 	background-size: cover;
-	box-shadow: inset 0px 0px 0px 2px rgba(0, 0, 0, 0.2);
-	border-radius: $w-s4;
+	border-radius: 10%;
 
 	margin: 0 0.25em;
 
@@ -1068,6 +1067,10 @@ pre.guru-meditation {
 		}
 	}
 
+	label, legend {
+		color: $gray-800 !important;
+	}
+
 	.box {
 		background-color: black;
 		border-color: $gray-800;
@@ -1202,6 +1205,13 @@ pre.guru-meditation {
 	p.form-desc.weak, p.field-desc.weak {
 		color: $gray-700;
 	}
+
+	.user-badge-icon {
+		color: $gray-900 !important;
+		background-color: $gray-100 !important;
+		border-color: $gray-300 !important;
+		box-shadow: black 0 0 2px !important;
+	}
 }
 
 /* tooltip magic */
@@ -1251,4 +1261,47 @@ pre.guru-meditation {
 
 .with-tooltip:hover:before, .with-tooltip:hover:after {
 	display: block;
+}
+
+.username-with-avatar {
+	display: flex;
+	align-items: center;
+
+	.avatar-container {
+		position: relative;
+
+		.avatar {
+			margin-left: 0;
+		}
+	}
+
+	.user-badge-icon {
+		position: absolute;
+		bottom: -10px;
+		right: 0px;
+		background: white;
+		border-radius: 50%;
+		width: 1.2em;
+		height: 1.2em;
+		border-color: $gray-500;
+		border-width: 1px;
+		border-style: solid;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		margin: 0;
+		padding: 0;
+		box-shadow: $gray-500 0px 0px 2px;
+
+		line-height: 1;
+		.icon {
+			/* vertical-align: text-bottom; */
+			padding: 0.1em;
+		}
+	}
+
+	.user-info-container {
+		margin-left: 0.5em;
+	}
+
 }
