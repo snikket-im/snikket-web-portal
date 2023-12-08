@@ -87,15 +87,27 @@ def format_last_activity(timestamp: typing.Optional[int]) -> str:
 
     yesterday = now - timedelta(days=1)
 
-    if last_active.year == now.year and last_active.month == now.month and last_active.day == now.day:
+    if (
+        last_active.year == now.year
+        and last_active.month == now.month
+        and last_active.day == now.day
+    ):
         return _l("Today")
-    elif last_active.year == yesterday.year and last_active.month == yesterday.month and last_active.day == yesterday.day:
+    elif (
+        last_active.year == yesterday.year
+        and last_active.month == yesterday.month
+        and last_active.day == yesterday.day
+    ):
         return _l("Yesterday")
 
-    return _.gettext("%(time)s ago", time=flask_babel.format_timedelta(time_ago, granularity="day"))
+    return _.gettext(
+        "%(time)s ago",
+        time=flask_babel.format_timedelta(time_ago, granularity="day"),
+    )
 
-def template_now() -> datetime:
-    return dict(now=lambda : datetime.now(timezone.utc))
+
+def template_now() -> typing.Dict[str, typing.Any]:
+    return dict(now=lambda: datetime.now(timezone.utc))
 
 
 def add_vary_language_header(resp: quart.Response) -> quart.Response:

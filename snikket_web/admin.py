@@ -134,7 +134,7 @@ async def edit_user(localpart: str) -> typing.Union[werkzeug.Response, str]:
                         "success",
                     )
                 return redirect(url_for(".users"))
-            except aiohttp.ClientResponseError as exc:
+            except aiohttp.ClientResponseError:
                 if form.action_restore.data:
                     await flash(
                         _("Could not restore user account"),

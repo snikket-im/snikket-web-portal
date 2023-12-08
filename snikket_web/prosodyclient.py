@@ -50,14 +50,21 @@ class UserDeletionRequestInfo:
     @classmethod
     def from_api_response(
             cls,
-            data: typing.Mapping[str, typing.Any],
+            data: typing.Optional[typing.Mapping[str, typing.Any]],
             ) -> typing.Optional["UserDeletionRequestInfo"]:
         if data is None:
             return None
         return cls(
-            deleted_at=datetime.fromtimestamp(data["deleted_at"], tz=timezone.utc),
-            pending_until=datetime.fromtimestamp(data["pending_until"], tz=timezone.utc)
+            deleted_at=datetime.fromtimestamp(
+                data["deleted_at"],
+                tz=timezone.utc
+            ),
+            pending_until=datetime.fromtimestamp(
+                data["pending_until"],
+                tz=timezone.utc
+            )
         )
+
 
 @dataclasses.dataclass(frozen=True)
 class AvatarMetadata:
@@ -71,7 +78,7 @@ class AvatarMetadata:
     def from_api_response(
         cls,
         data: typing.Mapping[str, typing.Any],
-        ) -> "AvatarMetadata":
+    ) -> "AvatarMetadata":
         return cls(
             hash=data["hash"],
             bytes=data["bytes"],
@@ -120,8 +127,13 @@ class AdminUserInfo:
             roles=roles,
             enabled=data.get("enabled", True),
             last_active=data.get("last_active") or None,
-            deletion_request=UserDeletionRequestInfo.from_api_response(data.get("deletion_request")),
-            avatar_info=[AvatarMetadata.from_api_response(avatar_info) for avatar_info in data.get("avatar_info", [])],
+            deletion_request=UserDeletionRequestInfo.from_api_response(
+                data.get("deletion_request")
+            ),
+            avatar_info=[
+                AvatarMetadata.from_api_response(avatar_info)
+                for avatar_info in data.get("avatar_info", [])
+            ],
         )
 
 
