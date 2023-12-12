@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: translations@snikket.org\n"
-"POT-Creation-Date: 2023-12-08 12:08+0000\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-12-12 18:22+0000\n"
 "PO-Revision-Date: 2023-12-09 16:59+0000\n"
 "Last-Translator: Kim Alvefur <zash@zash.se>\n"
-"Language-Team: Swedish <http://i18n.sotecware.net/projects/snikket/"
-"web-portal/sv/>\n"
+"Language-Team: Swedish <http://i18n.sotecware.net/projects/snikket/web-"
+"portal/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -915,7 +915,8 @@ msgstr "Ägaren av kontot skickade en raderingsförfrågan %(date)s med sin app.
 msgid ""
 "The account has been locked, and will be automatically deleted permanently "
 "in %(time)s."
-msgstr "Kontot har låsts, och kommer automatiskt raderas permanent om %(time)s."
+msgstr ""
+"Kontot har låsts, och kommer automatiskt raderas permanent om %(time)s."
 
 #: snikket_web/templates/admin_edit_user.html:28
 msgid ""
@@ -1334,11 +1335,11 @@ msgstr "Välj ett säkert lösenord som du inte använder någon annanstans."
 msgid "Reset your password | Snikket"
 msgstr "Återställ ditt lösenord online | Snikket"
 
-#: snikket_web/templates/invite_reset.html:15
+#: snikket_web/templates/invite_reset.html:14
 msgid "Reset your password online"
 msgstr "Återställ ditt lösenord online"
 
-#: snikket_web/templates/invite_reset.html:16
+#: snikket_web/templates/invite_reset.html:15
 msgid ""
 "To reset your password online, fill out the fields below and confirm using "
 "the button."
@@ -1522,8 +1523,9 @@ msgid ""
 "By continuing, you agree to the <a href=\"%(tos_uri)s\">Terms of Service</a> "
 "and <a href=\"%(privacy_uri)s\">Privacy Policy</a>."
 msgstr ""
-"Genom att fortsätta så godkänner du <a href=\"%(tos_uri)s\""
-">Tjänstevillkoren</a> och <a href=\"%(privacy_uri)s\">Integritetspolicyn</a>."
+"Genom att fortsätta så godkänner du <a href=\"%(tos_uri)s"
+"\">Tjänstevillkoren</a> och <a href=\"%(privacy_uri)s\">Integritetspolicyn</"
+"a>."
 
 #: snikket_web/templates/invite_view.html:27
 msgid "Get started"
@@ -1727,8 +1729,8 @@ msgid ""
 "Use of the Snikket apps is subject to the <a href=\"%(url)s\">Snikket Apps "
 "Privacy Policy</a>."
 msgstr ""
-"Användande av Snikket-apparna omfattas av <a href=\"%(url)s\""
-">Integritetspolicy för Snikket-apparna</a>."
+"Användande av Snikket-apparna omfattas av <a href=\"%(url)s"
+"\">Integritetspolicy för Snikket-apparna</a>."
 
 #: snikket_web/templates/policies.html:29
 #, python-format

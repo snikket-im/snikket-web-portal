@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-12-08 12:08+0000\n"
+"POT-Creation-Date: 2023-12-12 18:22+0000\n"
 "PO-Revision-Date: 2021-03-31 13:00+0000\n"
 "Last-Translator: Tilman Jiménez <tilman.jimenez@tu-dortmund.de>\n"
 "Language-Team: Spanish (Mexico) <https://i18n.sotecware.net/projects/snikket/"
@@ -1375,11 +1375,11 @@ msgstr ""
 msgid "Reset your password | Snikket"
 msgstr ""
 
-#: snikket_web/templates/invite_reset.html:15
+#: snikket_web/templates/invite_reset.html:14
 msgid "Reset your password online"
 msgstr ""
 
-#: snikket_web/templates/invite_reset.html:16
+#: snikket_web/templates/invite_reset.html:15
 msgid ""
 "To reset your password online, fill out the fields below and confirm using "
 "the button."

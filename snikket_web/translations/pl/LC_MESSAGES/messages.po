@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-12-08 12:08+0000\n"
+"POT-Creation-Date: 2023-12-12 18:22+0000\n"
 "PO-Revision-Date: 2023-04-04 14:11+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
 "Language-Team: Polish <http://i18n.sotecware.net/projects/snikket/web-portal/"
@@ -1366,11 +1366,11 @@ msgstr "Wprowadź bezpieczne hasło, którego nie używasz w innym miejscu."
 msgid "Reset your password | Snikket"
 msgstr "Zresetuj swoje hasło | Snikket"
 
-#: snikket_web/templates/invite_reset.html:15
+#: snikket_web/templates/invite_reset.html:14
 msgid "Reset your password online"
 msgstr "Zresetuj swoje hasło online"
 
-#: snikket_web/templates/invite_reset.html:16
+#: snikket_web/templates/invite_reset.html:15
 msgid ""
 "To reset your password online, fill out the fields below and confirm using "
 "the button."

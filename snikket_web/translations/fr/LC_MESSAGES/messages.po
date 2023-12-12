@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-12-08 12:08+0000\n"
+"POT-Creation-Date: 2023-12-12 18:22+0000\n"
 "PO-Revision-Date: 2022-04-11 13:00+0000\n"
 "Last-Translator: David Baraniak <admin@chipmnk.dev>\n"
 "Language-Team: French <http://i18n.sotecware.net/projects/snikket/web-portal/"
@@ -1372,11 +1372,11 @@ msgstr ""
 msgid "Reset your password | Snikket"
 msgstr "Réinitialiser votre mot de passe | Snikket"
 
-#: snikket_web/templates/invite_reset.html:15
+#: snikket_web/templates/invite_reset.html:14
 msgid "Reset your password online"
 msgstr "Réinitialiser votre mot de passe en ligne"
 
-#: snikket_web/templates/invite_reset.html:16
+#: snikket_web/templates/invite_reset.html:15
 msgid ""
 "To reset your password online, fill out the fields below and confirm using "
 "the button."

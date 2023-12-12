@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-12-08 12:08+0000\n"
+"POT-Creation-Date: 2023-12-12 18:22+0000\n"
 "PO-Revision-Date: 2022-05-20 00:01+0000\n"
 "Last-Translator: Zack Zhou <lnx@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <http://i18n.sotecware.net/projects/"
@@ -1320,11 +1320,11 @@ msgstr "输入一个没有在其他地方使用过的安全密码。"
 msgid "Reset your password | Snikket"
 msgstr "重置密码 | Snikket"
 
-#: snikket_web/templates/invite_reset.html:15
+#: snikket_web/templates/invite_reset.html:14
 msgid "Reset your password online"
 msgstr "在线重置密码"
 
-#: snikket_web/templates/invite_reset.html:16
+#: snikket_web/templates/invite_reset.html:15
 msgid ""
 "To reset your password online, fill out the fields below and confirm using "
 "the button."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-12-08 12:08+0000\n"
+"POT-Creation-Date: 2023-12-12 18:22+0000\n"
 "PO-Revision-Date: 2021-06-19 15:01+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language-Team: English (United Kingdom) <https://i18n.sotecware.net/projects/"
@@ -1397,13 +1397,13 @@ msgstr ""
 msgid "Reset your password | Snikket"
 msgstr "Change your password"
 
-#: snikket_web/templates/invite_reset.html:15
+#: snikket_web/templates/invite_reset.html:14
 #, fuzzy
 #| msgid "Change your password"
 msgid "Reset your password online"
 msgstr "Change your password"
 
-#: snikket_web/templates/invite_reset.html:16
+#: snikket_web/templates/invite_reset.html:15
 msgid ""
 "To reset your password online, fill out the fields below and confirm using "
 "the button."
