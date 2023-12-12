@@ -7,7 +7,6 @@
 {% block head_lead %}
 {{ super() }}
 <title>{% trans %}Reset your password | Snikket{% endtrans %}</title>
-<script async type="text/javascript" src="{{ url_for("static", filename="js/qrcode.min.js") }}"></script>
 {% endblock %}
 {% block content %}
 <form method="POST"><div class="form layout-expanded">
@@ -27,9 +26,4 @@
 		{%- call form_button("passwd", form.action_reset, class="primary") -%}{%- endcall -%}
 	</div>
 </div></form>
-<script type="text/javascript">
-	var onload = function() {
-		apply_qr_code(document.getElementById("qr-uri"));
-	};
-</script>
 {% endblock %}
