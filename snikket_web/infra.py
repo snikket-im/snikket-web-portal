@@ -53,7 +53,7 @@ def flatten(a: typing.Iterable, levels: int = 1) -> typing.Iterable:
 
 def circle_name(c: typing.Any) -> str:
     if c.id_ == "default" and c.name == "default":
-        return _("Main")
+        return _l("Main")
     return c.name
 
 

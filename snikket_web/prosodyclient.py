@@ -190,7 +190,7 @@ class AdminGroupChatInfo:
         return cls(
             id_=data["id"],
             jid=data["jid"],
-            name=data["name"],
+            name=data.get("name", ""),
         )
 
 
