@@ -6,106 +6,110 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-12 18:22+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2023-12-15 11:56+0000\n"
+"Last-Translator: Andriy Utkin <mail@autkin.net>\n"
+"Language-Team: Ukrainian <http://i18n.sotecware.net/projects/snikket/"
+"web-portal/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.1\n"
 "Generated-By: Babel 2.14.0\n"
 
 #: snikket_web/admin.py:69 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_edit_circle.html:73
 msgid "Login name"
-msgstr ""
+msgstr "Логін"
 
 #: snikket_web/admin.py:73 snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/templates/admin_edit_circle.html:74 snikket_web/user.py:63
 msgid "Display name"
-msgstr ""
+msgstr "Ім'я для показу"
 
 #: snikket_web/admin.py:77 snikket_web/templates/admin_edit_user.html:53
 msgid "Access Level"
-msgstr ""
+msgstr "Рівень доступу"
 
 #: snikket_web/admin.py:79
 msgid "Limited"
-msgstr ""
+msgstr "Обмежений"
 
 #: snikket_web/admin.py:80
 msgid "Normal user"
-msgstr ""
+msgstr "Нормальний користувач"
 
 #: snikket_web/admin.py:81
 msgid "Administrator"
-msgstr ""
+msgstr "Адміністратор"
 
 #: snikket_web/admin.py:86
 msgid "Update user"
-msgstr ""
+msgstr "Зберегти налаштування користувача"
 
 #: snikket_web/admin.py:90
 msgid "Restore account"
-msgstr ""
+msgstr "Відновити обліковий запис"
 
 #: snikket_web/admin.py:94
 msgid "Unlock account"
-msgstr ""
+msgstr "Розблокувати обліковий запис"
 
 #: snikket_web/admin.py:98
 msgid "Create password reset link"
-msgstr ""
+msgstr "Створити посилання для зміни пароля"
 
 #: snikket_web/admin.py:116
 msgid "Password reset link created"
-msgstr ""
+msgstr "Посилання для зміни пароля створено"
 
 #: snikket_web/admin.py:128
 msgid "User account restored"
-msgstr ""
+msgstr "Обліковий запис відновлено"
 
 #: snikket_web/admin.py:133
 msgid "User account unlocked"
-msgstr ""
+msgstr "Обліковий запис розблоковано"
 
 #: snikket_web/admin.py:140
 msgid "Could not restore user account"
-msgstr ""
+msgstr "Не вдалося відновити обліковий запис"
 
 #: snikket_web/admin.py:145
 msgid "Could not unlock user account"
-msgstr ""
+msgstr "Не вдалося розблокувати обліковий запис"
 
 #: snikket_web/admin.py:157
 msgid "User information updated."
-msgstr ""
+msgstr "Інформацію про користувача оновлено."
 
 #: snikket_web/admin.py:179
 msgid "Delete user permanently"
-msgstr ""
+msgstr "Видалити користувача назавжди"
 
 #: snikket_web/admin.py:192
 msgid "User deleted"
-msgstr ""
+msgstr "Користувача видалено"
 
 #: snikket_web/admin.py:230
 msgid "Password reset link not found"
-msgstr ""
+msgstr "Такого посилання для зміни пароля не існує"
 
 #: snikket_web/admin.py:242
 msgid "Password reset link deleted"
-msgstr ""
+msgstr "Посилання для зміни пароля видалено"
 
 #: snikket_web/admin.py:262
 msgid "Invite to circle"
-msgstr ""
+msgstr "Запросити до кола"
 
 #: snikket_web/admin.py:268
 msgid "At least one circle must be selected"
-msgstr ""
+msgstr "Потрібно обрати хоча б одне коло"
 
 #: snikket_web/admin.py:273
 msgid "Valid for"
