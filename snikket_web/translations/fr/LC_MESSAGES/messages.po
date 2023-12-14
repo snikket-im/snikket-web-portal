@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-12 18:22+0000\n"
-"PO-Revision-Date: 2022-04-11 13:00+0000\n"
-"Last-Translator: David Baraniak <admin@chipmnk.dev>\n"
+"PO-Revision-Date: 2023-12-15 11:56+0000\n"
+"Last-Translator: pep <pep@bouah.net>\n"
 "Language-Team: French <http://i18n.sotecware.net/projects/snikket/web-portal/"
 "fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.8.1\n"
+"X-Generator: Weblate 4.14.1\n"
 "Generated-By: Babel 2.9.0\n"
 
 #: snikket_web/admin.py:69 snikket_web/templates/admin_delete_user.html:10
@@ -51,10 +51,8 @@ msgid "Update user"
 msgstr "Modifier l’utilisateur"
 
 #: snikket_web/admin.py:90
-#, fuzzy
-#| msgid "Create account"
 msgid "Restore account"
-msgstr "Créer un compte"
+msgstr "Restaurer un compte"
 
 #: snikket_web/admin.py:94
 #, fuzzy
@@ -72,11 +70,11 @@ msgstr "Lien de réinitialisation du mot de passe créé"
 
 #: snikket_web/admin.py:128
 msgid "User account restored"
-msgstr ""
+msgstr "Compte utilisateur restauré"
 
 #: snikket_web/admin.py:133
 msgid "User account unlocked"
-msgstr ""
+msgstr "Compte utilisateur débloqué"
 
 #: snikket_web/admin.py:140
 msgid "Could not restore user account"
@@ -227,16 +225,12 @@ msgid "Circle deleted"
 msgstr "Cercle supprimé"
 
 #: snikket_web/admin.py:634
-#, fuzzy
-#| msgid "Group chat address"
 msgid "Group chat name"
-msgstr "Adresse de la conversation de groupe"
+msgstr "Nom de la conversation de groupe"
 
 #: snikket_web/admin.py:639
-#, fuzzy
-#| msgid "Create account"
 msgid "Create group chat"
-msgstr "Créer un compte"
+msgstr "Créer une conversation de groupe"
 
 #: snikket_web/admin.py:669
 #, fuzzy
@@ -270,15 +264,15 @@ msgstr "Principal"
 
 #: snikket_web/infra.py:78
 msgid "Never"
-msgstr ""
+msgstr "Jamais"
 
 #: snikket_web/infra.py:95
 msgid "Today"
-msgstr ""
+msgstr "Aujourd'hui"
 
 #: snikket_web/infra.py:101
 msgid "Yesterday"
-msgstr ""
+msgstr "Hier"
 
 #: snikket_web/infra.py:105
 #, python-format
@@ -471,12 +465,13 @@ msgid "About this Service"
 msgstr "À propos de ce service"
 
 #: snikket_web/templates/about.html:10
-#, fuzzy, python-format
-#| msgid "This is the Snikket service <em>%(site_name)s</em>."
+#, python-format
 msgid ""
 "This is the Snikket service <em>%(site_name)s</em>, running open-source "
 "software from the Snikket project."
-msgstr "Ceci est le service Snikket <em>%(site_name)s</em>."
+msgstr ""
+"Ceci est le service Snikket <em>%(site_name)s</em>, qui utilise le logiciel "
+"libre du projet Snikket."
 
 #: snikket_web/templates/about.html:11
 #, python-format
@@ -489,7 +484,7 @@ msgstr ""
 
 #: snikket_web/templates/about.html:13
 msgid "View service policies"
-msgstr ""
+msgstr "Voir les conditions d'utilisation"
 
 #: snikket_web/templates/about.html:15
 msgid "Licenses"
@@ -631,18 +626,18 @@ msgid "New circle"
 msgstr "Nouveau cercle"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:5
-#, fuzzy
-#| msgid "Create circle"
 msgid "Create new circle group chat"
-msgstr "Créer un cercle"
+msgstr "Créer une nouvelle conversation de groupe pour le cercle"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:6
 msgid "Add a chat to your circle so its members can hold group discussions."
 msgstr ""
+"Ajouter une conversations de groupe au cercle pour que les membres puissent "
+"discuter."
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:7
 msgid "Tip:"
-msgstr ""
+msgstr "Conseil :"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:7
 msgid ""
@@ -690,10 +685,9 @@ msgid "Copy complete output"
 msgstr "Copier le journal entier"
 
 #: snikket_web/templates/admin_delete_circle.html:4
-#, fuzzy, python-format
-#| msgid "Edit circle %(circle_name)s"
+#, python-format
 msgid "Delete circle %(circle_name)s"
-msgstr "Éditer le cercle %(circle_name)s"
+msgstr "Supprimer le cercle %(circle_name)s"
 
 #: snikket_web/templates/admin_delete_circle.html:6
 #: snikket_web/templates/admin_edit_circle.html:30
@@ -702,10 +696,8 @@ msgid "Delete circle"
 msgstr "Supprimer le cercle"
 
 #: snikket_web/templates/admin_delete_circle.html:8
-#, fuzzy
-#| msgid "Are you sure you want to delete the following user?"
 msgid "Are you sure you want to delete the following circle?"
-msgstr "Êtes-vous certain(e) de vouloir désinscrire l’utilisateur suivant ?"
+msgstr "Êtes-vous certain(e) de vouloir supprimer le cercle suivant ?"
 
 #: snikket_web/templates/admin_delete_circle.html:13
 #: snikket_web/templates/admin_delete_user.html:15
@@ -713,17 +705,12 @@ msgid "Danger"
 msgstr "Danger"
 
 #: snikket_web/templates/admin_delete_circle.html:14
-#, fuzzy
-#| msgid ""
-#| "The user and their data will be deleted irrevocably, permanently and "
-#| "immediately upon pushing the below button. <strong>There is no way back!</"
-#| "strong>"
 msgid ""
 "The circle and the corresponding chat will be deleted, permanently and "
 "immediately upon pushing the below button. <strong>There is no way back!</"
 "strong>"
 msgstr ""
-"L’utilisateur et ses données vont être irrévocablement supprimées, "
+"Le cercle et les données associées vont être irrévocablement supprimées, "
 "immédiatement après avoir pressé le bouton ci-dessous. <strong>Il est "
 "impossible de revenir en arrière !</strong>"
 
@@ -783,30 +770,27 @@ msgid "Deleting a circle does not delete any users in the circle."
 msgstr "Supprimer un cercle ne supprime aucun utilisateur dans le cercle."
 
 #: snikket_web/templates/admin_edit_circle.html:38
-#, fuzzy
-#| msgid "Group chat address"
 msgid "Group chats"
-msgstr "Adresse de la conversation de groupe"
+msgstr "Conversations de groupe"
 
 #: snikket_web/templates/admin_edit_circle.html:39
 msgid "These group chats will be available to all members of the circle."
 msgstr ""
+"Ces conversations de groupe vont être disponibles à tous les membres du "
+"cercle."
 
 #: snikket_web/templates/admin_edit_circle.html:53
-#, fuzzy, python-format
-#| msgid "Delete user %(user_name)s"
+#, python-format
 msgid "Delete group chat '%(name)s'"
-msgstr "Désinscrire l’utilisateur %(user_name)s"
+msgstr "Supprimer la conversation de groupe « %(name)s »"
 
 #: snikket_web/templates/admin_edit_circle.html:61
-#, fuzzy
-#| msgid "This circle currently has no members."
 msgid "This circle currently has no group chats."
-msgstr "Ce cercle n’a pas encore de membres."
+msgstr "Ce cercle n’a pas encore de conversation de groupe."
 
 #: snikket_web/templates/admin_edit_circle.html:64
 msgid "Add group chat"
-msgstr ""
+msgstr "Ajouter un groupe"
 
 #: snikket_web/templates/admin_edit_circle.html:67
 msgid "Circle members"
@@ -815,6 +799,8 @@ msgstr "Membres du cercle"
 #: snikket_web/templates/admin_edit_circle.html:68
 msgid "All members of the circle will see each other in their contact list."
 msgstr ""
+"Tous·tes les membres du cercle se verront les un·e·s les autres dans leur "
+"liste de contact."
 
 #: snikket_web/templates/admin_edit_circle.html:85
 msgid "The user has been deleted from the server."
@@ -932,13 +918,15 @@ msgstr "Modifier l’utilisateur %(user_name)s"
 
 #: snikket_web/templates/admin_edit_user.html:24
 msgid "This user account is pending deletion"
-msgstr ""
+msgstr "Ce compte utilisateurice est en attente de suppression"
 
 #: snikket_web/templates/admin_edit_user.html:25
 #, python-format
 msgid ""
 "The owner of the account sent a deletion request on %(date)s using their app."
 msgstr ""
+"Læ propriétaire du compte a envoyé une requête via l'application le %(date)s "
+"pour supprimer leur compte."
 
 #: snikket_web/templates/admin_edit_user.html:26
 #, python-format
@@ -946,21 +934,27 @@ msgid ""
 "The account has been locked, and will be automatically deleted permanently "
 "in %(time)s."
 msgstr ""
+"Le compte utilisateurice a été bloqué, il sera automatiquement supprimé de "
+"façon permanente dans %(time)s."
 
 #: snikket_web/templates/admin_edit_user.html:28
 msgid ""
 "If this was a mistake, you can cancel the deletion and restore the account."
 msgstr ""
+"Si c'était une erreur, vous pouvez annuler la suppression en restaurant le "
+"compte."
 
 #: snikket_web/templates/admin_edit_user.html:34
 msgid "This user account is locked"
-msgstr ""
+msgstr "Cet·te utilisateurice est bloqué·e"
 
 #: snikket_web/templates/admin_edit_user.html:35
 msgid ""
 "The user will not be able to log in to their account until it is unlocked "
 "again."
 msgstr ""
+"L'utilisateurice ne sera plus capable de se connecter à son compte jusqu'à "
+"ce qu'il soit débloqué."
 
 #: snikket_web/templates/admin_edit_user.html:41
 msgid "Edit user"
@@ -1219,24 +1213,20 @@ msgstr ""
 "présentement conectés à votre serveur Snikket. Utilisez-le judicieusement."
 
 #: snikket_web/templates/admin_users.html:8
-#, fuzzy
-#| msgid "Users"
 msgid "User"
-msgstr "Utilisateurs"
+msgstr "Utilisateurice"
 
 #: snikket_web/templates/admin_users.html:9
 msgid "Last active"
-msgstr ""
+msgstr "Dernièrement actif·ve"
 
 #: snikket_web/templates/admin_users.html:22
-#, fuzzy
-#| msgid "deleted"
 msgid "Deleted"
-msgstr "supprimé"
+msgstr "Supprimé"
 
 #: snikket_web/templates/admin_users.html:24
 msgid "Locked"
-msgstr ""
+msgstr "Désactivé·e"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
@@ -1572,6 +1562,9 @@ msgid ""
 "By continuing, you agree to the <a href=\"%(tos_uri)s\">Terms of Service</a> "
 "and <a href=\"%(privacy_uri)s\">Privacy Policy</a>."
 msgstr ""
+"En continuant, vous acceptez les <a href=\"%(tos_uri)s\">conditions "
+"d'utilisation du service</a> et la <a href=\"%(privacy_uri)s\">politique de "
+"confidentialité</a>."
 
 #: snikket_web/templates/invite_view.html:27
 msgid "Get started"
@@ -1756,21 +1749,18 @@ msgid "Policies"
 msgstr ""
 
 #: snikket_web/templates/policies.html:13
-#, fuzzy
-#| msgid ""
-#| "Users joining via this invitation will be added to the following circles:"
 msgid "Use of this service is subject to the following policies:"
 msgstr ""
-"Les utilisateurs rejoignant le service via cette invitation seront ajoutés "
-"dans les cercles suivant :"
+"L'utilisation de ce service est soumise aux conditions d'utilisation "
+"suivantes :"
 
 #: snikket_web/templates/policies.html:16
 msgid "Terms of Service"
-msgstr ""
+msgstr "Conditions d'utilisation du service"
 
 #: snikket_web/templates/policies.html:19
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Politique de confidentialité"
 
 #: snikket_web/templates/policies.html:23
 msgid ""
@@ -1779,16 +1769,13 @@ msgid ""
 msgstr ""
 
 #: snikket_web/templates/policies.html:26
-#, fuzzy, python-format
-#| msgid ""
-#| "To learn more about Snikket, visit the <a href=\"%(snikket_url)s"
-#| "\">Snikket website</a>."
+#, python-format
 msgid ""
 "Use of the Snikket apps is subject to the <a href=\"%(url)s\">Snikket Apps "
 "Privacy Policy</a>."
 msgstr ""
-"Pour en savoir plus sur Snikket, visitez le <a href=\"%(snikket_url)s\">site "
-"web de Snikket</a>."
+"L'utilisation des applications Snikket sont soumises aux <a href=\"%(url)s\""
+">politiques de confidentialité des applications</a>."
 
 #: snikket_web/templates/policies.html:29
 #, python-format
