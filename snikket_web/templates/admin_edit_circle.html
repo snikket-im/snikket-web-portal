@@ -1,5 +1,5 @@
 {% extends "admin_app.html" %}
-{% from "library.j2" import form_button, standard_button, value_or_hint, custom_form_button, clipboard_button, icon %}
+{% from "library.j2" import form_button, standard_button, value_or_hint, custom_form_button, clipboard_button, icon, render_user with context %}
 {% block head_lead %}
 {{ super() }}
 {% include "copy-snippet.html" %}
@@ -71,7 +71,6 @@
 <div class="el-2 elevated"><table>
 	<thead>
 		<th>{% trans %}Login name{% endtrans %}</th>
-		<th class="collapsible">{% trans %}Display name{% endtrans %}</th>
 		<th>{% trans %}Actions{% endtrans %}</th>
 	</thead>
 	<tbody>
@@ -79,13 +78,12 @@
 		<tr>
 			<td>
 				{%- if member -%}
-				{{ localpart }}
+				{%- call render_user(member) -%}{%- endcall -%}
 				{%- else -%}
 				{{ localpart }}
 				<span class="with-tooltip above" data-tooltip="{% trans %}The user has been deleted from the server.{% endtrans %}"><em> ({% trans %}deleted{% endtrans %})</em></span>
 				{%- endif -%}
 			</td>
-			<td class="collapsible">{% call value_or_hint(member.display_name) %}{% endcall %}</td>
 			<td class="nowrap">
 				{%- call custom_form_button("remove_user", form.action_remove_user.name, member.localpart, class="primary danger", slim=True) -%}
 					{% trans username=member.localpart %}Remove user {{ username }} from circle{% endtrans %}
