@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-12-12 18:22+0000\n"
+"POT-Creation-Date: 2023-12-15 15:03+0000\n"
 "PO-Revision-Date: 2023-07-13 11:17+0000\n"
 "Last-Translator: Roberto Resoli <roberto@resolutions.it>\n"
 "Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/web-"
@@ -26,7 +26,7 @@ msgid "Login name"
 msgstr "Nome utente"
 
 #: snikket_web/admin.py:73 snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/templates/admin_edit_circle.html:74 snikket_web/user.py:63
+#: snikket_web/user.py:63
 msgid "Display name"
 msgstr "Nome visualizzato"
 
@@ -593,7 +593,7 @@ msgstr "Membri"
 
 #: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_edit_circle.html:45
-#: snikket_web/templates/admin_edit_circle.html:75
+#: snikket_web/templates/admin_edit_circle.html:74
 #: snikket_web/templates/admin_invites.html:24
 #: snikket_web/templates/admin_users.html:10
 msgid "Actions"
@@ -810,37 +810,37 @@ msgstr "Membri della cerchia"
 msgid "All members of the circle will see each other in their contact list."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:85
+#: snikket_web/templates/admin_edit_circle.html:84
 msgid "The user has been deleted from the server."
 msgstr "L'utenza è stata eliminata dal server."
 
-#: snikket_web/templates/admin_edit_circle.html:85
+#: snikket_web/templates/admin_edit_circle.html:84
 #: snikket_web/templates/library.j2:131
 msgid "deleted"
 msgstr "rimosso"
 
-#: snikket_web/templates/admin_edit_circle.html:91
+#: snikket_web/templates/admin_edit_circle.html:89
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Rimuovi l'utente %(username)s dalla cerchia"
 
-#: snikket_web/templates/admin_edit_circle.html:99
+#: snikket_web/templates/admin_edit_circle.html:97
 msgid "This circle currently has no members."
 msgstr "Al momento questa cerchia non contiene membri."
 
-#: snikket_web/templates/admin_edit_circle.html:101
+#: snikket_web/templates/admin_edit_circle.html:99
 msgid "Invite more members"
 msgstr "Invita altri membri"
 
-#: snikket_web/templates/admin_edit_circle.html:104
+#: snikket_web/templates/admin_edit_circle.html:102
 msgid "Add existing user"
 msgstr "Aggiungi un utente esistente"
 
-#: snikket_web/templates/admin_edit_circle.html:115
+#: snikket_web/templates/admin_edit_circle.html:113
 msgid "All users added"
 msgstr "Tutti gli utenti sono stati aggiunti"
 
-#: snikket_web/templates/admin_edit_circle.html:116
+#: snikket_web/templates/admin_edit_circle.html:114
 msgid "All users on this service are already in this circle."
 msgstr "Tutti gli utenti di questo servizio sono già in questa cerchia."
 

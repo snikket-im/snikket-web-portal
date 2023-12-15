@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: translations@snikket.org\n"
-"POT-Creation-Date: 2023-12-12 18:22+0000\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-12-15 15:03+0000\n"
 "PO-Revision-Date: 2023-12-15 15:05+0000\n"
 "Last-Translator: uira <inboxriau@andriana.id>\n"
-"Language-Team: Indonesian <http://i18n.sotecware.net/projects/snikket/"
-"web-portal/id/>\n"
+"Language-Team: Indonesian <http://i18n.sotecware.net/projects/snikket/web-"
+"portal/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,7 @@ msgid "Login name"
 msgstr "Nama login"
 
 #: snikket_web/admin.py:73 snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/templates/admin_edit_circle.html:74 snikket_web/user.py:63
+#: snikket_web/user.py:63
 msgid "Display name"
 msgstr "Nama tampilan"
 
@@ -577,7 +577,7 @@ msgstr "Anggota"
 
 #: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_edit_circle.html:45
-#: snikket_web/templates/admin_edit_circle.html:75
+#: snikket_web/templates/admin_edit_circle.html:74
 #: snikket_web/templates/admin_invites.html:24
 #: snikket_web/templates/admin_users.html:10
 msgid "Actions"
@@ -795,37 +795,37 @@ msgstr "Anggota kelompok"
 msgid "All members of the circle will see each other in their contact list."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:85
+#: snikket_web/templates/admin_edit_circle.html:84
 msgid "The user has been deleted from the server."
 msgstr "Pengguna telah dihapus dari server"
 
-#: snikket_web/templates/admin_edit_circle.html:85
+#: snikket_web/templates/admin_edit_circle.html:84
 #: snikket_web/templates/library.j2:131
 msgid "deleted"
 msgstr "Dihapus"
 
-#: snikket_web/templates/admin_edit_circle.html:91
+#: snikket_web/templates/admin_edit_circle.html:89
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Hapus pengguna %(username)s dari kelompok"
 
-#: snikket_web/templates/admin_edit_circle.html:99
+#: snikket_web/templates/admin_edit_circle.html:97
 msgid "This circle currently has no members."
 msgstr "Kelompok ini sedang tidak memiliki anggota."
 
-#: snikket_web/templates/admin_edit_circle.html:101
+#: snikket_web/templates/admin_edit_circle.html:99
 msgid "Invite more members"
 msgstr "Ajak lebih banyak anggota"
 
-#: snikket_web/templates/admin_edit_circle.html:104
+#: snikket_web/templates/admin_edit_circle.html:102
 msgid "Add existing user"
 msgstr "Tambahkan pengguna yang ada"
 
-#: snikket_web/templates/admin_edit_circle.html:115
+#: snikket_web/templates/admin_edit_circle.html:113
 msgid "All users added"
 msgstr "Semua pengguna ditambahkan"
 
-#: snikket_web/templates/admin_edit_circle.html:116
+#: snikket_web/templates/admin_edit_circle.html:114
 msgid "All users on this service are already in this circle."
 msgstr "Semua pengguna layanan ini sudah ada di kelompok ini."
 

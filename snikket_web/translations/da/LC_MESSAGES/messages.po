@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-12-12 18:22+0000\n"
+"POT-Creation-Date: 2023-12-15 15:03+0000\n"
 "PO-Revision-Date: 2022-05-30 14:01+0000\n"
 "Last-Translator: Daniel Holmgaard <fovatis@tutanota.com>\n"
 "Language-Team: Danish <http://i18n.sotecware.net/projects/snikket/web-portal/"
@@ -26,7 +26,7 @@ msgid "Login name"
 msgstr "Login-navn"
 
 #: snikket_web/admin.py:73 snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/templates/admin_edit_circle.html:74 snikket_web/user.py:63
+#: snikket_web/user.py:63
 msgid "Display name"
 msgstr "Kaldenavn"
 
@@ -591,7 +591,7 @@ msgstr "Medlemmer"
 
 #: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_edit_circle.html:45
-#: snikket_web/templates/admin_edit_circle.html:75
+#: snikket_web/templates/admin_edit_circle.html:74
 #: snikket_web/templates/admin_invites.html:24
 #: snikket_web/templates/admin_users.html:10
 msgid "Actions"
@@ -812,37 +812,37 @@ msgstr "Cirkel medlemmer"
 msgid "All members of the circle will see each other in their contact list."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_circle.html:85
+#: snikket_web/templates/admin_edit_circle.html:84
 msgid "The user has been deleted from the server."
 msgstr "Brugeren er blevet slettet fra serveren."
 
-#: snikket_web/templates/admin_edit_circle.html:85
+#: snikket_web/templates/admin_edit_circle.html:84
 #: snikket_web/templates/library.j2:131
 msgid "deleted"
 msgstr "Slettet"
 
-#: snikket_web/templates/admin_edit_circle.html:91
+#: snikket_web/templates/admin_edit_circle.html:89
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Fjern bruger %(username)s fra cirkel"
 
-#: snikket_web/templates/admin_edit_circle.html:99
+#: snikket_web/templates/admin_edit_circle.html:97
 msgid "This circle currently has no members."
 msgstr "Den nuværende cirkel har ingen medlemmer."
 
-#: snikket_web/templates/admin_edit_circle.html:101
+#: snikket_web/templates/admin_edit_circle.html:99
 msgid "Invite more members"
 msgstr "Inviter flere medlemmer"
 
-#: snikket_web/templates/admin_edit_circle.html:104
+#: snikket_web/templates/admin_edit_circle.html:102
 msgid "Add existing user"
 msgstr "Tilføj eksisterende bruger"
 
-#: snikket_web/templates/admin_edit_circle.html:115
+#: snikket_web/templates/admin_edit_circle.html:113
 msgid "All users added"
 msgstr "Alle brugere tilføjet"
 
-#: snikket_web/templates/admin_edit_circle.html:116
+#: snikket_web/templates/admin_edit_circle.html:114
 msgid "All users on this service are already in this circle."
 msgstr "Alle brugerne af denne tjeneste er allerede i denne cirkel."
 

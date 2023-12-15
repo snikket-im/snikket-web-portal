@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: translations@snikket.org\n"
-"POT-Creation-Date: 2023-12-12 18:22+0000\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-12-15 15:03+0000\n"
 "PO-Revision-Date: 2023-12-15 15:05+0000\n"
 "Last-Translator: Deleted User <noreply+11@weblate.org>\n"
 "Language-Team: French <http://i18n.sotecware.net/projects/snikket/web-portal/"
@@ -26,7 +26,7 @@ msgid "Login name"
 msgstr "Identifiant"
 
 #: snikket_web/admin.py:73 snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/templates/admin_edit_circle.html:74 snikket_web/user.py:63
+#: snikket_web/user.py:63
 msgid "Display name"
 msgstr "Nom à afficher"
 
@@ -576,7 +576,7 @@ msgstr "Membres"
 
 #: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_edit_circle.html:45
-#: snikket_web/templates/admin_edit_circle.html:75
+#: snikket_web/templates/admin_edit_circle.html:74
 #: snikket_web/templates/admin_invites.html:24
 #: snikket_web/templates/admin_users.html:10
 msgid "Actions"
@@ -794,37 +794,37 @@ msgstr ""
 "Tous·tes les membres du cercle se verront les un·e·s les autres dans leur "
 "liste de contact."
 
-#: snikket_web/templates/admin_edit_circle.html:85
+#: snikket_web/templates/admin_edit_circle.html:84
 msgid "The user has been deleted from the server."
 msgstr "Cet utilisateur a été supprimé du serveur."
 
-#: snikket_web/templates/admin_edit_circle.html:85
+#: snikket_web/templates/admin_edit_circle.html:84
 #: snikket_web/templates/library.j2:131
 msgid "deleted"
 msgstr "supprimé"
 
-#: snikket_web/templates/admin_edit_circle.html:91
+#: snikket_web/templates/admin_edit_circle.html:89
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Retirer l’utilisateur %(username)s du cercle"
 
-#: snikket_web/templates/admin_edit_circle.html:99
+#: snikket_web/templates/admin_edit_circle.html:97
 msgid "This circle currently has no members."
 msgstr "Ce cercle n’a pas encore de membres."
 
-#: snikket_web/templates/admin_edit_circle.html:101
+#: snikket_web/templates/admin_edit_circle.html:99
 msgid "Invite more members"
 msgstr "Inviter d’autres membres"
 
-#: snikket_web/templates/admin_edit_circle.html:104
+#: snikket_web/templates/admin_edit_circle.html:102
 msgid "Add existing user"
 msgstr "Ajouter un utilisateur existant"
 
-#: snikket_web/templates/admin_edit_circle.html:115
+#: snikket_web/templates/admin_edit_circle.html:113
 msgid "All users added"
 msgstr "Tous les utilisateurs ont été ajoutés"
 
-#: snikket_web/templates/admin_edit_circle.html:116
+#: snikket_web/templates/admin_edit_circle.html:114
 msgid "All users on this service are already in this circle."
 msgstr "Tous les utilisateurs de ce service sont déjà dans ce cercle."
 
@@ -1554,8 +1554,8 @@ msgid ""
 "By continuing, you agree to the <a href=\"%(tos_uri)s\">Terms of Service</a> "
 "and <a href=\"%(privacy_uri)s\">Privacy Policy</a>."
 msgstr ""
-"En continuant, vous acceptez les <a href=\"%(tos_uri)s\">conditions d’"
-"utilisation du service</a> et la <a href=\"%(privacy_uri)s\">politique de "
+"En continuant, vous acceptez les <a href=\"%(tos_uri)s\">conditions "
+"d’utilisation du service</a> et la <a href=\"%(privacy_uri)s\">politique de "
 "confidentialité</a>."
 
 #: snikket_web/templates/invite_view.html:27
@@ -1674,8 +1674,8 @@ msgid ""
 "After installing Snikket via F-Droid, you have to return to this invite link "
 "and tap on \"Open the app\" to proceed."
 msgstr ""
-"Après avoir installé Snikket via F-Droid, vous devez revenir à ce lien d’"
-"invitation et appuyer sur « Ouvrir l’application » pour continuer."
+"Après avoir installé Snikket via F-Droid, vous devez revenir à ce lien "
+"d’invitation et appuyer sur « Ouvrir l’application » pour continuer."
 
 #: snikket_web/templates/invite_view.html:114
 msgid "First install Snikket from F-Droid using the button below:"
@@ -1768,8 +1768,8 @@ msgid ""
 "Use of the Snikket apps is subject to the <a href=\"%(url)s\">Snikket Apps "
 "Privacy Policy</a>."
 msgstr ""
-"L’utilisation des applications Snikket sont soumises aux <a href=\"%(url)s\""
-">politiques de confidentialité des applications</a>."
+"L’utilisation des applications Snikket sont soumises aux <a href=\"%(url)s"
+"\">politiques de confidentialité des applications</a>."
 
 #: snikket_web/templates/policies.html:29
 #, python-format

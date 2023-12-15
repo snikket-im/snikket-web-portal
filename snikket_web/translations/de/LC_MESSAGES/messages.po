@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
-"Report-Msgid-Bugs-To: translations@snikket.org\n"
-"POT-Creation-Date: 2023-12-12 18:22+0000\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-12-15 15:03+0000\n"
 "PO-Revision-Date: 2023-12-15 15:05+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language-Team: German <http://i18n.sotecware.net/projects/snikket/web-portal/"
@@ -26,7 +26,7 @@ msgid "Login name"
 msgstr "Anmeldename"
 
 #: snikket_web/admin.py:73 snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/templates/admin_edit_circle.html:74 snikket_web/user.py:63
+#: snikket_web/user.py:63
 msgid "Display name"
 msgstr "Anzeigename"
 
@@ -575,7 +575,7 @@ msgstr "Mitglieder"
 
 #: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_edit_circle.html:45
-#: snikket_web/templates/admin_edit_circle.html:75
+#: snikket_web/templates/admin_edit_circle.html:74
 #: snikket_web/templates/admin_invites.html:24
 #: snikket_web/templates/admin_users.html:10
 msgid "Actions"
@@ -796,37 +796,37 @@ msgstr ""
 "Alle Mitglieder der Gemeinschaft sehen sich gegenseitig in ihren "
 "Kontaktlisten."
 
-#: snikket_web/templates/admin_edit_circle.html:85
+#: snikket_web/templates/admin_edit_circle.html:84
 msgid "The user has been deleted from the server."
 msgstr "Dieses Konto wurde von diesem Server gelöscht."
 
-#: snikket_web/templates/admin_edit_circle.html:85
+#: snikket_web/templates/admin_edit_circle.html:84
 #: snikket_web/templates/library.j2:131
 msgid "deleted"
 msgstr "gelöscht"
 
-#: snikket_web/templates/admin_edit_circle.html:91
+#: snikket_web/templates/admin_edit_circle.html:89
 #, python-format
 msgid "Remove user %(username)s from circle"
 msgstr "Benutzer*in %(username)s aus der Gemeinschaft entfernen"
 
-#: snikket_web/templates/admin_edit_circle.html:99
+#: snikket_web/templates/admin_edit_circle.html:97
 msgid "This circle currently has no members."
 msgstr "Diese Gemeinschaft hat derzeit keine Mitglieder."
 
-#: snikket_web/templates/admin_edit_circle.html:101
+#: snikket_web/templates/admin_edit_circle.html:99
 msgid "Invite more members"
 msgstr "Mehr Mitglieder einladen"
 
-#: snikket_web/templates/admin_edit_circle.html:104
+#: snikket_web/templates/admin_edit_circle.html:102
 msgid "Add existing user"
 msgstr "Bestehenden Benuzter*in hinzufügen"
 
-#: snikket_web/templates/admin_edit_circle.html:115
+#: snikket_web/templates/admin_edit_circle.html:113
 msgid "All users added"
 msgstr "Alle Benutzer*innen hinzugefügt"
 
-#: snikket_web/templates/admin_edit_circle.html:116
+#: snikket_web/templates/admin_edit_circle.html:114
 msgid "All users on this service are already in this circle."
 msgstr ""
 "Alle Benutzer*innen dieses Dienstes sind bereits in dieser Gemeinschaft."
@@ -905,8 +905,8 @@ msgstr ""
 #: snikket_web/templates/admin_edit_user.html:9
 msgid "Like normal users and can access the admin panel in the web portal."
 msgstr ""
-"Zusätzlich zu den Rechten von normalen Benutzer*innen, können Administrator*"
-"innen auf den Adminbereich zugreifen."
+"Zusätzlich zu den Rechten von normalen Benutzer*innen, können "
+"Administrator*innen auf den Adminbereich zugreifen."
 
 #: snikket_web/templates/admin_edit_user.html:20
 #: snikket_web/templates/admin_users.html:28
@@ -1555,9 +1555,9 @@ msgid ""
 "By continuing, you agree to the <a href=\"%(tos_uri)s\">Terms of Service</a> "
 "and <a href=\"%(privacy_uri)s\">Privacy Policy</a>."
 msgstr ""
-"Indem du fortfährst stimmst du den <a href=\"%(tos_uri)s\""
-">Nutzungsbedingungen</a> und der <a href=\"%(privacy_uri)s\""
-">Datenschutzrichtlinie</a> zu."
+"Indem du fortfährst stimmst du den <a href=\"%(tos_uri)s"
+"\">Nutzungsbedingungen</a> und der <a href=\"%(privacy_uri)s"
+"\">Datenschutzrichtlinie</a> zu."
 
 #: snikket_web/templates/invite_view.html:27
 msgid "Get started"
@@ -1772,8 +1772,8 @@ msgid ""
 "Use of the Snikket apps is subject to the <a href=\"%(url)s\">Snikket Apps "
 "Privacy Policy</a>."
 msgstr ""
-"Die Verwendung der Snikket-Apps unterliegt den Bedingungen der <a href=\""
-"%(url)s\">Datenschutzrichtlinie der Snikket Apps</a>."
+"Die Verwendung der Snikket-Apps unterliegt den Bedingungen der <a href="
+"\"%(url)s\">Datenschutzrichtlinie der Snikket Apps</a>."
 
 #: snikket_web/templates/policies.html:29
 #, python-format
