@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-12 18:22+0000\n"
-"PO-Revision-Date: 2023-12-15 11:56+0000\n"
-"Last-Translator: pep <pep@bouah.net>\n"
+"PO-Revision-Date: 2023-12-15 15:05+0000\n"
+"Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
 "Language-Team: French <http://i18n.sotecware.net/projects/snikket/web-portal/"
 "fr/>\n"
 "Language: fr\n"
@@ -55,10 +55,8 @@ msgid "Restore account"
 msgstr "Restaurer un compte"
 
 #: snikket_web/admin.py:94
-#, fuzzy
-#| msgid "Your account"
 msgid "Unlock account"
-msgstr "Votre compte"
+msgstr "Réactiver ce compte"
 
 #: snikket_web/admin.py:98
 msgid "Create password reset link"
@@ -78,11 +76,11 @@ msgstr "Compte utilisateur débloqué"
 
 #: snikket_web/admin.py:140
 msgid "Could not restore user account"
-msgstr ""
+msgstr "Impossible de restaurer ce compte utilisateur"
 
 #: snikket_web/admin.py:145
 msgid "Could not unlock user account"
-msgstr ""
+msgstr "Impossible de réactiver le compte utilisateur"
 
 #: snikket_web/admin.py:157
 msgid "User information updated."
@@ -211,10 +209,8 @@ msgid "User removed from circle"
 msgstr "Utilisateur retiré du cercle"
 
 #: snikket_web/admin.py:575
-#, fuzzy
-#| msgid "User removed from circle"
 msgid "Chat removed from circle"
-msgstr "Utilisateur retiré du cercle"
+msgstr "Discussion retirée du cercle"
 
 #: snikket_web/admin.py:593
 msgid "Delete circle permanently"
@@ -233,10 +229,8 @@ msgid "Create group chat"
 msgstr "Créer une conversation de groupe"
 
 #: snikket_web/admin.py:669
-#, fuzzy
-#| msgid "User added to circle"
 msgid "New group chat added to circle"
-msgstr "Utilisateur ajouté à ce cercle"
+msgstr "Nouveau groupe ajouté à ce cercle"
 
 #: snikket_web/admin.py:736
 msgid "Message contents"
@@ -268,7 +262,7 @@ msgstr "Jamais"
 
 #: snikket_web/infra.py:95
 msgid "Today"
-msgstr "Aujourd'hui"
+msgstr "Aujourd’hui"
 
 #: snikket_web/infra.py:101
 msgid "Yesterday"
@@ -277,14 +271,14 @@ msgstr "Hier"
 #: snikket_web/infra.py:105
 #, python-format
 msgid "%(time)s ago"
-msgstr ""
+msgstr "Il y a %(time)s"
 
 #: snikket_web/invite.py:35
 msgid ""
 "The account data you tried to import is too large to upload. Please contact "
 "your Snikket operator."
 msgstr ""
-"Les données du compte que vous avez essayé d'importer sont trop volumineuses "
+"Les données du compte que vous avez essayé d’importer sont trop volumineuses "
 "pour être téléchargées. Veuillez contacter votre opérateur Snikket."
 
 #: snikket_web/invite.py:114
@@ -338,9 +332,9 @@ msgid ""
 "The account data you tried to import is in an unknown format. Please upload "
 "an XML file in XEP-0227 format (provided format: %(mimetype)s)."
 msgstr ""
-"Les données du compte que vous avez essayé d'importer sont dans un format "
+"Les données du compte que vous avez essayé d’importer sont dans un format "
 "inconnu. Veuillez télécharger un fichier XML au format XEP-0227 (format "
-"fourni : %(mimetype)s)."
+"fourni : %(mimetype)s)."
 
 #: snikket_web/invite.py:291 snikket_web/templates/unauth.html:18
 #: snikket_web/user.py:178
@@ -441,7 +435,7 @@ msgstr "Exporter"
 
 #: snikket_web/user.py:202
 msgid "You currently have no account data to export."
-msgstr "Vous n'avez actuellement aucune donnée de compte à exporter."
+msgstr "Vous n’avez actuellement aucune donnée de compte à exporter."
 
 #: snikket_web/templates/_footer.html:4
 #, python-format
@@ -484,7 +478,7 @@ msgstr ""
 
 #: snikket_web/templates/about.html:13
 msgid "View service policies"
-msgstr "Voir les conditions d'utilisation"
+msgstr "Voir les conditions d’utilisation"
 
 #: snikket_web/templates/about.html:15
 msgid "Licenses"
@@ -563,19 +557,14 @@ msgstr ""
 "même cercle social à se retrouver sur votre service."
 
 #: snikket_web/templates/admin_circles.html:6
-#, fuzzy
-#| msgid ""
-#| "Users who are in the same circle will see each other in their contact "
-#| "list. In addition, each circle has a group chat where the circle members "
-#| "are included."
 msgid ""
 "Users who are in the same circle will see each other in their contact list. "
 "In addition, each circle may have group chats where the circle members are "
 "included."
 msgstr ""
 "Les utilisateurs qui se trouvent dans le même cercle se verront dans leur "
-"liste de contacts. En outre, chaque cercle dispose d’un chat de groupe dans "
-"lequel les membres du cercle sont inclus."
+"liste de contacts. En outre, chaque cercle peut disposer de groupes de "
+"discussions dans lequel les membres du cercle sont inclus."
 
 #: snikket_web/templates/admin_circles.html:13
 msgid "Circle name"
@@ -645,6 +634,9 @@ msgid ""
 "em> members of the circle. If you want a normal group chat, create it in the "
 "Snikket app instead."
 msgstr ""
+"Utilisez cette fonctionnalité uniquement pour créer un groupe de discussion "
+"qui inclue automatiquement <em>tous</em> les membres du cercle. Si vous "
+"voulez un groupe normal, créez-le dans l’application Snikket à la place."
 
 #: snikket_web/templates/admin_create_invite.html:3
 msgid "Create invitation"
@@ -925,7 +917,7 @@ msgstr "Ce compte utilisateurice est en attente de suppression"
 msgid ""
 "The owner of the account sent a deletion request on %(date)s using their app."
 msgstr ""
-"Læ propriétaire du compte a envoyé une requête via l'application le %(date)s "
+"Læ propriétaire du compte a envoyé une requête via l’application le %(date)s "
 "pour supprimer leur compte."
 
 #: snikket_web/templates/admin_edit_user.html:26
@@ -941,7 +933,7 @@ msgstr ""
 msgid ""
 "If this was a mistake, you can cancel the deletion and restore the account."
 msgstr ""
-"Si c'était une erreur, vous pouvez annuler la suppression en restaurant le "
+"Si c’était une erreur, vous pouvez annuler la suppression en restaurant le "
 "compte."
 
 #: snikket_web/templates/admin_edit_user.html:34
@@ -953,8 +945,8 @@ msgid ""
 "The user will not be able to log in to their account until it is unlocked "
 "again."
 msgstr ""
-"L'utilisateurice ne sera plus capable de se connecter à son compte jusqu'à "
-"ce qu'il soit débloqué."
+"L’utilisateurice ne sera plus capable de se connecter à son compte jusqu’à "
+"ce qu’il soit débloqué."
 
 #: snikket_web/templates/admin_edit_user.html:41
 msgid "Edit user"
@@ -1272,7 +1264,7 @@ msgstr "Invitation à %(site_name)s"
 #: snikket_web/templates/invite_view.html:14
 #, python-format
 msgid "Powered by <img src=\"%(logo_url)s\" alt=\"Snikket\">"
-msgstr "Propulsé par <img alt=\"Snikket\" src=\"%(logo_url)s\">"
+msgstr "Propulsé par <img src=\"%(logo_url)s\" alt=\"Snikket\">"
 
 #: snikket_web/templates/invite_invalid.html:8
 msgid "Invite expired"
@@ -1509,11 +1501,11 @@ msgstr "Importation réussie"
 #: snikket_web/templates/invite_success.html:22
 msgid "Congratulations! Your account data has been successfully imported."
 msgstr ""
-"Félicitations ! Les données de votre compte ont été importées avec succès."
+"Félicitations ! Les données de votre compte ont été importées avec succès."
 
 #: snikket_web/templates/invite_success.html:26
 msgid "Moving to Snikket?"
-msgstr "Nouveau utilisateur Snikket ?"
+msgstr "Nouvel utilisateur Snikket ?"
 
 #: snikket_web/templates/invite_success.html:27
 msgid ""
@@ -1522,7 +1514,7 @@ msgid ""
 "information, etc.) from your previous account. When you have exported the "
 "data from your previous account, upload it using the form below."
 msgstr ""
-"Si vous passez d'une autre instance de Snikket ou d'un autre service "
+"Si vous passez d’une autre instance de Snikket ou d’un autre service "
 "compatible XMPP, vous pouvez éventuellement importer les données (contacts, "
 "informations de profil, etc.) de votre ancien compte. Lorsque vous avez "
 "exporté les données de votre ancien compte, téléchargez-les en utilisant le "
@@ -1562,8 +1554,8 @@ msgid ""
 "By continuing, you agree to the <a href=\"%(tos_uri)s\">Terms of Service</a> "
 "and <a href=\"%(privacy_uri)s\">Privacy Policy</a>."
 msgstr ""
-"En continuant, vous acceptez les <a href=\"%(tos_uri)s\">conditions "
-"d'utilisation du service</a> et la <a href=\"%(privacy_uri)s\">politique de "
+"En continuant, vous acceptez les <a href=\"%(tos_uri)s\">conditions d’"
+"utilisation du service</a> et la <a href=\"%(privacy_uri)s\">politique de "
 "confidentialité</a>."
 
 #: snikket_web/templates/invite_view.html:27
@@ -1599,7 +1591,7 @@ msgstr "Obtenez-le sur F-Droid"
 
 #: snikket_web/templates/invite_view.html:42
 msgid "Send to mobile device"
-msgstr "Envoyer vers l'appareil"
+msgstr "Envoyer vers l’appareil"
 
 #: snikket_web/templates/invite_view.html:45
 msgid ""
@@ -1653,14 +1645,14 @@ msgid ""
 "After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
 msgstr ""
-"Après avoir téléchargé Snikket depuis l'App Store, vous devez revenir à ce "
-"lien d'invitation et cliquer sur \"Ouvrir l'application\" pour continuer."
+"Après avoir téléchargé Snikket depuis l’App Store, vous devez revenir à ce "
+"lien d’invitation et cliquer sur « Ouvrir l’application » pour continuer."
 
 #: snikket_web/templates/invite_view.html:86
 msgid "First download Snikket from the App Store using the button below:"
 msgstr ""
-"Téléchargez d'abord Snikket depuis l'App Store en utilisant le bouton ci-"
-"dessous :"
+"Téléchargez d’abord Snikket depuis l’App Store en utilisant le bouton ci-"
+"dessous :"
 
 #: snikket_web/templates/invite_view.html:88
 #: snikket_web/templates/invite_view.html:116
@@ -1668,9 +1660,9 @@ msgid ""
 "After the installation is complete, you can return to this page and tap the "
 "\"Open the app\" button to continue with the setup:"
 msgstr ""
-"Une fois l'installation terminée, vous pouvez revenir à cette page et "
-"appuyer sur le bouton \"Ouvrir l'application\" pour poursuivre la "
-"configuration :"
+"Une fois l’installation terminée, vous pouvez revenir à cette page et "
+"appuyer sur le bouton « Ouvrir l’application » pour poursuivre la "
+"configuration :"
 
 #: snikket_web/templates/invite_view.html:106
 #: snikket_web/templates/invite_view.html:115
@@ -1682,13 +1674,13 @@ msgid ""
 "After installing Snikket via F-Droid, you have to return to this invite link "
 "and tap on \"Open the app\" to proceed."
 msgstr ""
-"Après avoir installé Snikket via F-Droid, vous devez revenir à ce lien "
-"d'invitation et appuyer sur \"Ouvrir l'application\" pour continuer."
+"Après avoir installé Snikket via F-Droid, vous devez revenir à ce lien d’"
+"invitation et appuyer sur « Ouvrir l’application » pour continuer."
 
 #: snikket_web/templates/invite_view.html:114
 msgid "First install Snikket from F-Droid using the button below:"
 msgstr ""
-"Installez d'abord Snikket depuis F-Droid en utilisant le bouton ci-dessous :"
+"Installez d’abord Snikket depuis F-Droid en utilisant le bouton ci-dessous :"
 
 #: snikket_web/templates/library.j2:19
 msgid "The user is an administrator."
@@ -1746,17 +1738,17 @@ msgstr ""
 
 #: snikket_web/templates/policies.html:4 snikket_web/templates/policies.html:10
 msgid "Policies"
-msgstr ""
+msgstr "Politiques"
 
 #: snikket_web/templates/policies.html:13
 msgid "Use of this service is subject to the following policies:"
 msgstr ""
-"L'utilisation de ce service est soumise aux conditions d'utilisation "
+"L’utilisation de ce service est soumise aux conditions d’utilisation "
 "suivantes :"
 
 #: snikket_web/templates/policies.html:16
 msgid "Terms of Service"
-msgstr "Conditions d'utilisation du service"
+msgstr "Conditions d’utilisation du service"
 
 #: snikket_web/templates/policies.html:19
 msgid "Privacy Policy"
@@ -1767,6 +1759,8 @@ msgid ""
 "Please contact the administrator of this instance if you have questions "
 "about policies."
 msgstr ""
+"Veuillez contacter l’administrateur de cette instance si vous avez des "
+"questions à propos de ces politiques."
 
 #: snikket_web/templates/policies.html:26
 #, python-format
@@ -1774,7 +1768,7 @@ msgid ""
 "Use of the Snikket apps is subject to the <a href=\"%(url)s\">Snikket Apps "
 "Privacy Policy</a>."
 msgstr ""
-"L'utilisation des applications Snikket sont soumises aux <a href=\"%(url)s\""
+"L’utilisation des applications Snikket sont soumises aux <a href=\"%(url)s\""
 ">politiques de confidentialité des applications</a>."
 
 #: snikket_web/templates/policies.html:29
@@ -1849,7 +1843,7 @@ msgid ""
 "Download your account data as a file for backup purposes or to move your "
 "account to another service."
 msgstr ""
-"Téléchargez les données de votre compte sous forme d'un fichier à des fins "
+"Téléchargez les données de votre compte sous forme d’un fichier à des fins "
 "de sauvegarde ou pour transférer votre compte vers un autre service."
 
 #: snikket_web/templates/user_passwd.html:5
