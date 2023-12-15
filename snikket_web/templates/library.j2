@@ -25,10 +25,10 @@
 		{%- endif -%}
 	</div>
 	<div class="user-info-container">
-		<div class="user-localpart">{{- user.localpart -}}</div>
 		{%- if user.display_name %}
 		<div class="user-display-name">{{- user.display_name -}}</div>
 		{%- endif %}
+		<div class="user-jid"><span class="user-jid-localpart">{{- user.localpart -}}</span><span class="user-jid-at">@</span><span class="user-jid-domain">{{- config["SNIKKET_DOMAIN"] -}}</span></div>
 	</div>
 </div>
 {%- endmacro -%}
