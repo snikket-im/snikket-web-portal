@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-12 18:22+0000\n"
 "PO-Revision-Date: 2023-12-15 15:05+0000\n"
-"Last-Translator: Link Mauve <linkmauve@linkmauve.fr>\n"
+"Last-Translator: Deleted User <noreply+11@weblate.org>\n"
 "Language-Team: French <http://i18n.sotecware.net/projects/snikket/web-portal/"
 "fr/>\n"
 "Language: fr\n"
@@ -88,7 +88,7 @@ msgstr "Informations de l’utilisateur mises à jour."
 
 #: snikket_web/admin.py:179
 msgid "Delete user permanently"
-msgstr "Désinscrire définitivement l’utilisateur"
+msgstr "Supprimer définitivement l’utilisateur"
 
 #: snikket_web/admin.py:192
 msgid "User deleted"
@@ -719,16 +719,16 @@ msgstr "Retour"
 #: snikket_web/templates/admin_delete_user.html:4
 #, python-format
 msgid "Delete user %(user_name)s"
-msgstr "Désinscrire l’utilisateur %(user_name)s"
+msgstr "Supprimer l’utilisateur %(user_name)s"
 
 #: snikket_web/templates/admin_delete_user.html:6
 #: snikket_web/templates/admin_edit_user.html:74
 msgid "Delete user"
-msgstr "Désinscrire un utilisateur"
+msgstr "Supprimer un utilisateur"
 
 #: snikket_web/templates/admin_delete_user.html:8
 msgid "Are you sure you want to delete the following user?"
-msgstr "Êtes-vous certain(e) de vouloir désinscrire l’utilisateur suivant ?"
+msgstr "Êtes-vous certain(e) de vouloir supprimer l’utilisateur suivant ?"
 
 #: snikket_web/templates/admin_delete_user.html:16
 msgid ""
@@ -830,7 +830,7 @@ msgstr "Tous les utilisateurs de ce service sont déjà dans ce cercle."
 
 #: snikket_web/templates/admin_edit_invite.html:8
 msgid "View invitation"
-msgstr "Détails de l’invitation"
+msgstr "Informations sur l’invitation"
 
 #: snikket_web/templates/admin_edit_invite.html:13
 #: snikket_web/templates/admin_reset_user_password.html:15
