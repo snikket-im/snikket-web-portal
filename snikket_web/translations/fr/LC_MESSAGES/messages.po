@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2023-12-15 15:05+0000\n"
-"Last-Translator: Deleted User <noreply+11@weblate.org>\n"
+"PO-Revision-Date: 2023-12-16 00:19+0000\n"
+"Last-Translator: pep <pep@bouah.net>\n"
 "Language-Team: French <http://i18n.sotecware.net/projects/snikket/web-portal/"
 "fr/>\n"
 "Language: fr\n"
@@ -40,15 +40,15 @@ msgstr "Limité"
 
 #: snikket_web/admin.py:80
 msgid "Normal user"
-msgstr "Utilisateur normal"
+msgstr "Utilisateurice normal·e"
 
 #: snikket_web/admin.py:81
 msgid "Administrator"
-msgstr "Administrateur"
+msgstr "Administrateurice"
 
 #: snikket_web/admin.py:86
 msgid "Update user"
-msgstr "Modifier l’utilisateur"
+msgstr "Modifier l’utilisateurice"
 
 #: snikket_web/admin.py:90
 msgid "Restore account"
@@ -68,31 +68,31 @@ msgstr "Lien de réinitialisation du mot de passe créé"
 
 #: snikket_web/admin.py:128
 msgid "User account restored"
-msgstr "Compte utilisateur restauré"
+msgstr "Compte utilisateurice restauré"
 
 #: snikket_web/admin.py:133
 msgid "User account unlocked"
-msgstr "Compte utilisateur débloqué"
+msgstr "Compte utilisateurice débloqué"
 
 #: snikket_web/admin.py:140
 msgid "Could not restore user account"
-msgstr "Impossible de restaurer ce compte utilisateur"
+msgstr "Impossible de restaurer ce compte utilisateurice"
 
 #: snikket_web/admin.py:145
 msgid "Could not unlock user account"
-msgstr "Impossible de réactiver le compte utilisateur"
+msgstr "Impossible de réactiver le compte utilisateurice"
 
 #: snikket_web/admin.py:157
 msgid "User information updated."
-msgstr "Informations de l’utilisateur mises à jour."
+msgstr "Informations de l’utilisateurice mises à jour."
 
 #: snikket_web/admin.py:179
 msgid "Delete user permanently"
-msgstr "Supprimer définitivement l’utilisateur"
+msgstr "Supprimer définitivement l’utilisateurice"
 
 #: snikket_web/admin.py:192
 msgid "User deleted"
-msgstr "Utilisateur supprimé"
+msgstr "Utilisateurice supprimé·e"
 
 #: snikket_web/admin.py:230
 msgid "Password reset link not found"
@@ -182,7 +182,7 @@ msgstr "Cercle créé"
 
 #: snikket_web/admin.py:481
 msgid "Select user"
-msgstr "Sélectionner un utilisateur"
+msgstr "Sélectionner un·e utilisateurice"
 
 #: snikket_web/admin.py:486
 msgid "Update circle"
@@ -190,7 +190,7 @@ msgstr "Mettre à jour le cercle"
 
 #: snikket_web/admin.py:492
 msgid "Add user"
-msgstr "Ajouter un utilisateur"
+msgstr "Ajouter un·e utilisateurice"
 
 #: snikket_web/admin.py:510 snikket_web/admin.py:609 snikket_web/admin.py:657
 msgid "No such circle exists"
@@ -202,11 +202,11 @@ msgstr "Données du cercle mises à jour"
 
 #: snikket_web/admin.py:557
 msgid "User added to circle"
-msgstr "Utilisateur ajouté à ce cercle"
+msgstr "Utilisateurice ajouté·e à ce cercle"
 
 #: snikket_web/admin.py:566
 msgid "User removed from circle"
-msgstr "Utilisateur retiré du cercle"
+msgstr "Utilisateurice retiré·e du cercle"
 
 #: snikket_web/admin.py:575
 msgid "Chat removed from circle"
@@ -222,11 +222,11 @@ msgstr "Cercle supprimé"
 
 #: snikket_web/admin.py:634
 msgid "Group chat name"
-msgstr "Nom de la conversation de groupe"
+msgstr "Nom du groupe"
 
 #: snikket_web/admin.py:639
 msgid "Create group chat"
-msgstr "Créer une conversation de groupe"
+msgstr "Créer un groupe"
 
 #: snikket_web/admin.py:669
 msgid "New group chat added to circle"
@@ -238,11 +238,11 @@ msgstr "Contenu du message"
 
 #: snikket_web/admin.py:742
 msgid "Only send to online users"
-msgstr "Envoyer uniquement aux utilisateurs connectés"
+msgstr "Envoyer uniquement aux utilisateurices connecté·e·s"
 
 #: snikket_web/admin.py:746
 msgid "Post to all users"
-msgstr "Envoyer aux utilisateurs"
+msgstr "Envoyer aux utilisateurices"
 
 #: snikket_web/admin.py:750
 msgid "Send preview to yourself"
@@ -283,7 +283,7 @@ msgstr ""
 
 #: snikket_web/invite.py:114
 msgid "Username"
-msgstr "Nom d’utilisateur"
+msgstr "Nom d’utilisateurice"
 
 #: snikket_web/invite.py:118 snikket_web/invite.py:186 snikket_web/main.py:43
 msgid "Password"
@@ -303,7 +303,7 @@ msgstr "Créer un compte"
 
 #: snikket_web/invite.py:158
 msgid "That username is already taken."
-msgstr "Ce nom d’utilisateur est déjà utilisé."
+msgstr "Ce nom d’utilisateurice est déjà utilisé."
 
 #: snikket_web/invite.py:162 snikket_web/invite.py:227
 msgid "Registration was declined for unknown reasons."
@@ -311,7 +311,7 @@ msgstr "L’enregistrement a été refusé pour des raisons inconnues."
 
 #: snikket_web/invite.py:166
 msgid "The username is not valid."
-msgstr "Le nom d’utilisateur n’est pas valide."
+msgstr "Le nom d’utilisateurice n’est pas valide."
 
 #: snikket_web/invite.py:199 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:29
@@ -351,7 +351,7 @@ msgstr "S’identifier"
 
 #: snikket_web/main.py:57
 msgid "Invalid username or password."
-msgstr "Nom d’utilisateur ou mot de passe incorrect."
+msgstr "Nom d’utilisateurice ou mot de passe incorrect."
 
 #: snikket_web/main.py:85
 msgid "Login successful!"
@@ -562,7 +562,7 @@ msgid ""
 "In addition, each circle may have group chats where the circle members are "
 "included."
 msgstr ""
-"Les utilisateurs qui se trouvent dans le même cercle se verront dans leur "
+"Les utilisateurices qui se trouvent dans le même cercle se verront dans leur "
 "liste de contacts. En outre, chaque cercle peut disposer de groupes de "
 "discussions dans lequel les membres du cercle sont inclus."
 
@@ -616,13 +616,11 @@ msgstr "Nouveau cercle"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:5
 msgid "Create new circle group chat"
-msgstr "Créer une nouvelle conversation de groupe pour le cercle"
+msgstr "Créer un nouveau groupe pour le cercle"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:6
 msgid "Add a chat to your circle so its members can hold group discussions."
-msgstr ""
-"Ajouter une conversations de groupe au cercle pour que les membres puissent "
-"discuter."
+msgstr "Ajouter un groupe au cercle pour que les membres puissent discuter."
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:7
 msgid "Tip:"
@@ -651,8 +649,8 @@ msgid ""
 "Create a new invitation link to invite more users to your Snikket service by "
 "clicking the button below."
 msgstr ""
-"Créez une nouvelle invitation pour inviter d’autres utilisateurs sur votre "
-"instance Snikket en cliquant sur le bouton ci-dessous."
+"Créez une nouvelle invitation pour inviter d’autres utilisateurices sur "
+"votre instance Snikket en cliquant sur le bouton ci-dessous."
 
 #: snikket_web/templates/admin_debug_user.html:8
 #, python-format
@@ -719,16 +717,16 @@ msgstr "Retour"
 #: snikket_web/templates/admin_delete_user.html:4
 #, python-format
 msgid "Delete user %(user_name)s"
-msgstr "Supprimer l’utilisateur %(user_name)s"
+msgstr "Supprimer l’utilisateurice %(user_name)s"
 
 #: snikket_web/templates/admin_delete_user.html:6
 #: snikket_web/templates/admin_edit_user.html:74
 msgid "Delete user"
-msgstr "Supprimer un utilisateur"
+msgstr "Supprimer un·e utilisateurice"
 
 #: snikket_web/templates/admin_delete_user.html:8
 msgid "Are you sure you want to delete the following user?"
-msgstr "Êtes-vous certain(e) de vouloir supprimer l’utilisateur suivant ?"
+msgstr "Êtes-vous certain(e) de vouloir supprimer l’utilisateurice suivant·e ?"
 
 #: snikket_web/templates/admin_delete_user.html:16
 msgid ""
@@ -736,7 +734,7 @@ msgid ""
 "immediately upon pushing the below button. <strong>There is no way back!</"
 "strong>"
 msgstr ""
-"L’utilisateur et ses données vont être irrévocablement supprimées, "
+"L’utilisateurice et ses données vont être irrévocablement supprimées, "
 "immédiatement après avoir pressé le bouton ci-dessous. <strong>Il est "
 "impossible de revenir en arrière !</strong>"
 
@@ -759,26 +757,24 @@ msgstr "Revenir à la liste des cercles"
 
 #: snikket_web/templates/admin_edit_circle.html:31
 msgid "Deleting a circle does not delete any users in the circle."
-msgstr "Supprimer un cercle ne supprime aucun utilisateur dans le cercle."
+msgstr "Supprimer un cercle ne supprime aucun utilisateurice dans le cercle."
 
 #: snikket_web/templates/admin_edit_circle.html:38
 msgid "Group chats"
-msgstr "Conversations de groupe"
+msgstr "Groupes de discussion"
 
 #: snikket_web/templates/admin_edit_circle.html:39
 msgid "These group chats will be available to all members of the circle."
-msgstr ""
-"Ces conversations de groupe vont être disponibles à tous les membres du "
-"cercle."
+msgstr "Ces groupes vont être disponibles à tous les membres du cercle."
 
 #: snikket_web/templates/admin_edit_circle.html:53
 #, python-format
 msgid "Delete group chat '%(name)s'"
-msgstr "Supprimer la conversation de groupe « %(name)s »"
+msgstr "Supprimer le groupe « %(name)s »"
 
 #: snikket_web/templates/admin_edit_circle.html:61
 msgid "This circle currently has no group chats."
-msgstr "Ce cercle n’a pas encore de conversation de groupe."
+msgstr "Ce cercle n’a pas encore de groupe."
 
 #: snikket_web/templates/admin_edit_circle.html:64
 msgid "Add group chat"
@@ -796,7 +792,7 @@ msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:84
 msgid "The user has been deleted from the server."
-msgstr "Cet utilisateur a été supprimé du serveur."
+msgstr "Cet utilisateurice a été supprimé·e du serveur."
 
 #: snikket_web/templates/admin_edit_circle.html:84
 #: snikket_web/templates/library.j2:131
@@ -806,7 +802,7 @@ msgstr "supprimé"
 #: snikket_web/templates/admin_edit_circle.html:89
 #, python-format
 msgid "Remove user %(username)s from circle"
-msgstr "Retirer l’utilisateur %(username)s du cercle"
+msgstr "Retirer l’utilisateurice %(username)s du cercle"
 
 #: snikket_web/templates/admin_edit_circle.html:97
 msgid "This circle currently has no members."
@@ -818,15 +814,15 @@ msgstr "Inviter d’autres membres"
 
 #: snikket_web/templates/admin_edit_circle.html:102
 msgid "Add existing user"
-msgstr "Ajouter un utilisateur existant"
+msgstr "Ajouter un·e utilisateurice existant"
 
 #: snikket_web/templates/admin_edit_circle.html:113
 msgid "All users added"
-msgstr "Tous les utilisateurs ont été ajoutés"
+msgstr "Tous·tes les utilisateurices ont été ajouté·e·s"
 
 #: snikket_web/templates/admin_edit_circle.html:114
 msgid "All users on this service are already in this circle."
-msgstr "Tous les utilisateurs de ce service sont déjà dans ce cercle."
+msgstr "Tous·tes les utilisateurices de ce service sont déjà dans ce cercle."
 
 #: snikket_web/templates/admin_edit_invite.html:8
 msgid "View invitation"
@@ -851,8 +847,8 @@ msgstr "Cercles"
 msgid ""
 "Users joining via this invitation will be added to the following circles:"
 msgstr ""
-"Les utilisateurs rejoignant le service via cette invitation seront ajoutés "
-"dans les cercles suivant :"
+"Les utilisateurices rejoignant le service via cette invitation seront "
+"ajoutés dans les cercles suivant :"
 
 #: snikket_web/templates/admin_edit_invite.html:29
 #: snikket_web/templates/admin_invites.html:23
@@ -861,7 +857,8 @@ msgstr "Cercle"
 
 #: snikket_web/templates/admin_edit_invite.html:35
 msgid "The user will not be added to any circle and will have no contacts."
-msgstr "L’utilisateur ne sera ajouté à aucun cercle et n  ’aura pas de contact."
+msgstr ""
+"L’utilisateurice ne sera ajouté·e à aucun cercle et n  ’aura pas de contact."
 
 #: snikket_web/templates/admin_edit_invite.html:40
 msgid "Contact"
@@ -870,7 +867,7 @@ msgstr "Contact"
 #: snikket_web/templates/admin_edit_invite.html:41
 #, python-format
 msgid "The user will get added as contact of %(peer_jid)s."
-msgstr "L’utilisateur sera ajouté en tant que contact de %(peer_jid)s."
+msgstr "L’utilisateurice sera ajouté·e en tant que contact de %(peer_jid)s."
 
 #: snikket_web/templates/admin_edit_invite.html:43
 msgid "Created"
@@ -885,28 +882,29 @@ msgid ""
 "Limited users can interact with users on the same Snikket service and be "
 "members of circles."
 msgstr ""
-"Les utilisateurs limités ne peuvent interagir qu’avec les utilisateurs du "
-"même service Snikket et faire partie de cercles."
+"Les utilisateurices limité·e·s ne peuvent interagir qu’avec les "
+"utilisateurices du même service Snikket et faire partie de cercles."
 
 #: snikket_web/templates/admin_edit_user.html:7
 msgid ""
 "Like limited users and can also interact with users on other Snikket "
 "services."
 msgstr ""
-"Comme les utilisateurs limités, mais peuvent aussi interagir avec les "
-"utilisateurs d’autres services Snikket."
+"Comme les utilisateurices limité·e·s, mais peuvent aussi interagir avec les "
+"utilisateurices d’autres services Snikket."
 
 #: snikket_web/templates/admin_edit_user.html:9
+#, fuzzy
 msgid "Like normal users and can access the admin panel in the web portal."
 msgstr ""
-"Comme les utilisateurs normaux, mais peuvent accéder au panneau "
-"d’administration dans le portail web."
+"Comme les utilisateurices normaux·les, mais peuvent accéder au panneau d’"
+"administration dans le portail web."
 
 #: snikket_web/templates/admin_edit_user.html:20
 #: snikket_web/templates/admin_users.html:28
 #, python-format
 msgid "Edit user %(user_name)s"
-msgstr "Modifier l’utilisateur %(user_name)s"
+msgstr "Modifier l’utilisateurice %(user_name)s"
 
 #: snikket_web/templates/admin_edit_user.html:24
 msgid "This user account is pending deletion"
@@ -950,19 +948,19 @@ msgstr ""
 
 #: snikket_web/templates/admin_edit_user.html:41
 msgid "Edit user"
-msgstr "Modifier l’utilisateur"
+msgstr "Modifier l’utilisateurice"
 
 #: snikket_web/templates/admin_edit_user.html:46
 msgid "The login name cannot be changed."
-msgstr "Le nom d’utilisateur ne peut pas être changé."
+msgstr "Le nom d’utilisateurice ne peut pas être changé."
 
 #: snikket_web/templates/admin_edit_user.html:54
 msgid ""
 "The access level of a user determines what interactions are allowed for them "
 "on your Snikket service."
 msgstr ""
-"Le niveau d’accès d’un utilisateur détermine les interactions qui lui sont "
-"permises sur votre service Snikket."
+"Le niveau d’accès d’un·e utilisateurice détermine les interactions qui lui "
+"sont permises sur votre service Snikket."
 
 #: snikket_web/templates/admin_edit_user.html:61
 #, python-format
@@ -971,7 +969,7 @@ msgstr "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 
 #: snikket_web/templates/admin_edit_user.html:71
 msgid "Return to user list"
-msgstr "Revenir à la liste des utilisateurs"
+msgstr "Revenir à la liste des utilisateurices"
 
 #: snikket_web/templates/admin_edit_user.html:79
 msgid "Further actions"
@@ -986,9 +984,9 @@ msgid ""
 "If the user has lost their password, you can use the button below to create "
 "a special link which allows to change the password of the account, once."
 msgstr ""
-"Si l’utilisateur a perdu son mot de passe, vous pouvez utiliser le bouton ci-"
-"dessous pour créer un lien spécial qui permet de changer le mot de passe de "
-"son compte, une seule fois."
+"Si l’utilisateurice a perdu son mot de passe, vous pouvez utiliser le bouton "
+"ci-dessous pour créer un lien spécial qui permet de changer le mot de passe "
+"de son compte, une seule fois."
 
 #: snikket_web/templates/admin_edit_user.html:89
 msgid "Debug information"
@@ -1000,8 +998,8 @@ msgid ""
 "devices is necessary to troubleshoot issues. The button below reveals this "
 "(sensitive) information."
 msgstr ""
-"Dans certains cas, des informations additionnelles sur le compte de "
-"l’utilisateur et les clients connectés sont nécessaires pour résoudre des "
+"Dans certains cas, des informations additionnelles sur le compte de l’"
+"utilisateurice et les clients connectés sont nécessaires pour résoudre des "
 "problèmes. Le bouton ci-dessous révèle ces informations sensibles."
 
 #: snikket_web/templates/admin_edit_user.html:95
@@ -1019,18 +1017,18 @@ msgstr "À votre service, %(user_name)s."
 
 #: snikket_web/templates/admin_home.html:9
 msgid "Users"
-msgstr "Utilisateurs"
+msgstr "Utilisateurices"
 
 #: snikket_web/templates/admin_home.html:11
 msgid "Create password reset links or delete users."
 msgstr ""
 "Créer des liens de réinitialisation de mot de passe ou supprimer des "
-"utilisateurs."
+"utilisateurices."
 
 #: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_users.html:4
 msgid "Manage users"
-msgstr "Gérer les utilisateurs"
+msgstr "Gérer les utilisateurices"
 
 #: snikket_web/templates/admin_home.html:21
 msgid "Create and manage social circles represented on your service."
@@ -1056,11 +1054,12 @@ msgstr "Santé du système"
 #: snikket_web/templates/admin_home.html:38
 msgid "View the server status or send a broadcast message to all users."
 msgstr ""
-"Voir le statut du serveur, ou diffuser un message à tous les utilisateurs."
+"Voir le statut du serveur, ou diffuser un message à tous·tes les "
+"utilisateurices."
 
 #: snikket_web/templates/admin_home.html:40
 msgid "Send a broadcast message to all users."
-msgstr "Diffuser un message aux utilisateurs."
+msgstr "Diffuser un message aux utilisateurices."
 
 #: snikket_web/templates/admin_home.html:43
 #: snikket_web/templates/admin_system.html:4
@@ -1069,7 +1068,7 @@ msgstr "Gérer le système"
 
 #: snikket_web/templates/admin_home.html:48
 msgid "Go back to your user's web portal page."
-msgstr "Retourner au portail web de votre utilisateur."
+msgstr "Retourner au portail web de votre utilisateurice."
 
 #: snikket_web/templates/admin_home.html:50
 msgid "Exit admin panel"
@@ -1117,8 +1116,8 @@ msgid ""
 "The following link will allow the user to reset their password on their "
 "device, once."
 msgstr ""
-"Le lien suivant permettra à l’utilisateur de réinitialiser son mot de passe "
-"sur son appareil, une seule fois."
+"Le lien suivant permettra à l’utilisateurice de réinitialiser son mot de "
+"passe sur son appareil, une seule fois."
 
 #: snikket_web/templates/admin_reset_user_password.html:22
 msgid "Destroy link"
@@ -1201,8 +1200,9 @@ msgid ""
 "This form allows you to send a message to all users currently online on your "
 "Snikket server. Use it wisely."
 msgstr ""
-"Ce formulaire vous permet d’écrire un message à tous les utilisateurs "
-"présentement conectés à votre serveur Snikket. Utilisez-le judicieusement."
+"Ce formulaire vous permet d’écrire un message à tous·tes les utilisateurices "
+"présentement connecté·e·s à votre serveur Snikket. Utilisez-le "
+"judicieusement."
 
 #: snikket_web/templates/admin_users.html:8
 msgid "User"
@@ -1341,7 +1341,7 @@ msgstr ""
 msgid ""
 "Choose a username, this will become the first part of your new chat address."
 msgstr ""
-"Choisissez un nom d’utilisateur, celui-ci deviendra la première partie de "
+"Choisissez un nom d’utilisateurice, celui-ci deviendra la première partie de "
 "votre nouvelle adresse de messagerie."
 
 #: snikket_web/templates/invite_register.html:32
@@ -1505,7 +1505,7 @@ msgstr ""
 
 #: snikket_web/templates/invite_success.html:26
 msgid "Moving to Snikket?"
-msgstr "Nouvel utilisateur Snikket ?"
+msgstr "Nouvel·le utilisateurice Snikket ?"
 
 #: snikket_web/templates/invite_success.html:27
 msgid ""
@@ -1684,7 +1684,7 @@ msgstr ""
 
 #: snikket_web/templates/library.j2:19
 msgid "The user is an administrator."
-msgstr "L’utilisateur est un administrateur."
+msgstr "L’utilisateurice est un·e administrateurice."
 
 #: snikket_web/templates/library.j2:19
 msgid " (Administrator)"
@@ -1692,7 +1692,7 @@ msgstr " (administrateur)"
 
 #: snikket_web/templates/library.j2:23
 msgid "The user is restricted."
-msgstr "L’utilisateur est restreint."
+msgstr "L’utilisateurice est restreint·e."
 
 #: snikket_web/templates/library.j2:23
 msgid " (Restricted)"
@@ -1778,6 +1778,9 @@ msgid ""
 "email to %(email)s. Specify the domain name of this instance (%(domain)s) "
 "and include details of the incident(s)."
 msgstr ""
+"Pour reporter une infraction à la politique de confidentialité ou tout autre "
+"abus de ce service, veuillez envoyer un mail à %(email)s. Précisez le nom de "
+"domaine de l'instance (%(domain)s) et ajoutez le détail de l'incident."
 
 #: snikket_web/templates/unauth.html:16
 msgid "Operation successful"
@@ -1816,7 +1819,7 @@ msgstr "Votre Snikket"
 #: snikket_web/templates/user_home.html:41
 msgid "Manage users, invitations and circles of your Snikket service."
 msgstr ""
-"Gérer les utilisateurs, invitations et cercles de votre service Snikket."
+"Gérer les utilisateurices, invitations et cercles de votre service Snikket."
 
 #: snikket_web/templates/user_home.html:43
 msgid "Admin panel"
