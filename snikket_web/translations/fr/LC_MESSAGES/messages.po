@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2023-12-16 00:19+0000\n"
-"Last-Translator: Deleted User <noreply+11@weblate.org>\n"
+"PO-Revision-Date: 2023-12-16 08:38+0000\n"
+"Last-Translator: pep <pep@bouah.net>\n"
 "Language-Team: French <http://i18n.sotecware.net/projects/snikket/web-portal/"
 "fr/>\n"
 "Language: fr\n"
@@ -607,8 +607,8 @@ msgid ""
 "Currently, there are no circles on this service. Use the form below to "
 "create one."
 msgstr ""
-"Actuellement, il n’y a pas encore de cercles sur ce service. Utilisez le "
-"formulaire ci-dessous pour en créer un."
+"Il n’y a pas encore de cercles sur ce service. Utilisez le formulaire ci-"
+"dessous pour en créer un."
 
 #: snikket_web/templates/admin_circles.html:44
 msgid "New circle"
@@ -765,7 +765,7 @@ msgstr "Groupes de discussion"
 
 #: snikket_web/templates/admin_edit_circle.html:39
 msgid "These group chats will be available to all members of the circle."
-msgstr "Ces groupes vont être disponibles à tous les membres du cercle."
+msgstr "Ces groupes vont être disponibles à tous·tes les membres du cercle."
 
 #: snikket_web/templates/admin_edit_circle.html:53
 #, python-format
@@ -1096,7 +1096,7 @@ msgstr "Copie le lien d’invitation dans le presse-papier"
 
 #: snikket_web/templates/admin_invites.html:49
 msgid "Delete invitation"
-msgstr "Supprime l’invitation"
+msgstr "Supprimer l’invitation"
 
 #: snikket_web/templates/admin_invites.html:57
 msgid "Currently, there are no pending invitations."
@@ -1214,7 +1214,7 @@ msgstr "Dernièrement actif·ve"
 
 #: snikket_web/templates/admin_users.html:22
 msgid "Deleted"
-msgstr "Supprimé"
+msgstr "Supprimé·e"
 
 #: snikket_web/templates/admin_users.html:24
 msgid "Locked"
@@ -1505,7 +1505,7 @@ msgstr ""
 
 #: snikket_web/templates/invite_success.html:26
 msgid "Moving to Snikket?"
-msgstr "Nouvel·le utilisateurice Snikket ?"
+msgstr "Nouvel·le sur Snikket ?"
 
 #: snikket_web/templates/invite_success.html:27
 msgid ""
@@ -1688,7 +1688,7 @@ msgstr "L’utilisateurice est un·e administrateurice."
 
 #: snikket_web/templates/library.j2:19
 msgid " (Administrator)"
-msgstr " (administrateur)"
+msgstr " (administrateurice)"
 
 #: snikket_web/templates/library.j2:23
 msgid "The user is restricted."
@@ -1696,7 +1696,7 @@ msgstr "L’utilisateurice est restreint·e."
 
 #: snikket_web/templates/library.j2:23
 msgid " (Restricted)"
-msgstr " (restreint)"
+msgstr " (restreint·e)"
 
 #: snikket_web/templates/library.j2:41
 msgid "Copy link"
