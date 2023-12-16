@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2023-04-04 14:11+0000\n"
+"PO-Revision-Date: 2023-12-16 08:38+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
 "Language-Team: Polish <http://i18n.sotecware.net/projects/snikket/web-portal/"
 "pl/>\n"
@@ -52,16 +52,12 @@ msgid "Update user"
 msgstr "Zapisz ustawienia użytkownika"
 
 #: snikket_web/admin.py:90
-#, fuzzy
-#| msgid "Create account"
 msgid "Restore account"
-msgstr "Utwórz konto"
+msgstr "Przywróć konto"
 
 #: snikket_web/admin.py:94
-#, fuzzy
-#| msgid "Your account"
 msgid "Unlock account"
-msgstr "Twoje konto"
+msgstr "Odblokuj konto"
 
 #: snikket_web/admin.py:98
 msgid "Create password reset link"
@@ -77,15 +73,15 @@ msgstr ""
 
 #: snikket_web/admin.py:133
 msgid "User account unlocked"
-msgstr ""
+msgstr "Odblokowano konto użytkownika"
 
 #: snikket_web/admin.py:140
 msgid "Could not restore user account"
-msgstr ""
+msgstr "Nie można przywrócić konta użytkownika"
 
 #: snikket_web/admin.py:145
 msgid "Could not unlock user account"
-msgstr ""
+msgstr "Nie można odblokować konta użytkownika"
 
 #: snikket_web/admin.py:157
 msgid "User information updated."
@@ -214,10 +210,8 @@ msgid "User removed from circle"
 msgstr "Usunięto użytkownika z kręgu"
 
 #: snikket_web/admin.py:575
-#, fuzzy
-#| msgid "User removed from circle"
 msgid "Chat removed from circle"
-msgstr "Usunięto użytkownika z kręgu"
+msgstr "Usunięto czat z kręgu"
 
 #: snikket_web/admin.py:593
 msgid "Delete circle permanently"
@@ -228,22 +222,16 @@ msgid "Circle deleted"
 msgstr "Krąg został usunięty"
 
 #: snikket_web/admin.py:634
-#, fuzzy
-#| msgid "Group chat address"
 msgid "Group chat name"
-msgstr "Adres czatu grupowego"
+msgstr "Nazwa czatu grupowego"
 
 #: snikket_web/admin.py:639
-#, fuzzy
-#| msgid "Create account"
 msgid "Create group chat"
-msgstr "Utwórz konto"
+msgstr "Utwórz czat grupowy"
 
 #: snikket_web/admin.py:669
-#, fuzzy
-#| msgid "User added to circle"
 msgid "New group chat added to circle"
-msgstr "Dodano użytkownika do kręgu"
+msgstr "Dodano nowy czat grupowy do kręgu"
 
 #: snikket_web/admin.py:736
 msgid "Message contents"
@@ -271,20 +259,20 @@ msgstr "Główny"
 
 #: snikket_web/infra.py:78
 msgid "Never"
-msgstr ""
+msgstr "Nigdy"
 
 #: snikket_web/infra.py:95
 msgid "Today"
-msgstr ""
+msgstr "Dzisiaj"
 
 #: snikket_web/infra.py:101
 msgid "Yesterday"
-msgstr ""
+msgstr "Wczoraj"
 
 #: snikket_web/infra.py:105
 #, python-format
 msgid "%(time)s ago"
-msgstr ""
+msgstr "%(time)s temu"
 
 #: snikket_web/invite.py:35
 msgid ""
@@ -471,12 +459,13 @@ msgid "About this Service"
 msgstr "O tej usłudze"
 
 #: snikket_web/templates/about.html:10
-#, fuzzy, python-format
-#| msgid "This is the Snikket service <em>%(site_name)s</em>."
+#, python-format
 msgid ""
 "This is the Snikket service <em>%(site_name)s</em>, running open-source "
 "software from the Snikket project."
-msgstr "Ten serwer Snikket to: <em>%(site_name)s</em>."
+msgstr ""
+"Ten serwer Snikket to: <em>%(site_name)s</em>, bazuje na otwartym "
+"oprogramowaniu z projektu Snikket."
 
 #: snikket_web/templates/about.html:11
 #, python-format
@@ -569,18 +558,13 @@ msgstr ""
 "odnalezieniu się na twoim serwerze."
 
 #: snikket_web/templates/admin_circles.html:6
-#, fuzzy
-#| msgid ""
-#| "Users who are in the same circle will see each other in their contact "
-#| "list. In addition, each circle has a group chat where the circle members "
-#| "are included."
 msgid ""
 "Users who are in the same circle will see each other in their contact list. "
 "In addition, each circle may have group chats where the circle members are "
 "included."
 msgstr ""
 "Użytkownicy, którzy są w tym samym kręgu, będą widzieli się wzajemnie na "
-"swoich listach kontaktów. Każdy krąg posiada również czat grupowy dla "
+"swoich listach kontaktów. Każdy krąg może posiadać również czaty grupowe dla "
 "członków danego kręgu."
 
 #: snikket_web/templates/admin_circles.html:13
@@ -776,26 +760,21 @@ msgid "Deleting a circle does not delete any users in the circle."
 msgstr "Usunięcie kręgu nie usunie z serwera jego użytkowników."
 
 #: snikket_web/templates/admin_edit_circle.html:38
-#, fuzzy
-#| msgid "Group chat address"
 msgid "Group chats"
-msgstr "Adres czatu grupowego"
+msgstr "Czaty grupowe"
 
 #: snikket_web/templates/admin_edit_circle.html:39
 msgid "These group chats will be available to all members of the circle."
 msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:53
-#, fuzzy, python-format
-#| msgid "Delete user %(user_name)s"
+#, python-format
 msgid "Delete group chat '%(name)s'"
-msgstr "Usuń użytkownika %(user_name)s"
+msgstr "Usuń czat grupowy \"%(name)s\""
 
 #: snikket_web/templates/admin_edit_circle.html:61
-#, fuzzy
-#| msgid "This circle currently has no members."
 msgid "This circle currently has no group chats."
-msgstr "Ten krąg nie ma obecnie członków."
+msgstr "Ten krąg nie ma obecnie czatów grupowych."
 
 #: snikket_web/templates/admin_edit_circle.html:64
 msgid "Add group chat"
@@ -1212,20 +1191,16 @@ msgstr ""
 "którzy obecnie są online na twoim serwerze Snikket. Używaj go z rozwagą."
 
 #: snikket_web/templates/admin_users.html:8
-#, fuzzy
-#| msgid "Users"
 msgid "User"
-msgstr "Użytkownicy"
+msgstr "Użytkownik"
 
 #: snikket_web/templates/admin_users.html:9
 msgid "Last active"
 msgstr ""
 
 #: snikket_web/templates/admin_users.html:22
-#, fuzzy
-#| msgid "deleted"
 msgid "Deleted"
-msgstr "usunięty"
+msgstr "Usunięto"
 
 #: snikket_web/templates/admin_users.html:24
 msgid "Locked"
