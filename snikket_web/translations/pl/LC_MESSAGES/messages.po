@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2023-12-16 08:38+0000\n"
+"PO-Revision-Date: 2023-12-17 22:49+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"
 "Language-Team: Polish <http://i18n.sotecware.net/projects/snikket/web-portal/"
 "pl/>\n"
@@ -69,7 +69,7 @@ msgstr "Utworzono link resetowania hasła"
 
 #: snikket_web/admin.py:128
 msgid "User account restored"
-msgstr ""
+msgstr "Przywrócono konto użytkownika"
 
 #: snikket_web/admin.py:133
 msgid "User account unlocked"
@@ -478,7 +478,7 @@ msgstr ""
 
 #: snikket_web/templates/about.html:13
 msgid "View service policies"
-msgstr ""
+msgstr "Sprawdź zasady serwera"
 
 #: snikket_web/templates/about.html:15
 msgid "Licenses"
@@ -616,18 +616,18 @@ msgid "New circle"
 msgstr "Nowy krąg"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:5
-#, fuzzy
-#| msgid "Create circle"
 msgid "Create new circle group chat"
-msgstr "Utwórz krąg"
+msgstr "Utwórz nowy czat grupowy kręgu"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:6
 msgid "Add a chat to your circle so its members can hold group discussions."
 msgstr ""
+"Dodaj czat do swojego kręgu, aby użytkownicy mogli prowadzić grupową "
+"dyskusję."
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:7
 msgid "Tip:"
-msgstr ""
+msgstr "Wskazówka:"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:7
 msgid ""
@@ -635,6 +635,9 @@ msgid ""
 "em> members of the circle. If you want a normal group chat, create it in the "
 "Snikket app instead."
 msgstr ""
+"Dotyczy czatu grupowego, który automatycznie dodaje <em>wszystkich</em> "
+"użytkowników danego kręgu. Jeśli chcesz stworzyć normalny czat grupowy, "
+"utwórz go w aplikacji Snikket."
 
 #: snikket_web/templates/admin_create_invite.html:3
 msgid "Create invitation"
@@ -765,7 +768,7 @@ msgstr "Czaty grupowe"
 
 #: snikket_web/templates/admin_edit_circle.html:39
 msgid "These group chats will be available to all members of the circle."
-msgstr ""
+msgstr "Te czaty grupowe będą dostępne dla wszystkich członków kręgu."
 
 #: snikket_web/templates/admin_edit_circle.html:53
 #, python-format
@@ -778,7 +781,7 @@ msgstr "Ten krąg nie ma obecnie czatów grupowych."
 
 #: snikket_web/templates/admin_edit_circle.html:64
 msgid "Add group chat"
-msgstr ""
+msgstr "Dodaj czat grupowy"
 
 #: snikket_web/templates/admin_edit_circle.html:67
 msgid "Circle members"
@@ -787,6 +790,8 @@ msgstr "Członkowie kręgu"
 #: snikket_web/templates/admin_edit_circle.html:68
 msgid "All members of the circle will see each other in their contact list."
 msgstr ""
+"Wszyscy członkowie kręgu będą widzieli siebie wzajemnie na swoich listach "
+"kontaktów."
 
 #: snikket_web/templates/admin_edit_circle.html:84
 msgid "The user has been deleted from the server."
@@ -906,13 +911,14 @@ msgstr "Edytuj użytkownika %(user_name)s"
 
 #: snikket_web/templates/admin_edit_user.html:24
 msgid "This user account is pending deletion"
-msgstr ""
+msgstr "To konto użytkownika oczekuje na usunięcie"
 
 #: snikket_web/templates/admin_edit_user.html:25
 #, python-format
 msgid ""
 "The owner of the account sent a deletion request on %(date)s using their app."
 msgstr ""
+"Właściciel konta zażądał jego usunięcia %(date)s korzystając z aplikacji."
 
 #: snikket_web/templates/admin_edit_user.html:26
 #, python-format
@@ -920,21 +926,25 @@ msgid ""
 "The account has been locked, and will be automatically deleted permanently "
 "in %(time)s."
 msgstr ""
+"Konto zostało zablokowane i zostanie automatycznie bezpowrotnie usunięte w "
+"ciągu %(time)s."
 
 #: snikket_web/templates/admin_edit_user.html:28
 msgid ""
 "If this was a mistake, you can cancel the deletion and restore the account."
-msgstr ""
+msgstr "Jeśli to pomyłka, możesz anulować usunięcie konta i je przywrócić."
 
 #: snikket_web/templates/admin_edit_user.html:34
 msgid "This user account is locked"
-msgstr ""
+msgstr "To konto użytkownika jest zablokowane"
 
 #: snikket_web/templates/admin_edit_user.html:35
 msgid ""
 "The user will not be able to log in to their account until it is unlocked "
 "again."
 msgstr ""
+"Użytkownik nie będzie w stanie zalogować się na swoje konto, dopóki nie "
+"zostanie ono odblokowane."
 
 #: snikket_web/templates/admin_edit_user.html:41
 msgid "Edit user"
@@ -1196,7 +1206,7 @@ msgstr "Użytkownik"
 
 #: snikket_web/templates/admin_users.html:9
 msgid "Last active"
-msgstr ""
+msgstr "Ostatnia aktywność"
 
 #: snikket_web/templates/admin_users.html:22
 msgid "Deleted"
@@ -1204,7 +1214,7 @@ msgstr "Usunięto"
 
 #: snikket_web/templates/admin_users.html:24
 msgid "Locked"
-msgstr ""
+msgstr "Zablokowane"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
@@ -1535,6 +1545,8 @@ msgid ""
 "By continuing, you agree to the <a href=\"%(tos_uri)s\">Terms of Service</a> "
 "and <a href=\"%(privacy_uri)s\">Privacy Policy</a>."
 msgstr ""
+"Kontynuując, zgadzasz się z <a href=\"%(tos_uri)s\">Warunkami świadczenia "
+"usługi</a> oraz <a href=\"%(privacy_uri)s\">Polityką prywatności</a>."
 
 #: snikket_web/templates/invite_view.html:27
 msgid "Get started"
@@ -1719,42 +1731,36 @@ msgstr ""
 
 #: snikket_web/templates/policies.html:4 snikket_web/templates/policies.html:10
 msgid "Policies"
-msgstr ""
+msgstr "Zasady"
 
 #: snikket_web/templates/policies.html:13
-#, fuzzy
-#| msgid ""
-#| "Users joining via this invitation will be added to the following circles:"
 msgid "Use of this service is subject to the following policies:"
-msgstr ""
-"Użytkownicy dołączający za pomocą tego zaproszenia zostaną dodani do "
-"poniższych kręgów:"
+msgstr "Korzystanie z tej usługi podlega poniższym zasadom:"
 
 #: snikket_web/templates/policies.html:16
 msgid "Terms of Service"
-msgstr ""
+msgstr "Warunki korzystania z usługi"
 
 #: snikket_web/templates/policies.html:19
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Polityka prywatności"
 
 #: snikket_web/templates/policies.html:23
 msgid ""
 "Please contact the administrator of this instance if you have questions "
 "about policies."
 msgstr ""
+"Skontaktuj się z administratorem serwera, jeśli masz pytania dotyczące "
+"obowiązujących zasad."
 
 #: snikket_web/templates/policies.html:26
-#, fuzzy, python-format
-#| msgid ""
-#| "To learn more about Snikket, visit the <a href=\"%(snikket_url)s"
-#| "\">Snikket website</a>."
+#, python-format
 msgid ""
 "Use of the Snikket apps is subject to the <a href=\"%(url)s\">Snikket Apps "
 "Privacy Policy</a>."
 msgstr ""
-"By dowiedzieć się więcej o Snikket, odwiedź <a href=\"%(snikket_url)s"
-"\">stronę projektu</a>."
+"Korzystanie z aplikacji Snikket podlega <a href=\"%(url)s\">Polityce "
+"prywatności aplikacji Snikket</a>."
 
 #: snikket_web/templates/policies.html:29
 #, python-format
@@ -1763,6 +1769,9 @@ msgid ""
 "email to %(email)s. Specify the domain name of this instance (%(domain)s) "
 "and include details of the incident(s)."
 msgstr ""
+"Aby zgłosić naruszenie zasad lub inne nadużycia związane z usługą, należy "
+"wysłać wiadomość e-mail na adres %(email)s. Załącz nazwę domenową tego "
+"serwera (%(domain)s) oraz szczegóły dotyczące incydentu/ów."
 
 #: snikket_web/templates/unauth.html:16
 msgid "Operation successful"
