@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2023-12-16 08:38+0000\n"
+"PO-Revision-Date: 2023-12-17 22:49+0000\n"
 "Last-Translator: pep <pep@bouah.net>\n"
 "Language-Team: French <http://i18n.sotecware.net/projects/snikket/web-portal/"
 "fr/>\n"
@@ -894,10 +894,9 @@ msgstr ""
 "utilisateurices d’autres services Snikket."
 
 #: snikket_web/templates/admin_edit_user.html:9
-#, fuzzy
 msgid "Like normal users and can access the admin panel in the web portal."
 msgstr ""
-"Comme les utilisateurices normaux·les, mais peuvent accéder au panneau d’"
+"Comme les utilisateurices normaux·ales, mais peuvent accéder au panneau d’"
 "administration dans le portail web."
 
 #: snikket_web/templates/admin_edit_user.html:20
