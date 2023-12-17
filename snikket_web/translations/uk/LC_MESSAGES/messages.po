@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2023-12-15 11:56+0000\n"
-"Last-Translator: Andriy Utkin <mail@autkin.net>\n"
-"Language-Team: Ukrainian <http://i18n.sotecware.net/projects/snikket/web-"
-"portal/uk/>\n"
+"PO-Revision-Date: 2023-12-17 22:49+0000\n"
+"Last-Translator: Dmytro Vozniuk <plibnik@gmail.com>\n"
+"Language-Team: Ukrainian <http://i18n.sotecware.net/projects/snikket/"
+"web-portal/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -113,217 +113,219 @@ msgstr "Потрібно обрати хоча б одне коло"
 
 #: snikket_web/admin.py:273
 msgid "Valid for"
-msgstr ""
+msgstr "Дійсне протягом"
 
 #: snikket_web/admin.py:275
 msgid "One hour"
-msgstr ""
+msgstr "Одної години"
 
 #: snikket_web/admin.py:276
 msgid "Twelve hours"
-msgstr ""
+msgstr "12 годин"
 
 #: snikket_web/admin.py:277
 msgid "One day"
-msgstr ""
+msgstr "Одного дня"
 
 #: snikket_web/admin.py:278
 msgid "One week"
-msgstr ""
+msgstr "Одного тижня"
 
 #: snikket_web/admin.py:279
 msgid "Four weeks"
-msgstr ""
+msgstr "Чотирьох тижнів"
 
 #: snikket_web/admin.py:285 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
-msgstr ""
+msgstr "Тип запрошення"
 
 #: snikket_web/admin.py:287 snikket_web/templates/library.j2:139
 msgid "Individual"
-msgstr ""
+msgstr "Особисте"
 
 #: snikket_web/admin.py:288 snikket_web/templates/library.j2:137
 msgid "Group"
-msgstr ""
+msgstr "Групове"
 
 #: snikket_web/admin.py:294
 msgid "New invitation link"
-msgstr ""
+msgstr "Посилання на нове запрошення"
 
 #: snikket_web/admin.py:356
 msgid "Revoke"
-msgstr ""
+msgstr "Відкликати"
 
 #: snikket_web/admin.py:380
 msgid "Invitation created"
-msgstr ""
+msgstr "Запрошення створено"
 
 #: snikket_web/admin.py:396
 msgid "No such invitation exists"
-msgstr ""
+msgstr "Такого запрошення не існує"
 
 #: snikket_web/admin.py:411
 msgid "Invitation revoked"
-msgstr ""
+msgstr "Запрошення відкликане"
 
 #: snikket_web/admin.py:428 snikket_web/admin.py:476
 #: snikket_web/templates/admin_delete_circle.html:10
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Name"
-msgstr ""
+msgstr "Назва"
 
 #: snikket_web/admin.py:433 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
-msgstr ""
+msgstr "Створити коло"
 
 #: snikket_web/admin.py:463
 msgid "Circle created"
-msgstr ""
+msgstr "Коло створено"
 
 #: snikket_web/admin.py:481
 msgid "Select user"
-msgstr ""
+msgstr "Виберіть користувача"
 
 #: snikket_web/admin.py:486
 msgid "Update circle"
-msgstr ""
+msgstr "Оновити коло"
 
 #: snikket_web/admin.py:492
 msgid "Add user"
-msgstr ""
+msgstr "Додати користувача"
 
 #: snikket_web/admin.py:510 snikket_web/admin.py:609 snikket_web/admin.py:657
 msgid "No such circle exists"
-msgstr ""
+msgstr "Такого кола не існує"
 
 #: snikket_web/admin.py:547
 msgid "Circle data updated"
-msgstr ""
+msgstr "Дані кола оновлено"
 
 #: snikket_web/admin.py:557
 msgid "User added to circle"
-msgstr ""
+msgstr "Користувача додано у коло"
 
 #: snikket_web/admin.py:566
 msgid "User removed from circle"
-msgstr ""
+msgstr "Користувача видалено з кола"
 
 #: snikket_web/admin.py:575
 msgid "Chat removed from circle"
-msgstr ""
+msgstr "Чат видалено з кола"
 
 #: snikket_web/admin.py:593
 msgid "Delete circle permanently"
-msgstr ""
+msgstr "Видалити коло назавжди"
 
 #: snikket_web/admin.py:620
 msgid "Circle deleted"
-msgstr ""
+msgstr "Коло видалене"
 
 #: snikket_web/admin.py:634
 msgid "Group chat name"
-msgstr ""
+msgstr "Назва групового чату"
 
 #: snikket_web/admin.py:639
 msgid "Create group chat"
-msgstr ""
+msgstr "Створити груповий чат"
 
 #: snikket_web/admin.py:669
 msgid "New group chat added to circle"
-msgstr ""
+msgstr "У коло додано новий груповий чат"
 
 #: snikket_web/admin.py:736
 msgid "Message contents"
-msgstr ""
+msgstr "Вміст повідомлення"
 
 #: snikket_web/admin.py:742
 msgid "Only send to online users"
-msgstr ""
+msgstr "Відправити тільки користувачам, які онлайн"
 
 #: snikket_web/admin.py:746
 msgid "Post to all users"
-msgstr ""
+msgstr "Опублікувати для усіх користувачів"
 
 #: snikket_web/admin.py:750
 msgid "Send preview to yourself"
-msgstr ""
+msgstr "Надіслати попередній перегляд собі"
 
 #: snikket_web/admin.py:772
 msgid "Announcement sent!"
-msgstr ""
+msgstr "Оголошення надіслане!"
 
 #: snikket_web/infra.py:56
 msgid "Main"
-msgstr ""
+msgstr "Головне"
 
 #: snikket_web/infra.py:78
 msgid "Never"
-msgstr ""
+msgstr "Ніколи"
 
 #: snikket_web/infra.py:95
 msgid "Today"
-msgstr ""
+msgstr "Сьогодні"
 
 #: snikket_web/infra.py:101
 msgid "Yesterday"
-msgstr ""
+msgstr "Вчора"
 
 #: snikket_web/infra.py:105
 #, python-format
 msgid "%(time)s ago"
-msgstr ""
+msgstr "%(time)s тому"
 
 #: snikket_web/invite.py:35
 msgid ""
 "The account data you tried to import is too large to upload. Please contact "
 "your Snikket operator."
 msgstr ""
+"Дані облікового запису, який ви спробували імпортувати, надто великі для "
+"завантаження. Будь ласка, зверніться до вашого оператора Snikket."
 
 #: snikket_web/invite.py:114
 msgid "Username"
-msgstr ""
+msgstr "Ім’я користувача"
 
 #: snikket_web/invite.py:118 snikket_web/invite.py:186 snikket_web/main.py:43
 msgid "Password"
-msgstr ""
+msgstr "Пароль"
 
 #: snikket_web/invite.py:122 snikket_web/invite.py:190
 msgid "Confirm password"
-msgstr ""
+msgstr "Повторіть пароль"
 
 #: snikket_web/invite.py:126 snikket_web/invite.py:194
 msgid "The passwords must match."
-msgstr ""
+msgstr "Паролі мають збігатися."
 
 #: snikket_web/invite.py:131
 msgid "Create account"
-msgstr ""
+msgstr "Створити обліковий запис"
 
 #: snikket_web/invite.py:158
 msgid "That username is already taken."
-msgstr ""
+msgstr "Це ім’я користувача вже зайняте."
 
 #: snikket_web/invite.py:162 snikket_web/invite.py:227
 msgid "Registration was declined for unknown reasons."
-msgstr ""
+msgstr "У реєстрації відмовлено з невідомої причини."
 
 #: snikket_web/invite.py:166
 msgid "The username is not valid."
-msgstr ""
+msgstr "Це ім’я користувача неприпустиме."
 
 #: snikket_web/invite.py:199 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
-msgstr ""
+msgstr "Змінити пароль"
 
 #: snikket_web/invite.py:246
 msgid "Account data file"
-msgstr ""
+msgstr "Файл даних облікового запису"
 
 #: snikket_web/invite.py:250
 msgid "Import data"
-msgstr ""
+msgstr "Імпортувати дані"
 
 #: snikket_web/invite.py:271
 #, python-format
@@ -331,124 +333,131 @@ msgid ""
 "The account data you tried to import is in an unknown format. Please upload "
 "an XML file in XEP-0227 format (provided format: %(mimetype)s)."
 msgstr ""
+"Дані облікового запису, які ви пробували імпортувати, мають невідомий "
+"формат. Завантажте XML-файл у форматі XEP-0227 (формат наданих: "
+"%(mimetype)s)."
 
 #: snikket_web/invite.py:291 snikket_web/templates/unauth.html:18
 #: snikket_web/user.py:178
 msgid "Error"
-msgstr ""
+msgstr "Помилка"
 
 #: snikket_web/main.py:38
 msgid "Address"
-msgstr ""
+msgstr "Адреса"
 
 #: snikket_web/main.py:48
 msgid "Sign in"
-msgstr ""
+msgstr "Увійти"
 
 #: snikket_web/main.py:57
 msgid "Invalid username or password."
-msgstr ""
+msgstr "Хибне ім’я користувача або пароль."
 
 #: snikket_web/main.py:85
 msgid "Login successful!"
-msgstr ""
+msgstr "Вхід виконано успішно!"
 
 #: snikket_web/user.py:29
 msgid "Current password"
-msgstr ""
+msgstr "Поточний пароль"
 
 #: snikket_web/user.py:34
 msgid "New password"
-msgstr ""
+msgstr "Новий пароль"
 
 #: snikket_web/user.py:39
 msgid "Confirm new password"
-msgstr ""
+msgstr "Підтвердити новий пароль"
 
 #: snikket_web/user.py:43
 msgid "The new passwords must match."
-msgstr ""
+msgstr "Нові паролі мають співпадати."
 
 #: snikket_web/user.py:50
 msgid "Sign out"
-msgstr ""
+msgstr "Вийти"
 
 #: snikket_web/user.py:55
 msgid "Nobody"
-msgstr ""
+msgstr "Ніхто"
 
 #: snikket_web/user.py:56
 msgid "Friends only"
-msgstr ""
+msgstr "Тільки друзі"
 
 #: snikket_web/user.py:57
 msgid "Everyone"
-msgstr ""
+msgstr "Усі"
 
 #: snikket_web/user.py:67
 msgid "Avatar"
-msgstr ""
+msgstr "Аватар"
 
 #: snikket_web/user.py:71
 msgid "Profile visibility"
-msgstr ""
+msgstr "Хто може бачити профіль"
 
 #: snikket_web/user.py:76
 msgid "Update profile"
-msgstr ""
+msgstr "Оновити профіль"
 
 #: snikket_web/user.py:82
 msgid "Account data"
-msgstr ""
+msgstr "Дані облікового запису"
 
 #: snikket_web/user.py:86
 msgid "Upload"
-msgstr ""
+msgstr "Завантажити"
 
 #: snikket_web/user.py:111
 msgid "Incorrect password."
-msgstr ""
+msgstr "Хибний пароль."
 
 #: snikket_web/user.py:115
 msgid "Password changed"
-msgstr ""
+msgstr "Пароль змінено"
 
 #: snikket_web/user.py:123
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
 msgstr ""
+"Вибраний аватар надто великий. Щоб завантажити аватари великого розміру, "
+"скористуйтесь застосунком."
 
 #: snikket_web/user.py:170
 msgid "Profile updated"
-msgstr ""
+msgstr "Профіль оновлено"
 
 #: snikket_web/user.py:184
 msgid "Export"
-msgstr ""
+msgstr "Експортувати"
 
 #: snikket_web/user.py:202
 msgid "You currently have no account data to export."
-msgstr ""
+msgstr "Наразі у вас немає даних облікового запису, щоб експортувати їх."
 
 #: snikket_web/templates/_footer.html:4
 #, python-format
 msgid "A <a href=\"%(about_url)s\">Snikket</a> service"
-msgstr ""
+msgstr "Сервіс <a href=\"%(about_url)s\">Snikket</a>"
 
 #: snikket_web/templates/_footer.html:6
 msgid ""
 "“Snikket” and the parrot logo are trademarks of Snikket Community Interest "
 "Company."
 msgstr ""
+"«Snikket» та логотип з папугою — це зареєстровані товарні знаки компанії "
+"Snikket Community Interest Company."
 
 #: snikket_web/templates/about.html:4
 msgid "About Snikket"
-msgstr ""
+msgstr "Про Snikket"
 
 #: snikket_web/templates/about.html:9
 msgid "About this Service"
-msgstr ""
+msgstr "Про цю послугу"
 
 #: snikket_web/templates/about.html:10
 #, python-format
@@ -456,6 +465,8 @@ msgid ""
 "This is the Snikket service <em>%(site_name)s</em>, running open-source "
 "software from the Snikket project."
 msgstr ""
+"Це сервіс Snikket <em>%(site_name)s</em>, який працює на програмному "
+"забезпеченні з відкритим кодом з проекту Snikket."
 
 #: snikket_web/templates/about.html:11
 #, python-format
@@ -463,14 +474,16 @@ msgid ""
 "To learn more about Snikket, visit the <a href=\"%(snikket_url)s\">Snikket "
 "website</a>."
 msgstr ""
+"Щоб дізнатися більше про Snikket, відвідайте <a href=\"%(snikket_url)s\">веб-"
+"сайт Snikket</a>."
 
 #: snikket_web/templates/about.html:13
 msgid "View service policies"
-msgstr ""
+msgstr "Переглянути політику обслуговування"
 
 #: snikket_web/templates/about.html:15
 msgid "Licenses"
-msgstr ""
+msgstr "Ліцензії"
 
 #: snikket_web/templates/about.html:16
 #, python-format
