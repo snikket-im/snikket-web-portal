@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2023-07-13 11:17+0000\n"
-"Last-Translator: Roberto Resoli <roberto@resolutions.it>\n"
-"Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/web-"
-"portal/it/>\n"
+"PO-Revision-Date: 2023-12-17 22:49+0000\n"
+"Last-Translator: riccio <unriccio@email.it>\n"
+"Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/"
+"web-portal/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -419,7 +419,7 @@ msgstr "Dati dell'utenza"
 
 #: snikket_web/user.py:86
 msgid "Upload"
-msgstr "Caricare"
+msgstr "Carica"
 
 #: snikket_web/user.py:111
 msgid "Incorrect password."
@@ -800,7 +800,7 @@ msgstr "Al momento questa cerchia non contiene membri."
 
 #: snikket_web/templates/admin_edit_circle.html:64
 msgid "Add group chat"
-msgstr ""
+msgstr "Aggiungi chat di gruppo"
 
 #: snikket_web/templates/admin_edit_circle.html:67
 msgid "Circle members"
@@ -809,6 +809,7 @@ msgstr "Membri della cerchia"
 #: snikket_web/templates/admin_edit_circle.html:68
 msgid "All members of the circle will see each other in their contact list."
 msgstr ""
+"Tutti i membri della cerchia si vedranno a vicenda nella lista dei contatti."
 
 #: snikket_web/templates/admin_edit_circle.html:84
 msgid "The user has been deleted from the server."
@@ -916,7 +917,7 @@ msgstr ""
 #: snikket_web/templates/admin_edit_user.html:9
 msgid "Like normal users and can access the admin panel in the web portal."
 msgstr ""
-"Come gli utenti normali e possono accedere al pannello amministrativo del "
+"Come gli utenti normali, e possono accedere al pannello amministrativo del "
 "portale web."
 
 #: snikket_web/templates/admin_edit_user.html:20
@@ -927,13 +928,15 @@ msgstr "Modifica utente %(user_name)s"
 
 #: snikket_web/templates/admin_edit_user.html:24
 msgid "This user account is pending deletion"
-msgstr ""
+msgstr "Questo account è in attesa di essere cancellato"
 
 #: snikket_web/templates/admin_edit_user.html:25
 #, python-format
 msgid ""
 "The owner of the account sent a deletion request on %(date)s using their app."
 msgstr ""
+"Il proprietario dell'account ha richiesto la cancellazione mediante l'app in "
+"data %(date)s."
 
 #: snikket_web/templates/admin_edit_user.html:26
 #, python-format
@@ -941,21 +944,25 @@ msgid ""
 "The account has been locked, and will be automatically deleted permanently "
 "in %(time)s."
 msgstr ""
+"L'account è stato bloccato e verrà cancellato in modo permanente in %(time)s."
 
 #: snikket_web/templates/admin_edit_user.html:28
 msgid ""
 "If this was a mistake, you can cancel the deletion and restore the account."
 msgstr ""
+"Se è un errore puoi annullare la cancellazione e ripristinare l'account."
 
 #: snikket_web/templates/admin_edit_user.html:34
 msgid "This user account is locked"
-msgstr ""
+msgstr "Questo account è bloccato"
 
 #: snikket_web/templates/admin_edit_user.html:35
 msgid ""
 "The user will not be able to log in to their account until it is unlocked "
 "again."
 msgstr ""
+"L'utente non sarà in grado di accedere al proprio account finché non viene "
+"sbloccato."
 
 #: snikket_web/templates/admin_edit_user.html:41
 msgid "Edit user"
@@ -1063,11 +1070,11 @@ msgstr "Stato di salute del sistema"
 #: snikket_web/templates/admin_home.html:38
 msgid "View the server status or send a broadcast message to all users."
 msgstr ""
-"Veder e lo stato del server e trasmettere un messaggio a tutti gli utenti."
+"Visualizza lo stato del server ed invia un messaggio a tutti gli utenti."
 
 #: snikket_web/templates/admin_home.html:40
 msgid "Send a broadcast message to all users."
-msgstr ""
+msgstr "Invia un messaggio a tutti gli utenti."
 
 #: snikket_web/templates/admin_home.html:43
 #: snikket_web/templates/admin_system.html:4
@@ -1135,11 +1142,11 @@ msgstr "Elimina collegamento"
 
 #: snikket_web/templates/admin_system.html:6
 msgid "Overall system status"
-msgstr ""
+msgstr "Stato generale del sistema"
 
 #: snikket_web/templates/admin_system.html:9
 msgid "System load (5 minute average)"
-msgstr ""
+msgstr "System load (media su 5 minuti)"
 
 #: snikket_web/templates/admin_system.html:14
 #: snikket_web/templates/admin_system.html:22
@@ -1150,11 +1157,11 @@ msgstr ""
 #: snikket_web/templates/admin_system.html:76
 #: snikket_web/templates/admin_system.html:84
 msgid "unknown"
-msgstr ""
+msgstr "n/a"
 
 #: snikket_web/templates/admin_system.html:17
 msgid "Memory use"
-msgstr ""
+msgstr "Uso della memoria"
 
 #: snikket_web/templates/admin_system.html:20
 #, python-format
@@ -1162,30 +1169,32 @@ msgid ""
 "%(percentage_global)s of %(mem_available)s. Of that, Snikket uses "
 "%(percentage_snikket)s."
 msgstr ""
+"%(percentage_global)s di %(mem_available)s. Snikket ne usa "
+"%(percentage_snikket)s."
 
 #: snikket_web/templates/admin_system.html:27
 msgid "Web portal status"
-msgstr ""
+msgstr "Stato dell'interfaccia web"
 
 #: snikket_web/templates/admin_system.html:30
 #: snikket_web/templates/admin_system.html:53
 msgid "Version"
-msgstr ""
+msgstr "Versione"
 
 #: snikket_web/templates/admin_system.html:31
 #: snikket_web/templates/admin_system.html:54
 msgid "View all versions"
-msgstr ""
+msgstr "Visualizza tutte le versioni"
 
 #: snikket_web/templates/admin_system.html:32
 #: snikket_web/templates/admin_system.html:55
 msgid "Average CPU use"
-msgstr ""
+msgstr "Uso medio della CPU"
 
 #: snikket_web/templates/admin_system.html:40
 #: snikket_web/templates/admin_system.html:63
 msgid "Current memory use"
-msgstr ""
+msgstr "Memoria in uso"
 
 #: snikket_web/templates/admin_system.html:50
 #, fuzzy
@@ -1195,21 +1204,23 @@ msgstr "Portale Web di Snikket"
 
 #: snikket_web/templates/admin_system.html:71
 msgid "Storage used by shared files"
-msgstr ""
+msgstr "Spazio usato dai file condivisi dagli utenti"
 
 #: snikket_web/templates/admin_system.html:79
 msgid "Connected devices"
-msgstr ""
+msgstr "Dispositivi connessi"
 
 #: snikket_web/templates/admin_system.html:90
 msgid "Broadcast message"
-msgstr ""
+msgstr "Invia un messaggio a tutti gli utenti"
 
 #: snikket_web/templates/admin_system.html:92
 msgid ""
 "This form allows you to send a message to all users currently online on your "
 "Snikket server. Use it wisely."
 msgstr ""
+"Questo campo ti permette di inviare un messaggio a tutti gli utenti "
+"attualmente collegati al tuo server Snikket. Usalo con attenzione."
 
 #: snikket_web/templates/admin_users.html:8
 #, fuzzy
@@ -1219,7 +1230,7 @@ msgstr "Utenti"
 
 #: snikket_web/templates/admin_users.html:9
 msgid "Last active"
-msgstr ""
+msgstr "Ultima attività"
 
 #: snikket_web/templates/admin_users.html:22
 #, fuzzy
@@ -1229,7 +1240,7 @@ msgstr "rimosso"
 
 #: snikket_web/templates/admin_users.html:24
 msgid "Locked"
-msgstr ""
+msgstr "Bloccato"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
@@ -1496,6 +1507,8 @@ msgid ""
 "You can now safely close this page, or log in to the web portal to <a href="
 "\"%(login_url)s\">manage your account</a>."
 msgstr ""
+"Ora puoi chiudere questa pagina oppure collegarti al portale per <a href=\""
+"%(login_url)s\">gestire il tuo account</a>."
 
 #: snikket_web/templates/invite_success.html:21
 #, fuzzy
@@ -1506,6 +1519,7 @@ msgstr "Operazione completata"
 #: snikket_web/templates/invite_success.html:22
 msgid "Congratulations! Your account data has been successfully imported."
 msgstr ""
+"Congratulazioni! I dati del tuo account sono stati importati con successo."
 
 #: snikket_web/templates/invite_success.html:26
 #, fuzzy
@@ -1520,10 +1534,14 @@ msgid ""
 "information, etc.) from your previous account. When you have exported the "
 "data from your previous account, upload it using the form below."
 msgstr ""
+"Se ti stai trasferendo e hai già un account su un altro server Snikket o su "
+"un servizio XMPP compatibile, puoi importare alcuni dati dal tuo vecchio "
+"account (contatti, dettagli del profilo, ecc). Esporta i dati dal tuo "
+"vecchio account e importali qui sotto."
 
 #: snikket_web/templates/invite_success.html:30
 msgid "Upload account data"
-msgstr ""
+msgstr "Carica dati dell'account"
 
 #: snikket_web/templates/invite_view.html:6
 #, python-format
@@ -1555,6 +1573,8 @@ msgid ""
 "By continuing, you agree to the <a href=\"%(tos_uri)s\">Terms of Service</a> "
 "and <a href=\"%(privacy_uri)s\">Privacy Policy</a>."
 msgstr ""
+"Continuando accetti i <a href=\"%(tos_uri)s\">Terms of Service</a> e la <a "
+"href=\"%(privacy_uri)s\">Privacy Policy</a>."
 
 #: snikket_web/templates/invite_view.html:27
 msgid "Get started"
@@ -1585,7 +1605,7 @@ msgstr "Scarica dall'App Store"
 
 #: snikket_web/templates/invite_view.html:39
 msgid "Get it on F-Droid"
-msgstr "Scaricalo da F-Droid"
+msgstr "Scarica da F-Droid"
 
 #: snikket_web/templates/invite_view.html:42
 msgid "Send to mobile device"
@@ -1737,7 +1757,7 @@ msgstr ""
 
 #: snikket_web/templates/policies.html:4 snikket_web/templates/policies.html:10
 msgid "Policies"
-msgstr ""
+msgstr "Condizioni d'uso"
 
 #: snikket_web/templates/policies.html:13
 #, fuzzy
@@ -1750,17 +1770,19 @@ msgstr ""
 
 #: snikket_web/templates/policies.html:16
 msgid "Terms of Service"
-msgstr ""
+msgstr "Termini d'uso"
 
 #: snikket_web/templates/policies.html:19
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Informativa sulla privacy"
 
 #: snikket_web/templates/policies.html:23
 msgid ""
 "Please contact the administrator of this instance if you have questions "
 "about policies."
 msgstr ""
+"Se hai domande sulle condizioni d'uso contatta l'amministratore di questa "
+"istanza."
 
 #: snikket_web/templates/policies.html:26
 #, fuzzy, python-format
@@ -1781,6 +1803,9 @@ msgid ""
 "email to %(email)s. Specify the domain name of this instance (%(domain)s) "
 "and include details of the incident(s)."
 msgstr ""
+"Puoi inviare una mail a %(email)s per segnalare violazioni dei termini d'uso "
+"o altri abusi provenienti da questo servizio. Specifica il dominio "
+"dell'istanza (%(domain)s) e includi dettagli dell'incidente/i."
 
 #: snikket_web/templates/unauth.html:16
 msgid "Operation successful"
@@ -1849,6 +1874,8 @@ msgid ""
 "Download your account data as a file for backup purposes or to move your "
 "account to another service."
 msgstr ""
+"Scarica un file con i dati del tuo account per avere un backup o per "
+"trasferire il tuo account su un altro server."
 
 #: snikket_web/templates/user_passwd.html:5
 msgid "Change your password"
