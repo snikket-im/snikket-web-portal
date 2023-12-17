@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2023-12-17 22:49+0000\n"
-"Last-Translator: Roberto Resoli <roberto@resolutions.it>\n"
+"PO-Revision-Date: 2023-12-19 13:00+0000\n"
+"Last-Translator: riccio <unriccio@email.it>\n"
 "Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/"
 "web-portal/it/>\n"
 "Language: it\n"
@@ -68,11 +68,11 @@ msgstr "Creato collegamento per reimpostare la password"
 
 #: snikket_web/admin.py:128
 msgid "User account restored"
-msgstr "Profilo utente ripristinato"
+msgstr "Utente ripristinato"
 
 #: snikket_web/admin.py:133
 msgid "User account unlocked"
-msgstr "Profilo utente sbloccato"
+msgstr "Utente sbloccato"
 
 #: snikket_web/admin.py:140
 msgid "Could not restore user account"
@@ -210,7 +210,7 @@ msgstr "Utente rimosso dalla cerchia"
 
 #: snikket_web/admin.py:575
 msgid "Chat removed from circle"
-msgstr "Chat rimossa dalla cerchia"
+msgstr "Chat di gruppo rimossa dalla cerchia"
 
 #: snikket_web/admin.py:593
 msgid "Delete circle permanently"
@@ -230,7 +230,7 @@ msgstr "Crea chat di gruppo"
 
 #: snikket_web/admin.py:669
 msgid "New group chat added to circle"
-msgstr "Nuovo gruppo aggiunto alla cerchia"
+msgstr "Nuova chat di gruppo aggiunta alla cerchia"
 
 #: snikket_web/admin.py:736
 msgid "Message contents"
@@ -422,8 +422,8 @@ msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
 msgstr ""
-"L'avatar scelto è troppo grande. Per utilizzare un avatar così grande, "
-"utilizzate l'app."
+"L'avatar scelto è troppo grande. Utilizza direttamente l'applicazione "
+"Snikket per caricare un avatar così grande."
 
 #: snikket_web/user.py:170
 msgid "Profile updated"
@@ -478,7 +478,7 @@ msgstr ""
 
 #: snikket_web/templates/about.html:13
 msgid "View service policies"
-msgstr "Vedere le condizioni di utilizzo"
+msgstr "Leggi le condizioni di utilizzo"
 
 #: snikket_web/templates/about.html:15
 msgid "Licenses"
@@ -617,13 +617,13 @@ msgstr "Nuova cerchia"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:5
 msgid "Create new circle group chat"
-msgstr "Crea un nuovo gruppo per la cerchia"
+msgstr "Crea una nuova chat di gruppo per la cerchia"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:6
 msgid "Add a chat to your circle so its members can hold group discussions."
 msgstr ""
-"Aggiungete una chat alla vostra cerchia per consentire ai suoi membri di "
-"discutere."
+"Aggiungi una chat di gruppo alla cerchia per consentire ai suoi membri di "
+"discutere insieme."
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:7
 msgid "Tip:"
@@ -635,9 +635,9 @@ msgid ""
 "em> members of the circle. If you want a normal group chat, create it in the "
 "Snikket app instead."
 msgstr ""
-"Questo serve solo per creare chat di gruppo che includono automaticamente "
-"<em>tutti</em> i membri della cerchia. Se si desidera una normale chat di "
-"gruppo, crearla nell'app Snikket."
+"Questa funzione crea solo chat di gruppo che includono automaticamente "
+"<em>tutti</em> i membri della cerchia. Se desideri una normale chat di "
+"gruppo, creala attraverso l'applicazione Snikket."
 
 #: snikket_web/templates/admin_create_invite.html:3
 msgid "Create invitation"
@@ -690,7 +690,7 @@ msgstr "Elimina cerchia"
 
 #: snikket_web/templates/admin_delete_circle.html:8
 msgid "Are you sure you want to delete the following circle?"
-msgstr "Vuoi veramente eliminare la seguente cerchia?"
+msgstr "Vuoi eliminare veramente la seguente cerchia?"
 
 #: snikket_web/templates/admin_delete_circle.html:13
 #: snikket_web/templates/admin_delete_user.html:15
@@ -703,9 +703,9 @@ msgid ""
 "immediately upon pushing the below button. <strong>There is no way back!</"
 "strong>"
 msgstr ""
-"La cerchia e la relativa chat verranno eliminate in modo permanente ed "
-"irreversibile non appena verrà premuto il pulsante sottostante. <strong>Non "
-"sarà possibile tornare indietro!</strong>"
+"La cerchia e la relativa chat di gruppo verranno eliminate in modo "
+"permanente ed irreversibile non appena verrà premuto il pulsante "
+"sottostante. <strong>Non sarà possibile tornare indietro!</strong>"
 
 #: snikket_web/templates/admin_delete_circle.html:17
 #: snikket_web/templates/admin_delete_user.html:19
@@ -729,7 +729,7 @@ msgstr "Elimina utente"
 
 #: snikket_web/templates/admin_delete_user.html:8
 msgid "Are you sure you want to delete the following user?"
-msgstr "Sei sicura/o di volere eliminare il seguente utente?"
+msgstr "Vuoi eliminare veramente il seguente utente?"
 
 #: snikket_web/templates/admin_delete_user.html:16
 msgid ""
@@ -911,15 +911,15 @@ msgstr "Modifica utente %(user_name)s"
 
 #: snikket_web/templates/admin_edit_user.html:24
 msgid "This user account is pending deletion"
-msgstr "Questo account è in attesa di essere cancellato"
+msgstr "Questa utenza è in attesa di essere eliminata"
 
 #: snikket_web/templates/admin_edit_user.html:25
 #, python-format
 msgid ""
 "The owner of the account sent a deletion request on %(date)s using their app."
 msgstr ""
-"Il proprietario dell'account ha richiesto la cancellazione mediante l'app in "
-"data %(date)s."
+"Il proprietario dell'account ha richiesto la cancellazione in data %(date)s "
+"attraverso l'applicazione."
 
 #: snikket_web/templates/admin_edit_user.html:26
 #, python-format
@@ -927,17 +927,16 @@ msgid ""
 "The account has been locked, and will be automatically deleted permanently "
 "in %(time)s."
 msgstr ""
-"L'account è stato bloccato e verrà cancellato in modo permanente in %(time)s."
+"L'utenza è stata bloccata e verrà eliminata in modo permanente in %(time)s."
 
 #: snikket_web/templates/admin_edit_user.html:28
 msgid ""
 "If this was a mistake, you can cancel the deletion and restore the account."
-msgstr ""
-"Se è un errore puoi annullare la cancellazione e ripristinare l'account."
+msgstr "Se è un errore puoi annullare la cancellazione e ripristinare l'utenza."
 
 #: snikket_web/templates/admin_edit_user.html:34
 msgid "This user account is locked"
-msgstr "Questo account è bloccato"
+msgstr "Questa utenza è bloccata"
 
 #: snikket_web/templates/admin_edit_user.html:35
 msgid ""
@@ -985,8 +984,8 @@ msgid ""
 "If the user has lost their password, you can use the button below to create "
 "a special link which allows to change the password of the account, once."
 msgstr ""
-"Se l'utente ha perso la sua password, è possibile utilizzare il pulsante qui "
-"sotto per creare un link speciale che permette di cambiare la password "
+"Se l'utente ha perso la sua password, è possibile utilizzare il pulsante "
+"sottostante per creare un link speciale che permette di cambiare la password "
 "dell'account, una sola volta."
 
 #: snikket_web/templates/admin_edit_user.html:89
@@ -999,9 +998,9 @@ msgid ""
 "devices is necessary to troubleshoot issues. The button below reveals this "
 "(sensitive) information."
 msgstr ""
-"In alcuni casi, informazioni estese sull'account utente e sui dispositivi "
-"collegati sono necessarie per risolvere i problemi. Il pulsante qui sotto "
-"rivela queste informazioni (sensibili)."
+"Informazioni estese sulle utenze e sui dispositivi collegati sono necessarie "
+"in alcuni casi per risolvere dei problemi. Il pulsante sottostante rivela "
+"queste informazioni (sensibili)."
 
 #: snikket_web/templates/admin_edit_user.html:95
 msgid "Show debug information"
@@ -1155,7 +1154,7 @@ msgstr ""
 
 #: snikket_web/templates/admin_system.html:27
 msgid "Web portal status"
-msgstr "Stato dell'interfaccia web"
+msgstr "Stato del portale web"
 
 #: snikket_web/templates/admin_system.html:30
 #: snikket_web/templates/admin_system.html:53
@@ -1211,7 +1210,7 @@ msgstr "Ultima attività"
 
 #: snikket_web/templates/admin_users.html:22
 msgid "Deleted"
-msgstr "Rimosso"
+msgstr "Eliminato"
 
 #: snikket_web/templates/admin_users.html:24
 msgid "Locked"
@@ -1219,7 +1218,7 @@ msgstr "Bloccato"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
-msgstr "Portale Web di Snikket"
+msgstr "Portale web di Snikket"
 
 #: snikket_web/templates/app.html:8
 msgid "Log out"
@@ -1492,7 +1491,7 @@ msgstr "Importazione riuscita"
 #: snikket_web/templates/invite_success.html:22
 msgid "Congratulations! Your account data has been successfully imported."
 msgstr ""
-"Congratulazioni! I dati del tuo account sono stati importati con successo."
+"Congratulazioni! I dati della tua utenza sono stati importati con successo."
 
 #: snikket_web/templates/invite_success.html:26
 msgid "Moving to Snikket?"
@@ -1505,14 +1504,14 @@ msgid ""
 "information, etc.) from your previous account. When you have exported the "
 "data from your previous account, upload it using the form below."
 msgstr ""
-"Se ti stai trasferendo e hai già un account su un altro server Snikket o su "
-"un servizio XMPP compatibile, puoi importare alcuni dati dal tuo vecchio "
+"Se ti stai trasferendo e hai già un'utenza su un altro servizio Snikket o su "
+"un server XMPP compatibile, puoi importare alcuni dati dal tuo vecchio "
 "account (contatti, dettagli del profilo, ecc). Esporta i dati dal tuo "
 "vecchio account e importali qui sotto."
 
 #: snikket_web/templates/invite_success.html:30
 msgid "Upload account data"
-msgstr "Carica dati dell'account"
+msgstr "Carica dati utente"
 
 #: snikket_web/templates/invite_view.html:6
 #, python-format
@@ -1544,8 +1543,8 @@ msgid ""
 "By continuing, you agree to the <a href=\"%(tos_uri)s\">Terms of Service</a> "
 "and <a href=\"%(privacy_uri)s\">Privacy Policy</a>."
 msgstr ""
-"Continuando accetti i <a href=\"%(tos_uri)s\">Terms of Service</a> e la <a "
-"href=\"%(privacy_uri)s\">Privacy Policy</a>."
+"Continuando accetti i <a href=\"%(tos_uri)s\">Termini d'uso</a> e l'<a href="
+"\"%(privacy_uri)s\">Informativa sulla privacy</a>."
 
 #: snikket_web/templates/invite_view.html:27
 msgid "Get started"
@@ -1639,8 +1638,8 @@ msgstr ""
 #: snikket_web/templates/invite_view.html:86
 msgid "First download Snikket from the App Store using the button below:"
 msgstr ""
-"Per prima cosa, scarica Snikket dall'App Store utilizzando il pulsante qui "
-"sotto:"
+"Per prima cosa, scarica Snikket dall'App Store utilizzando il pulsante "
+"sottostante:"
 
 #: snikket_web/templates/invite_view.html:88
 #: snikket_web/templates/invite_view.html:116
@@ -1667,7 +1666,8 @@ msgstr ""
 #: snikket_web/templates/invite_view.html:114
 msgid "First install Snikket from F-Droid using the button below:"
 msgstr ""
-"Per prima cosa installa Snikket da F-Droid utilizzando il pulsante qui sotto:"
+"Per prima cosa installa Snikket da F-Droid utilizzando il pulsante "
+"sottostante:"
 
 #: snikket_web/templates/library.j2:19
 msgid "The user is an administrator."
@@ -1747,8 +1747,8 @@ msgid ""
 "Please contact the administrator of this instance if you have questions "
 "about policies."
 msgstr ""
-"Se hai domande sulle condizioni d'uso contatta l'amministratore di questa "
-"istanza."
+"Se hai domande sulle condizioni d'uso contatta l'amministratore di questo "
+"servizio."
 
 #: snikket_web/templates/policies.html:26
 #, python-format
@@ -1766,8 +1766,8 @@ msgid ""
 "email to %(email)s. Specify the domain name of this instance (%(domain)s) "
 "and include details of the incident(s)."
 msgstr ""
-"Puoi inviare una mail a %(email)s per segnalare violazioni dei termini d'uso "
-"o altri abusi provenienti da questo servizio. Specifica il dominio "
+"Puoi inviare una mail a %(email)s per segnalare violazioni delle condizioni "
+"d'uso o altri abusi provenienti da questo servizio. Specifica il dominio "
 "dell'istanza (%(domain)s) e includi dettagli dell'incidente/i."
 
 #: snikket_web/templates/unauth.html:16
@@ -1833,8 +1833,8 @@ msgid ""
 "Download your account data as a file for backup purposes or to move your "
 "account to another service."
 msgstr ""
-"Scarica un file con i dati del tuo account per avere un backup o per "
-"trasferire il tuo account su un altro server."
+"Scarica un file con i dati della tua utenza per avere un backup o per "
+"trasferire il tuo account su un altro servizio."
 
 #: snikket_web/templates/user_passwd.html:5
 msgid "Change your password"
