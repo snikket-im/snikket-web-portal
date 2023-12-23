@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2023-12-19 13:00+0000\n"
+"PO-Revision-Date: 2023-12-24 04:00+0000\n"
 "Last-Translator: Dmytro Vozniuk <plibnik@gmail.com>\n"
 "Language-Team: Ukrainian <http://i18n.sotecware.net/projects/snikket/"
 "web-portal/uk/>\n"
@@ -962,7 +962,7 @@ msgstr ""
 "Snikket йому дозволені."
 
 #: snikket_web/templates/admin_edit_user.html:61
-#, fuzzy, python-format
+#, python-format
 msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 msgstr "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
 
@@ -1451,28 +1451,30 @@ msgstr "Успішна реєстрація на %(site_name)s | Snikket"
 #: snikket_web/templates/invite_success.html:10
 #, python-format
 msgid "Successfully registered on %(site_name)s"
-msgstr ""
+msgstr "Успішна реєстрація на %(site_name)s"
 
 #: snikket_web/templates/invite_success.html:12
 #, python-format
 msgid ""
 "Congratulations! You successfully registered on %(site_name)s as %(jid)s."
-msgstr ""
+msgstr "Вітаємо! Ви успішно зареєструвалися на %(site_name)s, як %(jid)s."
 
 #: snikket_web/templates/invite_success.html:13
 msgid "Your address"
-msgstr ""
+msgstr "Ваша адреса"
 
 #: snikket_web/templates/invite_success.html:15
 #: snikket_web/templates/user_home.html:21
 msgid "Copy address"
-msgstr ""
+msgstr "Копіювати адресу"
 
 #: snikket_web/templates/invite_success.html:17
 msgid ""
 "You can now set up your legacy XMPP client with the above address and the "
 "password you chose during registration."
 msgstr ""
+"Тепер ви можете налаштувати свій застарілий клієнт XMPP, вкажіть у ньому "
+"зазначену вище адресу та пароль, який ви вибрали під час реєстрації."
 
 #: snikket_web/templates/invite_success.html:18
 #, python-format
@@ -1480,18 +1482,20 @@ msgid ""
 "You can now safely close this page, or log in to the web portal to <a href="
 "\"%(login_url)s\">manage your account</a>."
 msgstr ""
+"Цю сторінку можна безпечно закрити. Також можна перейти на веб-портал для <a "
+"href=\"%(login_url)s\">управління вашим обліковим записом</a>."
 
 #: snikket_web/templates/invite_success.html:21
 msgid "Import successful"
-msgstr ""
+msgstr "Імпорт виконано успішно"
 
 #: snikket_web/templates/invite_success.html:22
 msgid "Congratulations! Your account data has been successfully imported."
-msgstr ""
+msgstr "Вітаємо! Дані вашого облікового запису успішно імпортовані."
 
 #: snikket_web/templates/invite_success.html:26
 msgid "Moving to Snikket?"
-msgstr ""
+msgstr "Переходите на Snikket?"
 
 #: snikket_web/templates/invite_success.html:27
 msgid ""
@@ -1500,15 +1504,19 @@ msgid ""
 "information, etc.) from your previous account. When you have exported the "
 "data from your previous account, upload it using the form below."
 msgstr ""
+"Якщо ви переходите з іншого екземпляра Snikket або з іншого XMPP-сумісного "
+"сервісу, ви можете за бажанням імпортувати дані (контакти, відомості профілю "
+"тощо) з вашого попереднього облікового запису. Коли експортуєте дані зі "
+"свого попереднього облікового запису, завантажте їх у форму нижче."
 
 #: snikket_web/templates/invite_success.html:30
 msgid "Upload account data"
-msgstr ""
+msgstr "Завантаження даних облікового запису"
 
 #: snikket_web/templates/invite_view.html:6
 #, python-format
 msgid "Invite to %(site_name)s | Snikket"
-msgstr ""
+msgstr "Запрошення на %(site_name)s | Snikket"
 
 #: snikket_web/templates/invite_view.html:16
 #, python-format
@@ -1516,6 +1524,8 @@ msgid ""
 "You have been invited to chat with %(inviter_name)s using Snikket, a secure, "
 "privacy-friendly chat app on %(site_name)s."
 msgstr ""
+"Вас запросили у чат з %(inviter_name)s у Snikket — безпечний, конфіденційний "
+"застосунок для чату на %(site_name)s."
 
 #: snikket_web/templates/invite_view.html:18
 #, python-format
@@ -1523,6 +1533,8 @@ msgid ""
 "You have been invited to chat on %(site_name)s using Snikket, a secure, "
 "privacy-friendly chat app."
 msgstr ""
+"Вас запросили у чат на %(site_name)s у Snikket — безпечний, конфіденційний "
+"застосунок чату."
 
 #: snikket_web/templates/invite_view.html:23
 #, python-format
@@ -1530,14 +1542,16 @@ msgid ""
 "By continuing, you agree to the <a href=\"%(tos_uri)s\">Terms of Service</a> "
 "and <a href=\"%(privacy_uri)s\">Privacy Policy</a>."
 msgstr ""
+"Продовжуючи, ви приймаєте <a href=\"%(tos_uri)s\">Умови використання</a> та "
+"<a href=\"%(privacy_uri)s\">Політику конфіденційності</a>."
 
 #: snikket_web/templates/invite_view.html:27
 msgid "Get started"
-msgstr ""
+msgstr "Почати"
 
 #: snikket_web/templates/invite_view.html:29
 msgid "Install the Snikket App on your Android or iOS device."
-msgstr ""
+msgstr "Встановіть застосунок Snikket на ваш пристрій Android або iOS."
 
 #: snikket_web/templates/invite_view.html:31
 #, python-format
@@ -1545,29 +1559,35 @@ msgid ""
 "Install the Snikket App on your Android device (<a href=\"%(ios_info_url)s\" "
 "rel=\"noopener noreferrer\" target=\"_blank\">iOS coming soon!</a>)."
 msgstr ""
+"Встановіть застосунок Snikket на ваш пристрій Android (<a href=\""
+"%(ios_info_url)s\" rel=\"noopener noreferrer\" target=\"_blank\">невдовзі "
+"стане доступна й версія для iOS!</a>)."
 
 #: snikket_web/templates/invite_view.html:35
 msgid "Get it on Google Play"
-msgstr ""
+msgstr "Отримати його на Google Play"
 
 #: snikket_web/templates/invite_view.html:37
 #: snikket_web/templates/invite_view.html:87
 msgid "Download on the App Store"
-msgstr ""
+msgstr "Завантажити з App Store"
 
 #: snikket_web/templates/invite_view.html:39
 msgid "Get it on F-Droid"
-msgstr ""
+msgstr "Отримати на F-Droid"
 
 #: snikket_web/templates/invite_view.html:42
 msgid "Send to mobile device"
-msgstr ""
+msgstr "Надіслати на мобільний пристрій"
 
 #: snikket_web/templates/invite_view.html:45
 msgid ""
 "After installation the app should automatically open and prompt you to "
 "create an account. If not, simply click the button below."
 msgstr ""
+"Після встановлення застосунок має автоматично відкритися та запропонувати "
+"вам створити обліковий запис. Якщо цього не трапиться, просто натисніть "
+"кнопку нижче."
 
 #: snikket_web/templates/invite_view.html:53
 #, python-format
@@ -1576,10 +1596,13 @@ msgid ""
 "above does not work with your app, you may need to <a href=\"%(register_url)s"
 "\">register an account manually</a>."
 msgstr ""
+"Підключитися до Snikket можна з будь-якої програми, сумісної з XMPP. Якщо "
+"кнопка вище не спрацювала з вашою програмою, може знадобитися <a href=\""
+"%(register_url)s\">зареєструвати обліковий запис вручну</a>."
 
 #: snikket_web/templates/invite_view.html:59
 msgid "Scan invite code"
-msgstr ""
+msgstr "Сканувати код запрошення"
 
 #: snikket_web/templates/invite_view.html:62
 #: snikket_web/templates/invite_view.html:69
@@ -1588,27 +1611,32 @@ msgstr ""
 #: snikket_web/templates/invite_view.html:109
 #: snikket_web/templates/invite_view.html:125
 msgid "Close"
-msgstr ""
+msgstr "Закрити"
 
 #: snikket_web/templates/invite_view.html:65
 msgid ""
 "You can transfer this invite to your mobile device by scanning a code with "
 "your camera. You can use either a QR scanner app or the Snikket app itself."
 msgstr ""
+"Це запрошення можна перенести на ваш мобільний пристрій — відскануйте код "
+"своєю камерою. Це можна зробити з застосунку сканера QR-кодів або з самого "
+"застосунку Snikket."
 
 #: snikket_web/templates/invite_view.html:78
 msgid "Install on iOS"
-msgstr ""
+msgstr "Встановити на iOS"
 
 #: snikket_web/templates/invite_view.html:84
 msgid ""
 "After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
 msgstr ""
+"Після завантаження Snikket з App Store поверніться до цього посилання з "
+"запрошенням і натисніть «Відкрити застосунок», щоб продовжити."
 
 #: snikket_web/templates/invite_view.html:86
 msgid "First download Snikket from the App Store using the button below:"
-msgstr ""
+msgstr "Спочатку завантажте Snikket з App Store — натисніть кнопку нижче:"
 
 #: snikket_web/templates/invite_view.html:88
 #: snikket_web/templates/invite_view.html:116
@@ -1616,65 +1644,75 @@ msgid ""
 "After the installation is complete, you can return to this page and tap the "
 "\"Open the app\" button to continue with the setup:"
 msgstr ""
+"Коли встановлення закінчиться, можна повернутися на цю сторінку та натиснути "
+"кнопку «Відкрити застосунок», щоб продовжити налаштування:"
 
 #: snikket_web/templates/invite_view.html:106
 #: snikket_web/templates/invite_view.html:115
 msgid "Install via F-Droid"
-msgstr ""
+msgstr "Встановити через F-Droid"
 
 #: snikket_web/templates/invite_view.html:112
 msgid ""
 "After installing Snikket via F-Droid, you have to return to this invite link "
 "and tap on \"Open the app\" to proceed."
 msgstr ""
+"Після встановлення Snikket через F-Droid поверніться до цього посилання з "
+"запрошенням і натисніть «Відкрити застосунок», щоб продовжити."
 
 #: snikket_web/templates/invite_view.html:114
 msgid "First install Snikket from F-Droid using the button below:"
 msgstr ""
+"Спочатку встановіть Snikket з F-Droid, для цього натисніть кнопку нижче:"
 
 #: snikket_web/templates/library.j2:19
 msgid "The user is an administrator."
-msgstr ""
+msgstr "Цей користувач — адміністратор."
 
 #: snikket_web/templates/library.j2:19
 msgid " (Administrator)"
-msgstr ""
+msgstr " (Адміністратор)"
 
 #: snikket_web/templates/library.j2:23
 msgid "The user is restricted."
-msgstr ""
+msgstr "Користувача обмежено."
 
 #: snikket_web/templates/library.j2:23
 msgid " (Restricted)"
-msgstr ""
+msgstr " (Обмежений)"
 
 #: snikket_web/templates/library.j2:41
 msgid "Copy link"
-msgstr ""
+msgstr "Копіювати посилання"
 
 #: snikket_web/templates/library.j2:104
 msgid "Invalid input"
-msgstr ""
+msgstr "Введені хибні дані"
 
 #: snikket_web/templates/library.j2:145
 msgid "Can be used multiple times to create accounts on this Snikket service."
 msgstr ""
+"Може використовуватися багаторазово для створення облікових записів на цьому "
+"сервісі Snikket."
 
 #: snikket_web/templates/library.j2:147
 msgid "Can be used once to create an account on this Snikket service."
 msgstr ""
+"Може бути використане один раз для створення облікового запису на цьому "
+"сервісі Snikket."
 
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
-msgstr ""
+msgstr "Вхід у Snikket"
 
 #: snikket_web/templates/login.html:14
 msgid "Enter your Snikket address and password to manage your account."
 msgstr ""
+"Введіть свої адресу Snikket та пароль, щоб керувати вашим обліковим записом."
 
 #: snikket_web/templates/login.html:19
 msgid "Incorrect address"
-msgstr ""
+msgstr "Хибна адреса"
 
 #: snikket_web/templates/login.html:20
 #, python-format
@@ -1682,28 +1720,32 @@ msgid ""
 "This Snikket service only hosts addresses ending in <em>@%(snikket_domain)s</"
 "em>. Your password was not sent."
 msgstr ""
+"На цьому сервісі Snikket розміщені тільки адреси, що закінчуються на "
+"<em>@%(snikket_domain)s</em>. Ваш пароль не було надіслано."
 
 #: snikket_web/templates/policies.html:4 snikket_web/templates/policies.html:10
 msgid "Policies"
-msgstr ""
+msgstr "Політики"
 
 #: snikket_web/templates/policies.html:13
 msgid "Use of this service is subject to the following policies:"
-msgstr ""
+msgstr "Використання цього сервісу керується наступними політиками та умовами:"
 
 #: snikket_web/templates/policies.html:16
 msgid "Terms of Service"
-msgstr ""
+msgstr "Умови використання"
 
 #: snikket_web/templates/policies.html:19
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Політика конфіденційності"
 
 #: snikket_web/templates/policies.html:23
 msgid ""
 "Please contact the administrator of this instance if you have questions "
 "about policies."
 msgstr ""
+"Якщо у вас виникнуть питання стосовно політик, зверніться до адміністратора "
+"цього екземпляра."
 
 #: snikket_web/templates/policies.html:26
 #, python-format
@@ -1711,6 +1753,8 @@ msgid ""
 "Use of the Snikket apps is subject to the <a href=\"%(url)s\">Snikket Apps "
 "Privacy Policy</a>."
 msgstr ""
+"Використання застосунків Snikket регулюється <a href=\"%(url)s\">Політикою "
+"конфіденційності застосунків Snikket</a>."
 
 #: snikket_web/templates/policies.html:29
 #, python-format
@@ -1719,72 +1763,80 @@ msgid ""
 "email to %(email)s. Specify the domain name of this instance (%(domain)s) "
 "and include details of the incident(s)."
 msgstr ""
+"Щоб повідомити про порушення політики чи інші зловживання на цьому сервісі, "
+"надішліть лист на адресу ел.пошти %(email)s. Зазначте доменне ім’я цього "
+"екземпляра (%(domain)s), а також повідомте подробиці інцидента(-ів)."
 
 #: snikket_web/templates/unauth.html:16
 msgid "Operation successful"
-msgstr ""
+msgstr "Операція успішна"
 
 #: snikket_web/templates/user_home.html:9
 msgid "Welcome!"
-msgstr ""
+msgstr "Вітаємо!"
 
 #: snikket_web/templates/user_home.html:10
 #, python-format
 msgid "Welcome home, %(user_name)s."
-msgstr ""
+msgstr "Вітаємо вдома, %(user_name)s."
 
 #: snikket_web/templates/user_home.html:14
 msgid "Your account"
-msgstr ""
+msgstr "Ваш обліковий запис"
 
 #: snikket_web/templates/user_home.html:20
 msgid "Your XMPP address"
-msgstr ""
+msgstr "Ваша адреса XMPP"
 
 #: snikket_web/templates/user_home.html:31
 msgid "Edit profile"
-msgstr ""
+msgstr "Редагувати профіль"
 
 #: snikket_web/templates/user_home.html:33
 #: snikket_web/templates/user_manage_data.html:4
 msgid "Manage your data"
-msgstr ""
+msgstr "Керувати вашими даними"
 
 #: snikket_web/templates/user_home.html:39
 msgid "Your Snikket"
-msgstr ""
+msgstr "Ваш Snikket"
 
 #: snikket_web/templates/user_home.html:41
 msgid "Manage users, invitations and circles of your Snikket service."
 msgstr ""
+"Керуйте користувачами, запрошеннями та колами на вашому сервісі Snikket."
 
 #: snikket_web/templates/user_home.html:43
 msgid "Admin panel"
-msgstr ""
+msgstr "Панель адміністрування"
 
 #: snikket_web/templates/user_logout.html:5
 msgid "Sign out of the Snikket Web Portal"
-msgstr ""
+msgstr "Вийти з веб-порталу Snikket"
 
 #: snikket_web/templates/user_logout.html:6
 msgid ""
 "Click below to log yourself out of the web portal. This does not affect any "
 "other connected devices."
 msgstr ""
+"Натисніть нижче, щоб вийти з веб-порталу. Ця дія не вплине на інші "
+"підключені пристрої."
 
 #: snikket_web/templates/user_manage_data.html:8
 msgid "Export account"
-msgstr ""
+msgstr "Експорт облікового запису"
 
 #: snikket_web/templates/user_manage_data.html:9
 msgid ""
 "Download your account data as a file for backup purposes or to move your "
 "account to another service."
 msgstr ""
+"Завантажте дані свого облікового запису у виді файлу, щоб мати резервну "
+"копію або перенести ваш обліковий запис на інший сервіс."
 
 #: snikket_web/templates/user_passwd.html:5
 msgid "Change your password"
-msgstr ""
+msgstr "Змінити ваш пароль"
 
 #: snikket_web/templates/user_passwd.html:6
 msgid ""
@@ -1792,27 +1844,33 @@ msgid ""
 "the new one. To reduce the chance of typos, we ask for your new password "
 "twice."
 msgstr ""
+"Щоб змінити пароль, вам треба буде ввести поточний пароль, а також новий. "
+"Для уникнення помилок новий пароль необхідно набрати двічі."
 
 #: snikket_web/templates/user_passwd.html:24
 msgid ""
 "After changing your password, you will have to enter the new password on all "
 "of your devices."
 msgstr ""
+"Після зміни пароля вам доведеться ввести новий пароль на кожному з ваших "
+"пристроїв."
 
 #: snikket_web/templates/user_profile.html:4
 msgid "Update your profile"
-msgstr ""
+msgstr "Оновити профіль"
 
 #: snikket_web/templates/user_profile.html:6
 msgid "Profile"
-msgstr ""
+msgstr "Профіль"
 
 #: snikket_web/templates/user_profile.html:23
 msgid "Visibility"
-msgstr ""
+msgstr "Видимість"
 
 #: snikket_web/templates/user_profile.html:24
 msgid ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
 msgstr ""
+"Цей розділ дає змогу визначити, хто зможе бачити відомості з вашого профілю, "
+"такі як аватар чи нікнейм."
