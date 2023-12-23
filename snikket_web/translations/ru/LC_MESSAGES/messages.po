@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2023-12-17 22:49+0000\n"
-"Last-Translator: Andrey <Elisoandr@gmail.com>\n"
+"PO-Revision-Date: 2023-12-24 04:00+0000\n"
+"Last-Translator: Dmytro Vozniuk <plibnik@gmail.com>\n"
 "Language-Team: Russian <http://i18n.sotecware.net/projects/snikket/"
 "web-portal/ru/>\n"
 "Language: ru\n"
@@ -1462,7 +1462,7 @@ msgstr "Успешная регистрация на %(site_name)s"
 msgid ""
 "Congratulations! You successfully registered on %(site_name)s as %(jid)s."
 msgstr ""
-"Поздравляем! Вы успешно зарегистрировались на %(site_name)s в виде %(jid)s."
+"Поздравляем! Вы успешно зарегистрировались на %(site_name)s, как %(jid)s."
 
 #: snikket_web/templates/invite_success.html:13
 msgid "Your address"
@@ -1530,8 +1530,8 @@ msgid ""
 "You have been invited to chat with %(inviter_name)s using Snikket, a secure, "
 "privacy-friendly chat app on %(site_name)s."
 msgstr ""
-"Вам было предложено пообщаться с %(inviter_name)s используя Сниккет, "
-"безопасное, конфиденциальное приложение для чата %(site_name)s."
+"Вам предлагается пообщаться с %(inviter_name)s, используя Сниккет — "
+"безопасное, конфиденциальное приложение для чата на %(site_name)s."
 
 #: snikket_web/templates/invite_view.html:18
 #, python-format
@@ -1689,7 +1689,7 @@ msgstr " (Ограниченный)"
 
 #: snikket_web/templates/library.j2:41
 msgid "Copy link"
-msgstr "Ссылка на копирование"
+msgstr "Копіювати посилання"
 
 #: snikket_web/templates/library.j2:104
 msgid "Invalid input"
@@ -1709,7 +1709,7 @@ msgstr ""
 
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
-msgstr "Логин Сниккетa"
+msgstr "Вход в Сниккет"
 
 #: snikket_web/templates/login.html:14
 msgid "Enter your Snikket address and password to manage your account."
@@ -1750,7 +1750,7 @@ msgid ""
 "Please contact the administrator of this instance if you have questions "
 "about policies."
 msgstr ""
-"Если у вас есть вопросы о политеке, обратитесь к администратору этого "
+"Если у вас есть вопросы о политике, обратитесь к администратору этого "
 "экземпляра."
 
 #: snikket_web/templates/policies.html:26
@@ -1759,8 +1759,8 @@ msgid ""
 "Use of the Snikket apps is subject to the <a href=\"%(url)s\">Snikket Apps "
 "Privacy Policy</a>."
 msgstr ""
-"Использование приложений Snikket регулируется <a href=\"%(url)s\">Snikket "
-"Apps Privacy Policy</a>."
+"Использование приложений Snikket регулируется <a href=\"%(url)s\">Политикой "
+"конфиденциальности приложений Snikket</a>."
 
 #: snikket_web/templates/policies.html:29
 #, python-format
@@ -1801,7 +1801,7 @@ msgstr "Реадктировать профиль"
 #: snikket_web/templates/user_home.html:33
 #: snikket_web/templates/user_manage_data.html:4
 msgid "Manage your data"
-msgstr "Управляйте своими данными"
+msgstr "Изменить ваши данные"
 
 #: snikket_web/templates/user_home.html:39
 msgid "Your Snikket"
@@ -1851,8 +1851,7 @@ msgid ""
 "twice."
 msgstr ""
 "Для смены пароля необходимо указать как текущий, так и новый пароль. Чтобы "
-"уменьшить вероятность опечаток, мы просим вас предоставить новый пароль "
-"дважды."
+"уменьшить вероятность опечатки, новый пароль надо будет набрать дважды."
 
 #: snikket_web/templates/user_passwd.html:24
 msgid ""
