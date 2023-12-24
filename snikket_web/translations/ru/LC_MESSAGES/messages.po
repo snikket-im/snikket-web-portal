@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2023-12-24 04:00+0000\n"
+"PO-Revision-Date: 2023-12-25 16:00+0000\n"
 "Last-Translator: Dmytro Vozniuk <plibnik@gmail.com>\n"
 "Language-Team: Russian <http://i18n.sotecware.net/projects/snikket/"
 "web-portal/ru/>\n"
@@ -171,7 +171,7 @@ msgstr "Приглашение отозвано"
 #: snikket_web/templates/admin_delete_circle.html:10
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Name"
-msgstr "Имя"
+msgstr "Название"
 
 #: snikket_web/admin.py:433 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
@@ -239,7 +239,7 @@ msgstr "Содержание сообщения"
 
 #: snikket_web/admin.py:742
 msgid "Only send to online users"
-msgstr "Отправлять только онлайн-пользователям"
+msgstr "Отправить только онлайн-пользователям"
 
 #: snikket_web/admin.py:746
 msgid "Post to all users"
@@ -372,7 +372,7 @@ msgstr "Подтвердить новый пароль"
 
 #: snikket_web/user.py:43
 msgid "The new passwords must match."
-msgstr "Новый пароль должен совпадать."
+msgstr "Новые пароли должны совпадать."
 
 #: snikket_web/user.py:50
 msgid "Sign out"
@@ -396,7 +396,7 @@ msgstr "Аватар"
 
 #: snikket_web/user.py:71
 msgid "Profile visibility"
-msgstr "Видимость профиля"
+msgstr "Кто может видеть ваш профиль"
 
 #: snikket_web/user.py:76
 msgid "Update profile"
@@ -514,9 +514,9 @@ msgid ""
 "Material Icons</a>, made available by Google under the terms of the <a href="
 "\"%(apache20_url)s\">Apache 2.0 License</a>."
 msgstr ""
-"Иконки, используемые на веб-портале это <a href=\"%(source_url)s\">иконки "
-"Материалов Google</a>, предоставленный Google на условиях <a href="
-"\"%(apache20_url)s\">Лицензия Apache 2.0</a>."
+"Иконки, используемые на веб-портале — это <a href=\"%(source_url)s\">иконки "
+"Материалов Google</a>, предоставленные Google на условиях <a href=\""
+"%(apache20_url)s\">Лицензия Apache 2.0</a>."
 
 #: snikket_web/templates/about.html:20
 msgid "Trademarks"
@@ -544,7 +544,7 @@ msgstr "Вернуться на главную страницу"
 
 #: snikket_web/templates/admin_app.html:5
 msgid "Admin area"
-msgstr "Административная зона"
+msgstr "Зона администрирования"
 
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:23
@@ -629,7 +629,7 @@ msgstr ""
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:7
 msgid "Tip:"
-msgstr "Кончик:"
+msgstr "Подсказка:"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:7
 msgid ""
@@ -891,7 +891,7 @@ msgid ""
 "Like limited users and can also interact with users on other Snikket "
 "services."
 msgstr ""
-"Нравится ограниченным пользователям, а также может взаимодействовать с "
+"Похожи на ограниченных пользователей, но также могут взаимодействовать с "
 "пользователями других сервисов Snikket."
 
 #: snikket_web/templates/admin_edit_user.html:9
@@ -983,7 +983,7 @@ msgid ""
 "If the user has lost their password, you can use the button below to create "
 "a special link which allows to change the password of the account, once."
 msgstr ""
-"Если вы забыли свой пароль, вы можете использовать кнопку ниже, чтобы "
+"Если пользователь забыл свой пароль, вы можете нажать кнопку ниже, чтобы "
 "создать специальную ссылку, которая позволит один раз изменить пароль "
 "учетной записи."
 
@@ -1075,7 +1075,7 @@ msgstr "Выйти из панели администратора"
 
 #: snikket_web/templates/admin_invites.html:10
 msgid "Pending invitations"
-msgstr "Ожидаемые приглашения"
+msgstr "Ожидающие приглашения"
 
 #: snikket_web/templates/admin_invites.html:21
 msgid "Expires"
@@ -1217,11 +1217,11 @@ msgstr "Удалено"
 
 #: snikket_web/templates/admin_users.html:24
 msgid "Locked"
-msgstr "Заблокировано"
+msgstr "Заблокирован"
 
 #: snikket_web/templates/app.html:4
 msgid "Snikket Web Portal"
-msgstr "Сниккет веб-портал"
+msgstr "Веб-портал Snikket"
 
 #: snikket_web/templates/app.html:8
 msgid "Log out"
@@ -1235,7 +1235,7 @@ msgstr "Внутренняя ошибка"
 
 #: snikket_web/templates/backend_error.html:4
 msgid "The web portal was not able to communicate with the backend."
-msgstr "Веб-портал не смог общаться с бэкэндом."
+msgstr "Веб-портал не смог связаться с бэкэндом."
 
 #: snikket_web/templates/backend_error.html:5
 #: snikket_web/templates/internal_error.html:5
@@ -1264,7 +1264,7 @@ msgstr "Приглашаем в %(site_name)s"
 #: snikket_web/templates/invite_view.html:14
 #, python-format
 msgid "Powered by <img src=\"%(logo_url)s\" alt=\"Snikket\">"
-msgstr "Движимый <img alt=\"Сниккет\" src=\"%(logo_url)s\">"
+msgstr "Работает на <img alt=\"Сниккет\" src=\"%(logo_url)s\">"
 
 #: snikket_web/templates/invite_invalid.html:8
 msgid "Invite expired"
@@ -1511,8 +1511,8 @@ msgid ""
 msgstr ""
 "Если вы переходите из другого экземпляра Snikket или другой службы, "
 "совместимой с XMPP, вы можете при желании импортировать данные (контакты, "
-"информацию профиля и т. д.) из своей предыдущей учетной записи. Когда вы "
-"экспортировали данные из своей предыдущей учетной записи, загрузите их, "
+"информацию профиля и т. д.) из своей предыдущей учетной записи. Когда "
+"экспортируете данные из своей предыдущей учетной записи, загрузите их, "
 "используя форму ниже."
 
 #: snikket_web/templates/invite_success.html:30
@@ -1566,9 +1566,9 @@ msgid ""
 "Install the Snikket App on your Android device (<a href=\"%(ios_info_url)s\" "
 "rel=\"noopener noreferrer\" target=\"_blank\">iOS coming soon!</a>)."
 msgstr ""
-"Установите приложение Сниккет на ваше Android-устройство (<a href="
-"\"%(ios_info_url)s\" rel=\"noopener noreferrer\" target=\"_blank\">iOS скоро "
-"будет!</a>)."
+"Установите приложение Сниккет на ваше Android-устройство (<a href=\""
+"%(ios_info_url)s\" rel=\"noopener noreferrer\" target=\"_blank\">iOS скоро "
+"также будет доступна!</a>)."
 
 #: snikket_web/templates/invite_view.html:35
 msgid "Get it on Google Play"
@@ -1693,7 +1693,7 @@ msgstr "Копіювати посилання"
 
 #: snikket_web/templates/library.j2:104
 msgid "Invalid input"
-msgstr "Недействительный вход"
+msgstr "Недействительный ввод"
 
 #: snikket_web/templates/library.j2:145
 msgid "Can be used multiple times to create accounts on this Snikket service."
@@ -1796,7 +1796,7 @@ msgstr "Ваш адрес XMPP"
 
 #: snikket_web/templates/user_home.html:31
 msgid "Edit profile"
-msgstr "Реадктировать профиль"
+msgstr "Редактировать профиль"
 
 #: snikket_web/templates/user_home.html:33
 #: snikket_web/templates/user_manage_data.html:4
