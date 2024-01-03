@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: translations@snikket.org\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
 "PO-Revision-Date: 2023-12-17 22:49+0000\n"
 "Last-Translator: pep <pep@bouah.net>\n"
@@ -857,8 +857,7 @@ msgstr "Cercle"
 
 #: snikket_web/templates/admin_edit_invite.html:35
 msgid "The user will not be added to any circle and will have no contacts."
-msgstr ""
-"L’utilisateurice ne sera ajouté·e à aucun cercle et n  ’aura pas de contact."
+msgstr "L’utilisateurice ne sera ajouté·e à aucun cercle et n  ’aura pas de contact."
 
 #: snikket_web/templates/admin_edit_invite.html:40
 msgid "Contact"
@@ -896,8 +895,8 @@ msgstr ""
 #: snikket_web/templates/admin_edit_user.html:9
 msgid "Like normal users and can access the admin panel in the web portal."
 msgstr ""
-"Comme les utilisateurices normaux·ales, mais peuvent accéder au panneau d’"
-"administration dans le portail web."
+"Comme les utilisateurices normaux·ales, mais peuvent accéder au panneau "
+"d’administration dans le portail web."
 
 #: snikket_web/templates/admin_edit_user.html:20
 #: snikket_web/templates/admin_users.html:28
@@ -997,8 +996,8 @@ msgid ""
 "devices is necessary to troubleshoot issues. The button below reveals this "
 "(sensitive) information."
 msgstr ""
-"Dans certains cas, des informations additionnelles sur le compte de l’"
-"utilisateurice et les clients connectés sont nécessaires pour résoudre des "
+"Dans certains cas, des informations additionnelles sur le compte de "
+"l’utilisateurice et les clients connectés sont nécessaires pour résoudre des "
 "problèmes. Le bouton ci-dessous révèle ces informations sensibles."
 
 #: snikket_web/templates/admin_edit_user.html:95

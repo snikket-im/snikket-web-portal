@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: translations@snikket.org\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
 "PO-Revision-Date: 2023-12-17 22:49+0000\n"
 "Last-Translator: misiek <migelazur@mailbox.org>\n"

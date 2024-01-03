@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
-"Report-Msgid-Bugs-To: translations@snikket.org\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
 "PO-Revision-Date: 2024-01-03 16:08+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"

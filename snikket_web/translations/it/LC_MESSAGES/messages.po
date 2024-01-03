@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: translations@snikket.org\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
 "PO-Revision-Date: 2023-12-19 13:00+0000\n"
 "Last-Translator: riccio <unriccio@email.it>\n"
-"Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/"
-"web-portal/it/>\n"
+"Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/web-"
+"portal/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -932,7 +932,8 @@ msgstr ""
 #: snikket_web/templates/admin_edit_user.html:28
 msgid ""
 "If this was a mistake, you can cancel the deletion and restore the account."
-msgstr "Se è un errore puoi annullare la cancellazione e ripristinare l'utenza."
+msgstr ""
+"Se è un errore puoi annullare la cancellazione e ripristinare l'utenza."
 
 #: snikket_web/templates/admin_edit_user.html:34
 msgid "This user account is locked"
@@ -1481,8 +1482,8 @@ msgid ""
 "You can now safely close this page, or log in to the web portal to <a href="
 "\"%(login_url)s\">manage your account</a>."
 msgstr ""
-"Ora puoi chiudere questa pagina oppure collegarti al portale per <a href=\""
-"%(login_url)s\">gestire il tuo account</a>."
+"Ora puoi chiudere questa pagina oppure collegarti al portale per <a href="
+"\"%(login_url)s\">gestire il tuo account</a>."
 
 #: snikket_web/templates/invite_success.html:21
 msgid "Import successful"
@@ -1756,8 +1757,8 @@ msgid ""
 "Use of the Snikket apps is subject to the <a href=\"%(url)s\">Snikket Apps "
 "Privacy Policy</a>."
 msgstr ""
-"L'uso delle applicazioni Snikket è soggetto alla<a href=\"%(url)s\""
-">Informativa sulla protezione dati di Snikket</a>."
+"L'uso delle applicazioni Snikket è soggetto alla<a href=\"%(url)s"
+"\">Informativa sulla protezione dati di Snikket</a>."
 
 #: snikket_web/templates/policies.html:29
 #, python-format
