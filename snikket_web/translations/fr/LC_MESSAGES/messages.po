@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2023-12-17 22:49+0000\n"
+"PO-Revision-Date: 2024-01-04 10:17+0000\n"
 "Last-Translator: pep <pep@bouah.net>\n"
 "Language-Team: French <http://i18n.sotecware.net/projects/snikket/web-portal/"
 "fr/>\n"
@@ -36,7 +36,7 @@ msgstr "Niveau d’accès"
 
 #: snikket_web/admin.py:79
 msgid "Limited"
-msgstr "Limité"
+msgstr "Limité·e"
 
 #: snikket_web/admin.py:80
 msgid "Normal user"
@@ -383,7 +383,7 @@ msgstr "Personne"
 
 #: snikket_web/user.py:56
 msgid "Friends only"
-msgstr "Amis seulement"
+msgstr "Ami·e·s seulement"
 
 #: snikket_web/user.py:57
 msgid "Everyone"
@@ -649,8 +649,8 @@ msgid ""
 "Create a new invitation link to invite more users to your Snikket service by "
 "clicking the button below."
 msgstr ""
-"Créez une nouvelle invitation pour inviter d’autres utilisateurices sur "
-"votre instance Snikket en cliquant sur le bouton ci-dessous."
+"Créez une nouvelle invitation pour d’autres utilisateurices sur votre "
+"instance Snikket en cliquant sur le bouton ci-dessous."
 
 #: snikket_web/templates/admin_debug_user.html:8
 #, python-format
@@ -722,7 +722,7 @@ msgstr "Supprimer l’utilisateurice %(user_name)s"
 #: snikket_web/templates/admin_delete_user.html:6
 #: snikket_web/templates/admin_edit_user.html:74
 msgid "Delete user"
-msgstr "Supprimer un·e utilisateurice"
+msgstr "Supprimer cet·te utilisateurice"
 
 #: snikket_web/templates/admin_delete_user.html:8
 msgid "Are you sure you want to delete the following user?"
@@ -757,7 +757,7 @@ msgstr "Revenir à la liste des cercles"
 
 #: snikket_web/templates/admin_edit_circle.html:31
 msgid "Deleting a circle does not delete any users in the circle."
-msgstr "Supprimer un cercle ne supprime aucun utilisateurice dans le cercle."
+msgstr "Supprimer un cercle ne supprime aucun·e utilisateurice dans le cercle."
 
 #: snikket_web/templates/admin_edit_circle.html:38
 msgid "Group chats"
@@ -1837,7 +1837,7 @@ msgstr ""
 
 #: snikket_web/templates/user_manage_data.html:8
 msgid "Export account"
-msgstr "Exportation du compte"
+msgstr "Export du compte"
 
 #: snikket_web/templates/user_manage_data.html:9
 msgid ""
