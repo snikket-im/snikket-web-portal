@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2023-12-19 13:00+0000\n"
-"Last-Translator: riccio <unriccio@email.it>\n"
-"Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/web-"
-"portal/it/>\n"
+"PO-Revision-Date: 2024-01-04 10:17+0000\n"
+"Last-Translator: Roberto Resoli <roberto@resolutions.it>\n"
+"Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/"
+"web-portal/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -234,7 +234,7 @@ msgstr "Nuova chat di gruppo aggiunta alla cerchia"
 
 #: snikket_web/admin.py:736
 msgid "Message contents"
-msgstr "Contenuto dei messaggi"
+msgstr "Contenuto del messaggio"
 
 #: snikket_web/admin.py:742
 msgid "Only send to online users"
@@ -242,11 +242,11 @@ msgstr "Inviare solo agli utenti online"
 
 #: snikket_web/admin.py:746
 msgid "Post to all users"
-msgstr "Inviare a tutti gli utenti"
+msgstr "Invia a tutti gli utenti"
 
 #: snikket_web/admin.py:750
 msgid "Send preview to yourself"
-msgstr "Inviare una anteprima a te stesso"
+msgstr "Invia una anteprima a te stesso"
 
 #: snikket_web/admin.py:772
 msgid "Announcement sent!"
