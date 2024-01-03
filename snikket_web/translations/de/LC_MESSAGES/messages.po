@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2023-12-15 15:05+0000\n"
+"PO-Revision-Date: 2024-01-03 16:08+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language-Team: German <http://i18n.sotecware.net/projects/snikket/web-portal/"
 "de/>\n"
@@ -820,7 +820,7 @@ msgstr "Mehr Mitglieder einladen"
 
 #: snikket_web/templates/admin_edit_circle.html:102
 msgid "Add existing user"
-msgstr "Bestehenden Benuzter*in hinzufügen"
+msgstr "Bestehende*n Benutzer*in hinzufügen"
 
 #: snikket_web/templates/admin_edit_circle.html:113
 msgid "All users added"
