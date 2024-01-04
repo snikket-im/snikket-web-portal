@@ -76,7 +76,7 @@ class EditUserForm(BaseForm):
     role = wtforms.RadioField(
         _l("Access Level"),
         choices=[
-            ("prosody:restricted", _("Limited")),
+            ("prosody:restricted", _l("Limited")),
             ("prosody:registered", _l("Normal user")),
             ("prosody:admin", _l("Administrator")),
         ],
