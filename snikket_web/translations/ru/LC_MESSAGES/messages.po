@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2023-12-25 16:00+0000\n"
-"Last-Translator: Dmytro Vozniuk <plibnik@gmail.com>\n"
-"Language-Team: Russian <http://i18n.sotecware.net/projects/snikket/web-"
-"portal/ru/>\n"
+"PO-Revision-Date: 2024-01-04 10:17+0000\n"
+"Last-Translator: Andrey <Elisoandr@gmail.com>\n"
+"Language-Team: Russian <http://i18n.sotecware.net/projects/snikket/"
+"web-portal/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -544,7 +544,7 @@ msgstr "Вернуться на главную страницу"
 
 #: snikket_web/templates/admin_app.html:5
 msgid "Admin area"
-msgstr "Зона администрирования"
+msgstr "Панель администратора"
 
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:23
@@ -1007,7 +1007,7 @@ msgstr "Показать отладочную информацию"
 
 #: snikket_web/templates/admin_home.html:4
 msgid "Welcome to the admin panel!"
-msgstr "Добро пожаловать в административную панель!"
+msgstr "Добро пожаловать в панель администратора!"
 
 #: snikket_web/templates/admin_home.html:5
 #, python-format
@@ -1020,7 +1020,7 @@ msgstr "Пользователи"
 
 #: snikket_web/templates/admin_home.html:11
 msgid "Create password reset links or delete users."
-msgstr "Создайте ссылки для сброса пароля или удалите пользователей."
+msgstr "Создание ссылок для сброса паролей или удаления пользователей."
 
 #: snikket_web/templates/admin_home.html:15
 #: snikket_web/templates/admin_users.html:4
@@ -1192,7 +1192,7 @@ msgstr "Подключенные устройства"
 
 #: snikket_web/templates/admin_system.html:90
 msgid "Broadcast message"
-msgstr "Трансляция сообщения"
+msgstr "Трансляция сообщений"
 
 #: snikket_web/templates/admin_system.html:92
 msgid ""
@@ -1200,7 +1200,7 @@ msgid ""
 "Snikket server. Use it wisely."
 msgstr ""
 "Эта форма позволяет вам отправить сообщение всем пользователям, которые в "
-"данный момент находятся онлайн на вашем сервере Snikket. Использовать его "
+"данный момент находятся онлайн на вашем сервере Snikket. Используйте ее "
 "мудро."
 
 #: snikket_web/templates/admin_users.html:8
@@ -1689,7 +1689,7 @@ msgstr " (Ограниченный)"
 
 #: snikket_web/templates/library.j2:41
 msgid "Copy link"
-msgstr "Копіювати посилання"
+msgstr "Копировать ссылку"
 
 #: snikket_web/templates/library.j2:104
 msgid "Invalid input"
