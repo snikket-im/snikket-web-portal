@@ -76,7 +76,7 @@ class EditUserForm(BaseForm):
     role = wtforms.RadioField(
         _l("Access Level"),
         choices=[
-            ("prosody:restricted", _("Limited")),
+            ("prosody:restricted", _l("Limited")),
             ("prosody:registered", _l("Normal user")),
             ("prosody:admin", _l("Administrator")),
         ],
@@ -733,21 +733,21 @@ def get_system_stats() -> typing.MutableMapping[
 
 class AnnouncementForm(BaseForm):
     text = wtforms.StringField(
-        _("Message contents"),
+        _l("Message contents"),
         widget=wtforms.widgets.TextArea(),
         validators=[wtforms.validators.DataRequired()],
     )
 
     online_only = wtforms.BooleanField(
-        _("Only send to online users"),
+        _l("Only send to online users"),
     )
 
     action_post_all = wtforms.SubmitField(
-        _("Post to all users"),
+        _l("Post to all users"),
     )
 
     action_send_preview = wtforms.SubmitField(
-        _("Send preview to yourself"),
+        _l("Send preview to yourself"),
     )
 
 

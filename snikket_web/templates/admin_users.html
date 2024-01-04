@@ -27,7 +27,6 @@
 				{%- call action_button("edit", url_for(".edit_user", localpart=user.localpart), class="primary") -%}
 					{% trans user_name=user.localpart %}Edit user {{ user_name }}{% endtrans %}
 				{%- endcall -%}
-				</form>
 			</td>
 		</tr>
 {% endfor %}
