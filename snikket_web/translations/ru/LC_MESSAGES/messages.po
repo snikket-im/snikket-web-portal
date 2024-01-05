@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
-"PO-Revision-Date: 2024-01-04 10:17+0000\n"
+"PO-Revision-Date: 2024-01-06 05:01+0000\n"
 "Last-Translator: Andrey <Elisoandr@gmail.com>\n"
 "Language-Team: Russian <http://i18n.sotecware.net/projects/snikket/"
 "web-portal/ru/>\n"
@@ -1814,7 +1814,7 @@ msgstr ""
 
 #: snikket_web/templates/user_home.html:43
 msgid "Admin panel"
-msgstr "Административная панель"
+msgstr "Панель администратора"
 
 #: snikket_web/templates/user_logout.html:5
 msgid "Sign out of the Snikket Web Portal"
