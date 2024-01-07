@@ -29,6 +29,7 @@ from . import xmpputil
 from .xmpputil import split_jid
 
 
+SCOPE_RESTRICTED = "prosody:restricted"
 SCOPE_DEFAULT = "prosody:registered"
 SCOPE_ADMIN = "prosody:admin"
 
@@ -399,7 +400,7 @@ class ProsodyClient:
         request.add_field("password", password)
         request.add_field(
             "scope",
-            " ".join([SCOPE_DEFAULT, SCOPE_ADMIN])
+            " ".join([SCOPE_RESTRICTED, SCOPE_DEFAULT, SCOPE_ADMIN])
         )
 
         self.logger.debug("sending OAuth2 request (payload omitted)")
