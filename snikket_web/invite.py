@@ -116,6 +116,10 @@ class RegisterForm(BaseForm):
 
     password = wtforms.PasswordField(
         _l("Password"),
+        validators=[
+            wtforms.validators.InputRequired(),
+            wtforms.validators.Length(min=10),
+        ],
     )
 
     password_confirm = wtforms.PasswordField(
@@ -184,6 +188,10 @@ async def register(id_: str) -> typing.Union[str, werkzeug.Response]:
 class ResetForm(BaseForm):
     password = wtforms.PasswordField(
         _l("Password"),
+        validators=[
+            wtforms.validators.InputRequired(),
+            wtforms.validators.Length(min=10),
+        ],
     )
 
     password_confirm = wtforms.PasswordField(
