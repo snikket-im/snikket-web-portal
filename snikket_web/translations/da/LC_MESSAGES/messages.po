@@ -26,7 +26,7 @@ msgid "Login name"
 msgstr "Login-navn"
 
 #: snikket_web/admin.py:73 snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/user.py:63
+#: snikket_web/user.py:69
 msgid "Display name"
 msgstr "Kaldenavn"
 
@@ -297,48 +297,48 @@ msgstr ""
 msgid "Username"
 msgstr "Brugernavn"
 
-#: snikket_web/invite.py:118 snikket_web/invite.py:186 snikket_web/main.py:43
+#: snikket_web/invite.py:118 snikket_web/invite.py:190 snikket_web/main.py:43
 msgid "Password"
 msgstr "Adgangskode"
 
-#: snikket_web/invite.py:122 snikket_web/invite.py:190
+#: snikket_web/invite.py:126 snikket_web/invite.py:198
 msgid "Confirm password"
 msgstr "Bekræft adgangskode"
 
-#: snikket_web/invite.py:126 snikket_web/invite.py:194
+#: snikket_web/invite.py:130 snikket_web/invite.py:202
 msgid "The passwords must match."
 msgstr "Adgangskoderne skal matche."
 
-#: snikket_web/invite.py:131
+#: snikket_web/invite.py:135
 msgid "Create account"
 msgstr "Opret konto"
 
-#: snikket_web/invite.py:158
+#: snikket_web/invite.py:162
 msgid "That username is already taken."
 msgstr "Det brugernavn er allerede taget."
 
-#: snikket_web/invite.py:162 snikket_web/invite.py:227
+#: snikket_web/invite.py:166 snikket_web/invite.py:235
 msgid "Registration was declined for unknown reasons."
 msgstr "Registrering blev afvist af ukendte årsager."
 
-#: snikket_web/invite.py:166
+#: snikket_web/invite.py:170
 msgid "The username is not valid."
 msgstr "Brugernavnet er ikke gyldigt."
 
-#: snikket_web/invite.py:199 snikket_web/templates/user_home.html:32
+#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "Ændr adgangskode"
 
-#: snikket_web/invite.py:246
+#: snikket_web/invite.py:254
 msgid "Account data file"
 msgstr "Kontodatafil"
 
-#: snikket_web/invite.py:250
+#: snikket_web/invite.py:258
 msgid "Import data"
 msgstr "Importer data"
 
-#: snikket_web/invite.py:271
+#: snikket_web/invite.py:279
 #, python-format
 msgid ""
 "The account data you tried to import is in an unknown format. Please upload "
@@ -347,8 +347,8 @@ msgstr ""
 "De kontodata, du forsøgte at importere, er i et ukendt format. Upload en XML-"
 "fil i XEP-0227-format (forudsat format: %(mimetype)s)."
 
-#: snikket_web/invite.py:291 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:178
+#: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
+#: snikket_web/user.py:184
 msgid "Error"
 msgstr "Fejl"
 
@@ -376,59 +376,59 @@ msgstr "Nuværende adgangskode"
 msgid "New password"
 msgstr "Ny adgangskode"
 
-#: snikket_web/user.py:39
+#: snikket_web/user.py:42
 msgid "Confirm new password"
 msgstr "Bekræft ny adgangskode"
 
-#: snikket_web/user.py:43
+#: snikket_web/user.py:47
 msgid "The new passwords must match."
 msgstr "Den nye adgangskode skal matche."
 
-#: snikket_web/user.py:50
+#: snikket_web/user.py:56
 msgid "Sign out"
 msgstr "Log ud"
 
-#: snikket_web/user.py:55
+#: snikket_web/user.py:61
 msgid "Nobody"
 msgstr "Ingen"
 
-#: snikket_web/user.py:56
+#: snikket_web/user.py:62
 msgid "Friends only"
 msgstr "Kun venner"
 
-#: snikket_web/user.py:57
+#: snikket_web/user.py:63
 msgid "Everyone"
 msgstr "Alle"
 
-#: snikket_web/user.py:67
+#: snikket_web/user.py:73
 msgid "Avatar"
 msgstr "Avatar"
 
-#: snikket_web/user.py:71
+#: snikket_web/user.py:77
 msgid "Profile visibility"
 msgstr "Profilsynlighed"
 
-#: snikket_web/user.py:76
+#: snikket_web/user.py:82
 msgid "Update profile"
 msgstr "Opdater profil"
 
-#: snikket_web/user.py:82
+#: snikket_web/user.py:88
 msgid "Account data"
 msgstr "Kontodata"
 
-#: snikket_web/user.py:86
+#: snikket_web/user.py:92
 msgid "Upload"
 msgstr "Upload"
 
-#: snikket_web/user.py:111
+#: snikket_web/user.py:117
 msgid "Incorrect password."
 msgstr "Forkert adgangskode."
 
-#: snikket_web/user.py:115
+#: snikket_web/user.py:121
 msgid "Password changed"
 msgstr "Adgangskode ændret"
 
-#: snikket_web/user.py:123
+#: snikket_web/user.py:129
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
@@ -436,15 +436,15 @@ msgstr ""
 "Den valgte avatar er for stor. For at kunne uploade større avatarer skal du "
 "bruge appen."
 
-#: snikket_web/user.py:170
+#: snikket_web/user.py:176
 msgid "Profile updated"
 msgstr "Profil opdateret"
 
-#: snikket_web/user.py:184
+#: snikket_web/user.py:190
 msgid "Export"
 msgstr "Exporter"
 
-#: snikket_web/user.py:202
+#: snikket_web/user.py:208
 msgid "You currently have no account data to export."
 msgstr "Du har i øjeblikket ingen kontodata at eksportere."
 

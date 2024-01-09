@@ -26,7 +26,7 @@ msgid "Login name"
 msgstr "Nama login"
 
 #: snikket_web/admin.py:73 snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/user.py:63
+#: snikket_web/user.py:69
 msgid "Display name"
 msgstr "Nama tampilan"
 
@@ -285,48 +285,48 @@ msgstr ""
 msgid "Username"
 msgstr "Nama pengguna"
 
-#: snikket_web/invite.py:118 snikket_web/invite.py:186 snikket_web/main.py:43
+#: snikket_web/invite.py:118 snikket_web/invite.py:190 snikket_web/main.py:43
 msgid "Password"
 msgstr "Kata sandi"
 
-#: snikket_web/invite.py:122 snikket_web/invite.py:190
+#: snikket_web/invite.py:126 snikket_web/invite.py:198
 msgid "Confirm password"
 msgstr "Konfirmasi kata sandi"
 
-#: snikket_web/invite.py:126 snikket_web/invite.py:194
+#: snikket_web/invite.py:130 snikket_web/invite.py:202
 msgid "The passwords must match."
 msgstr "Kata sandi harus cocok."
 
-#: snikket_web/invite.py:131
+#: snikket_web/invite.py:135
 msgid "Create account"
 msgstr "Buat akun"
 
-#: snikket_web/invite.py:158
+#: snikket_web/invite.py:162
 msgid "That username is already taken."
 msgstr "Nama pengguna itu sudah dipakai."
 
-#: snikket_web/invite.py:162 snikket_web/invite.py:227
+#: snikket_web/invite.py:166 snikket_web/invite.py:235
 msgid "Registration was declined for unknown reasons."
 msgstr "Pendaftaran ditolak karena alasan yang tidak diketahui."
 
-#: snikket_web/invite.py:166
+#: snikket_web/invite.py:170
 msgid "The username is not valid."
 msgstr "Nama pengguna tidak valid."
 
-#: snikket_web/invite.py:199 snikket_web/templates/user_home.html:32
+#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "Ganti kata sandi"
 
-#: snikket_web/invite.py:246
+#: snikket_web/invite.py:254
 msgid "Account data file"
 msgstr "File data akun"
 
-#: snikket_web/invite.py:250
+#: snikket_web/invite.py:258
 msgid "Import data"
 msgstr "Impor data"
 
-#: snikket_web/invite.py:271
+#: snikket_web/invite.py:279
 #, python-format
 msgid ""
 "The account data you tried to import is in an unknown format. Please upload "
@@ -335,8 +335,8 @@ msgstr ""
 "Data akun yang coba diimpor dalam format yang tidak dikenal. Harap unggah "
 "file XML dalam format XEP-0227 (format yang disediakan: %(mimetype)s)."
 
-#: snikket_web/invite.py:291 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:178
+#: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
+#: snikket_web/user.py:184
 msgid "Error"
 msgstr "Kesalahan"
 
@@ -364,59 +364,59 @@ msgstr "Kata sandi sekarang"
 msgid "New password"
 msgstr "Kata sandi baru"
 
-#: snikket_web/user.py:39
+#: snikket_web/user.py:42
 msgid "Confirm new password"
 msgstr "Konfirmasi kata sandi"
 
-#: snikket_web/user.py:43
+#: snikket_web/user.py:47
 msgid "The new passwords must match."
 msgstr "Kata sandi baru harus cocok."
 
-#: snikket_web/user.py:50
+#: snikket_web/user.py:56
 msgid "Sign out"
 msgstr "Keluar"
 
-#: snikket_web/user.py:55
+#: snikket_web/user.py:61
 msgid "Nobody"
 msgstr "Tak seorangpun"
 
-#: snikket_web/user.py:56
+#: snikket_web/user.py:62
 msgid "Friends only"
 msgstr "Hanya teman"
 
-#: snikket_web/user.py:57
+#: snikket_web/user.py:63
 msgid "Everyone"
 msgstr "Semua orang"
 
-#: snikket_web/user.py:67
+#: snikket_web/user.py:73
 msgid "Avatar"
 msgstr "Gambar profil"
 
-#: snikket_web/user.py:71
+#: snikket_web/user.py:77
 msgid "Profile visibility"
 msgstr "Visibilitas profil"
 
-#: snikket_web/user.py:76
+#: snikket_web/user.py:82
 msgid "Update profile"
 msgstr "Perbarui profil"
 
-#: snikket_web/user.py:82
+#: snikket_web/user.py:88
 msgid "Account data"
 msgstr "Data akun"
 
-#: snikket_web/user.py:86
+#: snikket_web/user.py:92
 msgid "Upload"
 msgstr "Unggah"
 
-#: snikket_web/user.py:111
+#: snikket_web/user.py:117
 msgid "Incorrect password."
 msgstr "Kata sandi salah."
 
-#: snikket_web/user.py:115
+#: snikket_web/user.py:121
 msgid "Password changed"
 msgstr "Kata sandi diganti"
 
-#: snikket_web/user.py:123
+#: snikket_web/user.py:129
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
@@ -424,15 +424,15 @@ msgstr ""
 "Avatar yang dipilih terlalu besar. Untuk dapat mengunggah avatar yang lebih "
 "besar, sila gunakan aplikasi."
 
-#: snikket_web/user.py:170
+#: snikket_web/user.py:176
 msgid "Profile updated"
 msgstr "Profil diperbarui"
 
-#: snikket_web/user.py:184
+#: snikket_web/user.py:190
 msgid "Export"
 msgstr "Ekspor"
 
-#: snikket_web/user.py:202
+#: snikket_web/user.py:208
 msgid "You currently have no account data to export."
 msgstr "Anda tidak memiliki data akun untuk diekspor."
 

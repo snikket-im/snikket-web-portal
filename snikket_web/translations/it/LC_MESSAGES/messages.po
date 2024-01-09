@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: translations@snikket.org\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-12-15 15:03+0000\n"
 "PO-Revision-Date: 2024-01-04 10:17+0000\n"
 "Last-Translator: Roberto Resoli <roberto@resolutions.it>\n"
-"Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/"
-"web-portal/it/>\n"
+"Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/web-"
+"portal/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,7 +26,7 @@ msgid "Login name"
 msgstr "Nome utente"
 
 #: snikket_web/admin.py:73 snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/user.py:63
+#: snikket_web/user.py:69
 msgid "Display name"
 msgstr "Nome visualizzato"
 
@@ -285,48 +285,48 @@ msgstr ""
 msgid "Username"
 msgstr "Nome utente"
 
-#: snikket_web/invite.py:118 snikket_web/invite.py:186 snikket_web/main.py:43
+#: snikket_web/invite.py:118 snikket_web/invite.py:190 snikket_web/main.py:43
 msgid "Password"
 msgstr "Password"
 
-#: snikket_web/invite.py:122 snikket_web/invite.py:190
+#: snikket_web/invite.py:126 snikket_web/invite.py:198
 msgid "Confirm password"
 msgstr "Conferma password"
 
-#: snikket_web/invite.py:126 snikket_web/invite.py:194
+#: snikket_web/invite.py:130 snikket_web/invite.py:202
 msgid "The passwords must match."
 msgstr "Le password devono essere identiche."
 
-#: snikket_web/invite.py:131
+#: snikket_web/invite.py:135
 msgid "Create account"
 msgstr "Crea utenza"
 
-#: snikket_web/invite.py:158
+#: snikket_web/invite.py:162
 msgid "That username is already taken."
 msgstr "Nome utente già in uso."
 
-#: snikket_web/invite.py:162 snikket_web/invite.py:227
+#: snikket_web/invite.py:166 snikket_web/invite.py:235
 msgid "Registration was declined for unknown reasons."
 msgstr "Registrazione rifiutata per motivi sconosciuti."
 
-#: snikket_web/invite.py:166
+#: snikket_web/invite.py:170
 msgid "The username is not valid."
 msgstr "Nome utente non valido."
 
-#: snikket_web/invite.py:199 snikket_web/templates/user_home.html:32
+#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "Cambia password"
 
-#: snikket_web/invite.py:246
+#: snikket_web/invite.py:254
 msgid "Account data file"
 msgstr "File con i dati dell'utenza"
 
-#: snikket_web/invite.py:250
+#: snikket_web/invite.py:258
 msgid "Import data"
 msgstr "Importa i dati"
 
-#: snikket_web/invite.py:271
+#: snikket_web/invite.py:279
 #, python-format
 msgid ""
 "The account data you tried to import is in an unknown format. Please upload "
@@ -336,8 +336,8 @@ msgstr ""
 "sconosciuto. Per favore, carica un file XML in formato XEP-0227 (formato "
 "fornito: %(mimetype)s)."
 
-#: snikket_web/invite.py:291 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:178
+#: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
+#: snikket_web/user.py:184
 msgid "Error"
 msgstr "Errore"
 
@@ -365,59 +365,59 @@ msgstr "Password attuale"
 msgid "New password"
 msgstr "Nuova password"
 
-#: snikket_web/user.py:39
+#: snikket_web/user.py:42
 msgid "Confirm new password"
 msgstr "Conferma nuova password"
 
-#: snikket_web/user.py:43
+#: snikket_web/user.py:47
 msgid "The new passwords must match."
 msgstr "Le nuove password devono essere identiche."
 
-#: snikket_web/user.py:50
+#: snikket_web/user.py:56
 msgid "Sign out"
 msgstr "Esci"
 
-#: snikket_web/user.py:55
+#: snikket_web/user.py:61
 msgid "Nobody"
 msgstr "Nessuno"
 
-#: snikket_web/user.py:56
+#: snikket_web/user.py:62
 msgid "Friends only"
 msgstr "Solo amici"
 
-#: snikket_web/user.py:57
+#: snikket_web/user.py:63
 msgid "Everyone"
 msgstr "Chiunque"
 
-#: snikket_web/user.py:67
+#: snikket_web/user.py:73
 msgid "Avatar"
 msgstr "Avatar"
 
-#: snikket_web/user.py:71
+#: snikket_web/user.py:77
 msgid "Profile visibility"
 msgstr "Visibilità del profilo"
 
-#: snikket_web/user.py:76
+#: snikket_web/user.py:82
 msgid "Update profile"
 msgstr "Modifica profilo"
 
-#: snikket_web/user.py:82
+#: snikket_web/user.py:88
 msgid "Account data"
 msgstr "Dati dell'utenza"
 
-#: snikket_web/user.py:86
+#: snikket_web/user.py:92
 msgid "Upload"
 msgstr "Carica"
 
-#: snikket_web/user.py:111
+#: snikket_web/user.py:117
 msgid "Incorrect password."
 msgstr "Password errata."
 
-#: snikket_web/user.py:115
+#: snikket_web/user.py:121
 msgid "Password changed"
 msgstr "Password cambiata"
 
-#: snikket_web/user.py:123
+#: snikket_web/user.py:129
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
@@ -425,15 +425,15 @@ msgstr ""
 "L'avatar scelto è troppo grande. Utilizza direttamente l'applicazione "
 "Snikket per caricare un avatar così grande."
 
-#: snikket_web/user.py:170
+#: snikket_web/user.py:176
 msgid "Profile updated"
 msgstr "Profilo aggiornato"
 
-#: snikket_web/user.py:184
+#: snikket_web/user.py:190
 msgid "Export"
 msgstr "Esportare"
 
-#: snikket_web/user.py:202
+#: snikket_web/user.py:208
 msgid "You currently have no account data to export."
 msgstr "Al momento non hai dati utente da esportare."
 
