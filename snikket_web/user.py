@@ -32,16 +32,22 @@ class ChangePasswordForm(BaseForm):
 
     new_password = wtforms.PasswordField(
         _l("New password"),
-        validators=[wtforms.validators.InputRequired()]
+        validators=[
+            wtforms.validators.InputRequired(),
+            wtforms.validators.Length(min=10),
+        ]
     )
 
     new_password_confirm = wtforms.PasswordField(
         _l("Confirm new password"),
-        validators=[wtforms.validators.InputRequired(),
-                    wtforms.validators.EqualTo(
-                        "new_password",
-                        _l("The new passwords must match.")
-                    )]
+        validators=[
+            wtforms.validators.InputRequired(),
+            wtforms.validators.EqualTo(
+                "new_password",
+                _l("The new passwords must match.")
+            ),
+            wtforms.validators.Length(min=10),
+        ]
     )
 
 

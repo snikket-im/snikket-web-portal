@@ -909,7 +909,7 @@ class ProsodyClient:
                 self.session_address,
                 current_password,
             )
-            await self._xml_iq_call(
+            password_changed = await self._xml_iq_call(
                 session,
                 xmpputil.make_password_change_request(
                     self.session_address,
@@ -920,7 +920,7 @@ class ProsodyClient:
                 },
                 sensitive=True,
             )
-            # TODO: error handling
+            xmpputil.extract_iq_reply(password_changed)
             # TODO: obtain a new token using the new password to allow the
             # server to expire/revoke all tokens on password change.
             self._store_token_in_session(token_info)
