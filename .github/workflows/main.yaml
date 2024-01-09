@@ -69,7 +69,7 @@ jobs:
           sed -ri '/^"POT-Creation-Date: /d' snikket_web/translations/messages.pot
           git add snikket_web/translations/messages.pot
           make extract_translations
-          sed -ri '/^"POT-Creation-Date: /d' snikket_web/translations/messages.pot
+          sed -ri '/^"POT-Creation-Date: /d;/^"Generated-By: /d' snikket_web/translations/messages.pot
           git diff --exit-code --color -- snikket_web/translations/messages.pot
 
 
