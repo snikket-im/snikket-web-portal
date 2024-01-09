@@ -47,7 +47,7 @@
 	<tbody>
 {%- for chat in circle_chats -%}
 		<tr>
-			<td class="collapsible">{% call value_or_hint(chat.name) %}{% endcall %}</td>
+			<td>{% call value_or_hint(chat.name) %}{% endcall %}</td>
 			<td class="nowrap">
 				{%- call custom_form_button("delete", form.action_remove_group_chat.name, chat.id_, class="primary danger", slim=True) -%}
 					{% trans name=chat.name %}Delete group chat '{{ name }}'{% endtrans %}
