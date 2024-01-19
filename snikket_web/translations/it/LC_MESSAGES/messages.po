@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2024-01-08 22:58+0000\n"
-"PO-Revision-Date: 2024-01-04 10:17+0000\n"
-"Last-Translator: Roberto Resoli <roberto@resolutions.it>\n"
-"Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/web-"
-"portal/it/>\n"
+"PO-Revision-Date: 2024-01-20 23:01+0000\n"
+"Last-Translator: Federico <federico@tebaldi.eu>\n"
+"Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/"
+"web-portal/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -779,7 +779,7 @@ msgstr "Elimina la chat di gruppo %(name)s"
 
 #: snikket_web/templates/admin_edit_circle.html:61
 msgid "This circle currently has no group chats."
-msgstr "Al momento questa cerchia non chat di gruppo."
+msgstr "Al momento questa cerchia non ha una chat di gruppo."
 
 #: snikket_web/templates/admin_edit_circle.html:64
 msgid "Add group chat"
