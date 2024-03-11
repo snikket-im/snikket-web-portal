@@ -120,6 +120,14 @@ class AdminUserInfo:
             roles.extend(data.get("secondary_roles", []))
         except KeyError:
             roles = data.get("roles")
+        avatar_info: typing.List[AvatarMetadata] = []
+        for avatar in data.get("avatar_info", []):
+            # Ignore somehow broken avatars.
+            try:
+                avatar_metadata = AvatarMetadata.from_api_response(avatar)
+            except KeyError:
+                pass
+            avatar_info.append(avatar_metadata)
         return cls(
             localpart=data["username"],
             display_name=data.get("display_name") or None,
@@ -131,10 +139,7 @@ class AdminUserInfo:
             deletion_request=UserDeletionRequestInfo.from_api_response(
                 data.get("deletion_request")
             ),
-            avatar_info=[
-                AvatarMetadata.from_api_response(avatar_info)
-                for avatar_info in data.get("avatar_info", [])
-            ],
+            avatar_info=avatar_info,
         )
 
 
