@@ -6,320 +6,331 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2024-01-08 22:58+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-03-31 22:27+0000\n"
+"Last-Translator: Sergio Moreno López <fruche@pm.me>\n"
+"Language-Team: Spanish <http://i18n.sotecware.net/projects/snikket/"
+"web-portal/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 "Generated-By: Babel 2.12.1\n"
 
 #: snikket_web/admin.py:69 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_edit_circle.html:73
 msgid "Login name"
-msgstr ""
+msgstr "Nombre de inicio de sesión"
 
 #: snikket_web/admin.py:73 snikket_web/templates/admin_delete_user.html:12
 #: snikket_web/user.py:69
 msgid "Display name"
-msgstr ""
+msgstr "Nombre público"
 
 #: snikket_web/admin.py:77 snikket_web/templates/admin_edit_user.html:53
 msgid "Access Level"
-msgstr ""
+msgstr "Nivel de acceso"
 
 #: snikket_web/admin.py:79
 msgid "Limited"
-msgstr ""
+msgstr "Limitado"
 
 #: snikket_web/admin.py:80
 msgid "Normal user"
-msgstr ""
+msgstr "Usuario normal"
 
 #: snikket_web/admin.py:81
 msgid "Administrator"
-msgstr ""
+msgstr "Administrador"
 
 #: snikket_web/admin.py:86
 msgid "Update user"
-msgstr ""
+msgstr "Actualizar usuario"
 
 #: snikket_web/admin.py:90
 msgid "Restore account"
-msgstr ""
+msgstr "Restaurar cuenta"
 
 #: snikket_web/admin.py:94
 msgid "Unlock account"
-msgstr ""
+msgstr "Desbloquear cuenta"
 
 #: snikket_web/admin.py:98
 msgid "Create password reset link"
-msgstr ""
+msgstr "Crear enlace de reseteo de contraseña"
 
 #: snikket_web/admin.py:116
 msgid "Password reset link created"
-msgstr ""
+msgstr "Enlace de reseteo de contraseña creado"
 
 #: snikket_web/admin.py:128
 msgid "User account restored"
 msgstr ""
+"Mostrado como el contenido de una ventana emergente de alerta de \"operación "
+"correcta\", después de que la cuenta de usuario haya sido restaurada "
+"correctamente．"
 
 #: snikket_web/admin.py:133
 msgid "User account unlocked"
 msgstr ""
+"Mostrado como el contenido de una ventana de alerta de \"operación correcta\""
+", después de que la cuenta de usuario haya sido desbloqueada correctamente．"
 
 #: snikket_web/admin.py:140
 msgid "Could not restore user account"
-msgstr ""
+msgstr "No ha sido posible restaurar la cuenta de usuario"
 
 #: snikket_web/admin.py:145
 msgid "Could not unlock user account"
-msgstr ""
+msgstr "No ha sido posible desbloquear la cuenta de usuario"
 
 #: snikket_web/admin.py:157
 msgid "User information updated."
-msgstr ""
+msgstr "Información de usuario actualizada."
 
 #: snikket_web/admin.py:179
 msgid "Delete user permanently"
-msgstr ""
+msgstr "Borrar usuario permanentemente"
 
 #: snikket_web/admin.py:192
 msgid "User deleted"
-msgstr ""
+msgstr "Usuario borrado"
 
 #: snikket_web/admin.py:230
 msgid "Password reset link not found"
-msgstr ""
+msgstr "Enlace de restablecimiento de contraseña no encontrado"
 
 #: snikket_web/admin.py:242
 msgid "Password reset link deleted"
-msgstr ""
+msgstr "Enlace de restablecimiento de contraseña borrado"
 
 #: snikket_web/admin.py:262
 msgid "Invite to circle"
-msgstr ""
+msgstr "Invitar a círculo"
 
 #: snikket_web/admin.py:268
 msgid "At least one circle must be selected"
-msgstr ""
+msgstr "Al menos un círculo ha de ser seleccionado"
 
 #: snikket_web/admin.py:273
 msgid "Valid for"
-msgstr ""
+msgstr "Válido para"
 
 #: snikket_web/admin.py:275
 msgid "One hour"
-msgstr ""
+msgstr "Una hora"
 
 #: snikket_web/admin.py:276
 msgid "Twelve hours"
-msgstr ""
+msgstr "Doce horas"
 
 #: snikket_web/admin.py:277
 msgid "One day"
-msgstr ""
+msgstr "Un día"
 
 #: snikket_web/admin.py:278
 msgid "One week"
-msgstr ""
+msgstr "Una semana"
 
 #: snikket_web/admin.py:279
 msgid "Four weeks"
-msgstr ""
+msgstr "Cuatro semanas"
 
 #: snikket_web/admin.py:285 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
-msgstr ""
+msgstr "Tipo de invitación"
 
 #: snikket_web/admin.py:287 snikket_web/templates/library.j2:139
 msgid "Individual"
-msgstr ""
+msgstr "Individual"
 
 #: snikket_web/admin.py:288 snikket_web/templates/library.j2:137
 msgid "Group"
-msgstr ""
+msgstr "Grupo"
 
 #: snikket_web/admin.py:294
 msgid "New invitation link"
-msgstr ""
+msgstr "Nuevo enlace de invitación"
 
 #: snikket_web/admin.py:356
 msgid "Revoke"
-msgstr ""
+msgstr "Revocar"
 
 #: snikket_web/admin.py:380
 msgid "Invitation created"
-msgstr ""
+msgstr "Invitación creada"
 
 #: snikket_web/admin.py:396
 msgid "No such invitation exists"
-msgstr ""
+msgstr "No existe tal invitación"
 
 #: snikket_web/admin.py:411
 msgid "Invitation revoked"
-msgstr ""
+msgstr "Invitación revocada"
 
 #: snikket_web/admin.py:428 snikket_web/admin.py:476
 #: snikket_web/templates/admin_delete_circle.html:10
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #: snikket_web/admin.py:433 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
-msgstr ""
+msgstr "Crear círculo"
 
 #: snikket_web/admin.py:463
 msgid "Circle created"
-msgstr ""
+msgstr "Círculo creado"
 
 #: snikket_web/admin.py:481
 msgid "Select user"
-msgstr ""
+msgstr "Seleccionar usuario"
 
 #: snikket_web/admin.py:486
 msgid "Update circle"
-msgstr ""
+msgstr "Actualizar círculo"
 
 #: snikket_web/admin.py:492
 msgid "Add user"
-msgstr ""
+msgstr "Añadir usuario"
 
 #: snikket_web/admin.py:510 snikket_web/admin.py:609 snikket_web/admin.py:657
 msgid "No such circle exists"
-msgstr ""
+msgstr "No existe tal círculo"
 
 #: snikket_web/admin.py:547
 msgid "Circle data updated"
-msgstr ""
+msgstr "Datos de círculo actualizados"
 
 #: snikket_web/admin.py:557
 msgid "User added to circle"
-msgstr ""
+msgstr "Usuario añadido al círculo"
 
 #: snikket_web/admin.py:566
 msgid "User removed from circle"
-msgstr ""
+msgstr "Usuario borrado del círculo"
 
 #: snikket_web/admin.py:575
 msgid "Chat removed from circle"
-msgstr ""
+msgstr "Conversación borrada del círculo"
 
 #: snikket_web/admin.py:593
 msgid "Delete circle permanently"
-msgstr ""
+msgstr "Borrar círculo permanentemente"
 
 #: snikket_web/admin.py:620
 msgid "Circle deleted"
-msgstr ""
+msgstr "Círculo borrado"
 
 #: snikket_web/admin.py:634
 msgid "Group chat name"
-msgstr ""
+msgstr "Nombre de conversación grupal"
 
 #: snikket_web/admin.py:639
 msgid "Create group chat"
-msgstr ""
+msgstr "Crear conversación grupal"
 
 #: snikket_web/admin.py:669
 msgid "New group chat added to circle"
-msgstr ""
+msgstr "Nueva conversación grupal añadida al círculo"
 
 #: snikket_web/admin.py:736
 msgid "Message contents"
-msgstr ""
+msgstr "Contenido del mensaje"
 
 #: snikket_web/admin.py:742
 msgid "Only send to online users"
-msgstr ""
+msgstr "Enviar sólo a usuarios conectados"
 
 #: snikket_web/admin.py:746
 msgid "Post to all users"
-msgstr ""
+msgstr "Enviar a todos los usuarios"
 
 #: snikket_web/admin.py:750
 msgid "Send preview to yourself"
-msgstr ""
+msgstr "Enviar vista preliminar a uno mismo"
 
 #: snikket_web/admin.py:772
 msgid "Announcement sent!"
-msgstr ""
+msgstr "¡Anuncio enviado!"
 
 #: snikket_web/infra.py:56
 msgid "Main"
-msgstr ""
+msgstr "Principal"
 
 #: snikket_web/infra.py:78
 msgid "Never"
-msgstr ""
+msgstr "Nunca"
 
 #: snikket_web/infra.py:95
 msgid "Today"
-msgstr ""
+msgstr "Hoy"
 
 #: snikket_web/infra.py:101
 msgid "Yesterday"
-msgstr ""
+msgstr "Ayer"
 
 #: snikket_web/infra.py:105
 #, python-format
 msgid "%(time)s ago"
-msgstr ""
+msgstr "Hace %(time)s"
 
 #: snikket_web/invite.py:35
 msgid ""
 "The account data you tried to import is too large to upload. Please "
 "contact your Snikket operator."
 msgstr ""
+"El tamaño de los datos de cuenta que han tratado de ser importados es "
+"demasiado grande para ser subidos. Por favor, contacte con su operador de "
+"Snikket."
 
 #: snikket_web/invite.py:114
 msgid "Username"
-msgstr ""
+msgstr "Nombre de usuario"
 
 #: snikket_web/invite.py:118 snikket_web/invite.py:190 snikket_web/main.py:43
 msgid "Password"
-msgstr ""
+msgstr "Contraseña"
 
 #: snikket_web/invite.py:126 snikket_web/invite.py:198
 msgid "Confirm password"
-msgstr ""
+msgstr "Confirme contraseña"
 
 #: snikket_web/invite.py:130 snikket_web/invite.py:202
 msgid "The passwords must match."
-msgstr ""
+msgstr "Las contraseñas han de coincidir."
 
 #: snikket_web/invite.py:135
 msgid "Create account"
-msgstr ""
+msgstr "Crear cuenta"
 
 #: snikket_web/invite.py:162
 msgid "That username is already taken."
-msgstr ""
+msgstr "Ese nombre de usuario está ya registrado."
 
 #: snikket_web/invite.py:166 snikket_web/invite.py:235
 msgid "Registration was declined for unknown reasons."
-msgstr ""
+msgstr "El registro ha sido rechazado debido a razones desconocidas."
 
 #: snikket_web/invite.py:170
 msgid "The username is not valid."
-msgstr ""
+msgstr "El nombre de usuario no es válido."
 
 #: snikket_web/invite.py:207 snikket_web/templates/user_home.html:32
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
-msgstr ""
+msgstr "Cambiar contraseña"
 
 #: snikket_web/invite.py:254
 msgid "Account data file"
-msgstr ""
+msgstr "Archivo de datos de cuenta"
 
 #: snikket_web/invite.py:258
 msgid "Import data"
-msgstr ""
+msgstr "Importar datos"
 
 #: snikket_web/invite.py:279
 #, python-format
@@ -327,124 +338,131 @@ msgid ""
 "The account data you tried to import is in an unknown format. Please "
 "upload an XML file in XEP-0227 format (provided format: %(mimetype)s)."
 msgstr ""
+"Los datos de cuenta que han tratado de ser importados están en un formato "
+"desconocido. Por favor, suba un archivo XML con formato XEP-0227 (formato "
+"facilitado: %(mimetype)s)."
 
 #: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
 #: snikket_web/user.py:184
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 #: snikket_web/main.py:38
 msgid "Address"
-msgstr ""
+msgstr "Dirección"
 
 #: snikket_web/main.py:48
 msgid "Sign in"
-msgstr ""
+msgstr "Iniciar sesión"
 
 #: snikket_web/main.py:57
 msgid "Invalid username or password."
-msgstr ""
+msgstr "Nombre de usuario o contraseña inválido."
 
 #: snikket_web/main.py:85
 msgid "Login successful!"
-msgstr ""
+msgstr "¡Acceso correcto!"
 
 #: snikket_web/user.py:29
 msgid "Current password"
-msgstr ""
+msgstr "Contraseña actual"
 
 #: snikket_web/user.py:34
 msgid "New password"
-msgstr ""
+msgstr "Nueva contraseña"
 
 #: snikket_web/user.py:42
 msgid "Confirm new password"
-msgstr ""
+msgstr "Confirme nueva contraseña"
 
 #: snikket_web/user.py:47
 msgid "The new passwords must match."
-msgstr ""
+msgstr "Las nuevas contraseñas han de coincidir."
 
 #: snikket_web/user.py:56
 msgid "Sign out"
-msgstr ""
+msgstr "Cerrar sesión"
 
 #: snikket_web/user.py:61
 msgid "Nobody"
-msgstr ""
+msgstr "Nadie"
 
 #: snikket_web/user.py:62
 msgid "Friends only"
-msgstr ""
+msgstr "Sólo amigos"
 
 #: snikket_web/user.py:63
 msgid "Everyone"
-msgstr ""
+msgstr "Todos"
 
 #: snikket_web/user.py:73
 msgid "Avatar"
-msgstr ""
+msgstr "Avatar"
 
 #: snikket_web/user.py:77
 msgid "Profile visibility"
-msgstr ""
+msgstr "Visibilidad del perfil"
 
 #: snikket_web/user.py:82
 msgid "Update profile"
-msgstr ""
+msgstr "Actualizar perfil"
 
 #: snikket_web/user.py:88
 msgid "Account data"
-msgstr ""
+msgstr "Datos de cuenta"
 
 #: snikket_web/user.py:92
 msgid "Upload"
-msgstr ""
+msgstr "Subida"
 
 #: snikket_web/user.py:117
 msgid "Incorrect password."
-msgstr ""
+msgstr "Contraseña incorrecta."
 
 #: snikket_web/user.py:121
 msgid "Password changed"
-msgstr ""
+msgstr "Contraseña cambiada"
 
 #: snikket_web/user.py:129
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please"
 " use the app."
 msgstr ""
+"El avatar elegido es demasiado grande. Para poder subir avatares más "
+"grandes, utilice la aplicación, por favor."
 
 #: snikket_web/user.py:176
 msgid "Profile updated"
-msgstr ""
+msgstr "Perfil actualizado"
 
 #: snikket_web/user.py:190
 msgid "Export"
-msgstr ""
+msgstr "Exportar"
 
 #: snikket_web/user.py:208
 msgid "You currently have no account data to export."
-msgstr ""
+msgstr "No dispone actualmente de datos de cuenta para exportar."
 
 #: snikket_web/templates/_footer.html:4
 #, python-format
 msgid "A <a href=\"%(about_url)s\">Snikket</a> service"
-msgstr ""
+msgstr "Un servicio de <a href=\"%(about_url)s\">Snikket</a>"
 
 #: snikket_web/templates/_footer.html:6
 msgid ""
 "“Snikket” and the parrot logo are trademarks of Snikket Community "
 "Interest Company."
 msgstr ""
+"\"Snikket\" y el logo del loro son marcas registradas de \"Snikket Community "
+"Interest Company\"."
 
 #: snikket_web/templates/about.html:4
 msgid "About Snikket"
-msgstr ""
+msgstr "Acerca de Snikket"
 
 #: snikket_web/templates/about.html:9
 msgid "About this Service"
-msgstr ""
+msgstr "Acerca de este servicio"
 
 #: snikket_web/templates/about.html:10
 #, python-format
@@ -452,6 +470,8 @@ msgid ""
 "This is the Snikket service <em>%(site_name)s</em>, running open-source "
 "software from the Snikket project."
 msgstr ""
+"Este es el servicio Snikket de <em>%(site_name)s</em>, ejecutando software "
+"de código abierto del proyecto Snikket."
 
 #: snikket_web/templates/about.html:11
 #, python-format
@@ -459,14 +479,16 @@ msgid ""
 "To learn more about Snikket, visit the <a "
 "href=\"%(snikket_url)s\">Snikket website</a>."
 msgstr ""
+"Para aprender más acerca de Snikket, visite la <a href=\"%(snikket_url)s\""
+">página web de Snikket</a>."
 
 #: snikket_web/templates/about.html:13
 msgid "View service policies"
-msgstr ""
+msgstr "Ver las políticas de servicio"
 
 #: snikket_web/templates/about.html:15
 msgid "Licenses"
-msgstr ""
+msgstr "Licencias"
 
 #: snikket_web/templates/about.html:16
 #, python-format
@@ -476,6 +498,10 @@ msgid ""
 "later</a>. The full terms of the license can be reviewed using the "
 "aforementioned link."
 msgstr ""
+"El software del portal web está licenciado bajo los términos de la <a href=\""
+"%(agpl_url)s\">licencia pública general de Affero, versión 3.0 o posterior</"
+"a>. Los términos de la licencia pueden ser consultados empleando el enlace "
+"anterior."
 
 #: snikket_web/templates/about.html:17
 #, python-format
