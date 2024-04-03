@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2024-01-08 22:58+0000\n"
-"PO-Revision-Date: 2024-03-31 22:27+0000\n"
+"PO-Revision-Date: 2024-04-05 21:27+0000\n"
 "Last-Translator: Sergio Moreno López <fruche@pm.me>\n"
 "Language-Team: Spanish <http://i18n.sotecware.net/projects/snikket/"
 "web-portal/es/>\n"
@@ -509,6 +509,8 @@ msgid ""
 "The source code of the web portal can be downloaded and viewed in <a "
 "href=\"%(source_url)s\">its GitHub repository</a>."
 msgstr ""
+"El código fuente del portal web puede ser descargado y visto en <a href=\""
+"%(source_url)s\">su repositorio de GitHub</a>."
 
 #: snikket_web/templates/about.html:18
 #, python-format
@@ -517,10 +519,13 @@ msgid ""
 "Material Icons</a>, made available by Google under the terms of the <a "
 "href=\"%(apache20_url)s\">Apache 2.0 License</a>."
 msgstr ""
+"Los iconos empleados en el portal web son los <a href=\"%(source_url)s\""
+">iconos Material de Google</a>, hechos disponibles por Google bajo los "
+"términos de la <a href=\"%(apache20_url)s\">licencia Apache 2.0</a>."
 
 #: snikket_web/templates/about.html:20
 msgid "Trademarks"
-msgstr ""
+msgstr "Marcas registradas"
 
 #: snikket_web/templates/about.html:21
 #, python-format
@@ -529,29 +534,35 @@ msgid ""
 "Interest Company. For more information about the trademarks, visit the <a"
 " href=\"%(trademarks_url)s\">Snikket Trademarks information page</a>."
 msgstr ""
+"\"Snikket\" y el logo del loro son marcas registradas de \"Snikket Community "
+"Interest Company\". Para más información sobre marcas registradas, visite la "
+"<a href=\"%(trademarks_url)s\">página de información de marcas registradas "
+"de Snikket</a>."
 
 #: snikket_web/templates/about.html:23
 msgid "Software Versions"
-msgstr ""
+msgstr "Versiones de software"
 
 #: snikket_web/templates/about.html:37 snikket_web/templates/policies.html:34
 msgid "Back to the main page"
-msgstr ""
+msgstr "Vuelta a la página principal"
 
 #: snikket_web/templates/admin_app.html:5
 msgid "Admin area"
-msgstr ""
+msgstr "Área de administración"
 
 #: snikket_web/templates/admin_circles.html:4
 #: snikket_web/templates/admin_home.html:23
 msgid "Manage circles"
-msgstr ""
+msgstr "Gestionar círculos"
 
 #: snikket_web/templates/admin_circles.html:5
 msgid ""
 "<em>Circles</em> aim to help people who are in the same social circle "
 "find each other on your service."
 msgstr ""
+"Los <em>círculos</em> tienen como objetivo ayudar a la gente que esté en el "
+"mismo círculo social a encontrarse los unos a los otros en su servicio."
 
 #: snikket_web/templates/admin_circles.html:6
 msgid ""
@@ -559,14 +570,17 @@ msgid ""
 "list. In addition, each circle may have group chats where the circle "
 "members are included."
 msgstr ""
+"Los usuarios que estén en el mismo círculo se verán los unos a los otros en "
+"sus listas de contacto. De forma adicional, cada círculo puede tener "
+"conversaciones grupales donde los miembros de los círculos están incluidos."
 
 #: snikket_web/templates/admin_circles.html:13
 msgid "Circle name"
-msgstr ""
+msgstr "Nombre de círculo"
 
 #: snikket_web/templates/admin_circles.html:14
 msgid "Members"
-msgstr ""
+msgstr "Miembros"
 
 #: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_edit_circle.html:45
@@ -574,49 +588,53 @@ msgstr ""
 #: snikket_web/templates/admin_invites.html:24
 #: snikket_web/templates/admin_users.html:10
 msgid "Actions"
-msgstr ""
+msgstr "Acciones"
 
 #: snikket_web/templates/admin_circles.html:25
 #, python-format
 msgid "Create invitation to circle %(circle_name)s"
-msgstr ""
+msgstr "Crear invitación al círculo %(circle_name)s"
 
 #: snikket_web/templates/admin_circles.html:28
 #, python-format
 msgid "Manage members of %(circle_name)s"
-msgstr ""
+msgstr "Gestionar miembros de %(circle_name)s"
 
 #: snikket_web/templates/admin_circles.html:31
 #: snikket_web/templates/admin_edit_circle.html:8
 #, python-format
 msgid "Edit circle %(circle_name)s"
-msgstr ""
+msgstr "Editar el círculo %(circle_name)s"
 
 #: snikket_web/templates/admin_circles.html:40
 msgid "No circles"
-msgstr ""
+msgstr "No hay círculos"
 
 #: snikket_web/templates/admin_circles.html:41
 msgid ""
 "Currently, there are no circles on this service. Use the form below to "
 "create one."
 msgstr ""
+"Actualmente, no hay círculos en este servicio. Use el formulario de abajo "
+"para crear uno."
 
 #: snikket_web/templates/admin_circles.html:44
 msgid "New circle"
-msgstr ""
+msgstr "Nuevo círculo"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:5
 msgid "Create new circle group chat"
-msgstr ""
+msgstr "Crear un nueva conversación grupal de círculo"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:6
 msgid "Add a chat to your circle so its members can hold group discussions."
 msgstr ""
+"Añadir una conversación a su círculo para que sus miembros puedan tener "
+"conversaciones grupales."
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:7
 msgid "Tip:"
-msgstr ""
+msgstr "Consejo:"
 
 #: snikket_web/templates/admin_create_circle_group_chat_form.html:7
 msgid ""
