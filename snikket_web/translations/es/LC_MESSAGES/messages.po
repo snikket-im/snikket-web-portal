@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2024-01-08 22:58+0000\n"
-"PO-Revision-Date: 2024-04-05 21:27+0000\n"
+"PO-Revision-Date: 2024-04-14 21:02+0000\n"
 "Last-Translator: Sergio Moreno López <fruche@pm.me>\n"
 "Language-Team: Spanish <http://i18n.sotecware.net/projects/snikket/"
 "web-portal/es/>\n"
@@ -642,62 +642,67 @@ msgid ""
 "<em>all</em> members of the circle. If you want a normal group chat, "
 "create it in the Snikket app instead."
 msgstr ""
+"Esto es sólo para crear conversaciones grupales que automáticamente incluyen "
+"<em>todos</em> los miembros del círculo. Si desea una conversación grupal "
+"normal, créela en la aplicación Snikket."
 
 #: snikket_web/templates/admin_create_invite.html:3
 msgid "Create invitation"
-msgstr ""
+msgstr "Crear invitación"
 
 #: snikket_web/templates/admin_create_invite_form.html:5
 msgid "Create new invitation"
-msgstr ""
+msgstr "Crear nueva invitación"
 
 #: snikket_web/templates/admin_create_invite_form.html:6
 msgid ""
 "Create a new invitation link to invite more users to your Snikket service"
 " by clicking the button below."
 msgstr ""
+"Crear nuevo enlace de invitación para invitar a más usuarios a su servicio "
+"de Snikket haciendo click en el botón inferior."
 
 #: snikket_web/templates/admin_debug_user.html:8
 #, python-format
 msgid "Debug information for %(user_name)s"
-msgstr ""
+msgstr "Información de depuración para %(user_name)s"
 
 #: snikket_web/templates/admin_debug_user.html:11
 #: snikket_web/templates/user_passwd.html:23
 msgid "Warning"
-msgstr ""
+msgstr "Advertencia"
 
 #: snikket_web/templates/admin_debug_user.html:12
 msgid "The below dump may contain sensitive information."
-msgstr ""
+msgstr "El volcado inferior puede contener información sensible."
 
 #: snikket_web/templates/admin_debug_user.html:15
 msgid "Raw debug dump"
-msgstr ""
+msgstr "Volcado de depurado no editado"
 
 #: snikket_web/templates/admin_debug_user.html:17
 msgid "Copy complete output"
-msgstr ""
+msgstr "Copiar salida completa"
 
 #: snikket_web/templates/admin_delete_circle.html:4
 #, python-format
 msgid "Delete circle %(circle_name)s"
-msgstr ""
+msgstr "Borrar círculo %(circle_name)s"
 
 #: snikket_web/templates/admin_delete_circle.html:6
 #: snikket_web/templates/admin_edit_circle.html:30
 #: snikket_web/templates/admin_edit_circle.html:33
 msgid "Delete circle"
-msgstr ""
+msgstr "Borrar círculo"
 
 #: snikket_web/templates/admin_delete_circle.html:8
 msgid "Are you sure you want to delete the following circle?"
-msgstr ""
+msgstr "¿Está seguro que quiere borrar el siguiente círculo?"
 
 #: snikket_web/templates/admin_delete_circle.html:13
 #: snikket_web/templates/admin_delete_user.html:15
 msgid "Danger"
-msgstr ""
+msgstr "Peligro"
 
 #: snikket_web/templates/admin_delete_circle.html:14
 msgid ""
