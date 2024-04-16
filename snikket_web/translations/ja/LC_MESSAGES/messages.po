@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-08 22:58+0000\n"
+"POT-Creation-Date: 2024-04-16 15:50+0100\n"
 "PO-Revision-Date: 2021-01-28 17:55+0000\n"
 "Last-Translator: pep <pep@bouah.net>\n"
 "Language-Team: Japanese <https://i18n.sotecware.net/projects/snikket/web-"
@@ -156,13 +156,13 @@ msgstr "４週間"
 msgid "Invitation type"
 msgstr "紹介の種類"
 
-#: snikket_web/admin.py:287 snikket_web/templates/library.j2:139
-msgid "Individual"
-msgstr "一回"
+#: snikket_web/admin.py:287
+msgid "Individual (for one person)"
+msgstr ""
 
-#: snikket_web/admin.py:288 snikket_web/templates/library.j2:137
-msgid "Group"
-msgstr "複数回"
+#: snikket_web/admin.py:288
+msgid "Group (for multiple people)"
+msgstr ""
 
 #: snikket_web/admin.py:294
 msgid "New invitation link"
@@ -363,7 +363,7 @@ msgstr "理由不明の登録エラー"
 msgid "The username is not valid."
 msgstr "ユーザー名が不正"
 
-#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:32
+#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:37
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "パスワード変更"
@@ -384,7 +384,7 @@ msgid ""
 msgstr ""
 
 #: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:184
+#: snikket_web/user.py:189
 msgid "Error"
 msgstr ""
 
@@ -458,35 +458,35 @@ msgstr ""
 msgid "Upload"
 msgstr ""
 
-#: snikket_web/user.py:117
+#: snikket_web/user.py:122
 #, fuzzy
 #| msgid "Incorrect password"
 msgid "Incorrect password."
 msgstr "パスワード不正"
 
-#: snikket_web/user.py:121
+#: snikket_web/user.py:126
 #, fuzzy
 #| msgid "Password reset"
 msgid "Password changed"
 msgstr "パスワード再設定"
 
-#: snikket_web/user.py:129
+#: snikket_web/user.py:134
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
 msgstr ""
 
-#: snikket_web/user.py:176
+#: snikket_web/user.py:181
 #, fuzzy
 #| msgid "Profile"
 msgid "Profile updated"
 msgstr "プロファイル"
 
-#: snikket_web/user.py:190
+#: snikket_web/user.py:195
 msgid "Export"
 msgstr ""
 
-#: snikket_web/user.py:208
+#: snikket_web/user.py:213
 msgid "You currently have no account data to export."
 msgstr ""
 
@@ -671,6 +671,7 @@ msgid "Create invitation"
 msgstr "紹介状作成"
 
 #: snikket_web/templates/admin_create_invite_form.html:5
+#: snikket_web/templates/user_home.html:13
 msgid "Create new invitation"
 msgstr "新しい紹介状を作成"
 
@@ -679,6 +680,11 @@ msgid ""
 "Create a new invitation link to invite more users to your Snikket service by "
 "clicking the button below."
 msgstr "友達をこのSnikketサービスに紹介するにはこの下のボタンを。"
+
+#: snikket_web/templates/admin_create_invite_form.html:10
+msgid ""
+"Choose whether this invitation link will allow more than one person to join."
+msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:8
 #, python-format
@@ -1166,7 +1172,7 @@ msgstr ""
 #: snikket_web/templates/admin_system.html:60
 #: snikket_web/templates/admin_system.html:68
 #: snikket_web/templates/admin_system.html:76
-#: snikket_web/templates/admin_system.html:84
+#: snikket_web/templates/admin_system.html:85
 msgid "unknown"
 msgstr ""
 
@@ -1216,14 +1222,32 @@ msgid "Storage used by shared files"
 msgstr ""
 
 #: snikket_web/templates/admin_system.html:79
-msgid "Connected devices"
+#, fuzzy
+#| msgid "Update circle"
+msgid "Active users"
+msgstr "サークルを更新"
+
+#: snikket_web/templates/admin_system.html:83
+msgid "Connected now:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:88
+msgid "Past 24 hours:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:89
+msgid "Past 7 days:"
 msgstr ""
 
 #: snikket_web/templates/admin_system.html:90
+msgid "Past 30 days:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:97
 msgid "Broadcast message"
 msgstr ""
 
-#: snikket_web/templates/admin_system.html:92
+#: snikket_web/templates/admin_system.html:99
 msgid ""
 "This form allows you to send a message to all users currently online on your "
 "Snikket server. Use it wisely."
@@ -1483,7 +1507,7 @@ msgid "Your address"
 msgstr "談話室アドレス"
 
 #: snikket_web/templates/invite_success.html:15
-#: snikket_web/templates/user_home.html:21
+#: snikket_web/templates/user_home.html:26
 msgid "Copy address"
 msgstr "アドレスをコピーする"
 
@@ -1683,6 +1707,14 @@ msgstr "リンクをコピーする"
 msgid "Invalid input"
 msgstr "入力不正"
 
+#: snikket_web/templates/library.j2:137
+msgid "Group"
+msgstr "複数回"
+
+#: snikket_web/templates/library.j2:139
+msgid "Individual"
+msgstr "一回"
+
 #: snikket_web/templates/library.j2:145
 msgid "Can be used multiple times to create accounts on this Snikket service."
 msgstr ""
@@ -1761,51 +1793,42 @@ msgstr ""
 msgid "Operation successful"
 msgstr ""
 
-#: snikket_web/templates/user_home.html:9
-msgid "Welcome!"
-msgstr "ようこそ！"
-
-#: snikket_web/templates/user_home.html:10
-#, python-format
-msgid "Welcome home, %(user_name)s."
-msgstr "ようこそ、 %(user_name)s。"
-
-#: snikket_web/templates/user_home.html:14
+#: snikket_web/templates/user_home.html:19
 #, fuzzy
 #| msgid "Create account"
 msgid "Your account"
 msgstr "アカウント作成"
 
-#: snikket_web/templates/user_home.html:20
+#: snikket_web/templates/user_home.html:25
 #, fuzzy
 #| msgid "Group chat address"
 msgid "Your XMPP address"
 msgstr "談話室アドレス"
 
-#: snikket_web/templates/user_home.html:31
+#: snikket_web/templates/user_home.html:36
 #, fuzzy
 #| msgid "Update profile"
 msgid "Edit profile"
 msgstr "プロファイル管理"
 
-#: snikket_web/templates/user_home.html:33
+#: snikket_web/templates/user_home.html:38
 #: snikket_web/templates/user_manage_data.html:4
 #, fuzzy
 #| msgid "Manage users"
 msgid "Manage your data"
 msgstr "ユーザー管理"
 
-#: snikket_web/templates/user_home.html:39
+#: snikket_web/templates/user_home.html:44
 #, fuzzy
 #| msgid "About Snikket"
 msgid "Your Snikket"
 msgstr "Snikketについて"
 
-#: snikket_web/templates/user_home.html:41
+#: snikket_web/templates/user_home.html:46
 msgid "Manage users, invitations and circles of your Snikket service."
 msgstr ""
 
-#: snikket_web/templates/user_home.html:43
+#: snikket_web/templates/user_home.html:48
 #, fuzzy
 #| msgid "Admin area"
 msgid "Admin panel"
@@ -1869,6 +1892,13 @@ msgid ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
 msgstr ""
+
+#~ msgid "Welcome!"
+#~ msgstr "ようこそ！"
+
+#, python-format
+#~ msgid "Welcome home, %(user_name)s."
+#~ msgstr "ようこそ、 %(user_name)s。"
 
 #~ msgid "This circle cannot be modified"
 #~ msgstr "このサークルの更新ができません"

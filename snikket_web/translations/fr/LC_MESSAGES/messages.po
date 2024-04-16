@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-08 22:58+0000\n"
+"POT-Creation-Date: 2024-04-16 15:50+0100\n"
 "PO-Revision-Date: 2024-01-04 10:17+0000\n"
 "Last-Translator: pep <pep@bouah.net>\n"
 "Language-Team: French <http://i18n.sotecware.net/projects/snikket/web-portal/"
@@ -138,13 +138,13 @@ msgstr "Quatre semaines"
 msgid "Invitation type"
 msgstr "Type d’invitation"
 
-#: snikket_web/admin.py:287 snikket_web/templates/library.j2:139
-msgid "Individual"
-msgstr "Individuelle"
+#: snikket_web/admin.py:287
+msgid "Individual (for one person)"
+msgstr ""
 
-#: snikket_web/admin.py:288 snikket_web/templates/library.j2:137
-msgid "Group"
-msgstr "Groupe"
+#: snikket_web/admin.py:288
+msgid "Group (for multiple people)"
+msgstr ""
 
 #: snikket_web/admin.py:294
 msgid "New invitation link"
@@ -313,7 +313,7 @@ msgstr "L’enregistrement a été refusé pour des raisons inconnues."
 msgid "The username is not valid."
 msgstr "Le nom d’utilisateurice n’est pas valide."
 
-#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:32
+#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:37
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "Changer de mot de passe"
@@ -337,7 +337,7 @@ msgstr ""
 "fourni : %(mimetype)s)."
 
 #: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:184
+#: snikket_web/user.py:189
 msgid "Error"
 msgstr "Erreur"
 
@@ -409,15 +409,15 @@ msgstr "Données du compte"
 msgid "Upload"
 msgstr "Télécharger"
 
-#: snikket_web/user.py:117
+#: snikket_web/user.py:122
 msgid "Incorrect password."
 msgstr "Mot de passe incorrect."
 
-#: snikket_web/user.py:121
+#: snikket_web/user.py:126
 msgid "Password changed"
 msgstr "Mot de passe changé"
 
-#: snikket_web/user.py:129
+#: snikket_web/user.py:134
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
@@ -425,15 +425,15 @@ msgstr ""
 "L’avatar choisi est trop gros. Pour utiliser un avatar aussi large, veuillez "
 "utiliser l’application."
 
-#: snikket_web/user.py:176
+#: snikket_web/user.py:181
 msgid "Profile updated"
 msgstr "Profil mis à jour"
 
-#: snikket_web/user.py:190
+#: snikket_web/user.py:195
 msgid "Export"
 msgstr "Exporter"
 
-#: snikket_web/user.py:208
+#: snikket_web/user.py:213
 msgid "You currently have no account data to export."
 msgstr "Vous n’avez actuellement aucune donnée de compte à exporter."
 
@@ -641,6 +641,7 @@ msgid "Create invitation"
 msgstr "Créer une invitation"
 
 #: snikket_web/templates/admin_create_invite_form.html:5
+#: snikket_web/templates/user_home.html:13
 msgid "Create new invitation"
 msgstr "Créer une nouvelle invitation"
 
@@ -651,6 +652,11 @@ msgid ""
 msgstr ""
 "Créez une nouvelle invitation pour d’autres utilisateurices sur votre "
 "instance Snikket en cliquant sur le bouton ci-dessous."
+
+#: snikket_web/templates/admin_create_invite_form.html:10
+msgid ""
+"Choose whether this invitation link will allow more than one person to join."
+msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:8
 #, python-format
@@ -1136,7 +1142,7 @@ msgstr "Charge système (moyenne sur 5 minutes)"
 #: snikket_web/templates/admin_system.html:60
 #: snikket_web/templates/admin_system.html:68
 #: snikket_web/templates/admin_system.html:76
-#: snikket_web/templates/admin_system.html:84
+#: snikket_web/templates/admin_system.html:85
 msgid "unknown"
 msgstr "inconnu(e)"
 
@@ -1186,14 +1192,34 @@ msgid "Storage used by shared files"
 msgstr "Stockage utilisé par les fichiers partagés"
 
 #: snikket_web/templates/admin_system.html:79
-msgid "Connected devices"
+#, fuzzy
+#| msgid "Update user"
+msgid "Active users"
+msgstr "Modifier l’utilisateurice"
+
+#: snikket_web/templates/admin_system.html:83
+#, fuzzy
+#| msgid "Connected devices"
+msgid "Connected now:"
 msgstr "Clients connectés"
 
+#: snikket_web/templates/admin_system.html:88
+msgid "Past 24 hours:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:89
+msgid "Past 7 days:"
+msgstr ""
+
 #: snikket_web/templates/admin_system.html:90
+msgid "Past 30 days:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:97
 msgid "Broadcast message"
 msgstr "Diffusion de message"
 
-#: snikket_web/templates/admin_system.html:92
+#: snikket_web/templates/admin_system.html:99
 msgid ""
 "This form allows you to send a message to all users currently online on your "
 "Snikket server. Use it wisely."
@@ -1470,7 +1496,7 @@ msgid "Your address"
 msgstr "Votre adresse"
 
 #: snikket_web/templates/invite_success.html:15
-#: snikket_web/templates/user_home.html:21
+#: snikket_web/templates/user_home.html:26
 msgid "Copy address"
 msgstr "Copier l’adresse"
 
@@ -1704,6 +1730,14 @@ msgstr "Copier le lien"
 msgid "Invalid input"
 msgstr "Saisie invalide"
 
+#: snikket_web/templates/library.j2:137
+msgid "Group"
+msgstr "Groupe"
+
+#: snikket_web/templates/library.j2:139
+msgid "Individual"
+msgstr "Individuelle"
+
 #: snikket_web/templates/library.j2:145
 msgid "Can be used multiple times to create accounts on this Snikket service."
 msgstr ""
@@ -1784,42 +1818,33 @@ msgstr ""
 msgid "Operation successful"
 msgstr "Opération réussie"
 
-#: snikket_web/templates/user_home.html:9
-msgid "Welcome!"
-msgstr "Bienvenue !"
-
-#: snikket_web/templates/user_home.html:10
-#, python-format
-msgid "Welcome home, %(user_name)s."
-msgstr "Bienvenue chez vous, %(user_name)s."
-
-#: snikket_web/templates/user_home.html:14
+#: snikket_web/templates/user_home.html:19
 msgid "Your account"
 msgstr "Votre compte"
 
-#: snikket_web/templates/user_home.html:20
+#: snikket_web/templates/user_home.html:25
 msgid "Your XMPP address"
 msgstr "Votre adresse XMPP"
 
-#: snikket_web/templates/user_home.html:31
+#: snikket_web/templates/user_home.html:36
 msgid "Edit profile"
 msgstr "Éditer votre profil"
 
-#: snikket_web/templates/user_home.html:33
+#: snikket_web/templates/user_home.html:38
 #: snikket_web/templates/user_manage_data.html:4
 msgid "Manage your data"
 msgstr "Gérer vos données"
 
-#: snikket_web/templates/user_home.html:39
+#: snikket_web/templates/user_home.html:44
 msgid "Your Snikket"
 msgstr "Votre Snikket"
 
-#: snikket_web/templates/user_home.html:41
+#: snikket_web/templates/user_home.html:46
 msgid "Manage users, invitations and circles of your Snikket service."
 msgstr ""
 "Gérer les utilisateurices, invitations et cercles de votre service Snikket."
 
-#: snikket_web/templates/user_home.html:43
+#: snikket_web/templates/user_home.html:48
 msgid "Admin panel"
 msgstr "Panneau d’administration"
 
@@ -1888,6 +1913,13 @@ msgid ""
 msgstr ""
 "Cette section permet de configurer qui peut voir votre profil, comme par "
 "exemple votre avatar et votre pseudonyme."
+
+#~ msgid "Welcome!"
+#~ msgstr "Bienvenue !"
+
+#, python-format
+#~ msgid "Welcome home, %(user_name)s."
+#~ msgstr "Bienvenue chez vous, %(user_name)s."
 
 #~ msgid "This circle has no group chat associated."
 #~ msgstr "Ce cercle n’a pas de conversation de groupe associée."

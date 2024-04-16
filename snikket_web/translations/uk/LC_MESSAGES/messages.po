@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-08 22:58+0000\n"
+"POT-Creation-Date: 2024-04-16 15:50+0100\n"
 "PO-Revision-Date: 2023-12-25 16:00+0000\n"
 "Last-Translator: Dmytro Vozniuk <plibnik@gmail.com>\n"
 "Language-Team: Ukrainian <http://i18n.sotecware.net/projects/snikket/web-"
@@ -139,13 +139,13 @@ msgstr "Чотирьох тижнів"
 msgid "Invitation type"
 msgstr "Тип запрошення"
 
-#: snikket_web/admin.py:287 snikket_web/templates/library.j2:139
-msgid "Individual"
-msgstr "Особисте"
+#: snikket_web/admin.py:287
+msgid "Individual (for one person)"
+msgstr ""
 
-#: snikket_web/admin.py:288 snikket_web/templates/library.j2:137
-msgid "Group"
-msgstr "Групове"
+#: snikket_web/admin.py:288
+msgid "Group (for multiple people)"
+msgstr ""
 
 #: snikket_web/admin.py:294
 msgid "New invitation link"
@@ -314,7 +314,7 @@ msgstr "У реєстрації відмовлено з невідомої пр�
 msgid "The username is not valid."
 msgstr "Це ім’я користувача неприпустиме."
 
-#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:32
+#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:37
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "Змінити пароль"
@@ -338,7 +338,7 @@ msgstr ""
 "%(mimetype)s)."
 
 #: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:184
+#: snikket_web/user.py:189
 msgid "Error"
 msgstr "Помилка"
 
@@ -410,15 +410,15 @@ msgstr "Дані облікового запису"
 msgid "Upload"
 msgstr "Завантажити"
 
-#: snikket_web/user.py:117
+#: snikket_web/user.py:122
 msgid "Incorrect password."
 msgstr "Хибний пароль."
 
-#: snikket_web/user.py:121
+#: snikket_web/user.py:126
 msgid "Password changed"
 msgstr "Пароль змінено"
 
-#: snikket_web/user.py:129
+#: snikket_web/user.py:134
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
@@ -426,15 +426,15 @@ msgstr ""
 "Вибраний аватар надто великий. Щоб завантажити аватари великого розміру, "
 "скористуйтесь застосунком."
 
-#: snikket_web/user.py:176
+#: snikket_web/user.py:181
 msgid "Profile updated"
 msgstr "Профіль оновлено"
 
-#: snikket_web/user.py:190
+#: snikket_web/user.py:195
 msgid "Export"
 msgstr "Експортувати"
 
-#: snikket_web/user.py:208
+#: snikket_web/user.py:213
 msgid "You currently have no account data to export."
 msgstr "Наразі у вас немає даних облікового запису, щоб експортувати їх."
 
@@ -645,6 +645,7 @@ msgid "Create invitation"
 msgstr "Створити запрошення"
 
 #: snikket_web/templates/admin_create_invite_form.html:5
+#: snikket_web/templates/user_home.html:13
 msgid "Create new invitation"
 msgstr "Створити нове запрошення"
 
@@ -655,6 +656,11 @@ msgid ""
 msgstr ""
 "Створіть нове посилання з запрошенням, щоб запросити більше користувачів до "
 "вашого сервісу Snikket. Для цього натисніть кнопку нижче."
+
+#: snikket_web/templates/admin_create_invite_form.html:10
+msgid ""
+"Choose whether this invitation link will allow more than one person to join."
+msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:8
 #, python-format
@@ -1137,7 +1143,7 @@ msgstr "Завантаження системи (усереднене за 5 х�
 #: snikket_web/templates/admin_system.html:60
 #: snikket_web/templates/admin_system.html:68
 #: snikket_web/templates/admin_system.html:76
-#: snikket_web/templates/admin_system.html:84
+#: snikket_web/templates/admin_system.html:85
 msgid "unknown"
 msgstr "невідомо"
 
@@ -1187,14 +1193,34 @@ msgid "Storage used by shared files"
 msgstr "Об’єм пам’яті, зайнятої спільними файлами"
 
 #: snikket_web/templates/admin_system.html:79
-msgid "Connected devices"
+#, fuzzy
+#| msgid "Update user"
+msgid "Active users"
+msgstr "Оновити користувача"
+
+#: snikket_web/templates/admin_system.html:83
+#, fuzzy
+#| msgid "Connected devices"
+msgid "Connected now:"
 msgstr "Кількість підключених пристроїв"
 
+#: snikket_web/templates/admin_system.html:88
+msgid "Past 24 hours:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:89
+msgid "Past 7 days:"
+msgstr ""
+
 #: snikket_web/templates/admin_system.html:90
+msgid "Past 30 days:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:97
 msgid "Broadcast message"
 msgstr "Широкомовна розсилка повідомлення"
 
-#: snikket_web/templates/admin_system.html:92
+#: snikket_web/templates/admin_system.html:99
 msgid ""
 "This form allows you to send a message to all users currently online on your "
 "Snikket server. Use it wisely."
@@ -1466,7 +1492,7 @@ msgid "Your address"
 msgstr "Ваша адреса"
 
 #: snikket_web/templates/invite_success.html:15
-#: snikket_web/templates/user_home.html:21
+#: snikket_web/templates/user_home.html:26
 msgid "Copy address"
 msgstr "Копіювати адресу"
 
@@ -1691,6 +1717,14 @@ msgstr "Копіювати посилання"
 msgid "Invalid input"
 msgstr "Введені хибні дані"
 
+#: snikket_web/templates/library.j2:137
+msgid "Group"
+msgstr "Групове"
+
+#: snikket_web/templates/library.j2:139
+msgid "Individual"
+msgstr "Особисте"
+
 #: snikket_web/templates/library.j2:145
 msgid "Can be used multiple times to create accounts on this Snikket service."
 msgstr ""
@@ -1773,42 +1807,33 @@ msgstr ""
 msgid "Operation successful"
 msgstr "Операція успішна"
 
-#: snikket_web/templates/user_home.html:9
-msgid "Welcome!"
-msgstr "Вітаємо!"
-
-#: snikket_web/templates/user_home.html:10
-#, python-format
-msgid "Welcome home, %(user_name)s."
-msgstr "Вітаємо вдома, %(user_name)s."
-
-#: snikket_web/templates/user_home.html:14
+#: snikket_web/templates/user_home.html:19
 msgid "Your account"
 msgstr "Ваш обліковий запис"
 
-#: snikket_web/templates/user_home.html:20
+#: snikket_web/templates/user_home.html:25
 msgid "Your XMPP address"
 msgstr "Ваша адреса XMPP"
 
-#: snikket_web/templates/user_home.html:31
+#: snikket_web/templates/user_home.html:36
 msgid "Edit profile"
 msgstr "Редагувати профіль"
 
-#: snikket_web/templates/user_home.html:33
+#: snikket_web/templates/user_home.html:38
 #: snikket_web/templates/user_manage_data.html:4
 msgid "Manage your data"
 msgstr "Керувати вашими даними"
 
-#: snikket_web/templates/user_home.html:39
+#: snikket_web/templates/user_home.html:44
 msgid "Your Snikket"
 msgstr "Ваш Snikket"
 
-#: snikket_web/templates/user_home.html:41
+#: snikket_web/templates/user_home.html:46
 msgid "Manage users, invitations and circles of your Snikket service."
 msgstr ""
 "Керуйте користувачами, запрошеннями та колами на вашому сервісі Snikket."
 
-#: snikket_web/templates/user_home.html:43
+#: snikket_web/templates/user_home.html:48
 msgid "Admin panel"
 msgstr "Панель адміністрування"
 
@@ -1876,3 +1901,10 @@ msgid ""
 msgstr ""
 "Цей розділ дає змогу визначити, хто зможе бачити відомості з вашого профілю, "
 "такі як аватар чи нікнейм."
+
+#~ msgid "Welcome!"
+#~ msgstr "Вітаємо!"
+
+#, python-format
+#~ msgid "Welcome home, %(user_name)s."
+#~ msgstr "Вітаємо вдома, %(user_name)s."

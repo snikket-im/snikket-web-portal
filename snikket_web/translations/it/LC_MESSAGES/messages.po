@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: translations@snikket.org\n"
-"POT-Creation-Date: 2024-01-08 22:58+0000\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-04-16 15:50+0100\n"
 "PO-Revision-Date: 2024-01-20 23:01+0000\n"
 "Last-Translator: Federico <federico@tebaldi.eu>\n"
-"Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/"
-"web-portal/it/>\n"
+"Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/web-"
+"portal/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -138,13 +138,13 @@ msgstr "Quattro settimane"
 msgid "Invitation type"
 msgstr "Tipo di invito"
 
-#: snikket_web/admin.py:287 snikket_web/templates/library.j2:139
-msgid "Individual"
-msgstr "Individuale"
+#: snikket_web/admin.py:287
+msgid "Individual (for one person)"
+msgstr ""
 
-#: snikket_web/admin.py:288 snikket_web/templates/library.j2:137
-msgid "Group"
-msgstr "Gruppo"
+#: snikket_web/admin.py:288
+msgid "Group (for multiple people)"
+msgstr ""
 
 #: snikket_web/admin.py:294
 msgid "New invitation link"
@@ -313,7 +313,7 @@ msgstr "Registrazione rifiutata per motivi sconosciuti."
 msgid "The username is not valid."
 msgstr "Nome utente non valido."
 
-#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:32
+#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:37
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "Cambia password"
@@ -337,7 +337,7 @@ msgstr ""
 "fornito: %(mimetype)s)."
 
 #: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:184
+#: snikket_web/user.py:189
 msgid "Error"
 msgstr "Errore"
 
@@ -409,15 +409,15 @@ msgstr "Dati dell'utenza"
 msgid "Upload"
 msgstr "Carica"
 
-#: snikket_web/user.py:117
+#: snikket_web/user.py:122
 msgid "Incorrect password."
 msgstr "Password errata."
 
-#: snikket_web/user.py:121
+#: snikket_web/user.py:126
 msgid "Password changed"
 msgstr "Password cambiata"
 
-#: snikket_web/user.py:129
+#: snikket_web/user.py:134
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
@@ -425,15 +425,15 @@ msgstr ""
 "L'avatar scelto è troppo grande. Utilizza direttamente l'applicazione "
 "Snikket per caricare un avatar così grande."
 
-#: snikket_web/user.py:176
+#: snikket_web/user.py:181
 msgid "Profile updated"
 msgstr "Profilo aggiornato"
 
-#: snikket_web/user.py:190
+#: snikket_web/user.py:195
 msgid "Export"
 msgstr "Esportare"
 
-#: snikket_web/user.py:208
+#: snikket_web/user.py:213
 msgid "You currently have no account data to export."
 msgstr "Al momento non hai dati utente da esportare."
 
@@ -644,6 +644,7 @@ msgid "Create invitation"
 msgstr "Crea invito"
 
 #: snikket_web/templates/admin_create_invite_form.html:5
+#: snikket_web/templates/user_home.html:13
 msgid "Create new invitation"
 msgstr "Crea nuovo invito"
 
@@ -654,6 +655,11 @@ msgid ""
 msgstr ""
 "Crea un nuovo collegamento di invito per invitare altri utenti al vostro "
 "servizio Snikket cliccando il pulsante sottostante."
+
+#: snikket_web/templates/admin_create_invite_form.html:10
+msgid ""
+"Choose whether this invitation link will allow more than one person to join."
+msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:8
 #, python-format
@@ -1136,7 +1142,7 @@ msgstr "System load (media su 5 minuti)"
 #: snikket_web/templates/admin_system.html:60
 #: snikket_web/templates/admin_system.html:68
 #: snikket_web/templates/admin_system.html:76
-#: snikket_web/templates/admin_system.html:84
+#: snikket_web/templates/admin_system.html:85
 msgid "unknown"
 msgstr "n/a"
 
@@ -1186,14 +1192,34 @@ msgid "Storage used by shared files"
 msgstr "Spazio usato dai file condivisi dagli utenti"
 
 #: snikket_web/templates/admin_system.html:79
-msgid "Connected devices"
+#, fuzzy
+#| msgid "Update user"
+msgid "Active users"
+msgstr "Aggiorna utente"
+
+#: snikket_web/templates/admin_system.html:83
+#, fuzzy
+#| msgid "Connected devices"
+msgid "Connected now:"
 msgstr "Dispositivi connessi"
 
+#: snikket_web/templates/admin_system.html:88
+msgid "Past 24 hours:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:89
+msgid "Past 7 days:"
+msgstr ""
+
 #: snikket_web/templates/admin_system.html:90
+msgid "Past 30 days:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:97
 msgid "Broadcast message"
 msgstr "Invia un messaggio a tutti gli utenti"
 
-#: snikket_web/templates/admin_system.html:92
+#: snikket_web/templates/admin_system.html:99
 msgid ""
 "This form allows you to send a message to all users currently online on your "
 "Snikket server. Use it wisely."
@@ -1464,7 +1490,7 @@ msgid "Your address"
 msgstr "Il tuo indirizzo"
 
 #: snikket_web/templates/invite_success.html:15
-#: snikket_web/templates/user_home.html:21
+#: snikket_web/templates/user_home.html:26
 msgid "Copy address"
 msgstr "Copia indirizzo"
 
@@ -1694,6 +1720,14 @@ msgstr "Copia collegamento"
 msgid "Invalid input"
 msgstr "Dati non validi"
 
+#: snikket_web/templates/library.j2:137
+msgid "Group"
+msgstr "Gruppo"
+
+#: snikket_web/templates/library.j2:139
+msgid "Individual"
+msgstr "Individuale"
+
 #: snikket_web/templates/library.j2:145
 msgid "Can be used multiple times to create accounts on this Snikket service."
 msgstr ""
@@ -1775,41 +1809,32 @@ msgstr ""
 msgid "Operation successful"
 msgstr "Operazione completata"
 
-#: snikket_web/templates/user_home.html:9
-msgid "Welcome!"
-msgstr "Benvenuta/o!"
-
-#: snikket_web/templates/user_home.html:10
-#, python-format
-msgid "Welcome home, %(user_name)s."
-msgstr "Bevenuta/o a casa, %(user_name)s."
-
-#: snikket_web/templates/user_home.html:14
+#: snikket_web/templates/user_home.html:19
 msgid "Your account"
 msgstr "La tua utenza"
 
-#: snikket_web/templates/user_home.html:20
+#: snikket_web/templates/user_home.html:25
 msgid "Your XMPP address"
 msgstr "Il tuo indirizzo XMPP"
 
-#: snikket_web/templates/user_home.html:31
+#: snikket_web/templates/user_home.html:36
 msgid "Edit profile"
 msgstr "Modifica profilo"
 
-#: snikket_web/templates/user_home.html:33
+#: snikket_web/templates/user_home.html:38
 #: snikket_web/templates/user_manage_data.html:4
 msgid "Manage your data"
 msgstr "Gestisci i tuoi dati"
 
-#: snikket_web/templates/user_home.html:39
+#: snikket_web/templates/user_home.html:44
 msgid "Your Snikket"
 msgstr "Il tuo Snikket"
 
-#: snikket_web/templates/user_home.html:41
+#: snikket_web/templates/user_home.html:46
 msgid "Manage users, invitations and circles of your Snikket service."
 msgstr "Gestisci utenti, inviti e cerchie del tuo servizio Snikket."
 
-#: snikket_web/templates/user_home.html:43
+#: snikket_web/templates/user_home.html:48
 msgid "Admin panel"
 msgstr "Pannello amministrativo"
 
@@ -1878,6 +1903,13 @@ msgid ""
 msgstr ""
 "Questa sezione ti permette di controllare chi può visualizzare i dettagli "
 "del tuo profilo, come ad esempio l'avatar o il soprannome."
+
+#~ msgid "Welcome!"
+#~ msgstr "Benvenuta/o!"
+
+#, python-format
+#~ msgid "Welcome home, %(user_name)s."
+#~ msgstr "Bevenuta/o a casa, %(user_name)s."
 
 #~ msgid "This circle has no group chat associated."
 #~ msgstr "Questa cerchia non è collegata ad una chat di gruppo."

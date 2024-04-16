@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-08 22:58+0000\n"
+"POT-Creation-Date: 2024-04-16 15:50+0100\n"
 "PO-Revision-Date: 2021-03-31 13:00+0000\n"
 "Last-Translator: Tilman Jiménez <tilman.jimenez@tu-dortmund.de>\n"
 "Language-Team: Spanish (Mexico) <https://i18n.sotecware.net/projects/snikket/"
@@ -148,13 +148,13 @@ msgstr "Cuatro semanas"
 msgid "Invitation type"
 msgstr "Tipo de invitación"
 
-#: snikket_web/admin.py:287 snikket_web/templates/library.j2:139
-msgid "Individual"
-msgstr "Individual"
+#: snikket_web/admin.py:287
+msgid "Individual (for one person)"
+msgstr ""
 
-#: snikket_web/admin.py:288 snikket_web/templates/library.j2:137
-msgid "Group"
-msgstr "Grupo"
+#: snikket_web/admin.py:288
+msgid "Group (for multiple people)"
+msgstr ""
 
 #: snikket_web/admin.py:294
 msgid "New invitation link"
@@ -351,7 +351,7 @@ msgstr "El registro ha sido declinado por razones no identificadas"
 msgid "The username is not valid."
 msgstr "El nombre de usuario no es válido"
 
-#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:32
+#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:37
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "Cambiar contraseña"
@@ -372,7 +372,7 @@ msgid ""
 msgstr ""
 
 #: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:184
+#: snikket_web/user.py:189
 msgid "Error"
 msgstr ""
 
@@ -446,33 +446,33 @@ msgstr ""
 msgid "Upload"
 msgstr ""
 
-#: snikket_web/user.py:117
+#: snikket_web/user.py:122
 #, fuzzy
 #| msgid "Incorrect password"
 msgid "Incorrect password."
 msgstr "Contraseña incorrecta"
 
-#: snikket_web/user.py:121
+#: snikket_web/user.py:126
 #, fuzzy
 #| msgid "Password"
 msgid "Password changed"
 msgstr "Contraseña"
 
-#: snikket_web/user.py:129
+#: snikket_web/user.py:134
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
 msgstr ""
 
-#: snikket_web/user.py:176
+#: snikket_web/user.py:181
 msgid "Profile updated"
 msgstr ""
 
-#: snikket_web/user.py:190
+#: snikket_web/user.py:195
 msgid "Export"
 msgstr ""
 
-#: snikket_web/user.py:208
+#: snikket_web/user.py:213
 msgid "You currently have no account data to export."
 msgstr ""
 
@@ -672,6 +672,7 @@ msgid "Create invitation"
 msgstr "Crear una invitación"
 
 #: snikket_web/templates/admin_create_invite_form.html:5
+#: snikket_web/templates/user_home.html:13
 msgid "Create new invitation"
 msgstr "Crear una nueva invitación"
 
@@ -682,6 +683,11 @@ msgid ""
 msgstr ""
 "Presiona el botón para crear una nueva invitación y poder añadir más "
 "usuarios a tu servicio Snikket."
+
+#: snikket_web/templates/admin_create_invite_form.html:10
+msgid ""
+"Choose whether this invitation link will allow more than one person to join."
+msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:8
 #, python-format
@@ -1168,7 +1174,7 @@ msgstr ""
 #: snikket_web/templates/admin_system.html:60
 #: snikket_web/templates/admin_system.html:68
 #: snikket_web/templates/admin_system.html:76
-#: snikket_web/templates/admin_system.html:84
+#: snikket_web/templates/admin_system.html:85
 msgid "unknown"
 msgstr ""
 
@@ -1218,14 +1224,32 @@ msgid "Storage used by shared files"
 msgstr ""
 
 #: snikket_web/templates/admin_system.html:79
-msgid "Connected devices"
+#, fuzzy
+#| msgid "Update user"
+msgid "Active users"
+msgstr "Actualizar usuario"
+
+#: snikket_web/templates/admin_system.html:83
+msgid "Connected now:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:88
+msgid "Past 24 hours:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:89
+msgid "Past 7 days:"
 msgstr ""
 
 #: snikket_web/templates/admin_system.html:90
+msgid "Past 30 days:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:97
 msgid "Broadcast message"
 msgstr ""
 
-#: snikket_web/templates/admin_system.html:92
+#: snikket_web/templates/admin_system.html:99
 msgid ""
 "This form allows you to send a message to all users currently online on your "
 "Snikket server. Use it wisely."
@@ -1474,7 +1498,7 @@ msgid "Your address"
 msgstr ""
 
 #: snikket_web/templates/invite_success.html:15
-#: snikket_web/templates/user_home.html:21
+#: snikket_web/templates/user_home.html:26
 msgid "Copy address"
 msgstr "Copiar dirección"
 
@@ -1672,6 +1696,14 @@ msgstr ""
 msgid "Invalid input"
 msgstr ""
 
+#: snikket_web/templates/library.j2:137
+msgid "Group"
+msgstr "Grupo"
+
+#: snikket_web/templates/library.j2:139
+msgid "Individual"
+msgstr "Individual"
+
 #: snikket_web/templates/library.j2:145
 msgid "Can be used multiple times to create accounts on this Snikket service."
 msgstr ""
@@ -1752,43 +1784,34 @@ msgstr ""
 msgid "Operation successful"
 msgstr ""
 
-#: snikket_web/templates/user_home.html:9
-msgid "Welcome!"
-msgstr ""
-
-#: snikket_web/templates/user_home.html:10
-#, python-format
-msgid "Welcome home, %(user_name)s."
-msgstr ""
-
-#: snikket_web/templates/user_home.html:14
+#: snikket_web/templates/user_home.html:19
 msgid "Your account"
 msgstr ""
 
-#: snikket_web/templates/user_home.html:20
+#: snikket_web/templates/user_home.html:25
 msgid "Your XMPP address"
 msgstr ""
 
-#: snikket_web/templates/user_home.html:31
+#: snikket_web/templates/user_home.html:36
 msgid "Edit profile"
 msgstr ""
 
-#: snikket_web/templates/user_home.html:33
+#: snikket_web/templates/user_home.html:38
 #: snikket_web/templates/user_manage_data.html:4
 #, fuzzy
 #| msgid "Manage users"
 msgid "Manage your data"
 msgstr "Administrar usuarios"
 
-#: snikket_web/templates/user_home.html:39
+#: snikket_web/templates/user_home.html:44
 msgid "Your Snikket"
 msgstr ""
 
-#: snikket_web/templates/user_home.html:41
+#: snikket_web/templates/user_home.html:46
 msgid "Manage users, invitations and circles of your Snikket service."
 msgstr ""
 
-#: snikket_web/templates/user_home.html:43
+#: snikket_web/templates/user_home.html:48
 msgid "Admin panel"
 msgstr ""
 

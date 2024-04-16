@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-08 22:58+0000\n"
+"POT-Creation-Date: 2024-04-16 15:50+0100\n"
 "PO-Revision-Date: 2022-05-20 00:01+0000\n"
 "Last-Translator: Zack Zhou <lnx@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <http://i18n.sotecware.net/projects/"
@@ -142,13 +142,13 @@ msgstr "四周"
 msgid "Invitation type"
 msgstr "邀请类型"
 
-#: snikket_web/admin.py:287 snikket_web/templates/library.j2:139
-msgid "Individual"
-msgstr "单个邀请"
+#: snikket_web/admin.py:287
+msgid "Individual (for one person)"
+msgstr ""
 
-#: snikket_web/admin.py:288 snikket_web/templates/library.j2:137
-msgid "Group"
-msgstr "群组邀请"
+#: snikket_web/admin.py:288
+msgid "Group (for multiple people)"
+msgstr ""
 
 #: snikket_web/admin.py:294
 msgid "New invitation link"
@@ -323,7 +323,7 @@ msgstr "注册被拒绝。"
 msgid "The username is not valid."
 msgstr "无效的用户名。"
 
-#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:32
+#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:37
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "更改密码"
@@ -345,7 +345,7 @@ msgstr ""
 "导入失败：未知的数据格式（ %(mimetype)s）。请上传使用XEP-0227格式的XML文件。"
 
 #: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:184
+#: snikket_web/user.py:189
 msgid "Error"
 msgstr "错误"
 
@@ -417,29 +417,29 @@ msgstr "账户数据"
 msgid "Upload"
 msgstr "上传"
 
-#: snikket_web/user.py:117
+#: snikket_web/user.py:122
 msgid "Incorrect password."
 msgstr "密码错误。"
 
-#: snikket_web/user.py:121
+#: snikket_web/user.py:126
 msgid "Password changed"
 msgstr "密码已修改"
 
-#: snikket_web/user.py:129
+#: snikket_web/user.py:134
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
 msgstr "选择的头像过大，你需要使用APP上传大头像。"
 
-#: snikket_web/user.py:176
+#: snikket_web/user.py:181
 msgid "Profile updated"
 msgstr "资料已更新"
 
-#: snikket_web/user.py:190
+#: snikket_web/user.py:195
 msgid "Export"
 msgstr "导出"
 
-#: snikket_web/user.py:208
+#: snikket_web/user.py:213
 msgid "You currently have no account data to export."
 msgstr "目前没有需要导出的数据。"
 
@@ -638,6 +638,7 @@ msgid "Create invitation"
 msgstr "创建邀请"
 
 #: snikket_web/templates/admin_create_invite_form.html:5
+#: snikket_web/templates/user_home.html:13
 msgid "Create new invitation"
 msgstr "创建新邀请"
 
@@ -646,6 +647,11 @@ msgid ""
 "Create a new invitation link to invite more users to your Snikket service by "
 "clicking the button below."
 msgstr "点击下面的按钮来新建邀请更多用户到此实例的链接。"
+
+#: snikket_web/templates/admin_create_invite_form.html:10
+msgid ""
+"Choose whether this invitation link will allow more than one person to join."
+msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:8
 #, python-format
@@ -1111,7 +1117,7 @@ msgstr "系统负载（5分钟平均）"
 #: snikket_web/templates/admin_system.html:60
 #: snikket_web/templates/admin_system.html:68
 #: snikket_web/templates/admin_system.html:76
-#: snikket_web/templates/admin_system.html:84
+#: snikket_web/templates/admin_system.html:85
 msgid "unknown"
 msgstr "未知"
 
@@ -1161,14 +1167,34 @@ msgid "Storage used by shared files"
 msgstr "共享文件存储占用"
 
 #: snikket_web/templates/admin_system.html:79
-msgid "Connected devices"
+#, fuzzy
+#| msgid "Update user"
+msgid "Active users"
+msgstr "更新用户"
+
+#: snikket_web/templates/admin_system.html:83
+#, fuzzy
+#| msgid "Connected devices"
+msgid "Connected now:"
 msgstr "已连接的设备"
 
+#: snikket_web/templates/admin_system.html:88
+msgid "Past 24 hours:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:89
+msgid "Past 7 days:"
+msgstr ""
+
 #: snikket_web/templates/admin_system.html:90
+msgid "Past 30 days:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:97
 msgid "Broadcast message"
 msgstr "广播消息"
 
-#: snikket_web/templates/admin_system.html:92
+#: snikket_web/templates/admin_system.html:99
 msgid ""
 "This form allows you to send a message to all users currently online on your "
 "Snikket server. Use it wisely."
@@ -1421,7 +1447,7 @@ msgid "Your address"
 msgstr "你的地址"
 
 #: snikket_web/templates/invite_success.html:15
-#: snikket_web/templates/user_home.html:21
+#: snikket_web/templates/user_home.html:26
 msgid "Copy address"
 msgstr "复制地址"
 
@@ -1628,6 +1654,14 @@ msgstr "复制链接"
 msgid "Invalid input"
 msgstr "无效输入"
 
+#: snikket_web/templates/library.j2:137
+msgid "Group"
+msgstr "群组邀请"
+
+#: snikket_web/templates/library.j2:139
+msgid "Individual"
+msgstr "单个邀请"
+
 #: snikket_web/templates/library.j2:145
 msgid "Can be used multiple times to create accounts on this Snikket service."
 msgstr "可以在此Snikket实例使用多次。"
@@ -1704,41 +1738,32 @@ msgstr ""
 msgid "Operation successful"
 msgstr "操作成功"
 
-#: snikket_web/templates/user_home.html:9
-msgid "Welcome!"
-msgstr "欢迎！"
-
-#: snikket_web/templates/user_home.html:10
-#, python-format
-msgid "Welcome home, %(user_name)s."
-msgstr "欢迎回家，%(user_name)s。"
-
-#: snikket_web/templates/user_home.html:14
+#: snikket_web/templates/user_home.html:19
 msgid "Your account"
 msgstr "你的账户"
 
-#: snikket_web/templates/user_home.html:20
+#: snikket_web/templates/user_home.html:25
 msgid "Your XMPP address"
 msgstr "你的XMPP地址"
 
-#: snikket_web/templates/user_home.html:31
+#: snikket_web/templates/user_home.html:36
 msgid "Edit profile"
 msgstr "编辑资料"
 
-#: snikket_web/templates/user_home.html:33
+#: snikket_web/templates/user_home.html:38
 #: snikket_web/templates/user_manage_data.html:4
 msgid "Manage your data"
 msgstr "管理你的数据"
 
-#: snikket_web/templates/user_home.html:39
+#: snikket_web/templates/user_home.html:44
 msgid "Your Snikket"
 msgstr "你的Snikket"
 
-#: snikket_web/templates/user_home.html:41
+#: snikket_web/templates/user_home.html:46
 msgid "Manage users, invitations and circles of your Snikket service."
 msgstr "管理此Snikket实例的用户、邀请和圈子。"
 
-#: snikket_web/templates/user_home.html:43
+#: snikket_web/templates/user_home.html:48
 msgid "Admin panel"
 msgstr "管理面板"
 
@@ -1798,6 +1823,13 @@ msgid ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
 msgstr "允许你控制谁能看到你的个人资料，比如头像和昵称。"
+
+#~ msgid "Welcome!"
+#~ msgstr "欢迎！"
+
+#, python-format
+#~ msgid "Welcome home, %(user_name)s."
+#~ msgstr "欢迎回家，%(user_name)s。"
 
 #~ msgid "This circle has no group chat associated."
 #~ msgstr "此圈子没有群聊。"

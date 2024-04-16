@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-01-08 22:58+0000\n"
+"POT-Creation-Date: 2024-04-16 15:50+0100\n"
 "PO-Revision-Date: 2023-12-15 16:11+0000\n"
 "Last-Translator: uira <inboxriau@illiyy.in>\n"
 "Language-Team: Indonesian <http://i18n.sotecware.net/projects/snikket/web-"
@@ -138,13 +138,13 @@ msgstr "Empat minggu"
 msgid "Invitation type"
 msgstr "Jenis undangan"
 
-#: snikket_web/admin.py:287 snikket_web/templates/library.j2:139
-msgid "Individual"
-msgstr "Individu"
+#: snikket_web/admin.py:287
+msgid "Individual (for one person)"
+msgstr ""
 
-#: snikket_web/admin.py:288 snikket_web/templates/library.j2:137
-msgid "Group"
-msgstr "Grup"
+#: snikket_web/admin.py:288
+msgid "Group (for multiple people)"
+msgstr ""
 
 #: snikket_web/admin.py:294
 msgid "New invitation link"
@@ -313,7 +313,7 @@ msgstr "Pendaftaran ditolak karena alasan yang tidak diketahui."
 msgid "The username is not valid."
 msgstr "Nama pengguna tidak valid."
 
-#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:32
+#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:37
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "Ganti kata sandi"
@@ -336,7 +336,7 @@ msgstr ""
 "file XML dalam format XEP-0227 (format yang disediakan: %(mimetype)s)."
 
 #: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:184
+#: snikket_web/user.py:189
 msgid "Error"
 msgstr "Kesalahan"
 
@@ -408,15 +408,15 @@ msgstr "Data akun"
 msgid "Upload"
 msgstr "Unggah"
 
-#: snikket_web/user.py:117
+#: snikket_web/user.py:122
 msgid "Incorrect password."
 msgstr "Kata sandi salah."
 
-#: snikket_web/user.py:121
+#: snikket_web/user.py:126
 msgid "Password changed"
 msgstr "Kata sandi diganti"
 
-#: snikket_web/user.py:129
+#: snikket_web/user.py:134
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
@@ -424,15 +424,15 @@ msgstr ""
 "Avatar yang dipilih terlalu besar. Untuk dapat mengunggah avatar yang lebih "
 "besar, sila gunakan aplikasi."
 
-#: snikket_web/user.py:176
+#: snikket_web/user.py:181
 msgid "Profile updated"
 msgstr "Profil diperbarui"
 
-#: snikket_web/user.py:190
+#: snikket_web/user.py:195
 msgid "Export"
 msgstr "Ekspor"
 
-#: snikket_web/user.py:208
+#: snikket_web/user.py:213
 msgid "You currently have no account data to export."
 msgstr "Anda tidak memiliki data akun untuk diekspor."
 
@@ -644,6 +644,7 @@ msgid "Create invitation"
 msgstr "Buat undangan"
 
 #: snikket_web/templates/admin_create_invite_form.html:5
+#: snikket_web/templates/user_home.html:13
 msgid "Create new invitation"
 msgstr "Buat undangan baru"
 
@@ -654,6 +655,11 @@ msgid ""
 msgstr ""
 "Buat tautan undangan baru untuk mengundang lebih banyak pengguna ke layanan "
 "Snikket dengan klik tombol di bawah."
+
+#: snikket_web/templates/admin_create_invite_form.html:10
+msgid ""
+"Choose whether this invitation link will allow more than one person to join."
+msgstr ""
 
 #: snikket_web/templates/admin_debug_user.html:8
 #, python-format
@@ -1131,7 +1137,7 @@ msgstr "Beban sistem (rata-rata 5 menit)"
 #: snikket_web/templates/admin_system.html:60
 #: snikket_web/templates/admin_system.html:68
 #: snikket_web/templates/admin_system.html:76
-#: snikket_web/templates/admin_system.html:84
+#: snikket_web/templates/admin_system.html:85
 msgid "unknown"
 msgstr "Tidak diketahui"
 
@@ -1181,14 +1187,34 @@ msgid "Storage used by shared files"
 msgstr "Penyimpanan yang digunakan oleh file bersama"
 
 #: snikket_web/templates/admin_system.html:79
-msgid "Connected devices"
+#, fuzzy
+#| msgid "Update user"
+msgid "Active users"
+msgstr "Memperbarui pengguna"
+
+#: snikket_web/templates/admin_system.html:83
+#, fuzzy
+#| msgid "Connected devices"
+msgid "Connected now:"
 msgstr "Perangkat terhubung"
 
+#: snikket_web/templates/admin_system.html:88
+msgid "Past 24 hours:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:89
+msgid "Past 7 days:"
+msgstr ""
+
 #: snikket_web/templates/admin_system.html:90
+msgid "Past 30 days:"
+msgstr ""
+
+#: snikket_web/templates/admin_system.html:97
 msgid "Broadcast message"
 msgstr "Sebarkan pesan"
 
-#: snikket_web/templates/admin_system.html:92
+#: snikket_web/templates/admin_system.html:99
 msgid ""
 "This form allows you to send a message to all users currently online on your "
 "Snikket server. Use it wisely."
@@ -1457,7 +1483,7 @@ msgid "Your address"
 msgstr "Alamat anda"
 
 #: snikket_web/templates/invite_success.html:15
-#: snikket_web/templates/user_home.html:21
+#: snikket_web/templates/user_home.html:26
 msgid "Copy address"
 msgstr "Salin alamat"
 
@@ -1680,6 +1706,14 @@ msgstr "Salin tautan"
 msgid "Invalid input"
 msgstr "Input tidak valid"
 
+#: snikket_web/templates/library.j2:137
+msgid "Group"
+msgstr "Grup"
+
+#: snikket_web/templates/library.j2:139
+msgid "Individual"
+msgstr "Individu"
+
 #: snikket_web/templates/library.j2:145
 msgid "Can be used multiple times to create accounts on this Snikket service."
 msgstr ""
@@ -1758,41 +1792,32 @@ msgstr ""
 msgid "Operation successful"
 msgstr "Operasi berhasil"
 
-#: snikket_web/templates/user_home.html:9
-msgid "Welcome!"
-msgstr "Selamat datang!"
-
-#: snikket_web/templates/user_home.html:10
-#, python-format
-msgid "Welcome home, %(user_name)s."
-msgstr "Selamat kembali ke rumah, %(user_name)s."
-
-#: snikket_web/templates/user_home.html:14
+#: snikket_web/templates/user_home.html:19
 msgid "Your account"
 msgstr "Akun anda"
 
-#: snikket_web/templates/user_home.html:20
+#: snikket_web/templates/user_home.html:25
 msgid "Your XMPP address"
 msgstr "Alamat XMPP anda"
 
-#: snikket_web/templates/user_home.html:31
+#: snikket_web/templates/user_home.html:36
 msgid "Edit profile"
 msgstr "Edit profil"
 
-#: snikket_web/templates/user_home.html:33
+#: snikket_web/templates/user_home.html:38
 #: snikket_web/templates/user_manage_data.html:4
 msgid "Manage your data"
 msgstr "Kelola data anda"
 
-#: snikket_web/templates/user_home.html:39
+#: snikket_web/templates/user_home.html:44
 msgid "Your Snikket"
 msgstr "Snikket anda"
 
-#: snikket_web/templates/user_home.html:41
+#: snikket_web/templates/user_home.html:46
 msgid "Manage users, invitations and circles of your Snikket service."
 msgstr "Kelola pengguna, undangan dan kelompok pengguna layanan Snikket."
 
-#: snikket_web/templates/user_home.html:43
+#: snikket_web/templates/user_home.html:48
 msgid "Admin panel"
 msgstr "Panel Administrator"
 
@@ -1861,6 +1886,13 @@ msgid ""
 msgstr ""
 "Bagian ini memungkinkan Anda untuk mengontrol siapa yang bisa melihat profil "
 "Anda, seperti avatar dan nama panggilan."
+
+#~ msgid "Welcome!"
+#~ msgstr "Selamat datang!"
+
+#, python-format
+#~ msgid "Welcome home, %(user_name)s."
+#~ msgstr "Selamat kembali ke rumah, %(user_name)s."
 
 #~ msgid "This circle has no group chat associated."
 #~ msgstr "Kelompok ini tidak memiliki percakapan grup."
