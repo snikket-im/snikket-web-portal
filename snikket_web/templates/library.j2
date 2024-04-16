@@ -147,3 +147,37 @@
 {% trans %}Can be used once to create an account on this Snikket service.{% endtrans %}
 {%- endif -%}
 {%- endmacro -%}
+
+{% macro access_level_description(role, caller=None) %}
+{%- if role == "prosody:restricted" -%}
+{% trans %}Limited users can interact with users on the same Snikket service and be members of circles.{% endtrans %}
+{%- elif role == "prosody:registered" -%}
+{% trans %}Like limited users and can also interact with users on other Snikket services.{% endtrans %}
+{%- elif role == "prosody:admin" -%}
+{% trans %}Like normal users and can access the admin panel in the web portal.{% endtrans %}
+{%- endif -%}
+{% endmacro %}
+
+{% macro access_level_icon(role, caller=None) %}
+{%- if role == "prosody:restricted" -%}
+{% call icon("lock") %}{% endcall %}
+{%- elif role == "prosody:admin" -%}
+{% call icon("admin") %}{% endcall %}
+{%- endif -%}
+{% endmacro %}
+
+{% macro invite_type_description(invite_type, caller=None) %}
+{%- if invite_type == "account" -%}
+{% trans %}Invite a single person (invitation link can only be used once).{% endtrans %}
+{%- elif invite_type == "group" -%}
+{% trans %}Invite a group of people (invitation link can be used multiple times).{% endtrans %}
+{%- endif -%}
+{% endmacro %}
+
+{% macro invite_type_icon(invite_type, caller=None) %}
+{%- if invite_type == "account" -%}
+{% call icon("person") %}{% endcall %}
+{%- elif invite_type == "group" -%}
+{% call icon("people") %}{% endcall %}
+{%- endif -%}
+{% endmacro %}

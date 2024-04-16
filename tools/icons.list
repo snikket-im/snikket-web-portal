@@ -27,6 +27,7 @@ navigation/cancel:cancel
 navigation/more_vert:more
 social/groups:groups
 social/people:people
+social/person:person
 social/group_add:create_group
 social/person_add:add_user
 social/person_remove:remove_user
