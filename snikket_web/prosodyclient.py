@@ -125,9 +125,9 @@ class AdminUserInfo:
             # Ignore somehow broken avatars.
             try:
                 avatar_metadata = AvatarMetadata.from_api_response(avatar)
+                avatar_info.append(avatar_metadata)
             except KeyError:
                 pass
-            avatar_info.append(avatar_metadata)
         return cls(
             localpart=data["username"],
             display_name=data.get("display_name") or None,
