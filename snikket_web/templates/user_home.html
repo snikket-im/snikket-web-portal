@@ -6,7 +6,7 @@
 {% include "copy-snippet.html" %}
 {% endblock %}
 {% block content %}
-{% if user_info.is_admin and metrics.users.active_1d <= 1 %}
+{% if user_info.is_admin and and metrics.users and metrics.users.active_1d <= 1 %}
 <aside class="box hint">
   <header>Welcome to Snikket!</header>
   <p>Now your Snikket instance is up and running, the next step is to invite people to join it. Family, friends, colleagues... you choose!</p>
