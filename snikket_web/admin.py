@@ -284,8 +284,8 @@ class InvitePost(BaseForm):
     type_ = wtforms.RadioField(
         _l("Invitation type"),
         choices=[
-            ("account", _l("Individual")),
-            ("group", _l("Group")),
+            ("account", _l("Individual (for one person)")),
+            ("group", _l("Group (for multiple people)")),
         ],
         default="account",
     )
