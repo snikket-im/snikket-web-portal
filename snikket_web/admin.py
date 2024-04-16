@@ -812,6 +812,11 @@ async def system() -> typing.Union[str, werkzeug.Response]:
         except KeyError:
             pass
 
+        try:
+            metrics["users"] = prosody_metrics["users"]
+        except KeyError:
+            pass
+
         for k in list(metrics.keys()):
             if metrics[k] is None:
                 # so that defaulting in jinja works

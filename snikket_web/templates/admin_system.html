@@ -76,13 +76,20 @@
 			<em>{% trans %}unknown{% endtrans %}</em>
 			{%- endif -%}
 		</dd>
-		<dt>{% trans %}Connected devices{% endtrans %}</dt>
+		<dt>{% trans %}Active users{% endtrans %}</dt>
 		<dd>
+			<ul>
 			{%- if metrics.prosody_devices | default(None) is not none -%}
-			{{ metrics.prosody_devices }}
+			<li>{% trans %}Connected now:{% endtrans %} {{ metrics.prosody_devices }}</li>
 			{%- else -%}
-			<em>{% trans %}unknown{% endtrans %}</em>
+			<li><em>{% trans %}unknown{% endtrans %}</em></li>
 			{%- endif -%}
+			{%- if metrics.users | default(None) is not none -%}
+			<li>{% trans %}Past 24 hours:{% endtrans %} {{ metrics.users.active_1d }}</li>
+			<li>{% trans %}Past 7 days:{% endtrans %} {{ metrics.users.active_7d }}</li>
+			<li>{% trans %}Past 30 days:{% endtrans %} {{ metrics.users.active_30d }}</li>
+			{%- endif -%}
+			</ul>
 		</dd>
 	</dl>
 </div>
