@@ -160,6 +160,7 @@ class AdminInviteInfo:
     expires: datetime
     reusable: bool
     group_ids: typing.Collection[str]
+    role_names: typing.Collection[str]
     is_reset: bool
 
     @classmethod
@@ -177,6 +178,7 @@ class AdminInviteInfo:
             xmpp_uri=data.get("xmpp_uri"),
             landing_page=data.get("landing_page"),
             group_ids=data.get("groups", []),
+            role_names=data.get("roles", []),
             reusable=data["reusable"],
             is_reset=data.get("reset", False),
         )
@@ -1086,12 +1088,14 @@ class ProsodyClient:
             self,
             *,
             group_ids: typing.Collection[str] = [],
+            role_names: typing.Collection[str] = [],
             restrict_username: typing.Optional[str] = None,
             ttl: typing.Optional[int] = None,
             session: aiohttp.ClientSession,
             ) -> AdminInviteInfo:
         payload: typing.Dict[str, typing.Any] = {}
         payload["groups"] = list(group_ids)
+        payload["roles"] = list(role_names)
         if restrict_username is not None:
             payload["username"] = restrict_username
         if ttl is not None:
@@ -1108,11 +1112,13 @@ class ProsodyClient:
             self,
             *,
             group_ids: typing.Collection[str] = [],
+            role_names: typing.Collection[str] = [],
             ttl: typing.Optional[int] = None,
             session: aiohttp.ClientSession,
             ) -> AdminInviteInfo:
         payload: typing.Dict[str, typing.Any] = {
             "groups": list(group_ids),
+            "roles": list(role_names),
         }
         if ttl is not None:
             payload["ttl"] = ttl

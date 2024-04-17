@@ -1,21 +1,5 @@
 {% extends "admin_app.html" %}
-{% from "library.j2" import box, form_button, standard_button, icon %}
-{% macro access_level_description(role, caller=None) %}
-{%- if role == "prosody:restricted" -%}
-{% trans %}Limited users can interact with users on the same Snikket service and be members of circles.{% endtrans %}
-{%- elif role == "prosody:registered" -%}
-{% trans %}Like limited users and can also interact with users on other Snikket services.{% endtrans %}
-{%- elif role == "prosody:admin" -%}
-{% trans %}Like normal users and can access the admin panel in the web portal.{% endtrans %}
-{%- endif -%}
-{% endmacro %}
-{% macro access_level_icon(role, caller=None) %}
-{%- if role == "prosody:restricted" -%}
-{% call icon("lock") %}{% endcall %}
-{%- elif role == "prosody:admin" -%}
-{% call icon("admin") %}{% endcall %}
-{%- endif -%}
-{% endmacro %}
+{% from "library.j2" import box, form_button, standard_button, icon, access_level_description, access_level_icon %}
 {% block content %}
 <h1>{% trans user_name=target_user.localpart %}Edit user {{ user_name }}{% endtrans %}</h1>
 <form method="POST">{{ form.csrf_token }}<div class="form layout-expanded">

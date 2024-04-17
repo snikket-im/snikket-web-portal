@@ -1,20 +1,57 @@
-{% from "library.j2" import form_button, render_errors %}
+{% from "library.j2" import form_button,
+                            render_errors,
+                            access_level_description, access_level_icon,
+                            invite_type_description, invite_type_icon
+%}
 <form method="POST" action="{{ url_for(".create_invite") }}">
 {{- invite_form.csrf_token -}}
 <div class="form layout-expanded">
 	<h2 class="form-title">{% trans %}Create new invitation{% endtrans %}</h2>
 	<p class="form-descr weak">{% trans %}Create a new invitation link to invite more users to your Snikket service by clicking the button below.{% endtrans %}</p>
+
+	<!-- Invitation type -->
 	<div class="f-ebox">
-		<fieldset>{#- -#}
+		<fieldset class="descriptive-radio-selection">{#- -#}
 			<legend>{{ invite_form.type_.label.text }}</legend>
-			<span>{% trans %}Choose whether this invitation link will allow more than one person to join.{% endtrans %}</span>
-			{{- invite_form.type_ -}}
+			<p>{% trans %}Choose whether this invitation link will allow more than one person to join.{% endtrans %}</p>
+
+			{%- for invite_type in invite_form.type_ -%}
+			<div class="radio-button-ext">
+				{{ invite_type }}<label for="{{ invite_type.id }}">
+					{%- trans title=invite_type.label.text, icon=invite_type_icon(invite_type.data), description=invite_type_description(invite_type.data) -%}
+					<span class="invite-type">{{ title }}{{ icon }}</span><p>{{ description }}</p>
+					{%- endtrans -%}
+				</label>
+			</div>
+			{%- endfor -%}
 		</fieldset>
 	</div>
+
+	<!-- Access level -->
+	<div class="f-ebox">
+		<fieldset class="descriptive-radio-selection">{#- -#}
+			<legend>{{ invite_form.role.label.text }}</legend>
+			<p>{% trans %}The access level of a user determines what interactions are allowed for them on your Snikket service.{% endtrans %}</p>
+			{%- for level in invite_form.role -%}
+			<div class="radio-button-ext">
+				{{ level }}<label for="{{ level.id }}">
+					{%- trans title=level.label.text, icon=access_level_icon(level.data), description=access_level_description(level.data) -%}
+					<span class="access-level">{{ title }}{{ icon }}</span><p>{{ description }}</p>
+					{%- endtrans -%}
+				</label>
+			</div>
+			{%- endfor -%}
+		</fieldset>
+	</div>
+
+
+	<!-- Valid for -->
 	<div class="f-ebox">
 		{{ invite_form.lifetime.label }}
 		<div class="select-wrap">{{ invite_form.lifetime }}</div>
 	</div>
+
+	<!-- Invite to circle -->
 	<div class="f-ebox">
 {#
 	NOTE: This is for when/if we ever support multi-group invites.
@@ -28,6 +65,7 @@
 		<div class="select-wrap">{{ invite_form.circles }}</div>
 		{%- call render_errors(invite_form.circles) -%}{%- endcall -%}
 	</div>
+
 	<div class="f-bbox">
 		{%- call form_button("create_link", invite_form.action_create_invite, class="primary") %}{% endcall -%}
 	</div>

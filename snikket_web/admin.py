@@ -284,10 +284,19 @@ class InvitePost(BaseForm):
     type_ = wtforms.RadioField(
         _l("Invitation type"),
         choices=[
-            ("account", _l("Individual (for one person)")),
-            ("group", _l("Group (for multiple people)")),
+            ("account", _l("Individual")),
+            ("group", _l("Group")),
         ],
         default="account",
+    )
+
+    role = wtforms.RadioField(
+        _l("Access Level"),
+        choices=[
+            ("prosody:restricted", _l("Limited")),
+            ("prosody:registered", _l("Normal user")),
+            ("prosody:admin", _l("Administrator")),
+        ],
     )
 
     action_create_invite = wtforms.SubmitField(
@@ -369,11 +378,13 @@ async def create_invite() -> typing.Union[str, werkzeug.Response]:
         if form.type_.data == "group":
             invite = await client.create_group_invite(
                 group_ids=form.circles.data,
+                role_names=[form.role.data],
                 ttl=form.lifetime.data,
             )
         else:
             invite = await client.create_account_invite(
                 group_ids=form.circles.data,
+                role_names=[form.role.data],
                 ttl=form.lifetime.data,
             )
         await flash(
