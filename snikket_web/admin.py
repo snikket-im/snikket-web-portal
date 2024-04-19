@@ -80,6 +80,7 @@ class EditUserForm(BaseForm):
             ("prosody:registered", _l("Normal user")),
             ("prosody:admin", _l("Administrator")),
         ],
+        default="prosody:registered",
     )
 
     action_save = wtforms.SubmitField(
