@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-16 21:21+0100\n"
+"POT-Creation-Date: 2024-04-19 14:38+0100\n"
 "PO-Revision-Date: 2021-03-31 13:00+0000\n"
 "Last-Translator: Tilman Jiménez <tilman.jimenez@tu-dortmund.de>\n"
 "Language-Team: Spanish (Mexico) <https://i18n.sotecware.net/projects/snikket/"
@@ -30,258 +30,258 @@ msgstr "Nombre de ingreso del usuario"
 msgid "Display name"
 msgstr "Nombre mostrado"
 
-#: snikket_web/admin.py:77 snikket_web/admin.py:294
+#: snikket_web/admin.py:77 snikket_web/admin.py:295
 #: snikket_web/templates/admin_edit_user.html:37
 msgid "Access Level"
 msgstr "Nivel de acceso"
 
-#: snikket_web/admin.py:79 snikket_web/admin.py:296
+#: snikket_web/admin.py:79 snikket_web/admin.py:297
 msgid "Limited"
 msgstr "Limitado"
 
-#: snikket_web/admin.py:80 snikket_web/admin.py:297
+#: snikket_web/admin.py:80 snikket_web/admin.py:298
 msgid "Normal user"
 msgstr "Usuario normal"
 
-#: snikket_web/admin.py:81 snikket_web/admin.py:298
+#: snikket_web/admin.py:81 snikket_web/admin.py:299
 #, fuzzy
 #| msgid "Admin area"
 msgid "Administrator"
 msgstr "Administración"
 
-#: snikket_web/admin.py:86
+#: snikket_web/admin.py:87
 msgid "Update user"
 msgstr "Actualizar usuario"
 
-#: snikket_web/admin.py:90
+#: snikket_web/admin.py:91
 #, fuzzy
 #| msgid "Create account"
 msgid "Restore account"
 msgstr "Crear cuenta"
 
-#: snikket_web/admin.py:94
+#: snikket_web/admin.py:95
 #, fuzzy
 #| msgid "Create account"
 msgid "Unlock account"
 msgstr "Crear cuenta"
 
-#: snikket_web/admin.py:98
+#: snikket_web/admin.py:99
 #, fuzzy
 #| msgid "Current password"
 msgid "Create password reset link"
 msgstr "Contraseña actual"
 
-#: snikket_web/admin.py:116
+#: snikket_web/admin.py:117
 msgid "Password reset link created"
 msgstr "Un enlace para restablecer la contraseña ha sido creado"
 
-#: snikket_web/admin.py:128
+#: snikket_web/admin.py:129
 msgid "User account restored"
 msgstr ""
 
-#: snikket_web/admin.py:133
+#: snikket_web/admin.py:134
 msgid "User account unlocked"
 msgstr ""
 
-#: snikket_web/admin.py:140
+#: snikket_web/admin.py:141
 msgid "Could not restore user account"
 msgstr ""
 
-#: snikket_web/admin.py:145
+#: snikket_web/admin.py:146
 msgid "Could not unlock user account"
 msgstr ""
 
-#: snikket_web/admin.py:157
+#: snikket_web/admin.py:158
 #, fuzzy
 #| msgid "Circle information"
 msgid "User information updated."
 msgstr "Información del círculo"
 
-#: snikket_web/admin.py:179
+#: snikket_web/admin.py:180
 msgid "Delete user permanently"
 msgstr "Eliminar usuario permanentemente"
 
-#: snikket_web/admin.py:192
+#: snikket_web/admin.py:193
 msgid "User deleted"
 msgstr "Usuario eliminado"
 
-#: snikket_web/admin.py:230
+#: snikket_web/admin.py:231
 msgid "Password reset link not found"
 msgstr "No hemos encontrado un enlace para restablecer la contraseña"
 
-#: snikket_web/admin.py:242
+#: snikket_web/admin.py:243
 msgid "Password reset link deleted"
 msgstr "Enlace para restablecer la contraseña eliminado"
 
-#: snikket_web/admin.py:262
+#: snikket_web/admin.py:263
 msgid "Invite to circle"
 msgstr "Invitar al círculo"
 
-#: snikket_web/admin.py:268
+#: snikket_web/admin.py:269
 msgid "At least one circle must be selected"
 msgstr "Seleccione al menos un círculo"
 
-#: snikket_web/admin.py:273
+#: snikket_web/admin.py:274
 msgid "Valid for"
 msgstr "Válido por"
 
-#: snikket_web/admin.py:275
+#: snikket_web/admin.py:276
 msgid "One hour"
 msgstr "Una hora"
 
-#: snikket_web/admin.py:276
+#: snikket_web/admin.py:277
 msgid "Twelve hours"
 msgstr "Doce horas"
 
-#: snikket_web/admin.py:277
+#: snikket_web/admin.py:278
 msgid "One day"
 msgstr "Un día"
 
-#: snikket_web/admin.py:278
+#: snikket_web/admin.py:279
 msgid "One week"
 msgstr "Una semana"
 
-#: snikket_web/admin.py:279
+#: snikket_web/admin.py:280
 msgid "Four weeks"
 msgstr "Cuatro semanas"
 
-#: snikket_web/admin.py:285 snikket_web/templates/admin_edit_invite.html:17
+#: snikket_web/admin.py:286 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
 msgstr "Tipo de invitación"
 
-#: snikket_web/admin.py:287 snikket_web/templates/library.j2:139
+#: snikket_web/admin.py:288 snikket_web/templates/library.j2:139
 msgid "Individual"
 msgstr "Individual"
 
-#: snikket_web/admin.py:288 snikket_web/templates/library.j2:137
+#: snikket_web/admin.py:289 snikket_web/templates/library.j2:137
 msgid "Group"
 msgstr "Grupo"
 
-#: snikket_web/admin.py:303
+#: snikket_web/admin.py:304
 msgid "New invitation link"
 msgstr "Nuevo enlace de invitación"
 
-#: snikket_web/admin.py:365
+#: snikket_web/admin.py:366
 msgid "Revoke"
 msgstr "Revocar/Eliminar"
 
-#: snikket_web/admin.py:391
+#: snikket_web/admin.py:392
 #, fuzzy
 #| msgid "Invitation type"
 msgid "Invitation created"
 msgstr "Tipo de invitación"
 
-#: snikket_web/admin.py:407
+#: snikket_web/admin.py:408
 #, fuzzy
 #| msgid "New invitation link"
 msgid "No such invitation exists"
 msgstr "Nuevo enlace de invitación"
 
-#: snikket_web/admin.py:422
+#: snikket_web/admin.py:423
 #, fuzzy
 #| msgid "Invitation type"
 msgid "Invitation revoked"
 msgstr "Tipo de invitación"
 
-#: snikket_web/admin.py:439 snikket_web/admin.py:487
+#: snikket_web/admin.py:440 snikket_web/admin.py:488
 #: snikket_web/templates/admin_delete_circle.html:10
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Name"
 msgstr "Nombre"
 
-#: snikket_web/admin.py:444 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:445 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Crear círculo"
 
-#: snikket_web/admin.py:474
+#: snikket_web/admin.py:475
 #, fuzzy
 #| msgid "Circle name"
 msgid "Circle created"
 msgstr "Nombre del círculo"
 
-#: snikket_web/admin.py:492
+#: snikket_web/admin.py:493
 msgid "Select user"
 msgstr "Seleccionar usuario"
 
-#: snikket_web/admin.py:497
+#: snikket_web/admin.py:498
 msgid "Update circle"
 msgstr "Actualizar círculo"
 
-#: snikket_web/admin.py:503
+#: snikket_web/admin.py:504
 msgid "Add user"
 msgstr "Añadir usuario"
 
-#: snikket_web/admin.py:521 snikket_web/admin.py:620 snikket_web/admin.py:668
+#: snikket_web/admin.py:522 snikket_web/admin.py:621 snikket_web/admin.py:669
 #, fuzzy
 #| msgid "No circles"
 msgid "No such circle exists"
 msgstr "No hay círculos"
 
-#: snikket_web/admin.py:558
+#: snikket_web/admin.py:559
 #, fuzzy
 #| msgid "Circle name"
 msgid "Circle data updated"
 msgstr "Nombre del círculo"
 
-#: snikket_web/admin.py:568
+#: snikket_web/admin.py:569
 #, fuzzy
 #| msgid "Invite to circle"
 msgid "User added to circle"
 msgstr "Invitar al círculo"
 
-#: snikket_web/admin.py:577
+#: snikket_web/admin.py:578
 msgid "User removed from circle"
 msgstr ""
 
-#: snikket_web/admin.py:586
+#: snikket_web/admin.py:587
 msgid "Chat removed from circle"
 msgstr ""
 
-#: snikket_web/admin.py:604
+#: snikket_web/admin.py:605
 msgid "Delete circle permanently"
 msgstr "Eliminar círculo permanentemente"
 
-#: snikket_web/admin.py:631
+#: snikket_web/admin.py:632
 #, fuzzy
 #| msgid "Circle members"
 msgid "Circle deleted"
 msgstr "Miembros del círculo"
 
-#: snikket_web/admin.py:645
+#: snikket_web/admin.py:646
 #, fuzzy
 #| msgid "Group chat address"
 msgid "Group chat name"
 msgstr "Dirección de la conversación de grupo"
 
-#: snikket_web/admin.py:650
+#: snikket_web/admin.py:651
 #, fuzzy
 #| msgid "Create account"
 msgid "Create group chat"
 msgstr "Crear cuenta"
 
-#: snikket_web/admin.py:680
+#: snikket_web/admin.py:681
 #, fuzzy
 #| msgid "Invite to circle"
 msgid "New group chat added to circle"
 msgstr "Invitar al círculo"
 
-#: snikket_web/admin.py:747
+#: snikket_web/admin.py:748
 msgid "Message contents"
 msgstr ""
 
-#: snikket_web/admin.py:753
+#: snikket_web/admin.py:754
 msgid "Only send to online users"
 msgstr ""
 
-#: snikket_web/admin.py:757
+#: snikket_web/admin.py:758
 msgid "Post to all users"
 msgstr ""
 
-#: snikket_web/admin.py:761
+#: snikket_web/admin.py:762
 msgid "Send preview to yourself"
 msgstr ""
 
-#: snikket_web/admin.py:783
+#: snikket_web/admin.py:784
 msgid "Announcement sent!"
 msgstr ""
 
@@ -352,7 +352,8 @@ msgstr "El registro ha sido declinado por razones no identificadas"
 msgid "The username is not valid."
 msgstr "El nombre de usuario no es válido"
 
-#: snikket_web/invite.py:207 snikket_web/templates/user_passwd.html:29
+#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:37
+#: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "Cambiar contraseña"
 
@@ -672,6 +673,7 @@ msgid "Create invitation"
 msgstr "Crear una invitación"
 
 #: snikket_web/templates/admin_create_invite_form.html:9
+#: snikket_web/templates/user_home.html:13
 msgid "Create new invitation"
 msgstr "Crear una nueva invitación"
 
@@ -1494,6 +1496,7 @@ msgid "Your address"
 msgstr ""
 
 #: snikket_web/templates/invite_success.html:15
+#: snikket_web/templates/user_home.html:26
 msgid "Copy address"
 msgstr "Copiar dirección"
 
@@ -1795,6 +1798,51 @@ msgstr ""
 msgid "Operation successful"
 msgstr ""
 
+#: snikket_web/templates/user_home.html:19
+#, fuzzy
+#| msgid "Create account"
+msgid "Your account"
+msgstr "Crear cuenta"
+
+#: snikket_web/templates/user_home.html:25
+#, fuzzy
+#| msgid "Copy address"
+msgid "Your XMPP address"
+msgstr "Copiar dirección"
+
+#: snikket_web/templates/user_home.html:36
+#, fuzzy
+#| msgid "Update profile"
+msgid "Edit profile"
+msgstr "Actualizar perfil"
+
+#: snikket_web/templates/user_home.html:38
+#: snikket_web/templates/user_manage_data.html:4
+#, fuzzy
+#| msgid "Manage users"
+msgid "Manage your data"
+msgstr "Administrar usuarios"
+
+#: snikket_web/templates/user_home.html:44
+#, fuzzy
+#| msgid "About Snikket"
+msgid "Your Snikket"
+msgstr "Acerca de Snikket"
+
+#: snikket_web/templates/user_home.html:46
+#, fuzzy
+#| msgid "Please try again later and/or inform your Snikket service admin."
+msgid "Manage users, invitations and circles of your Snikket service."
+msgstr ""
+"Por favor intente más tarde y/o informe al administrador de su servicio "
+"Snikket."
+
+#: snikket_web/templates/user_home.html:48
+#, fuzzy
+#| msgid "Admin area"
+msgid "Admin panel"
+msgstr "Administración"
+
 #: snikket_web/templates/user_logout.html:5
 msgid "Sign out of the Snikket Web Portal"
 msgstr ""
@@ -1804,12 +1852,6 @@ msgid ""
 "Click below to log yourself out of the web portal. This does not affect any "
 "other connected devices."
 msgstr ""
-
-#: snikket_web/templates/user_manage_data.html:4
-#, fuzzy
-#| msgid "Manage users"
-msgid "Manage your data"
-msgstr "Administrar usuarios"
 
 #: snikket_web/templates/user_manage_data.html:8
 #, fuzzy

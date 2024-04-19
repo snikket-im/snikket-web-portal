@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-16 21:21+0100\n"
+"POT-Creation-Date: 2024-04-19 14:38+0100\n"
 "PO-Revision-Date: 2022-05-30 14:01+0000\n"
 "Last-Translator: Daniel Holmgaard <fovatis@tutanota.com>\n"
 "Language-Team: Danish <http://i18n.sotecware.net/projects/snikket/web-portal/"
@@ -30,238 +30,238 @@ msgstr "Login-navn"
 msgid "Display name"
 msgstr "Kaldenavn"
 
-#: snikket_web/admin.py:77 snikket_web/admin.py:294
+#: snikket_web/admin.py:77 snikket_web/admin.py:295
 #: snikket_web/templates/admin_edit_user.html:37
 msgid "Access Level"
 msgstr "Adgangsniveau"
 
-#: snikket_web/admin.py:79 snikket_web/admin.py:296
+#: snikket_web/admin.py:79 snikket_web/admin.py:297
 msgid "Limited"
 msgstr "Begrænset"
 
-#: snikket_web/admin.py:80 snikket_web/admin.py:297
+#: snikket_web/admin.py:80 snikket_web/admin.py:298
 msgid "Normal user"
 msgstr "Normal bruger"
 
-#: snikket_web/admin.py:81 snikket_web/admin.py:298
+#: snikket_web/admin.py:81 snikket_web/admin.py:299
 msgid "Administrator"
 msgstr "Administrator"
 
-#: snikket_web/admin.py:86
+#: snikket_web/admin.py:87
 msgid "Update user"
 msgstr "Opdater bruger"
 
-#: snikket_web/admin.py:90
+#: snikket_web/admin.py:91
 #, fuzzy
 #| msgid "Create account"
 msgid "Restore account"
 msgstr "Opret konto"
 
-#: snikket_web/admin.py:94
+#: snikket_web/admin.py:95
 #, fuzzy
 #| msgid "Your account"
 msgid "Unlock account"
 msgstr "Din konto"
 
-#: snikket_web/admin.py:98
+#: snikket_web/admin.py:99
 msgid "Create password reset link"
 msgstr "Opret link til nulstilling af adgangskode"
 
-#: snikket_web/admin.py:116
+#: snikket_web/admin.py:117
 msgid "Password reset link created"
 msgstr "Link til nulstilling af adgangskode oprettet"
 
-#: snikket_web/admin.py:128
+#: snikket_web/admin.py:129
 msgid "User account restored"
 msgstr ""
 
-#: snikket_web/admin.py:133
+#: snikket_web/admin.py:134
 msgid "User account unlocked"
 msgstr ""
 
-#: snikket_web/admin.py:140
+#: snikket_web/admin.py:141
 msgid "Could not restore user account"
 msgstr ""
 
-#: snikket_web/admin.py:145
+#: snikket_web/admin.py:146
 msgid "Could not unlock user account"
 msgstr ""
 
-#: snikket_web/admin.py:157
+#: snikket_web/admin.py:158
 msgid "User information updated."
 msgstr "Brugerinformation opdateret."
 
-#: snikket_web/admin.py:179
+#: snikket_web/admin.py:180
 msgid "Delete user permanently"
 msgstr "Slet bruger permanent"
 
-#: snikket_web/admin.py:192
+#: snikket_web/admin.py:193
 msgid "User deleted"
 msgstr "Bruger slettet"
 
-#: snikket_web/admin.py:230
+#: snikket_web/admin.py:231
 msgid "Password reset link not found"
 msgstr "Link til nulstilling af adgangskode ikke fundet"
 
-#: snikket_web/admin.py:242
+#: snikket_web/admin.py:243
 msgid "Password reset link deleted"
 msgstr "Link til nulstilling af adgangskode slettet"
 
-#: snikket_web/admin.py:262
+#: snikket_web/admin.py:263
 msgid "Invite to circle"
 msgstr "Inviter til cirkel"
 
-#: snikket_web/admin.py:268
+#: snikket_web/admin.py:269
 msgid "At least one circle must be selected"
 msgstr "Mindst en cirkel skal vælges"
 
-#: snikket_web/admin.py:273
+#: snikket_web/admin.py:274
 msgid "Valid for"
 msgstr "Gyldig for"
 
-#: snikket_web/admin.py:275
+#: snikket_web/admin.py:276
 msgid "One hour"
 msgstr "En time"
 
-#: snikket_web/admin.py:276
+#: snikket_web/admin.py:277
 msgid "Twelve hours"
 msgstr "Tolv timer"
 
-#: snikket_web/admin.py:277
+#: snikket_web/admin.py:278
 msgid "One day"
 msgstr "En dag"
 
-#: snikket_web/admin.py:278
+#: snikket_web/admin.py:279
 msgid "One week"
 msgstr "En uge"
 
-#: snikket_web/admin.py:279
+#: snikket_web/admin.py:280
 msgid "Four weeks"
 msgstr "Fire uger"
 
-#: snikket_web/admin.py:285 snikket_web/templates/admin_edit_invite.html:17
+#: snikket_web/admin.py:286 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
 msgstr "Invitationstype"
 
-#: snikket_web/admin.py:287 snikket_web/templates/library.j2:139
+#: snikket_web/admin.py:288 snikket_web/templates/library.j2:139
 msgid "Individual"
 msgstr "Individuel"
 
-#: snikket_web/admin.py:288 snikket_web/templates/library.j2:137
+#: snikket_web/admin.py:289 snikket_web/templates/library.j2:137
 msgid "Group"
 msgstr "Gruppe"
 
-#: snikket_web/admin.py:303
+#: snikket_web/admin.py:304
 msgid "New invitation link"
 msgstr "Ny invitationslink"
 
-#: snikket_web/admin.py:365
+#: snikket_web/admin.py:366
 msgid "Revoke"
 msgstr "Tilbagekald"
 
-#: snikket_web/admin.py:391
+#: snikket_web/admin.py:392
 msgid "Invitation created"
 msgstr "Invitation oprettet"
 
-#: snikket_web/admin.py:407
+#: snikket_web/admin.py:408
 msgid "No such invitation exists"
 msgstr "Denne invitation findes ikke"
 
-#: snikket_web/admin.py:422
+#: snikket_web/admin.py:423
 msgid "Invitation revoked"
 msgstr "Invitation tilbagekaldt"
 
-#: snikket_web/admin.py:439 snikket_web/admin.py:487
+#: snikket_web/admin.py:440 snikket_web/admin.py:488
 #: snikket_web/templates/admin_delete_circle.html:10
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Name"
 msgstr "Navn"
 
-#: snikket_web/admin.py:444 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:445 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Opret cirkel"
 
-#: snikket_web/admin.py:474
+#: snikket_web/admin.py:475
 msgid "Circle created"
 msgstr "Cirkel oprettet"
 
-#: snikket_web/admin.py:492
+#: snikket_web/admin.py:493
 msgid "Select user"
 msgstr "Vælg bruger"
 
-#: snikket_web/admin.py:497
+#: snikket_web/admin.py:498
 msgid "Update circle"
 msgstr "Opdater cirkel"
 
-#: snikket_web/admin.py:503
+#: snikket_web/admin.py:504
 msgid "Add user"
 msgstr "Tilføj bruger"
 
-#: snikket_web/admin.py:521 snikket_web/admin.py:620 snikket_web/admin.py:668
+#: snikket_web/admin.py:522 snikket_web/admin.py:621 snikket_web/admin.py:669
 msgid "No such circle exists"
 msgstr "Denne cirkel findes ikke"
 
-#: snikket_web/admin.py:558
+#: snikket_web/admin.py:559
 msgid "Circle data updated"
 msgstr "Cirkel-data opdateret"
 
-#: snikket_web/admin.py:568
+#: snikket_web/admin.py:569
 msgid "User added to circle"
 msgstr "Bruger tilføjet til cirkel"
 
-#: snikket_web/admin.py:577
+#: snikket_web/admin.py:578
 msgid "User removed from circle"
 msgstr "Bruger fjernet fra cirkel"
 
-#: snikket_web/admin.py:586
+#: snikket_web/admin.py:587
 #, fuzzy
 #| msgid "User removed from circle"
 msgid "Chat removed from circle"
 msgstr "Bruger fjernet fra cirkel"
 
-#: snikket_web/admin.py:604
+#: snikket_web/admin.py:605
 msgid "Delete circle permanently"
 msgstr "Slet cirkel permanent"
 
-#: snikket_web/admin.py:631
+#: snikket_web/admin.py:632
 msgid "Circle deleted"
 msgstr "Cirkel slettet"
 
-#: snikket_web/admin.py:645
+#: snikket_web/admin.py:646
 #, fuzzy
 #| msgid "Group chat address"
 msgid "Group chat name"
 msgstr "Gruppechat adresse"
 
-#: snikket_web/admin.py:650
+#: snikket_web/admin.py:651
 #, fuzzy
 #| msgid "Create account"
 msgid "Create group chat"
 msgstr "Opret konto"
 
-#: snikket_web/admin.py:680
+#: snikket_web/admin.py:681
 #, fuzzy
 #| msgid "User added to circle"
 msgid "New group chat added to circle"
 msgstr "Bruger tilføjet til cirkel"
 
-#: snikket_web/admin.py:747
+#: snikket_web/admin.py:748
 msgid "Message contents"
 msgstr "Meddelelsens indhold"
 
-#: snikket_web/admin.py:753
+#: snikket_web/admin.py:754
 msgid "Only send to online users"
 msgstr "Send kun til online brugere"
 
-#: snikket_web/admin.py:757
+#: snikket_web/admin.py:758
 msgid "Post to all users"
 msgstr "Send til alle brugere"
 
-#: snikket_web/admin.py:761
+#: snikket_web/admin.py:762
 msgid "Send preview to yourself"
 msgstr "Send forhåndsvisning til dig selv"
 
-#: snikket_web/admin.py:783
+#: snikket_web/admin.py:784
 msgid "Announcement sent!"
 msgstr "Bekendgørelse sendt!"
 
@@ -326,7 +326,8 @@ msgstr "Registrering blev afvist af ukendte årsager."
 msgid "The username is not valid."
 msgstr "Brugernavnet er ikke gyldigt."
 
-#: snikket_web/invite.py:207 snikket_web/templates/user_passwd.html:29
+#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:37
+#: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "Ændr adgangskode"
 
@@ -655,6 +656,7 @@ msgid "Create invitation"
 msgstr "Opret invitation"
 
 #: snikket_web/templates/admin_create_invite_form.html:9
+#: snikket_web/templates/user_home.html:13
 msgid "Create new invitation"
 msgstr "Opret ny invitation"
 
@@ -1494,6 +1496,7 @@ msgid "Your address"
 msgstr "Din adresse"
 
 #: snikket_web/templates/invite_success.html:15
+#: snikket_web/templates/user_home.html:26
 msgid "Copy address"
 msgstr "Kopier adresse"
 
@@ -1823,6 +1826,35 @@ msgstr ""
 msgid "Operation successful"
 msgstr "Operation lykkes"
 
+#: snikket_web/templates/user_home.html:19
+msgid "Your account"
+msgstr "Din konto"
+
+#: snikket_web/templates/user_home.html:25
+msgid "Your XMPP address"
+msgstr "Din XMPP adresse"
+
+#: snikket_web/templates/user_home.html:36
+msgid "Edit profile"
+msgstr "Rediger profil"
+
+#: snikket_web/templates/user_home.html:38
+#: snikket_web/templates/user_manage_data.html:4
+msgid "Manage your data"
+msgstr "Håndter dine data"
+
+#: snikket_web/templates/user_home.html:44
+msgid "Your Snikket"
+msgstr "Din Snikket"
+
+#: snikket_web/templates/user_home.html:46
+msgid "Manage users, invitations and circles of your Snikket service."
+msgstr "Håndter brugere, invitationer og cirkler på din Snikket tjeneste."
+
+#: snikket_web/templates/user_home.html:48
+msgid "Admin panel"
+msgstr "Administrator panel"
+
 #: snikket_web/templates/user_logout.html:5
 msgid "Sign out of the Snikket Web Portal"
 msgstr "Log ud af Snikket Webportalen"
@@ -1834,10 +1866,6 @@ msgid ""
 msgstr ""
 "Klik herunder for at logge dig selv ud af webportalen. Dette på virkeringen "
 "af de forbundne enheder."
-
-#: snikket_web/templates/user_manage_data.html:4
-msgid "Manage your data"
-msgstr "Håndter dine data"
 
 #: snikket_web/templates/user_manage_data.html:8
 msgid "Export account"
@@ -1892,24 +1920,6 @@ msgid ""
 msgstr ""
 "Denne sektion tillader dig at kontrollere, hvem der kan se din profil "
 "informationer, så som avatar og kaldenavn."
-
-#~ msgid "Your account"
-#~ msgstr "Din konto"
-
-#~ msgid "Your XMPP address"
-#~ msgstr "Din XMPP adresse"
-
-#~ msgid "Edit profile"
-#~ msgstr "Rediger profil"
-
-#~ msgid "Your Snikket"
-#~ msgstr "Din Snikket"
-
-#~ msgid "Manage users, invitations and circles of your Snikket service."
-#~ msgstr "Håndter brugere, invitationer og cirkler på din Snikket tjeneste."
-
-#~ msgid "Admin panel"
-#~ msgstr "Administrator panel"
 
 #~ msgid "Welcome!"
 #~ msgstr "Velkommen!"

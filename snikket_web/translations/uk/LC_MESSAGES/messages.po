@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-16 21:21+0100\n"
+"POT-Creation-Date: 2024-04-19 14:38+0100\n"
 "PO-Revision-Date: 2023-12-25 16:00+0000\n"
 "Last-Translator: Dmytro Vozniuk <plibnik@gmail.com>\n"
 "Language-Team: Ukrainian <http://i18n.sotecware.net/projects/snikket/web-"
@@ -31,226 +31,226 @@ msgstr "Логін"
 msgid "Display name"
 msgstr "Ім'я для відображення"
 
-#: snikket_web/admin.py:77 snikket_web/admin.py:294
+#: snikket_web/admin.py:77 snikket_web/admin.py:295
 #: snikket_web/templates/admin_edit_user.html:37
 msgid "Access Level"
 msgstr "Рівень доступу"
 
-#: snikket_web/admin.py:79 snikket_web/admin.py:296
+#: snikket_web/admin.py:79 snikket_web/admin.py:297
 msgid "Limited"
 msgstr "Обмежений"
 
-#: snikket_web/admin.py:80 snikket_web/admin.py:297
+#: snikket_web/admin.py:80 snikket_web/admin.py:298
 msgid "Normal user"
 msgstr "Звичайний користувач"
 
-#: snikket_web/admin.py:81 snikket_web/admin.py:298
+#: snikket_web/admin.py:81 snikket_web/admin.py:299
 msgid "Administrator"
 msgstr "Адміністратор"
 
-#: snikket_web/admin.py:86
+#: snikket_web/admin.py:87
 msgid "Update user"
 msgstr "Оновити користувача"
 
-#: snikket_web/admin.py:90
+#: snikket_web/admin.py:91
 msgid "Restore account"
 msgstr "Відновити обліковий запис"
 
-#: snikket_web/admin.py:94
+#: snikket_web/admin.py:95
 msgid "Unlock account"
 msgstr "Розблокувати обліковий запис"
 
-#: snikket_web/admin.py:98
+#: snikket_web/admin.py:99
 msgid "Create password reset link"
 msgstr "Створити посилання для зміни пароля"
 
-#: snikket_web/admin.py:116
+#: snikket_web/admin.py:117
 msgid "Password reset link created"
 msgstr "Посилання для зміни пароля створено"
 
-#: snikket_web/admin.py:128
+#: snikket_web/admin.py:129
 msgid "User account restored"
 msgstr "Обліковий запис користувача відновлено"
 
-#: snikket_web/admin.py:133
+#: snikket_web/admin.py:134
 msgid "User account unlocked"
 msgstr "Обліковий запис користувача розблоковано"
 
-#: snikket_web/admin.py:140
+#: snikket_web/admin.py:141
 msgid "Could not restore user account"
 msgstr "Не вдалося відновити обліковий запис користувача"
 
-#: snikket_web/admin.py:145
+#: snikket_web/admin.py:146
 msgid "Could not unlock user account"
 msgstr "Не вдалося розблокувати обліковий запис користувача"
 
-#: snikket_web/admin.py:157
+#: snikket_web/admin.py:158
 msgid "User information updated."
 msgstr "Інформацію про користувача оновлено."
 
-#: snikket_web/admin.py:179
+#: snikket_web/admin.py:180
 msgid "Delete user permanently"
 msgstr "Видалити користувача назавжди"
 
-#: snikket_web/admin.py:192
+#: snikket_web/admin.py:193
 msgid "User deleted"
 msgstr "Користувача видалено"
 
-#: snikket_web/admin.py:230
+#: snikket_web/admin.py:231
 msgid "Password reset link not found"
 msgstr "Такого посилання для зміни пароля не існує"
 
-#: snikket_web/admin.py:242
+#: snikket_web/admin.py:243
 msgid "Password reset link deleted"
 msgstr "Посилання для зміни пароля видалено"
 
-#: snikket_web/admin.py:262
+#: snikket_web/admin.py:263
 msgid "Invite to circle"
 msgstr "Запросити до кола"
 
-#: snikket_web/admin.py:268
+#: snikket_web/admin.py:269
 msgid "At least one circle must be selected"
 msgstr "Треба обрати хоча б одне коло"
 
-#: snikket_web/admin.py:273
+#: snikket_web/admin.py:274
 msgid "Valid for"
 msgstr "Дійсне протягом"
 
-#: snikket_web/admin.py:275
+#: snikket_web/admin.py:276
 msgid "One hour"
 msgstr "Одної години"
 
-#: snikket_web/admin.py:276
+#: snikket_web/admin.py:277
 msgid "Twelve hours"
 msgstr "12 годин"
 
-#: snikket_web/admin.py:277
+#: snikket_web/admin.py:278
 msgid "One day"
 msgstr "Одного дня"
 
-#: snikket_web/admin.py:278
+#: snikket_web/admin.py:279
 msgid "One week"
 msgstr "Одного тижня"
 
-#: snikket_web/admin.py:279
+#: snikket_web/admin.py:280
 msgid "Four weeks"
 msgstr "Чотирьох тижнів"
 
-#: snikket_web/admin.py:285 snikket_web/templates/admin_edit_invite.html:17
+#: snikket_web/admin.py:286 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
 msgstr "Тип запрошення"
 
-#: snikket_web/admin.py:287 snikket_web/templates/library.j2:139
+#: snikket_web/admin.py:288 snikket_web/templates/library.j2:139
 msgid "Individual"
 msgstr "Особисте"
 
-#: snikket_web/admin.py:288 snikket_web/templates/library.j2:137
+#: snikket_web/admin.py:289 snikket_web/templates/library.j2:137
 msgid "Group"
 msgstr "Групове"
 
-#: snikket_web/admin.py:303
+#: snikket_web/admin.py:304
 msgid "New invitation link"
 msgstr "Посилання на нове запрошення"
 
-#: snikket_web/admin.py:365
+#: snikket_web/admin.py:366
 msgid "Revoke"
 msgstr "Відкликати"
 
-#: snikket_web/admin.py:391
+#: snikket_web/admin.py:392
 msgid "Invitation created"
 msgstr "Запрошення створено"
 
-#: snikket_web/admin.py:407
+#: snikket_web/admin.py:408
 msgid "No such invitation exists"
 msgstr "Такого запрошення не існує"
 
-#: snikket_web/admin.py:422
+#: snikket_web/admin.py:423
 msgid "Invitation revoked"
 msgstr "Запрошення відкликане"
 
-#: snikket_web/admin.py:439 snikket_web/admin.py:487
+#: snikket_web/admin.py:440 snikket_web/admin.py:488
 #: snikket_web/templates/admin_delete_circle.html:10
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Name"
 msgstr "Назва"
 
-#: snikket_web/admin.py:444 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:445 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Створити коло"
 
-#: snikket_web/admin.py:474
+#: snikket_web/admin.py:475
 msgid "Circle created"
 msgstr "Коло створене"
 
-#: snikket_web/admin.py:492
+#: snikket_web/admin.py:493
 msgid "Select user"
 msgstr "Виберіть користувача"
 
-#: snikket_web/admin.py:497
+#: snikket_web/admin.py:498
 msgid "Update circle"
 msgstr "Оновити коло"
 
-#: snikket_web/admin.py:503
+#: snikket_web/admin.py:504
 msgid "Add user"
 msgstr "Додати користувача"
 
-#: snikket_web/admin.py:521 snikket_web/admin.py:620 snikket_web/admin.py:668
+#: snikket_web/admin.py:522 snikket_web/admin.py:621 snikket_web/admin.py:669
 msgid "No such circle exists"
 msgstr "Такого кола не існує"
 
-#: snikket_web/admin.py:558
+#: snikket_web/admin.py:559
 msgid "Circle data updated"
 msgstr "Дані кола оновлено"
 
-#: snikket_web/admin.py:568
+#: snikket_web/admin.py:569
 msgid "User added to circle"
 msgstr "Користувача додано у коло"
 
-#: snikket_web/admin.py:577
+#: snikket_web/admin.py:578
 msgid "User removed from circle"
 msgstr "Користувача видалено з кола"
 
-#: snikket_web/admin.py:586
+#: snikket_web/admin.py:587
 msgid "Chat removed from circle"
 msgstr "Чат видалено з кола"
 
-#: snikket_web/admin.py:604
+#: snikket_web/admin.py:605
 msgid "Delete circle permanently"
 msgstr "Видалити коло назавжди"
 
-#: snikket_web/admin.py:631
+#: snikket_web/admin.py:632
 msgid "Circle deleted"
 msgstr "Коло видалене"
 
-#: snikket_web/admin.py:645
+#: snikket_web/admin.py:646
 msgid "Group chat name"
 msgstr "Назва групового чату"
 
-#: snikket_web/admin.py:650
+#: snikket_web/admin.py:651
 msgid "Create group chat"
 msgstr "Створити груповий чат"
 
-#: snikket_web/admin.py:680
+#: snikket_web/admin.py:681
 msgid "New group chat added to circle"
 msgstr "У коло додано новий груповий чат"
 
-#: snikket_web/admin.py:747
+#: snikket_web/admin.py:748
 msgid "Message contents"
 msgstr "Вміст повідомлення"
 
-#: snikket_web/admin.py:753
+#: snikket_web/admin.py:754
 msgid "Only send to online users"
 msgstr "Відправити тільки користувачам, які онлайн"
 
-#: snikket_web/admin.py:757
+#: snikket_web/admin.py:758
 msgid "Post to all users"
 msgstr "Опублікувати для усіх користувачів"
 
-#: snikket_web/admin.py:761
+#: snikket_web/admin.py:762
 msgid "Send preview to yourself"
 msgstr "Надіслати попередній перегляд собі"
 
-#: snikket_web/admin.py:783
+#: snikket_web/admin.py:784
 msgid "Announcement sent!"
 msgstr "Оголошення надіслане!"
 
@@ -315,7 +315,8 @@ msgstr "У реєстрації відмовлено з невідомої пр�
 msgid "The username is not valid."
 msgstr "Це ім’я користувача неприпустиме."
 
-#: snikket_web/invite.py:207 snikket_web/templates/user_passwd.html:29
+#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:37
+#: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "Змінити пароль"
 
@@ -645,6 +646,7 @@ msgid "Create invitation"
 msgstr "Створити запрошення"
 
 #: snikket_web/templates/admin_create_invite_form.html:9
+#: snikket_web/templates/user_home.html:13
 msgid "Create new invitation"
 msgstr "Створити нове запрошення"
 
@@ -1484,6 +1486,7 @@ msgid "Your address"
 msgstr "Ваша адреса"
 
 #: snikket_web/templates/invite_success.html:15
+#: snikket_web/templates/user_home.html:26
 msgid "Copy address"
 msgstr "Копіювати адресу"
 
@@ -1820,6 +1823,36 @@ msgstr ""
 msgid "Operation successful"
 msgstr "Операція успішна"
 
+#: snikket_web/templates/user_home.html:19
+msgid "Your account"
+msgstr "Ваш обліковий запис"
+
+#: snikket_web/templates/user_home.html:25
+msgid "Your XMPP address"
+msgstr "Ваша адреса XMPP"
+
+#: snikket_web/templates/user_home.html:36
+msgid "Edit profile"
+msgstr "Редагувати профіль"
+
+#: snikket_web/templates/user_home.html:38
+#: snikket_web/templates/user_manage_data.html:4
+msgid "Manage your data"
+msgstr "Керувати вашими даними"
+
+#: snikket_web/templates/user_home.html:44
+msgid "Your Snikket"
+msgstr "Ваш Snikket"
+
+#: snikket_web/templates/user_home.html:46
+msgid "Manage users, invitations and circles of your Snikket service."
+msgstr ""
+"Керуйте користувачами, запрошеннями та колами на вашому сервісі Snikket."
+
+#: snikket_web/templates/user_home.html:48
+msgid "Admin panel"
+msgstr "Панель адміністрування"
+
 #: snikket_web/templates/user_logout.html:5
 msgid "Sign out of the Snikket Web Portal"
 msgstr "Вийти з веб-порталу Snikket"
@@ -1831,10 +1864,6 @@ msgid ""
 msgstr ""
 "Натисніть нижче, щоб вийти з веб-порталу. Ця дія не вплине на інші "
 "підключені пристрої."
-
-#: snikket_web/templates/user_manage_data.html:4
-msgid "Manage your data"
-msgstr "Керувати вашими даними"
 
 #: snikket_web/templates/user_manage_data.html:8
 msgid "Export account"
@@ -1888,25 +1917,6 @@ msgid ""
 msgstr ""
 "Цей розділ дає змогу визначити, хто зможе бачити відомості з вашого профілю, "
 "такі як аватар чи нікнейм."
-
-#~ msgid "Your account"
-#~ msgstr "Ваш обліковий запис"
-
-#~ msgid "Your XMPP address"
-#~ msgstr "Ваша адреса XMPP"
-
-#~ msgid "Edit profile"
-#~ msgstr "Редагувати профіль"
-
-#~ msgid "Your Snikket"
-#~ msgstr "Ваш Snikket"
-
-#~ msgid "Manage users, invitations and circles of your Snikket service."
-#~ msgstr ""
-#~ "Керуйте користувачами, запрошеннями та колами на вашому сервісі Snikket."
-
-#~ msgid "Admin panel"
-#~ msgstr "Панель адміністрування"
 
 #~ msgid "Welcome!"
 #~ msgstr "Вітаємо!"

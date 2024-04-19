@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-16 21:21+0100\n"
+"POT-Creation-Date: 2024-04-19 14:38+0100\n"
 "PO-Revision-Date: 2024-01-20 23:01+0000\n"
 "Last-Translator: Federico <federico@tebaldi.eu>\n"
 "Language-Team: Italian <http://i18n.sotecware.net/projects/snikket/web-"
@@ -30,226 +30,226 @@ msgstr "Nome utente"
 msgid "Display name"
 msgstr "Nome visualizzato"
 
-#: snikket_web/admin.py:77 snikket_web/admin.py:294
+#: snikket_web/admin.py:77 snikket_web/admin.py:295
 #: snikket_web/templates/admin_edit_user.html:37
 msgid "Access Level"
 msgstr "Livello di accesso"
 
-#: snikket_web/admin.py:79 snikket_web/admin.py:296
+#: snikket_web/admin.py:79 snikket_web/admin.py:297
 msgid "Limited"
 msgstr "Limitato"
 
-#: snikket_web/admin.py:80 snikket_web/admin.py:297
+#: snikket_web/admin.py:80 snikket_web/admin.py:298
 msgid "Normal user"
 msgstr "Utente normale"
 
-#: snikket_web/admin.py:81 snikket_web/admin.py:298
+#: snikket_web/admin.py:81 snikket_web/admin.py:299
 msgid "Administrator"
 msgstr "Amministratore"
 
-#: snikket_web/admin.py:86
+#: snikket_web/admin.py:87
 msgid "Update user"
 msgstr "Aggiorna utente"
 
-#: snikket_web/admin.py:90
+#: snikket_web/admin.py:91
 msgid "Restore account"
 msgstr "Ripristina utenza"
 
-#: snikket_web/admin.py:94
+#: snikket_web/admin.py:95
 msgid "Unlock account"
 msgstr "Sblocca utenza"
 
-#: snikket_web/admin.py:98
+#: snikket_web/admin.py:99
 msgid "Create password reset link"
 msgstr "Crea collegamento per reimpostare la password"
 
-#: snikket_web/admin.py:116
+#: snikket_web/admin.py:117
 msgid "Password reset link created"
 msgstr "Creato collegamento per reimpostare la password"
 
-#: snikket_web/admin.py:128
+#: snikket_web/admin.py:129
 msgid "User account restored"
 msgstr "Utente ripristinato"
 
-#: snikket_web/admin.py:133
+#: snikket_web/admin.py:134
 msgid "User account unlocked"
 msgstr "Utente sbloccato"
 
-#: snikket_web/admin.py:140
+#: snikket_web/admin.py:141
 msgid "Could not restore user account"
 msgstr "Impossibile ripristinare questa utenza"
 
-#: snikket_web/admin.py:145
+#: snikket_web/admin.py:146
 msgid "Could not unlock user account"
 msgstr "Impossibile sbloccare questa utenza"
 
-#: snikket_web/admin.py:157
+#: snikket_web/admin.py:158
 msgid "User information updated."
 msgstr "Informazioni utente aggiornate."
 
-#: snikket_web/admin.py:179
+#: snikket_web/admin.py:180
 msgid "Delete user permanently"
 msgstr "Elimina definitivamente l'utente"
 
-#: snikket_web/admin.py:192
+#: snikket_web/admin.py:193
 msgid "User deleted"
 msgstr "Utente rimosso"
 
-#: snikket_web/admin.py:230
+#: snikket_web/admin.py:231
 msgid "Password reset link not found"
 msgstr "Collegamento per reimpostare la password non trovato"
 
-#: snikket_web/admin.py:242
+#: snikket_web/admin.py:243
 msgid "Password reset link deleted"
 msgstr "Eliminato collegamento per reimpostare la password"
 
-#: snikket_web/admin.py:262
+#: snikket_web/admin.py:263
 msgid "Invite to circle"
 msgstr "Invita nella cerchia"
 
-#: snikket_web/admin.py:268
+#: snikket_web/admin.py:269
 msgid "At least one circle must be selected"
 msgstr "Devi selezionare almeno una cerchia"
 
-#: snikket_web/admin.py:273
+#: snikket_web/admin.py:274
 msgid "Valid for"
 msgstr "Valido per"
 
-#: snikket_web/admin.py:275
+#: snikket_web/admin.py:276
 msgid "One hour"
 msgstr "Un'ora"
 
-#: snikket_web/admin.py:276
+#: snikket_web/admin.py:277
 msgid "Twelve hours"
 msgstr "Dodici ore"
 
-#: snikket_web/admin.py:277
+#: snikket_web/admin.py:278
 msgid "One day"
 msgstr "Un giorno"
 
-#: snikket_web/admin.py:278
+#: snikket_web/admin.py:279
 msgid "One week"
 msgstr "Una settimana"
 
-#: snikket_web/admin.py:279
+#: snikket_web/admin.py:280
 msgid "Four weeks"
 msgstr "Quattro settimane"
 
-#: snikket_web/admin.py:285 snikket_web/templates/admin_edit_invite.html:17
+#: snikket_web/admin.py:286 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
 msgstr "Tipo di invito"
 
-#: snikket_web/admin.py:287 snikket_web/templates/library.j2:139
+#: snikket_web/admin.py:288 snikket_web/templates/library.j2:139
 msgid "Individual"
 msgstr "Individuale"
 
-#: snikket_web/admin.py:288 snikket_web/templates/library.j2:137
+#: snikket_web/admin.py:289 snikket_web/templates/library.j2:137
 msgid "Group"
 msgstr "Gruppo"
 
-#: snikket_web/admin.py:303
+#: snikket_web/admin.py:304
 msgid "New invitation link"
 msgstr "Nuovo collegamento di invito"
 
-#: snikket_web/admin.py:365
+#: snikket_web/admin.py:366
 msgid "Revoke"
 msgstr "Revoca"
 
-#: snikket_web/admin.py:391
+#: snikket_web/admin.py:392
 msgid "Invitation created"
 msgstr "Invito creato"
 
-#: snikket_web/admin.py:407
+#: snikket_web/admin.py:408
 msgid "No such invitation exists"
 msgstr "Questo invito non esiste"
 
-#: snikket_web/admin.py:422
+#: snikket_web/admin.py:423
 msgid "Invitation revoked"
 msgstr "Invito revocato"
 
-#: snikket_web/admin.py:439 snikket_web/admin.py:487
+#: snikket_web/admin.py:440 snikket_web/admin.py:488
 #: snikket_web/templates/admin_delete_circle.html:10
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Name"
 msgstr "Nome"
 
-#: snikket_web/admin.py:444 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:445 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Crea cerchia"
 
-#: snikket_web/admin.py:474
+#: snikket_web/admin.py:475
 msgid "Circle created"
 msgstr "Cerchia creata"
 
-#: snikket_web/admin.py:492
+#: snikket_web/admin.py:493
 msgid "Select user"
 msgstr "Seleziona utente"
 
-#: snikket_web/admin.py:497
+#: snikket_web/admin.py:498
 msgid "Update circle"
 msgstr "Modifica cerchia"
 
-#: snikket_web/admin.py:503
+#: snikket_web/admin.py:504
 msgid "Add user"
 msgstr "Aggiungi utente"
 
-#: snikket_web/admin.py:521 snikket_web/admin.py:620 snikket_web/admin.py:668
+#: snikket_web/admin.py:522 snikket_web/admin.py:621 snikket_web/admin.py:669
 msgid "No such circle exists"
 msgstr "Questa cerchia non esiste"
 
-#: snikket_web/admin.py:558
+#: snikket_web/admin.py:559
 msgid "Circle data updated"
 msgstr "Dati della cerchia aggiornati"
 
-#: snikket_web/admin.py:568
+#: snikket_web/admin.py:569
 msgid "User added to circle"
 msgstr "Utente aggiunto alla cerchia"
 
-#: snikket_web/admin.py:577
+#: snikket_web/admin.py:578
 msgid "User removed from circle"
 msgstr "Utente rimosso dalla cerchia"
 
-#: snikket_web/admin.py:586
+#: snikket_web/admin.py:587
 msgid "Chat removed from circle"
 msgstr "Chat di gruppo rimossa dalla cerchia"
 
-#: snikket_web/admin.py:604
+#: snikket_web/admin.py:605
 msgid "Delete circle permanently"
 msgstr "Elimina cerchia definitivamente"
 
-#: snikket_web/admin.py:631
+#: snikket_web/admin.py:632
 msgid "Circle deleted"
 msgstr "Cerchia eliminata"
 
-#: snikket_web/admin.py:645
+#: snikket_web/admin.py:646
 msgid "Group chat name"
 msgstr "Nome chat di gruppo"
 
-#: snikket_web/admin.py:650
+#: snikket_web/admin.py:651
 msgid "Create group chat"
 msgstr "Crea chat di gruppo"
 
-#: snikket_web/admin.py:680
+#: snikket_web/admin.py:681
 msgid "New group chat added to circle"
 msgstr "Nuova chat di gruppo aggiunta alla cerchia"
 
-#: snikket_web/admin.py:747
+#: snikket_web/admin.py:748
 msgid "Message contents"
 msgstr "Contenuto del messaggio"
 
-#: snikket_web/admin.py:753
+#: snikket_web/admin.py:754
 msgid "Only send to online users"
 msgstr "Inviare solo agli utenti online"
 
-#: snikket_web/admin.py:757
+#: snikket_web/admin.py:758
 msgid "Post to all users"
 msgstr "Invia a tutti gli utenti"
 
-#: snikket_web/admin.py:761
+#: snikket_web/admin.py:762
 msgid "Send preview to yourself"
 msgstr "Invia una anteprima a te stesso"
 
-#: snikket_web/admin.py:783
+#: snikket_web/admin.py:784
 msgid "Announcement sent!"
 msgstr "Annuncio inviato!"
 
@@ -314,7 +314,8 @@ msgstr "Registrazione rifiutata per motivi sconosciuti."
 msgid "The username is not valid."
 msgstr "Nome utente non valido."
 
-#: snikket_web/invite.py:207 snikket_web/templates/user_passwd.html:29
+#: snikket_web/invite.py:207 snikket_web/templates/user_home.html:37
+#: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr "Cambia password"
 
@@ -644,6 +645,7 @@ msgid "Create invitation"
 msgstr "Crea invito"
 
 #: snikket_web/templates/admin_create_invite_form.html:9
+#: snikket_web/templates/user_home.html:13
 msgid "Create new invitation"
 msgstr "Crea nuovo invito"
 
@@ -1482,6 +1484,7 @@ msgid "Your address"
 msgstr "Il tuo indirizzo"
 
 #: snikket_web/templates/invite_success.html:15
+#: snikket_web/templates/user_home.html:26
 msgid "Copy address"
 msgstr "Copia indirizzo"
 
@@ -1822,6 +1825,35 @@ msgstr ""
 msgid "Operation successful"
 msgstr "Operazione completata"
 
+#: snikket_web/templates/user_home.html:19
+msgid "Your account"
+msgstr "La tua utenza"
+
+#: snikket_web/templates/user_home.html:25
+msgid "Your XMPP address"
+msgstr "Il tuo indirizzo XMPP"
+
+#: snikket_web/templates/user_home.html:36
+msgid "Edit profile"
+msgstr "Modifica profilo"
+
+#: snikket_web/templates/user_home.html:38
+#: snikket_web/templates/user_manage_data.html:4
+msgid "Manage your data"
+msgstr "Gestisci i tuoi dati"
+
+#: snikket_web/templates/user_home.html:44
+msgid "Your Snikket"
+msgstr "Il tuo Snikket"
+
+#: snikket_web/templates/user_home.html:46
+msgid "Manage users, invitations and circles of your Snikket service."
+msgstr "Gestisci utenti, inviti e cerchie del tuo servizio Snikket."
+
+#: snikket_web/templates/user_home.html:48
+msgid "Admin panel"
+msgstr "Pannello amministrativo"
+
 #: snikket_web/templates/user_logout.html:5
 msgid "Sign out of the Snikket Web Portal"
 msgstr "Esci dal Portale Web Snikket"
@@ -1833,10 +1865,6 @@ msgid ""
 msgstr ""
 "Premi il pulsante sottostante per uscire dal portale web. Non ha effetto "
 "sugli altri dispositivi collegati."
-
-#: snikket_web/templates/user_manage_data.html:4
-msgid "Manage your data"
-msgstr "Gestisci i tuoi dati"
 
 #: snikket_web/templates/user_manage_data.html:8
 msgid "Export account"
@@ -1891,24 +1919,6 @@ msgid ""
 msgstr ""
 "Questa sezione ti permette di controllare chi può visualizzare i dettagli "
 "del tuo profilo, come ad esempio l'avatar o il soprannome."
-
-#~ msgid "Your account"
-#~ msgstr "La tua utenza"
-
-#~ msgid "Your XMPP address"
-#~ msgstr "Il tuo indirizzo XMPP"
-
-#~ msgid "Edit profile"
-#~ msgstr "Modifica profilo"
-
-#~ msgid "Your Snikket"
-#~ msgstr "Il tuo Snikket"
-
-#~ msgid "Manage users, invitations and circles of your Snikket service."
-#~ msgstr "Gestisci utenti, inviti e cerchie del tuo servizio Snikket."
-
-#~ msgid "Admin panel"
-#~ msgstr "Pannello amministrativo"
 
 #~ msgid "Welcome!"
 #~ msgstr "Benvenuta/o!"
