@@ -298,6 +298,7 @@ class InvitePost(BaseForm):
             ("prosody:registered", _l("Normal user")),
             ("prosody:admin", _l("Administrator")),
         ],
+        default="prosody:registered",
     )
 
     action_create_invite = wtforms.SubmitField(
