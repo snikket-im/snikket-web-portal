@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-27 14:20+0200\n"
+"POT-Creation-Date: 2024-04-27 14:22+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1663,6 +1663,16 @@ msgstr ""
 
 #: snikket_web/templates/unauth.html:16
 msgid "Operation successful"
+msgstr ""
+
+#: snikket_web/templates/user_home.html:11
+msgid "Welcome to Snikket!"
+msgstr ""
+
+#: snikket_web/templates/user_home.html:12
+msgid ""
+"Now your Snikket instance is up and running, the next step is to invite "
+"people to join it. Family, friends, colleagues... you choose!"
 msgstr ""
 
 #: snikket_web/templates/user_home.html:19
