@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-19 14:38+0100\n"
+"POT-Creation-Date: 2024-04-27 14:22+0200\n"
 "PO-Revision-Date: 2023-12-15 16:11+0000\n"
 "Last-Translator: uira <inboxriau@illiyy.in>\n"
 "Language-Team: Indonesian <http://i18n.sotecware.net/projects/snikket/web-"
@@ -147,109 +147,109 @@ msgstr "Individu"
 msgid "Group"
 msgstr "Grup"
 
-#: snikket_web/admin.py:304
+#: snikket_web/admin.py:305
 msgid "New invitation link"
 msgstr "Tautan undangan baru"
 
-#: snikket_web/admin.py:366
+#: snikket_web/admin.py:367
 msgid "Revoke"
 msgstr "Batalkan"
 
-#: snikket_web/admin.py:392
+#: snikket_web/admin.py:393
 msgid "Invitation created"
 msgstr "Undangan dibuat"
 
-#: snikket_web/admin.py:408
+#: snikket_web/admin.py:409
 msgid "No such invitation exists"
 msgstr "Undangan tidak tersedia"
 
-#: snikket_web/admin.py:423
+#: snikket_web/admin.py:424
 msgid "Invitation revoked"
 msgstr "Undangan dibatalkan"
 
-#: snikket_web/admin.py:440 snikket_web/admin.py:488
+#: snikket_web/admin.py:441 snikket_web/admin.py:489
 #: snikket_web/templates/admin_delete_circle.html:10
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Name"
 msgstr "Nama"
 
-#: snikket_web/admin.py:445 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:446 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Buat kelompok"
 
-#: snikket_web/admin.py:475
+#: snikket_web/admin.py:476
 msgid "Circle created"
 msgstr "Kelompok dibuat"
 
-#: snikket_web/admin.py:493
+#: snikket_web/admin.py:494
 msgid "Select user"
 msgstr "Pilih pengguna"
 
-#: snikket_web/admin.py:498
+#: snikket_web/admin.py:499
 msgid "Update circle"
 msgstr "Memperbarui kelompok"
 
-#: snikket_web/admin.py:504
+#: snikket_web/admin.py:505
 msgid "Add user"
 msgstr "Tambah pengguna"
 
-#: snikket_web/admin.py:522 snikket_web/admin.py:621 snikket_web/admin.py:669
+#: snikket_web/admin.py:523 snikket_web/admin.py:622 snikket_web/admin.py:670
 msgid "No such circle exists"
 msgstr "Kelompok tersebut tidak ada"
 
-#: snikket_web/admin.py:559
+#: snikket_web/admin.py:560
 msgid "Circle data updated"
 msgstr "Data kelompok diperbarui"
 
-#: snikket_web/admin.py:569
+#: snikket_web/admin.py:570
 msgid "User added to circle"
 msgstr "Pengguna ditambahkan ke kelompok"
 
-#: snikket_web/admin.py:578
+#: snikket_web/admin.py:579
 msgid "User removed from circle"
 msgstr "Pengguna dihapus dari kelompok"
 
-#: snikket_web/admin.py:587
+#: snikket_web/admin.py:588
 msgid "Chat removed from circle"
 msgstr "Chat dihapus dari lingkaran"
 
-#: snikket_web/admin.py:605
+#: snikket_web/admin.py:606
 msgid "Delete circle permanently"
 msgstr "Hapus kelompok secara permanen"
 
-#: snikket_web/admin.py:632
+#: snikket_web/admin.py:633
 msgid "Circle deleted"
 msgstr "Kelompok dihapus"
 
-#: snikket_web/admin.py:646
+#: snikket_web/admin.py:647
 msgid "Group chat name"
 msgstr "Nama grup chat"
 
-#: snikket_web/admin.py:651
+#: snikket_web/admin.py:652
 msgid "Create group chat"
 msgstr "Buat grup chat"
 
-#: snikket_web/admin.py:681
+#: snikket_web/admin.py:682
 msgid "New group chat added to circle"
 msgstr "Grup chat baru ditambahkan ke lingkaran"
 
-#: snikket_web/admin.py:748
+#: snikket_web/admin.py:749
 msgid "Message contents"
 msgstr "Isi pesan"
 
-#: snikket_web/admin.py:754
+#: snikket_web/admin.py:755
 msgid "Only send to online users"
 msgstr "Hanya kirim ke pengguna online"
 
-#: snikket_web/admin.py:758
+#: snikket_web/admin.py:759
 msgid "Post to all users"
 msgstr "Kirim ke semua pengguna"
 
-#: snikket_web/admin.py:762
+#: snikket_web/admin.py:763
 msgid "Send preview to yourself"
 msgstr "Kirim pratinjau ke diri sendiri"
 
-#: snikket_web/admin.py:784
+#: snikket_web/admin.py:785
 msgid "Announcement sent!"
 msgstr "Pengumuman terkirim!"
 
@@ -1809,6 +1809,18 @@ msgstr ""
 #: snikket_web/templates/unauth.html:16
 msgid "Operation successful"
 msgstr "Operasi berhasil"
+
+#: snikket_web/templates/user_home.html:11
+#, fuzzy
+#| msgid "Moving to Snikket?"
+msgid "Welcome to Snikket!"
+msgstr "Pindahkan ke Snikket?"
+
+#: snikket_web/templates/user_home.html:12
+msgid ""
+"Now your Snikket instance is up and running, the next step is to invite "
+"people to join it. Family, friends, colleagues... you choose!"
+msgstr ""
 
 #: snikket_web/templates/user_home.html:19
 msgid "Your account"
