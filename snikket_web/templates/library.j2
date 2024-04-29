@@ -132,11 +132,11 @@
 {%- endif -%}
 {% endmacro %}
 
-{%- macro invite_type_name(invite_info, caller=None) -%}
-{%- if invite_info.reusable -%}
-{% trans %}Group{% endtrans %}
-{%- else -%}
+{%- macro invite_type_name(invite_type, caller=None) -%}
+{%- if invite_type == "account" -%}
 {% trans %}Individual{% endtrans %}
+{%- else -%}
+{% trans %}Group{% endtrans %}
 {%- endif -%}
 {%- endmacro -%}
 

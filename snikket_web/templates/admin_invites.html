@@ -18,17 +18,17 @@
 	<col/>
 	<thead>
 		<tr>
-			<th>{% trans %}Expires{% endtrans %}</th>
 			<th class="collapsible">{% trans %}Type{% endtrans %}</th>
 			<th class="collapsible">{% trans %}Circle{% endtrans %}</th>
+			<th>{% trans %}Expires{% endtrans %}</th>
 			<th>{% trans %}Actions{% endtrans %}</th>
 		</tr>
 	</thead>
 	<tbody>
 {% for invite in invites %}
+		{% set invite_type = invite.reusable and "group" or "account" %}
 		<tr>
-			<td>{{ (invite.expires - now) | format_timedelta(add_direction=True) }}</td>
-			<td class="collapsible"><span class="with-tooltip above" data-tooltip="{% call invite_type_description(invite) %}{% endcall %}">{% call invite_type_name(invite) %}{% endcall %}</span></td>
+			<td class="collapsible"><span class="with-tooltip above" data-tooltip="{% call invite_type_description(invite_type) %}{% endcall %}">{% call invite_type_name(invite_type) %}{% endcall %}</span></td>
 			<td class="collapsible">
 				{#- -#}
 				<ul class="inline">
@@ -38,6 +38,7 @@
 				</ul>
 				{#- -#}
 			</td>
+			<td>{{ (invite.expires - now) | format_timedelta(add_direction=True) }}</td>
 			<td class="nowrap">
 				{%- call action_button("more", url_for(".edit_invite", id_=invite.id_), class="secondary") -%}
 					{% trans %}Show invite details{% endtrans %}
