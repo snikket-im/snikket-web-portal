@@ -162,6 +162,7 @@ class AdminInviteInfo:
     group_ids: typing.Collection[str]
     role_names: typing.Collection[str]
     is_reset: bool
+    note: typing.Optional[str]
 
     @classmethod
     def from_api_response(
@@ -181,6 +182,7 @@ class AdminInviteInfo:
             role_names=data.get("roles", []),
             reusable=data["reusable"],
             is_reset=data.get("reset", False),
+            note=data.get("note"),
         )
 
 
@@ -1091,6 +1093,7 @@ class ProsodyClient:
             role_names: typing.Collection[str] = [],
             restrict_username: typing.Optional[str] = None,
             ttl: typing.Optional[int] = None,
+            note: typing.Optional[str] = None,
             session: aiohttp.ClientSession,
             ) -> AdminInviteInfo:
         payload: typing.Dict[str, typing.Any] = {}
@@ -1100,6 +1103,8 @@ class ProsodyClient:
             payload["username"] = restrict_username
         if ttl is not None:
             payload["ttl"] = ttl
+        if note is not None:
+            payload["note"] = note
 
         async with session.post(
                 self._admin_v1_endpoint("/invites/account"),
@@ -1114,6 +1119,7 @@ class ProsodyClient:
             group_ids: typing.Collection[str] = [],
             role_names: typing.Collection[str] = [],
             ttl: typing.Optional[int] = None,
+            note: typing.Optional[str] = None,
             session: aiohttp.ClientSession,
             ) -> AdminInviteInfo:
         payload: typing.Dict[str, typing.Any] = {
@@ -1122,6 +1128,8 @@ class ProsodyClient:
         }
         if ttl is not None:
             payload["ttl"] = ttl
+        if note is not None:
+            payload["note"] = note
 
         async with session.post(
                 self._admin_v1_endpoint("/invites/group"),

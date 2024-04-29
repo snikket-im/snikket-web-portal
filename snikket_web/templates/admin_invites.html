@@ -21,6 +21,7 @@
 			<th class="collapsible">{% trans %}Type{% endtrans %}</th>
 			<th class="collapsible">{% trans %}Circle{% endtrans %}</th>
 			<th>{% trans %}Expires{% endtrans %}</th>
+			<th>{% trans %}Comment{% endtrans %}</th>
 			<th>{% trans %}Actions{% endtrans %}</th>
 		</tr>
 	</thead>
@@ -39,6 +40,7 @@
 				{#- -#}
 			</td>
 			<td>{{ (invite.expires - now) | format_timedelta(add_direction=True) }}</td>
+			<td>{% if invite.note is not none %}{{ invite.note }}{% endif %}</td>
 			<td class="nowrap">
 				{%- call action_button("more", url_for(".edit_invite", id_=invite.id_), class="secondary") -%}
 					{% trans %}Show invite details{% endtrans %}
