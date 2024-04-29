@@ -140,14 +140,6 @@
 {%- endif -%}
 {%- endmacro -%}
 
-{%- macro invite_type_description(invite_info, caller=None) -%}
-{%- if invite_info.reusable -%}
-{% trans %}Can be used multiple times to create accounts on this Snikket service.{% endtrans %}
-{%- else -%}
-{% trans %}Can be used once to create an account on this Snikket service.{% endtrans %}
-{%- endif -%}
-{%- endmacro -%}
-
 {% macro access_level_description(role, caller=None) %}
 {%- if role == "prosody:restricted" -%}
 {% trans %}Limited users can interact with users on the same Snikket service and be members of circles.{% endtrans %}
