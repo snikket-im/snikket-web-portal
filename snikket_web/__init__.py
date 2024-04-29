@@ -212,6 +212,7 @@ def create_app() -> quart.Quart:
     app.config["PRIVACY_URI"] = config.privacy_uri
     app.config["ABUSE_EMAIL"] = config.abuse_email
     app.config["SECURITY_EMAIL"] = config.security_email
+    app.config["SESSION_COOKIE_SECURE"] = True
 
     app.context_processor(proc)
     app.register_error_handler(
