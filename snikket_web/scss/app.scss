@@ -992,18 +992,17 @@ div.profile-card {
 	}
 }
 
-/* clipboard button */
+/* clipboard and share buttons */
 
-.copy-to-clipboard {
+.copy-to-clipboard, .share-button {
 	cursor: pointer;
 	font-style: normal;
 	text-decoration: none;
 }
 
-body.no-copy .copy-to-clipboard {
+body.no-copy .copy-to-clipboard, body.no-share .share-button {
 	display: none !important;
 }
-
 
 /* magic */
 

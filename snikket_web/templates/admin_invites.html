@@ -1,5 +1,5 @@
 {% extends "admin_app.html" %}
-{% from "library.j2" import action_button, icon, clipboard_button, form_button, custom_form_button, extract_circle_name, invite_type_name, invite_type_description %}
+{% from "library.j2" import action_button, icon, clipboard_button, share_button, form_button, custom_form_button, extract_circle_name, invite_type_name, invite_type_description %}
 {% block head_lead %}
 {{ super() }}
 {% include "copy-snippet.html" %}
@@ -47,6 +47,9 @@
 				{%- endcall -%}
 				{%- call clipboard_button(invite.landing_page, class="primary") -%}
 					{% trans %}Copy invite link to clipboard{% endtrans %}
+				{%- endcall -%}
+				{%- call share_button("Invitation to Snikket", invite.landing_page, class="primary") -%}
+					{% trans %}Share invitation link{% endtrans %}
 				{%- endcall -%}
 				{%- call custom_form_button("remove_link", form.action_revoke.name, invite.id_, class="secondary danger", slim=True) -%}
 					{% trans %}Delete invitation{% endtrans %}

@@ -38,7 +38,10 @@
 <em>—</em>
 {%- else -%}
 <div><input type="text" {% if id_ %}id="{{ id_ }}" {% endif %}readonly="readonly" value="{{ uri }}"></div>
-<div>{% call clipboard_button(uri, show_label=True) %}{% trans %}Copy link{% endtrans %}{% endcall %}</div>
+<div>
+  {% call clipboard_button(uri, show_label=True) %}{% trans %}Copy link{% endtrans %}{% endcall %}
+  {% call share_button(caller() if caller is not none else None, uri, show_label=True) %}{% trans %}Share{% endtrans %}{% endcall %}
+</div>
 {%- endif -%}
 {% endmacro %}
 
@@ -82,7 +85,7 @@
 
 {% macro clipboard_button(data, show_label=False, caller=None, class=None) -%}
 {%- set label = caller() -%}
-<a class="button{% if class %} {{ class }}{% endif %}"
+<a class="button copy-to-clipboard{% if class %} {{ class }}{% endif %}"
 	href="#"
 {% if not show_label %}
 	aria-label="{{ label }}"
@@ -91,6 +94,24 @@
 	data-cliptext="{{ data }}"
 	onclick="copy_to_clipboard_btn(this); return false;">
 	{%- call icon("copy") %}{% endcall -%}
+{%- if show_label %}
+	<span>{{ label }}</span>
+{% endif -%}
+</a>
+{%- endmacro %}
+
+{% macro share_button(title, url, show_label=False, caller=None, class=None) -%}
+{%- set label = caller() -%}
+<a class="button share-button{% if class %} {{ class }}{% endif %}"
+	href="#"
+{% if not show_label %}
+	aria-label="{{ label }}"
+	title="{{ label }}"
+{% endif %}
+	data-share-title="{{ title }}"
+	data-share-url="{{ url }}"
+	onclick="share_url_btn(this); return false;">
+	{%- call icon("share") %}{% endcall -%}
 {%- if show_label %}
 	<span>{{ label }}</span>
 {% endif -%}
