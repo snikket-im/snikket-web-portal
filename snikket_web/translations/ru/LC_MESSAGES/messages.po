@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2024-04-27 14:22+0200\n"
-"PO-Revision-Date: 2024-04-23 17:14+0000\n"
+"PO-Revision-Date: 2024-04-30 09:55+0000\n"
 "Last-Translator: Andrey <Elisoandr@gmail.com>\n"
-"Language-Team: Russian <http://i18n.sotecware.net/projects/snikket/web-"
-"portal/ru/>\n"
+"Language-Team: Russian <http://i18n.sotecware.net/projects/snikket/"
+"web-portal/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1830,16 +1830,17 @@ msgid "Operation successful"
 msgstr "Операция прошла успешно"
 
 #: snikket_web/templates/user_home.html:11
-#, fuzzy
-#| msgid "Moving to Snikket?"
 msgid "Welcome to Snikket!"
-msgstr "Переезжаете в Snikket?"
+msgstr "Добро пожаловать в Snikket!"
 
 #: snikket_web/templates/user_home.html:12
 msgid ""
 "Now your Snikket instance is up and running, the next step is to invite "
 "people to join it. Family, friends, colleagues... you choose!"
 msgstr ""
+"Теперь ваш экземпляр Snikket запущен и работает, следующим шагом будет "
+"приглашение людей присоединиться к нему. Семья, друзья, коллеги... выбираете "
+"вы!"
 
 #: snikket_web/templates/user_home.html:19
 msgid "Your account"
