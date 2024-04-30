@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-27 14:22+0200\n"
+"POT-Creation-Date: 2024-04-30 10:52+0100\n"
 "PO-Revision-Date: 2023-12-15 16:11+0000\n"
 "Last-Translator: uira <inboxriau@illiyy.in>\n"
 "Language-Team: Indonesian <http://i18n.sotecware.net/projects/snikket/web-"
@@ -139,117 +139,121 @@ msgstr "Empat minggu"
 msgid "Invitation type"
 msgstr "Jenis undangan"
 
-#: snikket_web/admin.py:288 snikket_web/templates/library.j2:139
+#: snikket_web/admin.py:288 snikket_web/templates/library.j2:158
 msgid "Individual"
 msgstr "Individu"
 
-#: snikket_web/admin.py:289 snikket_web/templates/library.j2:137
+#: snikket_web/admin.py:289 snikket_web/templates/library.j2:160
 msgid "Group"
 msgstr "Grup"
 
 #: snikket_web/admin.py:305
+msgid "Comment (optional)"
+msgstr ""
+
+#: snikket_web/admin.py:309
 msgid "New invitation link"
 msgstr "Tautan undangan baru"
 
-#: snikket_web/admin.py:367
+#: snikket_web/admin.py:371
 msgid "Revoke"
 msgstr "Batalkan"
 
-#: snikket_web/admin.py:393
+#: snikket_web/admin.py:399
 msgid "Invitation created"
 msgstr "Undangan dibuat"
 
-#: snikket_web/admin.py:409
+#: snikket_web/admin.py:415
 msgid "No such invitation exists"
 msgstr "Undangan tidak tersedia"
 
-#: snikket_web/admin.py:424
+#: snikket_web/admin.py:430
 msgid "Invitation revoked"
 msgstr "Undangan dibatalkan"
 
-#: snikket_web/admin.py:441 snikket_web/admin.py:489
+#: snikket_web/admin.py:447 snikket_web/admin.py:495
 #: snikket_web/templates/admin_delete_circle.html:10
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Name"
 msgstr "Nama"
 
-#: snikket_web/admin.py:446 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:452 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Buat kelompok"
 
-#: snikket_web/admin.py:476
+#: snikket_web/admin.py:482
 msgid "Circle created"
 msgstr "Kelompok dibuat"
 
-#: snikket_web/admin.py:494
+#: snikket_web/admin.py:500
 msgid "Select user"
 msgstr "Pilih pengguna"
 
-#: snikket_web/admin.py:499
+#: snikket_web/admin.py:505
 msgid "Update circle"
 msgstr "Memperbarui kelompok"
 
-#: snikket_web/admin.py:505
+#: snikket_web/admin.py:511
 msgid "Add user"
 msgstr "Tambah pengguna"
 
-#: snikket_web/admin.py:523 snikket_web/admin.py:622 snikket_web/admin.py:670
+#: snikket_web/admin.py:529 snikket_web/admin.py:628 snikket_web/admin.py:676
 msgid "No such circle exists"
 msgstr "Kelompok tersebut tidak ada"
 
-#: snikket_web/admin.py:560
+#: snikket_web/admin.py:566
 msgid "Circle data updated"
 msgstr "Data kelompok diperbarui"
 
-#: snikket_web/admin.py:570
+#: snikket_web/admin.py:576
 msgid "User added to circle"
 msgstr "Pengguna ditambahkan ke kelompok"
 
-#: snikket_web/admin.py:579
+#: snikket_web/admin.py:585
 msgid "User removed from circle"
 msgstr "Pengguna dihapus dari kelompok"
 
-#: snikket_web/admin.py:588
+#: snikket_web/admin.py:594
 msgid "Chat removed from circle"
 msgstr "Chat dihapus dari lingkaran"
 
-#: snikket_web/admin.py:606
+#: snikket_web/admin.py:612
 msgid "Delete circle permanently"
 msgstr "Hapus kelompok secara permanen"
 
-#: snikket_web/admin.py:633
+#: snikket_web/admin.py:639
 msgid "Circle deleted"
 msgstr "Kelompok dihapus"
 
-#: snikket_web/admin.py:647
+#: snikket_web/admin.py:653
 msgid "Group chat name"
 msgstr "Nama grup chat"
 
-#: snikket_web/admin.py:652
+#: snikket_web/admin.py:658
 msgid "Create group chat"
 msgstr "Buat grup chat"
 
-#: snikket_web/admin.py:682
+#: snikket_web/admin.py:688
 msgid "New group chat added to circle"
 msgstr "Grup chat baru ditambahkan ke lingkaran"
 
-#: snikket_web/admin.py:749
+#: snikket_web/admin.py:755
 msgid "Message contents"
 msgstr "Isi pesan"
 
-#: snikket_web/admin.py:755
+#: snikket_web/admin.py:761
 msgid "Only send to online users"
 msgstr "Hanya kirim ke pengguna online"
 
-#: snikket_web/admin.py:759
+#: snikket_web/admin.py:765
 msgid "Post to all users"
 msgstr "Kirim ke semua pengguna"
 
-#: snikket_web/admin.py:763
+#: snikket_web/admin.py:769
 msgid "Send preview to yourself"
 msgstr "Kirim pratinjau ke diri sendiri"
 
-#: snikket_web/admin.py:785
+#: snikket_web/admin.py:791
 msgid "Announcement sent!"
 msgstr "Pengumuman terkirim!"
 
@@ -579,7 +583,7 @@ msgstr "Anggota"
 #: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_edit_circle.html:45
 #: snikket_web/templates/admin_edit_circle.html:74
-#: snikket_web/templates/admin_invites.html:24
+#: snikket_web/templates/admin_invites.html:25
 #: snikket_web/templates/admin_users.html:10
 msgid "Actions"
 msgstr "Tindakan"
@@ -828,7 +832,7 @@ msgid "The user has been deleted from the server."
 msgstr "Pengguna terkait telah dihapus dari server."
 
 #: snikket_web/templates/admin_edit_circle.html:84
-#: snikket_web/templates/library.j2:131
+#: snikket_web/templates/library.j2:152
 msgid "deleted"
 msgstr "Dihapus"
 
@@ -871,43 +875,49 @@ msgstr "Valid hingga"
 msgid "Link"
 msgstr "Tautan"
 
-#: snikket_web/templates/admin_edit_invite.html:22
+#: snikket_web/templates/admin_edit_invite.html:16
+#, fuzzy
+#| msgid "Invitation type"
+msgid "Invitation to Snikket"
+msgstr "Jenis undangan"
+
+#: snikket_web/templates/admin_edit_invite.html:23
 #: snikket_web/templates/admin_home.html:19
 msgid "Circles"
 msgstr "Kelompok"
 
-#: snikket_web/templates/admin_edit_invite.html:23
+#: snikket_web/templates/admin_edit_invite.html:24
 msgid ""
 "Users joining via this invitation will be added to the following circles:"
 msgstr ""
 "Pengguna yang bergabung melalui undangan ini akan ditambahkan ke kelompok "
 "berikut:"
 
-#: snikket_web/templates/admin_edit_invite.html:29
-#: snikket_web/templates/admin_invites.html:23
+#: snikket_web/templates/admin_edit_invite.html:30
+#: snikket_web/templates/admin_invites.html:22
 msgid "Circle"
 msgstr "Kelompok"
 
-#: snikket_web/templates/admin_edit_invite.html:35
+#: snikket_web/templates/admin_edit_invite.html:36
 msgid "The user will not be added to any circle and will have no contacts."
 msgstr ""
 "Pengguna tidak akan ditambahkan ke kelompok mana pun dan tidak akan memiliki "
 "kontak."
 
-#: snikket_web/templates/admin_edit_invite.html:40
+#: snikket_web/templates/admin_edit_invite.html:41
 msgid "Contact"
 msgstr "Kontak"
 
-#: snikket_web/templates/admin_edit_invite.html:41
+#: snikket_web/templates/admin_edit_invite.html:42
 #, python-format
 msgid "The user will get added as contact of %(peer_jid)s."
 msgstr "Pengguna akan ditambahkan ke kontak %(peer_jid)s."
 
-#: snikket_web/templates/admin_edit_invite.html:43
+#: snikket_web/templates/admin_edit_invite.html:44
 msgid "Created"
 msgstr "Dibuat"
 
-#: snikket_web/templates/admin_edit_invite.html:48
+#: snikket_web/templates/admin_edit_invite.html:49
 msgid "Return to invitation list"
 msgstr "Kembali ke daftar undangan"
 
@@ -1074,26 +1084,36 @@ msgid "Pending invitations"
 msgstr "Undangan menunggu jawaban"
 
 #: snikket_web/templates/admin_invites.html:21
-msgid "Expires"
-msgstr "Kadaluarsa"
-
-#: snikket_web/templates/admin_invites.html:22
 msgid "Type"
 msgstr "Jenis"
 
-#: snikket_web/templates/admin_invites.html:43
+#: snikket_web/templates/admin_invites.html:23
+msgid "Expires"
+msgstr "Kadaluarsa"
+
+#: snikket_web/templates/admin_invites.html:24
+msgid "Comment"
+msgstr ""
+
+#: snikket_web/templates/admin_invites.html:46
 msgid "Show invite details"
 msgstr "Lihat detil undangan"
 
-#: snikket_web/templates/admin_invites.html:46
+#: snikket_web/templates/admin_invites.html:49
 msgid "Copy invite link to clipboard"
 msgstr "Salin tautan undangan ke papan klip"
 
-#: snikket_web/templates/admin_invites.html:49
+#: snikket_web/templates/admin_invites.html:52
+#, fuzzy
+#| msgid "New invitation link"
+msgid "Share invitation link"
+msgstr "Tautan undangan baru"
+
+#: snikket_web/templates/admin_invites.html:55
 msgid "Delete invitation"
 msgstr "Hapus undangan"
 
-#: snikket_web/templates/admin_invites.html:57
+#: snikket_web/templates/admin_invites.html:63
 msgid "Currently, there are no pending invitations."
 msgstr "Saat ini, tidak ada undangan yang menunggu jawaban."
 
@@ -1694,24 +1714,19 @@ msgstr "Pengguna terbatas."
 msgid " (Restricted)"
 msgstr " (Terbatas)"
 
-#: snikket_web/templates/library.j2:41
+#: snikket_web/templates/library.j2:42
 msgid "Copy link"
 msgstr "Salin tautan"
 
-#: snikket_web/templates/library.j2:104
+#: snikket_web/templates/library.j2:43
+msgid "Share"
+msgstr ""
+
+#: snikket_web/templates/library.j2:125
 msgid "Invalid input"
 msgstr "Input tidak valid"
 
-#: snikket_web/templates/library.j2:145
-msgid "Can be used multiple times to create accounts on this Snikket service."
-msgstr ""
-"Dapat digunakan beberapa kali untuk membuat akun di layanan Snikket ini."
-
-#: snikket_web/templates/library.j2:147
-msgid "Can be used once to create an account on this Snikket service."
-msgstr "Dapat digunakan satu kali untuk membuat akun di layanan Snikket ini."
-
-#: snikket_web/templates/library.j2:153
+#: snikket_web/templates/library.j2:166
 msgid ""
 "Limited users can interact with users on the same Snikket service and be "
 "members of circles."
@@ -1719,7 +1734,7 @@ msgstr ""
 "Pengguna terbatas dapat berinteraksi dengan pengguna di layanan Snikket yang "
 "sama dan menjadi anggota kelompok."
 
-#: snikket_web/templates/library.j2:155
+#: snikket_web/templates/library.j2:168
 msgid ""
 "Like limited users and can also interact with users on other Snikket "
 "services."
@@ -1727,17 +1742,17 @@ msgstr ""
 "Seperti pengguna terbatas dan juga dapat berinteraksi dengan pengguna di "
 "layanan Snikket lain."
 
-#: snikket_web/templates/library.j2:157
+#: snikket_web/templates/library.j2:170
 msgid "Like normal users and can access the admin panel in the web portal."
 msgstr "Seperti pengguna biasa dan dapat mengakses panel admin di portal web."
 
-#: snikket_web/templates/library.j2:171
+#: snikket_web/templates/library.j2:184
 #, fuzzy
 #| msgid "This invitation link can only be used once and is then depleted."
 msgid "Invite a single person (invitation link can only be used once)."
 msgstr "Tautan undangan ini hanya dapat digunakan satu kali."
 
-#: snikket_web/templates/library.j2:173
+#: snikket_web/templates/library.j2:186
 msgid "Invite a group of people (invitation link can be used multiple times)."
 msgstr ""
 
@@ -1916,6 +1931,15 @@ msgid ""
 msgstr ""
 "Bagian ini memungkinkan Anda untuk mengontrol siapa yang bisa melihat profil "
 "Anda, seperti avatar dan nama panggilan."
+
+#~ msgid ""
+#~ "Can be used multiple times to create accounts on this Snikket service."
+#~ msgstr ""
+#~ "Dapat digunakan beberapa kali untuk membuat akun di layanan Snikket ini."
+
+#~ msgid "Can be used once to create an account on this Snikket service."
+#~ msgstr ""
+#~ "Dapat digunakan satu kali untuk membuat akun di layanan Snikket ini."
 
 #~ msgid "Welcome!"
 #~ msgstr "Selamat datang!"

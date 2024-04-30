@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-27 14:22+0200\n"
+"POT-Creation-Date: 2024-04-30 10:52+0100\n"
 "PO-Revision-Date: 2021-06-19 15:01+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language-Team: English (United Kingdom) <https://i18n.sotecware.net/projects/"
@@ -159,145 +159,149 @@ msgstr "Four weeks"
 msgid "Invitation type"
 msgstr "Invitation type"
 
-#: snikket_web/admin.py:288 snikket_web/templates/library.j2:139
+#: snikket_web/admin.py:288 snikket_web/templates/library.j2:158
 msgid "Individual"
 msgstr ""
 
-#: snikket_web/admin.py:289 snikket_web/templates/library.j2:137
+#: snikket_web/admin.py:289 snikket_web/templates/library.j2:160
 msgid "Group"
 msgstr ""
 
 #: snikket_web/admin.py:305
+msgid "Comment (optional)"
+msgstr ""
+
+#: snikket_web/admin.py:309
 msgid "New invitation link"
 msgstr "New invitation link"
 
-#: snikket_web/admin.py:367
+#: snikket_web/admin.py:371
 msgid "Revoke"
 msgstr "Revoke"
 
-#: snikket_web/admin.py:393
+#: snikket_web/admin.py:399
 #, fuzzy
 #| msgid "Invitation type"
 msgid "Invitation created"
 msgstr "Invitation type"
 
-#: snikket_web/admin.py:409
+#: snikket_web/admin.py:415
 #, fuzzy
 #| msgid "New invitation link"
 msgid "No such invitation exists"
 msgstr "New invitation link"
 
-#: snikket_web/admin.py:424
+#: snikket_web/admin.py:430
 #, fuzzy
 #| msgid "Invitation type"
 msgid "Invitation revoked"
 msgstr "Invitation type"
 
-#: snikket_web/admin.py:441 snikket_web/admin.py:489
+#: snikket_web/admin.py:447 snikket_web/admin.py:495
 #: snikket_web/templates/admin_delete_circle.html:10
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Name"
 msgstr "Name"
 
-#: snikket_web/admin.py:446 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:452 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Create circle"
 
-#: snikket_web/admin.py:476
+#: snikket_web/admin.py:482
 #, fuzzy
 #| msgid "Circle name"
 msgid "Circle created"
 msgstr "Circle name"
 
-#: snikket_web/admin.py:494
+#: snikket_web/admin.py:500
 msgid "Select user"
 msgstr "Select user"
 
-#: snikket_web/admin.py:499
+#: snikket_web/admin.py:505
 #, fuzzy
 #| msgid "Create circle"
 msgid "Update circle"
 msgstr "Create circle"
 
-#: snikket_web/admin.py:505
+#: snikket_web/admin.py:511
 msgid "Add user"
 msgstr "Add user"
 
-#: snikket_web/admin.py:523 snikket_web/admin.py:622 snikket_web/admin.py:670
+#: snikket_web/admin.py:529 snikket_web/admin.py:628 snikket_web/admin.py:676
 #, fuzzy
 #| msgid "No circles"
 msgid "No such circle exists"
 msgstr "No circles"
 
-#: snikket_web/admin.py:560
+#: snikket_web/admin.py:566
 #, fuzzy
 #| msgid "Circle name"
 msgid "Circle data updated"
 msgstr "Circle name"
 
-#: snikket_web/admin.py:570
+#: snikket_web/admin.py:576
 #, fuzzy
 #| msgid "Invite to circle"
 msgid "User added to circle"
 msgstr "Invite to circle"
 
-#: snikket_web/admin.py:579
+#: snikket_web/admin.py:585
 #, fuzzy
 #| msgid "Remove user %(username)s from circle"
 msgid "User removed from circle"
 msgstr "Remove user %(username)s from circle"
 
-#: snikket_web/admin.py:588
+#: snikket_web/admin.py:594
 #, fuzzy
 #| msgid "Remove user %(username)s from circle"
 msgid "Chat removed from circle"
 msgstr "Remove user %(username)s from circle"
 
-#: snikket_web/admin.py:606
+#: snikket_web/admin.py:612
 msgid "Delete circle permanently"
 msgstr "Delete circle permanently"
 
-#: snikket_web/admin.py:633
+#: snikket_web/admin.py:639
 #, fuzzy
 #| msgid "deleted"
 msgid "Circle deleted"
 msgstr "deleted"
 
-#: snikket_web/admin.py:647
+#: snikket_web/admin.py:653
 #, fuzzy
 #| msgid "Email address"
 msgid "Group chat name"
 msgstr "Email address"
 
-#: snikket_web/admin.py:652
+#: snikket_web/admin.py:658
 #, fuzzy
 #| msgid "Create circle"
 msgid "Create group chat"
 msgstr "Create circle"
 
-#: snikket_web/admin.py:682
+#: snikket_web/admin.py:688
 #, fuzzy
 #| msgid "Invite to circle"
 msgid "New group chat added to circle"
 msgstr "Invite to circle"
 
-#: snikket_web/admin.py:749
+#: snikket_web/admin.py:755
 msgid "Message contents"
 msgstr ""
 
-#: snikket_web/admin.py:755
+#: snikket_web/admin.py:761
 msgid "Only send to online users"
 msgstr ""
 
-#: snikket_web/admin.py:759
+#: snikket_web/admin.py:765
 msgid "Post to all users"
 msgstr ""
 
-#: snikket_web/admin.py:763
+#: snikket_web/admin.py:769
 msgid "Send preview to yourself"
 msgstr ""
 
-#: snikket_web/admin.py:785
+#: snikket_web/admin.py:791
 msgid "Announcement sent!"
 msgstr ""
 
@@ -627,7 +631,7 @@ msgstr "Members"
 #: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_edit_circle.html:45
 #: snikket_web/templates/admin_edit_circle.html:74
-#: snikket_web/templates/admin_invites.html:24
+#: snikket_web/templates/admin_invites.html:25
 #: snikket_web/templates/admin_users.html:10
 msgid "Actions"
 msgstr "Actions"
@@ -869,7 +873,7 @@ msgid "The user has been deleted from the server."
 msgstr ""
 
 #: snikket_web/templates/admin_edit_circle.html:84
-#: snikket_web/templates/library.j2:131
+#: snikket_web/templates/library.j2:152
 msgid "deleted"
 msgstr "deleted"
 
@@ -912,40 +916,46 @@ msgstr "Valid until"
 msgid "Link"
 msgstr "Link"
 
-#: snikket_web/templates/admin_edit_invite.html:22
+#: snikket_web/templates/admin_edit_invite.html:16
+#, fuzzy
+#| msgid "Invitation type"
+msgid "Invitation to Snikket"
+msgstr "Invitation type"
+
+#: snikket_web/templates/admin_edit_invite.html:23
 #: snikket_web/templates/admin_home.html:19
 msgid "Circles"
 msgstr "Circles"
 
-#: snikket_web/templates/admin_edit_invite.html:23
+#: snikket_web/templates/admin_edit_invite.html:24
 msgid ""
 "Users joining via this invitation will be added to the following circles:"
 msgstr ""
 "Users joining via this invitation will be added to the following circles:"
 
-#: snikket_web/templates/admin_edit_invite.html:29
-#: snikket_web/templates/admin_invites.html:23
+#: snikket_web/templates/admin_edit_invite.html:30
+#: snikket_web/templates/admin_invites.html:22
 msgid "Circle"
 msgstr "Circle"
 
-#: snikket_web/templates/admin_edit_invite.html:35
+#: snikket_web/templates/admin_edit_invite.html:36
 msgid "The user will not be added to any circle and will have no contacts."
 msgstr "The user will not be added to any circle and will have no contacts."
 
-#: snikket_web/templates/admin_edit_invite.html:40
+#: snikket_web/templates/admin_edit_invite.html:41
 msgid "Contact"
 msgstr ""
 
-#: snikket_web/templates/admin_edit_invite.html:41
+#: snikket_web/templates/admin_edit_invite.html:42
 #, python-format
 msgid "The user will get added as contact of %(peer_jid)s."
 msgstr ""
 
-#: snikket_web/templates/admin_edit_invite.html:43
+#: snikket_web/templates/admin_edit_invite.html:44
 msgid "Created"
 msgstr "Created"
 
-#: snikket_web/templates/admin_edit_invite.html:48
+#: snikket_web/templates/admin_edit_invite.html:49
 #, fuzzy
 #| msgid "New invitation link"
 msgid "Return to invitation list"
@@ -1133,26 +1143,36 @@ msgid "Pending invitations"
 msgstr "Pending invitations"
 
 #: snikket_web/templates/admin_invites.html:21
-msgid "Expires"
-msgstr ""
-
-#: snikket_web/templates/admin_invites.html:22
 msgid "Type"
 msgstr ""
 
-#: snikket_web/templates/admin_invites.html:43
+#: snikket_web/templates/admin_invites.html:23
+msgid "Expires"
+msgstr ""
+
+#: snikket_web/templates/admin_invites.html:24
+msgid "Comment"
+msgstr ""
+
+#: snikket_web/templates/admin_invites.html:46
 msgid "Show invite details"
 msgstr "Show invite details"
 
-#: snikket_web/templates/admin_invites.html:46
+#: snikket_web/templates/admin_invites.html:49
 msgid "Copy invite link to clipboard"
 msgstr "Copy invite link to clipboard"
 
-#: snikket_web/templates/admin_invites.html:49
+#: snikket_web/templates/admin_invites.html:52
+#, fuzzy
+#| msgid "New invitation link"
+msgid "Share invitation link"
+msgstr "New invitation link"
+
+#: snikket_web/templates/admin_invites.html:55
 msgid "Delete invitation"
 msgstr "Delete invitation"
 
-#: snikket_web/templates/admin_invites.html:57
+#: snikket_web/templates/admin_invites.html:63
 msgid "Currently, there are no pending invitations."
 msgstr "Currently, there are no pending invitations."
 
@@ -1718,49 +1738,41 @@ msgstr ""
 msgid " (Restricted)"
 msgstr ""
 
-#: snikket_web/templates/library.j2:41
+#: snikket_web/templates/library.j2:42
 msgid "Copy link"
 msgstr "Copy link"
 
-#: snikket_web/templates/library.j2:104
+#: snikket_web/templates/library.j2:43
+msgid "Share"
+msgstr ""
+
+#: snikket_web/templates/library.j2:125
 msgid "Invalid input"
 msgstr "Invalid input"
 
-#: snikket_web/templates/library.j2:145
-#, fuzzy
-#| msgid "Manage users and invitations of this Snikket service."
-msgid "Can be used multiple times to create accounts on this Snikket service."
-msgstr "Manage users and invitations of this Snikket service."
-
-#: snikket_web/templates/library.j2:147
-#, fuzzy
-#| msgid "Manage users and invitations of this Snikket service."
-msgid "Can be used once to create an account on this Snikket service."
-msgstr "Manage users and invitations of this Snikket service."
-
-#: snikket_web/templates/library.j2:153
+#: snikket_web/templates/library.j2:166
 msgid ""
 "Limited users can interact with users on the same Snikket service and be "
 "members of circles."
 msgstr ""
 
-#: snikket_web/templates/library.j2:155
+#: snikket_web/templates/library.j2:168
 msgid ""
 "Like limited users and can also interact with users on other Snikket "
 "services."
 msgstr ""
 
-#: snikket_web/templates/library.j2:157
+#: snikket_web/templates/library.j2:170
 msgid "Like normal users and can access the admin panel in the web portal."
 msgstr ""
 
-#: snikket_web/templates/library.j2:171
+#: snikket_web/templates/library.j2:184
 #, fuzzy
 #| msgid "This invitation link can only be used once and is then depleted."
 msgid "Invite a single person (invitation link can only be used once)."
 msgstr "This invitation link can only be used once and is then depleted."
 
-#: snikket_web/templates/library.j2:173
+#: snikket_web/templates/library.j2:186
 msgid "Invite a group of people (invitation link can be used multiple times)."
 msgstr ""
 
@@ -1957,6 +1969,17 @@ msgid ""
 msgstr ""
 "This section allows you to control who can see your profile information, "
 "like avatar and nickname."
+
+#, fuzzy
+#~| msgid "Manage users and invitations of this Snikket service."
+#~ msgid ""
+#~ "Can be used multiple times to create accounts on this Snikket service."
+#~ msgstr "Manage users and invitations of this Snikket service."
+
+#, fuzzy
+#~| msgid "Manage users and invitations of this Snikket service."
+#~ msgid "Can be used once to create an account on this Snikket service."
+#~ msgstr "Manage users and invitations of this Snikket service."
 
 #~ msgid "Welcome!"
 #~ msgstr "Welcome!"

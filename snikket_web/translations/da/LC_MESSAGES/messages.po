@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-27 14:22+0200\n"
+"POT-Creation-Date: 2024-04-30 10:52+0100\n"
 "PO-Revision-Date: 2022-05-30 14:01+0000\n"
 "Last-Translator: Daniel Holmgaard <fovatis@tutanota.com>\n"
 "Language-Team: Danish <http://i18n.sotecware.net/projects/snikket/web-portal/"
@@ -143,125 +143,129 @@ msgstr "Fire uger"
 msgid "Invitation type"
 msgstr "Invitationstype"
 
-#: snikket_web/admin.py:288 snikket_web/templates/library.j2:139
+#: snikket_web/admin.py:288 snikket_web/templates/library.j2:158
 msgid "Individual"
 msgstr "Individuel"
 
-#: snikket_web/admin.py:289 snikket_web/templates/library.j2:137
+#: snikket_web/admin.py:289 snikket_web/templates/library.j2:160
 msgid "Group"
 msgstr "Gruppe"
 
 #: snikket_web/admin.py:305
+msgid "Comment (optional)"
+msgstr ""
+
+#: snikket_web/admin.py:309
 msgid "New invitation link"
 msgstr "Ny invitationslink"
 
-#: snikket_web/admin.py:367
+#: snikket_web/admin.py:371
 msgid "Revoke"
 msgstr "Tilbagekald"
 
-#: snikket_web/admin.py:393
+#: snikket_web/admin.py:399
 msgid "Invitation created"
 msgstr "Invitation oprettet"
 
-#: snikket_web/admin.py:409
+#: snikket_web/admin.py:415
 msgid "No such invitation exists"
 msgstr "Denne invitation findes ikke"
 
-#: snikket_web/admin.py:424
+#: snikket_web/admin.py:430
 msgid "Invitation revoked"
 msgstr "Invitation tilbagekaldt"
 
-#: snikket_web/admin.py:441 snikket_web/admin.py:489
+#: snikket_web/admin.py:447 snikket_web/admin.py:495
 #: snikket_web/templates/admin_delete_circle.html:10
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Name"
 msgstr "Navn"
 
-#: snikket_web/admin.py:446 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:452 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr "Opret cirkel"
 
-#: snikket_web/admin.py:476
+#: snikket_web/admin.py:482
 msgid "Circle created"
 msgstr "Cirkel oprettet"
 
-#: snikket_web/admin.py:494
+#: snikket_web/admin.py:500
 msgid "Select user"
 msgstr "Vælg bruger"
 
-#: snikket_web/admin.py:499
+#: snikket_web/admin.py:505
 msgid "Update circle"
 msgstr "Opdater cirkel"
 
-#: snikket_web/admin.py:505
+#: snikket_web/admin.py:511
 msgid "Add user"
 msgstr "Tilføj bruger"
 
-#: snikket_web/admin.py:523 snikket_web/admin.py:622 snikket_web/admin.py:670
+#: snikket_web/admin.py:529 snikket_web/admin.py:628 snikket_web/admin.py:676
 msgid "No such circle exists"
 msgstr "Denne cirkel findes ikke"
 
-#: snikket_web/admin.py:560
+#: snikket_web/admin.py:566
 msgid "Circle data updated"
 msgstr "Cirkel-data opdateret"
 
-#: snikket_web/admin.py:570
+#: snikket_web/admin.py:576
 msgid "User added to circle"
 msgstr "Bruger tilføjet til cirkel"
 
-#: snikket_web/admin.py:579
+#: snikket_web/admin.py:585
 msgid "User removed from circle"
 msgstr "Bruger fjernet fra cirkel"
 
-#: snikket_web/admin.py:588
+#: snikket_web/admin.py:594
 #, fuzzy
 #| msgid "User removed from circle"
 msgid "Chat removed from circle"
 msgstr "Bruger fjernet fra cirkel"
 
-#: snikket_web/admin.py:606
+#: snikket_web/admin.py:612
 msgid "Delete circle permanently"
 msgstr "Slet cirkel permanent"
 
-#: snikket_web/admin.py:633
+#: snikket_web/admin.py:639
 msgid "Circle deleted"
 msgstr "Cirkel slettet"
 
-#: snikket_web/admin.py:647
+#: snikket_web/admin.py:653
 #, fuzzy
 #| msgid "Group chat address"
 msgid "Group chat name"
 msgstr "Gruppechat adresse"
 
-#: snikket_web/admin.py:652
+#: snikket_web/admin.py:658
 #, fuzzy
 #| msgid "Create account"
 msgid "Create group chat"
 msgstr "Opret konto"
 
-#: snikket_web/admin.py:682
+#: snikket_web/admin.py:688
 #, fuzzy
 #| msgid "User added to circle"
 msgid "New group chat added to circle"
 msgstr "Bruger tilføjet til cirkel"
 
-#: snikket_web/admin.py:749
+#: snikket_web/admin.py:755
 msgid "Message contents"
 msgstr "Meddelelsens indhold"
 
-#: snikket_web/admin.py:755
+#: snikket_web/admin.py:761
 msgid "Only send to online users"
 msgstr "Send kun til online brugere"
 
-#: snikket_web/admin.py:759
+#: snikket_web/admin.py:765
 msgid "Post to all users"
 msgstr "Send til alle brugere"
 
-#: snikket_web/admin.py:763
+#: snikket_web/admin.py:769
 msgid "Send preview to yourself"
 msgstr "Send forhåndsvisning til dig selv"
 
-#: snikket_web/admin.py:785
+#: snikket_web/admin.py:791
 msgid "Announcement sent!"
 msgstr "Bekendgørelse sendt!"
 
@@ -593,7 +597,7 @@ msgstr "Medlemmer"
 #: snikket_web/templates/admin_circles.html:15
 #: snikket_web/templates/admin_edit_circle.html:45
 #: snikket_web/templates/admin_edit_circle.html:74
-#: snikket_web/templates/admin_invites.html:24
+#: snikket_web/templates/admin_invites.html:25
 #: snikket_web/templates/admin_users.html:10
 msgid "Actions"
 msgstr "Handlinger"
@@ -847,7 +851,7 @@ msgid "The user has been deleted from the server."
 msgstr "Brugeren er blevet slettet fra serveren."
 
 #: snikket_web/templates/admin_edit_circle.html:84
-#: snikket_web/templates/library.j2:131
+#: snikket_web/templates/library.j2:152
 msgid "deleted"
 msgstr "Slettet"
 
@@ -890,42 +894,48 @@ msgstr "Gyldig indtil"
 msgid "Link"
 msgstr "Link"
 
-#: snikket_web/templates/admin_edit_invite.html:22
+#: snikket_web/templates/admin_edit_invite.html:16
+#, fuzzy
+#| msgid "Invitation type"
+msgid "Invitation to Snikket"
+msgstr "Invitationstype"
+
+#: snikket_web/templates/admin_edit_invite.html:23
 #: snikket_web/templates/admin_home.html:19
 msgid "Circles"
 msgstr "Cirkler"
 
-#: snikket_web/templates/admin_edit_invite.html:23
+#: snikket_web/templates/admin_edit_invite.html:24
 msgid ""
 "Users joining via this invitation will be added to the following circles:"
 msgstr ""
 "Brugere, der deltager via denne invitation, føjes til følgende cirkler:"
 
-#: snikket_web/templates/admin_edit_invite.html:29
-#: snikket_web/templates/admin_invites.html:23
+#: snikket_web/templates/admin_edit_invite.html:30
+#: snikket_web/templates/admin_invites.html:22
 msgid "Circle"
 msgstr "Cirkel"
 
-#: snikket_web/templates/admin_edit_invite.html:35
+#: snikket_web/templates/admin_edit_invite.html:36
 msgid "The user will not be added to any circle and will have no contacts."
 msgstr ""
 "Brugeren vil ikke blive tilknyttet nogen cirkel og vil ikke have nogen "
 "kontakter."
 
-#: snikket_web/templates/admin_edit_invite.html:40
+#: snikket_web/templates/admin_edit_invite.html:41
 msgid "Contact"
 msgstr "Kontakt"
 
-#: snikket_web/templates/admin_edit_invite.html:41
+#: snikket_web/templates/admin_edit_invite.html:42
 #, python-format
 msgid "The user will get added as contact of %(peer_jid)s."
 msgstr "Denne bruger vil blive tilføjet som kontakt hos %(peer_jid)s."
 
-#: snikket_web/templates/admin_edit_invite.html:43
+#: snikket_web/templates/admin_edit_invite.html:44
 msgid "Created"
 msgstr "Oprettet"
 
-#: snikket_web/templates/admin_edit_invite.html:48
+#: snikket_web/templates/admin_edit_invite.html:49
 msgid "Return to invitation list"
 msgstr "Retur til invitationsliste"
 
@@ -1090,26 +1100,36 @@ msgid "Pending invitations"
 msgstr "Afventende invitationer"
 
 #: snikket_web/templates/admin_invites.html:21
-msgid "Expires"
-msgstr "Udløber"
-
-#: snikket_web/templates/admin_invites.html:22
 msgid "Type"
 msgstr "Type"
 
-#: snikket_web/templates/admin_invites.html:43
+#: snikket_web/templates/admin_invites.html:23
+msgid "Expires"
+msgstr "Udløber"
+
+#: snikket_web/templates/admin_invites.html:24
+msgid "Comment"
+msgstr ""
+
+#: snikket_web/templates/admin_invites.html:46
 msgid "Show invite details"
 msgstr "Vis invitationsdetajler"
 
-#: snikket_web/templates/admin_invites.html:46
+#: snikket_web/templates/admin_invites.html:49
 msgid "Copy invite link to clipboard"
 msgstr "Kopier invitationslink til udklipsholder"
 
-#: snikket_web/templates/admin_invites.html:49
+#: snikket_web/templates/admin_invites.html:52
+#, fuzzy
+#| msgid "New invitation link"
+msgid "Share invitation link"
+msgstr "Ny invitationslink"
+
+#: snikket_web/templates/admin_invites.html:55
 msgid "Delete invitation"
 msgstr "Slet invitation"
 
-#: snikket_web/templates/admin_invites.html:57
+#: snikket_web/templates/admin_invites.html:63
 msgid "Currently, there are no pending invitations."
 msgstr "Der er i øjeblikket ingen afventende invitationer."
 
@@ -1708,25 +1728,19 @@ msgstr "Brugeren er begrænset."
 msgid " (Restricted)"
 msgstr " (Begrænset)"
 
-#: snikket_web/templates/library.j2:41
+#: snikket_web/templates/library.j2:42
 msgid "Copy link"
 msgstr "Kopier link"
 
-#: snikket_web/templates/library.j2:104
+#: snikket_web/templates/library.j2:43
+msgid "Share"
+msgstr ""
+
+#: snikket_web/templates/library.j2:125
 msgid "Invalid input"
 msgstr "Ugyldig input"
 
-#: snikket_web/templates/library.j2:145
-msgid "Can be used multiple times to create accounts on this Snikket service."
-msgstr ""
-"Kan blive brugt flere gang til at oprette konti på denne Snikket tjeneste."
-
-#: snikket_web/templates/library.j2:147
-msgid "Can be used once to create an account on this Snikket service."
-msgstr ""
-"Kan blive brugt en gang til at oprette en konto på denne Snikket tjeneste."
-
-#: snikket_web/templates/library.j2:153
+#: snikket_web/templates/library.j2:166
 msgid ""
 "Limited users can interact with users on the same Snikket service and be "
 "members of circles."
@@ -1734,7 +1748,7 @@ msgstr ""
 "Begrænset brugere kan interagere med brugere på den samme Snikket-tjeneste "
 "og være medlemmer af cirkler."
 
-#: snikket_web/templates/library.j2:155
+#: snikket_web/templates/library.j2:168
 msgid ""
 "Like limited users and can also interact with users on other Snikket "
 "services."
@@ -1742,16 +1756,16 @@ msgstr ""
 "Som begrænset brugere og kan desuden også interagere med brugere på andre "
 "Snikket-tjenester."
 
-#: snikket_web/templates/library.j2:157
+#: snikket_web/templates/library.j2:170
 msgid "Like normal users and can access the admin panel in the web portal."
 msgstr ""
 "Som normale brugere og kan desuden få adgang til adminpanelet i webportalen."
 
-#: snikket_web/templates/library.j2:171
+#: snikket_web/templates/library.j2:184
 msgid "Invite a single person (invitation link can only be used once)."
 msgstr ""
 
-#: snikket_web/templates/library.j2:173
+#: snikket_web/templates/library.j2:186
 msgid "Invite a group of people (invitation link can be used multiple times)."
 msgstr ""
 
@@ -1932,6 +1946,15 @@ msgid ""
 msgstr ""
 "Denne sektion tillader dig at kontrollere, hvem der kan se din profil "
 "informationer, så som avatar og kaldenavn."
+
+#~ msgid ""
+#~ "Can be used multiple times to create accounts on this Snikket service."
+#~ msgstr ""
+#~ "Kan blive brugt flere gang til at oprette konti på denne Snikket tjeneste."
+
+#~ msgid "Can be used once to create an account on this Snikket service."
+#~ msgstr ""
+#~ "Kan blive brugt en gang til at oprette en konto på denne Snikket tjeneste."
 
 #~ msgid "Welcome!"
 #~ msgstr "Velkommen!"
