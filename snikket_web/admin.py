@@ -301,6 +301,10 @@ class InvitePost(BaseForm):
         default="prosody:registered",
     )
 
+    note = wtforms.StringField(
+        _l("Comment (optional)"),
+    )
+
     action_create_invite = wtforms.SubmitField(
         _l("New invitation link")
     )
@@ -382,12 +386,14 @@ async def create_invite() -> typing.Union[str, werkzeug.Response]:
                 group_ids=form.circles.data,
                 role_names=[form.role.data],
                 ttl=form.lifetime.data,
+                note=form.note.data,
             )
         else:
             invite = await client.create_account_invite(
                 group_ids=form.circles.data,
                 role_names=[form.role.data],
                 ttl=form.lifetime.data,
+                note=form.note.data,
             )
         await flash(
             _("Invitation created"),

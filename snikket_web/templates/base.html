@@ -16,5 +16,5 @@
 		<meta name="msapplication-TileColor" content="#fbd308">
 		<meta name="theme-color" content="#fbd308">
 	</head>
-	<body{% if body_id | default(False) %} id="{{ body_id }}"{% endif %} class="{% if is_in_debug_mode %}debug{% endif %}{% if body_class | default(False) %} {{ body_class }}{% endif %}"{% if onload | default(False) %} onload="{{ onload }}"{% endif %}>{% block body %}{% endblock %}</body>
+	<body{% if body_id | default(False) %} id="{{ body_id }}"{% endif %} class="{% if is_in_debug_mode %}debug{% endif %}{% if body_class | default(False) %} {{ body_class }}{% endif %} no-copy no-share"{% if onload | default(False) %} onload="{{ onload }}"{% endif %}>{% block body %}{% endblock %}</body>
 </html>

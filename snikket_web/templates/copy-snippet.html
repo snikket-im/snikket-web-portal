@@ -115,8 +115,63 @@ var copy_to_clipboard_btn = function(el) {
   });
 };
 
+var copy_to_clipboard_btn = function(el) {
+  var text = el.dataset.cliptext;
+  if (!text) {
+	console.error('copy_to_clipboard used on element without text to copy');
+  }
+  copyTextToClipboard(text, el, function(success) {
+	var existing_result_el = document.getElementById("clipboard-result");
+	if (existing_result_el !== null) {
+	  existing_result_el.parentNode.removeChild(existing_result_el);
+	}
+
+	var icon = "done";
+	if (!success) {
+		icon = "cancel";
+	}
+	var icon_bak = get_current_icon(el.firstChild);
+	change_icon(el.firstChild, icon);
+	setTimeout(function() {
+		change_icon(el.firstChild, icon_bak);
+	  el.blur();
+	}, 1500);
+  });
+};
+
+var share_url_btn = function(el) {
+	let data = {
+		"title": el.dataset.shareTitle,
+		"url": el.dataset.shareUrl,
+	}
+
+	let icon_bak = get_current_icon(el.firstChild);
+
+	new Promise(function (resolve, reject) {
+		if(!navigator.canShare || !navigator.canShare(data)) {
+			return reject();
+		}
+		return resolve(navigator.share(data));
+	}).then(function () {
+		// Success
+		change_icon(el.firstChild, "done");
+	}, function () {
+		// Failure
+		change_icon(el.firstChild, "cancel");
+	}).finally(function () {
+		// Either way, clear status icon after 1.5s
+		setTimeout(function() {
+			change_icon(el.firstChild, icon_bak);
+			el.blur();
+		}, 1500);
+	});
+}
+
 window.addEventListener('load', function() {
 	document.body.classList.remove("no-copy");
+	if(navigator.share) {
+		document.body.classList.remove("no-share");
+	}
 });
 </script>
 

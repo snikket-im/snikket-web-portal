@@ -66,6 +66,12 @@
 		{%- call render_errors(invite_form.circles) -%}{%- endcall -%}
 	</div>
 
+	<!-- Comment -->
+	<div class="f-ebox">
+		{{ invite_form.note.label }}
+		{{ invite_form.note }}
+	</div>
+
 	<div class="f-bbox">
 		{%- call form_button("create_link", invite_form.action_create_invite, class="primary") %}{% endcall -%}
 	</div>

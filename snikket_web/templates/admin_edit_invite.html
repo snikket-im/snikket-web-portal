@@ -1,5 +1,5 @@
 {% extends "admin_app.html" %}
-{% from "library.j2" import showuri, form_button, standard_button, extract_circle_name, invite_type_description %}
+{% from "library.j2" import showuri, form_button, standard_button, extract_circle_name, invite_type_name, invite_type_description %}
 {% block head_lead %}
 {{ super() }}
 {% include "copy-snippet.html" %}
@@ -13,9 +13,10 @@
 		<dt>{% trans %}Valid until{% endtrans %}</dt>
 		<dd>{{ invite.expires | format_date }}</dd>
 		<dt><label for="link-field">{% trans %}Link{% endtrans %}</label></dt>
-		<dd>{% call showuri(invite.landing_page, id_="link-field") %}{% endcall %}</dd>
+		<dd>{% call showuri(invite.landing_page, id_="link-field") %}{% trans %}Invitation to Snikket{% endtrans %}{% endcall %}</dd>
 		<dt>{% trans %}Invitation type{% endtrans %}</dt>
-		<dd>{% call invite_type_description(invite) %}{% endcall %}</dd>
+		{% set invite_type = invite.reusable and "group" or "account" %}
+		<dd><span class="with-tooltip above" data-tooltip="{% call invite_type_description(invite_type) %}{% endcall %}">{% call invite_type_name(invite_type) %}{% endcall %}</span></dd>
 		{%- set ngroups = invite.group_ids | length -%}
 		{%- if ngroups > 1 -%}
 		{#- not supported via the web UI, but we should still display it properly -#}
