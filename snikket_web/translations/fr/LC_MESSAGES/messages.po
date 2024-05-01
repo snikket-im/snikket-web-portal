@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"Report-Msgid-Bugs-To: translations@snikket.org\n"
 "POT-Creation-Date: 2024-04-30 10:52+0100\n"
-"PO-Revision-Date: 2024-01-04 10:17+0000\n"
-"Last-Translator: pep <pep@bouah.net>\n"
+"PO-Revision-Date: 2024-05-02 21:15+0000\n"
+"Last-Translator: BetaRays <BetaRays@proton.me>\n"
 "Language-Team: French <http://i18n.sotecware.net/projects/snikket/web-portal/"
 "fr/>\n"
 "Language: fr\n"
@@ -149,7 +149,7 @@ msgstr "Groupe"
 
 #: snikket_web/admin.py:305
 msgid "Comment (optional)"
-msgstr ""
+msgstr "Commentaire (optionnel)"
 
 #: snikket_web/admin.py:309
 msgid "New invitation link"
@@ -661,14 +661,14 @@ msgstr ""
 #: snikket_web/templates/admin_create_invite_form.html:16
 msgid ""
 "Choose whether this invitation link will allow more than one person to join."
-msgstr ""
+msgstr "Choisissez si ce lien d’invitation pourra être utilisé plus d’une fois."
 
 #: snikket_web/templates/admin_create_invite_form.html:21
-#, fuzzy, python-format
-#| msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
+#, python-format
 msgid ""
 "<span class=\"invite-type\">%(title)s%(icon)s</span><p>%(description)s</p>"
-msgstr "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
+msgstr ""
+"<span class=\"invite-type\">%(title)s%(icon)s</span><p>%(description)s</p>"
 
 #: snikket_web/templates/admin_create_invite_form.html:34
 #: snikket_web/templates/admin_edit_user.html:38
@@ -680,11 +680,11 @@ msgstr ""
 "sont permises sur votre service Snikket."
 
 #: snikket_web/templates/admin_create_invite_form.html:38
-#, fuzzy, python-format
-#| msgid "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
+#, python-format
 msgid ""
 "<span class=\"access-level\">%(title)s%(icon)s</span><p>%(description)s</p>"
-msgstr "<strong>%(title)s%(icon)s</strong><p>%(description)s</p>"
+msgstr ""
+"<span class=\"access-level\">%(title)s%(icon)s</span><p>%(description)s</p>"
 
 #: snikket_web/templates/admin_debug_user.html:8
 #, python-format
@@ -873,10 +873,8 @@ msgid "Link"
 msgstr "Lien"
 
 #: snikket_web/templates/admin_edit_invite.html:16
-#, fuzzy
-#| msgid "Invitation type"
 msgid "Invitation to Snikket"
-msgstr "Type d’invitation"
+msgstr "Invitation à Snikket"
 
 #: snikket_web/templates/admin_edit_invite.html:23
 #: snikket_web/templates/admin_home.html:19
@@ -1096,7 +1094,7 @@ msgstr "Expire"
 
 #: snikket_web/templates/admin_invites.html:24
 msgid "Comment"
-msgstr ""
+msgstr "Commentaire"
 
 #: snikket_web/templates/admin_invites.html:46
 msgid "Show invite details"
@@ -1107,10 +1105,8 @@ msgid "Copy invite link to clipboard"
 msgstr "Copie le lien d’invitation dans le presse-papier"
 
 #: snikket_web/templates/admin_invites.html:52
-#, fuzzy
-#| msgid "New invitation link"
 msgid "Share invitation link"
-msgstr "Nouveau lien d’invitation"
+msgstr "Partager le lien d’invitation"
 
 #: snikket_web/templates/admin_invites.html:55
 msgid "Delete invitation"
@@ -1206,28 +1202,24 @@ msgid "Storage used by shared files"
 msgstr "Stockage utilisé par les fichiers partagés"
 
 #: snikket_web/templates/admin_system.html:79
-#, fuzzy
-#| msgid "Update user"
 msgid "Active users"
-msgstr "Modifier l’utilisateurice"
+msgstr "Utilisateurices actif·ve·s"
 
 #: snikket_web/templates/admin_system.html:83
-#, fuzzy
-#| msgid "Connected devices"
 msgid "Connected now:"
-msgstr "Clients connectés"
+msgstr "Connecté·e·s maintenant :"
 
 #: snikket_web/templates/admin_system.html:88
 msgid "Past 24 hours:"
-msgstr ""
+msgstr "Les dernières 24 heures :"
 
 #: snikket_web/templates/admin_system.html:89
 msgid "Past 7 days:"
-msgstr ""
+msgstr "Les 7 derniers jours :"
 
 #: snikket_web/templates/admin_system.html:90
 msgid "Past 30 days:"
-msgstr ""
+msgstr "Les 30 derniers jours :"
 
 #: snikket_web/templates/admin_system.html:97
 msgid "Broadcast message"
@@ -1742,7 +1734,7 @@ msgstr "Copier le lien"
 
 #: snikket_web/templates/library.j2:43
 msgid "Share"
-msgstr ""
+msgstr "Partager"
 
 #: snikket_web/templates/library.j2:125
 msgid "Invalid input"
@@ -1771,16 +1763,16 @@ msgstr ""
 "d’administration dans le portail web."
 
 #: snikket_web/templates/library.j2:184
-#, fuzzy
-#| msgid "This invitation link can only be used once and is then depleted."
 msgid "Invite a single person (invitation link can only be used once)."
 msgstr ""
-"Ce lien d'invitation ne peut être utilisé qu'une seule fois et est ensuite "
-"expiré."
+"Inviter une seule personne (le lien d’invitaton ne peut être utilisé qu’une "
+"seule fois)."
 
 #: snikket_web/templates/library.j2:186
 msgid "Invite a group of people (invitation link can be used multiple times)."
 msgstr ""
+"Inviter plusieurs personnes (le lien d’invitation peut être utilisé "
+"plusieurs fois)."
 
 #: snikket_web/templates/login.html:5
 msgid "Snikket Login"
@@ -1854,16 +1846,16 @@ msgid "Operation successful"
 msgstr "Opération réussie"
 
 #: snikket_web/templates/user_home.html:11
-#, fuzzy
-#| msgid "Moving to Snikket?"
 msgid "Welcome to Snikket!"
-msgstr "Nouvel·le sur Snikket ?"
+msgstr "Bienvenue sur Snikket !"
 
 #: snikket_web/templates/user_home.html:12
 msgid ""
 "Now your Snikket instance is up and running, the next step is to invite "
 "people to join it. Family, friends, colleagues... you choose!"
 msgstr ""
+"Votre instance Snikket fonctionne désormais, l’étape suivante est d’inviter "
+"des personnes à la rejoindre. Famille, amis, collègues… à vous de choisir !"
 
 #: snikket_web/templates/user_home.html:19
 msgid "Your account"
