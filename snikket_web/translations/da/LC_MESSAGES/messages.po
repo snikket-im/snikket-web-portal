@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-30 10:52+0100\n"
+"POT-Creation-Date: 2024-08-11 16:36+0200\n"
 "PO-Revision-Date: 2022-05-30 14:01+0000\n"
 "Last-Translator: Daniel Holmgaard <fovatis@tutanota.com>\n"
 "Language-Team: Danish <http://i18n.sotecware.net/projects/snikket/web-portal/"
@@ -353,7 +353,7 @@ msgstr ""
 "fil i XEP-0227-format (forudsat format: %(mimetype)s)."
 
 #: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:189
+#: snikket_web/user.py:192
 msgid "Error"
 msgstr "Fejl"
 
@@ -425,15 +425,15 @@ msgstr "Kontodata"
 msgid "Upload"
 msgstr "Upload"
 
-#: snikket_web/user.py:122
+#: snikket_web/user.py:125
 msgid "Incorrect password."
 msgstr "Forkert adgangskode."
 
-#: snikket_web/user.py:126
+#: snikket_web/user.py:129
 msgid "Password changed"
 msgstr "Adgangskode ændret"
 
-#: snikket_web/user.py:134
+#: snikket_web/user.py:137
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
@@ -441,15 +441,15 @@ msgstr ""
 "Den valgte avatar er for stor. For at kunne uploade større avatarer skal du "
 "bruge appen."
 
-#: snikket_web/user.py:181
+#: snikket_web/user.py:184
 msgid "Profile updated"
 msgstr "Profil opdateret"
 
-#: snikket_web/user.py:195
+#: snikket_web/user.py:198
 msgid "Export"
 msgstr "Exporter"
 
-#: snikket_web/user.py:213
+#: snikket_web/user.py:216
 msgid "You currently have no account data to export."
 msgstr "Du har i øjeblikket ingen kontodata at eksportere."
 

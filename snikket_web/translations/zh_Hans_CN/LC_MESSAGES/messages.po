@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: translations@snikket.org\n"
-"POT-Creation-Date: 2024-04-30 10:52+0100\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-08-11 16:36+0200\n"
 "PO-Revision-Date: 2024-05-02 21:15+0000\n"
 "Last-Translator: Rosebud <postage_quizzical060@simplelogin.com>\n"
 "Language-Team: Chinese (Simplified) <http://i18n.sotecware.net/projects/"
@@ -334,11 +334,12 @@ msgstr "导入数据"
 msgid ""
 "The account data you tried to import is in an unknown format. Please upload "
 "an XML file in XEP-0227 format (provided format: %(mimetype)s)."
-msgstr "您尝试导入的账号数据的格式未知。请上传 XEP-0227 格式的 XML "
-"文件（提供的格式：%(mimetype)s）。"
+msgstr ""
+"您尝试导入的账号数据的格式未知。请上传 XEP-0227 格式的 XML 文件（提供的格式："
+"%(mimetype)s）。"
 
 #: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:189
+#: snikket_web/user.py:192
 msgid "Error"
 msgstr "错误"
 
@@ -410,29 +411,29 @@ msgstr "账号数据"
 msgid "Upload"
 msgstr "上传"
 
-#: snikket_web/user.py:122
+#: snikket_web/user.py:125
 msgid "Incorrect password."
 msgstr "密码不正确。"
 
-#: snikket_web/user.py:126
+#: snikket_web/user.py:129
 msgid "Password changed"
 msgstr "密码已更改"
 
-#: snikket_web/user.py:134
+#: snikket_web/user.py:137
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
 msgstr "所选头像太大。要上传更大的头像，请使用应用。"
 
-#: snikket_web/user.py:181
+#: snikket_web/user.py:184
 msgid "Profile updated"
 msgstr "个人资料已更新"
 
-#: snikket_web/user.py:195
+#: snikket_web/user.py:198
 msgid "Export"
 msgstr "导出"
 
-#: snikket_web/user.py:213
+#: snikket_web/user.py:216
 msgid "You currently have no account data to export."
 msgstr "您目前没有账号数据要导出。"
 
@@ -460,15 +461,17 @@ msgstr "关于此服务"
 msgid ""
 "This is the Snikket service <em>%(site_name)s</em>, running open-source "
 "software from the Snikket project."
-msgstr "这是 Snikket 服务 <em>%(site_name)s</em>，运行来自 Snikket 项目的开源软件。"
+msgstr ""
+"这是 Snikket 服务 <em>%(site_name)s</em>，运行来自 Snikket 项目的开源软件。"
 
 #: snikket_web/templates/about.html:11
 #, python-format
 msgid ""
 "To learn more about Snikket, visit the <a href=\"%(snikket_url)s\">Snikket "
 "website</a>."
-msgstr "要了解有关 Snikket 的更多信息，请访问 <a href=\"%(snikket_url)s\">Snikket "
-"网站</a>。"
+msgstr ""
+"要了解有关 Snikket 的更多信息，请访问 <a href=\"%(snikket_url)s\">Snikket 网"
+"站</a>。"
 
 #: snikket_web/templates/about.html:13
 msgid "View service policies"
@@ -486,16 +489,17 @@ msgid ""
 "a>. The full terms of the license can be reviewed using the aforementioned "
 "link."
 msgstr ""
-"门户网站软件根据 <a href=\"%(agpl_url)s\">GNU Affero 通用公共许可证 3.0 "
-"版及之后版本</a> 的条款获得许可。可通过上述链接查看许可证的完整条款。"
+"门户网站软件根据 <a href=\"%(agpl_url)s\">GNU Affero 通用公共许可证 3.0 版及"
+"之后版本</a> 的条款获得许可。可通过上述链接查看许可证的完整条款。"
 
 #: snikket_web/templates/about.html:17
 #, python-format
 msgid ""
 "The source code of the web portal can be downloaded and viewed in <a href="
 "\"%(source_url)s\">its GitHub repository</a>."
-msgstr "门户网站的源代码可在 <a href=\"%(source_url)s\">其 GitHub repository</a> "
-"中下载和查看。"
+msgstr ""
+"门户网站的源代码可在 <a href=\"%(source_url)s\">其 GitHub repository</a> 中下"
+"载和查看。"
 
 #: snikket_web/templates/about.html:18
 #, python-format
@@ -504,9 +508,9 @@ msgid ""
 "Material Icons</a>, made available by Google under the terms of the <a href="
 "\"%(apache20_url)s\">Apache 2.0 License</a>."
 msgstr ""
-"门户网站中使用的图标是 <a href=\"%(source_url)s\">Google 的 Material "
-"图标</a>，由 Google 根据 <a href=\"%(apache20_url)s\">Apache 2.0 许可证</a> "
-"的条款提供。"
+"门户网站中使用的图标是 <a href=\"%(source_url)s\">Google 的 Material 图标</"
+"a>，由 Google 根据 <a href=\"%(apache20_url)s\">Apache 2.0 许可证</a> 的条款"
+"提供。"
 
 #: snikket_web/templates/about.html:20
 msgid "Trademarks"
@@ -519,9 +523,8 @@ msgid ""
 "Company. For more information about the trademarks, visit the <a href="
 "\"%(trademarks_url)s\">Snikket Trademarks information page</a>."
 msgstr ""
-"“Snikket” 和鹦鹉标志是 Snikket Community Interest Company "
-"的商标。有关商标的更多信息，请访问 <a href=\"%(trademarks_url)s\">Snikket "
-"商标信息页</a>。"
+"“Snikket” 和鹦鹉标志是 Snikket Community Interest Company 的商标。有关商标的"
+"更多信息，请访问 <a href=\"%(trademarks_url)s\">Snikket 商标信息页</a>。"
 
 #: snikket_web/templates/about.html:23
 msgid "Software Versions"
@@ -551,7 +554,8 @@ msgid ""
 "Users who are in the same circle will see each other in their contact list. "
 "In addition, each circle may have group chats where the circle members are "
 "included."
-msgstr "在同一个圈子里的用户将在他们的联系人列表中看到对方。此外，每个圈子还有群聊，"
+msgstr ""
+"在同一个圈子里的用户将在他们的联系人列表中看到对方。此外，每个圈子还有群聊，"
 "圈子成员也包括在内。"
 
 #: snikket_web/templates/admin_circles.html:13
@@ -617,8 +621,9 @@ msgid ""
 "This is only for creating group chats that automatically include <em>all</"
 "em> members of the circle. If you want a normal group chat, create it in the "
 "Snikket app instead."
-msgstr "这仅适用于创建自动包含<em>全部</em>圈子成员的群聊。如果您想要普通的群聊，"
-"请在 Snikket 应用中创建。"
+msgstr ""
+"这仅适用于创建自动包含<em>全部</em>圈子成员的群聊。如果您想要普通的群聊，请"
+"在 Snikket 应用中创建。"
 
 #: snikket_web/templates/admin_create_invite.html:3
 msgid "Create invitation"
@@ -708,8 +713,9 @@ msgid ""
 "The circle and the corresponding chat will be deleted, permanently and "
 "immediately upon pushing the below button. <strong>There is no way back!</"
 "strong>"
-msgstr "按下下面的按钮后，圈子和相应的聊天将立即永久删除。<strong>此操作无法撤销！</s"
-"trong>"
+msgstr ""
+"按下下面的按钮后，圈子和相应的聊天将立即永久删除。<strong>此操作无法撤销！</"
+"strong>"
 
 #: snikket_web/templates/admin_delete_circle.html:17
 #: snikket_web/templates/admin_delete_user.html:19
@@ -740,7 +746,8 @@ msgid ""
 "The user and their data will be deleted irrevocably, permanently and "
 "immediately upon pushing the below button. <strong>There is no way back!</"
 "strong>"
-msgstr "按下下面的按钮后，用户及其数据将不可撤销、永久立即删除。<strong>此操作无法撤"
+msgstr ""
+"按下下面的按钮后，用户及其数据将不可撤销、永久立即删除。<strong>此操作无法撤"
 "销！</strong>"
 
 #: snikket_web/templates/admin_edit_circle.html:14
@@ -947,8 +954,9 @@ msgstr "重置密码"
 msgid ""
 "If the user has lost their password, you can use the button below to create "
 "a special link which allows to change the password of the account, once."
-msgstr "如果用户丢失了密码，您可以使用下方按钮创建一个特殊链接，允许更改账号密码一次"
-"。"
+msgstr ""
+"如果用户丢失了密码，您可以使用下方按钮创建一个特殊链接，允许更改账号密码一"
+"次。"
 
 #: snikket_web/templates/admin_edit_user.html:73
 msgid "Debug information"
@@ -959,7 +967,8 @@ msgid ""
 "In some cases, extended information about the user account and the connected "
 "devices is necessary to troubleshoot issues. The button below reveals this "
 "(sensitive) information."
-msgstr "在某些情况下，需要有关用户账号和连接设备的扩展信息来排查问题。下方按钮显示此"
+msgstr ""
+"在某些情况下，需要有关用户账号和连接设备的扩展信息来排查问题。下方按钮显示此"
 "（敏感）信息。"
 
 #: snikket_web/templates/admin_edit_user.html:79
@@ -1273,7 +1282,8 @@ msgid ""
 "Snikket app or compatible software. If you already have the app installed, "
 "we recommend that you continue the account creation process inside the app "
 "by clicking on the button below:"
-msgstr "创建账号将允许使用 Snikket 应用或兼容软件与其他人进行交流。如果您已经安装了应"
+msgstr ""
+"创建账号将允许使用 Snikket 应用或兼容软件与其他人进行交流。如果您已经安装了应"
 "用，我们建议您单击下方按钮后在应用内完成账号注册流程："
 
 #: snikket_web/templates/invite_register.html:14
@@ -1302,8 +1312,9 @@ msgstr "在线创建账号"
 msgid ""
 "If you plan to use a legacy XMPP client, you can register an account online "
 "and enter your credentials into any XMPP-compatible software."
-msgstr "如果您打算使用传统的 XMPP 客户端，可以在线注册账号，在任何兼容 XMPP "
-"的软件中输入您的凭据。"
+msgstr ""
+"如果您打算使用传统的 XMPP 客户端，可以在线注册账号，在任何兼容 XMPP 的软件中"
+"输入您的凭据。"
 
 #: snikket_web/templates/invite_register.html:27
 msgid ""
@@ -1379,7 +1390,8 @@ msgid ""
 "Your camera will turn on. Point it at the square code below until it is "
 "within the highlighted square on your screen, and wait until the app "
 "recognises it."
-msgstr "您的相机将打开。将摄像头对准下方二维码，直到它位于屏幕上突出显示的正方形内，"
+msgstr ""
+"您的相机将打开。将摄像头对准下方二维码，直到它位于屏幕上突出显示的正方形内，"
 "然后等待应用识别。"
 
 #: snikket_web/templates/invite_reset_view.html:27
@@ -1396,8 +1408,9 @@ msgstr "其他方式"
 msgid ""
 "You can also <a href=\"%(reset_url)s\">reset your password online</a> if the "
 "above button or scanning the QR code does not work for you."
-msgstr "如果上方按钮或扫描二维码对您不起作用，您也可以 <a href=\"%(reset_url)s\""
-">在线重置密码</a>。"
+msgstr ""
+"如果上方按钮或扫描二维码对您不起作用，您也可以 <a href=\"%(reset_url)s\">在线"
+"重置密码</a>。"
 
 #: snikket_web/templates/invite_success.html:5
 #, python-format
@@ -1435,8 +1448,9 @@ msgstr "您现在可以使用上方地址和注册时选择的密码设置传统
 msgid ""
 "You can now safely close this page, or log in to the web portal to <a href="
 "\"%(login_url)s\">manage your account</a>."
-msgstr "您现在可以安全地关闭此页面，或登录到门户网站 <a href=\"%(login_url)s\""
-">管理您的账号</a>。"
+msgstr ""
+"您现在可以安全地关闭此页面，或登录到门户网站 <a href=\"%(login_url)s\">管理您"
+"的账号</a>。"
 
 #: snikket_web/templates/invite_success.html:21
 msgid "Import successful"
@@ -1476,16 +1490,17 @@ msgid ""
 "You have been invited to chat with %(inviter_name)s using Snikket, a secure, "
 "privacy-friendly chat app on %(site_name)s."
 msgstr ""
-"您已受邀使用 Snikket 与 %(inviter_name)s 在 %(site_name)s 上聊天，Snikket "
-"是安全、隐私友好的聊天应用。"
+"您已受邀使用 Snikket 与 %(inviter_name)s 在 %(site_name)s 上聊天，Snikket 是"
+"安全、隐私友好的聊天应用。"
 
 #: snikket_web/templates/invite_view.html:18
 #, python-format
 msgid ""
 "You have been invited to chat on %(site_name)s using Snikket, a secure, "
 "privacy-friendly chat app."
-msgstr "您已受邀使用 Snikket 在 %(site_name)s 上聊天，Snikket "
-"是安全、隐私友好的聊天应用。"
+msgstr ""
+"您已受邀使用 Snikket 在 %(site_name)s 上聊天，Snikket 是安全、隐私友好的聊天"
+"应用。"
 
 #: snikket_web/templates/invite_view.html:23
 #, python-format
@@ -1493,8 +1508,8 @@ msgid ""
 "By continuing, you agree to the <a href=\"%(tos_uri)s\">Terms of Service</a> "
 "and <a href=\"%(privacy_uri)s\">Privacy Policy</a>."
 msgstr ""
-"继续，即表示您同意 <a href=\"%(tos_uri)s\">服务条款</a> 和 <a href=\""
-"%(privacy_uri)s\">隐私政策</a>。"
+"继续，即表示您同意 <a href=\"%(tos_uri)s\">服务条款</a> 和 <a href="
+"\"%(privacy_uri)s\">隐私政策</a>。"
 
 #: snikket_web/templates/invite_view.html:27
 msgid "Get started"
@@ -1563,8 +1578,9 @@ msgstr "关闭"
 msgid ""
 "You can transfer this invite to your mobile device by scanning a code with "
 "your camera. You can use either a QR scanner app or the Snikket app itself."
-msgstr "您可以使用相机扫描二维码将此邀请传送到您的移动设备。"
-"您可以使用二维码扫描仪应用或 Snikket 应用本身。"
+msgstr ""
+"您可以使用相机扫描二维码将此邀请传送到您的移动设备。您可以使用二维码扫描仪应"
+"用或 Snikket 应用本身。"
 
 #: snikket_web/templates/invite_view.html:78
 msgid "Install on iOS"
@@ -1574,8 +1590,9 @@ msgstr "在 iOS 安装"
 msgid ""
 "After downloading Snikket from the App Store, you have to return to this "
 "invite link and tap on \"Open the app\" to proceed."
-msgstr "从 App Store 下载 Snikket "
-"后，您必须返回到此邀请链接，然后轻击“打开应用”继续。"
+msgstr ""
+"从 App Store 下载 Snikket 后，您必须返回到此邀请链接，然后轻击“打开应用”继"
+"续。"
 
 #: snikket_web/templates/invite_view.html:86
 msgid "First download Snikket from the App Store using the button below:"
@@ -1597,8 +1614,9 @@ msgstr "通过 F-Droid 安装"
 msgid ""
 "After installing Snikket via F-Droid, you have to return to this invite link "
 "and tap on \"Open the app\" to proceed."
-msgstr "通过 F-Droid 安装 Snikket "
-"后，您必须返回到此邀请链接，然后轻击“打开应用”继续。"
+msgstr ""
+"通过 F-Droid 安装 Snikket 后，您必须返回到此邀请链接，然后轻击“打开应用”继"
+"续。"
 
 #: snikket_web/templates/invite_view.html:114
 msgid "First install Snikket from F-Droid using the button below:"
@@ -1673,8 +1691,9 @@ msgstr "地址不正确"
 msgid ""
 "This Snikket service only hosts addresses ending in <em>@%(snikket_domain)s</"
 "em>. Your password was not sent."
-msgstr "此 Snikket 服务仅托管以 <em>@%(snikket_domain)s</em> "
-"结尾的地址。未发送您的密码。"
+msgstr ""
+"此 Snikket 服务仅托管以 <em>@%(snikket_domain)s</em> 结尾的地址。未发送您的密"
+"码。"
 
 #: snikket_web/templates/policies.html:4 snikket_web/templates/policies.html:10
 msgid "Policies"
@@ -1711,8 +1730,9 @@ msgid ""
 "To report policy violations or other abuse from this service, please send an "
 "email to %(email)s. Specify the domain name of this instance (%(domain)s) "
 "and include details of the incident(s)."
-msgstr "要报告此服务违反策略或其他滥用行为，请发送电子邮件至 "
-"%(email)s。指定此实例的域名（%(domain)s）并包括事件的详情。"
+msgstr ""
+"要报告此服务违反策略或其他滥用行为，请发送电子邮件至 %(email)s。指定此实例的"
+"域名（%(domain)s）并包括事件的详情。"
 
 #: snikket_web/templates/unauth.html:16
 msgid "Operation successful"
@@ -1726,8 +1746,9 @@ msgstr "欢迎使用 Snikket！"
 msgid ""
 "Now your Snikket instance is up and running, the next step is to invite "
 "people to join it. Family, friends, colleagues... you choose!"
-msgstr "现在，您的 Snikket "
-"实例已经启动并运行，下一步就是邀请他人加入。家人、朋友、同事…由您选择！"
+msgstr ""
+"现在，您的 Snikket 实例已经启动并运行，下一步就是邀请他人加入。家人、朋友、同"
+"事…由您选择！"
 
 #: snikket_web/templates/user_home.html:19
 msgid "Your account"
@@ -1787,7 +1808,8 @@ msgid ""
 "To change your password, you need to provide the current password as well as "
 "the new one. To reduce the chance of typos, we ask for your new password "
 "twice."
-msgstr "要更改您的密码，您需要提供当前密码和新密码。为了减少输入错误的机会，我们会要"
+msgstr ""
+"要更改您的密码，您需要提供当前密码和新密码。为了减少输入错误的机会，我们会要"
 "求您输入两次新密码。"
 
 #: snikket_web/templates/user_passwd.html:24

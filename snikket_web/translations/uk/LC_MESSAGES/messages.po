@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-30 10:52+0100\n"
+"POT-Creation-Date: 2024-08-11 16:36+0200\n"
 "PO-Revision-Date: 2023-12-25 16:00+0000\n"
 "Last-Translator: Dmytro Vozniuk <plibnik@gmail.com>\n"
 "Language-Team: Ukrainian <http://i18n.sotecware.net/projects/snikket/web-"
@@ -343,7 +343,7 @@ msgstr ""
 "%(mimetype)s)."
 
 #: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:189
+#: snikket_web/user.py:192
 msgid "Error"
 msgstr "Помилка"
 
@@ -415,15 +415,15 @@ msgstr "Дані облікового запису"
 msgid "Upload"
 msgstr "Завантажити"
 
-#: snikket_web/user.py:122
+#: snikket_web/user.py:125
 msgid "Incorrect password."
 msgstr "Хибний пароль."
 
-#: snikket_web/user.py:126
+#: snikket_web/user.py:129
 msgid "Password changed"
 msgstr "Пароль змінено"
 
-#: snikket_web/user.py:134
+#: snikket_web/user.py:137
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
@@ -431,15 +431,15 @@ msgstr ""
 "Вибраний аватар надто великий. Щоб завантажити аватари великого розміру, "
 "скористуйтесь застосунком."
 
-#: snikket_web/user.py:181
+#: snikket_web/user.py:184
 msgid "Profile updated"
 msgstr "Профіль оновлено"
 
-#: snikket_web/user.py:195
+#: snikket_web/user.py:198
 msgid "Export"
 msgstr "Експортувати"
 
-#: snikket_web/user.py:213
+#: snikket_web/user.py:216
 msgid "You currently have no account data to export."
 msgstr "Наразі у вас немає даних облікового запису, щоб експортувати їх."
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SnikketWeb 0.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-04-30 10:52+0100\n"
+"POT-Creation-Date: 2024-08-11 16:36+0200\n"
 "PO-Revision-Date: 2024-01-03 16:08+0000\n"
 "Last-Translator: Jonas Schäfer <jonas@zombofant.net>\n"
 "Language-Team: German <http://i18n.sotecware.net/projects/snikket/web-portal/"
@@ -340,7 +340,7 @@ msgstr ""
 "im XEP-0227-Format verarbeitet werden (erhaltenes Format: %(mimetype)s)."
 
 #: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:189
+#: snikket_web/user.py:192
 msgid "Error"
 msgstr "Fehler"
 
@@ -412,15 +412,15 @@ msgstr "Kontodaten"
 msgid "Upload"
 msgstr "Hochladen"
 
-#: snikket_web/user.py:122
+#: snikket_web/user.py:125
 msgid "Incorrect password."
 msgstr "Ungültiges Passwort."
 
-#: snikket_web/user.py:126
+#: snikket_web/user.py:129
 msgid "Password changed"
 msgstr "Passwort geändert"
 
-#: snikket_web/user.py:134
+#: snikket_web/user.py:137
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
@@ -428,15 +428,15 @@ msgstr ""
 "Das gewählte Profilbild ist zu groß. Benutze die App um größere Bilder "
 "hochladen zu können."
 
-#: snikket_web/user.py:181
+#: snikket_web/user.py:184
 msgid "Profile updated"
 msgstr "Profil gespeichert"
 
-#: snikket_web/user.py:195
+#: snikket_web/user.py:198
 msgid "Export"
 msgstr "Exportieren"
 
-#: snikket_web/user.py:213
+#: snikket_web/user.py:216
 msgid "You currently have no account data to export."
 msgstr "Du hast derzeit keine Kontodaten, die exportiert werden können."
 

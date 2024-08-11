@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: translations@snikket.org\n"
-"POT-Creation-Date: 2024-04-30 10:52+0100\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-08-11 16:36+0200\n"
 "PO-Revision-Date: 2024-05-02 21:15+0000\n"
 "Last-Translator: BetaRays <BetaRays@proton.me>\n"
 "Language-Team: French <http://i18n.sotecware.net/projects/snikket/web-portal/"
@@ -342,7 +342,7 @@ msgstr ""
 "fourni : %(mimetype)s)."
 
 #: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:189
+#: snikket_web/user.py:192
 msgid "Error"
 msgstr "Erreur"
 
@@ -414,15 +414,15 @@ msgstr "Données du compte"
 msgid "Upload"
 msgstr "Télécharger"
 
-#: snikket_web/user.py:122
+#: snikket_web/user.py:125
 msgid "Incorrect password."
 msgstr "Mot de passe incorrect."
 
-#: snikket_web/user.py:126
+#: snikket_web/user.py:129
 msgid "Password changed"
 msgstr "Mot de passe changé"
 
-#: snikket_web/user.py:134
+#: snikket_web/user.py:137
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
@@ -430,15 +430,15 @@ msgstr ""
 "L’avatar choisi est trop gros. Pour utiliser un avatar aussi large, veuillez "
 "utiliser l’application."
 
-#: snikket_web/user.py:181
+#: snikket_web/user.py:184
 msgid "Profile updated"
 msgstr "Profil mis à jour"
 
-#: snikket_web/user.py:195
+#: snikket_web/user.py:198
 msgid "Export"
 msgstr "Exporter"
 
-#: snikket_web/user.py:213
+#: snikket_web/user.py:216
 msgid "You currently have no account data to export."
 msgstr "Vous n’avez actuellement aucune donnée de compte à exporter."
 
@@ -661,7 +661,8 @@ msgstr ""
 #: snikket_web/templates/admin_create_invite_form.html:16
 msgid ""
 "Choose whether this invitation link will allow more than one person to join."
-msgstr "Choisissez si ce lien d’invitation pourra être utilisé plus d’une fois."
+msgstr ""
+"Choisissez si ce lien d’invitation pourra être utilisé plus d’une fois."
 
 #: snikket_web/templates/admin_create_invite_form.html:21
 #, python-format

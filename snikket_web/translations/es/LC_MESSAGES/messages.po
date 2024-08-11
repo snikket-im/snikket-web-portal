@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: translations@snikket.org\n"
-"POT-Creation-Date: 2024-04-30 10:52+0100\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-08-11 16:36+0200\n"
 "PO-Revision-Date: 2024-05-06 05:04+0000\n"
 "Last-Translator: J👀 <j@upsub.me>\n"
-"Language-Team: Spanish <http://i18n.sotecware.net/projects/snikket/"
-"web-portal/es/>\n"
+"Language-Team: Spanish <http://i18n.sotecware.net/projects/snikket/web-"
+"portal/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -343,7 +343,7 @@ msgstr ""
 "facilitado: %(mimetype)s)."
 
 #: snikket_web/invite.py:299 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:189
+#: snikket_web/user.py:192
 msgid "Error"
 msgstr "Error"
 
@@ -415,15 +415,15 @@ msgstr "Datos de la cuenta"
 msgid "Upload"
 msgstr "Subida"
 
-#: snikket_web/user.py:122
+#: snikket_web/user.py:125
 msgid "Incorrect password."
 msgstr "Contraseña incorrecta."
 
-#: snikket_web/user.py:126
+#: snikket_web/user.py:129
 msgid "Password changed"
 msgstr "Contraseña cambiada"
 
-#: snikket_web/user.py:134
+#: snikket_web/user.py:137
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please "
 "use the app."
@@ -431,15 +431,15 @@ msgstr ""
 "El avatar elegido es demasiado grande. Para poder subir avatares más "
 "grandes, utilice la aplicación, por favor."
 
-#: snikket_web/user.py:181
+#: snikket_web/user.py:184
 msgid "Profile updated"
 msgstr "Perfil actualizado"
 
-#: snikket_web/user.py:195
+#: snikket_web/user.py:198
 msgid "Export"
 msgstr "Exportar"
 
-#: snikket_web/user.py:213
+#: snikket_web/user.py:216
 msgid "You currently have no account data to export."
 msgstr "No dispone actualmente de datos de cuenta para exportar."
 
@@ -1428,8 +1428,8 @@ msgid ""
 "This page allows you to reset the password of your account, <strong>"
 "%(account_jid)s</strong>, once."
 msgstr ""
-"En esta página puedes restablecer la contraseña de tu cuenta, "
-"<strong>%(account_jid)s</strong>, una vez."
+"En esta página puedes restablecer la contraseña de tu cuenta, <strong>"
+"%(account_jid)s</strong>, una vez."
 
 #: snikket_web/templates/invite_reset_view.html:17
 msgid "Using the app"
@@ -1518,8 +1518,8 @@ msgid ""
 "You can now safely close this page, or log in to the web portal to <a href="
 "\"%(login_url)s\">manage your account</a>."
 msgstr ""
-"Puedes cerrar esta página o entrar en sesión al portal web para <a href=\""
-"%(login_url)s\">gestionar tu cuenta</a>."
+"Puedes cerrar esta página o entrar en sesión al portal web para <a href="
+"\"%(login_url)s\">gestionar tu cuenta</a>."
 
 #: snikket_web/templates/invite_success.html:21
 msgid "Import successful"
@@ -1595,9 +1595,9 @@ msgid ""
 "Install the Snikket App on your Android device (<a href=\"%(ios_info_url)s\" "
 "rel=\"noopener noreferrer\" target=\"_blank\">iOS coming soon!</a>)."
 msgstr ""
-"Instala la App Snikket en tu dispositivo Android (<a href=\"%(ios_info_url)"
-"s\" rel=\"noopener noreferrer\" target=\"_blank\">¡iOS disponible en "
-"breve!</a>)."
+"Instala la App Snikket en tu dispositivo Android (<a href=\"%(ios_info_url)s"
+"\" rel=\"noopener noreferrer\" target=\"_blank\">¡iOS disponible en breve!</"
+"a>)."
 
 #: snikket_web/templates/invite_view.html:35
 msgid "Get it on Google Play"
@@ -1632,8 +1632,8 @@ msgid ""
 "\">register an account manually</a>."
 msgstr ""
 "Puedes conectarte a Snikket usando software compatible con XMPP. Si el botón "
-"de arriba no funciona con tu app, puede que necesites <a href=\""
-"%(register_url)s\">registrar una cuenta manualmente</a>."
+"de arriba no funciona con tu app, puede que necesites <a href="
+"\"%(register_url)s\">registrar una cuenta manualmente</a>."
 
 #: snikket_web/templates/invite_view.html:59
 msgid "Scan invite code"
@@ -1780,8 +1780,8 @@ msgid ""
 "This Snikket service only hosts addresses ending in <em>@%(snikket_domain)s</"
 "em>. Your password was not sent."
 msgstr ""
-"El servicio Snikket sólo aloja direcciones que terminan en "
-"<em>@%(snikket_domain)s</em>. Tu contraseña no se envió."
+"El servicio Snikket sólo aloja direcciones que terminan en <em>@"
+"%(snikket_domain)s</em>. Tu contraseña no se envió."
 
 #: snikket_web/templates/policies.html:4 snikket_web/templates/policies.html:10
 msgid "Policies"
