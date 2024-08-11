@@ -97,7 +97,10 @@ class ImportAccountDataForm(BaseForm):
 @client.require_session()
 async def index() -> str:
     user_info = await client.get_user_info()
-    metrics = await client.get_system_metrics()
+    try:
+        metrics = await client.get_system_metrics()
+    except (werkzeug.exceptions.Unauthorized, werkzeug.exceptions.Forbidden):
+        metrics = {}
     return await render_template(
         "user_home.html",
         user_info=user_info,
