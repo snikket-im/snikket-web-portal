@@ -99,7 +99,7 @@ async def index() -> str:
     user_info = await client.get_user_info()
     try:
         metrics = await client.get_system_metrics()
-    except:
+    except (werkzeug.exceptions.Unauthorized, werkzeug.exceptions.Forbidden):
         metrics = {}
     return await render_template(
         "user_home.html",
