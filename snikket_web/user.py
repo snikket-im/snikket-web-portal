@@ -100,7 +100,7 @@ async def index() -> str:
     try:
         metrics = await client.get_system_metrics()
     except:
-        metrics = False
+        metrics = {}
     return await render_template(
         "user_home.html",
         user_info=user_info,
