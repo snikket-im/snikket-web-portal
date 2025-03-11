@@ -234,7 +234,7 @@ def create_app() -> quart.Quart:
         if infra.client.has_session:
             return redirect(url_for('user.index'))
 
-        return redirect(url_for('main.login'))
+        return redirect(url_for('main.home'))
 
     @app.route("/site.webmanifest")
     def site_manifest() -> quart.Response:

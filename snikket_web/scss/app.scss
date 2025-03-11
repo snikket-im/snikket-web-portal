@@ -271,6 +271,10 @@ div.form.layout-expanded {
 		color: inherit;
 	}
 
+  div.centertext {
+    text-align: center;
+  }
+
 	div.f-ebox {
 		margin: 1.5em 0;
 		line-height: 1.5;
@@ -280,6 +284,22 @@ div.form.layout-expanded {
 		text-align: right;
 		padding: $w-s2 0;
 	}
+
+  div.separator{
+    display: flex;
+    align-items: center;
+
+    h5 {
+      padding: 0 2rem;
+    }
+
+    div.line{
+      flex: 1;
+      height: 1px;
+      background-color: #fff;
+    }
+  }
+
 
 	@each $type in $text-entry-inputs {
 		input[type=#{$type}] {

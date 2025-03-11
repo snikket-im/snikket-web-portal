@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% from "library.j2" import box, form_button, render_errors, standard_button %}
+{% set body_id = "login" %}
+{% block head_lead %}
+<title>{{ _("Snikket Home") }}</title>
+{% endblock %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/app.css') }}">
+{{ super() }}
+{% endblock %}
+{% block body %}
+<div id="mwrap"><div class="filler"></div><main><div class="form layout-expanded centertext">
+	<h1 class="form-title">{{ config["SITE_NAME"] }}</h1>
+  <div class='centertext'>
+    <p class="form-desc">{{ _("Communicate with your friends and family using Snikket from your browser.") }}</p>
+    <div class="f-ebox">
+      {%- call standard_button("people", url_for('.index'), class="primary") %}{% trans %}Let's chat{% endtrans %}{% endcall -%}
+    </div>
+  </div>
+
+  <div class="separator">
+    <div class="line"></div>
+    <h5>or</h5>
+    <div class="line"></div>
+  </div>
+
+  <div class='centertext'>
+    <p class="form-desc">{{ _("Manage your Snikket account.") }}</p>
+    <div class="f-ebox">
+      {%- call standard_button("login", url_for('.login'), class="primary") %}{% trans %}Manage your account{% endtrans %}{% endcall -%}
+    </div>
+  </div>
+
+</div></main><div class="filler"></div></div>
+{%- include "_footer.html" -%}
+{% endblock %}

@@ -56,6 +56,9 @@ async def index() -> werkzeug.Response:
 
 ERR_CREDENTIALS_INVALID = _l("Invalid username or password.")
 
+@bp.route("/home", methods=["GET"] )
+async def home() -> str:
+  return await render_template("home.html")
 
 @bp.route("/login", methods=["GET", "POST"])
 async def login() -> typing.Union[str, werkzeug.Response]:
