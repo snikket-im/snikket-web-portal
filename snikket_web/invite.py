@@ -47,10 +47,20 @@ def apple_store_badge() -> str:
     return url_for("static", filename="img/apple/en.svg")
 
 
+def play_store_badge() -> str:
+    locale = selected_locale()
+    filename = "{}_badge_web_generic.png".format(locale)
+    static_path = pathlib.Path(__file__).parent / "static" / "img" / "google"
+    if (static_path / filename).exists():
+        return url_for("static", filename="img/google/{}".format(filename))
+    return url_for("static", filename="img/google/en_badge_web_generic.png")
+
+
 @bp.context_processor
 def context() -> typing.Dict[str, typing.Any]:
     return {
         "apple_store_badge": apple_store_badge,
+        "play_store_badge": play_store_badge,
     }
 
 
