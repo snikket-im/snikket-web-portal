@@ -164,7 +164,7 @@ class AppConfig:
         "zh_Hans_CN",
     ], converter=autosplit)
     apple_store_url = environ.var(
-        "https://apps.apple.com/us/app/snikket/id1545164189",
+        "https://apps.apple.com/us/app/monal-xmpp-chat/id317711500",
     )
     # Default limit of 1 MiB is what was discovered to be the effective limit
     # in #67, hence we set that here for now.
