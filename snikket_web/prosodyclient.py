@@ -29,7 +29,7 @@ from flask import g as _app_ctx_stack
 
 import werkzeug.exceptions
 
-from . import xmpputil
+from . import xmpputil, _version
 from .xmpputil import split_jid
 
 
@@ -474,6 +474,7 @@ class ProsodyClient:
             ],
             "grant_types": ["password"],
             "response_types": ["code"],
+            "software_version": _version.version,
         }
         async with self._plain_session as session:
             async with session.post(
