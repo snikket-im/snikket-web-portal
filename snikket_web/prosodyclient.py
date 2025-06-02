@@ -434,7 +434,7 @@ class ProsodyClient:
             auth_info: typing.Mapping[str, str] = (await resp.json())
 
             if auth_status in [400, 401]:
-                self.logger.debug("oauth2 error: %r", auth_info)
+                self.logger.warning("oauth2 error: %r", auth_info)
                 # OAuth2 spec says that’s what can happen when some stuff is
                 # wrong.
                 # we have to interpret the JSON further
