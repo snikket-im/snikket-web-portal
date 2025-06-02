@@ -474,6 +474,7 @@ class ProsodyClient:
             ],
             "grant_types": ["password"],
             "response_types": ["code"],
+            "scope": " ".join([SCOPE_RESTRICTED, SCOPE_DEFAULT, SCOPE_ADMIN]),
             "software_version": _version.version,
         }
         async with self._plain_session as session:
