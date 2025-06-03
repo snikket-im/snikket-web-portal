@@ -474,6 +474,7 @@ class ProsodyClient:
             ],
             "grant_types": ["password"],
             "response_types": [],
+            "token_endpoint_auth_method": "client_secret_post",
             "scope": " ".join([SCOPE_RESTRICTED, SCOPE_DEFAULT, SCOPE_ADMIN]),
             "software_version": _version.version,
         }
