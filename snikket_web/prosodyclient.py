@@ -472,6 +472,7 @@ class ProsodyClient:
             "redirect_uris": [
                 "https://{}/login_result".format(current_app.config["SNIKKET_DOMAIN"])
             ],
+            "application_type": "web",
             "grant_types": ["password"],
             "response_types": [],
             "token_endpoint_auth_method": "client_secret_post",
