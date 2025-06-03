@@ -477,6 +477,7 @@ class ProsodyClient:
             "response_types": [],
             "token_endpoint_auth_method": "client_secret_post",
             "scope": " ".join([SCOPE_RESTRICTED, SCOPE_DEFAULT, SCOPE_ADMIN]),
+            "software_id": "22aa246e-4373-51cb-bcaa-9f73bb235b84",  # web-portal.snikket.org
             "software_version": _version.version,
         }
         async with self._plain_session as session:
