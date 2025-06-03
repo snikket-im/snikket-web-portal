@@ -473,7 +473,7 @@ class ProsodyClient:
                 "https://{}/login_result".format(current_app.config["SNIKKET_DOMAIN"])
             ],
             "grant_types": ["password"],
-            "response_types": ["code"],
+            "response_types": [],
             "scope": " ".join([SCOPE_RESTRICTED, SCOPE_DEFAULT, SCOPE_ADMIN]),
             "software_version": _version.version,
         }
