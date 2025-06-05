@@ -29,7 +29,7 @@ from flask import g as _app_ctx_stack
 
 import werkzeug.exceptions
 
-from . import xmpputil
+from . import xmpputil, _version
 from .xmpputil import split_jid
 
 
@@ -472,8 +472,13 @@ class ProsodyClient:
             "redirect_uris": [
                 "https://{}/login_result".format(current_app.config["SNIKKET_DOMAIN"])
             ],
+            "application_type": "web",
             "grant_types": ["password"],
-            "response_types": ["code"],
+            "response_types": [],
+            "token_endpoint_auth_method": "client_secret_post",
+            "scope": " ".join([SCOPE_RESTRICTED, SCOPE_DEFAULT, SCOPE_ADMIN]),
+            "software_id": "22aa246e-4373-51cb-bcaa-9f73bb235b84",  # web-portal.snikket.org
+            "software_version": _version.version,
         }
         async with self._plain_session as session:
             async with session.post(
