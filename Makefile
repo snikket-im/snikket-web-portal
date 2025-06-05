@@ -5,6 +5,8 @@ generated_css_files = $(patsubst snikket_web/scss/%.scss,snikket_web/static/css/
 translation_basepath = snikket_web/translations
 pot_file = $(translation_basepath)/messages.pot
 
+black_formatted_py = snikket_web/prosodyclient.py
+
 PYTHON3 ?= python3
 SCSSC ?= sassc --load-path snikket_web/scss/
 
@@ -33,5 +35,21 @@ force_update_translations: extract_translations
 compile_translations:
 	-pybabel compile -d $(translation_basepath)
 
+
+.PHONY: lint
+lint: format flake8
+
+.PHONY: format
+format:
+	$(PYTHON3) -m black $(black_formatted_py)
+
+.PHONY: flake8
+flake8:
+	$(PYTHON3) -m flake8 --exclude=$(subst $(space),$(comma),$(strip $(black_formatted_py))) snikket_web
+	$(PYTHON3) -m flake8 --ignore=E501,W503 $(black_formatted_py)
+
+.PHONY: mypy
+mypy:
+	$(PYTHON3) -m mypy --python-version 3.11 snikket_web
 
 .PHONY: build_css clean update_translations compile_translations extract_translations force_update_translations
