@@ -48,7 +48,7 @@ jobs:
           pip install flake8 flake8-print
       - name: Linting
         run: |
-          python -m flake8 snikket_web
+          make flake8
 
   translation-check:
     runs-on: ubuntu-latest
