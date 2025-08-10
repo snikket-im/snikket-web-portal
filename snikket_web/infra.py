@@ -36,7 +36,7 @@ BYTE_UNIT_SCALE_MAP = [
 ]
 
 
-@babel.localeselector  # type:ignore
+# TODO replacement for @babel.localeselector  # type:ignore
 def selected_locale() -> str:
     g.language_header_accessed = True
     selected = request.accept_languages.best_match(
