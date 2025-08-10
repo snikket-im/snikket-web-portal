@@ -6,7 +6,7 @@ import typing
 
 from datetime import datetime, timedelta, timezone
 
-import quart.flask_patch  # noqa:F401
+import quart_flask_patch  # noqa:F401
 from quart import (
     current_app,
     request,
