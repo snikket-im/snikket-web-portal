@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim AS build
+FROM debian:trixie-slim AS build
 
 RUN set -eu; \
     export DEBIAN_FRONTEND=noninteractive ; \
@@ -16,7 +16,7 @@ WORKDIR /opt/snikket-web-portal
 RUN make
 
 
-FROM debian:bookworm-slim
+FROM debian:trixie-slim
 
 ARG BUILD_SERIES=dev
 ARG BUILD_ID=0
