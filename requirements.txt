@@ -8,3 +8,4 @@ environ-config~=20.0
 wtforms~=3.2.1
 typing-extensions
 werkzeug~=3.1,<4
+quart_flask_patch

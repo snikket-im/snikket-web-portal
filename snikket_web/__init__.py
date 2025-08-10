@@ -7,7 +7,7 @@ import typing
 
 import aiohttp
 
-import quart.flask_patch
+import quart_flask_patch
 
 import quart
 from quart import (

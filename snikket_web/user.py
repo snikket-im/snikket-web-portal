@@ -2,7 +2,7 @@ import asyncio
 import typing
 import urllib
 
-import quart.flask_patch
+import quart_flask_patch
 from quart import (
     Blueprint,
     Response,
