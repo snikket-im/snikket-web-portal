@@ -1,4 +1,4 @@
-aiohttp~=3.8,<3.9
+aiohttp~=3.12,<3.13
 quart~=0.18,<0.19
 flask-wtf~=1.1,<1.2
 hsluv~=5.0
