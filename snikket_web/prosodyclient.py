@@ -25,6 +25,8 @@ from quart import (
 )
 import quart
 
+from urllib.parse import urljoin, quote
+
 from flask import g as _app_ctx_stack
 
 import werkzeug.exceptions
@@ -394,8 +396,14 @@ class ProsodyClient:
     def _register_client_endpoint(self) -> str:
         return "{}/oauth2/register".format(self._endpoint_base)
 
-    def _admin_v1_endpoint(self, subpath: str) -> str:
-        return "{}/admin_api{}".format(self._endpoint_base, subpath)
+    def _admin_v1_endpoint(
+        self,
+        *path_segments: str,
+    ) -> str:
+        # percent-encode each path segment so URL-unsafe chars inside a segment are encoded
+        encoded_segments = "/".join(quote(str(s), safe="-_.~") for s in path_segments)
+        path = f"/admin_api/{encoded_segments}"
+        return urljoin(self._endpoint_base, path)
 
     def _public_v1_endpoint(self, subpath: str) -> str:
         return "{}/register_api{}".format(self._endpoint_base, subpath)
@@ -1001,7 +1009,7 @@ class ProsodyClient:
         session: aiohttp.ClientSession,
     ) -> typing.Collection[AdminUserInfo]:
         result = []
-        async with session.get(self._admin_v1_endpoint("/users")) as resp:
+        async with session.get(self._admin_v1_endpoint("users")) as resp:
             self._raise_error_from_response(resp)
             for user in await resp.json():
                 result.append(AdminUserInfo.from_api_response(user))
@@ -1014,9 +1022,7 @@ class ProsodyClient:
         *,
         session: aiohttp.ClientSession,
     ) -> AdminUserInfo:
-        async with session.get(
-            self._admin_v1_endpoint("/users/{}".format(localpart)),
-        ) as resp:
+        async with session.get(self._admin_v1_endpoint("users", localpart)) as resp:
             self._raise_error_from_response(resp)
             return AdminUserInfo.from_api_response(await resp.json())
 
@@ -1038,7 +1044,7 @@ class ProsodyClient:
             payload["role"] = role
 
         async with session.put(
-            self._admin_v1_endpoint("/users/{}".format(localpart)),
+            self._admin_v1_endpoint("users", localpart),
             json=payload,
         ) as resp:
             self._raise_error_from_response(resp)
@@ -1051,7 +1057,7 @@ class ProsodyClient:
         session: aiohttp.ClientSession,
     ) -> None:
         async with session.patch(
-            self._admin_v1_endpoint("/users/{}".format(localpart)),
+            self._admin_v1_endpoint("users", localpart),
             json={
                 "enabled": True,
             },
@@ -1066,7 +1072,7 @@ class ProsodyClient:
         session: aiohttp.ClientSession,
     ) -> None:
         async with session.patch(
-            self._admin_v1_endpoint("/users/{}".format(localpart)),
+            self._admin_v1_endpoint("users", localpart),
             json={
                 "enabled": False,
             },
@@ -1081,7 +1087,7 @@ class ProsodyClient:
         session: aiohttp.ClientSession,
     ) -> AdminUserInfo:
         async with session.get(
-            self._admin_v1_endpoint("/users/{}/debug".format(localpart)),
+            self._admin_v1_endpoint("users", localpart, "/debug")
         ) as resp:
             self._raise_error_from_response(resp)
             return await resp.json()
@@ -1093,9 +1099,7 @@ class ProsodyClient:
         *,
         session: aiohttp.ClientSession,
     ) -> None:
-        async with session.delete(
-            self._admin_v1_endpoint("/users/{}".format(localpart)),
-        ) as resp:
+        async with session.delete(self._admin_v1_endpoint("users", localpart)) as resp:
             self._raise_error_from_response(resp)
 
     @autosession
@@ -1104,7 +1108,7 @@ class ProsodyClient:
         *,
         session: aiohttp.ClientSession,
     ) -> typing.Collection[AdminInviteInfo]:
-        async with session.get(self._admin_v1_endpoint("/invites")) as resp:
+        async with session.get(self._admin_v1_endpoint("invites")) as resp:
             self._raise_error_from_response(resp)
             return list(map(AdminInviteInfo.from_api_response, await resp.json()))
 
@@ -1116,7 +1120,7 @@ class ProsodyClient:
         session: aiohttp.ClientSession,
     ) -> AdminInviteInfo:
         async with session.get(
-            self._admin_v1_endpoint("/invites/{}".format(id_)),
+            self._admin_v1_endpoint("invites", id_),
         ) as resp:
             self._raise_error_from_response(resp)
             return AdminInviteInfo.from_api_response(await resp.json())
@@ -1129,7 +1133,7 @@ class ProsodyClient:
         session: aiohttp.ClientSession,
     ) -> None:
         async with session.delete(
-            self._admin_v1_endpoint("/invites/{}".format(id_)),
+            self._admin_v1_endpoint("invites", id_),
         ) as resp:
             self._raise_error_from_response(resp)
 
@@ -1155,7 +1159,7 @@ class ProsodyClient:
             payload["note"] = note
 
         async with session.post(
-            self._admin_v1_endpoint("/invites/account"), json=payload
+            self._admin_v1_endpoint("invites", "account"), json=payload
         ) as resp:
             self._raise_error_from_response(resp)
             return AdminInviteInfo.from_api_response(await resp.json())
@@ -1180,7 +1184,7 @@ class ProsodyClient:
             payload["note"] = note
 
         async with session.post(
-            self._admin_v1_endpoint("/invites/group"), json=payload
+            self._admin_v1_endpoint("invites", "group"), json=payload
         ) as resp:
             self._raise_error_from_response(resp)
             return AdminInviteInfo.from_api_response(await resp.json())
@@ -1200,7 +1204,7 @@ class ProsodyClient:
             payload["ttl"] = ttl
 
         async with session.post(
-            self._admin_v1_endpoint("/invites/reset"), json=payload
+            self._admin_v1_endpoint("invites", "reset"), json=payload
         ) as resp:
             self._raise_error_from_response(resp)
             return AdminInviteInfo.from_api_response(await resp.json())
@@ -1219,7 +1223,7 @@ class ProsodyClient:
         }
 
         async with session.post(
-            self._admin_v1_endpoint("/groups"), json=payload
+            self._admin_v1_endpoint("groups"), json=payload
         ) as resp:
             self._raise_error_from_response(resp)
             return AdminGroupInfo.from_api_response(await resp.json())
@@ -1230,7 +1234,7 @@ class ProsodyClient:
         *,
         session: aiohttp.ClientSession,
     ) -> typing.Collection[AdminGroupInfo]:
-        async with session.get(self._admin_v1_endpoint("/groups")) as resp:
+        async with session.get(self._admin_v1_endpoint("groups")) as resp:
             self._raise_error_from_response(resp)
             return list(
                 map(
@@ -1247,7 +1251,7 @@ class ProsodyClient:
         session: aiohttp.ClientSession,
     ) -> AdminGroupInfo:
         async with session.get(
-            self._admin_v1_endpoint("/groups/{}".format(id_)),
+            self._admin_v1_endpoint("groups", id_),
         ) as resp:
             self._raise_error_from_response(resp)
             return AdminGroupInfo.from_api_response(await resp.json())
@@ -1265,7 +1269,7 @@ class ProsodyClient:
             payload["name"] = new_name
 
         async with session.put(
-            self._admin_v1_endpoint("/groups/{}".format(id_)),
+            self._admin_v1_endpoint("groups", id_),
             json=payload,
         ) as resp:
             self._raise_error_from_response(resp)
@@ -1279,7 +1283,7 @@ class ProsodyClient:
         session: aiohttp.ClientSession,
     ) -> None:
         async with session.put(
-            self._admin_v1_endpoint("/groups/{}/members/{}".format(id_, localpart)),
+            self._admin_v1_endpoint("groups", id_, "members", localpart),
         ) as resp:
             self._raise_error_from_response(resp)
 
@@ -1297,7 +1301,7 @@ class ProsodyClient:
         }
 
         async with session.post(
-            self._admin_v1_endpoint("/groups/{}/chats".format(id_)),
+            self._admin_v1_endpoint("groups", id_, "chats"),
             json=payload,
         ) as resp:
             self._raise_error_from_response(resp)
@@ -1311,7 +1315,7 @@ class ProsodyClient:
         session: aiohttp.ClientSession,
     ) -> None:
         async with session.delete(
-            self._admin_v1_endpoint("/groups/{}/members/{}".format(id_, localpart)),
+            self._admin_v1_endpoint("groups", id_, "members", localpart),
         ) as resp:
             self._raise_error_from_response(resp)
 
@@ -1324,7 +1328,7 @@ class ProsodyClient:
         session: aiohttp.ClientSession,
     ) -> None:
         async with session.delete(
-            self._admin_v1_endpoint("/groups/{}/chats/{}".format(group_id, chat_id)),
+            self._admin_v1_endpoint("groups", group_id, "chats", chat_id),
         ) as resp:
             self._raise_error_from_response(resp)
 
@@ -1336,7 +1340,7 @@ class ProsodyClient:
         session: aiohttp.ClientSession,
     ) -> None:
         async with session.delete(
-            self._admin_v1_endpoint("/groups/{}".format(id_)),
+            self._admin_v1_endpoint("groups", id_),
         ) as resp:
             self._raise_error_from_response(resp)
 
@@ -1400,7 +1404,7 @@ class ProsodyClient:
     async def get_public_invite_by_id(self, id_: str) -> PublicInviteInfo:
         async with self._plain_session as session:
             async with session.get(
-                self._public_v1_endpoint("/invite/{}".format(id_))
+                self._public_v1_endpoint("/invite/{}".format(quote(id_, safe="")))
             ) as resp:
                 resp.raise_for_status()
                 return PublicInviteInfo.from_api_response(await resp.json())
@@ -1428,7 +1432,7 @@ class ProsodyClient:
         self, *, session: aiohttp.ClientSession
     ) -> typing.Mapping:
         async with session.get(
-            self._admin_v1_endpoint("/server/metrics"),
+            self._admin_v1_endpoint("server", "metrics"),
         ) as resp:
             if resp.status == 404:
                 return {}
@@ -1452,7 +1456,7 @@ class ProsodyClient:
         }
 
         async with session.post(
-            self._admin_v1_endpoint("/server/announcement"), json=payload
+            self._admin_v1_endpoint("server", "announcement"), json=payload
         ) as resp:
             self._raise_error_from_response(resp)
             resp.raise_for_status()
