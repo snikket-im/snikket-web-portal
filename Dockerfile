@@ -42,8 +42,6 @@ RUN set -eu; \
     apt-get clean ; rm -rf /var/lib/apt/lists; \
     rm -rf /root/.cache;
 
-HEALTHCHECK CMD nc -zv ${SNIKKET_TWEAK_PORTAL_INTERNAL_HTTP_INTERFACE:-127.0.0.1} ${SNIKKET_TWEAK_PORTAL_INTERNAL_HTTP_PORT:-5765}
-
 COPY --from=build /opt/snikket-web-portal/snikket_web/ /opt/snikket-web-portal/snikket_web
 COPY babel.cfg /opt/snikket-web-portal/babel.cfg
 
