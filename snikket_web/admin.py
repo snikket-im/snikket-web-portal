@@ -9,7 +9,7 @@ import aiohttp
 
 import werkzeug.exceptions
 
-import quart.flask_patch
+import quart_flask_patch
 
 import wtforms
 

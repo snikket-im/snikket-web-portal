@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 import aiohttp
 
 import quart
-import quart.flask_patch
+import quart_flask_patch
 from quart import (
     current_app,
     redirect,
