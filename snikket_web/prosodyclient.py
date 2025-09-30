@@ -43,6 +43,33 @@ SCOPE_ADMIN = "prosody:admin"
 T = typing.TypeVar("T")
 
 
+class APIError(Exception):
+    def __init__(
+        self,
+        type: str,
+        condition: str,
+        text: typing.Optional[str] = None,
+        extra: typing.Optional[typing.Mapping[str, str]] = None,
+    ) -> None:
+        self.type = str(type)
+        self.condition = str(condition)
+        self.text = None if text is None else str(text)
+        self.extra = None if extra is None else extra
+        # Compose a readable message for Exception base class
+        msg = f"{self.type}: {self.condition}"
+        if self.text:
+            msg += f" — {self.text}"
+        super().__init__(msg)
+
+    def to_dict(self) -> dict:
+        """Return a serializable representation."""
+        return {"type": self.type, "condition": self.condition, "text": self.text}
+
+    @classmethod
+    def from_dict(cls, data: dict) -> "APIError":
+        return cls(data["type"], data["condition"], data.get("text"), data.get("extra"))
+
+
 @dataclasses.dataclass(frozen=True)
 class TokenInfo:
     token: str
@@ -991,16 +1018,21 @@ class ProsodyClient:
             # server to expire/revoke all tokens on password change.
             self._store_token_in_session(token_info)
 
-    def _raise_error_from_response(
+    async def _raise_error_from_response(
         self,
         resp: aiohttp.ClientResponse,
     ) -> None:
-        if resp.status in [401, 403]:
-            abort(403, "request rejected by backend")
-        if resp.status == 400:
-            abort(500, "request rejected by backend")
-        if not 200 <= resp.status < 300:
+        if 200 <= resp.status < 300:
+            # No problem to raise
+            return
+
+        self.logger.warn("error from prosody: " + await resp.text())
+
+        err_info = await resp.json()
+        if err_info is None or err_info.get("error") is None:
             resp.raise_for_status()
+
+        raise APIError.from_dict(err_info.get("error"))
 
     @autosession
     async def list_users(
@@ -1010,7 +1042,7 @@ class ProsodyClient:
     ) -> typing.Collection[AdminUserInfo]:
         result = []
         async with session.get(self._admin_v1_endpoint("users")) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
             for user in await resp.json():
                 result.append(AdminUserInfo.from_api_response(user))
         return result
@@ -1023,7 +1055,7 @@ class ProsodyClient:
         session: aiohttp.ClientSession,
     ) -> AdminUserInfo:
         async with session.get(self._admin_v1_endpoint("users", localpart)) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
             return AdminUserInfo.from_api_response(await resp.json())
 
     @autosession
@@ -1047,7 +1079,7 @@ class ProsodyClient:
             self._admin_v1_endpoint("users", localpart),
             json=payload,
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
 
     @autosession
     async def enable_user_account(
@@ -1062,7 +1094,7 @@ class ProsodyClient:
                 "enabled": True,
             },
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
 
     @autosession
     async def disable_user_account(
@@ -1077,7 +1109,7 @@ class ProsodyClient:
                 "enabled": False,
             },
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
 
     @autosession
     async def get_user_debug_info(
@@ -1089,7 +1121,7 @@ class ProsodyClient:
         async with session.get(
             self._admin_v1_endpoint("users", localpart, "/debug")
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
             return await resp.json()
 
     @autosession
@@ -1100,7 +1132,8 @@ class ProsodyClient:
         session: aiohttp.ClientSession,
     ) -> None:
         async with session.delete(self._admin_v1_endpoint("users", localpart)) as resp:
-            self._raise_error_from_response(resp)
+
+            await self._raise_error_from_response(resp)
 
     @autosession
     async def list_invites(
@@ -1109,7 +1142,7 @@ class ProsodyClient:
         session: aiohttp.ClientSession,
     ) -> typing.Collection[AdminInviteInfo]:
         async with session.get(self._admin_v1_endpoint("invites")) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
             return list(map(AdminInviteInfo.from_api_response, await resp.json()))
 
     @autosession
@@ -1122,7 +1155,7 @@ class ProsodyClient:
         async with session.get(
             self._admin_v1_endpoint("invites", id_),
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
             return AdminInviteInfo.from_api_response(await resp.json())
 
     @autosession
@@ -1135,7 +1168,7 @@ class ProsodyClient:
         async with session.delete(
             self._admin_v1_endpoint("invites", id_),
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
 
     @autosession
     async def create_account_invite(
@@ -1161,7 +1194,7 @@ class ProsodyClient:
         async with session.post(
             self._admin_v1_endpoint("invites", "account"), json=payload
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
             return AdminInviteInfo.from_api_response(await resp.json())
 
     @autosession
@@ -1186,7 +1219,7 @@ class ProsodyClient:
         async with session.post(
             self._admin_v1_endpoint("invites", "group"), json=payload
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
             return AdminInviteInfo.from_api_response(await resp.json())
 
     @autosession
@@ -1206,7 +1239,7 @@ class ProsodyClient:
         async with session.post(
             self._admin_v1_endpoint("invites", "reset"), json=payload
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
             return AdminInviteInfo.from_api_response(await resp.json())
 
     @autosession
@@ -1225,7 +1258,7 @@ class ProsodyClient:
         async with session.post(
             self._admin_v1_endpoint("groups"), json=payload
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
             return AdminGroupInfo.from_api_response(await resp.json())
 
     @autosession
@@ -1235,7 +1268,7 @@ class ProsodyClient:
         session: aiohttp.ClientSession,
     ) -> typing.Collection[AdminGroupInfo]:
         async with session.get(self._admin_v1_endpoint("groups")) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
             return list(
                 map(
                     AdminGroupInfo.from_api_response,
@@ -1253,7 +1286,7 @@ class ProsodyClient:
         async with session.get(
             self._admin_v1_endpoint("groups", id_),
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
             return AdminGroupInfo.from_api_response(await resp.json())
 
     @autosession
@@ -1272,7 +1305,7 @@ class ProsodyClient:
             self._admin_v1_endpoint("groups", id_),
             json=payload,
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
 
     @autosession
     async def add_group_member(
@@ -1285,7 +1318,7 @@ class ProsodyClient:
         async with session.put(
             self._admin_v1_endpoint("groups", id_, "members", localpart),
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
 
     @autosession
     async def add_group_chat(
@@ -1304,7 +1337,7 @@ class ProsodyClient:
             self._admin_v1_endpoint("groups", id_, "chats"),
             json=payload,
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
 
     @autosession
     async def remove_group_member(
@@ -1317,7 +1350,7 @@ class ProsodyClient:
         async with session.delete(
             self._admin_v1_endpoint("groups", id_, "members", localpart),
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
 
     @autosession
     async def remove_group_chat(
@@ -1330,7 +1363,7 @@ class ProsodyClient:
         async with session.delete(
             self._admin_v1_endpoint("groups", group_id, "chats", chat_id),
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
 
     @autosession
     async def delete_group(
@@ -1342,7 +1375,7 @@ class ProsodyClient:
         async with session.delete(
             self._admin_v1_endpoint("groups", id_),
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
 
     @autosession
     async def export_account_data(
@@ -1355,7 +1388,7 @@ class ProsodyClient:
                 "/export?stores=roster,vcard,pep,pep_data"
             ),  # noqa:E501
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
             if resp.status == 204:
                 return None
             return await resp.text()
@@ -1373,7 +1406,7 @@ class ProsodyClient:
             ),  # noqa:E501
             data=user_xml,
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
             return True
 
     async def revoke_token(self, *, session: aiohttp.ClientSession) -> None:
@@ -1436,7 +1469,7 @@ class ProsodyClient:
         ) as resp:
             if resp.status == 404:
                 return {}
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
             resp.raise_for_status()
             return await resp.json()
 
@@ -1458,5 +1491,5 @@ class ProsodyClient:
         async with session.post(
             self._admin_v1_endpoint("server", "announcement"), json=payload
         ) as resp:
-            self._raise_error_from_response(resp)
+            await self._raise_error_from_response(resp)
             resp.raise_for_status()
