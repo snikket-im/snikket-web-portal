@@ -49,10 +49,7 @@ class PasswordResetLinkPost(BaseForm):
 @bp.route("/users")
 @client.require_admin_session()
 async def users() -> str:
-    users = sorted(
-        await client.list_users(),
-        key=lambda x: x.localpart
-    )
+    users = sorted(await client.list_users(), key=lambda x: x.localpart)
     invite_form = InvitePost()
     await invite_form.init_choices()
     reset_form = PasswordResetLinkPost()
@@ -117,10 +114,12 @@ async def edit_user(localpart: str) -> typing.Union[werkzeug.Response, str]:
                 _("Password reset link created"),
                 "success",
             )
-            return redirect(url_for(
-                ".user_password_reset_link",
-                id_=reset_link.id_,
-            ))
+            return redirect(
+                url_for(
+                    ".user_password_reset_link",
+                    id_=reset_link.id_,
+                )
+            )
         elif form.action_restore.data or form.action_enable.data:
             await client.enable_user_account(localpart)
             try:
@@ -176,9 +175,7 @@ async def edit_user(localpart: str) -> typing.Union[werkzeug.Response, str]:
 
 
 class DeleteUserForm(BaseForm):
-    action_delete = wtforms.SubmitField(
-        _l("Delete user permanently")
-    )
+    action_delete = wtforms.SubmitField(_l("Delete user permanently"))
 
 
 @bp.route("/user/<localpart>/delete", methods=["GET", "POST"])
@@ -221,8 +218,8 @@ async def debug_user(localpart: str) -> typing.Union[str, quart.Response]:
 @bp.route("/users/password-reset/<id_>", methods=["GET", "POST"])
 @client.require_admin_session()
 async def user_password_reset_link(
-        id_: str,
-        ) -> typing.Union[str, werkzeug.Response]:
+    id_: str,
+) -> typing.Union[str, werkzeug.Response]:
     invite_info = await client.get_invite_by_id(
         id_,
     )
@@ -265,21 +262,21 @@ class InvitePost(BaseForm):
         # also see the note in admin_create_invite_form.html
         # option_widget=wtforms.widgets.CheckboxInput(),
         widget=wtforms.widgets.Select(multiple=False),
-        validators=[wtforms.validators.InputRequired(
-            _l("At least one circle must be selected")
-        )],
+        validators=[
+            wtforms.validators.InputRequired(_l("At least one circle must be selected"))
+        ],
     )
 
     lifetime = wtforms.SelectField(
         _l("Valid for"),
         choices=[
             (3600, _l("One hour")),
-            (12*3600, _l("Twelve hours")),
+            (12 * 3600, _l("Twelve hours")),
             (86400, _l("One day")),
-            (7*86400, _l("One week")),
-            (28*86400, _l("Four weeks")),
+            (7 * 86400, _l("One week")),
+            (28 * 86400, _l("Four weeks")),
         ],
-        default=7*86400,
+        default=7 * 86400,
     )
 
     type_ = wtforms.RadioField(
@@ -305,47 +302,32 @@ class InvitePost(BaseForm):
         _l("Comment (optional)"),
     )
 
-    action_create_invite = wtforms.SubmitField(
-        _l("New invitation link")
-    )
+    action_create_invite = wtforms.SubmitField(_l("New invitation link"))
 
     async def init_choices(
-            self,
-            *,
-            circles: typing.Optional[typing.Collection[
-                prosodyclient.AdminGroupInfo
-            ]] = None) -> None:
+        self,
+        *,
+        circles: typing.Optional[typing.Collection[prosodyclient.AdminGroupInfo]] = None
+    ) -> None:
         if circles is not None:
             self.circles.choices = [
                 (circle.id_, circle_name(circle))
                 for circle in sorted(circles, key=lambda x: x.name)
             ]
             return
-        return await self.init_choices(
-            circles=await client.list_groups()
-        )
+        return await self.init_choices(circles=await client.list_groups())
 
 
 @bp.route("/invitations", methods=["GET", "POST"])
 @client.require_admin_session()
 async def invitations() -> typing.Union[str, werkzeug.Response]:
     invites = sorted(
-        (
-            invite
-            for invite in await client.list_invites()
-            if not invite.is_reset
-        ),
+        (invite for invite in await client.list_invites() if not invite.is_reset),
         key=lambda x: x.created_at,
         reverse=True,
     )
-    circles = sorted(
-        await client.list_groups(),
-        key=lambda x: x.name
-    )
-    circle_map = {
-        circle.id_: circle
-        for circle in circles
-    }
+    circles = sorted(await client.list_groups(), key=lambda x: x.name)
+    circle_map = {circle.id_: circle for circle in circles}
 
     invite_form = InvitePost()
     await invite_form.init_choices(circles=circles)
@@ -367,9 +349,7 @@ async def invitations() -> typing.Union[str, werkzeug.Response]:
 
 
 class InviteForm(BaseForm):
-    action_revoke = wtforms.SubmitField(
-        _l("Revoke")
-    )
+    action_revoke = wtforms.SubmitField(_l("Revoke"))
 
 
 @bp.route("/invitation/-/new", methods=["POST"])
@@ -377,9 +357,7 @@ class InviteForm(BaseForm):
 async def create_invite() -> typing.Union[str, werkzeug.Response]:
     form = InvitePost()
     circles = await client.list_groups()
-    form.circles.choices = [
-        (c.id_, c.name) for c in circles
-    ]
+    form.circles.choices = [(c.id_, c.name) for c in circles]
     if form.validate_on_submit():
         if form.type_.data == "group":
             invite = await client.create_group_invite(
@@ -400,8 +378,7 @@ async def create_invite() -> typing.Union[str, werkzeug.Response]:
             "success",
         )
         return redirect(url_for(".edit_invite", id_=invite.id_))
-    return await render_template("admin_create_invite.html",
-                                 invite_form=form)
+    return await render_template("admin_create_invite.html", invite_form=form)
 
 
 @bp.route("/invitation/<id_>", methods=["GET", "POST"])
@@ -417,10 +394,7 @@ async def edit_invite(id_: str) -> typing.Union[str, werkzeug.Response]:
             )
             return redirect(url_for(".invitations"))
     circles = await client.list_groups()
-    circle_map = {
-        circle.id_: circle
-        for circle in circles
-    }
+    circle_map = {circle.id_: circle for circle in circles}
 
     form = InviteForm()
     if form.validate_on_submit():
@@ -448,18 +422,13 @@ class CirclePost(BaseForm):
         validators=[wtforms.validators.InputRequired()],
     )
 
-    action_create = wtforms.SubmitField(
-        _l("Create circle")
-    )
+    action_create = wtforms.SubmitField(_l("Create circle"))
 
 
 @bp.route("/circles")
 @client.require_admin_session()
 async def circles() -> str:
-    circles = sorted(
-        await client.list_groups(),
-        key=lambda x: x.name
-    )
+    circles = sorted(await client.list_groups(), key=lambda x: x.name)
     invite_form = InvitePost()
     create_form = CirclePost()
     return await render_template(
@@ -501,15 +470,11 @@ class EditCircleForm(BaseForm):
         validate_choice=False,
     )
 
-    action_save = wtforms.SubmitField(
-        _l("Update circle")
-    )
+    action_save = wtforms.SubmitField(_l("Update circle"))
 
     action_remove_user = wtforms.StringField()
 
-    action_add_user = wtforms.SubmitField(
-        _l("Add user")
-    )
+    action_add_user = wtforms.SubmitField(_l("Add user"))
 
     action_remove_group_chat = wtforms.StringField()
 
@@ -532,13 +497,9 @@ async def edit_circle(id_: str) -> typing.Union[str, werkzeug.Response]:
                 return redirect(url_for(".circles"))
             raise
 
-        users = {
-            user.localpart: user
-            for user in await client.list_users()
-        }
+        users = {user.localpart: user for user in await client.list_users()}
         circle_members = [
-            (localpart, users.get(localpart))
-            for localpart in sorted(circle.members)
+            (localpart, users.get(localpart)) for localpart in sorted(circle.members)
         ]
 
     form = EditCircleForm()
@@ -608,9 +569,7 @@ async def edit_circle(id_: str) -> typing.Union[str, werkzeug.Response]:
 
 
 class DeleteCircleForm(BaseForm):
-    action_delete = wtforms.SubmitField(
-        _l("Delete circle permanently")
-    )
+    action_delete = wtforms.SubmitField(_l("Delete circle permanently"))
 
 
 @bp.route("/circle/<id_>/delete", methods=["GET", "POST"])
@@ -654,16 +613,12 @@ class AddCircleChatForm(BaseForm):
         validators=[wtforms.validators.InputRequired()],
     )
 
-    action_save = wtforms.SubmitField(
-        _l("Create group chat")
-    )
+    action_save = wtforms.SubmitField(_l("Create group chat"))
 
 
 @bp.route("/circle/<id_>/add_chat", methods=["GET", "POST"])
 @client.require_admin_session()
-async def edit_circle_add_chat(
-    id_: str
-) -> typing.Union[str, werkzeug.Response]:
+async def edit_circle_add_chat(id_: str) -> typing.Union[str, werkzeug.Response]:
     async with client.authenticated_session() as session:
         try:
             circle = await client.get_group_by_id(
@@ -702,9 +657,9 @@ _CPU_EPOCH = time.process_time()
 _MONOTONIC_EPOCH = time.monotonic()
 
 
-def get_system_stats() -> typing.MutableMapping[
-        str,
-        typing.Optional[typing.Union[int, float]]]:
+def get_system_stats() -> (
+    typing.MutableMapping[str, typing.Optional[typing.Union[int, float]]]
+):
     pagesize = resource.getpagesize()
     my_rss: typing.Optional[int] = None
     try:
@@ -714,10 +669,7 @@ def get_system_stats() -> typing.MutableMapping[
     except (ValueError, IndexError, TypeError, OSError):
         pass
 
-    my_cpu = (
-        (time.process_time() - _CPU_EPOCH) /
-        (time.monotonic() - _MONOTONIC_EPOCH)
-    )
+    my_cpu = (time.process_time() - _CPU_EPOCH) / (time.monotonic() - _MONOTONIC_EPOCH)
 
     mem_total, mem_available = None, None
     load5: typing.Optional[float] = None
@@ -813,8 +765,9 @@ async def system() -> typing.Union[str, werkzeug.Response]:
         except KeyError:
             pass
         else:
-            metrics["prosody_cpu"] = (prosody_cpu_metrics["value"] /
-                                      (now - prosody_cpu_metrics["since"]))
+            metrics["prosody_cpu"] = prosody_cpu_metrics["value"] / (
+                now - prosody_cpu_metrics["since"]
+            )
 
         try:
             metrics["prosody_rss"] = prosody_metrics["memory"]

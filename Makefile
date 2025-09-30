@@ -5,10 +5,15 @@ generated_css_files = $(patsubst snikket_web/scss/%.scss,snikket_web/static/css/
 translation_basepath = snikket_web/translations
 pot_file = $(translation_basepath)/messages.pot
 
-black_formatted_py = snikket_web/prosodyclient.py
+black_formatted_py = snikket_web/admin.py snikket_web/prosodyclient.py
 
 PYTHON3 ?= python3
 SCSSC ?= sassc --load-path snikket_web/scss/
+
+# According to the GNU make manual, this is how you do it...
+comma:= ,
+empty:=
+space:= $(empty) $(empty)
 
 all: build_css compile_translations
 
