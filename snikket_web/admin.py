@@ -28,8 +28,42 @@ from flask_babel import lazy_gettext as _l, _
 
 from . import prosodyclient, _version
 from .infra import client, circle_name, BaseForm
+from .prosodyclient import APIError
 
 bp = Blueprint("admin", __name__, url_prefix="/admin")
+
+err_messages = {
+    "https://prosody.im/protocol/errors": {
+        "cannot-remove-only-admin": _l("Cannot remove the only administrator."),
+        "user-not-found": _l("User account not found"),
+        "group-not-found": _l("Circle not found"),
+        "group-name-required": _l("Circle name required"),
+    },
+    "": {
+        "feature-not-implemented": _l("Feature not implemented"),
+        "service-unavailable": _l("Unable to perform the requested action"),
+        "internal-server-error": _l("Internal server error"),
+        "conflict": _l("Already exists"),
+    },
+}
+
+
+def get_api_error_message(api_error):
+    extra = api_error.extra
+
+    # If an application-specific namespace/condition is available,
+    # return the appropriate message if we have one
+    if extra is not None:
+        namespace = extra.get("namespace")
+        condition = extra.get("condition")
+        if namespace is not None and condition is not None:
+            namespace_messages = err_messages.get(namespace)
+            if namespace_messages is not None:
+                message = namespace_messages.get(condition)
+                if message is not None:
+                    return message
+
+    return api_error.text
 
 
 @bp.route("/")
@@ -105,15 +139,19 @@ async def edit_user(localpart: str) -> typing.Union[werkzeug.Response, str]:
     form = EditUserForm()
     if form.validate_on_submit():
         if form.action_create_reset.data:
-            target_user_info = await client.get_user_by_localpart(localpart)
-            reset_link = await client.create_password_reset_invite(
-                localpart=localpart,
-                ttl=86400,
-            )
-            await flash(
-                _("Password reset link created"),
-                "success",
-            )
+            try:
+                target_user_info = await client.get_user_by_localpart(localpart)
+                reset_link = await client.create_password_reset_invite(
+                    localpart=localpart,
+                    ttl=86400,
+                )
+            except APIError as e:
+                await flash(get_api_error_message(e), "alert")
+            else:
+                await flash(
+                    _("Password reset link created"),
+                    "success",
+                )
             return redirect(
                 url_for(
                     ".user_password_reset_link",
@@ -121,8 +159,8 @@ async def edit_user(localpart: str) -> typing.Union[werkzeug.Response, str]:
                 )
             )
         elif form.action_restore.data or form.action_enable.data:
-            await client.enable_user_account(localpart)
             try:
+                await client.enable_user_account(localpart)
                 if form.action_restore.data:
                     await flash(
                         _("User account restored"),
@@ -134,29 +172,27 @@ async def edit_user(localpart: str) -> typing.Union[werkzeug.Response, str]:
                         "success",
                     )
                 return redirect(url_for(".users"))
-            except aiohttp.ClientResponseError:
+            except APIError as e:
                 if form.action_restore.data:
-                    await flash(
-                        _("Could not restore user account"),
-                        "alert",
-                    )
+                    msg = _l("Could not restore user account: %(reason)s")
                 else:
-                    await flash(
-                        _("Could not unlock user account"),
-                        "alert",
-                    )
+                    msg = _l("Could not unlock user account: %(reason)s")
+                await flash(msg % {"reason": get_api_error_message(e) }, "alert")
                 return redirect(url_for(".edit_user", localpart=localpart))
 
-        await client.update_user(
-            localpart,
-            display_name=form.display_name.data,
-            role=form.role.data,
-        )
-
-        await flash(
-            _("User information updated."),
-            "success",
-        )
+        try:
+            await client.update_user(
+                localpart,
+                display_name=form.display_name.data,
+                role=form.role.data,
+            )
+        except APIError as e:
+            await flash(get_api_error_message(e), "alert")
+        else:
+            await flash(
+                _("User information updated."),
+                "success",
+            )
         return redirect(url_for(".users"))
 
     elif request.method == "GET":
@@ -181,7 +217,12 @@ class DeleteUserForm(BaseForm):
 @bp.route("/user/<localpart>/delete", methods=["GET", "POST"])
 @client.require_admin_session()
 async def delete_user(localpart: str) -> typing.Union[str, werkzeug.Response]:
-    target_user_info = await client.get_user_by_localpart(localpart)
+    try:
+        target_user_info = await client.get_user_by_localpart(localpart)
+    except APIError as e:
+        await flash(get_api_error_message(e), "alert")
+        return redirect(url_for(".users"))
+
     form = DeleteUserForm()
     if form.validate_on_submit():
         if form.action_delete.data:
