@@ -15,6 +15,8 @@ from quart import (
 )
 import werkzeug.exceptions
 
+import aiohttp.client_exceptions
+
 import wtforms
 
 from flask_babel import lazy_gettext as _l, _
@@ -99,8 +101,11 @@ async def index() -> str:
     user_info = await client.get_user_info()
     try:
         metrics = await client.get_system_metrics()
-    except (werkzeug.exceptions.Unauthorized, werkzeug.exceptions.Forbidden):
-        metrics = {}
+    except aiohttp.client_exceptions.ClientResponseError as e:
+        if e.code == 403 or e.code == 401:
+            metrics = {}
+        else:
+            raise
     return await render_template(
         "user_home.html",
         user_info=user_info,

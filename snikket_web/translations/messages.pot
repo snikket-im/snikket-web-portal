@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-04-12 20:21+0200\n"
+"POT-Creation-Date: 2025-10-03 12:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,204 +17,238 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: snikket_web/admin.py:69 snikket_web/templates/admin_delete_user.html:10
+#: snikket_web/admin.py:37
+msgid "Cannot remove the only administrator."
+msgstr ""
+
+#: snikket_web/admin.py:38
+msgid "User account not found"
+msgstr ""
+
+#: snikket_web/admin.py:39
+msgid "Circle not found"
+msgstr ""
+
+#: snikket_web/admin.py:40
+msgid "Circle name required"
+msgstr ""
+
+#: snikket_web/admin.py:43
+msgid "Feature not implemented"
+msgstr ""
+
+#: snikket_web/admin.py:44
+msgid "Unable to perform the requested action"
+msgstr ""
+
+#: snikket_web/admin.py:45
+msgid "Internal server error"
+msgstr ""
+
+#: snikket_web/admin.py:46
+msgid "Already exists"
+msgstr ""
+
+#: snikket_web/admin.py:100 snikket_web/templates/admin_delete_user.html:10
 #: snikket_web/templates/admin_edit_circle.html:73
 msgid "Login name"
 msgstr ""
 
-#: snikket_web/admin.py:73 snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/user.py:69
+#: snikket_web/admin.py:104 snikket_web/templates/admin_delete_user.html:12
+#: snikket_web/user.py:71
 msgid "Display name"
 msgstr ""
 
-#: snikket_web/admin.py:77 snikket_web/admin.py:295
+#: snikket_web/admin.py:108 snikket_web/admin.py:333
 #: snikket_web/templates/admin_edit_user.html:37
 msgid "Access Level"
 msgstr ""
 
-#: snikket_web/admin.py:79 snikket_web/admin.py:297
+#: snikket_web/admin.py:110 snikket_web/admin.py:335
 msgid "Limited"
 msgstr ""
 
-#: snikket_web/admin.py:80 snikket_web/admin.py:298
+#: snikket_web/admin.py:111 snikket_web/admin.py:336
 msgid "Normal user"
 msgstr ""
 
-#: snikket_web/admin.py:81 snikket_web/admin.py:299
+#: snikket_web/admin.py:112 snikket_web/admin.py:337
 msgid "Administrator"
 msgstr ""
 
-#: snikket_web/admin.py:87
+#: snikket_web/admin.py:118
 msgid "Update user"
 msgstr ""
 
-#: snikket_web/admin.py:91
+#: snikket_web/admin.py:122
 msgid "Restore account"
 msgstr ""
 
-#: snikket_web/admin.py:95
+#: snikket_web/admin.py:126
 msgid "Unlock account"
 msgstr ""
 
-#: snikket_web/admin.py:99
+#: snikket_web/admin.py:130
 msgid "Create password reset link"
 msgstr ""
 
-#: snikket_web/admin.py:117
+#: snikket_web/admin.py:152
 msgid "Password reset link created"
 msgstr ""
 
-#: snikket_web/admin.py:129
+#: snikket_web/admin.py:166
 msgid "User account restored"
 msgstr ""
 
-#: snikket_web/admin.py:134
+#: snikket_web/admin.py:171
 msgid "User account unlocked"
 msgstr ""
 
-#: snikket_web/admin.py:141
-msgid "Could not restore user account"
+#: snikket_web/admin.py:177
+#, python-format
+msgid "Could not restore user account: %(reason)s"
 msgstr ""
 
-#: snikket_web/admin.py:146
-msgid "Could not unlock user account"
-msgstr ""
-
-#: snikket_web/admin.py:158
-msgid "User information updated."
-msgstr ""
-
-#: snikket_web/admin.py:180
-msgid "Delete user permanently"
+#: snikket_web/admin.py:179
+#, python-format
+msgid "Could not unlock user account: %(reason)s"
 msgstr ""
 
 #: snikket_web/admin.py:193
-msgid "User deleted"
+msgid "User information updated."
+msgstr ""
+
+#: snikket_web/admin.py:214
+msgid "Delete user permanently"
 msgstr ""
 
 #: snikket_web/admin.py:231
-msgid "Password reset link not found"
-msgstr ""
-
-#: snikket_web/admin.py:243
-msgid "Password reset link deleted"
-msgstr ""
-
-#: snikket_web/admin.py:263
-msgid "Invite to circle"
+msgid "User deleted"
 msgstr ""
 
 #: snikket_web/admin.py:269
+msgid "Password reset link not found"
+msgstr ""
+
+#: snikket_web/admin.py:281
+msgid "Password reset link deleted"
+msgstr ""
+
+#: snikket_web/admin.py:301
+msgid "Invite to circle"
+msgstr ""
+
+#: snikket_web/admin.py:307
 msgid "At least one circle must be selected"
 msgstr ""
 
-#: snikket_web/admin.py:274
+#: snikket_web/admin.py:312
 msgid "Valid for"
 msgstr ""
 
-#: snikket_web/admin.py:276
+#: snikket_web/admin.py:314
 msgid "One hour"
 msgstr ""
 
-#: snikket_web/admin.py:277
+#: snikket_web/admin.py:315
 msgid "Twelve hours"
 msgstr ""
 
-#: snikket_web/admin.py:278
+#: snikket_web/admin.py:316
 msgid "One day"
 msgstr ""
 
-#: snikket_web/admin.py:279
+#: snikket_web/admin.py:317
 msgid "One week"
 msgstr ""
 
-#: snikket_web/admin.py:280
+#: snikket_web/admin.py:318
 msgid "Four weeks"
 msgstr ""
 
-#: snikket_web/admin.py:286 snikket_web/templates/admin_edit_invite.html:17
+#: snikket_web/admin.py:324 snikket_web/templates/admin_edit_invite.html:17
 msgid "Invitation type"
 msgstr ""
 
-#: snikket_web/admin.py:288 snikket_web/templates/library.j2:158
+#: snikket_web/admin.py:326 snikket_web/templates/library.j2:158
 msgid "Individual"
 msgstr ""
 
-#: snikket_web/admin.py:289 snikket_web/templates/library.j2:160
+#: snikket_web/admin.py:327 snikket_web/templates/library.j2:160
 msgid "Group"
 msgstr ""
 
-#: snikket_web/admin.py:305
+#: snikket_web/admin.py:343
 msgid "Comment (optional)"
 msgstr ""
 
-#: snikket_web/admin.py:309
+#: snikket_web/admin.py:346
 msgid "New invitation link"
 msgstr ""
 
-#: snikket_web/admin.py:371
+#: snikket_web/admin.py:393
 msgid "Revoke"
 msgstr ""
 
-#: snikket_web/admin.py:399
+#: snikket_web/admin.py:418
 msgid "Invitation created"
 msgstr ""
 
-#: snikket_web/admin.py:415
+#: snikket_web/admin.py:433
 msgid "No such invitation exists"
 msgstr ""
 
-#: snikket_web/admin.py:430
+#: snikket_web/admin.py:445
 msgid "Invitation revoked"
 msgstr ""
 
-#: snikket_web/admin.py:447 snikket_web/admin.py:495
+#: snikket_web/admin.py:462 snikket_web/admin.py:505
 #: snikket_web/templates/admin_delete_circle.html:10
 #: snikket_web/templates/admin_edit_circle.html:44
 msgid "Name"
 msgstr ""
 
-#: snikket_web/admin.py:452 snikket_web/templates/admin_circles.html:47
+#: snikket_web/admin.py:466 snikket_web/templates/admin_circles.html:47
 msgid "Create circle"
 msgstr ""
 
-#: snikket_web/admin.py:482
+#: snikket_web/admin.py:492
 msgid "Circle created"
 msgstr ""
 
-#: snikket_web/admin.py:500
+#: snikket_web/admin.py:510
 msgid "Select user"
 msgstr ""
 
-#: snikket_web/admin.py:505
+#: snikket_web/admin.py:514
 msgid "Update circle"
 msgstr ""
 
-#: snikket_web/admin.py:511
+#: snikket_web/admin.py:518
 msgid "Add user"
 msgstr ""
 
-#: snikket_web/admin.py:529 snikket_web/admin.py:628 snikket_web/admin.py:676
+#: snikket_web/admin.py:535 snikket_web/admin.py:628 snikket_web/admin.py:672
 msgid "No such circle exists"
 msgstr ""
 
-#: snikket_web/admin.py:566
+#: snikket_web/admin.py:568
 msgid "Circle data updated"
 msgstr ""
 
-#: snikket_web/admin.py:576
+#: snikket_web/admin.py:578
 msgid "User added to circle"
 msgstr ""
 
-#: snikket_web/admin.py:585
+#: snikket_web/admin.py:587
 msgid "User removed from circle"
 msgstr ""
 
-#: snikket_web/admin.py:594
+#: snikket_web/admin.py:596
 msgid "Chat removed from circle"
 msgstr ""
 
-#: snikket_web/admin.py:612
+#: snikket_web/admin.py:613
 msgid "Delete circle permanently"
 msgstr ""
 
@@ -226,31 +260,31 @@ msgstr ""
 msgid "Group chat name"
 msgstr ""
 
-#: snikket_web/admin.py:658
+#: snikket_web/admin.py:657
 msgid "Create group chat"
 msgstr ""
 
-#: snikket_web/admin.py:688
+#: snikket_web/admin.py:684
 msgid "New group chat added to circle"
 msgstr ""
 
-#: snikket_web/admin.py:755
+#: snikket_web/admin.py:748
 msgid "Message contents"
 msgstr ""
 
-#: snikket_web/admin.py:761
+#: snikket_web/admin.py:754
 msgid "Only send to online users"
 msgstr ""
 
-#: snikket_web/admin.py:765
+#: snikket_web/admin.py:758
 msgid "Post to all users"
 msgstr ""
 
-#: snikket_web/admin.py:769
+#: snikket_web/admin.py:762
 msgid "Send preview to yourself"
 msgstr ""
 
-#: snikket_web/admin.py:791
+#: snikket_web/admin.py:784
 msgid "Announcement sent!"
 msgstr ""
 
@@ -334,7 +368,7 @@ msgid ""
 msgstr ""
 
 #: snikket_web/invite.py:309 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:192
+#: snikket_web/user.py:197
 msgid "Error"
 msgstr ""
 
@@ -354,81 +388,81 @@ msgstr ""
 msgid "Login successful!"
 msgstr ""
 
-#: snikket_web/user.py:29
+#: snikket_web/user.py:31
 msgid "Current password"
 msgstr ""
 
-#: snikket_web/user.py:34
+#: snikket_web/user.py:36
 msgid "New password"
 msgstr ""
 
-#: snikket_web/user.py:42
+#: snikket_web/user.py:44
 msgid "Confirm new password"
 msgstr ""
 
-#: snikket_web/user.py:47
+#: snikket_web/user.py:49
 msgid "The new passwords must match."
 msgstr ""
 
-#: snikket_web/user.py:56
+#: snikket_web/user.py:58
 msgid "Sign out"
 msgstr ""
 
-#: snikket_web/user.py:61
+#: snikket_web/user.py:63
 msgid "Nobody"
 msgstr ""
 
-#: snikket_web/user.py:62
+#: snikket_web/user.py:64
 msgid "Friends only"
 msgstr ""
 
-#: snikket_web/user.py:63
+#: snikket_web/user.py:65
 msgid "Everyone"
 msgstr ""
 
-#: snikket_web/user.py:73
+#: snikket_web/user.py:75
 msgid "Avatar"
 msgstr ""
 
-#: snikket_web/user.py:77
+#: snikket_web/user.py:79
 msgid "Profile visibility"
 msgstr ""
 
-#: snikket_web/user.py:82
+#: snikket_web/user.py:84
 msgid "Update profile"
 msgstr ""
 
-#: snikket_web/user.py:88
+#: snikket_web/user.py:90
 msgid "Account data"
 msgstr ""
 
-#: snikket_web/user.py:92
+#: snikket_web/user.py:94
 msgid "Upload"
 msgstr ""
 
-#: snikket_web/user.py:125
+#: snikket_web/user.py:130
 msgid "Incorrect password."
 msgstr ""
 
-#: snikket_web/user.py:129
+#: snikket_web/user.py:134
 msgid "Password changed"
 msgstr ""
 
-#: snikket_web/user.py:138
+#: snikket_web/user.py:143
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please"
 " use the app."
 msgstr ""
 
-#: snikket_web/user.py:184
+#: snikket_web/user.py:189
 msgid "Profile updated"
 msgstr ""
 
-#: snikket_web/user.py:198
+#: snikket_web/user.py:203
 msgid "Export"
 msgstr ""
 
-#: snikket_web/user.py:216
+#: snikket_web/user.py:221
 msgid "You currently have no account data to export."
 msgstr ""
 

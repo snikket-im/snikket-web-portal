@@ -48,7 +48,7 @@ err_messages = {
 }
 
 
-def get_api_error_message(api_error):
+def get_api_error_message(api_error: APIError) -> str:
     extra = api_error.extra
 
     # If an application-specific namespace/condition is available,
@@ -63,7 +63,7 @@ def get_api_error_message(api_error):
                 if message is not None:
                     return message
 
-    return api_error.text
+    return api_error.text or err_messages[""]["internal-server-error"]
 
 
 @bp.route("/")
@@ -177,7 +177,7 @@ async def edit_user(localpart: str) -> typing.Union[werkzeug.Response, str]:
                     msg = _l("Could not restore user account: %(reason)s")
                 else:
                     msg = _l("Could not unlock user account: %(reason)s")
-                await flash(msg % {"reason": get_api_error_message(e) }, "alert")
+                await flash(msg % {"reason": get_api_error_message(e)}, "alert")
                 return redirect(url_for(".edit_user", localpart=localpart))
 
         try:
