@@ -55,7 +55,7 @@ msgid "Login name"
 msgstr ""
 
 #: snikket_web/admin.py:104 snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/user.py:69
+#: snikket_web/user.py:71
 msgid "Display name"
 msgstr ""
 
@@ -368,7 +368,7 @@ msgid ""
 msgstr ""
 
 #: snikket_web/invite.py:309 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:192
+#: snikket_web/user.py:197
 msgid "Error"
 msgstr ""
 
@@ -388,81 +388,81 @@ msgstr ""
 msgid "Login successful!"
 msgstr ""
 
-#: snikket_web/user.py:29
+#: snikket_web/user.py:31
 msgid "Current password"
 msgstr ""
 
-#: snikket_web/user.py:34
+#: snikket_web/user.py:36
 msgid "New password"
 msgstr ""
 
-#: snikket_web/user.py:42
+#: snikket_web/user.py:44
 msgid "Confirm new password"
 msgstr ""
 
-#: snikket_web/user.py:47
+#: snikket_web/user.py:49
 msgid "The new passwords must match."
 msgstr ""
 
-#: snikket_web/user.py:56
+#: snikket_web/user.py:58
 msgid "Sign out"
 msgstr ""
 
-#: snikket_web/user.py:61
+#: snikket_web/user.py:63
 msgid "Nobody"
 msgstr ""
 
-#: snikket_web/user.py:62
+#: snikket_web/user.py:64
 msgid "Friends only"
 msgstr ""
 
-#: snikket_web/user.py:63
+#: snikket_web/user.py:65
 msgid "Everyone"
 msgstr ""
 
-#: snikket_web/user.py:73
+#: snikket_web/user.py:75
 msgid "Avatar"
 msgstr ""
 
-#: snikket_web/user.py:77
+#: snikket_web/user.py:79
 msgid "Profile visibility"
 msgstr ""
 
-#: snikket_web/user.py:82
+#: snikket_web/user.py:84
 msgid "Update profile"
 msgstr ""
 
-#: snikket_web/user.py:88
+#: snikket_web/user.py:90
 msgid "Account data"
 msgstr ""
 
-#: snikket_web/user.py:92
+#: snikket_web/user.py:94
 msgid "Upload"
 msgstr ""
 
-#: snikket_web/user.py:125
+#: snikket_web/user.py:130
 msgid "Incorrect password."
 msgstr ""
 
-#: snikket_web/user.py:129
+#: snikket_web/user.py:134
 msgid "Password changed"
 msgstr ""
 
-#: snikket_web/user.py:138
+#: snikket_web/user.py:143
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please"
 " use the app."
 msgstr ""
 
-#: snikket_web/user.py:184
+#: snikket_web/user.py:189
 msgid "Profile updated"
 msgstr ""
 
-#: snikket_web/user.py:198
+#: snikket_web/user.py:203
 msgid "Export"
 msgstr ""
 
-#: snikket_web/user.py:216
+#: snikket_web/user.py:221
 msgid "You currently have no account data to export."
 msgstr ""
 
