@@ -115,6 +115,8 @@ async def view(id_: str) -> typing.Union[quart.Response,
         body,
         headers={
             "Link": "<{}>; rel=\"alternate\"".format(invite.xmpp_uri),
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Expose-Headers": "Link",
         }
     )
 
