@@ -221,7 +221,7 @@ def create_app() -> quart.Quart:
     )
     app.register_error_handler(
         werkzeug.exceptions.HTTPException,
-        generic_http_error,  # type:ignore
+        generic_http_error,
     )
     app.register_error_handler(
         Exception,
