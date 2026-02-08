@@ -42,7 +42,7 @@ compile_translations:
 
 
 .PHONY: lint
-lint: format flake8
+lint: format flake8 mypy
 
 .PHONY: format
 format:
