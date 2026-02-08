@@ -4,7 +4,8 @@ import urllib.parse
 
 import aiohttp
 
-import quart_flask_patch
+import quart_flask_patch  # noqa:F401
+import quart
 from quart import (
     Blueprint,
     current_app,

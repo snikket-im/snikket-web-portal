@@ -7,8 +7,7 @@ import typing
 
 import aiohttp
 
-import quart_flask_patch
-
+import quart_flask_patch  # noqa:F401
 import quart
 from quart import (
     url_for,

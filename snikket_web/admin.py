@@ -9,10 +9,10 @@ import aiohttp
 
 import werkzeug.exceptions
 
-import quart_flask_patch
-
 import wtforms
 
+import quart_flask_patch  # noqa:F401
+import quart
 from quart import (
     Blueprint,
     render_template,

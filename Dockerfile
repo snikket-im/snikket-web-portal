@@ -37,7 +37,7 @@ RUN set -eu; \
       python3-aiohttp python3-email-validator python3-flask-babel \
       python3-flaskext.wtf python3-hsluv python3-hypercorn \
       python3-quart python3-typing-extensions python3-wtforms ; \
-      pip3 install --break-system-packages environ-config ; \
+      pip3 install --break-system-packages environ-config quart_flask_patch; \
     apt-get remove -y --purge python3-pip python3-setuptools; \
     apt-get clean ; rm -rf /var/lib/apt/lists; \
     rm -rf /root/.cache;
