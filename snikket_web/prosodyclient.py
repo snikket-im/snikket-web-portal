@@ -34,7 +34,6 @@ import werkzeug.exceptions
 from . import xmpputil, _version
 from .xmpputil import split_jid
 
-
 SCOPE_RESTRICTED = "prosody:restricted"
 SCOPE_DEFAULT = "prosody:registered"
 SCOPE_ADMIN = "prosody:admin"

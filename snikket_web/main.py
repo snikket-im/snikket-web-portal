@@ -6,8 +6,8 @@ from datetime import datetime, timedelta
 
 import aiohttp
 
+import quart_flask_patch  # noqa:F401
 import quart
-import quart.flask_patch
 from quart import (
     current_app,
     redirect,

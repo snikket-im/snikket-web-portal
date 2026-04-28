@@ -42,7 +42,7 @@ compile_translations:
 
 
 .PHONY: lint
-lint: format flake8
+lint: format flake8 mypy
 
 .PHONY: format
 format:
@@ -55,6 +55,6 @@ flake8:
 
 .PHONY: mypy
 mypy:
-	$(PYTHON3) -m mypy --python-version 3.11 snikket_web
+	$(PYTHON3) -m mypy --python-version 3.13 snikket_web
 
 .PHONY: build_css clean update_translations compile_translations extract_translations force_update_translations

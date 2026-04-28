@@ -6,7 +6,8 @@ import typing
 
 from datetime import datetime, timedelta, timezone
 
-import quart.flask_patch  # noqa:F401
+import quart_flask_patch  # noqa:F401
+import quart
 from quart import (
     current_app,
     request,
@@ -36,7 +37,7 @@ BYTE_UNIT_SCALE_MAP = [
 ]
 
 
-@babel.localeselector  # type:ignore
+# TODO replacement for @babel.localeselector  # type:ignore
 def selected_locale() -> str:
     g.language_header_accessed = True
     selected = request.accept_languages.best_match(

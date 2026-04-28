@@ -1,21 +1,21 @@
 # Translations template for PROJECT.
-# Copyright (C) 2025 ORGANIZATION
+# Copyright (C) 2026 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-10-03 12:50+0200\n"
+"POT-Creation-Date: 2026-02-08 13:12+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.17.0\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: snikket_web/admin.py:37
 msgid "Cannot remove the only administrator."
@@ -55,7 +55,7 @@ msgid "Login name"
 msgstr ""
 
 #: snikket_web/admin.py:104 snikket_web/templates/admin_delete_user.html:12
-#: snikket_web/user.py:71
+#: snikket_web/user.py:72
 msgid "Display name"
 msgstr ""
 
@@ -288,87 +288,87 @@ msgstr ""
 msgid "Announcement sent!"
 msgstr ""
 
-#: snikket_web/infra.py:56
+#: snikket_web/infra.py:57
 msgid "Main"
 msgstr ""
 
-#: snikket_web/infra.py:78
+#: snikket_web/infra.py:79
 msgid "Never"
 msgstr ""
 
-#: snikket_web/infra.py:95
+#: snikket_web/infra.py:96
 msgid "Today"
 msgstr ""
 
-#: snikket_web/infra.py:101
+#: snikket_web/infra.py:102
 msgid "Yesterday"
 msgstr ""
 
-#: snikket_web/infra.py:104
+#: snikket_web/infra.py:105
 #, python-format
 msgid "%(time)s ago"
 msgstr ""
 
-#: snikket_web/invite.py:35
+#: snikket_web/invite.py:36
 msgid ""
 "The account data you tried to import is too large to upload. Please "
 "contact your Snikket operator."
 msgstr ""
 
-#: snikket_web/invite.py:124
+#: snikket_web/invite.py:125
 msgid "Username"
 msgstr ""
 
-#: snikket_web/invite.py:128 snikket_web/invite.py:200 snikket_web/main.py:43
+#: snikket_web/invite.py:129 snikket_web/invite.py:201 snikket_web/main.py:43
 msgid "Password"
 msgstr ""
 
-#: snikket_web/invite.py:136 snikket_web/invite.py:208
+#: snikket_web/invite.py:137 snikket_web/invite.py:209
 msgid "Confirm password"
 msgstr ""
 
-#: snikket_web/invite.py:140 snikket_web/invite.py:212
+#: snikket_web/invite.py:141 snikket_web/invite.py:213
 msgid "The passwords must match."
 msgstr ""
 
-#: snikket_web/invite.py:145
+#: snikket_web/invite.py:146
 msgid "Create account"
 msgstr ""
 
-#: snikket_web/invite.py:172
+#: snikket_web/invite.py:173
 msgid "That username is already taken."
 msgstr ""
 
-#: snikket_web/invite.py:176 snikket_web/invite.py:245
+#: snikket_web/invite.py:177 snikket_web/invite.py:246
 msgid "Registration was declined for unknown reasons."
 msgstr ""
 
-#: snikket_web/invite.py:180
+#: snikket_web/invite.py:181
 msgid "The username is not valid."
 msgstr ""
 
-#: snikket_web/invite.py:217 snikket_web/templates/user_home.html:37
+#: snikket_web/invite.py:218 snikket_web/templates/user_home.html:37
 #: snikket_web/templates/user_passwd.html:29
 msgid "Change password"
 msgstr ""
 
-#: snikket_web/invite.py:264
+#: snikket_web/invite.py:265
 msgid "Account data file"
 msgstr ""
 
-#: snikket_web/invite.py:268
+#: snikket_web/invite.py:269
 msgid "Import data"
 msgstr ""
 
-#: snikket_web/invite.py:289
+#: snikket_web/invite.py:290
 #, python-format
 msgid ""
 "The account data you tried to import is in an unknown format. Please "
 "upload an XML file in XEP-0227 format (provided format: %(mimetype)s)."
 msgstr ""
 
-#: snikket_web/invite.py:309 snikket_web/templates/unauth.html:18
-#: snikket_web/user.py:197
+#: snikket_web/invite.py:310 snikket_web/templates/unauth.html:18
+#: snikket_web/user.py:198
 msgid "Error"
 msgstr ""
 
@@ -388,81 +388,81 @@ msgstr ""
 msgid "Login successful!"
 msgstr ""
 
-#: snikket_web/user.py:31
+#: snikket_web/user.py:32
 msgid "Current password"
 msgstr ""
 
-#: snikket_web/user.py:36
+#: snikket_web/user.py:37
 msgid "New password"
 msgstr ""
 
-#: snikket_web/user.py:44
+#: snikket_web/user.py:45
 msgid "Confirm new password"
 msgstr ""
 
-#: snikket_web/user.py:49
+#: snikket_web/user.py:50
 msgid "The new passwords must match."
 msgstr ""
 
-#: snikket_web/user.py:58
+#: snikket_web/user.py:59
 msgid "Sign out"
 msgstr ""
 
-#: snikket_web/user.py:63
+#: snikket_web/user.py:64
 msgid "Nobody"
 msgstr ""
 
-#: snikket_web/user.py:64
+#: snikket_web/user.py:65
 msgid "Friends only"
 msgstr ""
 
-#: snikket_web/user.py:65
+#: snikket_web/user.py:66
 msgid "Everyone"
 msgstr ""
 
-#: snikket_web/user.py:75
+#: snikket_web/user.py:76
 msgid "Avatar"
 msgstr ""
 
-#: snikket_web/user.py:79
+#: snikket_web/user.py:80
 msgid "Profile visibility"
 msgstr ""
 
-#: snikket_web/user.py:84
+#: snikket_web/user.py:85
 msgid "Update profile"
 msgstr ""
 
-#: snikket_web/user.py:90
+#: snikket_web/user.py:91
 msgid "Account data"
 msgstr ""
 
-#: snikket_web/user.py:94
+#: snikket_web/user.py:95
 msgid "Upload"
 msgstr ""
 
-#: snikket_web/user.py:130
+#: snikket_web/user.py:131
 msgid "Incorrect password."
 msgstr ""
 
-#: snikket_web/user.py:134
+#: snikket_web/user.py:135
 msgid "Password changed"
 msgstr ""
 
-#: snikket_web/user.py:143
+#: snikket_web/user.py:144
 msgid ""
 "The chosen avatar is too big. To be able to upload larger avatars, please"
 " use the app."
 msgstr ""
 
-#: snikket_web/user.py:189
+#: snikket_web/user.py:190
 msgid "Profile updated"
 msgstr ""
 
-#: snikket_web/user.py:203
+#: snikket_web/user.py:204
 msgid "Export"
 msgstr ""
 
-#: snikket_web/user.py:221
+#: snikket_web/user.py:222
 msgid "You currently have no account data to export."
 msgstr ""
 
