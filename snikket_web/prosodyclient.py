@@ -551,6 +551,21 @@ class ProsodyClient:
         http_session[self.SESSION_ADDRESS] = jid
         return True
 
+    async def login_with_token(
+        self, jid: str, token: str, scopes: typing.Collection[str]
+    ) -> bool:
+        self._store_token_in_session(TokenInfo(token=token, scopes=scopes))
+        http_session[self.SESSION_ADDRESS] = jid
+        if await self.test_session():
+            return True
+        self.clear_session()
+        return False
+
+    def clear_session(self) -> None:
+        http_session.pop(self.SESSION_TOKEN, None)
+        http_session.pop(self.SESSION_ADDRESS, None)
+        http_session.pop(self.SESSION_CACHED_SCOPE, None)
+
     @property
     def session_token(self) -> str:
         try:
@@ -1423,9 +1438,7 @@ class ProsodyClient:
                 await self.revoke_token(session=session)
         except aiohttp.ClientError:
             self.logger.warn("failed to revoke token!", exc_info=True)
-        http_session.pop(self.SESSION_TOKEN, None)
-        http_session.pop(self.SESSION_ADDRESS, None)
-        http_session.pop(self.SESSION_CACHED_SCOPE, None)
+        self.clear_session()
 
     @property
     def is_admin_session(self) -> bool:
