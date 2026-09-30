@@ -2,7 +2,8 @@ import asyncio
 import typing
 import urllib
 
-import quart.flask_patch
+import quart_flask_patch  # noqa:F401
+import quart
 from quart import (
     Blueprint,
     Response,
@@ -17,11 +18,12 @@ import werkzeug.exceptions
 
 import aiohttp.client_exceptions
 
+from flask_wtf.file import FileField
 import wtforms
 
 from flask_babel import lazy_gettext as _l, _
 
-from .infra import client, BaseForm
+from .infra import async_form, client, BaseForm
 
 bp = Blueprint('user', __name__)
 
@@ -71,7 +73,7 @@ class ProfileForm(BaseForm):
         _l("Display name"),
     )
 
-    avatar = wtforms.FileField(
+    avatar = FileField(
         _l("Avatar")
     )
 
@@ -86,7 +88,7 @@ class ProfileForm(BaseForm):
 
 
 class ImportAccountDataForm(BaseForm):
-    account_data_file = wtforms.FileField(
+    account_data_file = FileField(
         _l("Account data")
     )
 
@@ -150,7 +152,7 @@ EAVATARTOOBIG = _l(
 async def profile() -> typing.Union[str, werkzeug.Response]:
     max_avatar_size = current_app.config["MAX_AVATAR_SIZE"]
 
-    form = ProfileForm()
+    form = await async_form(ProfileForm)
     if request.method != "POST":
         user_info = await client.get_user_info()
         # TODO: find a better way to determine the access model, e.g. by
@@ -161,18 +163,18 @@ async def profile() -> typing.Union[str, werkzeug.Response]:
         form.profile_access_model.data = profile_access_model
 
     if form.validate_on_submit():
-        user_info = await client.get_user_info()
-
         ok = True
-        file_info = (await request.files).get(form.avatar.name)
+        file_info = form.avatar.data
         if file_info is not None:
             mimetype = file_info.mimetype
-            data = file_info.stream.read()
+            data = file_info.read()
             if len(data) > max_avatar_size:
                 form.avatar.errors.append(EAVATARTOOBIG)
                 ok = False
             elif len(data) > 0:
                 await client.set_user_avatar(data, mimetype)
+
+        user_info = await client.get_user_info()
 
         if ok:
             if user_info.get("nickname") != form.nickname.data:

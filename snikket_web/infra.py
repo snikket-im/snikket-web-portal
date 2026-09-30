@@ -6,12 +6,15 @@ import typing
 
 from datetime import datetime, timedelta, timezone
 
-import quart.flask_patch  # noqa:F401
+import quart_flask_patch  # noqa:F401
+import quart
 from quart import (
     current_app,
     request,
     g,
 )
+
+from werkzeug.datastructures import CombinedMultiDict
 
 import flask_babel
 import flask_wtf
@@ -36,7 +39,7 @@ BYTE_UNIT_SCALE_MAP = [
 ]
 
 
-@babel.localeselector  # type:ignore
+# TODO replacement for @babel.localeselector  # type:ignore
 def selected_locale() -> str:
     g.language_header_accessed = True
     selected = request.accept_languages.best_match(
@@ -146,3 +149,21 @@ class BaseForm(flask_wtf.FlaskForm):  # type:ignore
                 meta["locales"] = [str(locale)]
 
         super().__init__(*args, **kwargs)
+
+
+async def async_form(
+    form_class: type[flask_wtf.FlaskForm],
+    *args: typing.Any,
+    **kwargs: typing.Any,
+) -> flask_wtf.FlaskForm:
+    """
+    Adapt a synchronous form to work with quart's async requests. This is
+    typically only needed for files which include a file upload.
+    """
+    if "formdata" not in kwargs:
+        if request.method in {"POST", "PUT", "PATCH", "DELETE"}:
+            form_data = await request.form
+            files_data = await request.files
+            kwargs["formdata"] = CombinedMultiDict([form_data, files_data])
+
+    return form_class(*args, **kwargs)

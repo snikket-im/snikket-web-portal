@@ -4,7 +4,8 @@ import urllib.parse
 
 import aiohttp
 
-import quart.flask_patch
+import quart_flask_patch  # noqa:F401
+import quart
 from quart import (
     Blueprint,
     current_app,
@@ -17,11 +18,12 @@ from quart import (
 
 import werkzeug
 
+from flask_wtf.file import FileField
 import wtforms
 
 from flask_babel import lazy_gettext as _l, gettext
 
-from .infra import client, selected_locale, BaseForm
+from .infra import async_form, client, selected_locale, BaseForm
 
 
 bp = Blueprint("invite", __name__)
@@ -262,7 +264,7 @@ async def reset(id_: str) -> typing.Union[str, werkzeug.Response]:
 
 
 class DataImportForm(BaseForm):
-    account_data_file = wtforms.FileField(
+    account_data_file = FileField(
         _l("Account data file")
     )
 
@@ -274,7 +276,8 @@ class DataImportForm(BaseForm):
 @bp.route("/success", methods=["GET", "POST"])
 @client.require_session()
 async def success() -> str:
-    form = DataImportForm()
+    form = await async_form(DataImportForm)
+
     if form.validate_on_submit():
         ok = True
         file_info = (await request.files).get(form.account_data_file.name)
