@@ -288,7 +288,7 @@ def create_app() -> quart.Quart:
         if app.debug:
             logging.getLogger("snikket_web").setLevel(logging.DEBUG)
 
-    infra.babel.init_app(app)
+    infra.babel.init_app(app, locale_selector=infra.selected_locale)
     infra.client.init_app(app)
     infra.init_templating(app)
 
