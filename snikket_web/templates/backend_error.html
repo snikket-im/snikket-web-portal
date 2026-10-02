@@ -1,6 +1,19 @@
-{% extends "exception.html" %}
-{% block box -%}
-	<header>{% trans %}Internal error{% endtrans %}</header>
-	<p>{% trans %}The web portal was not able to communicate with the backend.{% endtrans %}</p>
-	<p>{% trans %}Please try again later and/or inform your Snikket service admin.{% endtrans %}</p>
+{% extends "unauth.html" %}
+{% block head_lead -%}
+<title>{% trans %}Unable to reach the chat server{% endtrans %}</title>
 {%- endblock %}
+{% block content %}
+<div class="box alert el-3">
+<header>{% trans %}Unable to reach the chat server{% endtrans %}</header>
+<p>{% trans %}The web portal could not connect to Prosody, the Snikket chat server.{% endtrans %}</p>
+<p>{% trans %}This can be temporary, for example while the server is still starting. Wait a moment and try again.{% endtrans %}</p>
+<p>{% trans troubleshooting_url="https://snikket.org/service/help/setup/troubleshooting/" %}If the problem continues, the chat server may need administrator attention. See the <a href="{{ troubleshooting_url }}" rel="noopener noreferrer">Snikket troubleshooting guide</a>.{% endtrans %}</p>
+<p>{% trans %}Reference{% endtrans %}: <code>{{ error_id }}</code></p>
+{% if traceback %}
+<details>
+<summary>{% trans %}Technical details{% endtrans %}</summary>
+<pre class="guru-meditation">{{ traceback }}</pre>
+</details>
+{% endif %}
+</div>
+{% endblock %}
