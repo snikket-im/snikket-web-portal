@@ -59,6 +59,17 @@ ERR_CREDENTIALS_INVALID = _l("Invalid username or password.")
 
 @bp.route("/login", methods=["GET", "POST"])
 async def login() -> typing.Union[str, werkzeug.Response]:
+    token = request.args.get("token")
+    if token is not None:
+        jid = request.args.get("jid", "")
+        scopes = request.args.get("scope", "").split()
+        localpart, domain, resource = xmpputil.split_jid(jid)
+        if resource is None and domain == current_app.config["SNIKKET_DOMAIN"]:
+            if await client.login_with_token(jid, token, scopes):
+                return redirect(url_for("user.index"))
+        client.clear_session()
+        raise werkzeug.exceptions.Unauthorized("Invalid or expired login link")
+
     if client.has_session and (await client.test_session()):
         return redirect(url_for('user.index'))
 
